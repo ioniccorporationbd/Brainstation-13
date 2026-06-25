@@ -1,0 +1,10 @@
+<svg width="195" height="31" viewBox="0 0 195 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 1)">
+    <circle cx="14.5" cy="14.5" r="14.5" fill="#00A6DF"/>
+    <path d="M8 5.8c3.5 1.1 5.5 2.9 6.2 5.6-2.8.9-5.4.4-8-1.2.2-1.6.8-3.1 1.8-4.4Z" fill="#101729" opacity=".18"/>
+    <path d="M15.6 3.7c3.4.4 6.2 2.1 8 4.6-1.1 2.1-2.9 3.5-5.5 4.1-1.1-2.7-1.9-5.6-2.5-8.7Z" fill="#101729" opacity=".18"/>
+    <path d="M5.3 13.3c2.8 1.6 5.8 2 9 1.2.7 3.4-.1 6.2-2.3 8.5-3.9-.7-6.8-3.8-7.2-7.7-.1-.7.1-1.4.5-2Z" fill="#101729" opacity=".18"/>
+    <path d="M18.8 15.2c2.8-.6 4.9-1.9 6.4-3.9.6 1.3.9 2.7.9 4.2 0 4.7-3.2 8.6-7.5 9.7-1.5-2.9-1.4-6.2.2-10Z" fill="#101729" opacity=".18"/>
+  </g>
+  <text x="38" y="22" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#00A6DF">BRAIN STATION 23</text>
+</svg>

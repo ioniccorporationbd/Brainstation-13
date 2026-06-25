@@ -1,78 +1,76 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 type Props = {
   closeMenu: () => void;
   mobile?: boolean;
 };
 
-const industriesOne = [
-  { label: "Fintech", href: "/industries/fintech" },
-  { label: "Pharma", href: "/industries/pharma" },
-  { label: "Telecom", href: "/industries/telecom" },
-  { label: "Real Estate", href: "/industries/real-estate" },
-  { label: "Software/ITES", href: "/industries/software-ites" },
-  { label: "e-Commerce", href: "/industries/e-commerce" },
-  { label: "All Industries →", href: "/industries" },
+type MenuLinkItem = {
+  label: string;
+  href: string;
+};
+
+const industriesOne: MenuLinkItem[] = [
+  { label: "Fintech", href: "/fintech" },
+  { label: "Pharma", href: "/pharma" },
+  { label: "Telecom", href: "/telecom" },
+  { label: "Real Estate", href: "/real-estate" },
+  { label: "Software/ITES", href: "/software-ites" },
+  { label: "e-Commerce", href: "/e-commerce" },
 ];
 
-const industriesTwo = [
-  { label: "Education", href: "/industries/education" },
-  { label: "Retail", href: "/industries/retail" },
-  { label: "Automotive", href: "/industries/automotive" },
-  { label: "Startup", href: "/industries/startup" },
-  { label: "Non-Profit", href: "/industries/non-profit" },
+const industriesTwo: MenuLinkItem[] = [
+  { label: "Education", href: "/education" },
+  { label: "Retail", href: "/retail" },
+  { label: "Automotive", href: "/automotive" },
+  { label: "Startup", href: "/startup" },
+  { label: "Non-Profit", href: "/non-profit" },
 ];
 
 export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
-      <div className="space-y-5">
-        <MobileLinks title="Industries" links={industriesOne} closeMenu={closeMenu} />
-        <MobileLinks title="More Industries" links={industriesTwo} closeMenu={closeMenu} />
+      <div className="space-y-[24px]">
+        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "/industries" }]} closeMenu={closeMenu} />
       </div>
     );
   }
 
   return (
-    <section className="w-full bg-white shadow-sm">
-      <div className="mx-auto grid max-w-[1340px] grid-cols-[430px_1fr]">
-        <aside className="bg-[#f7f8fa] px-10 py-10">
-          <h3 className="mb-4 text-[22px] font-semibold text-black">
-            Industries
-          </h3>
+    <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+      <div className="grid min-h-[466px] w-full grid-cols-[607px_1fr]">
+        <aside className="bg-[#f7f8fa] pb-[40px] pl-[51px] pr-[60px] pt-[40px]">
+          <Link href="/industries" onClick={closeMenu} className="group block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+              Industries
+            </h2>
+            <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+              We’ve delivered 2500+ projects across 130+ sectors. Experience in your industry? We have it.
+            </p>
+          </Link>
 
-          <p className="mb-10 text-[14px] leading-6 text-gray-600">
-            We’ve delivered 2500+ projects across 130+ sectors. Experience in
-            your industry? We have it.
-          </p>
-
-          <div className="border-t border-gray-300 pt-6">
-            <div className="mb-5 flex items-center justify-between">
-              <h4 className="text-[18px] font-semibold text-black">
+          <div className="mt-[39px] border-t border-[#d5d5d5] pt-[22px]">
+            <div className="mb-[20px] flex items-center justify-between">
+              <Link href="/case-studies" onClick={closeMenu} className="text-[18px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]">
                 Recommended Case Study
-              </h4>
-
-              <Link
-                href="/case-studies"
-                onClick={closeMenu}
-                className="text-[15px] text-[#2d7dbf] hover:underline"
-              >
-                View All
+              </Link>
+              <Link href="/case-studies" onClick={closeMenu} className="inline-flex items-center gap-[10px] text-[15px] font-normal text-[#2d7dbf] transition-colors hover:text-[#009fe3]">
+                View All <span className="text-[22px] leading-none">›</span>
               </Link>
             </div>
 
-            <div className="space-y-5">
-              <CaseStudyCard
-                image="/images/case-study-1.jpg"
+            <div className="space-y-[20px]">
+              <CaseCard
+                image="/images/case-safety-at-sea.svg"
                 title="Safety at Sea - Leveraging IoT for Strengthening Maritime Security"
                 description="Brain Station 23 developed an advanced IoT-based boat safety system"
                 href="/case-study/safety-at-sea"
                 closeMenu={closeMenu}
               />
-
-              <CaseStudyCard
-                image="/images/case-study-2.jpg"
+              <CaseCard
+                image="/images/case-digital-wallet.svg"
                 title="Fueling Financial Inclusion through Digital Wallet Solutions"
                 description="Digital wallet services are becoming increasingly popular as people"
                 href="/case-study/digital-wallet"
@@ -82,109 +80,65 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
           </div>
         </aside>
 
-        <div className="grid grid-cols-2 gap-x-24 px-12 py-10">
-          <DesktopLinks title="Industries" links={industriesOne} closeMenu={closeMenu} />
-          <DesktopLinks title="" links={industriesTwo} closeMenu={closeMenu} />
+        <div className="grid grid-cols-[295px_295px_1fr] gap-x-[80px] bg-white pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
+          <div>
+            <ColumnTitle href="/industries" closeMenu={closeMenu}>Industries</ColumnTitle>
+            <div className="mt-[23px] space-y-[15px]">
+              {industriesOne.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
+            </div>
+            <Link href="/industries" onClick={closeMenu} className="mt-[62px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]">
+              All Industries <span className="text-[22px] font-normal leading-none">→</span>
+            </Link>
+          </div>
+
+          <div className="pt-[44px]">
+            <div className="space-y-[15px]">
+              {industriesTwo.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
+            </div>
+          </div>
+
+          <div />
         </div>
       </div>
     </section>
   );
 }
 
-function CaseStudyCard({
-  image,
-  title,
-  description,
-  href,
-  closeMenu,
-}: {
-  image: string;
-  title: string;
-  description: string;
-  href: string;
-  closeMenu: () => void;
-}) {
+function CaseCard({ image, title, description, href, closeMenu }: { image: string; title: string; description: string; href: string; closeMenu: () => void }) {
   return (
-    <Link
-      href={href}
-      onClick={closeMenu}
-      className="grid grid-cols-[150px_1fr] gap-4"
-    >
-      <Image
-        src={image}
-        alt={title}
-        width={150}
-        height={90}
-        className="h-[90px] w-[150px] rounded-lg object-cover"
-      />
-
+    <Link href={href} onClick={closeMenu} className="group grid grid-cols-[148px_1fr] gap-[36px]">
+      <Image src={image} alt={title} width={148} height={90} className="h-[90px] w-[148px] rounded-[8px] object-cover" />
       <div>
-        <h5 className="text-[15px] font-medium leading-6 text-black">
-          {title}
-        </h5>
-
-        <p className="mt-2 text-[14px] leading-5 text-gray-600">
-          {description}
-        </p>
+        <h3 className="text-[15px] font-medium leading-[22px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">{title}</h3>
+        <p className="mt-[10px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">{description}</p>
       </div>
     </Link>
   );
 }
 
-function DesktopLinks({
-  title,
-  links,
-  closeMenu,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-  closeMenu: () => void;
-}) {
+function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <div>
-      {title && (
-        <p className="mb-6 text-[17px] font-semibold text-black before:mr-2 before:inline-block before:h-2 before:w-2 before:bg-[#4e92ce]">
-          {title}
-        </p>
-      )}
-
-      <div className="space-y-5">
-        {links.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={closeMenu}
-            className="block text-[17px] font-medium text-black hover:text-[#009fe3]"
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    </div>
+    <Link href={href} onClick={closeMenu} className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]">
+      {children}
+    </Link>
   );
 }
 
-function MobileLinks({
-  title,
-  links,
-  closeMenu,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-  closeMenu: () => void;
-}) {
+function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  return (
+    <Link href={item.href} onClick={closeMenu} className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]">
+      {item.label}
+    </Link>
+  );
+}
+
+function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-3 text-[15px] font-semibold text-[#009fe3]">{title}</p>
-
-      <div className="space-y-3">
+      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <div className="space-y-[10px]">
         {links.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={closeMenu}
-            className="block text-[15px] font-medium text-gray-700"
-          >
+          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
             {item.label}
           </Link>
         ))}

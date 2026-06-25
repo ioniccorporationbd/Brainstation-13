@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 type Props = {
   closeMenu: () => void;
   mobile?: boolean;
 };
 
-const insideLinks = [
+type MenuLinkItem = {
+  label: string;
+  href: string;
+};
+
+const insideLinks: MenuLinkItem[] = [
   { label: "About Us", href: "/about-us" },
   { label: "Blog", href: "/blog" },
   { label: "Case Studies", href: "/case-studies" },
@@ -16,7 +22,7 @@ const insideLinks = [
   { label: "Investor Relations", href: "/investor-relations" },
 ];
 
-const recognitionLinks = [
+const recognitionLinks: MenuLinkItem[] = [
   { label: "Partners", href: "/partners" },
   { label: "Enterprise-Grade Security", href: "/enterprise-grade-security" },
   { label: "Sustainability", href: "/sustainability" },
@@ -27,132 +33,91 @@ const recognitionLinks = [
 export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
-      <div className="space-y-5">
-        <MobileLinks
-          title="Inside Brain Station 23"
-          links={insideLinks}
-          closeMenu={closeMenu}
-        />
-        <MobileLinks
-          title="Recognitions"
-          links={recognitionLinks}
-          closeMenu={closeMenu}
-        />
+      <div className="space-y-[24px]">
+        <MobileGroup title="Inside Brain Station 23" links={insideLinks} closeMenu={closeMenu} />
+        <MobileGroup title="Recognitions" links={recognitionLinks} closeMenu={closeMenu} />
       </div>
     );
   }
 
   return (
-    <section className="w-full bg-white shadow-sm">
-      <div className="mx-auto grid max-w-[1340px] grid-cols-[430px_1fr]">
-        <aside className="bg-[#f7f8fa] px-10 py-10">
-          <h3 className="mb-4 text-[22px] font-semibold text-black">
-            About Brain Station 23
-          </h3>
+    <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+      <div className="grid min-h-[398px] w-full grid-cols-[615px_1fr]">
+        <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
+          <Link href="/about-us" onClick={closeMenu} className="group block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+              About Brain Station 23
+            </h2>
+            <p className="mt-[13px] max-w-[450px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+              Founded in 2006, we are a global software company powering digital transformation across industries.
+            </p>
+          </Link>
 
-          <p className="mb-10 text-[14px] leading-6 text-gray-600">
-            Founded in 2006, we are a global software company powering digital
-            transformation across industries.
-          </p>
-
-          <div className="border-t border-gray-300 pt-6">
-            <Link
-              href="/about-us"
-              onClick={closeMenu}
-              className="grid grid-cols-[150px_1fr] gap-5"
-            >
+          <div className="mt-[40px] border-t border-[#d5d5d5] pt-[22px]">
+            <Link href="/about-us" onClick={closeMenu} className="group grid grid-cols-[150px_1fr] gap-[35px]">
               <Image
-                src="/images/about-news.jpg"
-                alt="About Brain Station 23"
+                src="/images/about-news.svg"
+                alt="Brain Station 23 news"
                 width={150}
-                height={100}
-                className="h-[100px] w-[150px] rounded-lg object-cover"
+                height={112}
+                className="h-[112px] w-[150px] rounded-[8px] object-cover"
               />
-
               <div>
-                <h5 className="text-[19px] font-medium leading-7 text-black">
-                  Brain Station 23’s CEO promotes Bangladesh’s tech prowess at
-                  WEF 2025
-                </h5>
-
-                <p className="mt-4 text-[15px] text-[#2d7dbf]">
-                  About Us →
+                <h3 className="max-w-[310px] text-[19px] font-medium leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+                  Brain Station 23’s CEO promotes Bangladesh’s tech prowess at WEF 2025
+                </h3>
+                <p className="mt-[13px] inline-flex items-center gap-[14px] text-[15px] font-normal text-[#2d7dbf] transition-colors group-hover:text-[#009fe3]">
+                  About Us <span className="text-[22px] leading-none">›</span>
                 </p>
               </div>
             </Link>
           </div>
         </aside>
 
-        <div className="grid grid-cols-2 gap-x-24 px-12 py-10">
-          <DesktopLinks
-            title="Inside Brain Station 23"
-            links={insideLinks}
-            closeMenu={closeMenu}
-          />
-
-          <DesktopLinks
-            title="Recognitions"
-            links={recognitionLinks}
-            closeMenu={closeMenu}
-          />
+        <div className="grid grid-cols-[360px_360px_1fr] gap-x-[85px] bg-white pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
+          <DesktopColumn title="Inside Brain Station 23" href="/about-us" links={insideLinks} closeMenu={closeMenu} />
+          <DesktopColumn title="Recognitions" href="/recognitions" links={recognitionLinks} closeMenu={closeMenu} />
+          <div />
         </div>
       </div>
     </section>
   );
 }
 
-function DesktopLinks({
-  title,
-  links,
-  closeMenu,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-  closeMenu: () => void;
-}) {
+function DesktopColumn({ title, href, links, closeMenu }: { title: string; href: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-6 text-[17px] font-semibold text-black before:mr-2 before:inline-block before:h-2 before:w-2 before:bg-[#4e92ce]">
-        {title}
-      </p>
-
-      <div className="space-y-5">
-        {links.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={closeMenu}
-            className="block text-[17px] font-medium text-black hover:text-[#009fe3]"
-          >
-            {item.label}
-          </Link>
-        ))}
+      <ColumnTitle href={href} closeMenu={closeMenu}>{title}</ColumnTitle>
+      <div className="mt-[23px] space-y-[15px]">
+        {links.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
       </div>
     </div>
   );
 }
 
-function MobileLinks({
-  title,
-  links,
-  closeMenu,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-  closeMenu: () => void;
-}) {
+function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+  return (
+    <Link href={href} onClick={closeMenu} className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]">
+      {children}
+    </Link>
+  );
+}
+
+function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  return (
+    <Link href={item.href} onClick={closeMenu} className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]">
+      {item.label}
+    </Link>
+  );
+}
+
+function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-3 text-[15px] font-semibold text-[#009fe3]">{title}</p>
-
-      <div className="space-y-3">
+      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <div className="space-y-[10px]">
         {links.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={closeMenu}
-            className="block text-[15px] font-medium text-gray-700"
-          >
+          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
             {item.label}
           </Link>
         ))}

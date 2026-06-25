@@ -1,127 +1,183 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
 
-import React from 'react';
-import { BsSquareFill } from 'react-icons/bs';
-import { HiOutlineArrowRight } from 'react-icons/hi';
+type Props = {
+  closeMenu: () => void;
+  mobile?: boolean;
+};
 
-interface NavLinkItem {
+type MenuLinkItem = {
   label: string;
   href: string;
-}
+};
 
-export default function ServicesMenu() {
-  const collaborationLinks: NavLinkItem[] = [
-    { label: 'Staff Augmentation', href: '#' },
-    { label: 'Managed Service', href: '#' },
-    { label: 'Digital Transformation', href: '#' },
-    { label: 'Technology Consulting', href: '#' },
-    { label: 'MVP Development', href: '#' },
-  ];
+const collaborationLinks: MenuLinkItem[] = [
+  { label: "Staff Augmentation", href: "/staff-augmentation" },
+  { label: "Managed Service", href: "/managed-service" },
+  { label: "Digital Transformation", href: "/digital-transformation" },
+  { label: "Technology Consulting", href: "/technology-consulting" },
+  { label: "MVP Development", href: "/mvp-development" },
+];
 
-  const topServicesCol1: NavLinkItem[] = [
-    { label: 'ML & AI Development', href: '#' },
-    { label: 'Data Engineering', href: '#' },
-    { label: 'Data Migration', href: '#' },
-    { label: 'Business Intelligence', href: '#' },
-    { label: 'Insurtech', href: '#' },
-    { label: '3D Modeling Services', href: '#' },
-    { label: 'Game Studio', href: '#' },
-    { label: 'QA Testing & Automation', href: '#' },
-  ];
+const topServices: MenuLinkItem[] = [
+  { label: "ML & AI Development", href: "/ml-ai-development" },
+  { label: "Data Engineering", href: "/data-engineering" },
+  { label: "Data Migration", href: "/data-migration" },
+  { label: "Business Intelligence", href: "/business-intelligence" },
+  { label: "Insurtech", href: "/insurtech" },
+  { label: "3D Modeling Services", href: "/3d-modeling-services" },
+  { label: "Game Studio", href: "/game-studio" },
+  { label: "QA Testing & Automation", href: "/qa-testing-and-automation" },
+];
 
-  const topServicesCol2: NavLinkItem[] = [
-    { label: 'LMS Development', href: '#' },
-    { label: 'Web & Mobile App Development', href: '#' },
-    { label: 'eCommerce Development', href: '#' },
-    { label: 'Adobe Experience Manager', href: '#' },
-    { label: 'SharePoint Services', href: '#' },
-    { label: 'Blockchain Development', href: '#' },
-    { label: 'Shopify Services', href: '#' },
-  ];
+const serviceColumnTwo: MenuLinkItem[] = [
+  { label: "LMS Development", href: "/lms-development" },
+  { label: "Web & Mobile App Development", href: "/web-mobile-app-development" },
+  { label: "eCommerce Development", href: "/ecommerce-development" },
+  { label: "Adobe Experience Manager", href: "/adobe-experience-manager" },
+  { label: "SharePoint Services", href: "/sharepoint-services" },
+  { label: "Blockchain Development", href: "/blockchain-development" },
+  { label: "Shopify Services", href: "/shopify-services" },
+];
 
-  const enterpriseLinks: NavLinkItem[] = [
-    { label: 'Field Force Automation', href: '#' },
-    { label: 'Banking Solutions', href: '#' },
-    { label: 'Cloud Solutions', href: '#' },
-    { label: 'Cyber Security', href: '#' },
-    { label: 'ERP Development', href: '#' },
-    { label: 'Data Science & Business Intelligence', href: '#' },
-  ];
+const enterpriseLinks: MenuLinkItem[] = [
+  { label: "Field Force Automation", href: "/field-force-automation" },
+  { label: "Banking Solutions", href: "/banking-solutions" },
+  { label: "Cloud Solutions", href: "/cloud-solutions" },
+  { label: "Cyber Security", href: "/cyber-security" },
+  { label: "ERP Development", href: "/erp-development" },
+  { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence" },
+];
+
+export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
+  if (mobile) {
+    return (
+      <div className="space-y-[24px]">
+        <MobileGroup title="Collaboration Model" links={collaborationLinks} closeMenu={closeMenu} />
+        <MobileGroup title="Top Services" links={[...topServices, ...serviceColumnTwo]} closeMenu={closeMenu} />
+        <MobileGroup title="Enterprise Focused" links={enterpriseLinks} closeMenu={closeMenu} />
+      </div>
+    );
+  }
 
   return (
-    <div className="nav-container">
-      {/* Left Side Section */}
-      <div className="col-models">
-        <h2>Collaboration Models</h2>
-        <p className="subtitle">AI-powered dev for 10X faster software delivery.</p>
-        
-        <ul className="nav-links">
-          {collaborationLinks.map((link, idx) => (
-            <li key={idx}>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-        
-        <hr className="divider" />
-        
-        <div className="partner-section">
-          <div className="partner-logo">
-            <span className="logo-placeholder">Logo</span> 
-            <span className="partner-label">Solution Partner</span>
+    <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+      <div className="grid min-h-[489px] w-full grid-cols-[477px_1fr]">
+        <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[56px] pt-[31px]">
+          <Link href="/collaboration-models" onClick={closeMenu} className="group block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+              Collaboration Models
+            </h2>
+            <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+              AI-powered dev for 10X faster software delivery.
+            </p>
+          </Link>
+
+          <div className="mt-[19px] space-y-[15px]">
+            {collaborationLinks.map((item) => (
+              <TextLink key={item.href} item={item} closeMenu={closeMenu} />
+            ))}
           </div>
-          <p className="partner-text">
-            A Journey Towards Digital Excellence in Retail.{' '}
-            <a href="#" className="inline-link">Read case study.</a>
-          </p>
+
+          <div className="mt-[39px] border-t border-[#d5d5d5] pt-[20px]">
+            <Link href="/solution-partner/swapno" onClick={closeMenu} className="group flex items-center gap-[15px]">
+              <Image
+                src="/images/swapno-logo.svg"
+                alt="Swapno Solution Partner"
+                width={76}
+                height={40}
+                className="h-[40px] w-[76px] object-cover"
+              />
+              <span className="h-[40px] w-px bg-[#d5d5d5]" />
+              <span className="text-[13px] font-medium leading-[18px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+                Solution Partner
+              </span>
+            </Link>
+
+            <Link
+              href="/case-study/retail-digital-excellence"
+              onClick={closeMenu}
+              className="mt-[17px] block max-w-[350px] text-[16px] font-normal leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+            >
+              A Journey Towards Digital Excellence in Retail. <span className="underline underline-offset-[2px]">Read case study.</span>
+            </Link>
+          </div>
+        </aside>
+
+        <div className="grid grid-cols-[330px_365px_1fr] gap-x-[63px] bg-white pb-[40px] pl-[60px] pr-[58px] pt-[33px]">
+          <div>
+            <ColumnTitle href="/top-services" closeMenu={closeMenu}>Top Services</ColumnTitle>
+            <div className="mt-[23px] space-y-[15px]">
+              {topServices.map((item) => (
+                <TextLink key={item.href} item={item} closeMenu={closeMenu} />
+              ))}
+            </div>
+            <Link
+              href="/services"
+              onClick={closeMenu}
+              className="mt-[64px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+            >
+              All Services <span className="text-[22px] font-normal leading-none">→</span>
+            </Link>
+          </div>
+
+          <div className="pt-[44px]">
+            <div className="space-y-[15px]">
+              {serviceColumnTwo.map((item) => (
+                <TextLink key={item.href} item={item} closeMenu={closeMenu} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <ColumnTitle href="/enterprise-focused" closeMenu={closeMenu}>Enterprise Focused</ColumnTitle>
+            <div className="mt-[23px] space-y-[15px]">
+              {enterpriseLinks.map((item) => (
+                <TextLink key={item.href} item={item} closeMenu={closeMenu} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Right Side Services Grid */}
-      <div className="services-grid">
-        {/* Top Services Column 1 */}
-        <div className="services-column">
-          <h3 className="column-title">
-            <BsSquareFill className="square-icon" /> Top Services
-          </h3>
-          <ul className="nav-links">
-            {topServicesCol1.map((link, idx) => (
-              <li key={idx}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-          
-          <a href="#" className="all-services-link">
-            All Services <HiOutlineArrowRight className="arrow-icon" />
-          </a>
-        </div>
+function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+  return (
+    <Link
+      href={href}
+      onClick={closeMenu}
+      className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]"
+    >
+      {children}
+    </Link>
+  );
+}
 
-        {/* Top Services Column 2 */}
-        <div className="services-column">
-          <h3 className="column-title hidden-title">&nbsp;</h3>
-          <ul className="nav-links">
-            {topServicesCol2.map((link, idx) => (
-              <li key={idx}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  return (
+    <Link
+      href={item.href}
+      onClick={closeMenu}
+      className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+    >
+      {item.label}
+    </Link>
+  );
+}
 
-        {/* Enterprise Column */}
-        <div className="services-column">
-          <h3 className="column-title">
-            <BsSquareFill className="square-icon" /> Enterprise Focused
-          </h3>
-          <ul className="nav-links">
-            {enterpriseLinks.map((link, idx) => (
-              <li key={idx}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
+  return (
+    <div>
+      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <div className="space-y-[10px]">
+        {links.map((item) => (
+          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
+            {item.label}
+          </Link>
+        ))}
       </div>
     </div>
   );
