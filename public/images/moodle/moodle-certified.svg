@@ -1,0 +1,9 @@
+<svg width="420" height="214" viewBox="0 0 420 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="214" rx="6" fill="#F58220"/>
+  <path d="M35 80L95 61L82 88L35 80Z" fill="#111827"/>
+  <path d="M50 82V113" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 113C44 104 43 93 50 82C57 93 56 104 50 113Z" fill="#111827"/>
+  <text x="62" y="129" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="white">moodle</text>
+  <rect y="162" width="420" height="52" fill="#3F3F3B"/>
+  <text x="22" y="197" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="4" fill="white">CERTIFIED INTEGRATION</text>
+</svg>

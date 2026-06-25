@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/layout_Components/navbar/Navbar";
 import Footer from "@/layout_Components/footer";
+import GlobalOfficesSection from "@/layout_Components/GlobalOfficesSection.tsx";
 
 export const metadata: Metadata = {
   title: "Brain Station 23 Navbar",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="min-h-full bg-white text-[#050b18] antialiased">
         <Navbar />
         {children}
+        <GlobalOfficesSection/>
         <Footer />
       </body>
     </html>
