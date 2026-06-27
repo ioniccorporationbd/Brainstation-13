@@ -1,2 +1,54 @@
 @import "tailwindcss";
 
+@keyframes brandScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brand-scroll {
+  animation: brandScroll 22s linear infinite;
+}
+
+.brand-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Top line: left to right */
+@keyframes techScrollLeftToRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Bottom line: right to left */
+@keyframes techScrollRightToLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-scroll-left-to-right {
+  animation: techScrollLeftToRight 24s linear infinite;
+}
+
+.tech-scroll-right-to-left {
+  animation: techScrollRightToLeft 24s linear infinite;
+}
+
+.tech-scroll-left-to-right:hover,
+.tech-scroll-right-to-left:hover {
+  animation-play-state: paused;
+}
