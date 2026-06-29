@@ -1,5 +1,5 @@
 import HeroBannerSlider from "@/Home_components/HeroBannerSlider";
-import TrustedTeamsSection from "@/Home_components/TrustedTeamsSection.tsx";
+import TrustedTeamsSection from "@/Home_components/TrustedTeamsSection";
 import CoreCapabilitiesSection from "@/Home_components/CoreCapabilitiesSection";
 import MoodleSolutionsSection from "@/Home_components/MoodleSolutionsSection";
 import IndustriesInnovationSection from "@/Home_components/IndustriesInnovationSection";

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/layout_Components/navbar/Navbar";
 import Footer from "@/layout_Components/footer";
-import GlobalOfficesSection from "@/layout_Components/GlobalOfficesSection.tsx";
+import GlobalOfficesSection from "@/layout_Components/GlobalOfficesSection";
 
 export const metadata: Metadata = {
   title: "Brain Station 23 Navbar",

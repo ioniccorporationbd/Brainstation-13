@@ -1,48 +1,78 @@
-import Link from "next/link";
-
-const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; // replace with your real YouTube video ID
-
-export default function DataEngineeringHeroSection() {
+export default function MoodleHeroSection() {
   return (
-    <section className="w-full bg-[#052642] text-white">
-      <div className="mx-auto grid min-h-[690px] w-full max-w-[1200px] grid-cols-1 items-center gap-14 px-5 py-[90px] sm:px-8 lg:grid-cols-[1fr_520px] lg:gap-[80px] xl:px-0">
+    <section className="relative min-h-screen overflow-hidden bg-[#0f1f44] text-white">
+      {/* CSS Circle Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-[36%] top-[-42%] h-[1150px] w-[1150px] rounded-full border border-[#1f6aa0]/30" />
+        {Array.from({ length: 42 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute left-[36%] top-[-42%] rounded-full border border-[#1f6aa0]/25"
+            style={{
+              width: `${1150 - i * 24}px`,
+              height: `${1150 - i * 24}px`,
+              transform: `translate(${i * 12}px, ${i * 12}px)`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 mx-auto grid min-h-screen max-w-[1320px] grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-[1fr_1.05fr]">
         {/* Left Content */}
         <div>
-          <span className="inline-flex rounded-[8px] bg-[#113a5c] px-[16px] py-[9px] text-[18px] font-semibold text-[#369bd5]">
-            Data Engineering
+          <span className="mb-8 inline-flex rounded-md bg-white/10 px-4 py-2 text-lg font-semibold text-[#43a6ff]">
+            LMS
           </span>
 
-          <h1 className="mt-[30px] max-w-[650px] text-[44px] font-semibold leading-[1.18] tracking-[-0.055em] text-white sm:text-[56px] lg:text-[62px]">
-            AI-Ready Data Platforms for Complex Enterprise Environments
+          <h1 className="max-w-[650px] text-[48px] font-light leading-[1.08] tracking-[-0.05em] md:text-[66px] lg:text-[74px]">
+            Enterprise Grade <br />
+            Moodle LMS & <br />
+            Proctoring Services
           </h1>
 
-          <p className="mt-[28px] max-w-[640px] text-[20px] font-medium leading-[1.45] text-white sm:text-[22px]">
-            We design and deliver cloud-native, governance-first data platforms
-            built on deep data engineering and AI readiness, implemented by
-            certified teams for faster, lower-risk enterprise rollout.
+          <p className="mt-8 max-w-[650px] text-[20px] font-medium leading-[1.55] text-white">
+            Secure. Scalable. Audit-ready learning and assessment platforms
+            <br className="hidden md:block" />
+            for institutions that cannot afford failure.
           </p>
 
-          <Link
-            href="/schedule-a-call"
-            className="mt-[58px] inline-flex h-[58px] items-center justify-center rounded-full bg-[#ffad2f] px-[32px] text-[17px] font-semibold text-black transition hover:bg-[#f59b15]"
-          >
-            Schedule a Call
-          </Link>
+          <div className="mt-12 flex items-center gap-3 text-base font-semibold text-white">
+            <span className="flex h-4 w-4 items-center justify-center rounded-full border border-white/80 text-[9px]">
+              ✓
+            </span>
+            Request Free Assessment
+          </div>
+
+          
         </div>
 
-        {/* Right Real Video */}
-        <div className="w-full">
-          <div className="relative aspect-video w-full overflow-hidden rounded-[2px] bg-black shadow-[0_24px_70px_rgba(0,0,0,0.25)]">
+        {/* Right Video */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative aspect-video w-full max-w-[628px] overflow-hidden rounded-lg bg-black shadow-2xl">
             <iframe
-              className="absolute inset-0 h-full w-full"
-              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-              title="Data Engineering Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Moodle Proctoring Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
         </div>
       </div>
+
+      {/* Bottom Policy Button */}
+      <div className="fixed bottom-0 left-[100px] z-20 bg-[#061b2d] px-3 py-2 text-xs font-bold text-white">
+        Privacy & Cookies Policy
+      </div>
+
+      {/* Chat Button */}
+      <button className="fixed bottom-14 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
+        <span className="text-2xl text-[#20a7e8]">☁</span>
+      </button>
+
+      <span className="fixed bottom-6 right-5 z-20 text-[10px] text-white/40">
+        Powered by NeuralFlow
+      </span>
     </section>
   );
 }
