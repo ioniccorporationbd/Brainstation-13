@@ -52,3 +52,55 @@
 .tech-scroll-right-to-left:hover {
   animation-play-state: paused;
 }
+
+:root {
+  --bs-navy: #111E40;
+  --bs-blue: #2d8fca;
+  --bs-sky: #4fa0d1;
+  --bs-text: #11182f;
+  --bs-muted: #42637a;
+  --bs-bg: #f4f8fc;
+  --bs-gold: #ffab2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.trusted-tech-swiper .swiper-wrapper,
+.why-clients-trust-swiper .swiper-wrapper,
+.delivery-gallery-swiper .swiper-wrapper,
+.future-ready-talent-swiper .swiper-wrapper,
+.tech-row-one .swiper-wrapper,
+.tech-row-two .swiper-wrapper,
+.blockchain-logo-swiper .swiper-wrapper,
+.brand-logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.bs-soft-card {
+  box-shadow: 0 18px 50px rgba(17, 30, 64, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

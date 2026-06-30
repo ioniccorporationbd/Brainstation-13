@@ -22,12 +22,12 @@ const clients = [
   {
     name: "Kiksha",
     image:
-      "https://dummyimage.com/220x90/ffffff/1f84bd.png&text=KIKsha",
+      "https://logo.clearbit.com/kiksha.com",
   },
   {
     name: "PriyoShop",
     image:
-      "https://dummyimage.com/220x90/ffffff/8b1d42.png&text=PriyoShop",
+      "https://logo.clearbit.com/priyoshop.com",
   },
   {
     name: "City Bank",
@@ -77,7 +77,7 @@ export default function WorkedWithSection() {
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="text-center">
           <h2 className="text-[48px] font-bold leading-none tracking-[-0.04em] text-black">
-            Who we've worked with
+            Who we&apos;ve worked with
           </h2>
 
           <div className="mx-auto mt-6 h-[1px] w-[120px] bg-[#00A5E5]" />

@@ -17,73 +17,73 @@ const clientLogos: ClientLogo[] = [
   {
     name: "Kirsha",
     image:
-      "https://dummyimage.com/170x70/ffffff/159bd7.png&text=Kirsha",
+      "https://logo.clearbit.com/kiksha.com",
     className: "h-[55px]",
   },
   {
     name: "PriyoShop",
     image:
-      "https://dummyimage.com/190x70/ffffff/7b285f.png&text=PriyoShop",
+      "https://logo.clearbit.com/priyoshop.com",
     className: "h-[58px]",
   },
   {
     name: "City Bank",
     image:
-      "https://dummyimage.com/210x90/ffffff/e2222b.png&text=city+bank",
+      "https://logo.clearbit.com/thecitybank.com",
     className: "h-[90px]",
   },
   {
     name: "UCB",
     image:
-      "https://dummyimage.com/170x70/ffffff/333333.png&text=UCB",
+      "https://logo.clearbit.com/ucb.com.bd",
     className: "h-[68px]",
   },
   {
     name: "AB Bank",
     image:
-      "https://dummyimage.com/190x70/ffffff/d71920.png&text=AB+Bank",
+      "https://logo.clearbit.com/abbl.com",
     className: "h-[62px]",
   },
   {
     name: "British American Tobacco",
     image:
-      "https://dummyimage.com/230x90/ffffff/d99a00.png&text=British+American+Tobacco",
+      "https://logo.clearbit.com/bat.com",
     className: "h-[82px]",
   },
   {
     name: "Bank Asia",
     image:
-      "https://dummyimage.com/180x70/ffffff/1f5fa8.png&text=Bank+Asia",
+      "https://logo.clearbit.com/bankasia-bd.com",
     className: "h-[58px]",
   },
   {
     name: "Robi",
     image:
-      "https://dummyimage.com/150x70/ffffff/f37021.png&text=Robi",
+      "https://logo.clearbit.com/robi.com.bd",
     className: "h-[58px]",
   },
   {
     name: "bKash",
     image:
-      "https://dummyimage.com/160x70/ffffff/e2136e.png&text=bKash",
+      "https://logo.clearbit.com/bkash.com",
     className: "h-[58px]",
   },
   {
     name: "Grameenphone",
     image:
-      "https://dummyimage.com/210x70/ffffff/0072bc.png&text=Grameenphone",
+      "https://logo.clearbit.com/grameenphone.com",
     className: "h-[58px]",
   },
   {
     name: "Aarong",
     image:
-      "https://dummyimage.com/170x70/ffffff/8b1e3f.png&text=Aarong",
+      "https://logo.clearbit.com/aarong.com",
     className: "h-[58px]",
   },
   {
     name: "LankaBangla",
     image:
-      "https://dummyimage.com/210x70/ffffff/006a4e.png&text=LankaBangla",
+      "https://logo.clearbit.com/lankabangla.com",
     className: "h-[58px]",
   },
 ];

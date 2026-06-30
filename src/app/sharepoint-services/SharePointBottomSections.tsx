@@ -21,7 +21,7 @@ const clientLogos = [
   {
     name: "Berger",
     image:
-      "https://dummyimage.com/180x80/ffffff/008fd3.png&text=BERGER",
+      "https://logo.clearbit.com/bergerbd.com",
   },
   {
     name: "Robi",
@@ -36,7 +36,7 @@ const clientLogos = [
   {
     name: "Beximco Pharma",
     image:
-      "https://dummyimage.com/180x80/ffffff/006bb6.png&text=BEXIMCO+PHARMA",
+      "https://logo.clearbit.com/beximcopharma.com",
   },
   {
     name: "IFIC Bank",

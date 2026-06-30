@@ -3,7 +3,7 @@ export default function AemWorkedWithSection() {
     <section className="bg-[#f7f7f7] py-[115px]">
       <div className="mx-auto max-w-[1220px] px-6 text-center">
         <h2 className="text-[48px] font-bold leading-none tracking-[-0.04em] text-black">
-          Who we've worked with
+          Who we&apos;ve worked with
         </h2>
 
         <div className="mx-auto mt-6 h-[1px] w-[118px] bg-[#00A5E5]" />

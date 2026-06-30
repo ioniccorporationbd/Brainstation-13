@@ -6,19 +6,19 @@ import Image from 'next/image';
 const caseStudyLogos = [
   {
     name: 'IIITK',
-    image: 'https://dummyimage.com/180x90/f3f6fa/111827&text=IIITK',
+    image: 'https://logo.clearbit.com/iiitkottayam.ac.in',
   },
   {
     name: 'City Bank',
-    image: 'https://dummyimage.com/180x90/f3f6fa/ef4444&text=city+bank',
+    image: 'https://logo.clearbit.com/thecitybank.com',
   },
   {
     name: 'European Biotechnology',
-    image: 'https://dummyimage.com/180x90/f3f6fa/111827&text=European+Biotech',
+    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3f4c9ed3?q=80&w=600&auto=format&fit=crop',
   },
   {
     name: 'HKDC',
-    image: 'https://dummyimage.com/180x90/f3f6fa/111827&text=HKDC',
+    image: 'https://logo.clearbit.com/hkdc.com',
   },
 ];
 

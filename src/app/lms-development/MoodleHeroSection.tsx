@@ -51,7 +51,7 @@ export default function MoodleHeroSection() {
           <div className="relative aspect-video w-full max-w-[628px] overflow-hidden rounded-lg bg-black shadow-2xl">
             <iframe
               className="h-full w-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              src="https://www.youtube.com/embed/LkApsAGYKUY?rel=0&modestbranding=1"
               title="Moodle Proctoring Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -1,9 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import {
+  AlarmClock,
   Boxes,
-  ChevronDown,
   CircleDot,
   Gem,
   Layers3,
@@ -13,11 +10,6 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import { Autoplay, Mousewheel, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
 
 type BtpCard = {
   title: string;
@@ -76,159 +68,111 @@ const cards: BtpCard[] = [
   },
 ];
 
-const topBullets = ["Hire in Days", "Scale Your Way", "We Manage", "Future Ready"];
-const bottomBullets = ["Grow Together", "One Stop Talent", "Loyal Builders", "Always Flowing"];
-
 export default function BtpDifferentSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
-    <section className="relative overflow-hidden bg-white text-[#11182f]">
-      <div className="relative bg-[#111E40] px-6 py-[42px] text-center">
-        <h2 className="text-[24px] font-bold tracking-[-0.055em] text-white md:text-[30px]">
-          Only Keep Reading If This Hits You
-        </h2>
+    <section className="relative overflow-hidden bg-[#f4f8fc] text-[#11182f]">
+      {/* Top Alarm / Headline Bar */}
+      <div className="relative overflow-hidden bg-[#111E40] px-6 py-[34px] text-white">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#4fa0d1]/20" />
+          <div className="absolute left-1/2 top-1/2 h-[680px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#4fa0d1]/10" />
+        </div>
 
-        <div className="absolute left-1/2 top-full z-20 flex h-[42px] w-[42px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#4fa0d1] text-white shadow-[0_10px_30px_rgba(79,160,209,0.35)]">
-          <ChevronDown size={22} strokeWidth={2.8} />
+        <div className="relative z-10 mx-auto flex max-w-[1240px] flex-col items-center justify-center gap-4 text-center md:flex-row">
+          <span className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#ffab2e] text-black shadow-[0_14px_34px_rgba(255,171,46,0.25)]">
+            <AlarmClock size={26} strokeWidth={2.4} />
+          </span>
+
+          <h2 className="text-[24px] font-bold leading-[1.2] tracking-[-0.055em] text-white md:text-[34px]">
+            Only Keep Reading If Speed, Quality, and Risk-Free Scaling Matter
+          </h2>
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-[70px] px-6 py-[78px] lg:grid-cols-[0.78fr_1fr]">
-        {/* Left sticky content */}
-        <div className="lg:sticky lg:top-[110px] lg:h-fit">
-          <div className="max-w-[470px]">
-            <p className="mb-4 text-[14px] font-bold uppercase tracking-[0.08em] text-[#4fa0d1]">
+      {/* Soft circle background */}
+      <div className="pointer-events-none absolute -left-[360px] top-[140px] hidden h-[780px] w-[780px] rounded-full lg:block">
+        {Array.from({ length: 44 }).map((_, index) => (
+          <span
+            key={index}
+            className="absolute left-1/2 top-1/2 rounded-full border border-[#74c4ec]/20"
+            style={{
+              width: `${780 - index * 17}px`,
+              height: `${780 - index * 17}px`,
+              transform: "translate(-50%, -50%)",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1240px] px-6 py-[96px]">
+        {/* Section Top Content */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
               Borderless Talent Advantage
             </p>
 
-            <h3 className="text-[40px] font-bold leading-[1.08] tracking-[-0.065em] text-[#11182f] md:text-[48px]">
-              What Makes Borderless Tech Professionals (BTP) Different?
-            </h3>
+            <h2 className="max-w-[640px] text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+              What Makes Borderless Tech Professionals Different?
+            </h2>
+          </div>
 
-            <p className="mt-6 max-w-[380px] text-[16px] font-bold leading-[1.55] tracking-[-0.025em] text-[#42637a]">
-              The Fastest, Smartest, Risk-Free Way to Scale — Without the
-              Overhead.
+          <div className="lg:pb-2">
+            <p className="max-w-[690px] text-left text-[19px] font-medium leading-[1.65] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
+              The fastest, smartest, risk-free way to scale your engineering
+              capacity without the hiring overhead. Build with pre-vetted
+              talents, flexible models, local oversight, and continuity from
+              day one.
             </p>
-          </div>
-
-          <div className="mt-[92px]">
-            <div className="mb-5 h-[2px] w-[32px] bg-[#4fa0d1]" />
-
-            <ul className="space-y-[12px]">
-              {topBullets.map((item, index) => (
-                <li
-                  key={item}
-                  className={`flex items-center gap-3 text-[15px] font-bold ${
-                    index === activeIndex % topBullets.length
-                      ? "text-[#4fa0d1]"
-                      : "text-[#11182f]"
-                  }`}
-                >
-                  <span className="h-[5px] w-[5px] rounded-full bg-current" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-[360px] hidden lg:block">
-            <ul className="space-y-[12px]">
-              {bottomBullets.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-3 text-[15px] font-bold text-[#11182f]"
-                >
-                  <span className="h-[5px] w-[5px] rounded-full bg-current" />
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
-        {/* Y Axis Swiper Cards */}
-        <div className="relative">
-          <div className="pointer-events-none absolute -left-10 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-[#d8e7ef] to-transparent lg:block" />
+        {/* Bluish Cards: 3 per row */}
+        <div className="mt-[76px] grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
+          {cards.map((card, index) => {
+            const Icon = card.icon;
 
-          <Swiper
-            modules={[Autoplay, Mousewheel, Pagination]}
-            direction="vertical"
-            slidesPerView={2.15}
-            spaceBetween={28}
-            speed={850}
-            mousewheel={{
-              forceToAxis: true,
-              releaseOnEdges: true,
-            }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-              el: ".btp-different-pagination",
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-            className="btp-different-swiper h-[760px]"
-            breakpoints={{
-              0: {
-                direction: "vertical",
-                slidesPerView: 1.15,
-                spaceBetween: 22,
-              },
-              768: {
-                direction: "vertical",
-                slidesPerView: 1.55,
-                spaceBetween: 24,
-              },
-              1024: {
-                direction: "vertical",
-                slidesPerView: 2.15,
-                spaceBetween: 28,
-              },
-            }}
-          >
-            {cards.map((card, index) => {
-              const Icon = card.icon;
+            return (
+              <article
+                key={card.title}
+                className="group relative min-h-[335px] overflow-hidden rounded-[22px] border border-[#2b5f86]/40 bg-[#173557] px-8 py-9 text-white shadow-[0_18px_50px_rgba(17,30,64,0.12)] transition-all duration-300 hover:-translate-y-2 hover:border-[#4fa0d1]/80 hover:bg-[#1f426d] hover:shadow-[0_30px_90px_rgba(31,66,109,0.28)]"
+              >
+                {/* Hover glow */}
+                <div className="pointer-events-none absolute -right-20 -top-20 h-[220px] w-[220px] rounded-full bg-[#4fa0d1]/10 blur-2xl transition-all duration-300 group-hover:bg-[#4fa0d1]/30" />
+                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[220px] w-[220px] rounded-full bg-[#ffb22c]/0 blur-2xl transition-all duration-300 group-hover:bg-[#ffb22c]/16" />
 
-              return (
-                <SwiperSlide key={card.title}>
-                  <article className="group relative flex min-h-[330px] overflow-hidden rounded-[7px] bg-[#111E40] px-[38px] py-[38px] text-white shadow-[0_18px_50px_rgba(17,30,64,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,30,64,0.20)]">
-                    <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
-                      <div className="absolute -right-16 -top-16 h-[190px] w-[190px] rounded-full bg-[#4fa0d1]/10 blur-2xl" />
-                      <div className="absolute -bottom-20 left-10 h-[170px] w-[170px] rounded-full bg-[#ffb22c]/10 blur-2xl" />
+                {/* Top chip */}
+                <div className="pointer-events-none absolute right-6 top-6 grid h-[44px] w-[58px] grid-cols-2 gap-[4px] rounded-[10px] border border-white/15 bg-white/5 p-[7px] opacity-50 transition-all duration-300 group-hover:border-[#ffb22c]/50 group-hover:bg-[#ffb22c]/10 group-hover:opacity-100">
+                  <span className="rounded-[4px] bg-white/15" />
+                  <span className="rounded-[4px] bg-white/15" />
+                  <span className="rounded-[4px] bg-white/15" />
+                  <span className="rounded-[4px] bg-white/15" />
+                </div>
+
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between gap-5">
+                    <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#234d76] text-[#8bd3ff] ring-1 ring-white/10 transition-all duration-300 group-hover:bg-[#4fa0d1] group-hover:text-white group-hover:ring-[#4fa0d1]">
+                      <Icon size={31} strokeWidth={1.7} />
                     </div>
 
-                    <div className="relative z-10 flex w-full flex-col justify-between">
-                      <Icon
-                        size={42}
-                        strokeWidth={1.35}
-                        className="text-white/80"
-                      />
-
-                      <div className="mt-[70px]">
-                        <h4 className="max-w-[430px] text-[32px] font-bold leading-[1.08] tracking-[-0.055em] text-white md:text-[36px]">
-                          {card.title}
-                        </h4>
-
-                        <p className="mt-7 max-w-[430px] text-[17px] font-bold leading-[1.55] tracking-[-0.025em] text-white/85">
-                          {card.description}
-                        </p>
-                      </div>
-                    </div>
-
-                    <span className="absolute bottom-5 right-7 text-[56px] font-bold leading-none text-white/[0.04]">
+                    <span className="pr-[74px] text-[18px] font-bold leading-none text-white/20 transition-all duration-300 group-hover:text-[#ffb22c]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                  </article>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+                  </div>
 
-          <div className="btp-different-pagination absolute -right-10 top-1/2 hidden -translate-y-1/2 flex-col gap-2 lg:flex" />
+                  <h3 className="mt-11 max-w-[310px] text-left text-[29px] font-bold leading-[1.15] tracking-[-0.06em] text-white md:text-[33px]">
+                    {card.title}
+                  </h3>
+
+                  <p className="mt-6 max-w-[330px] text-left text-[16px] font-semibold leading-[1.65] tracking-[-0.03em] text-white/82">
+                    {card.description}
+                  </p>
+                </div>
+
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#4fa0d1] transition-all duration-300 group-hover:w-full" />
+              </article>
+            );
+          })}
         </div>
       </div>
 
@@ -239,27 +183,6 @@ export default function BtpDifferentSection() {
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
         Powered by NeuralFlow
       </span>
-
-      <style jsx global>{`
-        .btp-different-swiper {
-          padding-right: 4px;
-        }
-
-        .btp-different-pagination .swiper-pagination-bullet {
-          width: 8px;
-          height: 8px;
-          background: #b7c6d3;
-          opacity: 1;
-          margin: 0 !important;
-          transition: all 0.3s ease;
-        }
-
-        .btp-different-pagination .swiper-pagination-bullet-active {
-          height: 24px;
-          border-radius: 999px;
-          background: #4fa0d1;
-        }
-      `}</style>
     </section>
   );
 }

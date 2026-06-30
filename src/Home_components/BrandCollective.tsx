@@ -11,27 +11,27 @@ interface BrandItem {
 const BRANDS: BrandItem[] = [
   {
     name: 'ERP23',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/0ea5e9&text=ERP+23',
+    imageUrl: 'https://logo.clearbit.com/erpnext.com',
   },
   {
     name: 'XR23',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/0ea5e9&text=XR+23',
+    imageUrl: 'https://logo.clearbit.com/unity.com',
   },
   {
     name: 'FINTECH23',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/0ea5e9&text=FINTECH+23',
+    imageUrl: 'https://logo.clearbit.com/stripe.com',
   },
   {
     name: 'STUDIO23',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/111827&text=STUDIO+23',
+    imageUrl: 'https://logo.clearbit.com/unrealengine.com',
   },
   {
     name: 'CLOUD23',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/0ea5e9&text=CLOUD+23',
+    imageUrl: 'https://logo.clearbit.com/aws.amazon.com',
   },
   {
     name: 'eLea',
-    imageUrl: 'https://dummyimage.com/220x80/ffffff/94a3b8&text=eLea',
+    imageUrl: 'https://logo.clearbit.com/moodle.org',
   },
 ];
 

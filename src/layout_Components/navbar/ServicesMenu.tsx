@@ -96,7 +96,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
             </Link>
 
             <Link
-              href="/case-study/retail-digital-excellence"
+              href="/case-study"
               onClick={closeMenu}
               className="mt-[17px] block max-w-[350px] text-[16px] font-normal leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
             >

@@ -1,0 +1,12 @@
+import { NextResponse } from "next/server";
+
+export const dynamic = "force-static";
+
+export function GET() {
+  return NextResponse.json({
+    ok: true,
+    service: "brainstation-frontend",
+    status: "healthy",
+    timestamp: new Date().toISOString(),
+  });
+}

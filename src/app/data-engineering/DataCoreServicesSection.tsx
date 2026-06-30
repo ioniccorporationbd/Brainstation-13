@@ -27,40 +27,40 @@ type ServiceItem = {
 const logos: LogoItem[] = [
   {
     name: "Nissan",
-    image: "https://dummyimage.com/180x70/ffffff/b8b8b8.png&text=NISSAN",
+    image: "https://logo.clearbit.com/nissan-global.com",
     widthClass: "w-[120px]",
   },
   {
     name: "MetLife",
-    image: "https://dummyimage.com/200x70/ffffff/24456d.png&text=MetLife",
+    image: "https://logo.clearbit.com/metlife.com",
     widthClass: "w-[145px]",
   },
   {
     name: "DataResultz",
     image:
-      "https://dummyimage.com/210x70/ffffff/4cb783.png&text=DataResultz",
+      "https://logo.clearbit.com/datarobot.com",
     widthClass: "w-[150px]",
   },
   {
     name: "JTI",
-    image: "https://dummyimage.com/190x90/ffffff/0bb884.png&text=JTI",
+    image: "https://logo.clearbit.com/jti.com",
     widthClass: "w-[150px]",
   },
   {
     name: "InformatiQ",
     image:
-      "https://dummyimage.com/210x70/ffffff/159bd7.png&text=informatiQ",
+      "https://logo.clearbit.com/informatica.com",
     widthClass: "w-[160px]",
   },
   {
     name: "Galapagos",
     image:
-      "https://dummyimage.com/210x70/ffffff/0d5f41.png&text=Galapagos",
+      "https://logo.clearbit.com/glpg.com",
     widthClass: "w-[165px]",
   },
   {
     name: "IBSEZ",
-    image: "https://dummyimage.com/190x70/ffffff/333333.png&text=IBSEZ",
+    image: "https://logo.clearbit.com/bsez.com",
     widthClass: "w-[135px]",
   },
 ];

@@ -3,17 +3,17 @@ export default function ShopifySolutionsSection() {
     {
       name: "Choice Legacy",
       image:
-        "https://dummyimage.com/190x55/ffffff/6b7280.png&text=Choice+LEGACY",
+        "https://logo.clearbit.com/choicelegacy.com",
     },
     {
       name: "Imagine Create AI",
       image:
-        "https://dummyimage.com/210x55/ffffff/111827.png&text=IMAGINECREATE+AI",
+        "https://logo.clearbit.com/openai.com",
     },
     {
       name: "Ventro",
       image:
-        "https://dummyimage.com/190x55/ffffff/6b7280.png&text=VENTRO",
+        "https://logo.clearbit.com/ventro.com",
     },
     {
       name: "Suzuki",

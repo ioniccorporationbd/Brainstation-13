@@ -30,7 +30,7 @@ const clientLogos: ClientLogo[] = [
   },
   {
     name: "Kiksha",
-    image: "https://dummyimage.com/180x70/ffffff/159bd7.png&text=KIKSHA",
+    image: "https://logo.clearbit.com/kiksha.com",
     className: "h-[58px]",
   },
   {
