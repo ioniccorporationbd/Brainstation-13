@@ -16,16 +16,16 @@ const insideLinks: MenuLinkItem[] = [
   { label: "About Us", href: "/about-us" },
   { label: "Blog", href: "/blog" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Career", href: "/career" },
+  { label: "Career", href: "#" },
   { label: "Contact", href: "/contact" },
   { label: "Our Resources", href: "/resources" },
-  { label: "Investor Relations", href: "/investor-relations" },
+  { label: "Investor Relations", href: "#" },
 ];
 
 const recognitionLinks: MenuLinkItem[] = [
   { label: "Partners", href: "/partners" },
-  { label: "Enterprise-Grade Security", href: "/enterprise-grade-security" },
-  { label: "Sustainability", href: "/sustainability" },
+  { label: "Enterprise-Grade Security", href: "#" },
+  { label: "Sustainability", href: "#" },
   { label: "Media", href: "/media" },
   { label: "Join as Partner", href: "/join-as-partner" },
 ];

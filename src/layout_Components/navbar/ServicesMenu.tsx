@@ -34,7 +34,7 @@ const topServices: MenuLinkItem[] = [
 const serviceColumnTwo: MenuLinkItem[] = [
   { label: "LMS Development", href: "/lms-development" },
   { label: "Web & Mobile App Development", href: "/web-mobile-app-development" },
-  { label: "eCommerce Development", href: "/ecommerce-development" },
+  { label: "eCommerce Development", href: "#" },
   { label: "Adobe Experience Manager", href: "/adobe-experience-manager" },
   { label: "SharePoint Services", href: "/sharepoint-services" },
   { label: "Blockchain Development", href: "/blockchain-development" },
@@ -44,9 +44,9 @@ const serviceColumnTwo: MenuLinkItem[] = [
 const enterpriseLinks: MenuLinkItem[] = [
   { label: "Field Force Automation", href: "/field-force-automation" },
   { label: "Banking Solutions", href: "/banking-solutions" },
-  { label: "Cloud Solutions", href: "/cloud-solutions" },
+  { label: "Cloud Solutions", href: "#" },
   { label: "Cyber Security", href: "/cyber-security" },
-  { label: "ERP Development", href: "/erp-development" },
+  { label: "ERP Development", href: "#" },
   { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence" },
 ];
 
@@ -65,7 +65,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
     <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
       <div className="grid min-h-[489px] w-full grid-cols-[477px_1fr]">
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[56px] pt-[31px]">
-          <Link href="/collaboration-models" onClick={closeMenu} className="group block">
+          <Link href="#" onClick={closeMenu} className="group block">
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
               Collaboration Models
             </h2>

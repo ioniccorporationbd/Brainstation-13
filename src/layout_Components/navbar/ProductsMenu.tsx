@@ -20,8 +20,8 @@ const fintech: MenuLinkItem[] = [
 ];
 
 const healthcare: MenuLinkItem[] = [
-  { label: "Omnizia", href: "/omnizia" },
-  { label: "Time2Publish", href: "/time2publish" },
+  { label: "Omnizia", href: "#" },
+  { label: "Time2Publish", href: "#" },
 ];
 
 const lms: MenuLinkItem[] = [
@@ -29,7 +29,7 @@ const lms: MenuLinkItem[] = [
 ];
 
 const aiSolution: MenuLinkItem[] = [
-  { label: "NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent" },
+  { label: "NeuraFlow - Conversational AI Agent", href: "#" },
 ];
 
 export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
@@ -45,10 +45,10 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
   }
 
   return (
-    <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
+    <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">  
       <div className="grid min-h-[395px] w-full grid-cols-[667px_1fr]">
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[56px] pr-[60px] pt-[39px]">
-          <Link href="/products" onClick={closeMenu} className="group block">
+          <Link href="#" onClick={closeMenu} className="group block">
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
               Products
             </h2>
@@ -67,7 +67,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
               </Link>
             </div>
 
-            <Link href="/testimonials/anupom-syam" onClick={closeMenu} className="group block max-w-[570px]">
+            <Link href="#" onClick={closeMenu} className="group block max-w-[570px]">
               <div className="mb-[17px] flex items-center gap-[12px]">
                 <div>
                   <p className="text-[7px] font-semibold uppercase leading-none text-[#6b7280]">Reviewed on</p>

@@ -18,11 +18,11 @@ const industriesOne: MenuLinkItem[] = [
   { label: "Telecom", href: "/telecom" },
   { label: "Real Estate", href: "/real-estate" },
   { label: "Software/ITES", href: "/software-ites" },
-  { label: "e-Commerce", href: "/e-commerce" },
+  { label: "e-Commerce", href: "#" },
 ];
 
 const industriesTwo: MenuLinkItem[] = [
-  { label: "Education", href: "/education" },
+  { label: "Education", href: "#" },
   { label: "Retail", href: "/retail" },
   { label: "Automotive", href: "/automotive" },
   { label: "Startup", href: "/startup" },
@@ -33,7 +33,7 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "/industries" }]} closeMenu={closeMenu} />
+        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "#" }]} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -66,14 +66,14 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
                 image="/images/case-safety-at-sea.svg"
                 title="Safety at Sea - Leveraging IoT for Strengthening Maritime Security"
                 description="Brain Station 23 developed an advanced IoT-based boat safety system"
-                href="/case-study/safety-at-sea"
+                href="#"
                 closeMenu={closeMenu}
               />
               <CaseCard
                 image="/images/case-digital-wallet.svg"
                 title="Fueling Financial Inclusion through Digital Wallet Solutions"
                 description="Digital wallet services are becoming increasingly popular as people"
-                href="/case-study/digital-wallet"
+                href="#"
                 closeMenu={closeMenu}
               />
             </div>

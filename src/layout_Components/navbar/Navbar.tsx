@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
   { label: "Industries", key: "industries", href: "/industries", hasMegaMenu: true },
   { label: "Products", key: "products", href: "/products", hasMegaMenu: true },
   { label: "Resources", key: "resources", href: "/resources", hasMegaMenu: true },
-  { label: "Global Offices", key: "global-offices", href: "/global-offices", hasMegaMenu: false },
+  { label: "Global Offices", key: "global-offices", href: "#", hasMegaMenu: false },
 ];
 
 export default function Navbar() {
