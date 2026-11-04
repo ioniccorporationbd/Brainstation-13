@@ -35,7 +35,7 @@ export default function ManagedServiceHeroSection() {
 
           <p className="mt-9 max-w-[720px] text-[21px] font-medium leading-[1.45] tracking-[-0.035em] text-white/90 md:text-[24px]">
             Focus on your strategic goals while we take care of everything else.
-            From planning to release and post-launch support, Brain Station 23
+            From planning to release and post-launch support, Magnetic Solution Limited
             delivers turnkey software solutions with complete ownership
           </p>
 

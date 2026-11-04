@@ -66,7 +66,7 @@ export default function MLAIFAQSection() {
 
         <div className="lg:pl-[8px]">
           <h2 className="max-w-[560px] text-center text-[24px] font-bold leading-[1.05] tracking-[-0.03em] text-black sm:text-[28px] lg:text-[30px]">
-            Why choose Brain Station 23 for machine learning development?
+            Why choose Magnetic Solution Limited for machine learning development?
           </h2>
 
           <ul className="mt-[23px] space-y-[15px]">

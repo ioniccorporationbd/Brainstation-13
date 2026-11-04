@@ -23,9 +23,9 @@ export default function AemDescriptionSection() {
           <p className="text-[20px] font-normal leading-[1.55] tracking-[-0.01em] text-[#6B7280]">
             By AEM, you can optimize your IT investment in marketing and
             leverage the full power of your digital experience platform to meet
-            your unique digital marketing needs. Brain Station 23 offers AEM
+            your unique digital marketing needs. Magnetic Solution Limited offers AEM
             development with implementation, integration, managed service along
-            with intense customisation for AEM platform. Brain Station 23 also
+            with intense customisation for AEM platform. Magnetic Solution Limited also
             offers migration and upgrade with the help of experts hand so that
             you don’t have to take any hassle.
           </p>

@@ -70,7 +70,7 @@ export default function MvpFaqSection() {
             </h3>
 
             <p className="mt-7 max-w-[460px] text-[17px] font-medium leading-[1.6] tracking-[-0.03em] text-[#42637a]">
-              Partner with Brain Station 23 and accelerate your path from
+              Partner with Magnetic Solution Limited and accelerate your path from
               concept to customer feedback. Book your MVP strategy session.
             </p>
 

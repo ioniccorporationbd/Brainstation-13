@@ -6,10 +6,10 @@ export default function SharePointDescriptionSection() {
           <p className="text-[20px] font-normal leading-[1.55] tracking-[-0.01em] text-[#6B7280]">
             Discover and focus on strategic business management, magnify the
             growth prospects with SharePoint services provided exclusively by
-            Brain Station 23. Our strategic system integration, administration,
+            Magnetic Solution Limited. Our strategic system integration, administration,
             upgradation and development enhances proactive decisiveness of
             overall business productivity and agility while maintaining a
-            simplified technology landscape. Brain Station 23 offers the most
+            simplified technology landscape. Magnetic Solution Limited offers the most
             robust guarantee for availability in performance, along with a
             steady service response time and expert technical support.
           </p>

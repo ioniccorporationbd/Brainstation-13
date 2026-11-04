@@ -48,7 +48,7 @@ export default function DataWhyBrainStationSection() {
         {/* Left Content */}
         <div>
           <h2 className="text-[42px] font-normal leading-[1.12] tracking-[-0.055em] text-[#061026] sm:text-[52px] lg:text-[58px]">
-            Why Brain Station 23
+            Why Magnetic Solution Limited
           </h2>
 
           <p className="mt-[28px] max-w-[760px] text-[20px] font-normal leading-[1.45] text-[#335e79] sm:text-[22px]">
@@ -68,7 +68,7 @@ export default function DataWhyBrainStationSection() {
           <div className="h-[420px] w-full max-w-[500px] overflow-hidden rounded-[8px] bg-gray-200 sm:h-[520px] lg:h-[590px]">
             <img
               src={TEAM_IMAGE}
-              alt="Brain Station 23 team discussion"
+              alt="Magnetic Solution Limited team discussion"
               className="h-full w-full object-cover"
             />
           </div>

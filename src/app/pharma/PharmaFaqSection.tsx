@@ -82,7 +82,7 @@ export default function PharmaFaqSection() {
             </h3>
 
             <p className="mt-6 max-w-[390px] text-[16px] font-medium leading-[1.55] tracking-[-0.025em] text-[#42637a]">
-              Brain Station 23 empowers your organization with products &
+              Magnetic Solution Limited empowers your organization with products &
               services that combine innovation, regulatory compliance, and
               measurable results — so you can focus on your core mission.
             </p>

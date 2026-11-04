@@ -12,7 +12,7 @@ const reviews = [
     company: "Clutch",
     rating: "5.0 RATING",
     quote:
-      "Brain Station 23 has been consistent in ensuring tasks are completed within agreed timeframes.",
+      "Magnetic Solution Limited has been consistent in ensuring tasks are completed within agreed timeframes.",
     author: "VP R&D, Library Collection Management Software Company",
   },
   {

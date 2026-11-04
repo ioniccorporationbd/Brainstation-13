@@ -72,7 +72,7 @@ export default function TechnologyConsultingPartnerSection() {
             </p>
 
             <h2 className="max-w-[620px] text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
-              Why Partner with Brain Station 23?
+              Why Partner with Magnetic Solution Limited?
             </h2>
           </div>
 

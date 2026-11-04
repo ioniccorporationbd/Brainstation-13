@@ -88,7 +88,7 @@ export default function Navbar() {
           <Link href="/" onClick={closeAll} className="flex shrink-0 items-center">
             <Image
               src="/images/brainstation-logo.svg"
-              alt="Brain Station 23"
+              alt="Magnetic Solution Limited"
               width={222}
               height={40}
               priority
@@ -185,7 +185,7 @@ export default function Navbar() {
           <Link href="/" onClick={closeAll} className="flex shrink-0 items-center">
             <Image
               src="/images/brainstation-logo.svg"
-              alt="Brain Station 23"
+              alt="Magnetic Solution Limited"
               width={190}
               height={34}
               priority

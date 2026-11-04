@@ -65,7 +65,7 @@ export default function CaseStudyOverviewSection() {
 
             <div className="absolute left-6 top-6 max-w-[360px] text-white md:left-10 md:top-10">
               <p className="mb-4 inline-flex rounded-full bg-white/12 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
-                Brain Station 23 × Shwapno
+                Magnetic Solution Limited × Shwapno
               </p>
 
               <h3 className="text-[24px] font-bold leading-[1.15] tracking-[-0.055em] md:text-[34px]">
@@ -112,7 +112,7 @@ export default function CaseStudyOverviewSection() {
 
           <p className="mt-8 max-w-[920px] text-[19px] font-medium leading-[1.75] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
             Shwapno, Bangladesh’s largest retail supermarket chain, partnered
-            with Brain Station 23 to rebuild its e-commerce platform, enabling a
+            with Magnetic Solution Limited to rebuild its e-commerce platform, enabling a
             seamless, scalable, and hyperlocal digital shopping experience. This
             transformation addressed the needs of over 1 million customers and
             drove significant growth, including 100K+ app downloads with a 39%

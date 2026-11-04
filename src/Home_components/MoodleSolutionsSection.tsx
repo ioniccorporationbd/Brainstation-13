@@ -37,7 +37,7 @@ export default function MoodleSolutionsSection() {
           {/* Left text */}
           <div className="pt-[4px]">
             <p className="text-[21px] font-normal leading-[1.5] text-[#2d5f7c]">
-              Brain Station 23 is Moodle’s Certified Integration Partner in
+              Magnetic Solution Limited is Moodle’s Certified Integration Partner in
               Bangladesh and the first-ever organizer of MoodleMoot Bangladesh.
             </p>
 

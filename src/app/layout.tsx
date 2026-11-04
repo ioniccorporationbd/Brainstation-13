@@ -6,7 +6,7 @@ import GlobalOfficesSection from "@/layout_Components/GlobalOfficesSection";
 
 
 export const metadata: Metadata = {
-  title: "Brain Station 23 | Digital Transformation & IT Services",
+  title: "Magnetic Solution Limited | Digital Transformation & IT Services",
   description: "Enterprise-grade software, staff augmentation, Shopify, blockchain, LMS, AI, data, and digital transformation services.",
 };
 

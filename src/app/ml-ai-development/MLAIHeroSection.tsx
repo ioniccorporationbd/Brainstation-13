@@ -81,7 +81,7 @@ export default function MLAIHeroSection() {
           </h1>
 
           <p className="mt-[32px] max-w-[640px] text-[16px] font-normal leading-[1.8] text-black sm:text-[18px]">
-            Brain Station 23 delivers expert Machine Learning (ML) and AI
+            Magnetic Solution Limited delivers expert Machine Learning (ML) and AI
             solutions to help businesses automate processes, analyze data, and
             drive smarter decisions.
           </p>

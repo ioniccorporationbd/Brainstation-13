@@ -109,7 +109,7 @@ export default function ShopifyAppsSection() {
       <div className="mx-auto max-w-[980px]">
         <div className="text-center">
           <h2 className="text-[40px] font-normal leading-none tracking-[-0.065em] text-[#071F49] md:text-[46px]">
-            Shopify Apps Built by Brain Station 23
+            Shopify Apps Built by Magnetic Solution Limited
           </h2>
 
           <p className="mx-auto mt-6 max-w-[520px] text-[16px] font-medium leading-[1.55] tracking-[-0.025em] text-[#42637a]">

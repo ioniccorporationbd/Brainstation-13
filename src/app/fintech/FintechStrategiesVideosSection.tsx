@@ -17,28 +17,28 @@ type StrategyVideo = {
 const videos: StrategyVideo[] = [
   {
     title: "Smart Digital Wallet for Seamless Financial Control",
-    channel: "Brain Station 23",
+    channel: "Magnetic Solution Limited",
     thumbnail:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop",
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "iBank23: Secure & Seamless Digital Banking App",
-    channel: "Brain Station 23",
+    channel: "Magnetic Solution Limited",
     thumbnail:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Digital Lending Platform for Modern Financial Services",
-    channel: "Brain Station 23",
+    channel: "Magnetic Solution Limited",
     thumbnail:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Cross Border Payment Innovation for Global Remittance",
-    channel: "Brain Station 23",
+    channel: "Magnetic Solution Limited",
     thumbnail:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
     youtubeUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",

@@ -65,7 +65,7 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
               <CaseCard
                 image="/images/case-safety-at-sea.svg"
                 title="Safety at Sea - Leveraging IoT for Strengthening Maritime Security"
-                description="Brain Station 23 developed an advanced IoT-based boat safety system"
+                description="Magnetic Solution Limited developed an advanced IoT-based boat safety system"
                 href="/case-study/safety-at-sea"
                 closeMenu={closeMenu}
               />

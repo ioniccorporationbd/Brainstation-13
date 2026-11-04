@@ -34,7 +34,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Inside Brain Station 23" links={insideLinks} closeMenu={closeMenu} />
+        <MobileGroup title="Inside Magnetic Solution Limited" links={insideLinks} closeMenu={closeMenu} />
         <MobileGroup title="Recognitions" links={recognitionLinks} closeMenu={closeMenu} />
       </div>
     );
@@ -46,7 +46,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
           <Link href="/about-us" onClick={closeMenu} className="group block">
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
-              About Brain Station 23
+              About Magnetic Solution Limited
             </h2>
             <p className="mt-[13px] max-w-[450px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
               Founded in 2006, we are a global software company powering digital transformation across industries.
@@ -57,14 +57,14 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
             <Link href="/about-us" onClick={closeMenu} className="group grid grid-cols-[150px_1fr] gap-[35px]">
               <Image
                 src="/images/about-news.svg"
-                alt="Brain Station 23 news"
+                alt="Magnetic Solution Limited news"
                 width={150}
                 height={112}
                 className="h-[112px] w-[150px] rounded-[8px] object-cover"
               />
               <div>
                 <h3 className="max-w-[310px] text-[19px] font-medium leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
-                  Brain Station 23’s CEO promotes Bangladesh’s tech prowess at WEF 2025
+                  Magnetic Solution Limited’s CEO promotes Bangladesh’s tech prowess at WEF 2025
                 </h3>
                 <p className="mt-[13px] inline-flex items-center gap-[14px] text-[15px] font-normal text-[#2d7dbf] transition-colors group-hover:text-[#009fe3]">
                   About Us <span className="text-[22px] leading-none">›</span>
@@ -75,7 +75,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
         </aside>
 
         <div className="grid grid-cols-[360px_360px_1fr] gap-x-[85px] bg-white pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
-          <DesktopColumn title="Inside Brain Station 23" href="/about-us" links={insideLinks} closeMenu={closeMenu} />
+          <DesktopColumn title="Inside Magnetic Solution Limited" href="/about-us" links={insideLinks} closeMenu={closeMenu} />
           <DesktopColumn title="Recognitions" href="/recognitions" links={recognitionLinks} closeMenu={closeMenu} />
           <div />
         </div>

@@ -29,7 +29,7 @@ export default function WhyPartner() {
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto mb-[88px] max-w-[620px] text-center">
           <h2 className="text-[42px] font-normal leading-[1.28] tracking-[-2.4px] text-white md:text-[52px]">
-            Why Partner with Brain Station 23?
+            Why Partner with Magnetic Solution Limited?
           </h2>
         </div>
 

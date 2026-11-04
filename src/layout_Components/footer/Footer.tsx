@@ -183,7 +183,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex">
               <Image
                 src="/images/brainstation-logo.svg"
-                alt="Brain Station 23"
+                alt="Magnetic Solution Limited"
                 width={195}
                 height={40}
                 className="h-auto w-[190px]"
@@ -323,7 +323,7 @@ export default function Footer() {
         {/* Bottom Copyright */}
         <section className="mt-[35px] flex flex-col gap-5 border-t border-[#26334b] pt-[31px] md:flex-row md:items-center md:justify-between">
           <p className="text-[13px] font-medium text-white">
-            © 2026 Brain Station 23. All rights reserved.
+            © 2026 Magnetic Solution Limited. All rights reserved.
           </p>
 
           <Link

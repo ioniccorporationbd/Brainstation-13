@@ -16,7 +16,7 @@ export default function AboutSection() {
         {/* Column 1: Description & Video Preview */}
         <div className="flex flex-col gap-6 justify-between">
           <p className="text-slate-6xl text-sm md:text-base leading-relaxed text-slate-600">
-            Brain Station 23 drives global digital transformation, integrating AI across 
+            Magnetic Solution Limited drives global digital transformation, integrating AI across 
             the development lifecycle—delivering software 10X faster and smarter.
           </p>
           
@@ -41,7 +41,7 @@ export default function AboutSection() {
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-slate-100">
             <Image 
               src="/images/brands/team-photo.webp" 
-              alt="Brain Station 23 Team" 
+              alt="Magnetic Solution Limited Team" 
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
               className="object-cover"

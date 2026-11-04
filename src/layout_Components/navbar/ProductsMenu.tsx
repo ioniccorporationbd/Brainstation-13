@@ -53,7 +53,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
               Products
             </h2>
             <p className="mt-[13px] max-w-[555px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
-              Brain Station 23 delivers tailored digital solutions across fintech, healthcare, e-commerce, and more, empowering industries with innovation and expertise.
+              Magnetic Solution Limited delivers tailored digital solutions across fintech, healthcare, e-commerce, and more, empowering industries with innovation and expertise.
             </p>
           </Link>
 
@@ -76,7 +76,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
                 <p className="text-[20px] leading-none text-[#f04438]">★★★★★</p>
               </div>
               <p className="text-[15px] font-normal leading-[22px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
-                Brain Station 23’s resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.
+                Magnetic Solution Limited’s resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.
               </p>
               <p className="mt-[24px] text-[15px] font-normal leading-[22px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">Anupom Syam</p>
               <p className="mt-[4px] text-[14px] font-normal leading-[20px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">Founder & CEO at Tackle</p>

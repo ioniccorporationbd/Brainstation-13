@@ -16,11 +16,11 @@ type VideoItem = {
 const videos: VideoItem[] = [
   {
     title: "LUUP Founder on Building a Mobility Platform",
-    subtitle: "Client testimonial with Brain Station 23",
+    subtitle: "Client testimonial with Magnetic Solution Limited",
     videoId: "LkApsAGYKUY",
   },
   {
-    title: "Strategic Partnership Between BSEZ & Brain Station 23",
+    title: "Strategic Partnership Between BSEZ & Magnetic Solution Limited",
     subtitle: "Digital transformation talk with BSEZ",
     videoId: "5INLCSVF1wY",
   },

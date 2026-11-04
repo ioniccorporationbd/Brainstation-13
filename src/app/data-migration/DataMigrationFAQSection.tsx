@@ -67,7 +67,7 @@ export default function DataMigrationFAQSection() {
         {/* Right Text */}
         <div>
           <h2 className="max-w-[500px] text-center text-[22px] font-bold leading-[1.08] tracking-[-0.03em] text-black sm:text-[25px] md:text-left">
-            Why choose Brain Station 23 for Data Migration Services
+            Why choose Magnetic Solution Limited for Data Migration Services
           </h2>
 
           <ul className="mt-[24px] space-y-[13px]">
@@ -92,7 +92,7 @@ export default function DataMigrationFAQSection() {
 
         <p className="mx-auto mt-[16px] max-w-[850px] text-[16px] font-normal leading-[1.6] text-[#333333] sm:text-[18px]">
           Get answers to common questions about Data Migration Services from
-          Brain Station 23.
+          Magnetic Solution Limited.
         </p>
       </div>
 

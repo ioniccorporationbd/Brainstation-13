@@ -82,7 +82,7 @@ export default function ModelingServicesSection() {
                       <h3 className="text-sm font-bold leading-tight md:text-base">
                         {item.videoTitle}
                       </h3>
-                      <p className="text-xs text-white/85">Brain Station 23</p>
+                      <p className="text-xs text-white/85">Magnetic Solution Limited</p>
                     </div>
                   </div>
 

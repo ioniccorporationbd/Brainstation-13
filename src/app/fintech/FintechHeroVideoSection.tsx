@@ -33,7 +33,7 @@ export default function FintechHeroVideoSection() {
           </h1>
 
           <p className="mt-9 max-w-[660px] text-[22px] font-bold leading-[1.45] tracking-[-0.045em] text-white">
-            Accelerate your digital transformation with Brain Station 23’s
+            Accelerate your digital transformation with Magnetic Solution Limited’s
             proven fintech delivery framework — trusted by global banks, NBFCs,
             and fintech leaders to launch faster, lower costs, and deliver
             flawless customer experiences.
@@ -59,7 +59,7 @@ export default function FintechHeroVideoSection() {
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                title="Fintech Solutions by Brain Station 23"
+                title="Fintech Solutions by Magnetic Solution Limited"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />

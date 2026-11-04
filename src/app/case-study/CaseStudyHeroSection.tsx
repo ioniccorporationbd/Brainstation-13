@@ -39,7 +39,7 @@ export default function CaseStudyHeroSection() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-[860px] text-[20px] font-medium leading-[1.55] tracking-[-0.04em] text-[#42637a] md:text-[23px]">
-            Brain Station 23 rebuilt Shwapno’s e-commerce platform, delivering
+            Magnetic Solution Limited rebuilt Shwapno’s e-commerce platform, delivering
             a scalable and hyperlocal digital experience that drove significant
             growth and improved customer ratings.
           </p>

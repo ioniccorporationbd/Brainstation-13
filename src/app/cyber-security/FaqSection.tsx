@@ -58,7 +58,7 @@ export default function FaqSection() {
             </h3>
 
             <p className="mb-9 max-w-[420px] text-[17px] font-normal leading-[1.55] tracking-[-0.25px] text-[#315d79]">
-              With Brain Station 23’s Managed Services, you get an expert-led
+              With Magnetic Solution Limited’s Managed Services, you get an expert-led
               team, proven processes, and transparent outcomes—all without the
               hiring overhead.
             </p>

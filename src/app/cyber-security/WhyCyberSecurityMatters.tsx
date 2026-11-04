@@ -35,14 +35,14 @@ export default function WhyCyberSecurityMatters() {
           <div className="relative h-[28px] w-[28px]">
             <Image
               src="https://brainstation-23.com/wp-content/uploads/2023/10/BS-23-Logo.svg"
-              alt="Brain Station 23"
+              alt="Magnetic Solution Limited"
               fill
               className="object-contain"
             />
           </div>
 
           <span className="text-[21px] font-bold tracking-[-0.4px] text-[#12a7df]">
-            BRAIN STATION 23
+            Magnetic Solution Limited
           </span>
         </div>
 

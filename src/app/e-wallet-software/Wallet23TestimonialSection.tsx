@@ -19,13 +19,13 @@ const testimonials: Testimonial[] = [
     company: "bKash Limited",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/BKash_logo.svg/512px-BKash_logo.svg.png",
     quote:
-      "bKash Limited is working with Brain Station 23 from 2021. Their resources are excellent and have very strong technical and business understanding. Augmented engagement model with BS23 saved $100K cost in last 3 years. I hope bKash and Brain Station 23 will continue their partnership and make a great impact in countries economy.",
+      "bKash Limited is working with Magnetic Solution Limited from 2021. Their resources are excellent and have very strong technical and business understanding. Augmented engagement model with BS23 saved $100K cost in last 3 years. I hope bKash and Magnetic Solution Limited will continue their partnership and make a great impact in countries economy.",
   },
   {
     company: "UCB Bank",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/United_Commercial_Bank_Logo.svg/512px-United_Commercial_Bank_Logo.svg.png",
     quote:
-      "Brain Station 23 helped us deliver digital financial solutions with strong technical expertise, reliable delivery, and excellent business understanding. Their team works with ownership and speed.",
+      "Magnetic Solution Limited helped us deliver digital financial solutions with strong technical expertise, reliable delivery, and excellent business understanding. Their team works with ownership and speed.",
   },
   {
     company: "City Bank",

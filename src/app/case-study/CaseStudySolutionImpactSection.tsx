@@ -148,7 +148,7 @@ export default function CaseStudySolutionImpactSection() {
           </h2>
 
           <p className="mt-7 max-w-[900px] text-[19px] font-medium leading-[1.7] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
-            Brain Station 23 engineered a scalable, hyperlocal, and
+            Magnetic Solution Limited engineered a scalable, hyperlocal, and
             customer-focused e-commerce ecosystem for Shwapno with advanced
             search, personalization, inventory synchronization, fulfillment
             visibility, and analytics.
@@ -245,7 +245,7 @@ export default function CaseStudySolutionImpactSection() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-[850px] text-[18px] font-medium leading-[1.65] tracking-[-0.035em] text-[#42637a] md:text-[20px]">
-            Transform your retail business with Brain Station 23’s expertise in
+            Transform your retail business with Magnetic Solution Limited’s expertise in
             scalable e-commerce development and hyperlocal digital retail
             solutions. Let us help you deliver personalized, efficient, and
             data-driven shopping experiences that drive growth and customer

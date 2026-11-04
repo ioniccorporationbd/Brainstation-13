@@ -73,7 +73,7 @@ export default function WhyChooseBrainStationSection() {
             </p>
 
             <h2 className="max-w-[500px] text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
-              Why Choose Brain Station 23?
+              Why Choose Magnetic Solution Limited?
             </h2>
           </div>
 

@@ -34,7 +34,7 @@ export default function MvpDevelopmentHeroSection() {
 
           <p className="mt-9 max-w-[760px] text-[20px] font-medium leading-[1.5] tracking-[-0.035em] text-white/90 md:text-[23px]">
             Turn market insights into a working prototype in the fastest
-            possible time. Brain Station 23&apos;s MVP Development Services help
+            possible time. Magnetic Solution Limited&apos;s MVP Development Services help
             you validate assumptions, attract early adopters, and secure
             funding with a lean, high impact product.
           </p>

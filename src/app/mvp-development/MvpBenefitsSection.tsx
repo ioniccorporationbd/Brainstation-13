@@ -65,7 +65,7 @@ export default function MvpBenefitsSection() {
             </p>
 
             <h2 className="max-w-[650px] text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
-              Why Build an MVP with Brain Station 23?
+              Why Build an MVP with Magnetic Solution Limited?
             </h2>
           </div>
 
