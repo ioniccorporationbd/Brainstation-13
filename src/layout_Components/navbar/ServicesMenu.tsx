@@ -65,14 +65,14 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
     <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
       <div className="grid min-h-[489px] w-full grid-cols-[477px_1fr]">
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[56px] pt-[31px]">
-          <Link href="/collaboration-models" onClick={closeMenu} className="group block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+          <div className="block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               Collaboration Models
             </h2>
-            <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+            <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
               AI-powered dev for 10X faster software delivery.
             </p>
-          </Link>
+          </div>
 
           <div className="mt-[19px] space-y-[15px]">
             {collaborationLinks.map((item) => (
@@ -144,15 +144,11 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
   );
 }
 
-function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <Link
-      href={href}
-      onClick={closeMenu}
-      className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]"
-    >
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
       {children}
-    </Link>
+    </div>
   );
 }
 

@@ -44,14 +44,14 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
     <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
       <div className="grid min-h-[398px] w-full grid-cols-[615px_1fr]">
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
-          <Link href="/about-us" onClick={closeMenu} className="group block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+          <div className="block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               About Magnetic Solution Limited
             </h2>
-            <p className="mt-[13px] max-w-[450px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+            <p className="mt-[13px] max-w-[450px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
               Founded in 2006, we are a global software company powering digital transformation across industries.
             </p>
-          </Link>
+          </div>
 
           <div className="mt-[40px] border-t border-[#d5d5d5] pt-[22px]">
             <Link href="/about-us" onClick={closeMenu} className="group grid grid-cols-[150px_1fr] gap-[35px]">
@@ -95,11 +95,11 @@ function DesktopColumn({ title, href, links, closeMenu }: { title: string; href:
   );
 }
 
-function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <Link href={href} onClick={closeMenu} className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
       {children}
-    </Link>
+    </div>
   );
 }
 

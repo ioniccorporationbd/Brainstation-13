@@ -42,20 +42,20 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
     <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
       <div className="grid min-h-[466px] w-full grid-cols-[607px_1fr]">
         <aside className="bg-[#f7f8fa] pb-[40px] pl-[51px] pr-[60px] pt-[40px]">
-          <Link href="/industries" onClick={closeMenu} className="group block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
+          <div className="block">
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               Industries
             </h2>
-            <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">
+            <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
               We’ve delivered 2500+ projects across 130+ sectors. Experience in your industry? We have it.
             </p>
-          </Link>
+          </div>
 
           <div className="mt-[39px] border-t border-[#d5d5d5] pt-[22px]">
             <div className="mb-[20px] flex items-center justify-between">
-              <Link href="/case-studies" onClick={closeMenu} className="text-[18px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]">
+              <span className="text-[18px] font-semibold leading-[24px] text-[#050b18]">
                 Recommended Case Study
-              </Link>
+              </span>
               <Link href="/case-studies" onClick={closeMenu} className="inline-flex items-center gap-[10px] text-[15px] font-normal text-[#2d7dbf] transition-colors hover:text-[#009fe3]">
                 View All <span className="text-[22px] leading-none">›</span>
               </Link>
@@ -116,11 +116,11 @@ function CaseCard({ image, title, description, href, closeMenu }: { image: strin
   );
 }
 
-function ColumnTitle({ href, closeMenu, children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <Link href={href} onClick={closeMenu} className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce] hover:text-[#009fe3]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
       {children}
-    </Link>
+    </div>
   );
 }
 
