@@ -122,7 +122,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
 
         <div className="grid grid-cols-[330px_365px_1fr] gap-x-[63px] bg-white pb-[40px] pl-[60px] pr-[58px] pt-[33px]">
           <div>
-            <ColumnTitle href="/top-services" closeMenu={closeMenu}>Top Services</ColumnTitle>
+            <ColumnTitle href="/services" closeMenu={closeMenu}>Top Services</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {topServices.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -146,7 +146,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
           </div>
 
           <div>
-            <ColumnTitle href="/enterprise-focused" closeMenu={closeMenu}>Enterprise Focused</ColumnTitle>
+            <ColumnTitle href="/enterprise-grade-security" closeMenu={closeMenu}>Enterprise Focused</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {enterpriseLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />

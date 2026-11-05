@@ -11,49 +11,49 @@ const products: ProductItem[] = [
     title: "Proctoring Pro — Online Exam Monitoring & Integrity",
     description:
       "Conduct secure, scalable online exams with real-time monitoring, identity verification, and easy integration with Moodle.",
-    href: "/products/proctoring-pro",
+    href: "/proctoring-pro",
   },
   {
     title: "Wallet23 — Digital Wallet & Payment Systems",
     description:
       "Go live in 15 days with P2P transfers, merchant payments, QR transactions, and enterprise-grade security.",
-    href: "/products/wallet23",
+    href: "/e-wallet-software",
   },
   {
     title: "Remity — Cross-Border Payments",
     description:
       "Launch international money transfer services in 30 days with multi-currency wallets, real-time FX, and secure compliance.",
-    href: "/products/remity",
+    href: "/cross-border-payments-solution",
   },
   {
     title: "PocketEdge — Digital Lending & Credit",
     description:
       "Offer branded loan services instantly with automated credit scoring, digital origination, and AI-driven fraud protection.",
-    href: "/products/pocketedge",
+    href: "/digital-lending-credit",
   },
   {
     title: "Omnizia — Pharma HCP Activation Suite",
     description:
       "Enable smart, data-driven pharma campaigns with predictive analytics and repeatable cross-channel insights.",
-    href: "/products/omnizia",
+    href: "/omnizia",
   },
   {
     title: "Insurance Tech Solutions",
     description:
       "Modernize underwriting, claims, and policy management with AI and data analytics for personalized, scalable insurance products.",
-    href: "/products/insurance-tech-solutions",
+    href: "/insurance-360",
   },
   {
     title: "Time2Publish — Omni-Channel Content Delivery",
     description:
       "Streamline approvals, reduce manual steps, and automate content delivery for faster, error-free marketing.",
-    href: "/products/time2publish",
+    href: "/time2publish",
   },
   {
     title: "Field Force Management",
     description:
       "Mobilize dispersed sales teams with automation, real-time tracking, and secure, accurate reporting.",
-    href: "/products/field-force-management",
+    href: "/field-force-automation",
   },
 ];
 

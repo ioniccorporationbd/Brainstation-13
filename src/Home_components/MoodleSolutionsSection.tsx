@@ -33,7 +33,7 @@ export default function MoodleSolutionsSection() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-[64px] grid w-full max-w-[1240px] grid-cols-1 items-start gap-12 lg:grid-cols-[460px_480px_420px] lg:gap-[40px]">
+        <div className="mx-auto mt-[64px] grid w-full max-w-[1240px] grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,480px)_minmax(0,1fr)] lg:gap-[40px]">
           {/* Left text */}
           <div className="pt-[4px]">
             <p className="text-[21px] font-normal leading-[1.5] text-[#2d5f7c]">
@@ -47,7 +47,7 @@ export default function MoodleSolutionsSection() {
             </p>
 
             <Link
-              href="/moodle-moot-bangladesh-2026"
+              href="/lms-development"
               className="mt-[30px] inline-flex items-center gap-[14px] text-[20px] font-semibold text-[#3b8fcb] transition-colors hover:text-[#1479b9]"
             >
               Join Moodle Moot Bangladesh 2026

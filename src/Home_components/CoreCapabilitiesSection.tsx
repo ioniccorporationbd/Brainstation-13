@@ -21,40 +21,40 @@ const capabilities: Capability[] = [
     description:
       "Instantly scale your team with vetted AI/cloud experts. Pay only for the talent you need, when you need it.",
     icon: "/images/core-capabilities/icon-staff.svg",
-    href: "/services/staff-augmentation",
-    className: "lg:col-start-1 lg:row-start-1",
+    href: "/staff-augmentation",
+    className: "xl:col-start-1 xl:row-start-1",
   },
   {
     title: "Managed Services",
     description:
       "End-to-end support for your applications, infrastructure, and digital platforms—so you can shift focus from maintenance to innovation.",
     icon: "/images/core-capabilities/icon-managed.svg",
-    href: "/services/managed-services",
-    className: "lg:col-start-3 lg:row-start-1",
+    href: "/managed-service",
+    className: "xl:col-start-3 xl:row-start-1",
   },
   {
     title: "MVP Development",
     description:
       "Launch market-ready MVPs in 8-12 weeks. AI-accelerated builds with 40% faster iteration cycles.",
     icon: "/images/core-capabilities/icon-mvp.svg",
-    href: "/services/mvp-development",
-    className: "lg:col-start-2 lg:row-start-2 lg:pt-[3px]",
+    href: "/mvp-development",
+    className: "xl:col-start-2 xl:row-start-2 xl:pt-[3px]",
   },
   {
     title: "Technology Consulting",
     description:
       "Cut tech waste by 30% with our strategic audits. Align tools with business goals for maximum ROI.",
     icon: "/images/core-capabilities/icon-consulting.svg",
-    href: "/services/technology-consulting",
-    className: "lg:col-start-1 lg:row-start-3 lg:pt-[6px]",
+    href: "/technology-consulting",
+    className: "xl:col-start-1 xl:row-start-3 xl:pt-[6px]",
   },
   {
     title: "Digital Transformation",
     description:
       "Modernize legacy systems with AI-driven automation. Achieve 50% operational efficiency gains.",
     icon: "/images/core-capabilities/icon-digital.svg",
-    href: "/services/digital-transformation",
-    className: "lg:col-start-3 lg:row-start-3 lg:pt-[6px]",
+    href: "/digital-transformation",
+    className: "xl:col-start-3 xl:row-start-3 xl:pt-[6px]",
   },
 ];
 
@@ -62,22 +62,22 @@ const images: CapabilityImage[] = [
   {
     src: "/images/core-capabilities/staff-augmentation.png",
     alt: "Staff augmentation specialist working with laptop",
-    className: "lg:col-start-2 lg:row-start-1",
+    className: "xl:col-start-2 xl:row-start-1",
   },
   {
     src: "/images/core-capabilities/team-collaboration.png",
     alt: "Team collaboration at office desk",
-    className: "lg:col-start-1 lg:row-start-2",
+    className: "xl:col-start-1 xl:row-start-2",
   },
   {
     src: "/images/core-capabilities/managed-services.png",
     alt: "Managed services specialist in support meeting",
-    className: "lg:col-start-3 lg:row-start-2",
+    className: "xl:col-start-3 xl:row-start-2",
   },
   {
     src: "/images/core-capabilities/technology-consulting.png",
     alt: "Technology consulting discussion",
-    className: "lg:col-start-2 lg:row-start-3",
+    className: "xl:col-start-2 xl:row-start-3",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function CoreCapabilitiesSection() {
           </Link>
         </div>
 
-        <div className="mt-[72px] grid gap-9 md:grid-cols-2 lg:grid-cols-[376px_504px_376px] lg:grid-rows-[230px_224px_270px] lg:gap-x-[34px] lg:gap-y-[62px]">
+        <div className="mt-[72px] grid gap-9 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_minmax(0,504px)_minmax(0,1fr)] xl:grid-rows-[230px_224px_270px] xl:gap-x-[34px] xl:gap-y-[62px]">
           {capabilities.map((item) => (
             <CapabilityCard key={item.title} item={item} />
           ))}

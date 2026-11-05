@@ -30,7 +30,7 @@ const slides: SlideItem[] = [
     description:
       "Empowering Banks, NBFIs & Fintechs to accelerate digital transformation with faster launches, lower costs & seamless UX.",
     buttonText: "Book A Demo",
-    buttonHref: "/book-a-demo",
+    buttonHref: "/schedule-a-call",
     statOneNumber: "6",
     statOneText: "Global Offices",
     statTwoNumber: "ISO 27001",

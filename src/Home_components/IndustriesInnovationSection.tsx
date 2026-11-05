@@ -14,56 +14,56 @@ const industries: IndustryCard[] = [
     description:
       "LMS solutions built with Moodle: live classes, assessments, compliance & reporting to empower learners.",
     icon: "/images/industries/icon-edtech.svg",
-    href: "/industries/education",
+    href: "/education",
   },
   {
     title: "Fintech",
     description:
       "Secure, scalable fintech & blockchain platforms built to transform payments, lending, and risk management.",
     icon: "/images/industries/icon-fintech.svg",
-    href: "/industries/fintech",
+    href: "/fintech",
   },
   {
     title: "E-Commerce",
     description:
       "Transform your store with certified nopCommerce themes, plugins & custom apps for speed, UX & conversion.",
     icon: "/images/industries/icon-ecommerce.svg",
-    href: "/industries/e-commerce",
+    href: "/e-commerce",
   },
   {
     title: "Pharma",
     description:
       "Regulation-first pharma & healthcare software: compliant platforms supporting HCPs, education & analytics.",
     icon: "/images/industries/icon-pharma.svg",
-    href: "/industries/pharma",
+    href: "/pharma",
   },
   {
     title: "Telecom",
     description:
       "Enterprise-grade telecom applications that scale securely to serve millions with reliability & speed.",
     icon: "/images/industries/icon-telecom.svg",
-    href: "/industries/telecom",
+    href: "/telecom",
   },
   {
     title: "Retail",
     description:
       "Smart retail systems streamlining inventory, customer journeys & omnichannel sales for business growth.",
     icon: "/images/industries/icon-retail.svg",
-    href: "/industries/retail",
+    href: "/retail",
   },
   {
     title: "Software/ITES",
     description:
       "Cutting-edge custom software & IT-enabled solutions solving complex problems with innovation & agility.",
     icon: "/images/industries/icon-software.svg",
-    href: "/industries/software-ites",
+    href: "/software-ites",
   },
   {
     title: "Start-Ups",
     description:
       "Lean, fast-moving digital builds for startups: MVPs, product-market fit & scalable tech from day one.",
     icon: "/images/industries/icon-startups.svg",
-    href: "/industries/startups",
+    href: "/startup",
   },
 ];
 

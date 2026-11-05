@@ -3,19 +3,19 @@ import Link from "next/link";
 import { MessageCircle, MoveUpRight } from "lucide-react";
 
 const industriesLeft = [
-  { label: "Fintech", href: "/industries/fintech" },
-  { label: "Pharma", href: "/industries/pharma" },
-  { label: "Telecom", href: "/industries/telecom" },
-  { label: "Real Estate", href: "/industries/real-estate" },
-  { label: "Software/ITES", href: "/industries/software-ites" },
+  { label: "Fintech", href: "/fintech" },
+  { label: "Pharma", href: "/pharma" },
+  { label: "Telecom", href: "/telecom" },
+  { label: "Real Estate", href: "/real-estate" },
+  { label: "Software/ITES", href: "/software-ites" },
 ];
 
 const industriesRight = [
-  { label: "e-Commerce", href: "/industries/e-commerce" },
-  { label: "Education", href: "/industries/education" },
-  { label: "Retail", href: "/industries/retail" },
-  { label: "Automotive", href: "/industries/automotive" },
-  { label: "Startup", href: "/industries/startup" },
+  { label: "e-Commerce", href: "/e-commerce" },
+  { label: "Education", href: "/education" },
+  { label: "Retail", href: "/retail" },
+  { label: "Automotive", href: "/automotive" },
+  { label: "Startup", href: "/startup" },
 ];
 
 const companyLinks = [
@@ -27,11 +27,11 @@ const companyLinks = [
 ];
 
 const resourceLinks = [
-  { label: "Certifications & Awards", href: "/certifications-awards" },
+  { label: "Certifications & Awards", href: "/recognitions" },
   { label: "Partners", href: "/partners" },
   { label: "Enterprise-Grade Security", href: "/enterprise-grade-security" },
   { label: "Sustainability", href: "/sustainability" },
-  { label: "Events", href: "/events" },
+  { label: "Events", href: "/media" },
 ];
 
 const socialItems = [
@@ -326,12 +326,9 @@ export default function Footer() {
             © 2026 Magnetic Solution Limited. All rights reserved.
           </p>
 
-          <Link
-            href="/privacy-policy"
-            className="text-[13px] font-medium text-white underline underline-offset-2 transition-colors hover:text-[#00a6df]"
-          >
+          <span className="text-[13px] font-medium text-white/70">
             Privacy Policy
-          </Link>
+          </span>
         </section>
       </div>
 
