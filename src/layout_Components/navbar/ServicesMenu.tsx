@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -111,26 +110,12 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
           </div>
 
           <div className="mt-[39px] border-t border-[#d5d5d5] pt-[20px]">
-            <Link href="/solution-partner/swapno" onClick={closeMenu} className="group flex items-center gap-[15px]">
-              <Image
-                src="/images/swapno-logo.svg"
-                alt="Swapno Solution Partner"
-                width={76}
-                height={40}
-                className="h-[40px] w-[76px] object-cover"
-              />
-              <span className="h-[40px] w-px bg-[#d5d5d5]" />
-              <span className="text-[13px] font-medium leading-[18px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">
-                Solution Partner
-              </span>
-            </Link>
-
             <Link
               href="/case-study"
               onClick={closeMenu}
-              className="mt-[17px] block max-w-[350px] text-[16px] font-normal leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+              className="inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
             >
-              A Journey Towards Digital Excellence in Retail. <span className="underline underline-offset-[2px]">Read case study.</span>
+              View Case Study <span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
         </aside>
