@@ -1,6 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  Users,
+  Settings,
+  Rocket,
+  Lightbulb,
+  Zap,
+  Brain,
+  Database,
+  Repeat,
+  BarChart3,
+  ShieldCheck,
+  Boxes,
+  Gamepad2,
+  CheckCircle2,
+  GraduationCap,
+  Smartphone,
+  ShoppingCart,
+  Palette,
+  Share2,
+  Link2,
+  ShoppingBag,
+  Truck,
+  Landmark,
+  Cloud,
+  Lock,
+  Factory,
+  LineChart,
+  type LucideIcon,
+} from "lucide-react";
 
 type Props = {
   closeMenu: () => void;
@@ -10,44 +39,45 @@ type Props = {
 type MenuLinkItem = {
   label: string;
   href: string;
+  icon: LucideIcon;
 };
 
 const collaborationLinks: MenuLinkItem[] = [
-  { label: "Staff Augmentation", href: "/staff-augmentation" },
-  { label: "Managed Service", href: "/managed-service" },
-  { label: "Digital Transformation", href: "/digital-transformation" },
-  { label: "Technology Consulting", href: "/technology-consulting" },
-  { label: "MVP Development", href: "/mvp-development" },
+  { label: "Staff Augmentation", href: "/staff-augmentation", icon: Users },
+  { label: "Managed Service", href: "/managed-service", icon: Settings },
+  { label: "Digital Transformation", href: "/digital-transformation", icon: Rocket },
+  { label: "Technology Consulting", href: "/technology-consulting", icon: Lightbulb },
+  { label: "MVP Development", href: "/mvp-development", icon: Zap },
 ];
 
 const topServices: MenuLinkItem[] = [
-  { label: "ML & AI Development", href: "/ml-ai-development" },
-  { label: "Data Engineering", href: "/data-engineering" },
-  { label: "Data Migration", href: "/data-migration" },
-  { label: "Business Intelligence", href: "/business-intelligence" },
-  { label: "Insurtech", href: "/insurtech" },
-  { label: "3D Modeling Services", href: "/3d-modeling-services" },
-  { label: "Game Studio", href: "/game-studio" },
-  { label: "QA Testing & Automation", href: "/qa-testing-and-automation" },
+  { label: "ML & AI Development", href: "/ml-ai-development", icon: Brain },
+  { label: "Data Engineering", href: "/data-engineering", icon: Database },
+  { label: "Data Migration", href: "/data-migration", icon: Repeat },
+  { label: "Business Intelligence", href: "/business-intelligence", icon: BarChart3 },
+  { label: "Insurtech", href: "/insurtech", icon: ShieldCheck },
+  { label: "3D Modeling Services", href: "/3d-modeling-services", icon: Boxes },
+  { label: "Game Studio", href: "/game-studio", icon: Gamepad2 },
+  { label: "QA Testing & Automation", href: "/qa-testing-and-automation", icon: CheckCircle2 },
 ];
 
 const serviceColumnTwo: MenuLinkItem[] = [
-  { label: "LMS Development", href: "/lms-development" },
-  { label: "Web & Mobile App Development", href: "/web-mobile-app-development" },
-  { label: "eCommerce Development", href: "/ecommerce-development" },
-  { label: "Adobe Experience Manager", href: "/adobe-experience-manager" },
-  { label: "SharePoint Services", href: "/sharepoint-services" },
-  { label: "Blockchain Development", href: "/blockchain-development" },
-  { label: "Shopify Services", href: "/shopify-services" },
+  { label: "LMS Development", href: "/lms-development", icon: GraduationCap },
+  { label: "Web & Mobile App Development", href: "/web-mobile-app-development", icon: Smartphone },
+  { label: "eCommerce Development", href: "/ecommerce-development", icon: ShoppingCart },
+  { label: "Adobe Experience Manager", href: "/adobe-experience-manager", icon: Palette },
+  { label: "SharePoint Services", href: "/sharepoint-services", icon: Share2 },
+  { label: "Blockchain Development", href: "/blockchain-development", icon: Link2 },
+  { label: "Shopify Services", href: "/shopify-services", icon: ShoppingBag },
 ];
 
 const enterpriseLinks: MenuLinkItem[] = [
-  { label: "Field Force Automation", href: "/field-force-automation" },
-  { label: "Banking Solutions", href: "/banking-solutions" },
-  { label: "Cloud Solutions", href: "/cloud-solutions" },
-  { label: "Cyber Security", href: "/cyber-security" },
-  { label: "ERP Development", href: "/erp-development" },
-  { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence" },
+  { label: "Field Force Automation", href: "/field-force-automation", icon: Truck },
+  { label: "Banking Solutions", href: "/banking-solutions", icon: Landmark },
+  { label: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
+  { label: "Cyber Security", href: "/cyber-security", icon: Lock },
+  { label: "ERP Development", href: "/erp-development", icon: Factory },
+  { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence", icon: LineChart },
 ];
 
 export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
@@ -153,13 +183,17 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const Icon = item.icon;
   return (
     <Link
       href={item.href}
       onClick={closeMenu}
-      className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
     >
-      {item.label}
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+        <Icon size={16} strokeWidth={1.9} />
+      </span>
+      <span>{item.label}</span>
     </Link>
   );
 }
@@ -169,11 +203,17 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
       <div className="space-y-[10px]">
-        {links.map((item) => (
-          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-            {item.label}
-          </Link>
-        ))}
+        {links.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+                <Icon size={14} strokeWidth={1.9} />
+              </span>
+              <span>{item.label}</span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,6 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  CreditCard,
+  Pill,
+  Radio,
+  Building2,
+  Code,
+  ShoppingCart,
+  GraduationCap,
+  Store,
+  Car,
+  Rocket,
+  HeartHandshake,
+  type LucideIcon,
+} from "lucide-react";
 
 type Props = {
   closeMenu: () => void;
@@ -10,30 +24,31 @@ type Props = {
 type MenuLinkItem = {
   label: string;
   href: string;
+  icon: LucideIcon;
 };
 
 const industriesOne: MenuLinkItem[] = [
-  { label: "Fintech", href: "/fintech" },
-  { label: "Pharma", href: "/pharma" },
-  { label: "Telecom", href: "/telecom" },
-  { label: "Real Estate", href: "/real-estate" },
-  { label: "Software/ITES", href: "/software-ites" },
-  { label: "e-Commerce", href: "/e-commerce" },
+  { label: "Fintech", href: "/fintech", icon: CreditCard },
+  { label: "Pharma", href: "/pharma", icon: Pill },
+  { label: "Telecom", href: "/telecom", icon: Radio },
+  { label: "Real Estate", href: "/real-estate", icon: Building2 },
+  { label: "Software/ITES", href: "/software-ites", icon: Code },
+  { label: "e-Commerce", href: "/e-commerce", icon: ShoppingCart },
 ];
 
 const industriesTwo: MenuLinkItem[] = [
-  { label: "Education", href: "/education" },
-  { label: "Retail", href: "/retail" },
-  { label: "Automotive", href: "/automotive" },
-  { label: "Startup", href: "/startup" },
-  { label: "Non-Profit", href: "/non-profit" },
+  { label: "Education", href: "/education", icon: GraduationCap },
+  { label: "Retail", href: "/retail", icon: Store },
+  { label: "Automotive", href: "/automotive", icon: Car },
+  { label: "Startup", href: "/startup", icon: Rocket },
+  { label: "Non-Profit", href: "/non-profit", icon: HeartHandshake },
 ];
 
 export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "/industries" }]} closeMenu={closeMenu} />
+        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "/industries", icon: Building2 }]} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -125,9 +140,17 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const Icon = item.icon;
   return (
-    <Link href={item.href} onClick={closeMenu} className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]">
-      {item.label}
+    <Link
+      href={item.href}
+      onClick={closeMenu}
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+    >
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+        <Icon size={16} strokeWidth={1.9} />
+      </span>
+      <span>{item.label}</span>
     </Link>
   );
 }
@@ -137,11 +160,17 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
       <div className="space-y-[10px]">
-        {links.map((item) => (
-          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-            {item.label}
-          </Link>
-        ))}
+        {links.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+                <Icon size={14} strokeWidth={1.9} />
+              </span>
+              <span>{item.label}</span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

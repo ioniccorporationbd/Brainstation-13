@@ -1,6 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  Info,
+  Newspaper,
+  FolderOpen,
+  Briefcase,
+  Mail,
+  BookOpen,
+  TrendingUp,
+  Handshake,
+  ShieldCheck,
+  Leaf,
+  Megaphone,
+  UserPlus,
+  type LucideIcon,
+} from "lucide-react";
 
 type Props = {
   closeMenu: () => void;
@@ -10,24 +25,25 @@ type Props = {
 type MenuLinkItem = {
   label: string;
   href: string;
+  icon: LucideIcon;
 };
 
 const insideLinks: MenuLinkItem[] = [
-  { label: "About Us", href: "/about-us" },
-  { label: "Blog", href: "/blog" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Career", href: "/career" },
-  { label: "Contact", href: "/contact" },
-  { label: "Our Resources", href: "/resources" },
-  { label: "Investor Relations", href: "/investor-relations" },
+  { label: "About Us", href: "/about-us", icon: Info },
+  { label: "Blog", href: "/blog", icon: Newspaper },
+  { label: "Case Studies", href: "/case-studies", icon: FolderOpen },
+  { label: "Career", href: "/career", icon: Briefcase },
+  { label: "Contact", href: "/contact", icon: Mail },
+  { label: "Our Resources", href: "/resources", icon: BookOpen },
+  { label: "Investor Relations", href: "/investor-relations", icon: TrendingUp },
 ];
 
 const recognitionLinks: MenuLinkItem[] = [
-  { label: "Partners", href: "/partners" },
-  { label: "Enterprise-Grade Security", href: "/enterprise-grade-security" },
-  { label: "Sustainability", href: "/sustainability" },
-  { label: "Media", href: "/media" },
-  { label: "Join as Partner", href: "/join-as-partner" },
+  { label: "Partners", href: "/partners", icon: Handshake },
+  { label: "Enterprise-Grade Security", href: "/enterprise-grade-security", icon: ShieldCheck },
+  { label: "Sustainability", href: "/sustainability", icon: Leaf },
+  { label: "Media", href: "/media", icon: Megaphone },
+  { label: "Join as Partner", href: "/join-as-partner", icon: UserPlus },
 ];
 
 export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
@@ -104,9 +120,17 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const Icon = item.icon;
   return (
-    <Link href={item.href} onClick={closeMenu} className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]">
-      {item.label}
+    <Link
+      href={item.href}
+      onClick={closeMenu}
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+    >
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+        <Icon size={16} strokeWidth={1.9} />
+      </span>
+      <span>{item.label}</span>
     </Link>
   );
 }
@@ -116,11 +140,17 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
       <div className="space-y-[10px]">
-        {links.map((item) => (
-          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-            {item.label}
-          </Link>
-        ))}
+        {links.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+                <Icon size={14} strokeWidth={1.9} />
+              </span>
+              <span>{item.label}</span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
