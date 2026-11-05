@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -25,45 +27,36 @@ type ServiceItem = {
 };
 
 const logos: LogoItem[] = [
-  {
-    name: "Nissan",
-    image: "https://logo.clearbit.com/nissan-global.com",
-    widthClass: "w-[120px]",
-  },
-  {
-    name: "MetLife",
-    image: "https://logo.clearbit.com/metlife.com",
-    widthClass: "w-[145px]",
-  },
-  {
-    name: "DataResultz",
-    image:
-      "https://logo.clearbit.com/datarobot.com",
-    widthClass: "w-[150px]",
-  },
-  {
-    name: "JTI",
-    image: "https://logo.clearbit.com/jti.com",
-    widthClass: "w-[150px]",
-  },
-  {
-    name: "InformatiQ",
-    image:
-      "https://logo.clearbit.com/informatica.com",
-    widthClass: "w-[160px]",
-  },
-  {
-    name: "Galapagos",
-    image:
-      "https://logo.clearbit.com/glpg.com",
-    widthClass: "w-[165px]",
-  },
-  {
-    name: "IBSEZ",
-    image: "https://logo.clearbit.com/bsez.com",
-    widthClass: "w-[135px]",
-  },
+  { name: "Nissan", image: "https://unavatar.io/nissan-global.com" },
+  { name: "MetLife", image: "https://unavatar.io/metlife.com" },
+  { name: "DataResultz", image: "https://unavatar.io/datarobot.com" },
+  { name: "JTI", image: "https://unavatar.io/jti.com" },
+  { name: "InformatiQ", image: "https://unavatar.io/informatica.com" },
+  { name: "Galapagos", image: "https://unavatar.io/glpg.com" },
+  { name: "IBSEZ", image: "https://unavatar.io/bsez.com" },
 ];
+
+function TrustedLogo({ logo }: { logo: LogoItem }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="px-1 text-center text-[18px] font-semibold leading-tight tracking-[-0.01em] text-[#081126]">
+        {logo.name}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={logo.image}
+      alt={logo.name}
+      className="h-[54px] w-auto max-w-[170px] object-contain"
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 const services: ServiceItem[] = [
   {
@@ -138,12 +131,7 @@ export default function DataCoreServicesSection() {
                 className="!w-auto"
               >
                 <div className="flex h-[92px] min-w-[140px] items-center justify-center">
-                  <img
-                    src={logo.image}
-                    alt={logo.name}
-                    className={`h-auto ${logo.widthClass ?? "w-[140px]"} object-contain`}
-                    loading="lazy"
-                  />
+                  <TrustedLogo logo={logo} />
                 </div>
               </SwiperSlide>
             ))}

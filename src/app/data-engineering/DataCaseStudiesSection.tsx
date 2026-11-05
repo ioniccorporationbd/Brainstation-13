@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
     title: "High-Performance Analytics Platform",
     description:
       "The team modernized a legacy data ecosystem by migrating over 1TB of insurance data to Azure. They consolidated fragmented systems into a centralized platform, enabling faster analytics, improved data quality, and secure access to portfolio insights.",
-    href: "/case-studies/high-performance-analytics-platform",
+    href: "/case-studies",
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=90",
     statOne: "100%",
@@ -39,7 +39,7 @@ const caseStudies: CaseStudy[] = [
     title: "Unified Cloud Data Warehouse",
     description:
       "A growing enterprise needed reliable reporting from multiple disconnected systems. We built a unified data warehouse with automated pipelines, clean governance, and scalable cloud architecture for faster business decisions.",
-    href: "/case-studies/unified-cloud-data-warehouse",
+    href: "/case-studies",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=90",
     statOne: "45%",
@@ -52,7 +52,7 @@ const caseStudies: CaseStudy[] = [
     title: "Executive BI Dashboard System",
     description:
       "We transformed scattered spreadsheets and manual reporting into real-time executive dashboards. The new system gave business leaders instant visibility into revenue, operations, customer behavior, and performance trends.",
-    href: "/case-studies/executive-bi-dashboard-system",
+    href: "/case-studies",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1100&q=90",
     statOne: "80%",
@@ -65,7 +65,7 @@ const caseStudies: CaseStudy[] = [
     title: "Secure Enterprise Data Foundation",
     description:
       "A regulated organization needed a trusted data foundation with lineage, access control, and compliance-ready reporting. We implemented secure data layers and monitoring workflows to improve trust and operational accuracy.",
-    href: "/case-studies/secure-enterprise-data-foundation",
+    href: "/case-studies",
     image:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1100&q=90",
     statOne: "99.9%",

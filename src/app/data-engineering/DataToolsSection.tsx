@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,7 +18,7 @@ const tools: ToolLogo[] = [
   {
     name: "Amazon S3",
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
     widthClass: "w-[145px]",
   },
   {
@@ -51,8 +53,7 @@ const tools: ToolLogo[] = [
   },
   {
     name: "Informatica",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/3/38/Informatica_logo.svg",
+    image: "https://unavatar.io/informatica.com",
     widthClass: "w-[180px]",
   },
   {
@@ -70,6 +71,28 @@ const tools: ToolLogo[] = [
 ];
 
 const scrollingTools = [...tools, ...tools, ...tools, ...tools];
+
+function ToolLogoImg({ tool }: { tool: ToolLogo }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="text-center text-[16px] font-semibold leading-tight text-[#061026]">
+        {tool.name}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={tool.image}
+      alt={tool.name}
+      loading="lazy"
+      className={`${tool.widthClass} h-auto max-h-[105px] object-contain`}
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export default function DataToolsSection() {
   return (
@@ -104,12 +127,7 @@ export default function DataToolsSection() {
             {scrollingTools.map((tool, index) => (
               <SwiperSlide key={`${tool.name}-${index}`} className="!w-auto">
                 <div className="flex h-[150px] min-w-[170px] items-center justify-center">
-                  <img
-                    src={tool.image}
-                    alt={tool.name}
-                    loading="lazy"
-                    className={`${tool.widthClass} h-auto max-h-[105px] object-contain`}
-                  />
+                  <ToolLogoImg tool={tool} />
                 </div>
               </SwiperSlide>
             ))}
