@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -13,6 +12,9 @@ import {
   Car,
   Rocket,
   HeartHandshake,
+  Ship,
+  Wallet,
+  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 
@@ -44,6 +46,12 @@ const industriesTwo: MenuLinkItem[] = [
   { label: "Non-Profit", href: "/non-profit", icon: HeartHandshake },
 ];
 
+const caseStudyLinks: MenuLinkItem[] = [
+  { label: "Maritime Safety & IoT", href: "/case-study/safety-at-sea", icon: Ship },
+  { label: "Digital Wallet Solutions", href: "/case-study/digital-wallet", icon: Wallet },
+  { label: "View All Case Studies", href: "/case-studies", icon: ArrowRight },
+];
+
 export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
@@ -62,35 +70,16 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
               Industries
             </h2>
             <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              2500+ projects across 130+ industries — deep experience in yours.
+              Deep expertise across 130+ industries.
             </p>
           </div>
 
-          <div className="mt-[39px] border-t border-[#d5d5d5] pt-[22px]">
-            <div className="mb-[20px] flex items-center justify-between">
-              <span className="text-[18px] font-semibold leading-[24px] text-[#050b18]">
-                Recommended Case Study
-              </span>
-              <Link href="/case-studies" onClick={closeMenu} className="inline-flex items-center gap-[10px] text-[15px] font-normal text-[#2d7dbf] transition-colors hover:text-[#009fe3]">
-                View All <span className="text-[22px] leading-none">›</span>
-              </Link>
-            </div>
-
-            <div className="space-y-[20px]">
-              <CaseCard
-                image="/images/case-safety-at-sea.svg"
-                title="Safety at Sea - Leveraging IoT for Strengthening Maritime Security"
-                description="Magnetic Solution Limited developed an advanced IoT-based boat safety system"
-                href="/case-study/safety-at-sea"
-                closeMenu={closeMenu}
-              />
-              <CaseCard
-                image="/images/case-digital-wallet.svg"
-                title="Fueling Financial Inclusion through Digital Wallet Solutions"
-                description="Digital wallet services are becoming increasingly popular as people"
-                href="/case-study/digital-wallet"
-                closeMenu={closeMenu}
-              />
+          <div className="mt-[32px] border-t border-[#d5d5d5] pt-[22px]">
+            <ColumnTitle href="/case-studies" closeMenu={closeMenu}>Featured Case Studies</ColumnTitle>
+            <div className="mt-[18px] space-y-[15px]">
+              {caseStudyLinks.map((item) => (
+                <TextLink key={item.href} item={item} closeMenu={closeMenu} />
+              ))}
             </div>
           </div>
         </aside>
@@ -116,18 +105,6 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
         </div>
       </div>
     </section>
-  );
-}
-
-function CaseCard({ image, title, description, href, closeMenu }: { image: string; title: string; description: string; href: string; closeMenu: () => void }) {
-  return (
-    <Link href={href} onClick={closeMenu} className="group grid grid-cols-[148px_1fr] gap-[36px]">
-      <Image src={image} alt={title} width={148} height={90} className="h-[90px] w-[148px] rounded-[8px] object-cover" />
-      <div>
-        <h3 className="text-[15px] font-medium leading-[22px] text-[#050b18] transition-colors group-hover:text-[#009fe3]">{title}</h3>
-        <p className="mt-[10px] text-[14px] font-normal leading-[22px] text-[#5f6674] transition-colors group-hover:text-[#009fe3]">{description}</p>
-      </div>
-    </Link>
   );
 }
 
