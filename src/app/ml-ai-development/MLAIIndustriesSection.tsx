@@ -18,7 +18,7 @@ const IMAGE_URL =
 export default function MLAIIndustriesSection() {
   return (
     <section className="w-full bg-[#f7f7f7]">
-      <div className="mx-auto grid min-h-[650px] w-full max-w-[1600px] grid-cols-1 items-center gap-12 px-5 py-[80px] sm:px-8 lg:grid-cols-[420px_1fr_520px] lg:gap-[70px] lg:px-12 xl:px-0">
+      <div className="mx-auto grid min-h-[650px] w-full max-w-[1600px] grid-cols-1 items-center gap-12 px-5 py-[80px] sm:px-8 xl:grid-cols-[minmax(0,420px)_minmax(0,1fr)_minmax(0,520px)] xl:gap-[70px] lg:px-12 xl:px-0">
         {/* Left Title */}
         <div className="lg:pl-[8px]">
           <p className="text-[13px] font-normal uppercase tracking-[0.04em] text-[#111111]">

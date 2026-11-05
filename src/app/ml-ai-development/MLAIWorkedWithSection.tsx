@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,79 +16,42 @@ type ClientLogo = {
 };
 
 const clientLogos: ClientLogo[] = [
-  {
-    name: "Kirsha",
-    image:
-      "https://logo.clearbit.com/kiksha.com",
-    className: "h-[55px]",
-  },
-  {
-    name: "PriyoShop",
-    image:
-      "https://logo.clearbit.com/priyoshop.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "City Bank",
-    image:
-      "https://logo.clearbit.com/thecitybank.com",
-    className: "h-[90px]",
-  },
-  {
-    name: "UCB",
-    image:
-      "https://logo.clearbit.com/ucb.com.bd",
-    className: "h-[68px]",
-  },
-  {
-    name: "AB Bank",
-    image:
-      "https://logo.clearbit.com/abbl.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "British American Tobacco",
-    image:
-      "https://logo.clearbit.com/bat.com",
-    className: "h-[82px]",
-  },
-  {
-    name: "Bank Asia",
-    image:
-      "https://logo.clearbit.com/bankasia-bd.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "Robi",
-    image:
-      "https://logo.clearbit.com/robi.com.bd",
-    className: "h-[58px]",
-  },
-  {
-    name: "bKash",
-    image:
-      "https://logo.clearbit.com/bkash.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "Grameenphone",
-    image:
-      "https://logo.clearbit.com/grameenphone.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "Aarong",
-    image:
-      "https://logo.clearbit.com/aarong.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "LankaBangla",
-    image:
-      "https://logo.clearbit.com/lankabangla.com",
-    className: "h-[58px]",
-  },
+  { name: "Kiksha", image: "https://unavatar.io/kiksha.com", className: "h-[55px]" },
+  { name: "PriyoShop", image: "https://unavatar.io/priyoshop.com", className: "h-[58px]" },
+  { name: "City Bank", image: "https://unavatar.io/thecitybank.com", className: "h-[90px]" },
+  { name: "UCB", image: "https://unavatar.io/ucb.com.bd", className: "h-[68px]" },
+  { name: "AB Bank", image: "https://unavatar.io/abbl.com", className: "h-[62px]" },
+  { name: "British American Tobacco", image: "https://unavatar.io/bat.com", className: "h-[82px]" },
+  { name: "Bank Asia", image: "https://unavatar.io/bankasia-bd.com", className: "h-[58px]" },
+  { name: "Robi", image: "https://unavatar.io/robi.com.bd", className: "h-[58px]" },
+  { name: "bKash", image: "https://unavatar.io/bkash.com", className: "h-[58px]" },
+  { name: "Grameenphone", image: "https://unavatar.io/grameenphone.com", className: "h-[58px]" },
+  { name: "Aarong", image: "https://unavatar.io/aarong.com", className: "h-[58px]" },
+  { name: "LankaBangla", image: "https://unavatar.io/lankabangla.com", className: "h-[58px]" },
 ];
+
+function ClientLogoImg({ client }: { client: ClientLogo }) {
+  const [failed, setFailed] = useState(false);
+  const size = client.className ?? "h-[60px]";
+
+  if (failed) {
+    return (
+      <span className="px-2 text-center text-[19px] font-bold leading-tight tracking-[-0.01em] text-[#111E40]">
+        {client.name}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={client.image}
+      alt={client.name}
+      className={`${size} w-auto max-w-[210px] object-contain`}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export default function MLAIWorkedWithSection() {
   return (
@@ -156,12 +121,7 @@ export default function MLAIWorkedWithSection() {
             {clientLogos.map((client) => (
               <SwiperSlide key={client.name}>
                 <div className="flex h-[105px] items-center justify-center">
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    className={`${client.className ?? "h-[60px]"} w-auto max-w-[210px] object-contain`}
-                    loading="lazy"
-                  />
+                  <ClientLogoImg client={client} />
                 </div>
               </SwiperSlide>
             ))}

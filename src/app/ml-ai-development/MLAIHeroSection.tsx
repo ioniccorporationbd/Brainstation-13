@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const typingTexts = [
-  "Machine Learning",
-  "Artificial Intelligence",
+  "Artificial Intelligence (AI)",
   "AI Automation",
   "Data Intelligence",
+  "Predictive Analytics",
 ];
 
 const BG_IMAGE =
@@ -71,13 +71,11 @@ export default function MLAIHeroSection() {
       <div className="relative z-10 mx-auto flex min-h-[650px] w-full max-w-[1400px] items-center px-5 py-[90px] sm:px-8 lg:py-[110px] xl:px-0">
         <div className="hero-card w-full max-w-[735px] bg-white/90 px-[34px] py-[42px] shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[4px] sm:px-[54px] sm:py-[58px] lg:ml-[120px]">
           <h1 className="text-[42px] font-bold leading-[1.08] tracking-[-0.045em] text-black sm:text-[56px] lg:text-[66px]">
+            <span className="block">Machine Learning (ML) &amp;</span>
             <span className="block min-h-[72px] text-black sm:min-h-[90px]">
               {typedText}
               <span className="typing-cursor ml-1 inline-block">|</span>
             </span>
-
-            <span className="block">(ML) &amp; Artificial</span>
-            <span className="block">Intelligence (AI)</span>
           </h1>
 
           <p className="mt-[32px] max-w-[640px] text-[16px] font-normal leading-[1.8] text-black sm:text-[18px]">
@@ -95,7 +93,7 @@ export default function MLAIHeroSection() {
             </Link>
 
             <Link
-              href="/book-a-meeting"
+              href="/schedule-a-call"
               className="inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f59b15]"
             >
               Book a Meeting
