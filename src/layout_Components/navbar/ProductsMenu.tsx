@@ -54,7 +54,7 @@ const aiSolution: MenuLinkItem[] = [
 ];
 
 const education: MenuLinkItem[] = [
-  { label: "Shikkha Chat", href: "/shikkha-chat", icon: MessagesSquare, newTab: true },
+  { label: "Shikkha Chat", href: "/shikkha-chat", icon: MessagesSquare },
   { label: "Cadet Website", icon: GraduationCap, placeholder: true, note: "Coming soon" },
 ];
 
