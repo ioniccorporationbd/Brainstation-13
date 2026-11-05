@@ -33,24 +33,24 @@ type MenuLinkItem = {
 };
 
 const fintech: MenuLinkItem[] = [
-  { label: "Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
-  { label: "E-wallet Software", href: "/e-wallet-software", icon: Wallet },
-  { label: "Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
-  { label: "Insurance 360", href: "/insurance-360", icon: ShieldCheck },
-  { label: "Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
+  { label: "Magnetic Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
+  { label: "Magnetic E-wallet Software", href: "/e-wallet-software", icon: Wallet },
+  { label: "Magnetic Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
+  { label: "Magnetic Insurance 360", href: "/insurance-360", icon: ShieldCheck },
+  { label: "Magnetic Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
 ];
 
 const healthcare: MenuLinkItem[] = [
-  { label: "Omnizia", href: "/omnizia", icon: Activity },
-  { label: "Time2Publish", href: "/time2publish", icon: BookOpen },
+  { label: "Magnetic Omnizia", href: "/omnizia", icon: Activity },
+  { label: "Magnetic Time2Publish", href: "/time2publish", icon: BookOpen },
 ];
 
 const lms: MenuLinkItem[] = [
-  { label: "Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
+  { label: "Magnetic Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
 ];
 
 const aiSolution: MenuLinkItem[] = [
-  { label: "NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
+  { label: "Magnetic NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
 ];
 
 const education: MenuLinkItem[] = [
@@ -67,11 +67,11 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
   if (mobile) {
     return (
       <div className="space-y-[24px]">
+        <MobileGroup title="Education" links={education} closeMenu={closeMenu} />
         <MobileGroup title="Fintech" links={fintech} closeMenu={closeMenu} />
         <MobileGroup title="Healthcare" links={healthcare} closeMenu={closeMenu} />
         <MobileGroup title="LMS" links={lms} closeMenu={closeMenu} />
         <MobileGroup title="AI Solution" links={aiSolution} closeMenu={closeMenu} />
-        <MobileGroup title="Education" links={education} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -105,9 +105,16 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
 
         <div className="grid grid-cols-3 gap-x-[36px] bg-white px-[40px] py-[40px]">
           <div className="min-w-0">
-            <ColumnTitle>Fintech</ColumnTitle>
+            <ColumnTitle>Education</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
-              {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
+              {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
+            </div>
+
+            <div className="mt-[26px]">
+              <ColumnTitle>Fintech</ColumnTitle>
+              <div className="mt-[23px] space-y-[15px]">
+                {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
+              </div>
             </div>
           </div>
 
@@ -129,13 +136,6 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
             <ColumnTitle>AI Solution</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {aiSolution.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
-            </div>
-
-            <div className="mt-[26px]">
-              <ColumnTitle>Education</ColumnTitle>
-              <div className="mt-[23px] space-y-[15px]">
-                {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
-              </div>
             </div>
           </div>
         </div>
