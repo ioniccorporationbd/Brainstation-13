@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 import ServicesMenu from "./ServicesMenu";
@@ -31,6 +31,7 @@ export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,6 +62,36 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  // Close the open mega menu when clicking anywhere outside the navbar, or on Escape.
+  useEffect(() => {
+    if (!activeMenu) return;
+
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+      // Desktop only: the mobile drawer closes via its own backdrop overlay.
+      if (window.innerWidth < 1025) return;
+      const target = event.target as Node | null;
+      if (headerRef.current && target && !headerRef.current.contains(target)) {
+        setActiveMenu(null);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setActiveMenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeMenu]);
+
   const closeAll = () => {
     setActiveMenu(null);
     setMobileOpen(false);
@@ -74,6 +105,7 @@ export default function Navbar() {
   return (
     <>
       <header
+        ref={headerRef}
         className={`sticky top-0 z-50 w-full border-b font-sans transition-all duration-300 ${
           isScrolled
             ? "border-[#1c2b52] bg-[#111E40]/95 shadow-[0_14px_35px_rgba(0,0,0,0.26)] backdrop-blur-xl"
