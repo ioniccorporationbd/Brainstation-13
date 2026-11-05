@@ -1,5 +1,17 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  Landmark,
+  Wallet,
+  Banknote,
+  ShieldCheck,
+  Globe2,
+  Activity,
+  BookOpen,
+  Monitor,
+  Bot,
+  type LucideIcon,
+} from "lucide-react";
 
 type Props = {
   closeMenu: () => void;
@@ -9,27 +21,28 @@ type Props = {
 type MenuLinkItem = {
   label: string;
   href: string;
+  icon: LucideIcon;
 };
 
 const fintech: MenuLinkItem[] = [
-  { label: "Digital Banking Software", href: "/digital-banking-software" },
-  { label: "E-wallet Software", href: "/e-wallet-software" },
-  { label: "Digital Lending & Credit", href: "/digital-lending-credit" },
-  { label: "Insurance 360", href: "/insurance-360" },
-  { label: "Cross Border Payments Solution", href: "/cross-border-payments-solution" },
+  { label: "Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
+  { label: "E-wallet Software", href: "/e-wallet-software", icon: Wallet },
+  { label: "Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
+  { label: "Insurance 360", href: "/insurance-360", icon: ShieldCheck },
+  { label: "Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
 ];
 
 const healthcare: MenuLinkItem[] = [
-  { label: "Omnizia", href: "/omnizia" },
-  { label: "Time2Publish", href: "/time2publish" },
+  { label: "Omnizia", href: "/omnizia", icon: Activity },
+  { label: "Time2Publish", href: "/time2publish", icon: BookOpen },
 ];
 
 const lms: MenuLinkItem[] = [
-  { label: "Proctoring Pro", href: "/proctoring-pro" },
+  { label: "Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
 ];
 
 const aiSolution: MenuLinkItem[] = [
-  { label: "NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent" },
+  { label: "NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
 ];
 
 export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
@@ -52,8 +65,8 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               Products
             </h2>
-            <p className="mt-[13px] max-w-[555px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              Magnetic Solution Limited delivers tailored digital solutions across fintech, healthcare, e-commerce, and more, empowering industries with innovation and expertise.
+            <p className="mt-[13px] max-w-[500px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
+              Purpose-built products for fintech, healthcare and learning — engineered to scale.
             </p>
           </div>
 
@@ -86,20 +99,20 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
 
         <div className="grid grid-cols-[322px_322px_1fr] gap-x-[80px] bg-white pb-[40px] pl-[60px] pr-[60px] pt-[40px]">
           <div>
-            <ColumnTitle href="/products/fintech" closeMenu={closeMenu}>Fintech</ColumnTitle>
+            <ColumnTitle>Fintech</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
             </div>
           </div>
 
           <div>
-            <ColumnTitle href="/products/healthcare" closeMenu={closeMenu}>Healthcare</ColumnTitle>
+            <ColumnTitle>Healthcare</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {healthcare.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
             </div>
 
             <div className="mt-[26px]">
-              <ColumnTitle href="/products/lms" closeMenu={closeMenu}>LMS</ColumnTitle>
+              <ColumnTitle>LMS</ColumnTitle>
               <div className="mt-[23px] space-y-[15px]">
                 {lms.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
               </div>
@@ -107,7 +120,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
           </div>
 
           <div>
-            <ColumnTitle href="/products/ai-solution" closeMenu={closeMenu}>AI Solution</ColumnTitle>
+            <ColumnTitle>AI Solution</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {aiSolution.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
             </div>
@@ -118,7 +131,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
   );
 }
 
-function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
+function ColumnTitle({ children }: { children: ReactNode }) {
   return (
     <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
       {children}
@@ -127,9 +140,17 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const Icon = item.icon;
   return (
-    <Link href={item.href} onClick={closeMenu} className="block text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]">
-      {item.label}
+    <Link
+      href={item.href}
+      onClick={closeMenu}
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+    >
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+        <Icon size={16} strokeWidth={1.9} />
+      </span>
+      <span>{item.label}</span>
     </Link>
   );
 }
@@ -139,11 +160,17 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
       <div className="space-y-[10px]">
-        {links.map((item) => (
-          <Link key={item.href} href={item.href} onClick={closeMenu} className="block text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-            {item.label}
-          </Link>
-        ))}
+        {links.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+                <Icon size={14} strokeWidth={1.9} />
+              </span>
+              <span>{item.label}</span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

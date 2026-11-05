@@ -85,7 +85,7 @@ export default function Navbar() {
             isScrolled ? "h-[72px]" : "h-[88px]"
           }`}
         >
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center">
+          <Link href="/" onClick={closeAll} className="flex shrink-0 -translate-x-[10px] items-center">
             <Image
               src="/images/brainstation-logo.svg"
               alt="Magnetic Solution Limited"

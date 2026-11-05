@@ -47,7 +47,7 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
               Industries
             </h2>
             <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              We’ve delivered 2500+ projects across 130+ sectors. Experience in your industry? We have it.
+              2500+ projects across 130+ industries — deep experience in yours.
             </p>
           </div>
 

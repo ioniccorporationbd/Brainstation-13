@@ -49,7 +49,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
               About Magnetic Solution Limited
             </h2>
             <p className="mt-[13px] max-w-[450px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              Founded in 2006, we are a global software company powering digital transformation across industries.
+              A global software company since 2006, powering digital transformation.
             </p>
           </div>
 

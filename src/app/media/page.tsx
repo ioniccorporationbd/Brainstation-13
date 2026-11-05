@@ -140,7 +140,7 @@ export default function MediaPage() {
           </h2>
           <p className="mx-auto mt-4 max-w-[520px] text-[16px] leading-[1.6] text-[#5a6b7d]">
             For interviews, expert commentary or to request our media kit,
-            please contact the communications team and we'll respond promptly.
+            please contact the communications team and we&apos;ll respond promptly.
           </p>
           <Link
             href="/contact"

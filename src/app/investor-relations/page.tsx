@@ -177,7 +177,7 @@ export default function InvestorRelationsPage() {
             Investor inquiries
           </h2>
           <p className="mx-auto mt-4 max-w-[520px] text-[16px] leading-[1.6] text-[#5a6b7d]">
-            For investor relations questions, please contact our team and we'll
+            For investor relations questions, please contact our team and we&apos;ll
             connect you with the right person.
           </p>
           <Link

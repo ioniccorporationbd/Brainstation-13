@@ -70,7 +70,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
               Collaboration Models
             </h2>
             <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              AI-powered dev for 10X faster software delivery.
+              AI-accelerated delivery — up to 10X faster.
             </p>
           </div>
 
