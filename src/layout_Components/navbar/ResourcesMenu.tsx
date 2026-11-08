@@ -109,7 +109,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
 
 function ColumnTitle({ children }: { children: ReactNode }) {
   return (
-    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#C91F28]">
       {children}
     </div>
   );
@@ -121,9 +121,9 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
     <Link
       href={item.href}
       onClick={closeMenu}
-      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#C91F28]"
     >
-      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28] transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-[#A71920]">
         <Icon size={16} strokeWidth={1.9} />
       </span>
       <span>{item.label}</span>
@@ -134,13 +134,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <p className="mb-[12px] text-[15px] font-semibold text-[#C91F28]">{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
           return (
-            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#C91F28]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-[#C91F28]">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
               <span>{item.label}</span>

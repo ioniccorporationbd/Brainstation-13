@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 import ServicesMenu from "./ServicesMenu";
@@ -32,6 +33,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,14 +104,25 @@ export default function Navbar() {
     setActiveMenu((current) => (current === key ? null : key));
   };
 
+  const isRouteActive = (item: NavItem) =>
+    pathname === item.href ||
+    (item.href !== "/" && !!pathname && pathname.startsWith(`${item.href}/`));
+
+  // Shared link styling: brand-red hover colour + animated underline reveal.
+  const linkBase =
+    "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
+    "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
+    "after:scale-x-0 after:rounded-full after:bg-[#C91F28] after:transition-transform after:duration-300 " +
+    "hover:text-[#C91F28] hover:after:scale-x-100";
+
   return (
     <>
       <header
         ref={headerRef}
-        className={`sticky top-0 z-50 w-full border-b font-sans transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full font-sans transition-all duration-300 ${
           isScrolled
-            ? "border-[#1c2b52] bg-[#111E40]/95 shadow-[0_14px_35px_rgba(0,0,0,0.26)] backdrop-blur-xl"
-            : "border-[#111E40] bg-[#111E40]"
+            ? "border-b border-white/10 bg-black/95 shadow-[0_14px_35px_rgba(0,0,0,0.55)] backdrop-blur-xl"
+            : "border-b border-white/10 bg-black"
         }`}
       >
         <nav
@@ -117,33 +130,36 @@ export default function Navbar() {
             isScrolled ? "h-[72px]" : "h-[88px]"
           }`}
         >
-          <Link href="/" onClick={closeAll} className="flex shrink-0 -translate-x-[10px] items-center">
-            <Image
-              src="/images/brainstation-logo.svg"
-              alt="Magnetic Solution Limited"
-              width={222}
-              height={40}
-              priority
-              className={`h-auto transition-all duration-300 ${
-                isScrolled
-                  ? "w-[170px] min-[768px]:w-[202px]"
-                  : "w-[186px] min-[768px]:w-[222px]"
+          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center" aria-label="Magnetic Solution Ltd — Home">
+            <span
+              className={`flex items-center justify-center rounded-[14px] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 ${
+                isScrolled ? "h-[44px] w-[44px] p-[5px]" : "h-[52px] w-[52px] p-[6px]"
               }`}
-            />
+            >
+              <Image
+                src="/images/brand/magnetic-logo.png"
+                alt="Magnetic Solution Ltd"
+                width={64}
+                height={64}
+                priority
+                className="h-full w-full object-contain"
+              />
+            </span>
           </Link>
 
           <div className="hidden items-center gap-[30px] min-[1025px]:flex">
-            {navItems.map((item) =>
-              item.hasMegaMenu ? (
+            {navItems.map((item) => {
+              const active = activeMenu === item.key || isRouteActive(item);
+              return item.hasMegaMenu ? (
                 <button
                   key={item.key}
                   type="button"
                   onClick={() => toggleMenu(item.key)}
                   aria-expanded={activeMenu === item.key}
-                  className={`group flex items-center gap-[7px] text-[16px] font-medium leading-[24px] transition-all duration-300 ${
-                    activeMenu === item.key
-                      ? "text-[#ffab2e]"
-                      : "text-white hover:text-[#ffab2e]"
+                  aria-haspopup="true"
+                  aria-current={isRouteActive(item) ? "page" : undefined}
+                  className={`group flex items-center gap-[7px] ${linkBase} ${
+                    active ? "text-[#C91F28] after:scale-x-100" : "text-white"
                   }`}
                 >
                   {item.label}
@@ -160,18 +176,19 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={closeAll}
-                  className="text-[16px] font-medium leading-[24px] text-white transition-colors duration-300 hover:text-[#ffab2e]"
+                  aria-current={isRouteActive(item) ? "page" : undefined}
+                  className={`${linkBase} ${active ? "text-[#C91F28] after:scale-x-100" : "text-white"}`}
                 >
                   {item.label}
                 </Link>
-              )
-            )}
+              );
+            })}
           </div>
 
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="hidden rounded-full bg-[#ffab2e] px-[30px] py-[14px] text-[16px] font-semibold leading-[20px] text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ffc15a] hover:shadow-[0_10px_24px_rgba(255,171,46,0.32)] min-[1025px]:inline-flex"
+            className="hidden rounded-full bg-[#C91F28] px-[30px] py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#A71920] hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] min-[1025px]:inline-flex"
           >
             Schedule a Call
           </Link>
@@ -183,7 +200,7 @@ export default function Navbar() {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
             }}
-            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-sm transition-all duration-300 hover:bg-white/15 min-[1025px]:hidden"
+            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-[#C91F28] hover:bg-white/15 hover:text-[#C91F28] min-[1025px]:hidden"
           >
             {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
@@ -209,27 +226,29 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[#111E40] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.28)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
+        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[#0b0b0b] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center">
-            <Image
-              src="/images/brainstation-logo.svg"
-              alt="Magnetic Solution Limited"
-              width={190}
-              height={34}
-              priority
-              className="h-auto w-[190px]"
-            />
+          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center" aria-label="Magnetic Solution Ltd — Home">
+            <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-white p-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
+              <Image
+                src="/images/brand/magnetic-logo.png"
+                alt="Magnetic Solution Ltd"
+                width={48}
+                height={48}
+                priority
+                className="h-full w-full object-contain"
+              />
+            </span>
           </Link>
 
           <button
             type="button"
             onClick={closeAll}
             aria-label="Close menu"
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/15"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#C91F28] hover:text-white"
           >
             <X size={24} />
           </button>
@@ -249,7 +268,7 @@ export default function Navbar() {
                     <ChevronDown
                       size={19}
                       className={`transition-transform duration-300 ${
-                        activeMenu === item.key ? "rotate-180 text-[#ffab2e]" : ""
+                        activeMenu === item.key ? "rotate-180 text-[#C91F28]" : ""
                       }`}
                     />
                   </button>
@@ -268,7 +287,11 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={closeAll}
-                  className="block rounded-2xl border border-white/10 px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10"
+                  className={`block rounded-2xl border px-4 py-4 text-[17px] font-semibold transition hover:bg-white/10 ${
+                    isRouteActive(item)
+                      ? "border-[#C91F28] text-[#C91F28]"
+                      : "border-white/10 text-white"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -279,7 +302,7 @@ export default function Navbar() {
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="mt-7 flex w-full justify-center rounded-full bg-[#ffab2e] px-7 py-4 text-[16px] font-bold text-black transition hover:bg-[#ffc15a]"
+            className="mt-7 flex w-full justify-center rounded-full bg-[#C91F28] px-7 py-4 text-[16px] font-bold text-white transition hover:bg-[#A71920]"
           >
             Schedule a Call
           </Link>

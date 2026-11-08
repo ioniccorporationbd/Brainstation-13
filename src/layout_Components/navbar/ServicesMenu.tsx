@@ -92,8 +92,8 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
 
   return (
     <section className="w-full bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
-      <div className="grid min-h-[489px] w-full grid-cols-[477px_1fr]">
-        <aside className="bg-[#f7f8fa] pb-[40px] pl-[60px] pr-[56px] pt-[31px]">
+      <div className="grid min-h-[489px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
+        <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,60px)] pr-[clamp(20px,2.4vw,56px)] pt-[31px]">
           <div className="block">
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               Collaboration Models
@@ -113,15 +113,15 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
             <Link
               href="/case-study"
               onClick={closeMenu}
-              className="inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+              className="inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#C91F28]"
             >
               View Case Study <span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
         </aside>
 
-        <div className="grid grid-cols-[330px_365px_1fr] gap-x-[63px] bg-white pb-[40px] pl-[60px] pr-[58px] pt-[33px]">
-          <div>
+        <div className="grid grid-cols-[repeat(3,minmax(0,1fr))] gap-x-[clamp(16px,2.6vw,60px)] bg-white px-[clamp(18px,3vw,58px)] pb-[40px] pt-[33px]">
+          <div className="min-w-0">
             <ColumnTitle href="/services" closeMenu={closeMenu}>Top Services</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {topServices.map((item) => (
@@ -131,13 +131,13 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
             <Link
               href="/services"
               onClick={closeMenu}
-              className="mt-[64px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+              className="mt-[64px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#C91F28]"
             >
               All Services <span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
 
-          <div className="pt-[44px]">
+          <div className="min-w-0 pt-[44px]">
             <div className="space-y-[15px]">
               {serviceColumnTwo.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -145,7 +145,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <ColumnTitle href="/enterprise-grade-security" closeMenu={closeMenu}>Enterprise Focused</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {enterpriseLinks.map((item) => (
@@ -161,7 +161,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
 
 function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#C91F28]">
       {children}
     </div>
   );
@@ -173,12 +173,12 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
     <Link
       href={item.href}
       onClick={closeMenu}
-      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#C91F28]"
     >
-      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28] transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-[#A71920]">
         <Icon size={16} strokeWidth={1.9} />
       </span>
-      <span>{item.label}</span>
+      <span className="min-w-0 break-words">{item.label}</span>
     </Link>
   );
 }
@@ -186,16 +186,16 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <p className="mb-[12px] text-[15px] font-semibold text-[#C91F28]">{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
           return (
-            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]">
-              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#eef6fc] text-[#3f93cf]">
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#C91F28]">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-[#C91F28]">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
-              <span>{item.label}</span>
+              <span className="min-w-0 break-words">{item.label}</span>
             </Link>
           );
         })}

@@ -152,7 +152,7 @@ function ColumnTitle({ children, disabled = false }: { children: ReactNode; disa
       className={`inline-flex items-center text-[17px] font-semibold leading-[24px] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] ${
         disabled
           ? "text-[#b6bdc8] before:bg-[#d3d8e0]"
-          : "text-[#050b18] before:bg-[#4e92ce]"
+          : "text-[#050b18] before:bg-[#C91F28]"
       }`}
     >
       {children}
@@ -173,7 +173,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
         onClick={(e) => { e.preventDefault(); }}
         className="flex cursor-not-allowed items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] opacity-60"
       >
-        <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf]">
+        <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28]">
           <Icon size={16} strokeWidth={1.9} />
         </span>
         <span className="flex items-center gap-[6px]">{item.label}</span>
@@ -202,14 +202,14 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
       onClick={closeMenu}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#009fe3]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#C91F28]"
     >
-      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf] transition-colors duration-300 group-hover:bg-[#e3f0fb] group-hover:text-[#2d8fca]">
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28] transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-[#A71920]">
         <Icon size={16} strokeWidth={1.9} />
       </span>
       <span className="flex items-center gap-[6px]">
         {item.label}
-        {external ? <ExternalLink size={13} strokeWidth={2.2} className="text-[#9aa3af] transition-colors group-hover:text-[#009fe3]" /> : null}
+        {external ? <ExternalLink size={13} strokeWidth={2.2} className="text-[#9aa3af] transition-colors group-hover:text-[#C91F28]" /> : null}
       </span>
     </Link>
   );
@@ -218,7 +218,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
 function MobileGroup({ title, links, closeMenu, disabled = false }: { title: string; links: MenuLinkItem[]; closeMenu: () => void; disabled?: boolean }) {
   return (
     <div>
-      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-[#009fe3]"}`}>{title}</p>
+      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-[#C91F28]"}`}>{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
@@ -226,7 +226,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
           const external = item.newTab;
           const inner = (
             <>
-              <span className={`flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] ${isPlaceholder ? "bg-[#eef1f5] text-[#a7b0bc]" : "bg-[#eef6fc] text-[#3f93cf]"}`}>
+              <span className={`flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] ${isPlaceholder ? "bg-[#eef1f5] text-[#a7b0bc]" : "bg-[#fdeaea] text-[#C91F28]"}`}>
                 <Icon size={14} strokeWidth={1.9} />
               </span>
               <span className="flex items-center gap-[6px]">
@@ -266,7 +266,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
               onClick={closeMenu}
               target={external ? "_blank" : undefined}
               rel={external ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#009fe3]"
+              className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#C91F28]"
             >
               {inner}
             </Link>
