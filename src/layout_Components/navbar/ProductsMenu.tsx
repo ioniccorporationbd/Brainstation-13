@@ -1,20 +1,12 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
-  Landmark,
-  Wallet,
-  Banknote,
-  ShieldCheck,
-  Globe2,
-  Activity,
-  BookOpen,
-  Monitor,
-  Bot,
   MessagesSquare,
   GraduationCap,
   Quote,
   ArrowRight,
   ExternalLink,
+  Lock,
   type LucideIcon,
 } from "lucide-react";
 
@@ -32,27 +24,6 @@ type MenuLinkItem = {
   note?: string;
 };
 
-const fintech: MenuLinkItem[] = [
-  { label: "Magnetic Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
-  { label: "Magnetic E-wallet Software", href: "/e-wallet-software", icon: Wallet },
-  { label: "Magnetic Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
-  { label: "Magnetic Insurance 360", href: "/insurance-360", icon: ShieldCheck },
-  { label: "Magnetic Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
-];
-
-const healthcare: MenuLinkItem[] = [
-  { label: "Magnetic Omnizia", href: "/omnizia", icon: Activity },
-  { label: "Magnetic Time2Publish", href: "/time2publish", icon: BookOpen },
-];
-
-const lms: MenuLinkItem[] = [
-  { label: "Magnetic Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
-];
-
-const aiSolution: MenuLinkItem[] = [
-  { label: "Magnetic NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
-];
-
 const education: MenuLinkItem[] = [
   { label: "Shikkha Chat", href: "/shikkha-chat", icon: MessagesSquare },
   { label: "Cadet Website", icon: GraduationCap, placeholder: true, note: "Coming soon" },
@@ -68,10 +39,12 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
     return (
       <div className="space-y-[24px]">
         <MobileGroup title="Education" links={education} closeMenu={closeMenu} />
-        <MobileGroup title="Fintech" links={fintech} closeMenu={closeMenu} />
-        <MobileGroup title="Healthcare" links={healthcare} closeMenu={closeMenu} />
-        <MobileGroup title="LMS" links={lms} closeMenu={closeMenu} />
-        <MobileGroup title="AI Solution" links={aiSolution} closeMenu={closeMenu} />
+        <div className="space-y-[14px]">
+          <DisabledMobileCategory title="LMS" />
+          <DisabledMobileCategory title="AI Solution" />
+          <DisabledMobileCategory title="Healthcare" />
+          <DisabledMobileCategory title="Fintech" />
+        </div>
       </div>
     );
   }
@@ -103,39 +76,27 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
           </div>
         </aside>
 
-        <div className="grid grid-cols-3 gap-x-[36px] bg-white px-[40px] py-[40px]">
+        <div className="grid grid-cols-2 gap-x-[48px] bg-white px-[40px] py-[40px]">
+          {/* Column 1 — Education (active) + LMS, AI Solution (disabled) */}
           <div className="min-w-0">
             <ColumnTitle>Education</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
             </div>
 
-            <div className="mt-[26px]">
-              <ColumnTitle>Fintech</ColumnTitle>
-              <div className="mt-[23px] space-y-[15px]">
-                {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
-              </div>
+            <div className="mt-[34px]">
+              <DisabledCategory title="LMS" />
+            </div>
+            <div className="mt-[22px]">
+              <DisabledCategory title="AI Solution" />
             </div>
           </div>
 
+          {/* Column 2 — Healthcare, Fintech (disabled) */}
           <div className="min-w-0">
-            <ColumnTitle>Healthcare</ColumnTitle>
-            <div className="mt-[23px] space-y-[15px]">
-              {healthcare.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
-            </div>
-
-            <div className="mt-[26px]">
-              <ColumnTitle>LMS</ColumnTitle>
-              <div className="mt-[23px] space-y-[15px]">
-                {lms.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
-              </div>
-            </div>
-          </div>
-
-          <div className="min-w-0">
-            <ColumnTitle>AI Solution</ColumnTitle>
-            <div className="mt-[23px] space-y-[15px]">
-              {aiSolution.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
+            <DisabledCategory title="Healthcare" />
+            <div className="mt-[22px]">
+              <DisabledCategory title="Fintech" />
             </div>
           </div>
         </div>
@@ -148,6 +109,29 @@ function ColumnTitle({ children }: { children: ReactNode }) {
   return (
     <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
       {children}
+    </div>
+  );
+}
+
+// Visible but disabled category heading — non-clickable, clearly greyed out.
+function DisabledCategory({ title }: { title: string }) {
+  return (
+    <div
+      aria-disabled="true"
+      className="inline-flex cursor-not-allowed select-none items-center text-[17px] font-semibold leading-[24px] text-[#b6bdc8]"
+    >
+      <span className="mr-[8px] inline-block h-[8px] w-[8px] bg-[#d3d8e0]" />
+      {title}
+      <Lock size={13} strokeWidth={2.2} className="ml-[8px] text-[#c4cbd5]" />
+    </div>
+  );
+}
+
+function DisabledMobileCategory({ title }: { title: string }) {
+  return (
+    <div aria-disabled="true" className="flex cursor-not-allowed select-none items-center gap-[8px]">
+      <p className="text-[15px] font-semibold text-[#b6bdc8]">{title}</p>
+      <Lock size={12} strokeWidth={2.2} className="text-[#c4cbd5]" />
     </div>
   );
 }
