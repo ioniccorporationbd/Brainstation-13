@@ -112,8 +112,8 @@ export default function Navbar() {
   const linkBase =
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
     "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
-    "after:scale-x-0 after:rounded-full after:bg-[#C91F28] after:transition-transform after:duration-300 " +
-    "hover:text-[#C91F28] hover:after:scale-x-100";
+    "after:scale-x-0 after:rounded-full after:bg-primary after:transition-transform after:duration-300 " +
+    "hover:text-primary hover:after:scale-x-100";
 
   return (
     <>
@@ -130,7 +130,7 @@ export default function Navbar() {
             isScrolled ? "h-[72px]" : "h-[88px]"
           }`}
         >
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center" aria-label="Magnetic Solution Ltd — Home">
+          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-3" aria-label="Magnetic Solution Limited — Home">
             <span
               className={`flex items-center justify-center rounded-[14px] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 ${
                 isScrolled ? "h-[44px] w-[44px] p-[5px]" : "h-[52px] w-[52px] p-[6px]"
@@ -144,6 +144,12 @@ export default function Navbar() {
                 priority
                 className="h-full w-full object-contain"
               />
+            </span>
+            <span className="hidden items-center leading-none min-[1200px]:flex">
+              <span className="whitespace-nowrap text-[13px] tracking-tight text-white min-[1280px]:text-[15px]">
+                <span className="font-bold">Magnetic Solution</span>{" "}
+                <span className="font-medium">Limited</span>
+              </span>
             </span>
           </Link>
 
@@ -159,7 +165,7 @@ export default function Navbar() {
                   aria-haspopup="true"
                   aria-current={isRouteActive(item) ? "page" : undefined}
                   className={`group flex items-center gap-[7px] ${linkBase} ${
-                    active ? "text-[#C91F28] after:scale-x-100" : "text-white"
+                    active ? "text-primary after:scale-x-100" : "text-white"
                   }`}
                 >
                   {item.label}
@@ -177,7 +183,7 @@ export default function Navbar() {
                   href={item.href}
                   onClick={closeAll}
                   aria-current={isRouteActive(item) ? "page" : undefined}
-                  className={`${linkBase} ${active ? "text-[#C91F28] after:scale-x-100" : "text-white"}`}
+                  className={`${linkBase} ${active ? "text-primary after:scale-x-100" : "text-white"}`}
                 >
                   {item.label}
                 </Link>
@@ -188,7 +194,7 @@ export default function Navbar() {
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="hidden rounded-full bg-[#C91F28] px-[30px] py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#A71920] hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] min-[1025px]:inline-flex"
+            className="hidden rounded-full bg-primary px-[30px] py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] min-[1025px]:inline-flex"
           >
             Schedule a Call
           </Link>
@@ -200,7 +206,7 @@ export default function Navbar() {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
             }}
-            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-[#C91F28] hover:bg-white/15 hover:text-[#C91F28] min-[1025px]:hidden"
+            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-primary hover:bg-white/15 hover:text-primary min-[1025px]:hidden"
           >
             {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
@@ -231,7 +237,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center" aria-label="Magnetic Solution Ltd — Home">
+          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-2.5" aria-label="Magnetic Solution Limited — Home">
             <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-white p-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
                 src="/images/brand/magnetic-logo.png"
@@ -242,13 +248,19 @@ export default function Navbar() {
                 className="h-full w-full object-contain"
               />
             </span>
+            <span className="flex items-center leading-none">
+              <span className="whitespace-nowrap text-[13px] tracking-tight text-white">
+                <span className="font-bold">Magnetic Solution</span>{" "}
+                <span className="font-medium">Limited</span>
+              </span>
+            </span>
           </Link>
 
           <button
             type="button"
             onClick={closeAll}
             aria-label="Close menu"
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#C91F28] hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-primary hover:text-white"
           >
             <X size={24} />
           </button>
@@ -268,7 +280,7 @@ export default function Navbar() {
                     <ChevronDown
                       size={19}
                       className={`transition-transform duration-300 ${
-                        activeMenu === item.key ? "rotate-180 text-[#C91F28]" : ""
+                        activeMenu === item.key ? "rotate-180 text-primary" : ""
                       }`}
                     />
                   </button>
@@ -289,7 +301,7 @@ export default function Navbar() {
                   onClick={closeAll}
                   className={`block rounded-2xl border px-4 py-4 text-[17px] font-semibold transition hover:bg-white/10 ${
                     isRouteActive(item)
-                      ? "border-[#C91F28] text-[#C91F28]"
+                      ? "border-primary text-primary"
                       : "border-white/10 text-white"
                   }`}
                 >
@@ -302,7 +314,7 @@ export default function Navbar() {
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="mt-7 flex w-full justify-center rounded-full bg-[#C91F28] px-7 py-4 text-[16px] font-bold text-white transition hover:bg-[#A71920]"
+            className="mt-7 flex w-full justify-center rounded-full bg-primary px-7 py-4 text-[16px] font-bold text-white transition hover:bg-primary-hover"
           >
             Schedule a Call
           </Link>

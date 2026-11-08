@@ -90,7 +90,7 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
             <div className="mt-[23px] space-y-[15px]">
               {industriesOne.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
             </div>
-            <Link href="/industries" onClick={closeMenu} className="mt-[62px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-[#C91F28]">
+            <Link href="/industries" onClick={closeMenu} className="mt-[62px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-primary">
               All Industries <span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
@@ -110,7 +110,7 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
 
 function ColumnTitle({ children }: { href: string; closeMenu: () => void; children: ReactNode }) {
   return (
-    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#C91F28]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-primary">
       {children}
     </div>
   );
@@ -122,9 +122,9 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
     <Link
       href={item.href}
       onClick={closeMenu}
-      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#C91F28]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-primary"
     >
-      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28] transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-[#A71920]">
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-primary">
         <Icon size={16} strokeWidth={1.9} />
       </span>
       <span className="min-w-0 break-words">{item.label}</span>
@@ -135,13 +135,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-[#C91F28]">{title}</p>
+      <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
           return (
-            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#C91F28]">
-              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-[#C91F28]">
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-primary">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
               <span className="min-w-0 break-words">{item.label}</span>

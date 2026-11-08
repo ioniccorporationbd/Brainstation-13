@@ -62,8 +62,8 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
 
   return (
     <section className="w-full overflow-hidden bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
-      <div className="mx-auto grid min-h-[430px] w-full max-w-[1440px] grid-cols-[340px_1fr]">
-        <aside className="bg-[#f7f8fa] px-[40px] py-[40px]">
+      <div className="grid min-h-[466px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
+        <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,51px)] pr-[clamp(20px,2.4vw,60px)] pt-[40px]">
           <div className="block">
             <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
               About Magnetic Solution Limited
@@ -83,7 +83,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
           </div>
         </aside>
 
-        <div className="grid grid-cols-2 gap-x-[60px] bg-white px-[40px] py-[40px]">
+        <div className="grid grid-cols-2 gap-x-[60px] bg-white px-[clamp(18px,3vw,56px)] pb-[40px] pt-[40px]">
           <div className="min-w-0">
             <ColumnTitle>Resources</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
@@ -109,7 +109,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
 
 function ColumnTitle({ children }: { children: ReactNode }) {
   return (
-    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#C91F28]">
+    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-primary">
       {children}
     </div>
   );
@@ -121,9 +121,9 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
     <Link
       href={item.href}
       onClick={closeMenu}
-      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-[#C91F28]"
+      className="group flex items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] transition-colors hover:text-primary"
     >
-      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-[#C91F28] transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-[#A71920]">
+      <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-primary">
         <Icon size={16} strokeWidth={1.9} />
       </span>
       <span>{item.label}</span>
@@ -134,13 +134,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-[#C91F28]">{title}</p>
+      <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
           return (
-            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-[#C91F28]">
-              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-[#C91F28]">
+            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-primary">
+              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
               <span>{item.label}</span>
