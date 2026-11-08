@@ -436,13 +436,13 @@ export default function ShikkhaChatPage() {
 
           <div className="lg:pl-2">
             <BrowserFrame
-              src="/images/shikkha/shikkha-admin.webp"
-              alt="Shikkha Chat administrator dashboard"
-              url="dash.shikkhachat.com/dashboard/admin"
+              src="/images/shikkha/shikkha-teacher.webp"
+              alt="Shikkha Chat teacher dashboard"
+              url="dash.shikkhachat.com/dashboard/teacher"
               priority
             />
             <p className="mt-3 text-center text-[12.5px] font-medium text-[#7a8798]">
-              The School Administrator dashboard, captured from the live Shikkha Chat app.
+              The Teacher dashboard, captured from the live Shikkha Chat app.
             </p>
           </div>
         </div>
@@ -500,9 +500,9 @@ export default function ShikkhaChatPage() {
             </ul>
           </div>
           <BrowserFrame
-            src="/images/shikkha/shikkha-student.webp"
-            alt="Shikkha Chat student dashboard with AI Pathshala modules"
-            url="dash.shikkhachat.com/dashboard/student"
+            src="/images/shikkha/shikkha-parent.webp"
+            alt="Shikkha Chat parent portal dashboard"
+            url="dash.shikkhachat.com/dashboard/parent"
           />
         </div>
       </Section>
@@ -565,9 +565,9 @@ export default function ShikkhaChatPage() {
       <Section className="bg-white">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <BrowserFrame
-            src="/images/shikkha/shikkha-teacher.webp"
-            alt="Shikkha Chat teacher dashboard"
-            url="dash.shikkhachat.com/dashboard/teacher"
+            src="/images/shikkha/shikkha-student.webp"
+            alt="Shikkha Chat student dashboard with AI Pathshala modules"
+            url="dash.shikkhachat.com/dashboard/student"
             className="lg:order-1"
           />
           <div className="lg:order-2">
