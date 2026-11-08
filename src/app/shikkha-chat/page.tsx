@@ -27,13 +27,13 @@ import {
 import { Section, SectionHeader, StatBand, CtaBanner } from "@/components/resource-kit/ui";
 
 export const metadata: Metadata = {
-  title: "Shikkha Chat — Connected Education OS | Magnetic Solution Limited",
+  title: "Shikkha Chat — Education Management ERP | Magnetic Solution Limited",
   description:
     "Shikkha Chat is one connected education platform that unites school administration, AI-powered learning, teachers, students, parents and government oversight in a single secure system.",
 };
 
 /* ------------------------------------------------------------------ */
-/*  Data (verified from the Shikkha Chat Connected OS product)        */
+/*  Data (verified from the Shikkha Chat frontend: shikkha_chat_apps) */
 /* ------------------------------------------------------------------ */
 
 const coreModules: {
@@ -396,7 +396,7 @@ export default function ShikkhaChatPage() {
         <div className="mx-auto grid max-w-[1240px] items-center gap-14 lg:grid-cols-[1fr_1.08fr]">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-[13px] font-bold uppercase tracking-[0.1em] text-[#3f93cf] shadow-[0_10px_30px_rgba(17,30,64,0.06)]">
-              <Sparkles size={15} strokeWidth={2.2} /> Education · Connected OS
+              <Sparkles size={15} strokeWidth={2.2} /> Education Management ERP
             </span>
             <h1 className="mt-6 text-[38px] font-medium leading-[1.06] tracking-[-0.055em] text-[#050b18] md:text-[56px]">
               The connected operating system for modern school education
@@ -451,7 +451,7 @@ export default function ShikkhaChatPage() {
       <StatBand
         tone="dark"
         stats={[
-          { value: "6", label: "Connected core modules" },
+          { value: "6", label: "Core modules" },
           { value: "47", label: "Product features" },
           { value: "8", label: "Role-based dashboards" },
           { value: "1", label: "Unified platform" },
@@ -513,7 +513,7 @@ export default function ShikkhaChatPage() {
           align="center"
           eyebrow="Public school website"
           title="Every institution also gets a complete public website"
-          description="Shikkha Chat ships a ready-made, mobile-friendly school website for each institution — a branded home page, online admission, notice board, teacher directory and news — that parents and the public can browse before they ever sign in."
+          description="Shikkha Chat ships a complete, mobile-friendly 40+ page school website for every institution — home, governing body, chairman and principal messages, academic calendar, class routine, syllabus, fees, scholarships, notice board, gallery, exam results and more — that parents and the public can browse before they ever sign in."
         />
         <div className="mt-14 space-y-6">
           <BrowserFrame
