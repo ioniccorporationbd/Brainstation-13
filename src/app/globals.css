@@ -63,6 +63,34 @@
   --bs-gold: #ffab2e;
 }
 
+/* ===================================================================
+   Global Brand Theme Colors — Magnetic Solution Ltd
+   Added for FUTURE UI update tasks ONLY.
+   No existing component references these, so the current Navbar,
+   Footer, Buttons, Cards and Sections are NOT affected/recolored.
+   Usage in later tasks:
+     --primary        (#C91F28)  Primary action / brand red
+     --primary-hover  (#A71920)  Action hover (dark red)
+     --secondary      (#000000)  Headings, text, dark UI elements
+     --white          (#FFFFFF)  Backgrounds & button text
+   =================================================================== */
+:root {
+  --primary: #C91F28;
+  --primary-hover: #A71920;
+  --secondary: #000000;
+  --white: #FFFFFF;
+}
+
+/* Expose the brand colors as Tailwind v4 utilities so future tasks can use
+   bg-primary / hover:bg-primary-hover / text-secondary / bg-brand-white etc.
+   (Tailwind's built-in white/black already equal --white/--secondary.) */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-brand-white: var(--white);
+}
+
 html {
   scroll-behavior: smooth;
 }
