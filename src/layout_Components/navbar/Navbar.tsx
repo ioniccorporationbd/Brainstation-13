@@ -146,7 +146,7 @@ export default function Navbar() {
               />
             </span>
             <span className="hidden items-center leading-none min-[1200px]:flex">
-              <span className="whitespace-nowrap text-[13px] tracking-tight text-white min-[1280px]:text-[15px]">
+              <span className="whitespace-nowrap text-[15px] tracking-tight text-white min-[1280px]:text-[17px]">
                 <span className="font-bold">Magnetic Solution</span>{" "}
                 <span className="font-medium">Limited</span>
               </span>
@@ -237,7 +237,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-2.5" aria-label="Magnetic Solution Limited — Home">
+          <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label="Magnetic Solution Limited — Home">
             <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-white p-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
                 src="/images/brand/magnetic-logo.png"
@@ -248,11 +248,9 @@ export default function Navbar() {
                 className="h-full w-full object-contain"
               />
             </span>
-            <span className="flex items-center leading-none">
-              <span className="whitespace-nowrap text-[13px] tracking-tight text-white">
-                <span className="font-bold">Magnetic Solution</span>{" "}
-                <span className="font-medium">Limited</span>
-              </span>
+            <span className="flex min-w-0 flex-col justify-center leading-tight">
+              <span className="text-[14px] font-bold tracking-tight text-white">Magnetic Solution</span>
+              <span className="mt-[2px] text-[11px] font-semibold uppercase tracking-[0.16em] text-white">Limited</span>
             </span>
           </Link>
 
