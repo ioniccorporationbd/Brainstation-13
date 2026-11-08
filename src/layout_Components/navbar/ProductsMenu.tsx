@@ -1,12 +1,20 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
+  Landmark,
+  Wallet,
+  Banknote,
+  ShieldCheck,
+  Globe2,
+  Activity,
+  BookOpen,
+  Monitor,
+  Bot,
   MessagesSquare,
   GraduationCap,
   Quote,
   ArrowRight,
   ExternalLink,
-  Lock,
   type LucideIcon,
 } from "lucide-react";
 
@@ -24,6 +32,27 @@ type MenuLinkItem = {
   note?: string;
 };
 
+const fintech: MenuLinkItem[] = [
+  { label: "Magnetic Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
+  { label: "Magnetic E-wallet Software", href: "/e-wallet-software", icon: Wallet },
+  { label: "Magnetic Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
+  { label: "Magnetic Insurance 360", href: "/insurance-360", icon: ShieldCheck },
+  { label: "Magnetic Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
+];
+
+const healthcare: MenuLinkItem[] = [
+  { label: "Magnetic Omnizia", href: "/omnizia", icon: Activity },
+  { label: "Magnetic Time2Publish", href: "/time2publish", icon: BookOpen },
+];
+
+const lms: MenuLinkItem[] = [
+  { label: "Magnetic Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
+];
+
+const aiSolution: MenuLinkItem[] = [
+  { label: "Magnetic NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
+];
+
 const education: MenuLinkItem[] = [
   { label: "Shikkha Chat", href: "/shikkha-chat", icon: MessagesSquare },
   { label: "Cadet Website", icon: GraduationCap, placeholder: true, note: "Coming soon" },
@@ -39,12 +68,10 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
     return (
       <div className="space-y-[24px]">
         <MobileGroup title="Education" links={education} closeMenu={closeMenu} />
-        <div className="space-y-[14px]">
-          <DisabledMobileCategory title="LMS" />
-          <DisabledMobileCategory title="AI Solution" />
-          <DisabledMobileCategory title="Healthcare" />
-          <DisabledMobileCategory title="Fintech" />
-        </div>
+        <MobileGroup title="LMS" links={lms} closeMenu={closeMenu} disabled />
+        <MobileGroup title="AI Solution" links={aiSolution} closeMenu={closeMenu} disabled />
+        <MobileGroup title="Healthcare" links={healthcare} closeMenu={closeMenu} disabled />
+        <MobileGroup title="Fintech" links={fintech} closeMenu={closeMenu} disabled />
       </div>
     );
   }
@@ -84,19 +111,33 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
               {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
             </div>
 
-            <div className="mt-[34px]">
-              <DisabledCategory title="LMS" />
+            <div className="mt-[26px]">
+              <ColumnTitle disabled>LMS</ColumnTitle>
+              <div className="mt-[23px] space-y-[15px]">
+                {lms.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
+              </div>
             </div>
-            <div className="mt-[22px]">
-              <DisabledCategory title="AI Solution" />
+
+            <div className="mt-[26px]">
+              <ColumnTitle disabled>AI Solution</ColumnTitle>
+              <div className="mt-[23px] space-y-[15px]">
+                {aiSolution.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
+              </div>
             </div>
           </div>
 
           {/* Column 2 — Healthcare, Fintech (disabled) */}
           <div className="min-w-0">
-            <DisabledCategory title="Healthcare" />
-            <div className="mt-[22px]">
-              <DisabledCategory title="Fintech" />
+            <ColumnTitle disabled>Healthcare</ColumnTitle>
+            <div className="mt-[23px] space-y-[15px]">
+              {healthcare.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
+            </div>
+
+            <div className="mt-[26px]">
+              <ColumnTitle disabled>Fintech</ColumnTitle>
+              <div className="mt-[23px] space-y-[15px]">
+                {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
+              </div>
             </div>
           </div>
         </div>
@@ -105,40 +146,40 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
   );
 }
 
-function ColumnTitle({ children }: { children: ReactNode }) {
+function ColumnTitle({ children, disabled = false }: { children: ReactNode; disabled?: boolean }) {
   return (
-    <div className="inline-flex items-center text-[17px] font-semibold leading-[24px] text-[#050b18] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] before:bg-[#4e92ce]">
+    <div
+      className={`inline-flex items-center text-[17px] font-semibold leading-[24px] before:mr-[8px] before:inline-block before:h-[8px] before:w-[8px] ${
+        disabled
+          ? "text-[#b6bdc8] before:bg-[#d3d8e0]"
+          : "text-[#050b18] before:bg-[#4e92ce]"
+      }`}
+    >
       {children}
     </div>
   );
 }
 
-// Visible but disabled category heading — non-clickable, clearly greyed out.
-function DisabledCategory({ title }: { title: string }) {
-  return (
-    <div
-      aria-disabled="true"
-      className="inline-flex cursor-not-allowed select-none items-center text-[17px] font-semibold leading-[24px] text-[#b6bdc8]"
-    >
-      <span className="mr-[8px] inline-block h-[8px] w-[8px] bg-[#d3d8e0]" />
-      {title}
-      <Lock size={13} strokeWidth={2.2} className="ml-[8px] text-[#c4cbd5]" />
-    </div>
-  );
-}
-
-function DisabledMobileCategory({ title }: { title: string }) {
-  return (
-    <div aria-disabled="true" className="flex cursor-not-allowed select-none items-center gap-[8px]">
-      <p className="text-[15px] font-semibold text-[#b6bdc8]">{title}</p>
-      <Lock size={12} strokeWidth={2.2} className="text-[#c4cbd5]" />
-    </div>
-  );
-}
-
-function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; closeMenu: () => void; disabled?: boolean }) {
   const Icon = item.icon;
   const isPlaceholder = item.placeholder || !item.href;
+
+  // Disabled link: identical design/icon/text/spacing, but inert (no navigation).
+  if (disabled) {
+    return (
+      <a
+        href="#"
+        aria-disabled="true"
+        onClick={(e) => { e.preventDefault(); }}
+        className="flex cursor-not-allowed items-center gap-[11px] text-[16px] font-normal leading-[22px] text-[#050b18] opacity-60"
+      >
+        <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#eef6fc] text-[#3f93cf]">
+          <Icon size={16} strokeWidth={1.9} />
+        </span>
+        <span className="flex items-center gap-[6px]">{item.label}</span>
+      </a>
+    );
+  }
 
   if (isPlaceholder) {
     return (
@@ -174,10 +215,10 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
   );
 }
 
-function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
+function MobileGroup({ title, links, closeMenu, disabled = false }: { title: string; links: MenuLinkItem[]; closeMenu: () => void; disabled?: boolean }) {
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-[#009fe3]">{title}</p>
+      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-[#009fe3]"}`}>{title}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
@@ -195,6 +236,20 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
               </span>
             </>
           );
+
+          if (disabled) {
+            return (
+              <a
+                key={item.label}
+                href="#"
+                aria-disabled="true"
+                onClick={(e) => { e.preventDefault(); }}
+                className="flex cursor-not-allowed items-center gap-[10px] text-[15px] font-medium text-[#374151] opacity-60"
+              >
+                {inner}
+              </a>
+            );
+          }
 
           if (isPlaceholder) {
             return (
