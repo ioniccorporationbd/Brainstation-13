@@ -507,6 +507,45 @@ export default function ShikkhaChatPage() {
         </div>
       </Section>
 
+      {/* Public school website */}
+      <Section className="bg-white">
+        <SectionHeader
+          align="center"
+          eyebrow="Public school website"
+          title="Every institution also gets a complete public website"
+          description="Shikkha Chat ships a ready-made, mobile-friendly school website for each institution — a branded home page, online admission, notice board, teacher directory and news — that parents and the public can browse before they ever sign in."
+        />
+        <div className="mt-14 space-y-6">
+          <BrowserFrame
+            src="/images/shikkha/pub-home.webp"
+            alt="Public home page of an institution website built with Shikkha Chat"
+            url="shikkhachat.com"
+          />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <BrowserFrame
+              src="/images/shikkha/pub-online-admission.webp"
+              alt="Online admission page on a Shikkha Chat institution website"
+              url="shikkhachat.com/online-admission"
+            />
+            <BrowserFrame
+              src="/images/shikkha/pub-notice-board.webp"
+              alt="Notice board page on a Shikkha Chat institution website"
+              url="shikkhachat.com/notice-board"
+            />
+            <BrowserFrame
+              src="/images/shikkha/pub-teachers-info.webp"
+              alt="Teacher directory page on a Shikkha Chat institution website"
+              url="shikkhachat.com/teachers-info"
+            />
+            <BrowserFrame
+              src="/images/shikkha/pub-news-events.webp"
+              alt="News and events page on a Shikkha Chat institution website"
+              url="shikkhachat.com/news-and-events"
+            />
+          </div>
+        </div>
+      </Section>
+
       {/* Core modules */}
       <Section className="bg-[#f4f8fc]">
         <SectionHeader
@@ -739,8 +778,8 @@ export default function ShikkhaChatPage() {
       <div className="bg-white px-6 pb-12">
         <p className="mx-auto flex max-w-[1180px] items-center justify-center gap-2 text-center text-[12px] leading-[1.6] text-[#8a94a3]">
           <KeyRound size={13} className="shrink-0" /> Screenshots captured from the running
-          Shikkha Chat Connected OS application by Ionic (ioniccorporationbd) and reused here
-          with attribution.
+          Shikkha Chat application by Ionic (ioniccorporationbd) — its public institution
+          website and role dashboards — and reused here with attribution.
         </p>
       </div>
     </main>
