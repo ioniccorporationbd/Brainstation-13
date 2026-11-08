@@ -29,7 +29,7 @@ import { Section, SectionHeader, StatBand, CtaBanner } from "@/components/resour
 export const metadata: Metadata = {
   title: "Shikkha Chat — Education Management ERP | Magnetic Solution Limited",
   description:
-    "Shikkha Chat is one connected education platform that unites school administration, AI-powered learning, teachers, students, parents and government oversight in a single secure system.",
+    "Shikkha Chat is one complete education platform that unites school administration, AI-powered learning, teachers, students, parents and government oversight in a single secure system.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -132,7 +132,7 @@ const coreModules: {
       "Learning Outcomes",
       "Impact Analytics",
       "District-Level Oversight",
-      "Enrolment Analytics",
+      "Enrollment Analytics",
       "Equity Indicators",
       "Aggregated Reports",
     ],
@@ -286,7 +286,7 @@ const useCases: { icon: ElementType; title: string; description: string }[] = [
     icon: GraduationCap,
     title: "For students",
     description:
-      "An AI tutor and a personalised study plan that adapt to each learner, from nursery to masters.",
+      "An AI tutor and a personalised study plan that adapt to each learner, across every class, section and subject.",
   },
   {
     icon: Users,
@@ -399,12 +399,12 @@ export default function ShikkhaChatPage() {
               <Sparkles size={15} strokeWidth={2.2} /> Education Management ERP
             </span>
             <h1 className="mt-6 text-[38px] font-medium leading-[1.06] tracking-[-0.055em] text-[#050b18] md:text-[56px]">
-              The connected operating system for modern school education
+              The complete education management ERP for modern schools
             </h1>
             <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.5] tracking-[-0.01em] text-[#42637a] md:text-[20px]">
               Shikkha Chat brings school administration, AI-powered learning, teachers,
               students, parents and government oversight together in one secure platform —
-              from nursery to masters.
+              across every class, section and subject.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -466,11 +466,11 @@ export default function ShikkhaChatPage() {
               What is Shikkha Chat
             </p>
             <h2 className="mt-3 text-[32px] font-medium leading-[1.12] tracking-[-0.055em] text-[#050b18] md:text-[44px]">
-              One platform connecting every part of a school
+              One platform for every part of a school
             </h2>
             <div className="mt-6 space-y-4 text-[16px] leading-[1.6] text-[#5a6b7d] md:text-[17px]">
               <p>
-                Shikkha Chat is a connected education operating system that links the whole
+                Shikkha Chat is a complete education management platform that links the whole
                 school community — administration, teachers, students, parents and oversight
                 bodies — inside a single, secure product.
               </p>
@@ -551,7 +551,7 @@ export default function ShikkhaChatPage() {
         <SectionHeader
           align="center"
           eyebrow="Platform Modules"
-          title="Six connected modules, forty-seven features"
+          title="Six integrated modules, forty-seven features"
           description="Every part of a school works together — from daily administration to AI-assisted learning and government oversight. Each module ships with the exact capabilities its users rely on every day."
         />
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -671,7 +671,7 @@ export default function ShikkhaChatPage() {
           align="center"
           eyebrow="How it works"
           title="How Shikkha Chat runs the school day"
-          description="Real, connected workflows across roles — one action flows straight to the next person who needs it."
+          description="Real, integrated workflows across roles — one action flows straight to the next person who needs it."
         />
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
           {workflows.map((flow, index) => {
@@ -703,7 +703,7 @@ export default function ShikkhaChatPage() {
           align="center"
           eyebrow="Benefits & use cases"
           title="Built for everyone in the education loop"
-          description="From a single classroom to an entire district, each stakeholder gets a purpose-built experience backed by the same connected data."
+          description="From a single classroom to an entire district, each stakeholder gets a purpose-built experience backed by the same shared data."
         />
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {useCases.map((item) => {
@@ -770,7 +770,7 @@ export default function ShikkhaChatPage() {
 
       <CtaBanner
         title="Bring Shikkha Chat to your institution"
-        description="Talk to our team about a connected education platform tailored to your school, network or government programme."
+        description="Talk to our team about an education management platform tailored to your school, network or government programme."
         primary={{ label: "Request a Demo", href: "/schedule-a-call" }}
         secondary={{ label: "Explore Our Services", href: "/services" }}
       />
