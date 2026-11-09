@@ -69,13 +69,13 @@ const industries: IndustryCard[] = [
 
 export default function IndustriesInnovationSection() {
   return (
-    <section className="w-full bg-[#0A0A0A] py-[96px] text-white md:py-[120px] lg:py-[138px]">
-      <div className="mx-auto w-full max-w-[1260px] px-5 sm:px-8 xl:px-0">
-        <h2 className="mx-auto max-w-[700px] text-center text-[46px] font-medium leading-[1.1] tracking-[-0.06em] text-white sm:text-[60px] lg:text-[68px]">
+    <section className="w-full bg-white py-[72px] md:py-[96px] lg:py-[112px]">
+      <div className="mx-auto w-full max-w-[1210px] px-5 sm:px-8">
+        <h2 className="mx-auto max-w-[680px] text-center text-[38px] font-semibold leading-[1.14] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">
           Industries We Power with Innovation
         </h2>
 
-        <div className="mt-[86px] grid grid-cols-1 gap-[34px] md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {industries.map((industry) => (
             <IndustryItem key={industry.title} industry={industry} />
           ))}
@@ -91,25 +91,25 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
   return (
     <Link
       href={industry.href}
-      className="group flex min-h-[310px] flex-col rounded-[11px] bg-[#52525B] px-[36px] pb-[34px] pt-[34px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#26262A]"
+      className="group flex min-h-[292px] flex-col rounded-[18px] border border-black/[0.08] bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05)] transition-[transform,background-color,border-color,box-shadow] duration-300 ease-out hover:border-primary hover:bg-[#FEF7F7] hover:shadow-[0_18px_40px_-12px_rgba(201,31,40,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-safe:hover:scale-[1.03]"
     >
       <Image
         src={industry.icon}
         alt=""
-        width={46}
-        height={46}
-        className="h-[46px] w-[46px] object-contain"
+        width={44}
+        height={44}
+        className="h-[44px] w-[44px] object-contain"
       />
 
-      <h3 className="mt-[38px] text-[36px] font-medium leading-[1.12] tracking-[-0.05em] text-white">
+      <h3 className="mt-6 text-[23px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[25px]">
         {industry.title}
       </h3>
 
-      <p className="mt-[20px] max-w-[350px] text-[17px] font-semibold leading-[1.5] text-white/95">
+      <p className="mt-3 text-[15px] font-normal leading-[1.6] text-[#52525B]">
         {industry.description}
       </p>
 
-      <span className="mt-auto inline-flex items-center gap-[9px] pt-[28px] text-[15px] font-bold text-[#C91F28] transition-colors group-hover:text-[#C91F28]">
+      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[14px] font-semibold text-primary transition-colors group-hover:text-primary-hover">
         Learn More
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           →
@@ -121,14 +121,14 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
 
 function ContactCard() {
   return (
-    <div className="flex min-h-[310px] flex-col items-center justify-center rounded-[11px] bg-[#52525B] px-[36px] py-[36px] text-center">
-      <h3 className="text-[25px] font-semibold leading-[1.3] tracking-[-0.035em] text-white">
+    <div className="flex min-h-[292px] flex-col items-center justify-center rounded-[18px] border border-white/10 bg-[#0A0A0A] p-7 text-center md:col-span-2 lg:col-span-1">
+      <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.02em] text-white">
         Is your industry here?
       </h3>
 
       <Link
         href="/contact"
-        className="mt-[38px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#C91F28] px-[30px] text-[15px] font-bold text-black transition-colors hover:bg-[#A71920]"
+        className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]"
       >
         Let&apos;s Talk
       </Link>
