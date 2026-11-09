@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const solutionItems = [
   {
@@ -21,68 +20,55 @@ const solutionItems = [
 
 export default function MoodleSolutionsSection() {
   return (
-    <section className="w-full bg-[#F7F7F8] py-[90px] md:py-[110px] lg:py-[120px]">
-      <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 xl:px-0">
+    <section className="w-full bg-white py-[80px] md:py-[104px] lg:py-[128px]">
+      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+        {/* Header */}
         <div className="text-center">
-          <p className="text-[18px] font-medium leading-[1.4] text-[#C91F28]">
+          <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-[0.16em] text-primary">
             Moodle Capabilities
           </p>
 
-          <h2 className="mt-[26px] text-[44px] font-normal leading-[1.1] tracking-[-0.055em] text-black sm:text-[58px] lg:text-[68px]">
+          <h2 className="mx-auto mt-4 max-w-[820px] text-balance text-[34px] font-semibold leading-[1.08] tracking-[-0.02em] text-[#0A0A0A] sm:text-[46px] lg:text-[56px]">
             Moodle Solutions for Real Impact
           </h2>
+
+          <p className="mx-auto mt-6 max-w-[760px] text-[16px] font-normal leading-[1.7] text-[#52525B] sm:text-[18px]">
+            Magnetic Solution Limited is Moodle&rsquo;s Certified Integration Partner in
+            Bangladesh and the first-ever organizer of MoodleMoot Bangladesh. Explore how we
+            build secure, scalable, audit-ready Moodle LMS and proctoring for institutions
+            that can&rsquo;t afford failure.
+          </p>
+
+          <Link
+            href="/lms-development"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            Join Moodle Moot Bangladesh 2026
+            <span aria-hidden="true" className="text-[18px] leading-none">
+              →
+            </span>
+          </Link>
         </div>
 
-        <div className="mx-auto mt-[64px] grid w-full max-w-[1240px] grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,480px)_minmax(0,1fr)] lg:gap-[40px]">
-          {/* Left text */}
-          <div className="pt-[4px]">
-            <p className="text-[21px] font-normal leading-[1.5] text-[#52525B]">
-              Magnetic Solution Limited is Moodle’s Certified Integration Partner in
-              Bangladesh and the first-ever organizer of MoodleMoot Bangladesh.
-            </p>
+        {/* Divider */}
+        <div className="mx-auto mt-14 h-px w-full max-w-[1080px] bg-black/[0.08] lg:mt-16" />
 
-            <p className="mt-[28px] text-[21px] font-normal leading-[1.5] text-[#52525B]">
-              Explore how we build secure, scalable, audit-ready Moodle LMS +
-              proctoring for institutions that can’t afford failure.
-            </p>
-
-            <Link
-              href="/lms-development"
-              className="mt-[30px] inline-flex items-center gap-[14px] text-[20px] font-semibold text-[#C91F28] transition-colors hover:text-[#A71920]"
-            >
-              Join Moodle Moot Bangladesh 2026
-              <span className="text-[24px] leading-none">→</span>
-            </Link>
-          </div>
-
-          {/* Center Moodle image */}
-          <div className="flex justify-center lg:pt-[2px]">
-            <div className="relative h-[245px] w-full max-w-[480px] overflow-hidden rounded-[7px] shadow-sm">
-              <Image
-                src="/images/moodle/moodle-certified.svg"
-                alt="Moodle Certified Integration"
-                fill
-                sizes="(max-width: 1024px) 100vw, 480px"
-                className="object-contain"
-                priority
+        {/* Solution items */}
+        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
+          {solutionItems.map((item) => (
+            <div key={item.title}>
+              <span
+                aria-hidden="true"
+                className="mb-5 block h-[3px] w-10 rounded-full bg-primary"
               />
+              <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[22px]">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-[15px] font-normal leading-[1.6] text-[#52525B]">
+                {item.description}
+              </p>
             </div>
-          </div>
-
-          {/* Right list */}
-          <div className="space-y-[34px]">
-            {solutionItems.map((item) => (
-              <div key={item.title}>
-                <h3 className="text-[24px] font-medium leading-[1.32] tracking-[-0.035em] text-[#0A0A0A]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-[10px] text-[21px] font-normal leading-[1.45] text-[#52525B]">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
