@@ -4,28 +4,28 @@ import Link from "next/link";
 const aiStats = [
   {
     number: "70%",
-    label: "/ Faster Development",
+    label: "Faster Development",
     title: "Intelligent Coding",
     description:
       "AI-powered code synthesis and auto-completion reduce manual effort while maintaining enterprise-grade standards.",
   },
   {
     number: "99.9%",
-    label: "/ Defect-Free Releases",
+    label: "Defect-Free Releases",
     title: "Bulletproof QA",
     description:
       "Self-learning test suites detect bugs early, with automated fixes for flawless deployments.",
   },
   {
     number: "40%",
-    label: "/ Higher Efficiency",
+    label: "Higher Efficiency",
     title: "Peak Performance",
     description:
       "ML algorithms optimize resource allocation, predict scaling needs, and eliminate bottlenecks in real-time.",
   },
   {
     number: "90%",
-    label: "/ Faster Deployments",
+    label: "Faster Deployments",
     title: "Zero-Downtime DevOps",
     description:
       "AI-driven CI/CD pipelines automate rollbacks and canary releases for seamless updates.",
@@ -34,20 +34,17 @@ const aiStats = [
 
 export default function AIDevelopmentExcellenceSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F7F7F8] py-[76px] md:py-[96px] lg:py-[118px]">
-      {/* Left circular background */}
-      <div className="pointer-events-none absolute left-[-330px] top-[-120px] h-[980px] w-[980px] rounded-full opacity-80 [background:repeating-radial-gradient(circle,#ECECEC_0px,#ECECEC_1px,transparent_2px,transparent_12px)]" />
-
-      <div className="relative z-10 mx-auto w-full max-w-[1120px] px-5 sm:px-8 xl:px-0">
-        <div className="grid grid-cols-1 gap-[58px] lg:grid-cols-[460px_1fr] lg:gap-[90px]">
-          {/* Left side */}
+    <section className="w-full bg-white py-[76px] md:py-[96px] lg:py-[118px]">
+      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
+          {/* Left: heading + intro + CTA */}
           <div>
-            <h2 className="max-w-[390px] text-[42px] font-medium leading-[1.12] tracking-[-0.055em] text-[#0A0A0A] sm:text-[52px] lg:text-[58px]">
+            <h2 className="max-w-[420px] text-[38px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[52px]">
               AI-Driven Development Excellence
             </h2>
 
-            <p className="mt-[30px] max-w-[430px] text-[17px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px]">
-              We integrate cutting-edge AI across the development lifecycle—
+            <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B]">
+              We integrate cutting-edge AI across the development lifecycle&mdash;
               delivering solutions 10X faster with unmatched reliability. Our
               engineers augment human expertise with AI to automate, optimize,
               and future-proof your software.
@@ -55,44 +52,32 @@ export default function AIDevelopmentExcellenceSection() {
 
             <Link
               href="/schedule-a-call"
-              className="mt-[34px] inline-flex h-[44px] items-center justify-center rounded-full bg-[#C91F28] px-[24px] text-[14px] font-semibold text-black transition-colors hover:bg-[#A71920]"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               Schedule a Call
             </Link>
-
-            <div className="relative mt-[60px] h-[430px] w-full max-w-[430px] overflow-hidden rounded-[9px] shadow-sm">
-              <Image
-                src="/images/ai-excellence/ai-robot-team.svg"
-                alt="AI-driven development team"
-                fill
-                sizes="(max-width: 1024px) 100vw, 430px"
-                className="object-cover"
-                priority
-              />
-            </div>
           </div>
 
-          {/* Right side stats */}
-          <div className="space-y-[60px] lg:pt-[6px]">
+          {/* Right: statistics as a 2x2 card grid */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
             {aiStats.map((item) => (
-              <div key={item.title}>
-                <div className="flex flex-wrap items-end gap-x-[10px] gap-y-1">
-                  <span className="text-[52px] font-light leading-none tracking-[-0.055em] text-[#C91F28] sm:text-[58px]">
-                    {item.number}
-                  </span>
+              <div
+                key={item.title}
+                className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
+              >
+                <span className="text-[34px] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
+                  {item.number}
+                </span>
 
-                  <span className="mb-[9px] text-[13px] font-bold leading-none text-[#C91F28]">
-                    {item.label}
-                  </span>
-                </div>
+                <span className="mt-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-primary/70">
+                  {item.label}
+                </span>
 
-                <div className="mt-[8px] h-px w-[140px] bg-[#F7F7F8]" />
-
-                <h3 className="mt-[18px] text-[29px] font-medium leading-[1.22] tracking-[-0.045em] text-[#0A0A0A] sm:text-[32px]">
+                <h3 className="mt-4 text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] sm:text-[21px]">
                   {item.title}
                 </h3>
 
-                <p className="mt-[8px] max-w-[430px] text-[16px] font-normal leading-[1.45] text-[#52525B]">
+                <p className="mt-2 text-[15px] font-normal leading-[1.55] text-[#52525B]">
                   {item.description}
                 </p>
               </div>
@@ -101,39 +86,39 @@ export default function AIDevelopmentExcellenceSection() {
         </div>
 
         {/* Bottom feature bar */}
-        <div className="mt-[70px] border-t border-[#E9E9EC] pt-[32px]">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_190px_190px] lg:items-center">
-            <div className="border-l-[2px] border-[#C91F28] pl-[22px]">
-              <h3 className="text-[28px] font-medium leading-[1.2] tracking-[-0.04em] text-[#0A0A0A]">
+        <div className="mt-14 border-t border-black/[0.08] pt-10">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12">
+            <div className="border-l-2 border-primary pl-5">
+              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A]">
                 10X Faster Delivery
               </h3>
 
-              <p className="mt-[12px] max-w-[560px] text-[16px] font-normal leading-[1.45] text-[#52525B]">
+              <p className="mt-2 max-w-[560px] text-[15px] font-normal leading-[1.55] text-[#52525B]">
                 Our world-class engineers leverage cutting-edge AI to deliver
                 solutions 10X faster without compromising quality.
               </p>
             </div>
 
-            <div className="flex items-center gap-[16px] border-l border-[#E9E9EC] pl-[28px]">
+            <div className="flex items-center gap-3 lg:border-l lg:border-black/[0.08] lg:pl-8">
               <Image
                 src="/images/ai-excellence/icon-shield.svg"
                 alt=""
-                width={34}
-                height={34}
-                className="h-[34px] w-[34px]"
+                width={32}
+                height={32}
+                className="h-8 w-8"
               />
               <p className="text-[15px] font-medium text-[#52525B]">
                 100% IP Protection
               </p>
             </div>
 
-            <div className="flex items-center gap-[16px] border-l border-[#E9E9EC] pl-[28px]">
+            <div className="flex items-center gap-3 lg:border-l lg:border-black/[0.08] lg:pl-8">
               <Image
                 src="/images/ai-excellence/icon-talent.svg"
                 alt=""
-                width={34}
-                height={34}
-                className="h-[34px] w-[34px]"
+                width={32}
+                height={32}
+                className="h-8 w-8"
               />
               <p className="text-[15px] font-medium text-[#52525B]">
                 Top 1% Talent
