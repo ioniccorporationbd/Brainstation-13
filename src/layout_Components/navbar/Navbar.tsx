@@ -127,22 +127,22 @@ export default function Navbar() {
       >
         <nav
           className={`mx-auto flex max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 ${
-            isScrolled ? "h-[72px]" : "h-[88px]"
+            isScrolled ? "h-[82px]" : "h-[98px]"
           }`}
         >
           <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-3" aria-label="Magnetic Solution Limited — Home">
             <span
-              className={`flex items-center justify-center rounded-[14px] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 ${
-                isScrolled ? "h-[44px] w-[44px] p-[5px]" : "h-[52px] w-[52px] p-[6px]"
+              className={`flex items-center justify-center rounded-[12px] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 ${
+                isScrolled ? "h-[54px] px-[9px]" : "h-[64px] px-[11px]"
               }`}
             >
               <Image
-                src="/images/brand/magnetic-mark.png"
+                src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Ltd"
-                width={64}
-                height={64}
+                width={190}
+                height={198}
                 priority
-                className="h-full w-full object-contain"
+                className="h-full w-auto object-contain"
               />
             </span>
           </Link>
@@ -238,14 +238,14 @@ export default function Navbar() {
       >
         <div className="mb-8 flex items-center justify-between">
           <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label="Magnetic Solution Limited — Home">
-            <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-white p-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
+            <span className="flex h-[52px] items-center justify-center rounded-[12px] bg-white px-[9px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
-                src="/images/brand/magnetic-mark.png"
+                src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Ltd"
-                width={48}
-                height={48}
+                width={190}
+                height={198}
                 priority
-                className="h-full w-full object-contain"
+                className="h-full w-auto object-contain"
               />
             </span>
           </Link>
