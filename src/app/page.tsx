@@ -9,7 +9,6 @@ import MainIntroSection from "@/Home_components/MainIntroSection";
 import TechStackSection from "@/Home_components/TechStackSection";
 import ProcessSection from "@/Home_components/ProcessSection";
 import CaseStudiesSection from "@/Home_components/CaseStudiesSection";
-import JoinOurTeamSection from "@/Home_components/JoinOurTeamSection";
 
 
 export default function Home() {
@@ -26,7 +25,6 @@ export default function Home() {
           <TechStackSection/>
           <ProcessSection/>
           <CaseStudiesSection/>
-          <JoinOurTeamSection/>
       
     </main>
   );
