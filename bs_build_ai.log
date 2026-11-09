@@ -1,0 +1,96 @@
+
+> brainstation@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 33.2s
+  Running TypeScript ...
+  Finished TypeScript in 44s ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/75) ...
+  Generating static pages using 11 workers (18/75) 
+  Generating static pages using 11 workers (37/75) 
+  Generating static pages using 11 workers (56/75) 
+✓ Generating static pages using 11 workers (75/75) in 6.8s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /3d-modeling-services
+├ ○ /about-us
+├ ○ /adobe-experience-manager
+├ ○ /api/health
+├ ○ /automotive
+├ ○ /banking-solutions
+├ ○ /blockchain-development
+├ ○ /blog
+├ ○ /business-intelligence
+├ ○ /career
+├ ○ /case-studies
+├ ○ /case-study
+├ ○ /case-study/digital-wallet
+├ ○ /case-study/safety-at-sea
+├ ○ /cloud-solutions
+├ ○ /contact
+├ ○ /cross-border-payments-solution
+├ ○ /cyber-security
+├ ○ /data-engineering
+├ ○ /data-migration
+├ ○ /data-science-business-intelligence
+├ ○ /digital-banking-software
+├ ○ /digital-lending-credit
+├ ○ /digital-transformation
+├ ○ /e-commerce
+├ ○ /e-wallet-software
+├ ○ /ecommerce-development
+├ ○ /education
+├ ○ /enterprise-grade-security
+├ ○ /erp-development
+├ ○ /field-force-automation
+├ ○ /fintech
+├ ○ /game-studio
+├ ○ /global-offices
+├ ○ /industries
+├ ○ /insurance-360
+├ ○ /insurtech
+├ ○ /investor-relations
+├ ○ /join-as-partner
+├ ○ /lms-development
+├ ○ /managed-service
+├ ○ /media
+├ ○ /ml-ai-development
+├ ○ /mvp-development
+├ ○ /neuraflow-conversational-ai-agent
+├ ○ /non-profit
+├ ○ /omnizia
+├ ○ /partners
+├ ○ /pharma
+├ ○ /proctoring-pro
+├ ○ /qa-testing-and-automation
+├ ○ /real-estate
+├ ○ /recognitions
+├ ○ /resources
+├ ○ /retail
+├ ○ /schedule-a-call
+├ ○ /services
+├ ○ /sharepoint-services
+├ ○ /shikkha-chat
+├ ○ /shopify-services
+├ ○ /software-ites
+├ ○ /solution-partner/swapno
+├ ○ /staff-augmentation
+├ ○ /startup
+├ ○ /sustainability
+├ ○ /technology-consulting
+├ ○ /telecom
+├ ○ /testimonials
+├ ○ /testimonials/anupom-syam
+├ ○ /time2publish
+└ ○ /web-mobile-app-development
+
+
+○  (Static)  prerendered as static content
+
