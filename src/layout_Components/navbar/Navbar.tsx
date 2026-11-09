@@ -125,21 +125,37 @@ export default function Navbar() {
             : "border-b border-white/10 bg-black"
         }`}
       >
+        <Link
+          href="/"
+          onClick={closeAll}
+          className="absolute left-0 top-0 z-30 flex h-14 items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-16 2xl:h-20"
+          aria-label="Magnetic Solution Limited — Home"
+        >
+          <Image
+            src="/images/brand/magnetic-logo.png"
+            alt="Magnetic Solution Ltd"
+            width={190}
+            height={198}
+            priority
+            className="h-full w-auto object-contain"
+          />
+        </Link>
         <nav
           className="mx-auto flex h-14 max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 xl:h-16 2xl:h-20"
         >
-          <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-3" aria-label="Magnetic Solution Limited — Home">
-            <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 xl:h-[56px] xl:px-[8px] 2xl:h-[72px] 2xl:px-[10px]">
-              <Image
-                src="/images/brand/magnetic-logo.png"
-                alt="Magnetic Solution Ltd"
-                width={190}
-                height={198}
-                priority
-                className="h-full w-auto object-contain"
-              />
-            </span>
-          </Link>
+          <span
+            aria-hidden="true"
+            className="invisible -ml-5 flex shrink-0 items-center justify-center self-stretch bg-white px-4 min-[1025px]:-ml-8 min-[1025px]:px-5"
+          >
+            <Image
+              src="/images/brand/magnetic-logo.png"
+              alt=""
+              width={190}
+              height={198}
+              priority
+              className="h-full w-auto object-contain"
+            />
+          </span>
 
           <div className="hidden items-center gap-[30px] min-[1025px]:flex">
             {navItems.map((item) => {
@@ -206,11 +222,7 @@ export default function Navbar() {
           </button>
         </nav>
 
-        <div
-          className={`absolute left-0 hidden w-full min-[1025px]:block ${
-            isScrolled ? "top-[72px]" : "top-[88px]"
-          }`}
-        >
+        <div className="absolute left-0 top-14 hidden w-full min-[1025px]:block xl:top-16 2xl:top-20">
           {activeMenu === "services" && <ServicesMenu closeMenu={closeAll} />}
           {activeMenu === "industries" && <IndustriesMenu closeMenu={closeAll} />}
           {activeMenu === "products" && <ProductsMenu closeMenu={closeAll} />}
