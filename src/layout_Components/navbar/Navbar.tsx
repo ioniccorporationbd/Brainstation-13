@@ -137,7 +137,7 @@ export default function Navbar() {
               }`}
             >
               <Image
-                src="/images/brand/magnetic-logo.png"
+                src="/images/brand/magnetic-mark.png"
                 alt="Magnetic Solution Ltd"
                 width={64}
                 height={64}
@@ -246,7 +246,7 @@ export default function Navbar() {
           <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label="Magnetic Solution Limited — Home">
             <span className="flex h-[46px] w-[46px] items-center justify-center rounded-[12px] bg-white p-[5px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
-                src="/images/brand/magnetic-logo.png"
+                src="/images/brand/magnetic-mark.png"
                 alt="Magnetic Solution Ltd"
                 width={48}
                 height={48}

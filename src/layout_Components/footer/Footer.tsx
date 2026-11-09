@@ -153,22 +153,22 @@ const recognizedItems = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t-[7px] border-[#063454] bg-[#101729] text-white">
+    <footer className="relative overflow-hidden border-t-[4px] border-[#C91F28] bg-black text-white">
       {/* CTA Card */}
       <div className="mx-auto w-full max-w-[1400px] px-5 pt-[60px] sm:px-8 xl:px-0">
-        <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[7px] bg-[#233f5b] px-6 py-10 text-center">
+        <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[14px] border border-white/10 bg-[#0A0A0A] px-6 py-10 text-center">
           <h2 className="text-[32px] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">
             Ready to Scale Your Team?
           </h2>
 
-          <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-[#d6dfec] sm:text-[16px] md:text-[17px]">
+          <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-white/70 sm:text-[16px] md:text-[17px]">
             Let’s discuss how our resource augmentation and AI-powered
             development can accelerate your project delivery.
           </p>
 
           <Link
             href="/schedule-a-call"
-            className="mt-[32px] inline-flex h-[37px] items-center justify-center rounded-full bg-[#ffad2f] px-[25px] text-[13px] font-semibold text-black transition-colors hover:bg-[#f59b15]"
+            className="mt-[32px] inline-flex h-[40px] items-center justify-center rounded-full bg-[#C91F28] px-[26px] text-[13px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
           >
             Schedule a Call
           </Link>
@@ -180,18 +180,22 @@ export default function Footer() {
         <section className="grid gap-10 md:grid-cols-2 lg:grid-cols-[360px_1fr_180px_240px] lg:gap-[90px]">
           {/* Logo + About */}
           <div>
-            <Link href="/" className="inline-flex">
+            <Link
+              href="/"
+              aria-label="Magnetic Solution Limited — Home"
+              className="inline-flex rounded-xl bg-white px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-transform duration-200 hover:scale-[1.02]"
+            >
               <Image
-                src="/images/brainstation-logo.svg"
+                src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Limited"
-                width={195}
-                height={40}
-                className="h-auto w-[190px]"
+                width={190}
+                height={198}
+                className="h-[92px] w-auto object-contain"
                 priority
               />
             </Link>
 
-            <p className="mt-[22px] max-w-[320px] text-[14px] font-normal leading-[21px] text-[#f0f4fb]">
+            <p className="mt-[22px] max-w-[320px] text-[14px] font-normal leading-[21px] text-white/70">
               AI-ready software service company specializing in resource
               augmentation. We deliver 10X faster solutions for startups, SMEs,
               and Enterprises across Fintech, Pharma, Retail & Distribution.
@@ -204,7 +208,7 @@ export default function Footer() {
                   href={item.href}
                   target="_blank"
                   aria-label={item.label}
-                  className="inline-flex h-[22px] items-center justify-center transition-opacity hover:opacity-70"
+                  className="inline-flex h-[22px] items-center justify-center opacity-80 transition-opacity duration-200 hover:opacity-100"
                 >
                   <Image
                     src={item.image}
@@ -248,7 +252,7 @@ export default function Footer() {
         </section>
 
         {/* Compliance + Partnerships */}
-        <section className="mt-[34px] border-t border-[#26334b] pt-[31px]">
+        <section className="mt-[34px] border-t border-white/10 pt-[31px]">
           <div className="grid gap-10 lg:grid-cols-[410px_1fr] lg:gap-[90px]">
             <div>
               <p className="text-[13px] font-semibold text-white">
@@ -269,7 +273,7 @@ export default function Footer() {
                     </div>
 
                     <div className="mt-[12px] flex items-center gap-[5px]">
-                      <span className="h-[8px] w-[8px] rounded-full bg-[#159bd7]" />
+                      <span className="h-[8px] w-[8px] rounded-full bg-[#C91F28]" />
                       <span className="text-[12px] text-white">
                         {item.label}
                       </span>
@@ -301,7 +305,7 @@ export default function Footer() {
         </section>
 
         {/* Recognized */}
-        <section className="mt-[34px] border-t border-[#26334b] pt-[31px]">
+        <section className="mt-[34px] border-t border-white/10 pt-[31px]">
           <p className="text-[13px] font-semibold text-white">
             Recognized by:
           </p>
@@ -321,12 +325,12 @@ export default function Footer() {
         </section>
 
         {/* Bottom Copyright */}
-        <section className="mt-[35px] flex flex-col gap-5 border-t border-[#26334b] pt-[31px] md:flex-row md:items-center md:justify-between">
-          <p className="text-[13px] font-medium text-white">
+        <section className="mt-[35px] flex flex-col gap-5 border-t border-white/10 pt-[31px] md:flex-row md:items-center md:justify-between">
+          <p className="text-[13px] font-medium text-white/80">
             © 2026 Magnetic Solution Limited. All rights reserved.
           </p>
 
-          <span className="text-[13px] font-medium text-white/70">
+          <span className="text-[13px] font-medium text-white/60 transition-colors duration-200 hover:text-[#C91F28]">
             Privacy Policy
           </span>
         </section>
@@ -335,9 +339,9 @@ export default function Footer() {
       {/* Cookie Button */}
       <button
         type="button"
-        className="fixed bottom-0 left-[76px] z-50 bg-[#0b3455] px-[11px] py-[9px] text-[10px] font-semibold text-white max-sm:left-3"
+        className="fixed bottom-0 left-[76px] z-50 bg-[#C91F28] px-[11px] py-[9px] text-[10px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920] max-sm:left-3"
       >
-        Privacy & Cookies Policy
+        Privacy &amp; Cookies Policy
       </button>
 
       {/* Floating Chat */}
@@ -345,7 +349,7 @@ export default function Footer() {
         <button
           type="button"
           aria-label="Chat"
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#00a6df] text-white"
+          className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#C91F28] text-white transition-colors duration-200 hover:bg-[#A71920]"
         >
           <MessageCircle size={17} />
         </button>
@@ -372,7 +376,8 @@ export default function Footer() {
 
 function FooterTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h4 className="text-[14px] font-semibold leading-[20px] text-[#ffbf29]">
+    <h4 className="flex items-center gap-[9px] text-[14px] font-semibold leading-[20px] text-white">
+      <span aria-hidden className="h-[15px] w-[3px] rounded-full bg-[#C91F28]" />
       {children}
     </h4>
   );
@@ -392,7 +397,7 @@ function FooterLinks({
         <li key={item.href}>
           <Link
             href={item.href}
-            className="text-[14px] font-medium leading-[20px] text-white transition-colors hover:text-[#00a6df]"
+            className="text-[14px] font-medium leading-[20px] text-white/75 transition-colors duration-200 hover:text-[#C91F28]"
           >
             {item.label}
           </Link>
