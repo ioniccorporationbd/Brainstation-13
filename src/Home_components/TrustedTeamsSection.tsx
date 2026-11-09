@@ -61,16 +61,16 @@ export default function TrustedTeamsSection() {
     <section className="w-full overflow-hidden bg-white pb-[130px] pt-[22px]">
       <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 xl:px-0">
         <div className="trusted-heading text-center">
-          <h2 className="text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#0A0A0A] sm:text-[28px]">
+          <h2 className="text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] lg:text-[32px]">
             Trusted By Fast-Moving Tech Teams
           </h2>
 
-          <p className="mt-[2px] text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#0A0A0A] sm:text-[28px]">
+          <p className="mt-[6px] text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] lg:text-[32px]">
             From Startups to Enterprises
           </p>
         </div>
 
-        <div className="relative mt-[92px] w-full overflow-hidden">
+        <div className="trusted-slider relative mt-[92px] w-full overflow-hidden">
           <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-white to-transparent max-sm:w-[45px]" />
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-white to-transparent max-sm:w-[45px]" />
 
@@ -99,8 +99,16 @@ export default function TrustedTeamsSection() {
         }
 
         .trusted-logo-track {
-          animation: trustedLogoScroll 12s linear infinite;
+          padding-right: 88px;
+          animation: trustedLogoScroll 18s linear infinite;
           will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+        }
+
+        /* Hover pauses the marquee in place; leaving resumes from the same spot */
+        .trusted-slider:hover .trusted-logo-track {
+          animation-play-state: paused;
         }
 
         @keyframes trustedHeadingFade {
@@ -128,7 +136,15 @@ export default function TrustedTeamsSection() {
         @media (max-width: 767px) {
           .trusted-logo-track {
             gap: 48px;
-            animation-duration: 9s;
+            padding-right: 48px;
+            animation-duration: 14s;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .trusted-logo-track,
+          .trusted-heading {
+            animation: none;
           }
         }
       `}</style>
