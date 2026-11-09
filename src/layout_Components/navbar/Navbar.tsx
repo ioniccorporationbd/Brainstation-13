@@ -112,7 +112,7 @@ export default function Navbar() {
   const linkBase =
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
     "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
-    "after:scale-x-0 after:rounded-full after:bg-primary after:transition-transform after:duration-300 " +
+    "after:scale-x-0 after:rounded-full after:bg-[#C91F28] after:transition-transform after:duration-300 " +
     "after:ease-[cubic-bezier(0.22,1,0.36,1)]";
 
   return (
@@ -144,12 +144,6 @@ export default function Navbar() {
                 priority
                 className="h-full w-full object-contain"
               />
-            </span>
-            <span className="hidden items-center leading-none min-[1200px]:flex">
-              <span className="whitespace-nowrap text-[15px] tracking-tight text-white min-[1280px]:text-[17px]">
-                <span className="font-bold">Magnetic Solution</span>{" "}
-                <span className="font-medium">Limited</span>
-              </span>
             </span>
           </Link>
 
@@ -254,10 +248,6 @@ export default function Navbar() {
                 className="h-full w-full object-contain"
               />
             </span>
-            <span className="flex min-w-0 flex-col justify-center leading-tight">
-              <span className="text-[14px] font-bold tracking-tight text-white">Magnetic Solution</span>
-              <span className="mt-[2px] text-[11px] font-semibold uppercase tracking-[0.16em] text-white">Limited</span>
-            </span>
           </Link>
 
           <button
@@ -278,7 +268,11 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleMenu(item.key)}
-                    className="flex w-full items-center justify-between px-4 py-4 text-left text-[17px] font-semibold text-white transition hover:bg-white/10"
+                    className={`relative flex w-full items-center justify-between px-4 py-4 text-left text-[17px] font-semibold text-white transition hover:bg-white/10 ${
+                      isRouteActive(item)
+                        ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-[#C91F28]"
+                        : ""
+                    }`}
                   >
                     {item.label}
                     <ChevronDown
@@ -303,10 +297,10 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={closeAll}
-                  className={`relative block rounded-2xl border px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10 ${
+                  className={`relative block rounded-2xl border border-white/10 px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10 ${
                     isRouteActive(item)
-                      ? "border-white/20 bg-white/5 after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-primary"
-                      : "border-white/10"
+                      ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-[#C91F28]"
+                      : ""
                   }`}
                 >
                   {item.label}
