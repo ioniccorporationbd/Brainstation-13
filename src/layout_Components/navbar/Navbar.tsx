@@ -113,7 +113,7 @@ export default function Navbar() {
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
     "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
     "after:scale-x-0 after:rounded-full after:bg-primary after:transition-transform after:duration-300 " +
-    "hover:text-primary hover:after:scale-x-100";
+    "after:ease-[cubic-bezier(0.22,1,0.36,1)]";
 
   return (
     <>
@@ -165,7 +165,9 @@ export default function Navbar() {
                   aria-haspopup="true"
                   aria-current={isRouteActive(item) ? "page" : undefined}
                   className={`group flex items-center gap-[7px] ${linkBase} ${
-                    active ? "text-primary after:scale-x-100" : "text-white"
+                    active
+                      ? "text-white after:scale-x-100"
+                      : "text-white hover:text-primary hover:after:scale-x-100"
                   }`}
                 >
                   {item.label}
@@ -183,7 +185,11 @@ export default function Navbar() {
                   href={item.href}
                   onClick={closeAll}
                   aria-current={isRouteActive(item) ? "page" : undefined}
-                  className={`${linkBase} ${active ? "text-primary after:scale-x-100" : "text-white"}`}
+                  className={`${linkBase} ${
+                    active
+                      ? "text-white after:scale-x-100"
+                      : "text-white hover:text-primary hover:after:scale-x-100"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -297,10 +303,10 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={closeAll}
-                  className={`block rounded-2xl border px-4 py-4 text-[17px] font-semibold transition hover:bg-white/10 ${
+                  className={`relative block rounded-2xl border px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10 ${
                     isRouteActive(item)
-                      ? "border-primary text-primary"
-                      : "border-white/10 text-white"
+                      ? "border-white/20 bg-white/5 after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-primary"
+                      : "border-white/10"
                   }`}
                 >
                   {item.label}

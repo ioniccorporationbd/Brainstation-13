@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -61,17 +62,31 @@ const slides: SlideItem[] = [
 ];
 
 export default function HeroBannerSlider() {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <section className="relative w-full overflow-hidden bg-[#F7F7F8]">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
         loop
-        speed={900}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        speed={reducedMotion ? 0 : 1000}
+        autoplay={
+          reducedMotion
+            ? false
+            : {
+                delay: 6000,
+                disableOnInteraction: false,
+              }
+        }
         pagination={{
           clickable: true,
           bulletClass: "hero-banner-bullet",
@@ -85,17 +100,17 @@ export default function HeroBannerSlider() {
               <div className="relative mx-auto grid min-h-[650px] w-full max-w-[1400px] grid-cols-1 px-5 pt-[76px] sm:px-8 lg:grid-cols-[51.5%_48.5%] lg:px-10 xl:px-0">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px] lg:pl-[18px]">
-                  <h1 className="max-w-[690px] text-[38px] font-semibold leading-[1.15] tracking-[-0.055em] text-[#0A0A0A] sm:text-[48px] md:text-[58px] lg:text-[62px]">
+                  <h1 className="max-w-[660px] text-balance text-[32px] font-semibold leading-[1.14] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
                     {slide.title}
                   </h1>
 
-                  <p className="mt-[28px] max-w-[735px] text-[18px] font-normal leading-[1.45] text-[#52525B] sm:text-[20px] md:text-[22px]">
+                  <p className="mt-7 max-w-[620px] text-pretty text-[17px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[20px]">
                     {slide.description}
                   </p>
 
                   <Link
                     href={slide.buttonHref}
-                    className="mt-[61px] inline-flex h-[49px] w-fit items-center justify-center rounded-full bg-[#C91F28] px-[30px] text-[16px] font-semibold text-black transition-colors duration-200 hover:bg-[#A71920]"
+                    className="mt-12 inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
                   >
                     {slide.buttonText}
                   </Link>
@@ -116,29 +131,29 @@ export default function HeroBannerSlider() {
                   </div>
 
                   {/* Top Right Stat */}
-                  <div className="absolute left-[456px] top-[112px] z-30 w-[230px] text-center">
+                  <div className="absolute left-[450px] top-[110px] z-30 w-[230px] text-center">
                     <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#0A0A0A]">
                       {slide.statOneNumber}
                     </h3>
 
-                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#52525B]">
+                    <p className="mt-[10px] text-[20px] font-normal leading-[1.15] text-[#52525B]">
                       {slide.statOneText}
                     </p>
                   </div>
 
                   {/* Bottom Left Stat */}
-                  <div className="absolute left-[174px] top-[298px] z-30 w-[255px] text-center">
+                  <div className="absolute left-[172px] top-[300px] z-30 w-[230px] text-center">
                     <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#0A0A0A]">
                       {slide.statTwoNumber}
                     </h3>
 
-                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#52525B]">
+                    <p className="mt-[10px] text-[20px] font-normal leading-[1.15] text-[#52525B]">
                       {slide.statTwoText}
                     </p>
                   </div>
 
                   {/* Bottom Image */}
-                  <div className="absolute left-[390px] top-[246px] z-20 h-[200px] w-[330px] overflow-hidden rounded-[10px] shadow-[8px_8px_0_rgba(0,0,0,0.10)]">
+                  <div className="absolute left-[390px] top-[249px] z-20 h-[200px] w-[330px] overflow-hidden rounded-[10px] shadow-[8px_8px_0_rgba(0,0,0,0.10)]">
                     <img
                       src={HERO_BOTTOM_IMAGE}
                       alt={slide.title}
