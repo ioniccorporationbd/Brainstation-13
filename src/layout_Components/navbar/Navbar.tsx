@@ -126,16 +126,10 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className={`mx-auto flex max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 ${
-            isScrolled ? "h-[82px]" : "h-[98px]"
-          }`}
+          className="mx-auto flex h-14 max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 xl:h-16 2xl:h-20"
         >
           <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-3" aria-label="Magnetic Solution Limited — Home">
-            <span
-              className={`flex items-center justify-center rounded-[12px] bg-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 ${
-                isScrolled ? "h-[54px] px-[9px]" : "h-[64px] px-[11px]"
-              }`}
-            >
+            <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)] transition-all duration-300 xl:h-[56px] xl:px-[8px] 2xl:h-[72px] 2xl:px-[10px]">
               <Image
                 src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Ltd"
@@ -238,7 +232,7 @@ export default function Navbar() {
       >
         <div className="mb-8 flex items-center justify-between">
           <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label="Magnetic Solution Limited — Home">
-            <span className="flex h-[52px] items-center justify-center rounded-[12px] bg-white px-[9px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
+            <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
                 src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Ltd"
