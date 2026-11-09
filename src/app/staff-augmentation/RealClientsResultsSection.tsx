@@ -80,22 +80,22 @@ const caseStudies: CaseStudy[] = [
 
 function CaseStudyCard({ item }: { item: CaseStudy }) {
   return (
-    <article className="min-h-[540px] bg-[#111E40] px-[42px] py-[70px] text-white md:px-[64px]">
-      <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#4fa0d1]">
+    <article className="min-h-[540px] bg-[#0a0a0a] px-[42px] py-[70px] text-white md:px-[64px]">
+      <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
         {item.category}
       </p>
 
-      <h3 className="mt-5 max-w-[560px] text-[34px] font-bold leading-[1.12] tracking-[-0.06em] text-white md:text-[42px]">
+      <h3 className="mt-5 max-w-[560px] text-[34px] font-bold leading-[1.12] tracking-[-0.02em] text-white md:text-[42px]">
         {item.title}
       </h3>
 
-      <p className="mt-8 max-w-[520px] text-[16px] font-bold leading-[1.55] tracking-[-0.03em] text-white/90 md:text-[18px]">
+      <p className="mt-8 max-w-[520px] text-[16px] font-bold leading-[1.55] tracking-[-0.01em] text-white/90 md:text-[18px]">
         {item.description}
       </p>
 
       <div className="mt-[70px] grid max-w-[420px] grid-cols-2 gap-12">
         <div>
-          <h4 className="text-[34px] font-normal leading-none tracking-[-0.055em] text-white">
+          <h4 className="text-[34px] font-normal leading-none tracking-[-0.02em] text-white">
             {item.months}
           </h4>
           <p className="mt-3 text-[12px] font-medium text-white/75">
@@ -104,7 +104,7 @@ function CaseStudyCard({ item }: { item: CaseStudy }) {
         </div>
 
         <div>
-          <h4 className="text-[34px] font-normal leading-none tracking-[-0.055em] text-white">
+          <h4 className="text-[34px] font-normal leading-none tracking-[-0.02em] text-white">
             {item.engineers}
           </h4>
           <p className="mt-3 text-[12px] font-medium text-white/75">
@@ -117,7 +117,7 @@ function CaseStudyCard({ item }: { item: CaseStudy }) {
         {item.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-[#1f426d] px-4 py-2 text-[13px] font-bold leading-none text-white"
+            className="rounded-full bg-[#1a1a1a] px-4 py-2 text-[13px] font-bold leading-none text-white"
           >
             {tag}
           </span>
@@ -129,7 +129,7 @@ function CaseStudyCard({ item }: { item: CaseStudy }) {
 
 export default function RealClientsResultsSection() {
   return (
-    <section className="relative overflow-hidden bg-white text-[#11182f]">
+    <section className="relative overflow-hidden bg-white text-[#0a0a0a]">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left Sticky Side */}
         <div className="relative bg-white">
@@ -144,17 +144,17 @@ export default function RealClientsResultsSection() {
 
             <div className="flex min-h-[50vh] items-center justify-center px-6 py-16 text-center">
               <div>
-                <h2 className="text-[38px] font-normal leading-[1.08] tracking-[-0.065em] text-[#11182f] md:text-[46px]">
+                <h2 className="text-[38px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">
                   Real Clients. Real Results.
                 </h2>
 
-                <p className="mx-auto mt-6 max-w-[420px] text-[15px] font-semibold leading-[1.55] tracking-[-0.03em] text-[#42637a]">
+                <p className="mx-auto mt-6 max-w-[420px] text-[15px] font-semibold leading-[1.55] tracking-[-0.01em] text-[#565656]">
                   Over{" "}
-                  <span className="font-extrabold text-[#11182f]">
+                  <span className="font-extrabold text-[#0a0a0a]">
                     12 million hours
                   </span>{" "}
                   delivered by our augmented tech teams — powering results for{" "}
-                  <span className="font-extrabold text-[#11182f]">
+                  <span className="font-extrabold text-[#0a0a0a]">
                     100+ clients
                   </span>{" "}
                   worldwide.
@@ -165,7 +165,7 @@ export default function RealClientsResultsSection() {
         </div>
 
         {/* Right Swiper Side */}
-        <div className="relative min-h-screen bg-[#111E40]">
+        <div className="relative min-h-screen bg-[#0a0a0a]">
           <Swiper
             modules={[Autoplay, Mousewheel, Pagination]}
             direction="vertical"
@@ -198,7 +198,7 @@ export default function RealClientsResultsSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-30 text-[10px] text-black/25">
@@ -218,7 +218,7 @@ export default function RealClientsResultsSection() {
         .real-results-pagination .swiper-pagination-bullet-active {
           height: 24px;
           border-radius: 999px;
-          background: #4fa0d1;
+          background: #c91f28;
         }
       `}</style>
     </section>

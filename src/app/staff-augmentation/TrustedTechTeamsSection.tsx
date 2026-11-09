@@ -45,11 +45,6 @@ const logos: LogoItem[] = [
     text: "syngenta",
   },
   {
-    name: "Brain Station",
-    text: "BS23",
-    mark: "⬢",
-  },
-  {
     name: "Tech Team",
     text: "TechCorp",
     mark: "◈",
@@ -71,7 +66,7 @@ function LogoCard({ logo }: { logo: LogoItem }) {
         )}
 
         <span
-          className={`font-bold leading-none tracking-[-0.04em] ${
+          className={`font-bold leading-none tracking-[-0.015em] ${
             logo.name === "VEON"
               ? "text-[34px] font-normal tracking-[0.12em]"
               : logo.name === "Sanofi"
@@ -92,10 +87,10 @@ export default function TrustedTechTeamsSection() {
   const repeatedLogos = [...logos, ...logos, ...logos];
 
   return (
-    <section className="relative overflow-hidden bg-[#111E40] px-6 py-[88px] text-white">
+    <section className="relative overflow-hidden bg-[#0a0a0a] px-6 py-[88px] text-white">
       <div className="mx-auto max-w-[1320px]">
         <div className="text-center">
-          <h2 className="text-[24px] font-bold leading-[1.35] tracking-[-0.045em] text-white md:text-[30px]">
+          <h2 className="text-[24px] font-bold leading-[1.35] tracking-[-0.018em] text-white md:text-[30px]">
             Trusted By Fast-Moving Tech Teams <br />
             From Startups to Enterprises
           </h2>
@@ -103,8 +98,8 @@ export default function TrustedTechTeamsSection() {
       </div>
 
       <div className="relative mt-[94px] overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[150px] bg-gradient-to-r from-[#111E40] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[150px] bg-gradient-to-l from-[#111E40] to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[150px] bg-gradient-to-r from-[#0a0a0a] to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[150px] bg-gradient-to-l from-[#0a0a0a] to-transparent" />
 
         <Swiper
           modules={[Autoplay, FreeMode]}
@@ -130,7 +125,7 @@ export default function TrustedTechTeamsSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/35">

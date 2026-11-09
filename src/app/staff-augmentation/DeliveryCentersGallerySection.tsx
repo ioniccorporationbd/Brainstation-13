@@ -55,7 +55,7 @@ const galleryImages: GalleryImage[] = [
 
 function GalleryCard({ image }: { image: GalleryImage }) {
   return (
-    <div className="h-[220px] w-[320px] shrink-0 overflow-hidden bg-[#e5edf5] md:h-[250px] md:w-[360px]">
+    <div className="h-[220px] w-[320px] shrink-0 overflow-hidden bg-[#ececec] md:h-[250px] md:w-[360px]">
       <img
         src={image.src}
         alt={image.alt}
@@ -74,21 +74,21 @@ export default function DeliveryCentersGallerySection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#f4f8fc] py-[92px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-[#ffffff] py-[92px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1120px] px-6 text-center">
-        <h2 className="text-[42px] font-normal leading-[1.08] tracking-[-0.065em] text-[#11182f] md:text-[54px]">
+        <h2 className="text-[42px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[54px]">
           60,000+ SQFT Delivery Centers
         </h2>
 
-        <p className="mx-auto mt-7 max-w-[760px] text-[21px] font-medium leading-[1.42] tracking-[-0.035em] text-[#42637a]">
+        <p className="mx-auto mt-7 max-w-[760px] text-[21px] font-medium leading-[1.42] tracking-[-0.01em] text-[#565656]">
           State-of-the-art facilities equipped with modern infrastructure to
           deliver exceptional results for our clients
         </p>
       </div>
 
       <div className="relative mt-[92px] space-y-[28px]">
-        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[120px] bg-gradient-to-r from-[#f4f8fc] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[120px] bg-gradient-to-l from-[#f4f8fc] to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[120px] bg-gradient-to-r from-[#ffffff] to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[120px] bg-gradient-to-l from-[#ffffff] to-transparent" />
 
         {/* Top gallery: right to left */}
         <Swiper
@@ -142,7 +142,7 @@ export default function DeliveryCentersGallerySection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-30 text-[10px] text-black/25">

@@ -67,7 +67,7 @@ function TalentCardItem({ card }: { card: TalentCard }) {
   const Icon = card.icon;
 
   return (
-    <div className="relative flex h-[410px] w-[520px] shrink-0 flex-col justify-between overflow-hidden rounded-[8px] bg-[#111E40] px-[52px] py-[54px] text-white">
+    <div className="relative flex h-[410px] w-[520px] shrink-0 flex-col justify-between overflow-hidden rounded-[8px] bg-[#0a0a0a] px-[52px] py-[54px] text-white">
       <Icon
         size={150}
         strokeWidth={1.2}
@@ -75,17 +75,17 @@ function TalentCardItem({ card }: { card: TalentCard }) {
       />
 
       <div className="relative z-10">
-        <h3 className="text-[38px] font-bold leading-none tracking-[-0.06em] text-white">
+        <h3 className="text-[38px] font-bold leading-none tracking-[-0.02em] text-white">
           {card.title}
         </h3>
       </div>
 
       <div className="relative z-10">
-        <h4 className="text-[72px] font-light leading-none tracking-[-0.06em] text-white">
+        <h4 className="text-[72px] font-light leading-none tracking-[-0.02em] text-white">
           {card.count}
         </h4>
 
-        <p className="mt-[28px] max-w-[410px] text-[20px] font-semibold leading-[1.42] tracking-[-0.035em] text-white/90">
+        <p className="mt-[28px] max-w-[410px] text-[20px] font-semibold leading-[1.42] tracking-[-0.01em] text-white/90">
           {card.technologies}
         </p>
       </div>
@@ -95,23 +95,23 @@ function TalentCardItem({ card }: { card: TalentCard }) {
 
 export default function FutureReadyTalentSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f4f8fc] px-6 py-[82px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[82px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1420px]">
         <div className="max-w-[720px]">
-          <h2 className="text-[50px] font-normal leading-[1.12] tracking-[-0.07em] text-[#11182f] md:text-[62px]">
+          <h2 className="text-[50px] font-normal leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[62px]">
             Future-Ready Talent Across <br />
             100+ Technologies
           </h2>
 
-          <p className="mt-[34px] text-[22px] font-semibold leading-[1.45] tracking-[-0.035em] text-[#42637a]">
+          <p className="mt-[34px] text-[22px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#565656]">
             AI-Ready. Enterprise-Proven. Fast-Moving.
           </p>
         </div>
       </div>
 
       <div className="relative mt-[92px] overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-[#f4f8fc] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-[#f4f8fc] to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-[#ffffff] to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-[#ffffff] to-transparent" />
 
         <Swiper
           modules={[Autoplay, FreeMode]}
@@ -137,7 +137,7 @@ export default function FutureReadyTalentSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">

@@ -48,11 +48,11 @@ const challenges: Challenge[] = [
 
 export default function CaseStudyOverviewSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[88px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 py-[88px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1120px]">
         {/* Top Case Image */}
         <div className="mx-auto max-w-[860px]">
-          <div className="group relative h-[260px] overflow-hidden rounded-[10px] bg-[#f4f8fc] shadow-[0_18px_55px_rgba(17,30,64,0.10)] md:h-[330px] lg:h-[380px]">
+          <div className="group relative h-[260px] overflow-hidden rounded-[10px] bg-[#ffffff] shadow-[0_18px_55px_rgba(0,0,0,0.10)] md:h-[330px] lg:h-[380px]">
             <Image
               src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1600&auto=format&fit=crop"
               alt="Shwapno ecommerce retail transformation"
@@ -61,14 +61,14 @@ export default function CaseStudyOverviewSection() {
               className="object-cover transition duration-500 group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#111E40]/92 via-[#111E40]/62 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/92 via-[#0a0a0a]/62 to-transparent" />
 
             <div className="absolute left-6 top-6 max-w-[360px] text-white md:left-10 md:top-10">
               <p className="mb-4 inline-flex rounded-full bg-white/12 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
                 Magnetic Solution Limited × Shwapno
               </p>
 
-              <h3 className="text-[24px] font-bold leading-[1.15] tracking-[-0.055em] md:text-[34px]">
+              <h3 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] md:text-[34px]">
                 A Journey Towards Digital Excellence in Retail
               </h3>
 
@@ -79,7 +79,7 @@ export default function CaseStudyOverviewSection() {
 
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <div className="rounded-[10px] bg-white/12 px-4 py-3 backdrop-blur">
-                  <p className="text-[22px] font-bold leading-none text-[#ffb22c]">
+                  <p className="text-[22px] font-bold leading-none text-[#c91f28]">
                     100K+
                   </p>
                   <p className="mt-1 text-[12px] font-bold text-white/85">
@@ -88,7 +88,7 @@ export default function CaseStudyOverviewSection() {
                 </div>
 
                 <div className="rounded-[10px] bg-white/12 px-4 py-3 backdrop-blur">
-                  <p className="text-[22px] font-bold leading-none text-[#ffb22c]">
+                  <p className="text-[22px] font-bold leading-none text-[#c91f28]">
                     39%
                   </p>
                   <p className="mt-1 text-[12px] font-bold text-white/85">
@@ -102,15 +102,15 @@ export default function CaseStudyOverviewSection() {
 
         {/* Overview */}
         <div className="mt-[82px]">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Project Overview
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
             Overview
           </h2>
 
-          <p className="mt-8 max-w-[920px] text-[19px] font-medium leading-[1.75] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
+          <p className="mt-8 max-w-[920px] text-[19px] font-medium leading-[1.75] tracking-[-0.035em] text-[#565656] md:text-[22px]">
             Shwapno, Bangladesh’s largest retail supermarket chain, partnered
             with Magnetic Solution Limited to rebuild its e-commerce platform, enabling a
             seamless, scalable, and hyperlocal digital shopping experience. This
@@ -122,11 +122,11 @@ export default function CaseStudyOverviewSection() {
 
         {/* Business Challenges */}
         <div className="mt-[76px]">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Problem Statement
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
             Business Challenges
           </h2>
 
@@ -137,21 +137,21 @@ export default function CaseStudyOverviewSection() {
               return (
                 <article
                   key={challenge.text}
-                  className="group relative overflow-hidden rounded-[18px] border border-[#dce8f2] bg-[#f4f8fc] px-6 py-6 shadow-[0_12px_36px_rgba(17,30,64,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b7dff4] hover:bg-white hover:shadow-[0_22px_60px_rgba(17,30,64,0.12)]"
+                  className="group relative overflow-hidden rounded-[18px] border border-[#ececec] bg-[#ffffff] px-6 py-6 shadow-[0_12px_36px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03].5 hover:border-[#e9b0b4] hover:bg-white hover:shadow-[0_22px_60px_rgba(0,0,0,0.12)]"
                 >
-                  <div className="pointer-events-none absolute -right-16 -top-16 h-[150px] w-[150px] rounded-full bg-[#4fa0d1]/0 blur-2xl transition-all duration-300 group-hover:bg-[#4fa0d1]/18" />
+                  <div className="pointer-events-none absolute -right-16 -top-16 h-[150px] w-[150px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/18" />
 
                   <div className="relative z-10 flex gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#4fa0d1] ring-1 ring-[#dce8f2] transition duration-300 group-hover:bg-[#4fa0d1] group-hover:text-white">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#c91f28] ring-1 ring-[#ececec] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                       <Icon size={22} strokeWidth={1.8} />
                     </div>
 
                     <div>
-                      <p className="mb-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#4fa0d1]">
+                      <p className="mb-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
                         Challenge {String(index + 1).padStart(2, "0")}
                       </p>
 
-                      <p className="text-[17px] font-semibold leading-[1.6] tracking-[-0.03em] text-[#42637a]">
+                      <p className="text-[17px] font-semibold leading-[1.6] tracking-[-0.01em] text-[#565656]">
                         {challenge.text}
                       </p>
                     </div>
@@ -164,7 +164,7 @@ export default function CaseStudyOverviewSection() {
           <div className="mt-[64px] text-center">
             <Link
               href="/schedule-a-call"
-              className="inline-flex rounded-full bg-[#ffab2e] px-8 py-4 text-[17px] font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffc15a] hover:shadow-[0_14px_34px_rgba(255,171,46,0.32)]"
+              className="inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[17px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
             >
               Schedule a Call
             </Link>
@@ -173,7 +173,7 @@ export default function CaseStudyOverviewSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">

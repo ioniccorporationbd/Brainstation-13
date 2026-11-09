@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import StandardPage, { type PageData } from "@/components/resource-kit/StandardPage";
 
 export const metadata: Metadata = {
-  title: "Safety at Sea Case Study | Brain Station 23",
+  title: "Safety at Sea Case Study | Magnetic Solution Limited",
   description: "An IoT boat-safety platform giving crews and authorities real-time visibility to prevent and respond to incidents at sea.",
 };
 

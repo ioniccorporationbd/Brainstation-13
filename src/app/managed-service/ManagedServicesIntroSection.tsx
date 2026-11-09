@@ -7,11 +7,11 @@ export default function ManagedServicesIntroSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[86px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 py-[86px] text-[#0a0a0a]">
       <div className="mx-auto grid max-w-[1220px] grid-cols-1 items-center gap-[80px] lg:grid-cols-[0.95fr_1fr]">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start">
-          <div className="h-[520px] w-full max-w-[520px] overflow-hidden rounded-[8px] bg-[#f4f8fc]">
+          <div className="h-[520px] w-full max-w-[520px] overflow-hidden rounded-[8px] bg-[#ffffff]">
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
               alt="Managed services software delivery team planning"
@@ -22,12 +22,12 @@ export default function ManagedServicesIntroSection() {
 
         {/* Right Content */}
         <div>
-          <h2 className="max-w-[560px] text-[48px] font-normal leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[58px]">
+          <h2 className="max-w-[560px] text-[48px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[58px]">
             What Are Managed <br />
             Services?
           </h2>
 
-          <p className="mt-[28px] max-w-[650px] text-[22px] font-medium leading-[1.42] tracking-[-0.04em] text-[#6b7280]">
+          <p className="mt-[28px] max-w-[650px] text-[22px] font-medium leading-[1.42] tracking-[-0.015em] text-[#6b7280]">
             Managed Services offer a fully managed, outcome-driven software
             delivery model. We provide you with a dedicated team of project
             managers, developers, QA engineers, DevOps, business analysts, and
@@ -38,9 +38,9 @@ export default function ManagedServicesIntroSection() {
             {points.map((point) => (
               <li
                 key={point}
-                className="flex items-start gap-4 text-[20px] font-medium leading-[1.35] tracking-[-0.035em] text-[#050b18]"
+                className="flex items-start gap-4 text-[20px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]"
               >
-                <span className="mt-[10px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#050b18]" />
+                <span className="mt-[10px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#0a0a0a]" />
                 <span>{point}</span>
               </li>
             ))}
@@ -50,7 +50,7 @@ export default function ManagedServicesIntroSection() {
 
       {/* Chat Button */}
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">

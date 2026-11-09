@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import StandardPage, { type PageData } from "@/components/resource-kit/StandardPage";
 
 export const metadata: Metadata = {
-  title: "Digital Wallet Case Study | Brain Station 23",
+  title: "Digital Wallet Case Study | Magnetic Solution Limited",
   description: "A compliant digital wallet platform that brought secure everyday financial services to underbanked communities at scale.",
 };
 

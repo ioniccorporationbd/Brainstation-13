@@ -62,38 +62,38 @@ const comparisonRows: ComparisonRow[] = [
 
 export default function MvpTraditionalVsAiSection() {
   return (
-    <section className="relative overflow-hidden bg-[#111E40] px-6 py-[104px] text-white">
+    <section className="relative overflow-hidden bg-[#0a0a0a] px-6 py-[104px] text-white">
       <div className="mx-auto max-w-[1180px]">
         <div className="mx-auto max-w-[900px] text-center">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             AI-Assisted MVP Delivery
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.1] tracking-[-0.075em] text-white md:text-[56px]">
+          <h2 className="text-[42px] font-bold leading-[1.1] tracking-[-0.02em] text-white md:text-[56px]">
             Traditional Approach vs AI-Assisted Approach
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[820px] text-[18px] font-semibold leading-[1.6] tracking-[-0.035em] text-white/90 md:text-[21px]">
+          <p className="mx-auto mt-7 max-w-[820px] text-[18px] font-semibold leading-[1.6] tracking-[-0.01em] text-white/90 md:text-[21px]">
             Discover how AI-powered solutions are revolutionizing traditional
             business processes across multiple aspects and transforming the way
             we work.
           </p>
         </div>
 
-        <div className="mt-[78px] overflow-hidden rounded-[10px] bg-[#223f5c] px-6 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.22)] md:px-10 md:py-12">
+        <div className="mt-[78px] overflow-hidden rounded-[10px] bg-[#1a1a1a] px-6 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.22)] md:px-10 md:py-12">
           {/* Desktop Table */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-[1fr_1.08fr_1.08fr] gap-10 border-b border-white/14 pb-8">
-              <h3 className="text-[20px] font-bold leading-none tracking-[-0.035em] text-white">
+              <h3 className="text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
                 Aspect
               </h3>
 
-              <h3 className="text-[20px] font-bold leading-none tracking-[-0.035em] text-white">
+              <h3 className="text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
                 Traditional Approach
               </h3>
 
-              <h3 className="flex items-center gap-3 text-[20px] font-bold leading-none tracking-[-0.035em] text-white">
-                <Bot size={22} className="text-[#8bd3ff]" />
+              <h3 className="flex items-center gap-3 text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
+                <Bot size={22} className="text-[#f87171]" />
                 AI-Assisted Approach
               </h3>
             </div>
@@ -112,16 +112,16 @@ export default function MvpTraditionalVsAiSection() {
                       strokeWidth={1.8}
                       className="mt-1 shrink-0 text-white"
                     />
-                    <h4 className="text-[18px] font-bold leading-[1.45] tracking-[-0.035em] text-white">
+                    <h4 className="text-[18px] font-bold leading-[1.45] tracking-[-0.01em] text-white">
                       {row.aspect}
                     </h4>
                   </div>
 
-                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.035em] text-white/92">
+                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.01em] text-white/92">
                     {row.traditional}
                   </p>
 
-                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.035em] text-white/92">
+                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.01em] text-white/92">
                     {row.ai}
                   </p>
                 </div>
@@ -137,18 +137,18 @@ export default function MvpTraditionalVsAiSection() {
               return (
                 <article
                   key={row.aspect}
-                  className="rounded-[8px] border border-white/10 bg-[#1b3856] p-6"
+                  className="rounded-[8px] border border-white/10 bg-[#141414] p-6"
                 >
                   <div className="flex items-center gap-3">
-                    <Icon size={24} className="text-[#8bd3ff]" />
-                    <h3 className="text-[21px] font-bold leading-[1.25] tracking-[-0.045em] text-white">
+                    <Icon size={24} className="text-[#f87171]" />
+                    <h3 className="text-[21px] font-bold leading-[1.25] tracking-[-0.018em] text-white">
                       {row.aspect}
                     </h3>
                   </div>
 
                   <div className="mt-6 space-y-5">
                     <div>
-                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#8bd3ff]">
+                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#f87171]">
                         Traditional Approach
                       </p>
                       <p className="mt-2 text-[16px] font-semibold leading-[1.55] text-white/90">
@@ -157,7 +157,7 @@ export default function MvpTraditionalVsAiSection() {
                     </div>
 
                     <div>
-                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#ffb22c]">
+                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
                         AI-Assisted Approach
                       </p>
                       <p className="mt-2 text-[16px] font-semibold leading-[1.55] text-white/90">
@@ -173,7 +173,7 @@ export default function MvpTraditionalVsAiSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">

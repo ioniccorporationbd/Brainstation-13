@@ -47,13 +47,13 @@ const partnerPoints: PartnerPoint[] = [
 
 export default function TechnologyConsultingPartnerSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f4f8fc] px-6 py-[96px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[96px] text-[#0a0a0a]">
       {/* Soft Circle Background */}
       <div className="pointer-events-none absolute -left-[360px] top-[-40px] hidden h-[820px] w-[820px] rounded-full lg:block">
         {Array.from({ length: 48 }).map((_, index) => (
           <span
             key={index}
-            className="absolute left-1/2 top-1/2 rounded-full border border-[#74c4ec]/20"
+            className="absolute left-1/2 top-1/2 rounded-full border border-[#c91f28]/20"
             style={{
               width: `${820 - index * 17}px`,
               height: `${820 - index * 17}px`,
@@ -67,17 +67,17 @@ export default function TechnologyConsultingPartnerSection() {
         {/* Top Content */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
-            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
               Consulting Partnership
             </p>
 
-            <h2 className="max-w-[620px] text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+            <h2 className="max-w-[620px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
               Why Partner with Magnetic Solution Limited?
             </h2>
           </div>
 
           <div className="lg:pb-2">
-            <p className="max-w-[690px] text-left text-[19px] font-medium leading-[1.65] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
+            <p className="max-w-[690px] text-left text-[19px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[21px]">
               We help organizations make better technology decisions with
               practical guidance, proven delivery models, and enterprise-ready
               consulting support from strategy to execution.
@@ -93,33 +93,33 @@ export default function TechnologyConsultingPartnerSection() {
             return (
               <article
                 key={item.title}
-                className="group relative min-h-[300px] overflow-hidden rounded-[22px] border border-[#dce8f2] bg-white px-8 py-9 shadow-[0_16px_45px_rgba(17,30,64,0.06)] transition-all duration-300 hover:-translate-y-2 hover:border-[#b7dff4] hover:shadow-[0_28px_80px_rgba(17,30,64,0.14)]"
+                className="group relative min-h-[300px] overflow-hidden rounded-[22px] border border-[#ececec] bg-white px-8 py-9 shadow-[0_16px_45px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-[#e9b0b4] hover:shadow-[0_28px_80px_rgba(0,0,0,0.14)]"
               >
                 {/* Hover Glow */}
-                <div className="pointer-events-none absolute -right-20 -top-20 h-[210px] w-[210px] rounded-full bg-[#4fa0d1]/10 blur-2xl transition-all duration-300 group-hover:bg-[#4fa0d1]/25" />
-                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[210px] w-[210px] rounded-full bg-[#ffb22c]/0 blur-2xl transition-all duration-300 group-hover:bg-[#ffb22c]/15" />
+                <div className="pointer-events-none absolute -right-20 -top-20 h-[210px] w-[210px] rounded-full bg-[#c91f28]/10 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/25" />
+                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[210px] w-[210px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/15" />
 
                 <div className="relative z-10">
                   <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#f4f8fc] text-[#4fa0d1] ring-1 ring-[#dce8f2] transition-all duration-300 group-hover:bg-[#4fa0d1] group-hover:text-white group-hover:ring-[#4fa0d1]">
+                    <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#ffffff] text-[#c91f28] ring-1 ring-[#ececec] transition-all duration-300 group-hover:bg-[#c91f28] group-hover:text-white group-hover:ring-[#c91f28]">
                       <Icon size={30} strokeWidth={1.7} />
                     </div>
 
-                    <span className="text-[18px] font-bold leading-none text-[#111E40]/20 transition-all duration-300 group-hover:text-[#ffab2e]">
+                    <span className="text-[18px] font-bold leading-none text-[#0a0a0a]/20 transition-all duration-300 group-hover:text-[#c91f28]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 
-                  <h3 className="mt-10 text-left text-[28px] font-bold leading-[1.15] tracking-[-0.06em] text-[#050b18] md:text-[32px]">
+                  <h3 className="mt-10 text-left text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-6 text-left text-[17px] font-medium leading-[1.65] tracking-[-0.03em] text-[#42637a]">
+                  <p className="mt-6 text-left text-[17px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656]">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#4fa0d1] transition-all duration-300 group-hover:w-full" />
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#c91f28] transition-all duration-300 group-hover:w-full" />
               </article>
             );
           })}
@@ -127,7 +127,7 @@ export default function TechnologyConsultingPartnerSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">

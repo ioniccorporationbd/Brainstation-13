@@ -32,21 +32,21 @@ const steps: StepItem[] = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[980px]">
         <div>
-          <h2 className="text-[40px] font-normal leading-[1.12] tracking-[-0.07em] text-[#11182f] md:text-[48px]">
+          <h2 className="text-[40px] font-normal leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">
             How It Works — <br />
             Your Engineers in Just 4 Steps
           </h2>
 
-          <p className="mt-8 text-[19px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a]">
+          <p className="mt-8 text-[19px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656]">
             From First Call to Onboarded Engineers in Under 2 Weeks
           </p>
         </div>
 
         <div className="relative mx-auto mt-[82px] max-w-[760px]">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#8fc5eb] md:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#f87171] md:block" />
 
           <div className="space-y-[18px] md:space-y-0">
             {steps.map((step, index) => {
@@ -59,7 +59,7 @@ export default function HowItWorksSection() {
                     isLeft ? "" : ""
                   }`}
                 >
-                  <div className="absolute left-1/2 top-0 hidden h-[14px] w-[14px] -translate-x-1/2 rounded-full border-2 border-[#63aee0] bg-white md:block" />
+                  <div className="absolute left-1/2 top-0 hidden h-[14px] w-[14px] -translate-x-1/2 rounded-full border-2 border-[#c91f28] bg-white md:block" />
 
                   <div
                     className={`rounded-[6px] p-4 md:p-0 ${
@@ -70,11 +70,11 @@ export default function HowItWorksSection() {
                   >
                     {isLeft && (
                       <div>
-                        <h3 className="text-[28px] font-normal leading-[1.1] tracking-[-0.06em] text-black md:text-[34px]">
+                        <h3 className="text-[28px] font-normal leading-[1.1] tracking-[-0.02em] text-black md:text-[34px]">
                           {step.title}
                         </h3>
 
-                        <p className="mt-8 text-[17px] font-semibold leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[19px]">
+                        <p className="mt-8 text-[17px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#565656] md:text-[19px]">
                           {step.description}
                         </p>
                       </div>
@@ -82,11 +82,11 @@ export default function HowItWorksSection() {
 
                     {!isLeft && (
                       <div>
-                        <h3 className="text-[28px] font-normal leading-[1.1] tracking-[-0.06em] text-black md:text-[34px]">
+                        <h3 className="text-[28px] font-normal leading-[1.1] tracking-[-0.02em] text-black md:text-[34px]">
                           {step.title}
                         </h3>
 
-                        <p className="mt-8 max-w-[360px] text-[17px] font-semibold leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[19px]">
+                        <p className="mt-8 max-w-[360px] text-[17px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#565656] md:text-[19px]">
                           {step.description}
                         </p>
                       </div>
@@ -94,7 +94,7 @@ export default function HowItWorksSection() {
                   </div>
 
                   {index === steps.length - 1 && (
-                    <div className="absolute bottom-0 left-1/2 hidden h-[14px] w-[14px] -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-[#63aee0] bg-white md:block" />
+                    <div className="absolute bottom-0 left-1/2 hidden h-[14px] w-[14px] -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-[#c91f28] bg-white md:block" />
                   )}
                 </div>
               );
@@ -104,7 +104,7 @@ export default function HowItWorksSection() {
           <div className="mt-[34px] flex justify-center">
             <Link
               href="/contact-us"
-              className="inline-flex rounded-full bg-[#ffab2e] px-7 py-3.5 text-[14px] font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffc15a] hover:shadow-[0_12px_28px_rgba(255,171,46,0.30)]"
+              className="inline-flex rounded-full bg-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_12px_28px_rgba(201,31,40,0.30)]"
             >
               Send Me Profiles
             </Link>
@@ -113,7 +113,7 @@ export default function HowItWorksSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">

@@ -11,9 +11,9 @@ import {
 } from "@/components/resource-kit/ui";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Brain Station 23",
+  title: "Case Studies | Magnetic Solution Limited",
   description:
-    "Real projects, real outcomes. Explore how Brain Station 23 helped clients across fintech, retail, health and more build and scale technology.",
+    "Real projects, real outcomes. Explore how Magnetic Solution Limited helped clients across fintech, retail, health and more build and scale technology.",
 };
 
 const caseStudies = [
@@ -104,7 +104,7 @@ export default function CaseStudiesPage() {
             <Link
               key={item.title}
               href="/case-study"
-              className="group flex flex-col overflow-hidden rounded-[14px] border border-[#e6edf5] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(17,30,64,0.10)]"
+              className="group flex flex-col overflow-hidden rounded-[14px] border border-[#ececec] bg-white transition duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_22px_50px_rgba(0,0,0,0.10)]"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -112,22 +112,22 @@ export default function CaseStudiesPage() {
                   alt={item.title}
                   className="h-[210px] w-full object-cover transition duration-700 group-hover:scale-[1.05]"
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[12px] font-bold text-[#3f93cf]">
+                <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[12px] font-bold text-[#c91f28]">
                   {item.category}
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-7">
-                <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.03em] text-[#050b18]">
+                <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {item.title}
                 </h3>
-                <p className="mt-3 flex-1 text-[15px] leading-[1.55] text-[#5a6b7d]">
+                <p className="mt-3 flex-1 text-[15px] leading-[1.55] text-[#565656]">
                   {item.excerpt}
                 </p>
-                <div className="mt-5 flex items-center justify-between border-t border-[#eef2f7] pt-4">
-                  <span className="text-[15px] font-bold text-[#2d8fca]">
+                <div className="mt-5 flex items-center justify-between border-t border-[#f7f7f8] pt-4">
+                  <span className="text-[15px] font-bold text-[#c91f28]">
                     {item.metric}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 text-[14px] font-bold text-[#3f93cf] transition group-hover:gap-3">
+                  <span className="inline-flex items-center gap-1.5 text-[14px] font-bold text-[#c91f28] transition group-hover:gap-3">
                     View
                     <ArrowRight size={15} strokeWidth={2.2} />
                   </span>

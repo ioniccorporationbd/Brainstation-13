@@ -20,22 +20,22 @@ export function ResourceHero({
   imageAlt: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto max-w-[920px] text-center">
-          <span className="inline-flex rounded-[8px] bg-[#f1f6fb] px-5 py-2 text-[16px] font-bold tracking-[-0.03em] text-[#3f93cf]">
+          <span className="inline-flex rounded-[8px] bg-[#f7f7f8] px-5 py-2 text-[16px] font-bold tracking-[-0.03em] text-[#c91f28]">
             {eyebrow}
           </span>
-          <h1 className="mt-7 text-[42px] font-medium leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[58px]">
+          <h1 className="mt-7 text-[42px] font-medium leading-[1.08] tracking-[-0.07em] text-[#0a0a0a] md:text-[58px]">
             {title}
           </h1>
-          <p className="mx-auto mt-7 max-w-[860px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
+          <p className="mx-auto mt-7 max-w-[860px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#565656] md:text-[22px]">
             {description}
           </p>
         </div>
 
         <div className="mx-auto mt-[82px] max-w-[1220px]">
-          <div className="group overflow-hidden rounded-[8px] bg-[#111E40] shadow-[0_22px_70px_rgba(17,30,64,0.10)]">
+          <div className="group overflow-hidden rounded-[8px] bg-[#0a0a0a] shadow-[0_22px_70px_rgba(0,0,0,0.10)]">
             <img
               src={image}
               alt={imageAlt}
@@ -70,19 +70,19 @@ export function SectionHeader({
       }
     >
       {eyebrow ? (
-        <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#3f93cf]">
+        <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
           {eyebrow}
         </p>
       ) : null}
       <h2
-        className={`text-[34px] font-medium leading-[1.1] tracking-[-0.06em] text-[#050b18] md:text-[46px] ${
+        className={`text-[34px] font-medium leading-[1.1] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] ${
           eyebrow ? "mt-3" : ""
         }`}
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 text-[17px] font-medium leading-[1.5] tracking-[-0.035em] text-[#42637a] md:text-[19px]">
+        <p className="mt-5 text-[17px] font-medium leading-[1.5] tracking-[-0.035em] text-[#565656] md:text-[19px]">
           {description}
         </p>
       ) : null}
@@ -118,15 +118,15 @@ export function FeatureGrid({
         return (
           <article
             key={item.title}
-            className="group rounded-[14px] border border-[#e6edf5] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-[#cfe0ef] hover:shadow-[0_22px_50px_rgba(17,30,64,0.10)]"
+            className="group rounded-[14px] border border-[#ececec] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-[#ececec] hover:shadow-[0_22px_50px_rgba(0,0,0,0.10)]"
           >
-            <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#eef6fc] text-[#3f93cf] transition duration-300 group-hover:bg-[#fff3dd] group-hover:text-[#ffab2e]">
+            <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#ffffff] text-[#c91f28] transition duration-300 group-hover:bg-[#fdecec] group-hover:text-[#c91f28]">
               <Icon size={26} strokeWidth={1.7} />
             </div>
-            <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#050b18]">
+            <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a]">
               {item.title}
             </h3>
-            <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#5a6b7d]">
+            <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#565656]">
               {item.description}
             </p>
           </article>
@@ -148,20 +148,20 @@ export function StatBand({
 }) {
   const dark = tone === "dark";
   return (
-    <section className={dark ? "bg-[#111E40]" : "bg-[#f4f8fc]"}>
+    <section className={dark ? "bg-[#0a0a0a]" : "bg-[#ffffff]"}>
       <div className="mx-auto grid max-w-[1180px] grid-cols-2 gap-y-10 px-6 py-[70px] md:grid-cols-4">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">
             <p
-              className={`text-[44px] font-light leading-none tracking-[-0.05em] md:text-[58px] ${
-                dark ? "text-[#4fa0d1]" : "text-[#2d8fca]"
+              className={`text-[44px] font-light leading-none tracking-[-0.02em] md:text-[58px] ${
+                dark ? "text-[#c91f28]" : "text-[#c91f28]"
               }`}
             >
               {stat.value}
             </p>
             <p
               className={`mt-4 text-[14px] font-medium leading-[1.4] md:text-[16px] ${
-                dark ? "text-white/70" : "text-[#42637a]"
+                dark ? "text-white/70" : "text-[#565656]"
               }`}
             >
               {stat.label}
@@ -196,7 +196,7 @@ export function SplitBlock({
   return (
     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
       <div
-        className={`group overflow-hidden rounded-[14px] bg-[#f4f8fc] shadow-[0_22px_60px_rgba(17,30,64,0.08)] ${
+        className={`group overflow-hidden rounded-[14px] bg-[#ffffff] shadow-[0_22px_60px_rgba(0,0,0,0.08)] ${
           reverse ? "lg:order-2" : ""
         }`}
       >
@@ -209,12 +209,12 @@ export function SplitBlock({
 
       <div className={reverse ? "lg:order-1" : ""}>
         {eyebrow ? (
-          <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#3f93cf]">
+          <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
             {eyebrow}
           </p>
         ) : null}
         <h2
-          className={`text-[30px] font-medium leading-[1.14] tracking-[-0.05em] text-[#050b18] md:text-[40px] ${
+          className={`text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px] ${
             eyebrow ? "mt-3" : ""
           }`}
         >
@@ -224,7 +224,7 @@ export function SplitBlock({
           {paragraphs.map((paragraph) => (
             <p
               key={paragraph}
-              className="text-[16px] font-normal leading-[1.6] text-[#5a6b7d] md:text-[17px]"
+              className="text-[16px] font-normal leading-[1.6] text-[#565656] md:text-[17px]"
             >
               {paragraph}
             </p>
@@ -234,7 +234,7 @@ export function SplitBlock({
           <ul className="mt-7 space-y-3">
             {bullets.map((bullet) => (
               <li key={bullet} className="flex items-start gap-3">
-                <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#eef6fc] text-[#3f93cf]">
+                <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ffffff] text-[#c91f28]">
                   <Check size={13} strokeWidth={3} />
                 </span>
                 <span className="text-[15px] font-medium leading-[1.5] text-[#374151] md:text-[16px]">
@@ -262,7 +262,7 @@ export function LogoRow({
       {logos.map((logo) => (
         <div
           key={logo.src}
-          className="flex h-[110px] items-center justify-center rounded-[12px] border border-[#e6edf5] bg-white px-6 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(17,30,64,0.08)]"
+          className="flex h-[110px] items-center justify-center rounded-[12px] border border-[#ececec] bg-white px-6 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]"
         >
           <Image
             src={logo.src}
@@ -293,8 +293,8 @@ export function CtaBanner({
 }) {
   return (
     <section className="bg-white px-6 pb-[110px] pt-[10px]">
-      <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#111E40] px-8 py-[70px] text-center md:px-16">
-        <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.05em] text-white md:text-[44px]">
+      <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
+        <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px]">
           {title}
         </h2>
         <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[19px]">
@@ -303,7 +303,7 @@ export function CtaBanner({
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href={primary.href}
-            className="inline-flex items-center gap-2 rounded-full bg-[#ffab2e] px-8 py-4 text-[15px] font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffc15a] hover:shadow-[0_16px_38px_rgba(255,171,46,0.35)]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#a71920] hover:shadow-[0_16px_38px_rgba(201,31,40,0.30)]"
           >
             {primary.label}
             <ArrowRight size={18} strokeWidth={2.2} />

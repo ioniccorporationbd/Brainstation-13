@@ -111,20 +111,20 @@ function InfoCard({
   index: number;
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-[18px] border border-[#dce8f2] bg-[#f4f8fc] px-6 py-6 shadow-[0_12px_36px_rgba(17,30,64,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b7dff4] hover:bg-white hover:shadow-[0_22px_60px_rgba(17,30,64,0.12)]">
-      <div className="pointer-events-none absolute -right-16 -top-16 h-[150px] w-[150px] rounded-full bg-[#4fa0d1]/0 blur-2xl transition-all duration-300 group-hover:bg-[#4fa0d1]/18" />
+    <article className="group relative overflow-hidden rounded-[18px] border border-[#ececec] bg-[#ffffff] px-6 py-6 shadow-[0_12px_36px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03].5 hover:border-[#e9b0b4] hover:bg-white hover:shadow-[0_22px_60px_rgba(0,0,0,0.12)]">
+      <div className="pointer-events-none absolute -right-16 -top-16 h-[150px] w-[150px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/18" />
 
       <div className="relative z-10 flex gap-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#4fa0d1] ring-1 ring-[#dce8f2] transition duration-300 group-hover:bg-[#4fa0d1] group-hover:text-white">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#c91f28] ring-1 ring-[#ececec] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
           <Icon size={22} strokeWidth={1.8} />
         </div>
 
         <div>
-          <p className="mb-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#4fa0d1]">
+          <p className="mb-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
             Item {String(index + 1).padStart(2, "0")}
           </p>
 
-          <p className="text-[17px] font-semibold leading-[1.6] tracking-[-0.03em] text-[#42637a]">
+          <p className="text-[17px] font-semibold leading-[1.6] tracking-[-0.01em] text-[#565656]">
             {text}
           </p>
         </div>
@@ -135,19 +135,19 @@ function InfoCard({
 
 export default function CaseStudySolutionImpactSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1120px]">
         {/* Solution Provided */}
         <div>
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Delivery Scope
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
             Solution Provided
           </h2>
 
-          <p className="mt-7 max-w-[900px] text-[19px] font-medium leading-[1.7] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
+          <p className="mt-7 max-w-[900px] text-[19px] font-medium leading-[1.7] tracking-[-0.035em] text-[#565656] md:text-[21px]">
             Magnetic Solution Limited engineered a scalable, hyperlocal, and
             customer-focused e-commerce ecosystem for Shwapno with advanced
             search, personalization, inventory synchronization, fulfillment
@@ -168,11 +168,11 @@ export default function CaseStudySolutionImpactSection() {
 
         {/* Impact */}
         <div className="mt-[92px]">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Business Results
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[56px]">
+          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
             Impact
           </h2>
 
@@ -190,7 +190,7 @@ export default function CaseStudySolutionImpactSection() {
 
         {/* Impact Visual */}
         <div className="mt-[76px]">
-          <div className="group relative mx-auto h-[280px] max-w-[760px] overflow-hidden rounded-[10px] bg-[#f4f8fc] shadow-[0_18px_55px_rgba(17,30,64,0.08)] md:h-[340px]">
+          <div className="group relative mx-auto h-[280px] max-w-[760px] overflow-hidden rounded-[10px] bg-[#ffffff] shadow-[0_18px_55px_rgba(0,0,0,0.08)] md:h-[340px]">
             <Image
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop"
               alt="E-commerce impact analytics dashboard"
@@ -203,36 +203,36 @@ export default function CaseStudySolutionImpactSection() {
 
             <div className="absolute inset-0 flex items-center justify-center px-6">
               <div className="grid w-full max-w-[660px] grid-cols-1 gap-4 sm:grid-cols-3">
-                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(17,30,64,0.10)]">
-                  <p className="text-[30px] font-bold leading-none text-[#4fa0d1]">
+                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(0,0,0,0.10)]">
+                  <p className="text-[30px] font-bold leading-none text-[#c91f28]">
                     39%
                   </p>
-                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#42637a]">
+                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#565656]">
                     Growth in app rating
                   </p>
                 </div>
 
-                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(17,30,64,0.10)]">
-                  <p className="text-[30px] font-bold leading-none text-[#ffab2e]">
+                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(0,0,0,0.10)]">
+                  <p className="text-[30px] font-bold leading-none text-[#c91f28]">
                     75%
                   </p>
-                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#42637a]">
+                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#565656]">
                     Organic search traffic
                   </p>
                 </div>
 
-                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(17,30,64,0.10)]">
-                  <p className="text-[30px] font-bold leading-none text-[#4fa0d1]">
+                <div className="rounded-[16px] bg-white/90 px-5 py-5 text-center shadow-[0_12px_34px_rgba(0,0,0,0.10)]">
+                  <p className="text-[30px] font-bold leading-none text-[#c91f28]">
                     100K+
                   </p>
-                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#42637a]">
+                  <p className="mt-2 text-[13px] font-bold leading-[1.35] text-[#565656]">
                     App downloads
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-[#ff3c65] px-6 py-2 text-[13px] font-bold text-white">
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-[#c91f28] px-6 py-2 text-[13px] font-bold text-white">
               Impact Delivered in 4 Months
             </div>
           </div>
@@ -240,11 +240,11 @@ export default function CaseStudySolutionImpactSection() {
 
         {/* CTA */}
         <div className="mt-[76px] text-center">
-          <h2 className="mx-auto max-w-[900px] text-[34px] font-bold leading-[1.18] tracking-[-0.065em] text-[#050b18] md:text-[44px]">
+          <h2 className="mx-auto max-w-[900px] text-[34px] font-bold leading-[1.18] tracking-[-0.065em] text-[#0a0a0a] md:text-[44px]">
             Get the Perfect E-commerce System for your Business
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[850px] text-[18px] font-medium leading-[1.65] tracking-[-0.035em] text-[#42637a] md:text-[20px]">
+          <p className="mx-auto mt-7 max-w-[850px] text-[18px] font-medium leading-[1.65] tracking-[-0.035em] text-[#565656] md:text-[20px]">
             Transform your retail business with Magnetic Solution Limited’s expertise in
             scalable e-commerce development and hyperlocal digital retail
             solutions. Let us help you deliver personalized, efficient, and
@@ -254,7 +254,7 @@ export default function CaseStudySolutionImpactSection() {
 
           <Link
             href="/schedule-a-call"
-            className="mt-10 inline-flex rounded-full bg-[#ffab2e] px-8 py-4 text-[17px] font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#ffc15a] hover:shadow-[0_14px_34px_rgba(255,171,46,0.32)]"
+            className="mt-10 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[17px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
           >
             Schedule a Call
           </Link>
@@ -262,7 +262,7 @@ export default function CaseStudySolutionImpactSection() {
       </div>
 
       <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
+        <span className="text-2xl text-[#c91f28]">☁</span>
       </button>
 
       <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
