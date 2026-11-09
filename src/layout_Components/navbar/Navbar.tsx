@@ -128,7 +128,7 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={closeAll}
-          className="absolute left-[70px] top-1/2 z-30 flex h-[60px] -translate-y-1/2 items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[72px] 2xl:h-[84px]"
+          className="absolute left-[120px] top-0 z-30 flex h-[76px] items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[88px] 2xl:h-[100px]"
           aria-label="Magnetic Solution Limited — Home"
         >
           <Image
@@ -137,7 +137,7 @@ export default function Navbar() {
             width={190}
             height={198}
             priority
-            className="h-full w-auto object-contain"
+            className="h-[80%] w-auto object-contain"
           />
         </Link>
         <nav
