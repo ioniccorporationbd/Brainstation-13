@@ -108,7 +108,7 @@ export default function Navbar() {
     pathname === item.href ||
     (item.href !== "/" && !!pathname && pathname.startsWith(`${item.href}/`));
 
-  // Shared link styling: brand-red hover colour + animated underline reveal.
+  // Shared link styling: animated brand-red underline reveal (text colour stays white on hover).
   const linkBase =
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
     "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
@@ -171,7 +171,7 @@ export default function Navbar() {
                   className={`group flex items-center gap-[7px] ${linkBase} ${
                     active
                       ? "text-white after:scale-x-100"
-                      : "text-white hover:text-primary hover:after:scale-x-100"
+                      : "text-white hover:after:scale-x-100"
                   }`}
                 >
                   {item.label}
@@ -192,7 +192,7 @@ export default function Navbar() {
                   className={`${linkBase} ${
                     active
                       ? "text-white after:scale-x-100"
-                      : "text-white hover:text-primary hover:after:scale-x-100"
+                      : "text-white hover:after:scale-x-100"
                   }`}
                 >
                   {item.label}
