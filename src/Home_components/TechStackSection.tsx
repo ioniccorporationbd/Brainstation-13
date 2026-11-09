@@ -7,11 +7,11 @@ const BOTTOM_TECHS = ['WordPress', 'iOS', 'JavaScript', 'C++'];
 
 export default function TechStackSection() {
   return (
-    <section className="w-full overflow-hidden bg-[#11182b] py-24 md:py-28">
+    <section className="w-full overflow-hidden bg-[#0A0A0A] py-24 md:py-28">
       <div className="mx-auto max-w-[1440px] px-4">
         <div className="text-center">
           <h2 className="text-[38px] font-normal leading-tight tracking-[-0.03em] text-white md:text-[52px]">
-            <span className="font-semibold text-[#ffb32c]">Yes!</span>{' '}
+            <span className="font-semibold text-[#C91F28]">Yes!</span>{' '}
             We cover your tech stack.
           </h2>
 
@@ -26,7 +26,7 @@ export default function TechStackSection() {
               {[...TOP_TECHS, ...TOP_TECHS, ...TOP_TECHS].map((item, index) => (
                 <span
                   key={`${item}-${index}`}
-                  className="shrink-0 text-[42px] font-semibold leading-none tracking-[-0.03em] text-[#e8eef8] md:text-[56px]"
+                  className="shrink-0 text-[42px] font-semibold leading-none tracking-[-0.03em] text-[#EDEDEF] md:text-[56px]"
                 >
                   {item}
                 </span>
@@ -39,7 +39,7 @@ export default function TechStackSection() {
               {[...BOTTOM_TECHS, ...BOTTOM_TECHS, ...BOTTOM_TECHS].map((item, index) => (
                 <span
                   key={`${item}-${index}`}
-                  className="shrink-0 text-[42px] font-semibold leading-none tracking-[-0.03em] text-[#e8eef8] md:text-[56px]"
+                  className="shrink-0 text-[42px] font-semibold leading-none tracking-[-0.03em] text-[#EDEDEF] md:text-[56px]"
                 >
                   {item}
                 </span>

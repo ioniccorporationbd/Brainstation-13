@@ -27,7 +27,7 @@ export default function AboutSection() {
             </div>
             {/* Play Button Overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-12 h-12 bg-sky-500/80 hover:bg-sky-500 text-white rounded-full flex items-center justify-center shadow-md transition-all group-hover:scale-110" aria-label="Play video">
+              <button className="w-12 h-12 bg-primary/80 hover:bg-primary text-white rounded-full flex items-center justify-center shadow-md transition-all group-hover:scale-110" aria-label="Play video">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5 ml-0.5">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -54,11 +54,11 @@ export default function AboutSection() {
         <div className="flex flex-col justify-between pt-2">
           <div>
             {/* Icon & Subheading */}
-            <div className="flex items-center gap-2 text-sky-600 mb-3">
+            <div className="flex items-center gap-2 text-primary mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
               </svg>
-              <h3 className="font-semibold text-sky-800 text-sm tracking-wide">Global Accreditations</h3>
+              <h3 className="font-semibold text-primary text-sm tracking-wide">Global Accreditations</h3>
             </div>
             
             <hr className="border-slate-200 mb-4" />
@@ -70,7 +70,7 @@ export default function AboutSection() {
 
           {/* Call to Action Button Alignment */}
           <div className="mt-8 lg:mt-0 flex lg:justify-start">
-            <button className="bg-[#f5a623] hover:bg-amber-600 text-slate-950 font-medium text-sm px-6 py-2.5 rounded-full shadow-sm transition-colors duration-200">
+            <button className="bg-[#C91F28] hover:bg-primary text-slate-950 font-medium text-sm px-6 py-2.5 rounded-full shadow-sm transition-colors duration-200">
               About Us
             </button>
           </div>

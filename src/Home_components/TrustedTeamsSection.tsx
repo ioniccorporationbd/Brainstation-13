@@ -61,11 +61,11 @@ export default function TrustedTeamsSection() {
     <section className="w-full overflow-hidden bg-white pb-[130px] pt-[22px]">
       <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 xl:px-0">
         <div className="trusted-heading text-center">
-          <h2 className="text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#121a2f] sm:text-[28px]">
+          <h2 className="text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#0A0A0A] sm:text-[28px]">
             Trusted By Fast-Moving Tech Teams
           </h2>
 
-          <p className="mt-[2px] text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#121a2f] sm:text-[28px]">
+          <p className="mt-[2px] text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#0A0A0A] sm:text-[28px]">
             From Startups to Enterprises
           </p>
         </div>

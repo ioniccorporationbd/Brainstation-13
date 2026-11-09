@@ -86,13 +86,13 @@ export default function CoreCapabilitiesSection() {
     <section className="w-full bg-white py-[70px] md:py-[90px] lg:py-[112px]">
       <div className="mx-auto w-full max-w-[1328px] px-5 sm:px-8 xl:px-0">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <h2 className="max-w-[520px] text-[36px] font-medium leading-[1.12] tracking-[-0.045em] text-[#10182f] sm:text-[44px] lg:text-[48px]">
+          <h2 className="max-w-[520px] text-[36px] font-medium leading-[1.12] tracking-[-0.045em] text-[#0A0A0A] sm:text-[44px] lg:text-[48px]">
             Drive Growth with Our Core Capabilities
           </h2>
 
           <Link
             href="/services"
-            className="mt-1 inline-flex items-center gap-3 text-[15px] font-semibold text-[#3c96ce] transition-colors hover:text-[#0f78b7] md:mt-[44px]"
+            className="mt-1 inline-flex items-center gap-3 text-[15px] font-semibold text-[#C91F28] transition-colors hover:text-[#A71920] md:mt-[44px]"
           >
             Explore All Services
             <span aria-hidden="true" className="text-[18px] leading-none">
@@ -131,11 +131,11 @@ function CapabilityCard({ item }: { item: Capability }) {
         className="h-[42px] w-[42px] object-contain"
       />
 
-      <h3 className="mt-[40px] text-[30px] font-medium leading-[1.16] tracking-[-0.04em] text-[#10182f] transition-colors group-hover:text-[#3998d3] sm:text-[34px] lg:text-[36px]">
+      <h3 className="mt-[40px] text-[30px] font-medium leading-[1.16] tracking-[-0.04em] text-[#0A0A0A] transition-colors group-hover:text-[#C91F28] sm:text-[34px] lg:text-[36px]">
         {item.title}
       </h3>
 
-      <p className="mt-[22px] max-w-[360px] text-[16px] font-normal leading-[1.5] text-[#476a80] transition-colors group-hover:text-[#335e79]">
+      <p className="mt-[22px] max-w-[360px] text-[16px] font-normal leading-[1.5] text-[#52525B] transition-colors group-hover:text-[#52525B]">
         {item.description}
       </p>
     </Link>

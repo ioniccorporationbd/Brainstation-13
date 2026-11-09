@@ -98,6 +98,171 @@ html {
 body {
   font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* ===================================================================
+   Homepage design system atoms — Magnetic Solution Ltd (red/black/white)
+   Shared by every homepage section for consistent rhythm, typography,
+   cards, buttons and micro-interactions.
+   =================================================================== */
+@layer components {
+  .hp-container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1400px;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hp-container {
+      padding-inline: 2rem;
+    }
+  }
+
+  .hp-section {
+    padding-block: 4.5rem;
+  }
+  @media (min-width: 768px) {
+    .hp-section {
+      padding-block: 6.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hp-section {
+      padding-block: 7.5rem;
+    }
+  }
+
+  .hp-dark {
+    background: #0a0a0a;
+    color: #ffffff;
+  }
+  .hp-light {
+    background: #f7f7f8;
+  }
+
+  .hp-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+  .hp-eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
+
+  .hp-h1 {
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.06;
+    color: #0a0a0a;
+  }
+  .hp-h2 {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.14;
+    color: #0a0a0a;
+    font-size: clamp(1.8rem, 1rem + 2.6vw, 3rem);
+  }
+  .hp-h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.22;
+    color: #0a0a0a;
+  }
+  .hp-dark .hp-h1,
+  .hp-dark .hp-h2,
+  .hp-dark .hp-h3 {
+    color: #ffffff;
+  }
+
+  .hp-body {
+    color: #52525b;
+    line-height: 1.68;
+  }
+  .hp-dark .hp-body {
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  .hp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 52px;
+    padding-inline: 1.9rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    letter-spacing: -0.01em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  .hp-btn-primary {
+    background: var(--primary);
+    color: #ffffff;
+  }
+  .hp-btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 14px 30px -12px rgba(201, 31, 40, 0.55);
+    transform: translateY(-1px);
+  }
+  .hp-btn-outline {
+    border: 1.5px solid rgba(10, 10, 10, 0.16);
+    color: #0a0a0a;
+    background: transparent;
+  }
+  .hp-btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  .hp-dark .hp-btn-outline {
+    border-color: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+  }
+  .hp-dark .hp-btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .hp-card {
+    background: #ffffff;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hp-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 31, 40, 0.35);
+    box-shadow: 0 24px 50px -22px rgba(201, 31, 40, 0.3);
+  }
+  .hp-card-dark {
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hp-card-dark:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 31, 40, 0.5);
+    background: rgba(255, 255, 255, 0.07);
+  }
 }
 
 img {

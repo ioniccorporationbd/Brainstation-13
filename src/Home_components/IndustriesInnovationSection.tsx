@@ -69,7 +69,7 @@ const industries: IndustryCard[] = [
 
 export default function IndustriesInnovationSection() {
   return (
-    <section className="w-full bg-[#111d3a] py-[96px] text-white md:py-[120px] lg:py-[138px]">
+    <section className="w-full bg-[#0A0A0A] py-[96px] text-white md:py-[120px] lg:py-[138px]">
       <div className="mx-auto w-full max-w-[1260px] px-5 sm:px-8 xl:px-0">
         <h2 className="mx-auto max-w-[700px] text-center text-[46px] font-medium leading-[1.1] tracking-[-0.06em] text-white sm:text-[60px] lg:text-[68px]">
           Industries We Power with Innovation
@@ -91,7 +91,7 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
   return (
     <Link
       href={industry.href}
-      className="group flex min-h-[310px] flex-col rounded-[11px] bg-[#223f5b] px-[36px] pb-[34px] pt-[34px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#284a69]"
+      className="group flex min-h-[310px] flex-col rounded-[11px] bg-[#52525B] px-[36px] pb-[34px] pt-[34px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#26262A]"
     >
       <Image
         src={industry.icon}
@@ -109,7 +109,7 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
         {industry.description}
       </p>
 
-      <span className="mt-auto inline-flex items-center gap-[9px] pt-[28px] text-[15px] font-bold text-[#ffae2e] transition-colors group-hover:text-[#ffc46b]">
+      <span className="mt-auto inline-flex items-center gap-[9px] pt-[28px] text-[15px] font-bold text-[#C91F28] transition-colors group-hover:text-[#C91F28]">
         Learn More
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           →
@@ -121,14 +121,14 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
 
 function ContactCard() {
   return (
-    <div className="flex min-h-[310px] flex-col items-center justify-center rounded-[11px] bg-[#223f5b] px-[36px] py-[36px] text-center">
+    <div className="flex min-h-[310px] flex-col items-center justify-center rounded-[11px] bg-[#52525B] px-[36px] py-[36px] text-center">
       <h3 className="text-[25px] font-semibold leading-[1.3] tracking-[-0.035em] text-white">
         Is your industry here?
       </h3>
 
       <Link
         href="/contact"
-        className="mt-[38px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#ffae2e] px-[30px] text-[15px] font-bold text-black transition-colors hover:bg-[#f59b15]"
+        className="mt-[38px] inline-flex h-[48px] items-center justify-center rounded-full bg-[#C91F28] px-[30px] text-[15px] font-bold text-black transition-colors hover:bg-[#A71920]"
       >
         Let&apos;s Talk
       </Link>

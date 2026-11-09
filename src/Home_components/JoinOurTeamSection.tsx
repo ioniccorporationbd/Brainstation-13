@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function JoinOurTeamSection() {
   return (
-    <section className="w-full bg-[#11182b] py-20 md:py-28">
+    <section className="w-full bg-[#0A0A0A] py-20 md:py-28">
       <div className="mx-auto grid max-w-[1220px] grid-cols-1 items-center gap-12 px-5 md:grid-cols-[0.75fr_1.15fr] md:gap-20">
         <div>
           <h2 className="text-[48px] font-medium leading-[1.15] tracking-[-0.05em] text-white md:text-[64px]">
@@ -21,7 +21,7 @@ export default function JoinOurTeamSection() {
 
           <Link
             href="/career"
-            className="mt-12 inline-flex rounded-full bg-[#ffad25] px-7 py-4 text-[16px] font-semibold text-black transition hover:bg-[#f5a11c]"
+            className="mt-12 inline-flex rounded-full bg-[#C91F28] px-7 py-4 text-[16px] font-semibold text-black transition hover:bg-[#C91F28]"
           >
             Visit Career
           </Link>

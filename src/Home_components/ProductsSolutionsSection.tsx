@@ -59,7 +59,7 @@ const products: ProductItem[] = [
 
 export default function ProductsSolutionsSection() {
   return (
-    <section className="w-full bg-[#111d3a] py-[78px] text-white md:py-[96px] lg:py-[110px]">
+    <section className="w-full bg-[#0A0A0A] py-[78px] text-white md:py-[96px] lg:py-[110px]">
       <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-8 xl:px-0">
         <div className="text-center">
           <h2 className="text-[42px] font-medium leading-[1.1] tracking-[-0.055em] text-white sm:text-[54px] lg:text-[60px]">
@@ -84,7 +84,7 @@ export default function ProductsSolutionsSection() {
 
 function ProductCard({ product }: { product: ProductItem }) {
   return (
-    <article className="border-t border-[#3d5771] py-[34px] first:pt-[34px]">
+    <article className="border-t border-[#2A2A2E] py-[34px] first:pt-[34px]">
       <h3 className="max-w-[520px] text-[27px] font-medium leading-[1.16] tracking-[-0.045em] text-white sm:text-[31px]">
         {product.title}
       </h3>
@@ -95,7 +95,7 @@ function ProductCard({ product }: { product: ProductItem }) {
 
       <Link
         href={product.href}
-        className="mt-[19px] inline-flex items-center gap-[9px] text-[14px] font-bold text-[#ffae2e] transition-colors hover:text-[#ffc46b]"
+        className="mt-[19px] inline-flex items-center gap-[9px] text-[14px] font-bold text-[#C91F28] transition-colors hover:text-[#C91F28]"
       >
         Learn More
         <span className="transition-transform duration-300 group-hover:translate-x-1">

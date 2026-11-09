@@ -17,11 +17,11 @@ export default function CaseStudiesSection() {
       <div className="mx-auto max-w-[1320px] px-5">
         <div className="mb-20 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <h2 className="text-[42px] font-medium leading-none tracking-[-0.04em] text-[#10172d] md:text-[56px]">
+            <h2 className="text-[42px] font-medium leading-none tracking-[-0.04em] text-[#0A0A0A] md:text-[56px]">
               Case Studies
             </h2>
 
-            <p className="mt-7 max-w-[560px] text-[18px] leading-[1.4] text-[#35647c] md:text-[21px]">
+            <p className="mt-7 max-w-[560px] text-[18px] leading-[1.4] text-[#52525B] md:text-[21px]">
               Check out our case studies to see how innovative solutions transformed real
               businesses.
             </p>
@@ -29,7 +29,7 @@ export default function CaseStudiesSection() {
 
           <Link
             href="/case-studies"
-            className="inline-flex w-fit rounded-full bg-[#ffad25] px-7 py-4 text-[15px] font-semibold text-black transition hover:bg-[#f2a11d] md:mt-8"
+            className="inline-flex w-fit rounded-full bg-[#C91F28] px-7 py-4 text-[15px] font-semibold text-black transition hover:bg-[#C91F28] md:mt-8"
           >
             See all Case Studies
           </Link>
@@ -39,16 +39,16 @@ export default function CaseStudiesSection() {
           {caseStudyLogos.map((logo, index) => (
             <div
               key={logo.name}
-              className={`flex h-[90px] w-[150px] flex-col items-center justify-center rounded-[6px] bg-[#f3f6fa] px-4 text-center transition ${
+              className={`flex h-[90px] w-[150px] flex-col items-center justify-center rounded-[6px] bg-[#F7F7F8] px-4 text-center transition ${
                 index === 0
-                  ? 'border-b-[3px] border-[#3d9bd5]'
+                  ? 'border-b-[3px] border-[#C91F28]'
                   : 'border-b-[3px] border-transparent'
               }`}
             >
-              <span className="text-[17px] font-semibold leading-tight tracking-[-0.01em] text-[#10172d]">
+              <span className="text-[17px] font-semibold leading-tight tracking-[-0.01em] text-[#0A0A0A]">
                 {logo.name}
               </span>
-              <span className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7c93a5]">
+              <span className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-[#71717A]">
                 {logo.tag}
               </span>
             </div>
@@ -67,15 +67,15 @@ export default function CaseStudiesSection() {
           </div>
 
           <div className="pt-2 md:pt-3">
-            <p className="text-[18px] font-medium text-[#4597cf]">
+            <p className="text-[18px] font-medium text-[#C91F28]">
               AI &amp; ML, LMS
             </p>
 
-            <h3 className="mt-7 max-w-[700px] text-[34px] font-medium leading-[1.15] tracking-[-0.04em] text-[#10172d] md:text-[44px]">
+            <h3 className="mt-7 max-w-[700px] text-[34px] font-medium leading-[1.15] tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]">
               Streamlining Attendance at IIITK with Facial Recognition
             </h3>
 
-            <p className="mt-8 max-w-[660px] text-[18px] leading-[1.45] text-[#35647c] md:text-[21px]">
+            <p className="mt-8 max-w-[660px] text-[18px] leading-[1.45] text-[#52525B] md:text-[21px]">
               The Indian Institute of Information Technology, Kottayam (IIITK) is an
               autonomous engineering institute located in Valavoor, Palai, Kottayam
               District, Kerala, India.
@@ -83,28 +83,28 @@ export default function CaseStudiesSection() {
 
             <Link
               href="/case-study"
-              className="mt-9 inline-flex items-center gap-3 text-[17px] font-semibold text-[#ff9f1c] transition-colors hover:text-[#e88a00]"
+              className="mt-9 inline-flex items-center gap-3 text-[17px] font-semibold text-[#C91F28] transition-colors hover:text-[#A71920]"
             >
               View Case Study
               <span>→</span>
             </Link>
 
-            <div className="mt-10 border-t border-[#dce8f1] pt-10">
+            <div className="mt-10 border-t border-[#F7F7F8] pt-10">
               <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
                 <div>
-                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#4b9bd0] md:text-[64px]">
+                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#C91F28] md:text-[64px]">
                     80%
                   </div>
-                  <p className="mt-4 text-[18px] text-[#35647c] md:text-[20px]">
+                  <p className="mt-4 text-[18px] text-[#52525B] md:text-[20px]">
                     Processing Time Reduced
                   </p>
                 </div>
 
                 <div>
-                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#4b9bd0] md:text-[64px]">
+                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#C91F28] md:text-[64px]">
                     99.5%
                   </div>
-                  <p className="mt-4 text-[18px] text-[#35647c] md:text-[20px]">
+                  <p className="mt-4 text-[18px] text-[#52525B] md:text-[20px]">
                     Facial Recognition Accuracy Rate
                   </p>
                 </div>

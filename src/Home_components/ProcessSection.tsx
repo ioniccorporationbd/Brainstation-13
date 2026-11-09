@@ -52,10 +52,10 @@ const PROCESS_STEPS = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full bg-[#f3f8fc] py-20 md:py-28">
+    <section className="w-full bg-[#F7F7F8] py-20 md:py-28">
       <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-14 px-5 md:grid-cols-[1fr_0.95fr] md:gap-16">
         <div>
-          <h2 className="max-w-[520px] text-[42px] font-medium leading-[1.08] tracking-[-0.05em] text-[#10172d] md:text-[58px]">
+          <h2 className="max-w-[520px] text-[42px] font-medium leading-[1.08] tracking-[-0.05em] text-[#0A0A0A] md:text-[58px]">
             Our Process:
             <br />
             AI-Optimized,
@@ -63,12 +63,12 @@ export default function ProcessSection() {
             Transparent, Scalable
           </h2>
 
-          <p className="mt-7 max-w-[500px] text-[16px] leading-[1.5] text-[#35647c] md:text-[18px]">
+          <p className="mt-7 max-w-[500px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">
             We blend human expertise with AI precision—delivering faster outcomes
             without compromising security.
           </p>
 
-          <button className="mt-8 rounded-full bg-[#ffb32c] px-6 py-3 text-[14px] font-semibold text-black transition hover:bg-[#f5a91f]">
+          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-black transition hover:bg-[#C91F28]">
             Schedule a Call
           </button>
 
@@ -87,25 +87,25 @@ export default function ProcessSection() {
         <div className="space-y-16 md:pt-2">
           {PROCESS_STEPS.map((item) => (
             <div key={item.step}>
-              <div className="mb-8 text-[34px] leading-none text-[#3b96cf]">
+              <div className="mb-8 text-[34px] leading-none text-[#C91F28]">
                 {item.icon}
               </div>
 
               <div className="mb-4 flex items-center gap-3">
-                <span className="rounded-full bg-[#3b96cf] px-3 py-1 text-[12px] font-semibold text-white">
+                <span className="rounded-full bg-[#C91F28] px-3 py-1 text-[12px] font-semibold text-white">
                   {item.step}
                 </span>
 
-                <span className="text-[16px] font-medium text-[#3b96cf]">
+                <span className="text-[16px] font-medium text-[#C91F28]">
                   {item.label}
                 </span>
               </div>
 
-              <h3 className="max-w-[500px] text-[28px] font-medium leading-[1.12] tracking-[-0.04em] text-[#10172d] md:text-[32px]">
+              <h3 className="max-w-[500px] text-[28px] font-medium leading-[1.12] tracking-[-0.04em] text-[#0A0A0A] md:text-[32px]">
                 {item.title}
               </h3>
 
-              <ul className="mt-5 space-y-2 pl-5 text-[15px] leading-[1.45] text-[#35647c] md:text-[16px]">
+              <ul className="mt-5 space-y-2 pl-5 text-[15px] leading-[1.45] text-[#52525B] md:text-[16px]">
                 {item.points.map((point) => (
                   <li key={point} className="list-disc">
                     {point}

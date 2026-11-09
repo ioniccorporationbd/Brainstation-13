@@ -9,26 +9,26 @@ interface BrandItem {
 }
 
 const BRANDS: BrandItem[] = [
-  { name: 'ERP23', tag: 'Enterprise ERP', accent: '#3f93cf' },
-  { name: 'XR23', tag: 'Immersive XR', accent: '#7c5cff' },
-  { name: 'FINTECH23', tag: 'Digital Finance', accent: '#0ea97b' },
-  { name: 'STUDIO23', tag: 'Creative Studio', accent: '#ff8a3d' },
-  { name: 'CLOUD23', tag: 'Cloud & DevOps', accent: '#2f8df4' },
-  { name: 'eLea', tag: 'Learning Platform', accent: '#e0567a' },
+  { name: 'ERP23', tag: 'Enterprise ERP', accent: '#C91F28' },
+  { name: 'XR23', tag: 'Immersive XR', accent: '#C91F28' },
+  { name: 'FINTECH23', tag: 'Digital Finance', accent: '#C91F28' },
+  { name: 'STUDIO23', tag: 'Creative Studio', accent: '#C91F28' },
+  { name: 'CLOUD23', tag: 'Cloud & DevOps', accent: '#C91F28' },
+  { name: 'eLea', tag: 'Learning Platform', accent: '#C91F28' },
 ];
 
 export default function BrandCollectiveSection() {
   const scrollingBrands = [...BRANDS, ...BRANDS];
 
   return (
-    <section className="w-full overflow-hidden bg-[#f3f8fc] py-24">
+    <section className="w-full overflow-hidden bg-[#F7F7F8] py-24">
       <div className="mx-auto max-w-[1440px] px-4">
         <div className="mb-20 text-center">
-          <h2 className="text-[42px] font-medium leading-[1.08] tracking-[-0.04em] text-[#10172d] md:text-[64px]">
+          <h2 className="text-[42px] font-medium leading-[1.08] tracking-[-0.04em] text-[#0A0A0A] md:text-[64px]">
             The 23 Brand Collective
           </h2>
 
-          <p className="mx-auto mt-8 max-w-[760px] text-[18px] font-normal leading-[1.35] text-[#2f6280] md:text-[22px]">
+          <p className="mx-auto mt-8 max-w-[760px] text-[18px] font-normal leading-[1.35] text-[#A1A1AA] md:text-[22px]">
             A portfolio of specialized brands driving innovation across Cloud, ERP, Learning,
             <br className="hidden md:block" />
             Commerce, XR, and Creative Technology.
@@ -40,10 +40,10 @@ export default function BrandCollectiveSection() {
             {scrollingBrands.map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
-                className="flex h-[112px] w-[248px] shrink-0 items-center justify-center rounded-[8px] border border-[#e2edf6] bg-white px-8"
+                className="flex h-[112px] w-[248px] shrink-0 items-center justify-center rounded-[8px] border border-[#F7F7F8] bg-white px-8"
               >
                 <div className="flex flex-col items-center gap-[6px]">
-                  <span className="flex items-baseline gap-1 text-[26px] font-bold leading-none tracking-[-0.03em] text-[#0d162b]">
+                  <span className="flex items-baseline gap-1 text-[26px] font-bold leading-none tracking-[-0.03em] text-[#0A0A0A]">
                     {brand.name}
                     <span
                       className="inline-block h-[7px] w-[7px] rounded-full"
@@ -51,7 +51,7 @@ export default function BrandCollectiveSection() {
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#5a7d94]">
+                  <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#A1A1AA]">
                     {brand.tag}
                   </span>
                 </div>

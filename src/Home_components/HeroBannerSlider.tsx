@@ -62,7 +62,7 @@ const slides: SlideItem[] = [
 
 export default function HeroBannerSlider() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f4f8fc]">
+    <section className="relative w-full overflow-hidden bg-[#F7F7F8]">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
@@ -85,17 +85,17 @@ export default function HeroBannerSlider() {
               <div className="relative mx-auto grid min-h-[650px] w-full max-w-[1400px] grid-cols-1 px-5 pt-[76px] sm:px-8 lg:grid-cols-[51.5%_48.5%] lg:px-10 xl:px-0">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px] lg:pl-[18px]">
-                  <h1 className="max-w-[690px] text-[38px] font-semibold leading-[1.15] tracking-[-0.055em] text-[#0d162b] sm:text-[48px] md:text-[58px] lg:text-[62px]">
+                  <h1 className="max-w-[690px] text-[38px] font-semibold leading-[1.15] tracking-[-0.055em] text-[#0A0A0A] sm:text-[48px] md:text-[58px] lg:text-[62px]">
                     {slide.title}
                   </h1>
 
-                  <p className="mt-[28px] max-w-[735px] text-[18px] font-normal leading-[1.45] text-[#335e79] sm:text-[20px] md:text-[22px]">
+                  <p className="mt-[28px] max-w-[735px] text-[18px] font-normal leading-[1.45] text-[#52525B] sm:text-[20px] md:text-[22px]">
                     {slide.description}
                   </p>
 
                   <Link
                     href={slide.buttonHref}
-                    className="mt-[61px] inline-flex h-[49px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition-colors duration-200 hover:bg-[#f59b15]"
+                    className="mt-[61px] inline-flex h-[49px] w-fit items-center justify-center rounded-full bg-[#C91F28] px-[30px] text-[16px] font-semibold text-black transition-colors duration-200 hover:bg-[#A71920]"
                   >
                     {slide.buttonText}
                   </Link>
@@ -104,7 +104,7 @@ export default function HeroBannerSlider() {
                 {/* RIGHT SIDE DESKTOP */}
                 <div className="relative z-10 hidden min-h-[560px] md:block">
                   {/* Circle Pattern */}
-                  <div className="pointer-events-none absolute left-[48%] top-[47%] h-[910px] w-[910px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 [background:repeating-radial-gradient(circle,#dbeaf3_0px,#dbeaf3_1px,transparent_2px,transparent_12px)]" />
+                  <div className="pointer-events-none absolute left-[48%] top-[47%] h-[910px] w-[910px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_12px)]" />
 
                   {/* Top Image */}
                   <div className="absolute left-[95px] top-[25px] z-20 h-[200px] w-[330px] overflow-hidden rounded-[10px] shadow-[8px_8px_0_rgba(0,0,0,0.10)]">
@@ -117,22 +117,22 @@ export default function HeroBannerSlider() {
 
                   {/* Top Right Stat */}
                   <div className="absolute left-[456px] top-[112px] z-30 w-[230px] text-center">
-                    <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#071126]">
+                    <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#0A0A0A]">
                       {slide.statOneNumber}
                     </h3>
 
-                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#335e79]">
+                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#52525B]">
                       {slide.statOneText}
                     </p>
                   </div>
 
                   {/* Bottom Left Stat */}
                   <div className="absolute left-[174px] top-[298px] z-30 w-[255px] text-center">
-                    <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#071126]">
+                    <h3 className="text-[31px] font-bold leading-none tracking-[-0.02em] text-[#0A0A0A]">
                       {slide.statTwoNumber}
                     </h3>
 
-                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#335e79]">
+                    <p className="mt-[13px] text-[22px] font-normal leading-[1.1] text-[#52525B]">
                       {slide.statTwoText}
                     </p>
                   </div>
@@ -149,7 +149,7 @@ export default function HeroBannerSlider() {
 
                 {/* MOBILE / TABLET SMALL */}
                 <div className="relative z-20 mt-10 grid gap-5 pb-[135px] md:hidden">
-                  <div className="pointer-events-none absolute left-1/2 top-[170px] h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 [background:repeating-radial-gradient(circle,#dbeaf3_0px,#dbeaf3_1px,transparent_2px,transparent_11px)]" />
+                  <div className="pointer-events-none absolute left-1/2 top-[170px] h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_11px)]" />
 
                   <div className="relative z-10 overflow-hidden rounded-[10px] shadow-[6px_6px_0_rgba(0,0,0,0.08)]">
                     <img
@@ -169,21 +169,21 @@ export default function HeroBannerSlider() {
 
                   <div className="relative z-10 grid grid-cols-2 gap-4 rounded-[12px] bg-white/35 py-3 text-center backdrop-blur-sm">
                     <div>
-                      <h3 className="text-[26px] font-bold leading-none text-[#071126]">
+                      <h3 className="text-[26px] font-bold leading-none text-[#0A0A0A]">
                         {slide.statOneNumber}
                       </h3>
 
-                      <p className="mt-2 text-[16px] leading-[1.25] text-[#335e79]">
+                      <p className="mt-2 text-[16px] leading-[1.25] text-[#52525B]">
                         {slide.statOneText}
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="text-[26px] font-bold leading-none text-[#071126]">
+                      <h3 className="text-[26px] font-bold leading-none text-[#0A0A0A]">
                         {slide.statTwoNumber}
                       </h3>
 
-                      <p className="mt-2 text-[16px] leading-[1.25] text-[#335e79]">
+                      <p className="mt-2 text-[16px] leading-[1.25] text-[#52525B]">
                         {slide.statTwoText}
                       </p>
                     </div>
@@ -220,7 +220,7 @@ export default function HeroBannerSlider() {
           width: 6px;
           height: 6px;
           border-radius: 999px;
-          background: #c4cbd1;
+          background: #D4D4D8;
           cursor: pointer;
           transition: all 0.25s ease;
         }
