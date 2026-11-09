@@ -128,7 +128,7 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={closeAll}
-          className="absolute left-0 top-0 z-30 flex h-14 items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-16 2xl:h-20"
+          className="absolute left-[70px] top-0 z-30 flex h-[76px] items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[88px] 2xl:h-[100px]"
           aria-label="Magnetic Solution Limited — Home"
         >
           <Image
@@ -141,7 +141,7 @@ export default function Navbar() {
           />
         </Link>
         <nav
-          className="mx-auto flex h-14 max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 xl:h-16 2xl:h-20"
+          className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 xl:h-[88px] 2xl:h-[100px]"
         >
           <span
             aria-hidden="true"
@@ -222,7 +222,7 @@ export default function Navbar() {
           </button>
         </nav>
 
-        <div className="absolute left-0 top-14 hidden w-full min-[1025px]:block xl:top-16 2xl:top-20">
+        <div className="absolute left-0 top-[76px] hidden w-full min-[1025px]:block xl:top-[88px] 2xl:top-[100px]">
           {activeMenu === "services" && <ServicesMenu closeMenu={closeAll} />}
           {activeMenu === "industries" && <IndustriesMenu closeMenu={closeAll} />}
           {activeMenu === "products" && <ProductsMenu closeMenu={closeAll} />}
