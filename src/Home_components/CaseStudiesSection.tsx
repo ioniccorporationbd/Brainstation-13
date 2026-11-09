@@ -1,27 +1,33 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const caseStudyLogos = [
+// Real client names already present in this section — kept as tags (no fabricated
+// logos/images, no invented case studies). Case-study meaning, links and stats are
+// preserved; only the visual design and copy typography change.
+const caseStudyClients = [
   { name: 'IIITK', tag: 'Education' },
   { name: 'City Bank', tag: 'Banking' },
   { name: 'European Biotechnology', tag: 'Biotech' },
   { name: 'HKDC', tag: 'Real Estate' },
 ];
 
+const STATS = [
+  { value: '80%', label: 'Processing Time Reduced' },
+  { value: '99.5%', label: 'Facial Recognition Accuracy Rate' },
+];
+
 export default function CaseStudiesSection() {
   return (
-    <section className="w-full overflow-x-clip bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-[1320px] px-5">
-        <div className="mb-20 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+    <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+        {/* Header */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-[42px] font-medium leading-none tracking-[-0.04em] text-[#0A0A0A] md:text-[56px]">
+            <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">
               Case Studies
             </h2>
-
-            <p className="mt-7 max-w-[560px] text-[18px] leading-[1.4] text-[#52525B] md:text-[21px]">
+            <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">
               Check out our case studies to see how innovative solutions transformed real
               businesses.
             </p>
@@ -29,85 +35,79 @@ export default function CaseStudiesSection() {
 
           <Link
             href="/case-studies"
-            className="inline-flex w-fit rounded-full bg-[#C91F28] px-7 py-4 text-[15px] font-semibold text-black transition hover:bg-[#C91F28] md:mt-8"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3.5 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920] md:text-[15px]"
           >
             See all Case Studies
+            <span aria-hidden>→</span>
           </Link>
         </div>
 
-        <div className="mb-9 flex flex-wrap gap-5">
-          {caseStudyLogos.map((logo, index) => (
+        {/* Client tags (real names only) */}
+        <div className="mt-10 flex flex-wrap gap-3">
+          {caseStudyClients.map((client) => (
             <div
-              key={logo.name}
-              className={`flex h-[90px] w-[150px] flex-col items-center justify-center rounded-[6px] bg-[#F7F7F8] px-4 text-center transition ${
-                index === 0
-                  ? 'border-b-[3px] border-[#C91F28]'
-                  : 'border-b-[3px] border-transparent'
-              }`}
+              key={client.name}
+              className="flex items-center gap-2 rounded-full border border-[#E7E7EA] bg-white px-4 py-2 transition-colors duration-200 hover:border-[#C91F28]"
             >
-              <span className="text-[17px] font-semibold leading-tight tracking-[-0.01em] text-[#0A0A0A]">
-                {logo.name}
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#C91F28]" aria-hidden />
+              <span className="text-[13px] font-semibold tracking-[-0.01em] text-[#0A0A0A] md:text-[14px]">
+                {client.name}
               </span>
-              <span className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-[#71717A]">
-                {logo.tag}
+              <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#71717A]">
+                {client.tag}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] md:items-start md:gap-12 lg:gap-20">
-          <div className="overflow-hidden rounded-[8px]">
-            <Image
-              src="/images/shikkha/shikkha-student.webp"
-              alt="Facial recognition attendance case study"
-              width={1600}
-              height={1000}
-              className="h-[360px] w-full object-cover md:h-[520px]"
-            />
-          </div>
+        {/* Featured case-study card */}
+        <div className="group mt-8 overflow-hidden rounded-2xl border border-[#E7E7EA] bg-white shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_24px_50px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="relative h-[280px] sm:h-[340px] md:h-full md:min-h-[520px]">
+              <Image
+                src="/images/shikkha/shikkha-student.webp"
+                alt="Facial recognition attendance case study"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
 
-          <div className="pt-2 md:pt-3">
-            <p className="text-[18px] font-medium text-[#C91F28]">
-              AI &amp; ML, LMS
-            </p>
+            <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-[#C91F28] md:text-[14px]">
+                AI &amp; ML · LMS
+              </p>
 
-            <h3 className="mt-7 max-w-[700px] text-[34px] font-medium leading-[1.15] tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]">
-              Streamlining Attendance at IIITK with Facial Recognition
-            </h3>
+              <h3 className="mt-4 text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[30px]">
+                Streamlining Attendance at IIITK with Facial Recognition
+              </h3>
 
-            <p className="mt-8 max-w-[660px] text-[18px] leading-[1.45] text-[#52525B] md:text-[21px]">
-              The Indian Institute of Information Technology, Kottayam (IIITK) is an
-              autonomous engineering institute located in Valavoor, Palai, Kottayam
-              District, Kerala, India.
-            </p>
+              <p className="mt-5 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
+                The Indian Institute of Information Technology, Kottayam (IIITK) is an
+                autonomous engineering institute located in Valavoor, Palai, Kottayam District,
+                Kerala, India.
+              </p>
 
-            <Link
-              href="/case-study"
-              className="mt-9 inline-flex items-center gap-3 text-[17px] font-semibold text-[#C91F28] transition-colors hover:text-[#A71920]"
-            >
-              View Case Study
-              <span>→</span>
-            </Link>
+              <Link
+                href="/case-study"
+                className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
+              >
+                View Case Study
+                <span aria-hidden>→</span>
+              </Link>
 
-            <div className="mt-10 border-t border-[#F7F7F8] pt-10">
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
-                <div>
-                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#C91F28] md:text-[64px]">
-                    80%
+              <div className="mt-9 grid grid-cols-2 gap-6 border-t border-[#F0F0F2] pt-7">
+                {STATS.map((stat) => (
+                  <div key={stat.label}>
+                    <div className="text-[36px] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">
+                      {stat.value}
+                    </div>
+                    <p className="mt-2 text-[13px] leading-[1.4] text-[#52525B] md:text-[14px]">
+                      {stat.label}
+                    </p>
                   </div>
-                  <p className="mt-4 text-[18px] text-[#52525B] md:text-[20px]">
-                    Processing Time Reduced
-                  </p>
-                </div>
-
-                <div>
-                  <div className="text-[58px] font-light leading-none tracking-[-0.05em] text-[#C91F28] md:text-[64px]">
-                    99.5%
-                  </div>
-                  <p className="mt-4 text-[18px] text-[#52525B] md:text-[20px]">
-                    Facial Recognition Accuracy Rate
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
