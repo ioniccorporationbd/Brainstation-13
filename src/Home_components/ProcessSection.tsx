@@ -1,119 +1,131 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 
+// Step meaning and order preserved. Unverified numeric/marketing claims from the
+// original copy (e.g. "800+ experts", "30% faster", "99.9% reliability",
+// "ISO 27001", "90-day", "GDPR/ISO 2701") have been removed/reworded so no
+// unverified claim is made, per the branding policy.
 const PROCESS_STEPS = [
   {
     icon: '🧠',
-    step: 'Step 1',
     label: 'AI-Powered Discovery Audit',
     title: 'Zero-risk assessment, tailored roadmap',
     points: [
-      'Free 60-min strategy session to analyze your tech stack',
-      'AI-driven scoping tool estimates time/cost savings',
-      'Receive a GDPR/ISO 2701-compliant project blueprint',
+      'In-depth strategy session to analyze your current tech stack',
+      'Clear scoping of time and cost before any work begins',
+      'A secure, standards-aligned project blueprint',
     ],
   },
   {
     icon: '🧩',
-    step: 'Step 2',
     label: 'Hybrid Team Onboarding',
     title: 'Right talent + AI tools from day one',
     points: [
-      'Match with vetted engineers (800+ experts)',
-      'AI-augmented sprint planning for 30% faster kickoff',
-      'Dedicated PM + automated progress dashboards',
+      'Match with vetted engineers from our team',
+      'Structured sprint planning to start quickly',
+      'Dedicated project manager and live progress dashboards',
     ],
   },
   {
     icon: '🛡️',
-    step: 'Step 3',
     label: 'Build with AI Guardrails',
-    title: 'Code, test, deploy—smarter',
+    title: 'Code, test, deploy — smarter',
     points: [
-      'AI pair-programming assistants (70% faster dev)',
-      'Self-healing test suites (99.9% reliability)',
-      'Real-time compliance checks (ISO 27001 baked in)',
+      'AI-assisted development tooling across the build',
+      'Automated test suites for dependable releases',
+      'Continuous checks aligned to security best practices',
     ],
   },
   {
     icon: '🚀',
-    step: 'Step 4',
     label: 'Scale with Confidence',
     title: 'Your growth, automated',
     points: [
-      'AI-optimized cloud deployment',
-      'Continuous performance monitoring + predictive scaling',
-      '90-day post-launch support with AI-driven analytics',
+      'Cloud deployment optimized for scale',
+      'Continuous performance monitoring and predictive scaling',
+      'Post-launch support with analytics-driven insights',
     ],
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section className="w-full bg-[#F7F7F8] py-20 md:py-28">
-      <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-14 px-5 md:grid-cols-[1fr_0.95fr] md:gap-16">
+    <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
+      <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-12 px-5 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
+        {/* Intro */}
         <div>
-          <h2 className="max-w-[520px] text-[42px] font-medium leading-[1.08] tracking-[-0.05em] text-[#0A0A0A] md:text-[58px]">
-            Our Process:
-            <br />
-            AI-Optimized,
-            <br />
-            Transparent, Scalable
+          <h2 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">
+            Our Process
           </h2>
 
-          <p className="mt-7 max-w-[500px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">
-            We blend human expertise with AI precision—delivering faster outcomes
+          <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[20px]">
+            AI-Optimized, Transparent &amp; Scalable.
+          </p>
+
+          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
+            We blend human expertise with AI precision — delivering faster outcomes
             without compromising security.
           </p>
 
-          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-black transition hover:bg-[#C91F28]">
+          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">
             Schedule a Call
           </button>
 
-          <div className="mt-16 overflow-hidden rounded-[8px] md:mt-20">
+          <div className="mt-14 overflow-hidden rounded-2xl border border-[#E7E7EA] md:mt-16">
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
               alt="Team presentation"
               width={620}
               height={640}
-              className="h-[420px] w-full object-cover md:h-[560px]"
+              className="h-[380px] w-full object-cover md:h-[520px]"
               unoptimized
             />
           </div>
         </div>
 
-        <div className="space-y-16 md:pt-2">
-          {PROCESS_STEPS.map((item) => (
-            <div key={item.step}>
-              <div className="mb-8 text-[34px] leading-none text-[#C91F28]">
-                {item.icon}
-              </div>
+        {/* Steps timeline */}
+        <div className="space-y-6 md:space-y-7">
+          {PROCESS_STEPS.map((item, index) => {
+            const isLast = index === PROCESS_STEPS.length - 1;
+            return (
+              <div key={item.label} className="relative pl-12 md:pl-14">
+                {/* connector */}
+                {!isLast && (
+                  <span
+                    aria-hidden
+                    className="absolute left-[17px] top-10 -bottom-8 w-px bg-[#E7E7EA] md:left-[19px]"
+                  />
+                )}
 
-              <div className="mb-4 flex items-center gap-3">
-                <span className="rounded-full bg-[#C91F28] px-3 py-1 text-[12px] font-semibold text-white">
-                  {item.step}
+                {/* number node */}
+                <span className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#C91F28] text-[14px] font-bold text-white shadow-[0_6px_16px_rgba(201,31,40,0.28)] md:h-10 md:w-10 md:text-[15px]">
+                  {index + 1}
                 </span>
 
-                <span className="text-[16px] font-medium text-[#C91F28]">
-                  {item.label}
-                </span>
+                {/* card */}
+                <div className="group rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_18px_40px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-6">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#C91F28]/10 text-[20px] leading-none">
+                      {item.icon}
+                    </span>
+                    <span className="text-[12px] font-semibold uppercase tracking-[0.04em] text-[#C91F28] md:text-[13px]">
+                      {item.label}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] md:text-[20px]">
+                    {item.title}
+                  </h3>
+
+                  <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[14px] leading-[1.5] text-[#52525B] marker:text-[#C91F28] md:text-[15px]">
+                    {item.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-
-              <h3 className="max-w-[500px] text-[28px] font-medium leading-[1.12] tracking-[-0.04em] text-[#0A0A0A] md:text-[32px]">
-                {item.title}
-              </h3>
-
-              <ul className="mt-5 space-y-2 pl-5 text-[15px] leading-[1.45] text-[#52525B] md:text-[16px]">
-                {item.points.map((point) => (
-                  <li key={point} className="list-disc">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
