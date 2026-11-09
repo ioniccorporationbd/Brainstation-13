@@ -121,14 +121,14 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
 
 function ContactCard() {
   return (
-    <div className="flex min-h-[292px] flex-col items-center justify-center rounded-[18px] border border-white/10 bg-[#0A0A0A] p-7 text-center md:col-span-2 lg:col-span-1">
-      <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.02em] text-white">
+    <div className="flex min-h-[292px] flex-col items-center justify-center rounded-[18px] border border-black/[0.08] bg-white p-7 text-center shadow-[0_1px_3px_rgba(0,0,0,0.05)] md:col-span-2 lg:col-span-1">
+      <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#0A0A0A]">
         Is your industry here?
       </h3>
 
       <Link
         href="/contact"
-        className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]"
+        className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
         Let&apos;s Talk
       </Link>
