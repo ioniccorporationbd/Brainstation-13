@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import usePrefersReducedMotion from "./usePrefersReducedMotion";
+
 type SuccessStory = {
   title: string;
   description: string;
@@ -18,7 +20,7 @@ const successStories: SuccessStory[] = [
     description:
       "Ventro is Bangladesh’s pioneer in smart accessories, offering an essentials platform tailored for Shopify store owners. Our solution provided an efficient way for their customers to manage and exchange personalized information through smart accessories.",
     image:
-      "https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop",
   },
   {
     title: "High-converting Shopify Storefront Experience",
@@ -30,24 +32,36 @@ const successStories: SuccessStory[] = [
 ];
 
 export default function ShopifySuccessStoriesSection() {
-  return (
-    <section className="relative overflow-hidden bg-white px-6 py-[64px] text-[#071F49]">
-      <div className="mx-auto max-w-[1220px]">
-        <h2 className="text-center text-[44px] font-bold leading-none tracking-[-0.045em] text-black md:text-[52px]">
-          Shopify eCommerce Success Stories
-        </h2>
+  const reduceMotion = usePrefersReducedMotion();
 
-        <div className="mx-auto mt-[60px] max-w-[1080px]">
+  return (
+    <section className="w-full overflow-hidden bg-[#fafafa] px-6 pb-[96px] pt-[88px] text-[#0a0a0a] md:pb-[112px] md:pt-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Success Stories
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Shopify eCommerce Success Stories
+          </h2>
+        </div>
+
+        <div className="mx-auto mt-11 max-w-[1080px]">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
-            loop={true}
+            loop
             speed={750}
-            autoplay={{
-              delay: 30000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            autoplay={
+              reduceMotion
+                ? false
+                : {
+                    delay: 30000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }
+            }
             pagination={{
               clickable: true,
               el: ".shopify-success-pagination",
@@ -55,9 +69,9 @@ export default function ShopifySuccessStoriesSection() {
           >
             {successStories.map((story) => (
               <SwiperSlide key={story.title}>
-                <div className="grid min-h-[430px] overflow-hidden rounded-[9px] border border-[#d8dde5] bg-white lg:grid-cols-2">
-                  {/* Same size image area */}
-                  <div className="h-[430px] w-full overflow-hidden">
+                <div className="grid overflow-hidden rounded-2xl border border-[#ececec] bg-white lg:grid-cols-2">
+                  <div className="h-[280px] w-full overflow-hidden bg-[#f2f2f2] lg:h-[420px]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={story.image}
                       alt={story.title}
@@ -65,13 +79,12 @@ export default function ShopifySuccessStoriesSection() {
                     />
                   </div>
 
-                  {/* Text area */}
-                  <div className="flex h-[430px] flex-col justify-center px-[34px] py-[42px] lg:px-[56px]">
-                    <h3 className="max-w-[580px] text-[34px] font-bold leading-[1.12] tracking-[-0.045em] text-black md:text-[39px]">
+                  <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
+                    <h3 className="max-w-[520px] text-[23px] font-bold leading-[1.22] tracking-[-0.02em] text-[#0a0a0a] md:text-[29px]">
                       {story.title}
                     </h3>
 
-                    <p className="mt-[34px] max-w-[560px] text-[19px] font-medium leading-[1.6] tracking-[-0.025em] text-[#42637a]">
+                    <p className="mt-5 max-w-[540px] text-[15.5px] font-medium leading-[1.65] text-[#565656] md:text-[16.5px]">
                       {story.description}
                     </p>
                   </div>
@@ -80,29 +93,21 @@ export default function ShopifySuccessStoriesSection() {
             ))}
           </Swiper>
 
-          <div className="shopify-success-pagination mt-[34px] flex justify-center gap-[9px]" />
+          <div className="shopify-success-pagination mt-8 flex justify-center gap-[9px]" />
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
 
       <style jsx global>{`
         .shopify-success-pagination .swiper-pagination-bullet {
           width: 8px;
           height: 8px;
-          background: #b9d8eb;
+          background: #e2e2e2;
           opacity: 1;
           margin: 0 4px !important;
         }
 
         .shopify-success-pagination .swiper-pagination-bullet-active {
-          background: #2d8fca;
+          background: #c91f28;
         }
       `}</style>
     </section>
