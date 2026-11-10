@@ -1,42 +1,50 @@
-export default function AemIndustriesSection() {
-  const industries = [
-    "HEALTH CARE",
-    "FINANCIAL SERVICES",
-    "TELECOMMUNICATIONS",
-    "MEDIA AND ENTERTAINMENT",
-    "GOVERNMENT",
-    "EDUCATION",
-    "HIGH-TECH",
-    "MANUFACTURING",
-    "RETAIL",
-    "TRAVEL AND HOSPITALITY",
-  ];
+import { Check } from "lucide-react";
 
+const industries = [
+  "Health Care",
+  "Financial Services",
+  "Telecommunications",
+  "Media and Entertainment",
+  "Government",
+  "Education",
+  "High-Tech",
+  "Manufacturing",
+  "Retail",
+  "Travel and Hospitality",
+];
+
+export default function AemIndustriesSection() {
   return (
-    <section className="bg-white py-[92px]">
-      <div className="mx-auto grid max-w-[1050px] grid-cols-1 items-center gap-y-14 px-6 lg:grid-cols-[0.78fr_1.22fr] lg:gap-x-[120px]">
-        <div>
-          <p className="mb-7 text-[13px] font-normal uppercase tracking-[0.04em] text-black">
-            CLIENTS WE HAVE SERVED IN
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Industries
           </p>
 
-          <h2 className="text-[62px] font-normal leading-none tracking-[-0.06em] text-black">
-            Industries
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Industries We Build For
           </h2>
 
-          <div className="mt-8 h-[2px] w-[76px] bg-[#00A5E5]" />
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            AEM engagements across regulated, content-heavy and high-traffic
+            sectors.
+          </p>
         </div>
 
-        <div className="space-y-[26px]">
+        <div className="mx-auto mt-12 grid max-w-[980px] grid-cols-1 gap-4 sm:grid-cols-2">
           {industries.map((industry) => (
-            <div key={industry} className="flex items-center gap-[18px]">
-              <span className="text-[28px] font-bold leading-none text-black">
-                ✓
+            <div
+              key={industry}
+              className="group flex items-center gap-4 rounded-2xl border border-[#ececec] bg-white px-5 py-4 transition-colors duration-300 hover:border-[#c91f28]"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                <Check size={16} strokeWidth={2.6} />
               </span>
 
-              <p className="text-[25px] font-normal uppercase leading-none tracking-[0.16em] text-black">
+              <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#0a0a0a]">
                 {industry}
-              </p>
+              </span>
             </div>
           ))}
         </div>

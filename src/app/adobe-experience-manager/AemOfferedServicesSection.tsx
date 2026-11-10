@@ -1,41 +1,58 @@
-export default function AemOfferedServicesSection() {
-  const services = [
-    "AEM Development",
-    "AEM Solution Design",
-    "AEM DevOps",
-    "AEM Information Architecture",
-    "AEM Managed Services",
-    "AEM Migration & Update",
-  ];
+import {
+  Code2,
+  GitBranch,
+  LayoutTemplate,
+  LifeBuoy,
+  Network,
+  RefreshCw,
+} from "lucide-react";
 
+const services = [
+  { title: "AEM Development", icon: Code2 },
+  { title: "AEM Solution Design", icon: LayoutTemplate },
+  { title: "AEM DevOps", icon: GitBranch },
+  { title: "AEM Information Architecture", icon: Network },
+  { title: "AEM Managed Services", icon: LifeBuoy },
+  { title: "AEM Migration & Update", icon: RefreshCw },
+];
+
+export default function AemOfferedServicesSection() {
   return (
-    <section className="bg-[#f7f7f7] py-[118px]">
-      <div className="mx-auto grid max-w-[1220px] grid-cols-1 gap-y-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-x-[135px]">
-        <div>
-          <p className="mb-7 text-[13px] font-normal uppercase tracking-[0.04em] text-[#111827]">
-            WHAT WE CAN DO
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Can Do
           </p>
 
-          <h2 className="text-[64px] font-normal leading-[1.02] tracking-[-0.06em] text-black">
-            Offered <br />
-            Services
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Offered Services
           </h2>
 
-          <div className="mt-8 h-[2px] w-[88px] bg-[#00A5E5]" />
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Six services that cover the full AEM platform lifecycle.
+          </p>
         </div>
 
-        <div className="space-y-[24px]">
-          {services.map((service) => (
-            <div key={service} className="flex items-center gap-[34px]">
-              <span className="text-[40px] font-bold leading-none text-[#68BCEB]">
-                ›
-              </span>
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-              <p className="text-[25px] font-normal leading-none tracking-[-0.04em] text-black">
-                {service}
-              </p>
-            </div>
-          ))}
+            return (
+              <article
+                key={service.title}
+                className="group flex h-full items-center gap-5 rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={20} strokeWidth={2.1} />
+                </span>
+
+                <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                  {service.title}
+                </h3>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
