@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 type ToolLogo = {
   name: string;
@@ -105,29 +104,6 @@ export default function StockPriceTechnologyCTASection() {
 
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-28" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-28" />
-      </div>
-
-      {/* CTA */}
-      <div className="mx-auto mt-16 max-w-[1240px]">
-        <div className="flex flex-col items-center gap-6 rounded-2xl bg-[#c91f28] px-6 py-10 text-center md:flex-row md:justify-between md:px-10 md:text-left">
-          <div>
-            <h3 className="text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-white md:text-[26px]">
-              Would you like to start a project with us?
-            </h3>
-
-            <p className="mt-2.5 text-[14px] font-medium leading-[1.5] text-white/85">
-              Share your idea and our team will help you turn it into a working
-              product.
-            </p>
-          </div>
-
-          <Link
-            href="/contact"
-            className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-8 py-3.5 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#f7e6e7]"
-          >
-            Contact Us
-          </Link>
-        </div>
       </div>
 
       <style jsx global>{`
