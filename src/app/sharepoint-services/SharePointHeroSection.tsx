@@ -1,38 +1,76 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+const HERO_IMG =
+  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1400&auto=format&fit=crop";
+
+const keywords = [
+  "SharePoint Online",
+  "SharePoint Server",
+  "Microsoft 365",
+  "Teams",
+  "Power Platform",
+];
 
 export default function SharePointHeroSection() {
   return (
-    <section
-      className="relative min-h-[640px] bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1920&auto=format&fit=crop')",
-      }}
-    >
-      {/* Blue overlay to match SharePoint style */}
-      <div className="absolute inset-0 bg-[#0067b8]/35" />
-
-      <div className="relative z-10 mx-auto flex min-h-[640px] max-w-[1220px] items-center px-6">
-        <div className="w-full max-w-[720px] bg-white/90 px-[52px] py-[82px] backdrop-blur-[1px]">
-          <p className="mb-7 text-[15px] font-bold uppercase leading-none tracking-[0.45em] text-black">
-            FEATURED FOR 2020
+    <section className="w-full bg-white px-6 pb-[72px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <div>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+            SharePoint Services
           </p>
 
-          <h1 className="text-[62px] font-bold leading-none tracking-[-0.045em] text-black">
-            SharePoint
+          <h1 className="max-w-[620px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">
+            SharePoint, Built Around the Way You Work
           </h1>
 
-          <p className="mt-8 max-w-[560px] text-[16px] font-normal leading-[2] text-black">
-            Get the best comprehensive set of SharePoint services to meet your
-            business requirements.
+          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">
+            Intranets, workflows, migration and managed support — a complete
+            SharePoint practice for Microsoft 365 estates.
           </p>
 
-          <Link
-            href="/sharepoint"
-            className="mt-8 inline-flex rounded-full bg-[#ffab2e] px-8 py-4 text-[15px] font-bold uppercase text-black transition-all duration-300 hover:bg-[#ffc15a]"
-          >
-            EXPLORE
-          </Link>
+          <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
+            <Link
+              href="/schedule-a-call"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            >
+              Book a Consultation
+              <ArrowRight size={16} strokeWidth={2.2} />
+            </Link>
+
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+            >
+              Talk to Our Team
+            </Link>
+          </div>
+
+          <div className="mt-9 flex flex-wrap items-center gap-2">
+            {keywords.map((word) => (
+              <span
+                key={word}
+                className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#565656]"
+              >
+                {word}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative w-full">
+          <div className="relative aspect-[4/3.4] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
+            <Image
+              src={HERO_IMG}
+              alt="Team collaborating on documents"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -1,101 +1,71 @@
-"use client";
-
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { ArrowRight, Check, Phone } from "lucide-react";
 
 const industries = [
-  "BANK & FIN-TECH INDUSTRIES",
-  "TELECOMMUNICATION INDUSTRIES",
-  "SERVICE INDUSTRIES",
-  "RETAIL INDUSTRIES",
-  "PHARMACEUTICAL INDUSTRIES",
+  "Bank & Fin-Tech Industries",
+  "Telecommunication Industries",
+  "Service Industries",
+  "Retail Industries",
+  "Pharmaceutical Industries",
 ];
 
-const clientLogos = [
-  {
-    name: "Berger",
-    image:
-      "https://logo.clearbit.com/bergerbd.com",
-  },
-  {
-    name: "Robi",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/8b/Robi_Axiata_Limited_Logo.svg",
-  },
-  {
-    name: "UCB",
-    image:
-      "https://www.ucb.com.bd/themes/custom/ucb_subtheme/images/ucb-logo.svg",
-  },
-  {
-    name: "Beximco Pharma",
-    image:
-      "https://logo.clearbit.com/beximcopharma.com",
-  },
-  {
-    name: "IFIC Bank",
-    image:
-      "https://www.ificbank.com.bd/public/images/logo.png",
-  },
-  {
-    name: "City Bank",
-    image:
-      "https://www.thecitybank.com/themes/custom/citybank/logo.svg",
-  },
-  {
-    name: "HSBC",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/a/aa/HSBC_logo_%282018%29.svg",
-  },
-  {
-    name: "bKash",
-    image:
-      "https://upload.wikimedia.org/wikipedia/en/1/1d/BKash_logo.svg",
-  },
+const microsoftStack = [
+  { name: "SharePoint", image: "/sharepoint-logos/sharepoint.svg" },
+  { name: "Microsoft 365", image: "/sharepoint-logos/m365.svg" },
+  { name: "Microsoft Teams", image: "/sharepoint-logos/teams.svg" },
+  { name: "OneDrive", image: "/sharepoint-logos/onedrive.svg" },
+  { name: "Microsoft Azure", image: "/sharepoint-logos/azure.svg" },
+  { name: "Power BI", image: "/sharepoint-logos/powerbi.svg" },
+  { name: "Power Automate", image: "/sharepoint-logos/powerautomate.svg" },
+  { name: "Word", image: "/sharepoint-logos/word.svg" },
+  { name: "Excel", image: "/sharepoint-logos/excel.svg" },
 ];
 
 export function SharePointIndustriesSection() {
   return (
-    <section className="bg-white py-[100px]">
-      <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-y-16 px-6 lg:grid-cols-[0.7fr_1fr_0.9fr] lg:gap-x-[80px]">
-        <div>
-          <p className="mb-6 text-[13px] font-normal uppercase tracking-[0.04em] text-black">
-            CLIENTS WE HAVE SERVED IN
-          </p>
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+          <div>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+              Industries We Build For
+            </p>
 
-          <h2 className="text-[62px] font-normal leading-none tracking-[-0.06em] text-black">
-            Industries
-          </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+              Industries
+            </h2>
 
-          <div className="mt-7 h-[2px] w-[74px] bg-[#00A5E5]" />
-        </div>
+            <p className="mt-4 max-w-[460px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+              SharePoint and Microsoft 365 engagements across document-heavy,
+              regulated and customer-facing sectors.
+            </p>
 
-        <div className="space-y-[24px]">
-          {industries.map((industry) => (
-            <div key={industry} className="flex items-center gap-[18px]">
-              <span className="text-[25px] font-bold leading-none text-black">
-                ✓
-              </span>
+            <div className="mt-8 space-y-3">
+              {industries.map((industry) => (
+                <div
+                  key={industry}
+                  className="group flex items-center gap-4 rounded-2xl border border-[#ececec] bg-white px-5 py-4 transition-colors duration-300 hover:border-[#c91f28]"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                    <Check size={16} strokeWidth={2.6} />
+                  </span>
 
-              <p className="text-[21px] font-normal uppercase leading-none tracking-[0.14em] text-black">
-                {industry}
-              </p>
+                  <span className="text-[12.5px] font-bold uppercase tracking-[0.1em] text-[#0a0a0a]">
+                    {industry}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="flex justify-end">
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-            alt="SharePoint industries"
-            className="h-[292px] w-full max-w-[470px] object-cover"
-          />
+          <div className="relative aspect-[4/3.2] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+              alt="Team working on a shared workspace"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -104,96 +74,76 @@ export function SharePointIndustriesSection() {
 
 export function SharePointWorkedWithSection() {
   return (
-    <section className="bg-white pb-[155px] pt-[60px]">
-      <div className="mx-auto max-w-[1220px] px-6">
-        <div className="text-center">
-          <h2 className="text-[42px] font-bold leading-none tracking-[-0.04em] text-black">
-            Who we&apos;ve worked with
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Microsoft Technologies
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Technologies We Build With
           </h2>
 
-          <div className="mx-auto mt-6 h-[1px] w-[92px] bg-[#00A5E5]" />
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            The Microsoft products our SharePoint work connects to.
+          </p>
         </div>
 
-        <div className="relative mt-[88px]">
-          <button
-            type="button"
-            aria-label="Previous"
-            className="sharepoint-client-prev absolute left-[20px] top-1/2 z-10 hidden -translate-y-1/2 text-[#8d8d8d] transition hover:text-[#00A5E5] md:block"
-          >
-            <ChevronLeft size={32} strokeWidth={3} />
-          </button>
-
-          <div className="mx-auto max-w-[940px]">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              slidesPerView={5}
-              spaceBetween={55}
-              loop
-              speed={700}
-              autoplay={{
-                delay: 2400,
-                disableOnInteraction: false,
-              }}
-              navigation={{
-                prevEl: ".sharepoint-client-prev",
-                nextEl: ".sharepoint-client-next",
-              }}
-              pagination={{
-                clickable: true,
-                el: ".sharepoint-client-pagination",
-              }}
-              breakpoints={{
-                0: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                640: {
-                  slidesPerView: 3,
-                  spaceBetween: 32,
-                },
-                1024: {
-                  slidesPerView: 5,
-                  spaceBetween: 55,
-                },
-              }}
-            >
-              {clientLogos.map((client) => (
-                <SwiperSlide key={client.name}>
-                  <div className="flex h-[85px] w-full items-center justify-center">
-                    <img
-                      src={client.image}
-                      alt={client.name}
-                      className="max-h-[70px] max-w-[150px] object-contain"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+        <div className="group relative mt-10 overflow-hidden border-y border-[#ececec] py-6">
+          <div className="animate-ms-marquee flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
+            {[...microsoftStack, ...microsoftStack, ...microsoftStack].map(
+              (item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-[26px] w-[26px] shrink-0 object-contain"
+                  />
+                  <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
+                    {item.name}
+                  </span>
+                </div>
+              ),
+            )}
           </div>
 
-          <button
-            type="button"
-            aria-label="Next"
-            className="sharepoint-client-next absolute right-[20px] top-1/2 z-10 hidden -translate-y-1/2 text-[#8d8d8d] transition hover:text-[#00A5E5] md:block"
-          >
-            <ChevronRight size={32} strokeWidth={3} />
-          </button>
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-[48px] bg-gradient-to-r from-white to-transparent md:w-[120px]" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-[48px] bg-gradient-to-l from-white to-transparent md:w-[120px]" />
         </div>
-
-        <div className="sharepoint-client-pagination mt-[50px] flex justify-center gap-[10px]" />
       </div>
 
-      <style jsx global>{`
-        .sharepoint-client-pagination .swiper-pagination-bullet {
-          width: 6px;
-          height: 6px;
-          background: #d7e1fb;
-          opacity: 1;
-          margin: 0 5px !important;
+      <style>{`
+        @keyframes ms-marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.3333%);
+          }
         }
 
-        .sharepoint-client-pagination .swiper-pagination-bullet-active {
-          background: #2f67df;
+        .animate-ms-marquee {
+          animation: ms-marquee 34s linear infinite;
+        }
+
+        .group:hover .animate-ms-marquee {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-ms-marquee {
+            animation: none;
+            transform: none;
+          }
+
+          .animate-ms-marquee > div:nth-child(n + 10) {
+            display: none;
+          }
         }
       `}</style>
     </section>
@@ -202,25 +152,38 @@ export function SharePointWorkedWithSection() {
 
 export function SharePointPurchaseCTASection() {
   return (
-    <section className="bg-[#0786a9] py-[30px]">
-      <div className="mx-auto flex max-w-[1220px] flex-col items-center justify-between gap-6 px-6 md:flex-row">
-        <div>
-          <h2 className="text-[24px] font-bold text-white">
-            Would like to start a project with us?
-          </h2>
+    <section className="w-full bg-white px-6 pb-[96px] text-[#0a0a0a] md:pb-[112px]">
+      <div className="mx-auto max-w-[1240px] overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
+        <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+          Start a Project
+        </p>
 
-          <p className="mt-3 text-[12px] text-white">
-            Feel free to drop an email (sales@brainstation-23.com) and share
-            your idea.
-          </p>
+        <h2 className="mx-auto max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[38px]">
+          Would you like to start a project with us?
+        </h2>
+
+        <p className="mx-auto mt-4 max-w-[620px] text-[16px] font-medium leading-[1.6] text-[#565656] md:text-[17px]">
+          Share your idea and we&apos;ll come back with a scoped SharePoint
+          plan.
+        </p>
+
+        <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+          <Link
+            href="/schedule-a-call"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+          >
+            Schedule a call
+            <ArrowRight size={16} strokeWidth={2.2} />
+          </Link>
+
+          <a
+            href="tel:+8809612345678"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+          >
+            <Phone size={16} strokeWidth={2.2} />
+            +880 96 1234 5678
+          </a>
         </div>
-
-        <Link
-          href="tel:+8801404055226"
-          className="rounded-full bg-[#ffab2e] px-7 py-3 text-[13px] font-bold text-black transition hover:bg-[#ffc15a]"
-        >
-          +8801404055226
-        </Link>
       </div>
     </section>
   );
