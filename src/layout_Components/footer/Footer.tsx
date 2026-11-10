@@ -53,14 +53,14 @@ const socialItems = [
     label: "Twitter X",
     href: "https://x.com",
     image: "/images/social/twitter-x.svg",
-    width: 18,
-    height: 18,
+    width: 19,
+    height: 19,
   },
   {
     label: "YouTube",
     href: "https://youtube.com",
     image: "/images/social/youtube.svg",
-    width: 22,
+    width: 21,
     height: 16,
   },
   {
@@ -73,10 +73,10 @@ const socialItems = [
 ];
 
 const complianceItems = [
-  { label: "GDPR", image: "/images/footer/compliance-gdpr.svg" },
-  { label: "ISO", image: "/images/footer/compliance-iso-1.svg" },
-  { label: "ISO", image: "/images/footer/compliance-iso-2.svg" },
-  { label: "CMMI", image: "/images/footer/compliance-cmmi.svg" },
+  { label: "GDPR", image: "/images/footer/compliance-gdpr.svg", width: 64, height: 64 },
+  { label: "ISO", image: "/images/footer/compliance-iso-1.svg", width: 64, height: 64 },
+  { label: "ISO", image: "/images/footer/compliance-iso-2.svg", width: 64, height: 64 },
+  { label: "CMMI", image: "/images/footer/compliance-cmmi.svg", width: 72, height: 64 },
 ];
 
 const partnerItems = [
@@ -84,7 +84,7 @@ const partnerItems = [
     label: "Microsoft",
     image: "/images/footer/partner-microsoft.svg",
     width: 130,
-    height: 28,
+    height: 32,
   },
   {
     label: "AWS",
@@ -96,7 +96,7 @@ const partnerItems = [
     label: "Moodle",
     image: "/images/footer/partner-moodle.svg",
     width: 135,
-    height: 38,
+    height: 36,
   },
   {
     label: "Google Cloud Partner",
@@ -108,7 +108,7 @@ const partnerItems = [
     label: "Salesforce",
     image: "/images/footer/partner-salesforce.svg",
     width: 150,
-    height: 42,
+    height: 38,
   },
 ];
 
@@ -117,37 +117,37 @@ const recognizedItems = [
     label: "Clutch",
     image: "/images/footer/recognized-clutch.svg",
     width: 170,
-    height: 52,
+    height: 54,
   },
   {
     label: "BASIS",
     image: "/images/footer/recognized-basis.svg",
     width: 110,
-    height: 42,
+    height: 50,
   },
   {
     label: "Fortune 100",
     image: "/images/footer/recognized-fortune.svg",
     width: 105,
-    height: 52,
+    height: 54,
   },
   {
     label: "Inc 5000",
     image: "/images/footer/recognized-inc5000.svg",
     width: 120,
-    height: 52,
+    height: 50,
   },
   {
     label: "EY Entrepreneur Of The Year",
     image: "/images/footer/recognized-ey.svg",
     width: 175,
-    height: 42,
+    height: 48,
   },
   {
     label: "CMMI",
     image: "/images/footer/recognized-cmmi.svg",
     width: 80,
-    height: 42,
+    height: 44,
   },
 ];
 
@@ -188,8 +188,8 @@ export default function Footer() {
               <Image
                 src="/images/brand/magnetic-logo.png"
                 alt="Magnetic Solution Limited"
-                width={190}
-                height={198}
+                width={502}
+                height={522}
                 className="h-[92px] w-auto object-contain"
                 priority
               />
@@ -266,9 +266,9 @@ export default function Footer() {
                       <Image
                         src={item.image}
                         alt={item.label}
-                        width={58}
-                        height={58}
-                        className="max-h-[58px] w-auto object-contain"
+                        width={item.width}
+                        height={item.height}
+                        className="h-auto max-h-[58px] w-auto object-contain"
                       />
                     </div>
 
