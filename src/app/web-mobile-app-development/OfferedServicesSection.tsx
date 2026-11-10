@@ -1,42 +1,81 @@
-export default function OfferedServicesSection() {
-  const services = [
-    "High-quality applications for a wide array of niche",
-    "Attracting a larger user base & increasing business impact",
-    "High standard functionality & features",
-    "Enhancing visual appeal & rich user interface",
-    "Cross-platform development for mobile apps",
-    "Variety of app choices from native, web & hybrid",
-    "Complete operating system support",
-  ];
+import {
+  Blocks,
+  Layers,
+  MonitorSmartphone,
+  Palette,
+  Settings2,
+  Smartphone,
+  TrendingUp,
+} from "lucide-react";
 
+const services = [
+  {
+    title: "High-quality applications for a wide array of niches",
+    icon: Layers,
+  },
+  {
+    title: "Attracting a larger user base & increasing business impact",
+    icon: TrendingUp,
+  },
+  {
+    title: "High standard functionality & features",
+    icon: Settings2,
+  },
+  {
+    title: "Enhancing visual appeal & rich user interface",
+    icon: Palette,
+  },
+  {
+    title: "Cross-platform development for mobile apps",
+    icon: Smartphone,
+  },
+  {
+    title: "Variety of app choices from native, web & hybrid",
+    icon: Blocks,
+  },
+  {
+    title: "Complete operating system support",
+    icon: MonitorSmartphone,
+  },
+];
+
+export default function OfferedServicesSection() {
   return (
-    <section className="bg-[#f7f7f7] py-[120px]">
-      <div className="mx-auto grid max-w-[1220px] grid-cols-1 gap-y-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-x-[120px]">
-        <div>
-          <p className="mb-7 text-[13px] font-normal uppercase tracking-[0.04em] text-[#111827]">
-            WHAT WE CAN DO
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Can Do
           </p>
 
-          <h2 className="text-[64px] font-normal leading-[1.02] tracking-[-0.06em] text-black">
-            Offered <br />
-            Services
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Offered Services
           </h2>
 
-          <div className="mt-8 h-[2px] w-[88px] bg-[#00A5E5]" />
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Seven capabilities that cover the full application lifecycle.
+          </p>
         </div>
 
-        <div className="space-y-[23px]">
-          {services.map((service) => (
-            <div key={service} className="flex items-start gap-[34px]">
-              <span className="mt-[4px] text-[38px] font-bold leading-none text-[#68BCEB]">
-                ›
-              </span>
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-              <p className="text-[24px] font-normal leading-[1.42] tracking-[-0.04em] text-black">
-                {service}
-              </p>
-            </div>
-          ))}
+            return (
+              <article
+                key={service.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={20} strokeWidth={2.1} />
+                </span>
+
+                <p className="mt-5 text-[15px] font-bold leading-[1.45] tracking-[-0.01em] text-[#0a0a0a]">
+                  {service.title}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
