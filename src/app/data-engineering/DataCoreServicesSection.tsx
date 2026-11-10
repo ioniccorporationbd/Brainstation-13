@@ -1,188 +1,88 @@
-"use client";
+import { BarChart3, Cloud, Database, DatabaseZap } from "lucide-react";
 
-import { useState } from "react";
-
-import { Autoplay, FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  BsDatabase,
-  BsDatabaseCheck,
-  BsDatabaseGear,
-  BsRobot,
-} from "react-icons/bs";
-
-import "swiper/css";
-import "swiper/css/free-mode";
-
-type LogoItem = {
-  name: string;
-  image: string;
-  widthClass?: string;
-};
-
-type ServiceItem = {
+type Service = {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
 };
 
-const logos: LogoItem[] = [
-  { name: "Nissan", image: "https://unavatar.io/nissan-global.com" },
-  { name: "MetLife", image: "https://unavatar.io/metlife.com" },
-  { name: "DataResultz", image: "https://unavatar.io/datarobot.com" },
-  { name: "JTI", image: "https://unavatar.io/jti.com" },
-  { name: "InformatiQ", image: "https://unavatar.io/informatica.com" },
-  { name: "Galapagos", image: "https://unavatar.io/glpg.com" },
-  { name: "IBSEZ", image: "https://unavatar.io/bsez.com" },
-];
-
-function TrustedLogo({ logo }: { logo: LogoItem }) {
-  const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return (
-      <span className="px-1 text-center text-[18px] font-semibold leading-tight tracking-[-0.01em] text-[#081126]">
-        {logo.name}
-      </span>
-    );
-  }
-
-  return (
-    <img
-      src={logo.image}
-      alt={logo.name}
-      className="h-[54px] w-auto max-w-[170px] object-contain"
-      loading="lazy"
-      onError={() => setFailed(true)}
-    />
-  );
-}
-
-const services: ServiceItem[] = [
+const services: Service[] = [
   {
     title: "Data Engineering & Cloud Platforms",
     description:
-      "Scalable data pipelines and unified cloud architectures that bring data from multiple business systems into one reliable environment. Designed for enterprise performance while keeping infrastructure efficient and cost-controlled.",
-    icon: <BsDatabase />,
+      "Scalable data pipelines and unified cloud architectures that bring data from multiple business systems into one reliable environment — built for enterprise performance and cost control.",
+    icon: Cloud,
   },
   {
     title: "AI/ML Foundations & Governance",
     description:
-      "A governed data foundation that prepares organizations for AI adoption. Built with full visibility, data lineage, and security controls so that AI insights remain reliable, traceable, and compliant.",
-    icon: <BsRobot />,
+      "A governed data foundation that prepares organizations for AI adoption, with full visibility, data lineage, and security controls so insights stay reliable and compliant.",
+    icon: DatabaseZap,
   },
   {
     title: "Analytics and BI",
     description:
-      "Trusted data layers that ensure every dashboard and report uses consistent metrics. Business teams gain intuitive dashboards and self-service reporting to monitor performance and make faster decisions.",
-    icon: <BsDatabaseCheck />,
+      "Trusted data layers that keep every dashboard and report on consistent metrics, with intuitive self-service reporting so business teams decide faster.",
+    icon: BarChart3,
   },
   {
     title: "Database Design & Managed Services",
     description:
-      "Optimized relational and NoSQL databases designed for high performance and reliability. Continuous monitoring, tuning, and proactive management ensure systems stay available and responsive as workloads scale.",
-    icon: <BsDatabaseGear />,
+      "Optimized relational and NoSQL databases built for high performance and reliability, with continuous monitoring, tuning, and proactive management as workloads scale.",
+    icon: Database,
   },
 ];
 
-const scrollingLogos = [...logos, ...logos, ...logos, ...logos];
-
 export default function DataCoreServicesSection() {
   return (
-    <section className="w-full overflow-hidden bg-white py-[70px] md:py-[86px] lg:py-[96px]">
-      <div className="mx-auto w-full max-w-[1320px] px-5 sm:px-8 xl:px-0">
-        {/* Top trusted text */}
-        <div className="text-center">
-          <h2 className="text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#081126] sm:text-[28px]">
-            Trusted By Fast-Moving Tech Teams
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Do
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Our Core Data Services
           </h2>
 
-          <p className="mt-[2px] text-[24px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#081126] sm:text-[28px]">
-            From Startups to Enterprises
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            End-to-end data engineering — from ingestion and pipelines to
+            governance, analytics, and managed databases.
           </p>
         </div>
 
-        {/* Infinite logo scroll */}
-        <div className="relative mx-auto mt-[42px] w-full max-w-[1080px] overflow-hidden">
-          <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[110px] bg-gradient-to-r from-white to-transparent max-sm:w-[45px]" />
-          <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[110px] bg-gradient-to-l from-white to-transparent max-sm:w-[45px]" />
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-          <Swiper
-            modules={[Autoplay, FreeMode]}
-            loop
-            freeMode={{
-              enabled: true,
-              momentum: false,
-            }}
-            slidesPerView="auto"
-            spaceBetween={58}
-            speed={4200}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-            }}
-            allowTouchMove={false}
-            className="data-logo-swiper"
-          >
-            {scrollingLogos.map((logo, index) => (
-              <SwiperSlide
-                key={`${logo.name}-${index}`}
-                className="!w-auto"
+            return (
+              <article
+                key={service.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <div className="flex h-[92px] min-w-[140px] items-center justify-center">
-                  <TrustedLogo logo={logo} />
+                <div className="flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                    <Icon size={22} strokeWidth={1.8} />
+                  </div>
+
+                  <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
 
-        {/* What we do */}
-        <div className="mt-[48px] text-center">
-          <p className="text-[19px] font-medium text-[#169bd7]">
-            What we do
-          </p>
+                <h3 className="mt-5 text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                  {service.title}
+                </h3>
 
-          <h3 className="mt-[28px] text-[42px] font-normal leading-[1.12] tracking-[-0.055em] text-[#061026] sm:text-[54px] lg:text-[60px]">
-            Our Core Data Services
-          </h3>
-        </div>
-
-        {/* Services grid */}
-        <div className="mx-auto mt-[58px] grid w-full max-w-[1120px] grid-cols-1 gap-x-[70px] gap-y-[42px] lg:grid-cols-2">
-          {services.map((service) => (
-            <ServiceCard key={service.title} service={service} />
-          ))}
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                  {service.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
-
-      <style jsx global>{`
-        .data-logo-swiper .swiper-wrapper {
-          transition-timing-function: linear !important;
-          align-items: center;
-        }
-      `}</style>
     </section>
-  );
-}
-
-function ServiceCard({ service }: { service: ServiceItem }) {
-  return (
-    <article className="grid grid-cols-[72px_1fr] gap-[22px]">
-      <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#05a4df] text-[31px] text-white">
-        {service.icon}
-      </div>
-
-      <div>
-        <h4 className="text-[28px] font-normal leading-[1.2] tracking-[-0.045em] text-[#061026] sm:text-[34px]">
-          {service.title}
-        </h4>
-
-        <p className="mt-[17px] text-[18px] font-normal leading-[1.5] text-[#335e79]">
-          {service.description}
-        </p>
-      </div>
-    </article>
   );
 }

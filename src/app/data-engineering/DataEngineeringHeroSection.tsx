@@ -1,46 +1,53 @@
+import Image from "next/image";
 import Link from "next/link";
-
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85";
 
 export default function DataEngineeringHeroSection() {
   return (
-    <section className="w-full bg-[#052642] text-white">
-      <div className="mx-auto grid min-h-[690px] w-full max-w-[1200px] grid-cols-1 items-center gap-14 px-5 py-[90px] sm:px-8 xl:grid-cols-[minmax(0,1fr)_520px] xl:gap-[80px] xl:px-0">
-        {/* Left Content */}
+    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
+        {/* Left - Text */}
         <div>
-          <span className="inline-flex rounded-[8px] bg-[#113a5c] px-[16px] py-[9px] text-[18px] font-semibold text-[#369bd5]">
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
             Data Engineering
-          </span>
-
-          <h1 className="mt-[30px] max-w-[650px] text-[44px] font-semibold leading-[1.18] tracking-[-0.055em] text-white sm:text-[56px] xl:text-[62px]">
-            AI-Ready Data Platforms for Complex Enterprise Environments
-          </h1>
-
-          <p className="mt-[28px] max-w-[640px] text-[20px] font-medium leading-[1.45] text-white sm:text-[22px]">
-            We design and deliver cloud-native, governance-first data platforms
-            built on deep data engineering and AI readiness, implemented by
-            certified teams for faster, lower-risk enterprise rollout.
           </p>
 
-          <Link
-            href="/schedule-a-call"
-            className="mt-[58px] inline-flex h-[58px] items-center justify-center rounded-full bg-[#ffad2f] px-[32px] text-[17px] font-semibold text-black transition hover:bg-[#f59b15]"
-          >
-            Schedule a Call
-          </Link>
+          <h1 className="text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">
+            AI-Ready Data Platforms for the Enterprise
+          </h1>
+
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">
+            We design cloud-native, governance-first data platforms built for
+            reliability and AI readiness — delivered by certified teams for
+            faster, lower-risk rollout.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Link
+              href="/schedule-a-call"
+              className="inline-flex items-center justify-center rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            >
+              Schedule a Call
+            </Link>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+            >
+              Instant Quote
+            </Link>
+          </div>
         </div>
 
-        {/* Right Visual */}
-        <div className="w-full">
-          <div className="relative aspect-video w-full overflow-hidden rounded-[2px] bg-[#0b2f4d] shadow-[0_24px_70px_rgba(0,0,0,0.25)]">
-            <img
-              src={HERO_IMAGE}
-              alt="Data engineering and analytics dashboards"
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
+        {/* Right - Image */}
+        <div className="group relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[440px] lg:h-[480px]">
+          <Image
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop"
+            alt="Data engineering and cloud data platforms"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 560px"
+            className="object-cover transition duration-500 group-hover:scale-105"
+          />
         </div>
       </div>
     </section>

@@ -1,99 +1,84 @@
-import {
-  BsDiagram3,
-  BsCpu,
-  BsGraphUpArrow,
-  BsGlobe2,
-} from "react-icons/bs";
+import { Cpu, Globe2, Network, TrendingUp } from "lucide-react";
 
-type FeatureItem = {
+type Feature = {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
 };
 
-const features: FeatureItem[] = [
+const features: Feature[] = [
   {
     title: "Deep Data DNA",
     description:
-      "Gain clarity and control over complex, large-scale financial data and turn it into actionable intelligence.",
-    icon: <BsDiagram3 />,
+      "Gain clarity and control over complex, large-scale data and turn it into actionable intelligence.",
+    icon: Network,
   },
   {
     title: "AI & Future Readiness",
     description:
-      "Move from reactive reporting to predictive, AI-driven insights that keep risk ahead of you.",
-    icon: <BsCpu />,
+      "Move from reactive reporting to predictive, AI-driven insight that keeps you ahead.",
+    icon: Cpu,
   },
   {
     title: "Business-Centric ROI",
     description:
       "Lower operational costs while enabling faster, smarter decisions across your organization.",
-    icon: <BsGraphUpArrow />,
+    icon: TrendingUp,
   },
   {
     title: "Global-Grade Standards",
     description:
-      "Operate with built-in security and compliance backed by ISO 9001 & ISO 27001 certified processes you can trust.",
-    icon: <BsGlobe2 />,
+      "Operate with built-in security and compliance practices you can trust at enterprise scale.",
+    icon: Globe2,
   },
 ];
 
-const TEAM_IMAGE =
-  "https://brainstation-23.com/wp-content/uploads/2025/10/Hero-Img-v2.2.webp";
-
 export default function DataWhyBrainStationSection() {
   return (
-    <section className="w-full bg-[#f4f8fc] py-[78px] md:py-[94px] lg:py-[106px]">
-      <div className="mx-auto grid w-full max-w-[1220px] grid-cols-1 items-center gap-[58px] px-5 sm:px-8 lg:grid-cols-[1fr_500px] lg:gap-[76px] xl:px-0">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-[42px] font-normal leading-[1.12] tracking-[-0.055em] text-[#061026] sm:text-[52px] lg:text-[58px]">
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Why Magnetic
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Why Magnetic Solution Limited
           </h2>
 
-          <p className="mt-[28px] max-w-[760px] text-[20px] font-normal leading-[1.45] text-[#335e79] sm:text-[22px]">
-            Bronze winner in the Google Artificial intelligence Competition
-            (Kaggle) in the Machine Learning category.
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            A data-engineering partner that pairs deep technical depth with a
+            delivery process built for reliability and measurable impact.
           </p>
-
-          <div className="mt-[28px] space-y-[31px]">
-            {features.map((feature) => (
-              <FeatureCard key={feature.title} feature={feature} />
-            ))}
-          </div>
         </div>
 
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="h-[420px] w-full max-w-[500px] overflow-hidden rounded-[8px] bg-gray-200 sm:h-[520px] lg:h-[590px]">
-            <img
-              src={TEAM_IMAGE}
-              alt="Magnetic Solution Limited team discussion"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+
+            return (
+              <article
+                key={feature.title}
+                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.8} />
+                </div>
+
+                <div>
+                  <h3 className="text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                    {feature.title}
+                  </h3>
+
+                  <p className="mt-2 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                    {feature.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
-  );
-}
-
-function FeatureCard({ feature }: { feature: FeatureItem }) {
-  return (
-    <article className="grid grid-cols-[56px_1fr] gap-[18px]">
-      <div className="flex h-[56px] w-[56px] items-center justify-center rounded-[6px] bg-[#05a4df] text-[27px] text-white">
-        {feature.icon}
-      </div>
-
-      <div>
-        <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.035em] text-black sm:text-[26px]">
-          {feature.title}
-        </h3>
-
-        <p className="mt-[7px] max-w-[700px] text-[18px] font-normal leading-[1.45] text-[#335e79] sm:text-[20px]">
-          {feature.description}
-        </p>
-      </div>
-    </article>
   );
 }
