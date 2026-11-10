@@ -1,74 +1,66 @@
 const findings = [
   {
-    title: "Design Patterns Aid Modernization:",
+    title: "Design Patterns Aid Modernization",
     text: "Projects following design patterns are easier to modernize, with smoother transitions.",
   },
   {
-    title: "Improved Outcomes:",
+    title: "Improved Outcomes",
     text: "Design-pattern-based projects consistently show better modernization results.",
   },
   {
-    title: "Test Cases Enhance Clarity:",
+    title: "Test Cases Enhance Clarity",
     text: "Pre-existing test cases simplify migration, making it faster and more reliable.",
   },
   {
-    title: "Effortless Validation:",
+    title: "Effortless Validation",
     text: "Proper test cases help confirm migration accuracy without extra setup.",
   },
   {
-    title: "Reduced Setup for Verification:",
+    title: "Reduced Setup for Verification",
     text: "Existing tests eliminate the need for new roles or extensive retesting.",
   },
 ];
 
 export default function DigitalTransformationFindingsSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#0a0a0a]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-[80px] lg:grid-cols-[0.95fr_1fr]">
-        {/* Left Image */}
-        <div className="flex justify-center lg:justify-start">
-          <div className="group relative h-[360px] w-full max-w-[620px] overflow-hidden rounded-[8px] bg-[#0a0a0a] shadow-[0_18px_50px_rgba(0,0,0,0.10)]">
-            <img
-              src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1400&auto=format&fit=crop"
-              alt="Cloud modernization and digital transformation"
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What The Data Shows
+          </p>
 
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/20 via-transparent to-[#0a0a0a]/20" />
-          </div>
-        </div>
-
-        {/* Right Content */}
-        <div>
-          <h2 className="text-[46px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[58px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Our Findings
           </h2>
 
-          <ul className="mt-[38px] space-y-[25px]">
-            {findings.map((item) => (
-              <li
-                key={item.title}
-                className="flex items-start gap-5 text-[20px] font-medium leading-[1.5] tracking-[-0.01em] text-[#0a0a0a] md:text-[23px]"
-              >
-                <span className="mt-[12px] h-[6px] w-[6px] shrink-0 rounded-full bg-[#0a0a0a]" />
+          <p className="mx-auto mt-5 max-w-[620px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Patterns we consistently observe across legacy modernization
+            engagements.
+          </p>
+        </div>
 
-                <span>
-                  <strong className="font-bold">{item.title}</strong>{" "}
-                  <span>{item.text}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {findings.map((item, index) => (
+            <article
+              key={item.title}
+              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+            >
+              <span className="text-[15px] font-bold leading-none tracking-[-0.01em] text-[#c91f28]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <h3 className="mt-4 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                {item.title}
+              </h3>
+
+              <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                {item.text}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

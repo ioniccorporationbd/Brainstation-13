@@ -2,86 +2,43 @@ import Link from "next/link";
 
 export default function DigitalTransformationHeroSection() {
   return (
-    <section className="relative min-h-[680px] overflow-hidden bg-[#0a0a0a] px-6 text-white">
-      {/* Circle Background */}
-      <div className="pointer-events-none absolute inset-0">
-        {Array.from({ length: 48 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute rounded-full border border-[#c91f28]/20"
-            style={{
-              width: `${1360 - index * 30}px`,
-              height: `${1360 - index * 30}px`,
-              left: "68%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 mx-auto grid min-h-[680px] max-w-[1320px] grid-cols-1 items-center gap-14 py-20 lg:grid-cols-[0.95fr_1fr]">
+    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[104px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
-          <span className="inline-flex rounded-[7px] bg-[#1a1a1a] px-5 py-3 text-[18px] font-bold leading-none tracking-[-0.01em] text-[#c91f28]">
-            Digital Transformation Services
+          <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-[0.12em] text-[#c91f28]">
+            Digital Transformation
           </span>
 
-          <h1 className="mt-10 max-w-[760px] text-[44px] font-normal leading-[1.2] tracking-[-0.02em] text-white md:text-[58px]">
-            Modernize Legacy Systems <br />
-            with AI Driven- Automation
+          <h1 className="mt-7 max-w-[680px] text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">
+            Modernize Legacy Systems With AI Automation.
           </h1>
 
-          <p className="mt-9 max-w-[760px] text-[20px] font-medium leading-[1.5] tracking-[-0.01em] text-white/90 md:text-[23px]">
-            Embrace the future by transforming outdated applications and manual
-            processes into intelligent, automated workflows. Magnetic Solution Limited&apos;s Digital Transformation Services leverage cutting edge-AI,
-            RPA, and cloud technologies to deliver measurable efficiency gains
-            and unlock new revenue streams.
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">
+            Turn outdated applications and manual processes into intelligent,
+            automated workflows with AI, RPA, and cloud.
           </p>
 
           <Link
             href="/schedule-a-call"
-            className="mt-10 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[17px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
+            className="mt-9 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
           >
             Schedule a Call
           </Link>
         </div>
 
-        {/* Right Image Card */}
+        {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative h-[350px] w-full max-w-[680px] overflow-hidden rounded-[8px] bg-[#141414] shadow-[0_24px_70px_rgba(0,0,0,0.24)] md:h-[390px]">
+          <div className="h-[340px] w-full max-w-[560px] overflow-hidden rounded-2xl border border-[#ececec] md:h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1400&auto=format&fit=crop"
-              alt="Digital transformation business discussion"
-              className="h-full w-full object-cover opacity-45 grayscale"
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop"
+              alt="Digital transformation and connected systems"
+              loading="lazy"
+              className="h-full w-full object-cover"
             />
-
-            <div className="absolute inset-0 bg-[#0a0a0a]/45" />
-
-            <div className="absolute inset-0 flex items-center justify-center px-8 text-center">
-              <div>
-                <p className="text-[20px] font-bold leading-[1.15] tracking-[-0.018em] text-white md:text-[26px]">
-                  We Work With <br />
-                  Latest Technologies To Accelerate Your
-                </p>
-
-                <h2 className="mt-3 text-[28px] font-bold leading-none tracking-[-0.02em] text-white md:text-[38px]">
-                  Digital Transformation
-                </h2>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

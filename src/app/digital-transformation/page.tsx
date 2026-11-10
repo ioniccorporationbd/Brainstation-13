@@ -5,7 +5,6 @@ import WhyDigitalTransformationMattersSection from './WhyDigitalTransformationMa
 import DigitalTransformationCoreCapabilitiesSection from './DigitalTransformationCoreCapabilitiesSection';
 import DigitalTransformationApproachSection from './DigitalTransformationApproachSection';
 import DigitalTransformationPartnerSection from './DigitalTransformationPartnerSection';
-import DigitalTransformationSuccessStoriesSection from './DigitalTransformationSuccessStoriesSection';
 import DigitalTransformationFaqSection from './DigitalTransformationFaqSection';
 
 const page = () => {
@@ -17,7 +16,6 @@ const page = () => {
             <DigitalTransformationCoreCapabilitiesSection/>
             <DigitalTransformationApproachSection/>
             <DigitalTransformationPartnerSection/>
-            <DigitalTransformationSuccessStoriesSection/>
             <DigitalTransformationFaqSection/>
         </div>
     );

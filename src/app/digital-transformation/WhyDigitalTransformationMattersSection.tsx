@@ -2,17 +2,17 @@ const benefits = [
   {
     title: "Enhanced Agility",
     description:
-      "Replace rigid, monolithic systems with flexible, microservices based-architectures that adapt to evolving business needs.",
+      "Replace rigid, monolithic systems with flexible, microservices-based architectures that adapt to evolving business needs.",
   },
   {
     title: "Cost Savings",
     description:
-      "Automate repetitive tasks and eliminate technical debt to reduce operational expenses by up to 50%.",
+      "Automate repetitive tasks and eliminate technical debt to reduce operational cost and effort.",
   },
   {
-    title: "Data Driven- Decision",
+    title: "Data-Driven Decisions",
     description:
-      "Harness real-time analytics and predictive insights to optimize-performance across departments.",
+      "Harness real-time analytics and predictive insights to optimize performance across departments.",
   },
   {
     title: "Competitive Edge",
@@ -23,56 +23,44 @@ const benefits = [
 
 export default function WhyDigitalTransformationMattersSection() {
   return (
-    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[96px] text-[#0a0a0a]">
-      {/* Left circle background */}
-      <div className="pointer-events-none absolute -left-[360px] top-[-40px] hidden h-[820px] w-[820px] rounded-full lg:block">
-        {Array.from({ length: 48 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute left-1/2 top-1/2 rounded-full border border-[#c91f28]/20"
-            style={{
-              width: `${820 - index * 17}px`,
-              height: `${820 - index * 17}px`,
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
-      </div>
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            The Business Case
+          </p>
 
-      <div className="relative z-10 mx-auto grid max-w-[1240px] grid-cols-1 gap-[70px] lg:grid-cols-[0.72fr_1.15fr]">
-        {/* Left sticky title */}
-        <aside className="lg:sticky lg:top-[120px] lg:h-fit">
-          <h2 className="max-w-[420px] text-[42px] font-normal leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[54px]">
-            Why Digital <br />
-            Transformation <br />
-            Matters
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Why Digital Transformation Matters
           </h2>
-        </aside>
 
-        {/* Right content */}
-        <div className="space-y-[86px]">
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Legacy systems slow teams down, inflate costs, and limit growth.
+            Modernization turns those constraints into a competitive advantage.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((item, index) => (
-            <article key={item.title} className="max-w-[720px]">
-              <h3 className="text-[38px] font-normal leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">
-                {index + 1}. {item.title}
+            <article
+              key={item.title}
+              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[15px] font-bold text-[#c91f28]">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                {item.title}
               </h3>
 
-              <p className="mt-5 max-w-[720px] text-[21px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656] md:text-[24px]">
+              <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
                 {item.description}
               </p>
             </article>
           ))}
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
