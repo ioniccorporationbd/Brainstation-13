@@ -1,23 +1,72 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+const HERO_IMG =
+  "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400&auto=format&fit=crop";
+
+const keywords = ["PC", "Console", "Mobile", "VR", "Multiplayer"];
+
 export default function GameStudioHero() {
   return (
-    <section className="relative h-[760px] w-full overflow-hidden bg-black">
-      <img
-        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1920&auto=format&fit=crop"
-        alt="City skyline"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+    <section className="w-full bg-white px-6 pb-[72px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <div>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+            Game Studio
+          </p>
 
-      <div className="absolute inset-0 bg-black/35" />
-      <div className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-black via-black/80 to-transparent" />
-      <div className="absolute inset-0 bg-[#0b1f1b]/25" />
-
-      <div className="relative z-10 flex h-full items-center">
-        <div className="mx-auto w-full max-w-[1600px] px-6 md:px-16 lg:px-44">
-          <h1 className="max-w-[780px] text-[42px] font-black italic leading-[1.18] tracking-wide text-white md:text-[64px] lg:text-[74px]">
-            From Pá·thos with Lógos,
-            <br />
-            We Build Worlds
+          <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">
+            We Build Games Worth Playing
           </h1>
+
+          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">
+            Full-cycle game development for PC, console and mobile — from
+            concept and art direction to engineering, testing and launch.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
+            <Link
+              href="/schedule-a-call"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            >
+              Start Your Game
+              <ArrowRight size={16} strokeWidth={2.2} />
+            </Link>
+
+            <Link
+              href="#recent-games"
+              className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+            >
+              View Our Games
+            </Link>
+          </div>
+
+          <div className="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
+            {keywords.map((word, index) => (
+              <span key={word} className="flex items-center gap-3">
+                {index > 0 ? (
+                  <span className="h-1 w-1 rounded-full bg-[#d4d4d4]" />
+                ) : null}
+                <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#565656]">
+                  {word}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative w-full">
+          <div className="relative aspect-[4/3.4] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
+            <Image
+              src={HERO_IMG}
+              alt="Game developer working at a multi-monitor gaming setup"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

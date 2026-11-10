@@ -1,71 +1,90 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Multiplayer",
-    desc: "Studio-23 team has expertise in multiplayer game development services and other gaming areas which guarantees a thrilling gaming experience to the users with flawless end-to-end execution. Studio-23 and its expert game developers can flaunt their technical expertise to create an unparalleled multiplayer gaming experience.",
+    desc: "Our team has deep expertise in multiplayer game development and other gaming areas, guaranteeing a thrilling experience with flawless end-to-end execution — from netcode and matchmaking to live multiplayer systems.",
     image:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1000&auto=format&fit=crop",
   },
   {
     title: "Full Cycle Game Development",
-    desc: "Our experience and a solid skill set allow for offering custom, full-cycle game development. Creating your perfect gaming experience, we ensure it runs smoothly across all supported platforms. From game concept creation to post-release support, we apply our knowledge and insightful know-how to develop addictive and fun-to-play games.",
+    desc: "Our experience and a solid skill set allow for offering custom, full-cycle game development. From concept creation to post-release support, we ensure your game runs smoothly across all supported platforms.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556438064-2d7646166914?q=80&w=1000&auto=format&fit=crop",
   },
   {
     title: "Environment Art",
-    desc: "Studio-23 environment art team will help you to ideate, conceptualize, design, and execute a believable unique world utilizing a number of tools, bringing your idea of a game setting to life.",
+    desc: "Our environment art team helps you ideate, conceptualize, design and execute a believable, unique world — bringing your idea of a game setting to life.",
     image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000&auto=format&fit=crop",
   },
   {
     title: "Concept Art",
-    desc: "Our concept art team has extensive experience in providing 2D concept art for characters, and environments. We offer the best artwork that meets the requirements of customers’ in-game concept design.",
+    desc: "Our concept art team has extensive experience in providing 2D concept art for characters and environments, delivering artwork that meets your in-game art direction.",
     image:
       "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?q=80&w=1000&auto=format&fit=crop",
   },
   {
     title: "Level Design",
-    desc: "Our talented team of designers is living proof of how far imagination and professionalism can take you. Merging artistic excellence with endless creativity, our team designs exciting and engaging levels that will give the game the necessary atmosphere, environment, and characters to be a new market success.",
+    desc: "Our designers merge artistic excellence with gameplay clarity to craft exciting and engaging levels that give the game the atmosphere, environment and characters it needs to succeed.",
     image:
-      "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=1000&auto=format&fit=crop",
   },
 ];
 
 export default function OurServiceSection() {
   return (
-    <section className="bg-[#111615] px-4 py-16 text-white">
-      <div className="mx-auto max-w-[1180px]">
-        <h2 className="mb-8 text-center text-3xl font-bold text-[#ffa51f] md:text-4xl">
-          Our Service
-        </h2>
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Do
+          </p>
 
-        <div className="space-y-14">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Our Services
+          </h2>
+
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            End-to-end game development services — engineering, art and design
+            handled by one team.
+          </p>
+        </div>
+
+        <div className="mt-14 space-y-12 md:space-y-16">
           {services.map((item, index) => {
             const isReverse = index % 2 === 1;
 
             return (
               <div
                 key={item.title}
-                className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2"
+                className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14"
               >
-                <div className={isReverse ? "lg:order-2" : ""}>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-[260px] w-full object-cover"
-                  />
-                </div>
-
                 <div
-                  className={`${
-                    isReverse ? "lg:order-1 lg:text-left" : "lg:text-left"
+                  className={`relative w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7] ${
+                    isReverse ? "lg:order-2" : ""
                   }`}
                 >
-                  <h3 className="text-center text-2xl font-bold md:text-3xl lg:text-center">
+                  <div className="relative aspect-[16/10] w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 560px"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className={isReverse ? "lg:order-1" : ""}>
+                  <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-5 text-base font-semibold leading-7 text-white md:text-lg">
+                  <div className="mt-4 h-[3px] w-14 rounded-full bg-[#c91f28]" />
+
+                  <p className="mt-5 max-w-[520px] text-[15.5px] font-medium leading-[1.7] text-[#565656] md:text-[16.5px]">
                     {item.desc}
                   </p>
                 </div>

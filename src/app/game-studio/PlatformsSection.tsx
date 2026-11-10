@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -15,8 +16,8 @@ const platforms = [
     logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/GOG.com_logo.svg",
   },
   {
-    name: "Battle.net",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Blizzard_Battle.net_logo.svg",
+    name: "Nintendo Switch",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Nintendo_Switch_logo.svg",
   },
   {
     name: "PlayStation",
@@ -33,49 +34,68 @@ const platforms = [
 ];
 
 export default function PlatformsSection() {
-  return (
-    <section className="overflow-hidden bg-[#111615] px-4 py-16 text-white">
-      <div className="mx-auto max-w-[1500px]">
-        <h2 className="text-center text-4xl font-bold text-[#ffa51f] md:text-5xl">
-          Platforms
-        </h2>
+  const [reducedMotion, setReducedMotion] = useState(false);
 
-        <div className="mt-12">
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(query.matches);
+
+    update();
+    query.addEventListener("change", update);
+
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  return (
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Distribution
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Platforms We Ship On
+          </h2>
+
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Games we build run on the stores and consoles your players already
+            use.
+          </p>
+        </div>
+
+        <div className="mt-8 border-y border-[#ececec] py-6">
           <Swiper
             modules={[Autoplay]}
             loop={true}
-            speed={5000}
+            speed={reducedMotion ? 0 : 5000}
             slidesPerView={2}
             spaceBetween={70}
             allowTouchMove={false}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: false,
-            }}
+            autoplay={
+              reducedMotion
+                ? false
+                : {
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                    reverseDirection: false,
+                  }
+            }
             breakpoints={{
-              640: {
-                slidesPerView: 3,
-                spaceBetween: 80,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 100,
-              },
-              1280: {
-                slidesPerView: 6,
-                spaceBetween: 120,
-              },
+              640: { slidesPerView: 3, spaceBetween: 80 },
+              1024: { slidesPerView: 5, spaceBetween: 90 },
+              1280: { slidesPerView: 6, spaceBetween: 100 },
             }}
-            className="platform-swiper"
           >
-            {[...platforms, ...platforms].map((item, index) => (
-              <SwiperSlide key={`${item.name}-${index}`}>
-                <div className="flex h-[130px] items-center justify-center">
+            {platforms.map((item) => (
+              <SwiperSlide key={item.name}>
+                <div className="flex h-[110px] items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.logo}
                     alt={item.name}
-                    className="h-[95px] w-auto max-w-[150px] object-contain brightness-0 invert"
+                    className="h-[64px] w-auto max-w-[140px] object-contain opacity-60 grayscale transition duration-300 hover:opacity-90 hover:grayscale-0"
                   />
                 </div>
               </SwiperSlide>

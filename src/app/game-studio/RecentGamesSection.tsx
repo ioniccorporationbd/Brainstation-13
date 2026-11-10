@@ -1,100 +1,139 @@
+import Image from "next/image";
+import { Check, Play } from "lucide-react";
+
 const games = [
   {
     title: "Active Skater",
     subtitle: "Skaters gonna skate",
-    youtubeId: "dQw4w9WgXcQ",
+    image:
+      "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?q=80&w=800&auto=format&fit=crop",
     points: ["Interactive marketing solution", "Amazing gamepad controls"],
   },
   {
     title: "Football VR",
     subtitle: "Play as a goal keeper",
-    youtubeId: "ysz5S6PUM-U",
+    image:
+      "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=800&auto=format&fit=crop",
     points: ["Feel like realistic", "Interactive gaming experience"],
   },
   {
     title: "Project: Gunslinger",
     subtitle: "It’s time to duel",
-    youtubeId: "ScMzIvxBSi4",
+    image:
+      "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=800&auto=format&fit=crop",
     points: ["1 VS 1 Duels", "Casual Mode"],
   },
   {
     title: "Viquia Memory Game",
     subtitle: "Sharpen your memory",
-    youtubeId: "jNQXAC9IVRw",
+    image:
+      "https://images.unsplash.com/photo-1611996575749-79a3a250f948?q=80&w=800&auto=format&fit=crop",
     points: ["Swap Unmatching Pairs", "Casual Mode"],
   },
   {
     title: "Westwood Manor",
     subtitle: "Fear the unknown",
-    youtubeId: "aqz-KE-bpKQ",
+    image:
+      "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=800&auto=format&fit=crop",
     points: ["Story Rich Single Player", "Lovecraftian horror game"],
   },
   {
-    title: "Brainstation City 23",
+    title: "Magnetic City",
     subtitle: "Be nostalgic with futuristic features",
-    youtubeId: "M7lc1UVf-VE",
-    points: ["Procedural infinite level", "Increasing difficulty with leaderboard"],
+    image:
+      "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop",
+    points: [
+      "Procedural infinite level",
+      "Increasing difficulty with leaderboard",
+    ],
   },
   {
     title: "Arcade Game Concept",
     subtitle: "Run to survive",
-    youtubeId: "YE7VzlLtp-4",
-    points: ["Demo arcade game", "Defeat obstacles to reach the final destination"],
+    image:
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+    points: [
+      "Demo arcade game",
+      "Defeat obstacles to reach the final destination",
+    ],
   },
   {
     title: "Polar Penguin Racer",
     subtitle: "Customized Racing Game For PC",
-    youtubeId: "ysz5S6PUM-U",
+    image:
+      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=800&auto=format&fit=crop",
     points: ["Multiplayer game", "Avoid obstacles to reach final destination"],
   },
 ];
 
 export default function RecentGamesSection() {
   return (
-    <section className="bg-[#111615] px-4 py-16 text-white">
-      <div className="mx-auto max-w-[1520px]">
-        <h2 className="text-center text-4xl font-bold text-[#ffa51f] md:text-5xl">
-          Our Recent Games
-        </h2>
+    <section
+      id="recent-games"
+      className="w-full scroll-mt-24 bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]"
+    >
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Portfolio
+          </p>
 
-        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Our Recent Games
+          </h2>
+
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            A selection of games and interactive experiences delivered by our
+            team.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {games.map((game) => (
-            <div
+            <article
               key={game.title}
-              className="overflow-hidden rounded-sm bg-black shadow-[0_0_12px_rgba(0,0,0,0.8)]"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#ececec] bg-white transition-colors duration-300 hover:border-[#c91f28]"
             >
-              <div className="h-[210px] w-full bg-[#282828]">
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${game.youtubeId}`}
-                  title={game.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#f7f7f7]">
+                <Image
+                  src={game.image}
+                  alt={`${game.title} — game artwork`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 300px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
+
+                <span className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-[#c91f28] text-white">
+                  <Play size={14} fill="currentColor" strokeWidth={0} />
+                </span>
               </div>
 
-              <div className="px-4 pb-3 pt-3">
-                <h3 className="text-center text-3xl font-black leading-tight tracking-wide">
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {game.title}
                 </h3>
 
-                <p className="mt-4 text-center text-base font-bold">
+                <p className="mt-1 text-[13.5px] font-semibold text-[#c91f28]">
                   {game.subtitle}
                 </p>
 
-                <div className="mt-6 space-y-2">
+                <ul className="mt-4 space-y-2">
                   {game.points.map((point) => (
-                    <p key={point} className="text-base leading-5">
-                      🎮 {point}
-                    </p>
+                    <li
+                      key={point}
+                      className="flex items-start gap-2 text-[13.5px] font-medium leading-[1.5] text-[#565656]"
+                    >
+                      <Check
+                        size={14}
+                        strokeWidth={3}
+                        className="mt-[3px] shrink-0 text-[#c91f28]"
+                      />
+                      <span>{point}</span>
+                    </li>
                   ))}
-                </div>
-
-                <button className="mt-6 w-full rounded-sm bg-[#f9ae2a] py-3 text-base font-medium text-black">
-                  More Details
-                </button>
+                </ul>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
