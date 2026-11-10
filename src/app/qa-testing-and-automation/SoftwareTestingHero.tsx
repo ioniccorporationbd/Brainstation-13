@@ -1,50 +1,71 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const HERO_BG =
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=90";
+const HERO_IMG =
+  "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1400&auto=format&fit=crop";
 
-export default function DataMigrationHeroSection() {
+const keywords = ["Manual QA", "Automation", "API", "Security", "Performance"];
+
+export default function SoftwareTestingHero() {
   return (
-    <section className="relative min-h-[640px] w-full overflow-hidden bg-black">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${HERO_BG})`,
-        }}
-      />
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/35" />
-
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1400px] items-center px-5 py-[90px] sm:px-8 xl:px-0">
-        <div className="w-full max-w-[730px] bg-white/88 px-[34px] py-[48px] backdrop-blur-[2px] sm:px-[54px] sm:py-[62px] lg:ml-[80px]">
-          <h1 className="max-w-[560px] text-[46px] font-bold leading-[1.05] tracking-[-0.045em] text-black sm:text-[60px] lg:text-[66px]">
-            Data Migration
-            <br />
-            Services
-          </h1>
-
-          <p className="mt-[34px] max-w-[650px] text-[16px] font-normal leading-[1.9] text-black sm:text-[18px]">
-            Top Data Migration Services in Bangladesh, modernizing legacy
-            systems to SQL Server with secure, clean, and fast data transfer.
+    <section className="w-full bg-white px-6 pb-[72px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <div>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+            QA &amp; Automation
           </p>
 
-          <div className="mt-[38px] flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-[150px]">
+          <h1 className="max-w-[620px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">
+            Ship Software You Can Trust
+          </h1>
+
+          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">
+            Software testing as a service — a dedicated QA team that finds bugs
+            in realistic test environments and keeps every release dependable.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
+            <Link
+              href="/schedule-a-call"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            >
+              Book a Meeting
+              <ArrowRight size={16} strokeWidth={2.2} />
+            </Link>
+
             <Link
               href="/contact"
-              className="inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition hover:bg-[#f59b15]"
+              className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Instant Quote
             </Link>
+          </div>
 
-            <Link
-              href="/book-a-meeting"
-              className="inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition hover:bg-[#f59b15]"
-            >
-              Book a Meeting
-            </Link>
+          <div className="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
+            {keywords.map((word, index) => (
+              <span key={word} className="flex items-center gap-3">
+                {index > 0 ? (
+                  <span className="h-1 w-1 rounded-full bg-[#d4d4d4]" />
+                ) : null}
+                <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#565656]">
+                  {word}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative w-full">
+          <div className="relative aspect-[4/3.4] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
+            <Image
+              src={HERO_IMG}
+              alt="QA engineers reviewing test results on monitors"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

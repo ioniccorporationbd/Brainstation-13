@@ -1,26 +1,56 @@
+import Image from "next/image";
+
+const INTRO_IMG =
+  "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop";
+
 export default function TestingIntroSection() {
   return (
-    <section className="bg-white px-5 py-24">
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-12 md:grid-cols-2">
-        <p className="text-[20px] leading-[1.55] text-[#6f747b]">
-          Software Testing as a Service or TaaS is a cost-saving approach to
-          increase test execution speed with on-demand resources. STAS
-          represents an avenue for outsourcing many types of testing that are
-          demanded in today’s IT environment. Magnetic Solution Limited PLC. offers STAS
-          for organizations looking to ensure quality testing of applications
-          that require extensive automation and a short test execution cycle.
-        </p>
+    <section className="w-full bg-white px-6 pb-[88px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="relative w-full">
+          <div className="relative aspect-[4/4.2] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
+            <Image
+              src={INTRO_IMG}
+              alt="QA team reviewing application quality together"
+              fill
+              sizes="(max-width: 1024px) 100vw, 520px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-        <p className="text-[20px] leading-[1.55] text-[#6f747b]">
-          Magnetic Solution Limited PLC. specializes in simulating real-world testing
-          environments and finding bugs in the software product. By STAS you can
-          have a dedicated trained QA team working on the project On-demand with
-          dynamic assets and sanitized test data. The skills or resources to
-          carry out automation or manual testing can be intensive and varies
-          project to project. Here, we ensure the best approach to mitigate the
-          client’s demand for software quality with relevant testing activities
-          as per SDLC and performing at best.
-        </p>
+        <div>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Software Testing as a Service
+          </p>
+
+          <h2 className="max-w-[600px] text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Testing That Keeps Quality Predictable
+          </h2>
+
+          <div className="mt-6 space-y-5">
+            <p className="max-w-[620px] text-[16px] font-medium leading-[1.7] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+              Software Testing as a Service or TaaS is a cost-saving approach to
+              increase test execution speed with on-demand resources. STAS
+              represents an avenue for outsourcing many types of testing that
+              are demanded in today’s IT environment. Magnetic Solution Limited
+              offers STAS for organizations looking to ensure quality testing of
+              applications that require extensive automation and a short test
+              execution cycle.
+            </p>
+
+            <p className="max-w-[620px] text-[16px] font-medium leading-[1.7] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+              Magnetic Solution Limited specializes in simulating real-world
+              testing environments and finding bugs in the software product. By
+              STAS you can have a dedicated trained QA team working on the
+              project on-demand with dynamic assets and sanitized test data. The
+              skills or resources to carry out automation or manual testing can
+              be intensive and vary project to project. Here, we ensure the best
+              approach to mitigate the client’s demand for software quality with
+              relevant testing activities as per SDLC and performing at best.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
