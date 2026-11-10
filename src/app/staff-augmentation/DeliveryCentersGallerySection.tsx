@@ -13,23 +13,23 @@ type GalleryImage = {
 const galleryImages: GalleryImage[] = [
   {
     src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop",
-    alt: "Modern office workspace",
+    alt: "Modern collaborative workspace",
   },
   {
     src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop",
-    alt: "Office lounge area",
+    alt: "Open workspace lounge",
   },
   {
     src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop",
-    alt: "Team working together",
+    alt: "Team collaborating together",
   },
   {
     src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-    alt: "Open office interior",
+    alt: "Open modern office interior",
   },
   {
     src: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?q=80&w=1200&auto=format&fit=crop",
-    alt: "Office meeting space",
+    alt: "Meeting and collaboration space",
   },
   {
     src: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=1200&auto=format&fit=crop",
@@ -37,15 +37,15 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?q=80&w=1200&auto=format&fit=crop",
-    alt: "Office reception",
+    alt: "Workspace reception area",
   },
   {
     src: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?q=80&w=1200&auto=format&fit=crop",
-    alt: "Creative office area",
+    alt: "Creative workspace area",
   },
   {
     src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
-    alt: "Office team collaboration",
+    alt: "Team collaboration space",
   },
   {
     src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop",
@@ -55,10 +55,11 @@ const galleryImages: GalleryImage[] = [
 
 function GalleryCard({ image }: { image: GalleryImage }) {
   return (
-    <div className="h-[220px] w-[320px] shrink-0 overflow-hidden bg-[#ececec] md:h-[250px] md:w-[360px]">
+    <div className="h-[220px] w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#ececec] bg-[#ececec] md:h-[250px] md:w-[360px]">
       <img
         src={image.src}
         alt={image.alt}
+        loading="lazy"
         className="h-full w-full object-cover transition duration-500 hover:scale-105"
       />
     </div>
@@ -74,31 +75,31 @@ export default function DeliveryCentersGallerySection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#ffffff] py-[92px] text-[#0a0a0a]">
+    <section className="overflow-hidden bg-white py-[80px] text-[#0a0a0a] md:py-[92px]">
       <div className="mx-auto max-w-[1120px] px-6 text-center">
-        <h2 className="text-[42px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[54px]">
-          60,000+ SQFT Delivery Centers
+        <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">
+          Built for Collaborative Delivery
         </h2>
 
-        <p className="mx-auto mt-7 max-w-[760px] text-[21px] font-medium leading-[1.42] tracking-[-0.01em] text-[#565656]">
-          State-of-the-art facilities equipped with modern infrastructure to
-          deliver exceptional results for our clients
+        <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+          Modern, collaborative workspaces designed to keep distributed teams
+          aligned, focused, and shipping with confidence.
         </p>
       </div>
 
-      <div className="relative mt-[92px] space-y-[28px]">
-        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[120px] bg-gradient-to-r from-[#ffffff] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[120px] bg-gradient-to-l from-[#ffffff] to-transparent" />
+      <div className="relative mt-12 space-y-6">
+        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[120px] bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[120px] bg-gradient-to-l from-white to-transparent" />
 
-        {/* Top gallery: right to left */}
+        {/* Top gallery: right to left (pauses on hover) */}
         <Swiper
           modules={[Autoplay, FreeMode]}
           loop
           freeMode
           slidesPerView="auto"
-          spaceBetween={28}
+          spaceBetween={24}
           speed={7500}
-          allowTouchMove={true}
+          allowTouchMove
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -113,15 +114,15 @@ export default function DeliveryCentersGallerySection() {
           ))}
         </Swiper>
 
-        {/* Bottom gallery: left to right */}
+        {/* Bottom gallery: left to right (pauses on hover) */}
         <Swiper
           modules={[Autoplay, FreeMode]}
           loop
           freeMode
           slidesPerView="auto"
-          spaceBetween={28}
+          spaceBetween={24}
           speed={7500}
-          allowTouchMove={true}
+          allowTouchMove
           autoplay={{
             delay: 0,
             reverseDirection: true,
@@ -140,14 +141,6 @@ export default function DeliveryCentersGallerySection() {
           ))}
         </Swiper>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-30 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
 
       <style jsx global>{`
         .delivery-gallery-swiper .swiper-wrapper {

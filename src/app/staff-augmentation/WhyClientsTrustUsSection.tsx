@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Boxes,
   BrainCircuit,
@@ -14,11 +12,6 @@ import {
   RefreshCcw,
   ShieldCheck,
 } from "lucide-react";
-
-import { Autoplay, FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
 
 type TrustCard = {
   title: string;
@@ -101,99 +94,45 @@ const trustCards: TrustCard[] = [
   },
 ];
 
-function TrustCardItem({ card }: { card: TrustCard }) {
-  const Icon = card.icon;
-
-  return (
-    <div className="flex h-[240px] w-[430px] shrink-0 flex-col justify-between rounded-[8px] bg-white px-[34px] py-[32px] shadow-[0_12px_34px_rgba(0,0,0,0.08)]">
-      <div className="text-[#c91f28]">
-        <Icon size={38} strokeWidth={1.5} />
-      </div>
-
-      <div>
-        <h3 className="text-[26px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a]">
-          {card.title}
-        </h3>
-
-        <p className="mt-5 max-w-[360px] text-[15.5px] font-semibold leading-[1.55] tracking-[-0.01em] text-[#565656]">
-          {card.description}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function WhyClientsTrustUsSection() {
-  const repeatedCards = [...trustCards, ...trustCards, ...trustCards];
-
   return (
-    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[90px] text-[#0a0a0a]">
-      {/* Circle background */}
-      <div className="pointer-events-none absolute left-1/2 top-[95px] h-[760px] w-[760px] -translate-x-1/2 rounded-full">
-        {Array.from({ length: 34 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute left-1/2 top-1/2 rounded-full border border-[#c91f28]/15"
-            style={{
-              width: `${760 - index * 18}px`,
-              height: `${760 - index * 18}px`,
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <h2 className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Why Clients Trust Us
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-[520px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
+            Complete solution components working together for your success
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {trustCards.map((card) => {
+            const Icon = card.icon;
+
+            return (
+              <article
+                key={card.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="text-[#c91f28]">
+                  <Icon size={26} strokeWidth={1.7} />
+                </div>
+
+                <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                  {card.title}
+                </h3>
+
+                <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                  {card.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
       </div>
-
-      <div className="relative z-10 mx-auto max-w-[1220px] text-center">
-        <h2 className="text-[38px] font-normal leading-none tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">
-          Why Clients Trust Us
-        </h2>
-
-        <p className="mx-auto mt-6 max-w-[470px] text-[17px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#565656]">
-          Complete solution components working together for your success
-        </p>
-      </div>
-
-      <div className="relative z-10 mt-[92px] overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[150px] bg-gradient-to-r from-[#ffffff] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[150px] bg-gradient-to-l from-[#ffffff] to-transparent" />
-
-        <Swiper
-          modules={[Autoplay, FreeMode]}
-          loop
-          freeMode
-          slidesPerView="auto"
-          spaceBetween={30}
-          speed={7000}
-          allowTouchMove={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          className="why-clients-trust-swiper"
-        >
-          {repeatedCards.map((card, index) => (
-            <SwiperSlide key={`${card.title}-${index}`} className="!w-auto">
-              <TrustCardItem card={card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
-
-      <style jsx global>{`
-        .why-clients-trust-swiper .swiper-wrapper {
-          transition-timing-function: linear !important;
-          align-items: center;
-        }
-      `}</style>
     </section>
   );
 }

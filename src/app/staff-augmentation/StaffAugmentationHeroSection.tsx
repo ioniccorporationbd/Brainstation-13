@@ -123,15 +123,6 @@ export default function StaffAugmentationHeroSection() {
         </div>
       </div>
 
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
-
       <style jsx global>{`
         .staff-hero-pagination .swiper-pagination-bullet {
           width: 20px;

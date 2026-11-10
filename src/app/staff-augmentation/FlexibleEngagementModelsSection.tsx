@@ -150,7 +150,7 @@ function ExpandableCell({
         onClick={() => setOpen((current) => !current)}
         className="flex w-full items-start justify-between gap-4 text-left"
       >
-        <span className="max-w-[185px] text-[17px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+        <span className="max-w-[185px] text-[16px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28]">
           {short}
         </span>
 
@@ -164,7 +164,7 @@ function ExpandableCell({
       </button>
 
       {open && (
-        <p className="mt-4 max-w-[220px] text-[14px] font-medium leading-[1.5] tracking-[-0.025em] text-[#565656]">
+        <p className="mt-4 max-w-[220px] text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
           {detail}
         </p>
       )}
@@ -174,97 +174,101 @@ function ExpandableCell({
 
 export default function FlexibleEngagementModelsSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#0a0a0a]">
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1320px]">
-        <div className="mx-auto max-w-[980px] text-center">
-          <h2 className="text-[42px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[52px]">
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">
             Flexible Engagement Models
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[920px] text-[21px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656]">
+          <p className="mx-auto mt-5 max-w-[820px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
             Compare our flexible IT staff augmentation models to find the
             perfect fit for your project needs and business objectives.
           </p>
         </div>
 
-        <div className="mt-[96px] grid grid-cols-1 gap-[32px] xl:grid-cols-[1fr_280px]">
-          <div className="overflow-hidden rounded-[8px] bg-[#ffffff] px-[42px] py-[46px]">
-            <div className="grid grid-cols-[250px_1fr_1fr_1fr] gap-x-[42px]">
-              <div>
-                <h3 className="text-[28px] font-bold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
-                  Comparison <br />
-                  Aspects
-                </h3>
+        <div className="mt-12 grid grid-cols-1 gap-6 xl:grid-cols-[1fr_300px]">
+          {/* Comparison table card */}
+          <div className="overflow-x-auto rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 md:px-8 md:py-9">
+            <div className="min-w-[760px]">
+              <div className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px]">
+                <div>
+                  <h3 className="text-[22px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a]">
+                    Comparison <br />
+                    Aspects
+                  </h3>
+                </div>
+
+                {(["remote", "hybrid", "flexiRemote"] as ModelKey[]).map(
+                  (key) => (
+                    <div key={key}>
+                      <h3 className="text-[22px] font-bold leading-none tracking-[-0.015em] text-[#0a0a0a]">
+                        {modelTitles[key]}
+                      </h3>
+
+                      {key === "remote" && (
+                        <span className="mt-3 inline-flex rounded-full bg-[#0a0a0a] px-4 py-1.5 text-[12px] font-bold text-white">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                  )
+                )}
               </div>
 
-              {(["remote", "hybrid", "flexiRemote"] as ModelKey[]).map(
-                (key) => (
-                  <div key={key}>
-                    <h3 className="text-[28px] font-bold leading-none tracking-[-0.02em] text-[#0a0a0a]">
-                      {modelTitles[key]}
-                    </h3>
+              <div className="mt-8">
+                {rows.map((row) => {
+                  const Icon = row.icon;
 
-                    {key === "remote" && (
-                      <span className="mt-3 inline-flex rounded-full bg-[#0a0a0a] px-4 py-1.5 text-[13px] font-bold text-white">
-                        Popular
-                      </span>
-                    )}
-                  </div>
-                )
-              )}
-            </div>
+                  return (
+                    <div
+                      key={row.aspect}
+                      className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px] border-b border-[#ececec] py-7 last:border-b-0"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon
+                          size={20}
+                          strokeWidth={1.7}
+                          className="shrink-0 text-[#c91f28]"
+                        />
 
-            <div className="mt-[44px]">
-              {rows.map((row) => {
-                const Icon = row.icon;
+                        <span className="text-[17px] font-bold leading-tight tracking-[-0.015em] text-[#0a0a0a]">
+                          {row.aspect}
+                        </span>
+                      </div>
 
-                return (
-                  <div
-                    key={row.aspect}
-                    className="grid grid-cols-[250px_1fr_1fr_1fr] gap-x-[42px] border-b border-[#9ca3af] py-[30px] last:border-b-0"
-                  >
-                    <div className="flex items-center gap-4">
-                      <Icon
-                        size={24}
-                        strokeWidth={1.7}
-                        className="shrink-0 text-[#0a0a0a]"
+                      <ExpandableCell
+                        short={row.values.remote.short}
+                        detail={row.values.remote.detail}
                       />
 
-                      <span className="text-[22px] font-bold leading-tight tracking-[-0.015em] text-[#0a0a0a]">
-                        {row.aspect}
-                      </span>
+                      <ExpandableCell
+                        short={row.values.hybrid.short}
+                        detail={row.values.hybrid.detail}
+                      />
+
+                      <ExpandableCell
+                        short={row.values.flexiRemote.short}
+                        detail={row.values.flexiRemote.detail}
+                      />
                     </div>
-
-                    <ExpandableCell
-                      short={row.values.remote.short}
-                      detail={row.values.remote.detail}
-                    />
-
-                    <ExpandableCell
-                      short={row.values.hybrid.short}
-                      detail={row.values.hybrid.detail}
-                    />
-
-                    <ExpandableCell
-                      short={row.values.flexiRemote.short}
-                      detail={row.values.flexiRemote.detail}
-                    />
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
 
-          <div className="rounded-[8px] bg-[#ffffff] px-[42px] py-[46px]">
-            <h3 className="text-[28px] font-bold leading-none tracking-[-0.02em] text-[#0a0a0a]">
+          {/* Shared talents card */}
+          <div className="rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 md:px-8 md:py-9">
+            <h3 className="text-[22px] font-bold leading-none tracking-[-0.015em] text-[#0a0a0a]">
               Shared Talents
             </h3>
 
-            <div className="mt-[69px]">
+            <div className="mt-8">
               {rows.map((row) => (
                 <div
                   key={row.aspect}
-                  className="border-b border-[#9ca3af] py-[30px] first:pt-0 last:border-b-0"
+                  className="border-b border-[#ececec] py-6 first:pt-0 last:border-b-0"
                 >
                   <ExpandableCell
                     short={row.values.sharedTalents.short}
@@ -276,14 +280,6 @@ export default function FlexibleEngagementModelsSection() {
           </div>
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

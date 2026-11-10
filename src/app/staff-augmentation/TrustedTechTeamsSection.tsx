@@ -1,141 +1,151 @@
 "use client";
 
-import { Autoplay, FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
+import Image from "next/image";
 
 type LogoItem = {
   name: string;
-  text: string;
-  mark?: string;
+  image: string;
+  width: number;
+  height: number;
 };
 
 const logos: LogoItem[] = [
   {
-    name: "Virtual Affairs",
-    text: "Virtual Affairs",
-    mark: "◆",
-  },
-  {
-    name: "Vallie",
-    text: "vallie",
-    mark: "◇",
-  },
-  {
-    name: "Robi",
-    text: "robi",
-    mark: "◩",
-  },
-  {
-    name: "VEON",
-    text: "VEON",
-  },
-  {
-    name: "Sanofi",
-    text: "SANOFI",
-    mark: "●",
+    name: "Elenor",
+    image: "/images/trusted/elenor.svg",
+    width: 90,
+    height: 32,
   },
   {
     name: "ShareBike",
-    text: "ShareBike",
+    image: "/images/trusted/sharebike.svg",
+    width: 140,
+    height: 36,
   },
   {
     name: "Syngenta",
-    text: "syngenta",
+    image: "/images/trusted/syngenta.svg",
+    width: 135,
+    height: 38,
   },
   {
-    name: "Tech Team",
-    text: "TechCorp",
-    mark: "◈",
+    name: "Virtual Affairs",
+    image: "/images/trusted/virtual-affairs.svg",
+    width: 145,
+    height: 34,
   },
   {
-    name: "Enterprise",
-    text: "ENTERPRISE",
+    name: "Vallie",
+    image: "/images/trusted/vallie.svg",
+    width: 125,
+    height: 36,
+  },
+  {
+    name: "Robi",
+    image: "/images/trusted/robi.svg",
+    width: 115,
+    height: 38,
+  },
+  {
+    name: "Tennant",
+    image: "/images/trusted/tennant.svg",
+    width: 105,
+    height: 38,
   },
 ];
 
-function LogoCard({ logo }: { logo: LogoItem }) {
-  return (
-    <div className="group flex h-[70px] min-w-[180px] items-center justify-center">
-      <div className="flex items-center gap-2 text-white/55 grayscale transition duration-300 group-hover:text-white group-hover:opacity-100">
-        {logo.mark && (
-          <span className="text-[26px] font-bold leading-none text-white/45 transition duration-300 group-hover:text-white">
-            {logo.mark}
-          </span>
-        )}
-
-        <span
-          className={`font-bold leading-none tracking-[-0.015em] ${
-            logo.name === "VEON"
-              ? "text-[34px] font-normal tracking-[0.12em]"
-              : logo.name === "Sanofi"
-                ? "text-[27px] tracking-[0.06em]"
-                : logo.name === "Virtual Affairs"
-                  ? "text-[17px] font-medium"
-                  : "text-[27px]"
-          }`}
-        >
-          {logo.text}
-        </span>
-      </div>
-    </div>
-  );
-}
+const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function TrustedTechTeamsSection() {
-  const repeatedLogos = [...logos, ...logos, ...logos];
-
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0a] px-6 py-[88px] text-white">
-      <div className="mx-auto max-w-[1320px]">
-        <div className="text-center">
-          <h2 className="text-[24px] font-bold leading-[1.35] tracking-[-0.018em] text-white md:text-[30px]">
-            Trusted By Fast-Moving Tech Teams <br />
-            From Startups to Enterprises
+    <section className="w-full overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto w-full max-w-[1320px]">
+        <div className="staff-trusted-heading text-center">
+          <h2 className="text-[26px] font-bold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] sm:text-[30px] lg:text-[32px]">
+            Trusted By Fast-Moving Tech Teams
           </h2>
+
+          <p className="mt-[6px] text-[24px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#565656] sm:text-[28px] lg:text-[30px]">
+            From Startups to Enterprises
+          </p>
+        </div>
+
+        <div className="staff-trusted-slider relative mt-14 w-full overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-white to-transparent max-sm:w-[45px]" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-white to-transparent max-sm:w-[45px]" />
+
+          <div className="staff-trusted-track flex w-max items-center gap-[88px]">
+            {duplicatedLogos.map((logo, index) => (
+              <div
+                key={`${logo.name}-${index}`}
+                className="flex h-[44px] min-w-[130px] items-center justify-center"
+              >
+                <Image
+                  src={logo.image}
+                  alt={logo.name}
+                  width={logo.width}
+                  height={logo.height}
+                  className="h-auto max-h-[42px] w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="relative mt-[94px] overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[150px] bg-gradient-to-r from-[#0a0a0a] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[150px] bg-gradient-to-l from-[#0a0a0a] to-transparent" />
-
-        <Swiper
-          modules={[Autoplay, FreeMode]}
-          loop={true}
-          freeMode={true}
-          slidesPerView="auto"
-          spaceBetween={72}
-          speed={6500}
-          allowTouchMove={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          className="trusted-tech-swiper"
-        >
-          {repeatedLogos.map((logo, index) => (
-            <SwiperSlide key={`${logo.name}-${index}`} className="!w-auto">
-              <LogoCard logo={logo} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/35">
-        Powered by NeuralFlow
-      </span>
-
       <style jsx global>{`
-        .trusted-tech-swiper .swiper-wrapper {
-          transition-timing-function: linear !important;
-          align-items: center;
+        .staff-trusted-heading {
+          animation: staffTrustedFade 1.2s ease both;
+        }
+
+        .staff-trusted-track {
+          padding-right: 88px;
+          animation: staffTrustedScroll 18s linear infinite;
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+        }
+
+        /* Hover pauses the marquee in place; leaving resumes from the same spot */
+        .staff-trusted-slider:hover .staff-trusted-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes staffTrustedFade {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes staffTrustedScroll {
+          from {
+            transform: translateX(0);
+          }
+
+          to {
+            transform: translateX(-25%);
+          }
+        }
+
+        @media (max-width: 767px) {
+          .staff-trusted-track {
+            gap: 48px;
+            padding-right: 48px;
+            animation-duration: 14s;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .staff-trusted-track,
+          .staff-trusted-heading {
+            animation: none;
+          }
         }
       `}</style>
     </section>

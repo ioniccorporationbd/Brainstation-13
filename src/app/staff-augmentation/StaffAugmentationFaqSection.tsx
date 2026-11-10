@@ -49,39 +49,32 @@ export default function StaffAugmentationFaqSection() {
   const hasMore = visibleCount < faqs.length;
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#0a0a0a]">
-      <div className="mx-auto max-w-[1320px]">
-        <h2 className="text-[48px] font-normal leading-none tracking-[-0.02em] text-[#0a0a0a] md:text-[60px]">
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1000px]">
+        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">
           Frequently Asked Questions
         </h2>
 
-        <div className="mt-[96px]">
+        <div className="mt-12">
           {visibleFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
-              <div
-                key={faq.question}
-                className={`border-b border-[#ececec] ${
-                  index === visibleFaqs.length - 1 && !isOpen
-                    ? "opacity-55"
-                    : ""
-                }`}
-              >
+              <div key={faq.question} className="border-b border-[#ececec]">
                 <button
                   type="button"
                   onClick={() =>
                     setOpenIndex((current) => (current === index ? null : index))
                   }
-                  className="flex w-full items-center justify-between gap-8 py-[34px] text-left"
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="max-w-[980px] text-[24px] font-bold leading-[1.35] tracking-[-0.018em] text-[#0a0a0a] md:text-[30px]">
+                  <span className="max-w-[840px] text-[17px] font-semibold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[19px]">
                     {faq.question}
                   </span>
 
                   <Plus
-                    size={28}
-                    strokeWidth={1.6}
+                    size={22}
+                    strokeWidth={1.8}
                     className={`shrink-0 text-[#c91f28] transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
                     }`}
@@ -91,12 +84,12 @@ export default function StaffAugmentationFaqSection() {
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     isOpen
-                      ? "grid-rows-[1fr] pb-[34px] opacity-100"
+                      ? "grid-rows-[1fr] pb-6 opacity-100"
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-[900px] text-[18px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[20px]">
+                    <p className="max-w-[820px] text-[15px] font-medium leading-[1.7] tracking-[-0.01em] text-[#565656] md:text-[16px]">
                       {faq.answer}
                     </p>
                   </div>
@@ -107,26 +100,18 @@ export default function StaffAugmentationFaqSection() {
         </div>
 
         {hasMore && (
-          <div className="mt-[36px] flex justify-center">
+          <div className="mt-8 flex justify-center">
             <button
               type="button"
               onClick={() => setVisibleCount(faqs.length)}
-              className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-[#c91f28] text-white shadow-[0_14px_36px_rgba(201,31,40,0.30)] transition hover:-translate-y-1 hover:scale-[1.03] hover:bg-[#c91f28]"
-              aria-label="Show more questions"
+              className="inline-flex items-center gap-2 rounded-full border border-[#ececec] px-6 py-3 text-[14px] font-semibold tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28]"
             >
-              <ChevronDown size={30} strokeWidth={2.4} />
+              Show more questions
+              <ChevronDown size={16} strokeWidth={2} />
             </button>
           </div>
         )}
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
