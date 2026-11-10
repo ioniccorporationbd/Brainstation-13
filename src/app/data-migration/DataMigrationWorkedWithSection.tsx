@@ -1,177 +1,109 @@
 "use client";
 
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
+import { useState } from "react";
 
 type ClientLogo = {
   name: string;
   image: string;
-  className?: string;
+  height: string;
 };
 
 const clientLogos: ClientLogo[] = [
-  {
-    name: "Grameenphone",
-    image: "https://logo.clearbit.com/grameenphone.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "ACI Limited",
-    image: "https://logo.clearbit.com/aci-bd.com",
-    className: "h-[82px]",
-  },
-  {
-    name: "Pickaboo",
-    image: "https://logo.clearbit.com/pickaboo.com",
-    className: "h-[68px]",
-  },
-  {
-    name: "Kiksha",
-    image: "https://logo.clearbit.com/kiksha.com",
-    className: "h-[58px]",
-  },
-  {
-    name: "PriyoShop",
-    image: "https://logo.clearbit.com/priyoshop.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "City Bank",
-    image: "https://logo.clearbit.com/thecitybank.com",
-    className: "h-[105px]",
-  },
-  {
-    name: "UCB",
-    image: "https://logo.clearbit.com/ucb.com.bd",
-    className: "h-[66px]",
-  },
-  {
-    name: "AB Bank",
-    image: "https://logo.clearbit.com/abbl.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "Robi",
-    image: "https://logo.clearbit.com/robi.com.bd",
-    className: "h-[62px]",
-  },
-  {
-    name: "bKash",
-    image: "https://logo.clearbit.com/bkash.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "MetLife",
-    image: "https://logo.clearbit.com/metlife.com",
-    className: "h-[62px]",
-  },
-  {
-    name: "Nissan",
-    image: "https://logo.clearbit.com/nissan-global.com",
-    className: "h-[62px]",
-  },
+  { name: "Grameenphone", image: "https://unavatar.io/grameenphone.com", height: "h-10" },
+  { name: "ACI Limited", image: "https://unavatar.io/aci-bd.com", height: "h-10" },
+  { name: "Pickaboo", image: "https://unavatar.io/pickaboo.com", height: "h-10" },
+  { name: "Kiksha", image: "https://unavatar.io/kiksha.com", height: "h-10" },
+  { name: "PriyoShop", image: "https://unavatar.io/priyoshop.com", height: "h-10" },
+  { name: "City Bank", image: "https://unavatar.io/thecitybank.com", height: "h-12" },
+  { name: "UCB", image: "https://unavatar.io/ucb.com.bd", height: "h-11" },
+  { name: "AB Bank", image: "https://unavatar.io/abbl.com", height: "h-11" },
+  { name: "Robi", image: "https://unavatar.io/robi.com.bd", height: "h-10" },
+  { name: "bKash", image: "https://unavatar.io/bkash.com", height: "h-10" },
+  { name: "MetLife", image: "https://unavatar.io/metlife.com", height: "h-10" },
+  { name: "Nissan", image: "https://unavatar.io/nissan-global.com", height: "h-12" },
 ];
+
+function ClientLogoImg({ logo }: { logo: ClientLogo }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="px-2 text-center text-[16px] font-bold leading-tight tracking-[-0.01em] text-[#0a0a0a]">
+        {logo.name}
+      </span>
+    );
+  }
+
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={logo.image}
+      alt={logo.name}
+      className={`${logo.height} w-auto max-w-[150px] object-contain`}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
+function LogoTrack({ prefix }: { prefix: string }) {
+  return (
+    <div className="flex shrink-0">
+      {clientLogos.map((logo) => (
+        <div key={`${prefix}-${logo.name}`} className="shrink-0 px-3">
+          <div className="flex h-[100px] w-[190px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
+            <ClientLogoImg logo={logo} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function DataMigrationWorkedWithSection() {
   return (
-    <section className="w-full overflow-hidden bg-white py-[96px] md:py-[122px] lg:py-[145px]">
-      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 xl:px-0">
-        <div className="text-center">
-          <h2 className="text-[38px] font-bold leading-[1.15] tracking-[-0.04em] text-black sm:text-[48px] lg:text-[54px]">
-            Who we&apos;ve worked with
-          </h2>
+    <section className="w-full overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px] text-center">
+        <h2 className="text-[22px] font-bold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">
+          Trusted by fast-moving teams, from startups to enterprises
+        </h2>
+      </div>
 
-          <div className="mx-auto mt-[20px] h-[1px] w-[118px] bg-[#159bd7]" />
+      {/* Continuous right-to-left marquee */}
+      <div className="relative mt-10 w-full">
+        <div className="dm-clients overflow-hidden">
+          <div className="dm-clients-track flex w-max">
+            <LogoTrack prefix="a" />
+            <LogoTrack prefix="b" />
+          </div>
         </div>
 
-        <div className="mx-auto mt-[132px] w-full max-w-[1040px]">
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            loop
-            speed={850}
-            slidesPerView={1}
-            spaceBetween={36}
-            autoplay={{
-              delay: 2300,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-              bulletClass: "client-bullet",
-              bulletActiveClass: "client-bullet-active",
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 42,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 54,
-              },
-              1024: {
-                slidesPerView: 6,
-                spaceBetween: 58,
-              },
-            }}
-            className="client-logo-swiper pb-[100px]"
-          >
-            {clientLogos.map((client) => (
-              <SwiperSlide key={client.name}>
-                <div className="flex h-[112px] items-center justify-center">
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    loading="lazy"
-                    className={`${
-                      client.className ?? "h-[62px]"
-                    } w-auto max-w-[180px] object-contain transition duration-300 hover:scale-105`}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-28" />
       </div>
 
       <style jsx global>{`
-        .client-logo-swiper {
-          position: relative;
+        @keyframes dm-clients-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
         }
 
-        .client-logo-swiper .swiper-pagination {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          z-index: 20;
-          display: flex;
-          width: auto;
-          transform: translateX(-50%);
-          align-items: center;
-          gap: 13px;
+        .dm-clients-track {
+          animation: dm-clients-scroll 44s linear infinite;
         }
 
-        .client-bullet {
-          display: block;
-          height: 7px;
-          width: 7px;
-          cursor: pointer;
-          border-radius: 999px;
-          background: #d7def0;
-          transition: all 0.25s ease;
+        .dm-clients:hover .dm-clients-track,
+        .dm-clients:focus-within .dm-clients-track {
+          animation-play-state: paused;
         }
 
-        .client-bullet-active {
-          background: #315fdc;
-        }
-
-        @media (max-width: 767px) {
-          .client-logo-swiper {
-            padding-bottom: 78px !important;
+        @media (prefers-reduced-motion: reduce) {
+          .dm-clients-track {
+            animation: none;
           }
         }
       `}</style>
