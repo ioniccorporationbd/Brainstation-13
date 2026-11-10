@@ -1,16 +1,19 @@
-import React from "react";
+import { Lightbulb, TrendingUp, Wrench } from "lucide-react";
 
 export default function StockPriceAboutSection() {
   return (
-    <section className="w-full bg-white py-[70px] md:py-[86px] lg:py-[96px]">
-      <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 xl:px-0">
-        {/* Top About */}
-        <div>
-          <h2 className="text-[30px] font-bold leading-[1.25] tracking-[-0.025em] text-black sm:text-[34px] lg:text-[36px]">
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[860px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Overview
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             About Stock Price Prediction
           </h2>
 
-          <p className="mt-[26px] max-w-[1120px] text-[23px] font-light italic leading-[1.65] tracking-[-0.02em] text-[#7b7f86] sm:text-[26px] lg:text-[28px]">
+          <p className="mx-auto mt-5 max-w-[780px] text-[16px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[17px]">
             Our stock price prediction model can predict the most profitable
             time for buying or selling a stock. For this prediction, it needs a
             data-set of that stock so that the model can learn the price
@@ -19,45 +22,55 @@ export default function StockPriceAboutSection() {
           </p>
         </div>
 
-        {/* Problem Solution */}
-        <div className="mt-[52px] grid grid-cols-1 gap-[58px] md:grid-cols-2 md:gap-[90px]">
-          <div>
-            <h3 className="text-[30px] font-bold leading-[1.25] tracking-[-0.025em] text-black sm:text-[34px]">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+              <Wrench size={22} strokeWidth={1.8} />
+            </div>
+
+            <h3 className="mt-5 text-[18px] font-bold tracking-[-0.01em] text-[#0a0a0a]">
               Problem
             </h3>
 
-            <p className="mt-[20px] max-w-[500px] text-[20px] font-normal leading-[1.5] tracking-[-0.015em] text-[#6f747b] sm:text-[22px]">
-              It’s quite challenging for humans to predict the most accurate
-              &amp; profitable time to buy and sell a stock without analyzing
-              its previous history of the price timeline.
+            <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+              It&apos;s quite challenging for humans to predict the most accurate
+              and profitable time to buy and sell a stock without analyzing its
+              previous history of the price timeline.
             </p>
-          </div>
+          </article>
 
-          <div>
-            <h3 className="text-[30px] font-bold leading-[1.25] tracking-[-0.025em] text-black sm:text-[34px]">
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+              <Lightbulb size={22} strokeWidth={1.8} />
+            </div>
+
+            <h3 className="mt-5 text-[18px] font-bold tracking-[-0.01em] text-[#0a0a0a]">
               Solution
             </h3>
 
-            <p className="mt-[20px] max-w-[520px] text-[20px] font-normal leading-[1.5] tracking-[-0.015em] text-[#6f747b] sm:text-[22px]">
-              Simple linear regression was used to predict the stock price
-              ahead of time and the random seed was used to start the buying
-              point. So that with this model individuals can buy and sell any
-              stock ensuring the most profitable action.
+            <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+              Simple linear regression was used to predict the stock price ahead
+              of time and the random seed was used to start the buying point, so
+              individuals can buy and sell any stock with the most profitable
+              action.
             </p>
-          </div>
-        </div>
+          </article>
 
-        {/* Business Impact */}
-        <div className="mt-[86px]">
-          <h3 className="text-[30px] font-bold leading-[1.25] tracking-[-0.025em] text-black sm:text-[34px]">
-            Business Impact
-          </h3>
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+              <TrendingUp size={22} strokeWidth={1.8} />
+            </div>
 
-          <p className="mt-[22px] max-w-[1060px] text-[23px] font-light leading-[1.55] tracking-[-0.02em] text-[#7b7f86] sm:text-[26px] lg:text-[28px]">
-            By predicting the appropriate time for stock exchange by AI-enabled
-            solution one can eliminate the high risk of losing money in the
-            stock exchange market and can play safe all the time.
-          </p>
+            <h3 className="mt-5 text-[18px] font-bold tracking-[-0.01em] text-[#0a0a0a]">
+              Business Impact
+            </h3>
+
+            <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+              By predicting the appropriate time for stock exchange through an
+              AI-enabled solution, one can eliminate the high risk of losing
+              money in the stock market and stay safe.
+            </p>
+          </article>
         </div>
       </div>
     </section>

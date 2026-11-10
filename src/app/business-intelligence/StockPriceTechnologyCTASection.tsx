@@ -1,61 +1,160 @@
-import { FaCircleCheck } from "react-icons/fa6";
+"use client";
 
-const technologies = ["scikit learn", "numpy", "react", "flask"];
+import { useState } from "react";
+import Link from "next/link";
+
+type ToolLogo = {
+  name: string;
+  image: string;
+  height: string;
+};
+
+const technologies: ToolLogo[] = [
+  {
+    name: "scikit-learn",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+    height: "h-12",
+  },
+  {
+    name: "NumPy",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original-wordmark.svg",
+    height: "h-9",
+  },
+  {
+    name: "React",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+    height: "h-9",
+  },
+  {
+    name: "Flask",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg",
+    height: "h-10",
+  },
+];
+
+function ToolLogoImg({ tool }: { tool: ToolLogo }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="px-2 text-center text-[15px] font-bold leading-tight text-[#0a0a0a]">
+        {tool.name}
+      </span>
+    );
+  }
+
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={tool.image}
+      alt={tool.name}
+      loading="lazy"
+      className={`${tool.height} w-auto max-w-[120px] object-contain`}
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
+function ToolTrack({ prefix }: { prefix: string }) {
+  return (
+    <div className="flex shrink-0">
+      {technologies.map((tool) => (
+        <div key={`${prefix}-${tool.name}`} className="shrink-0 px-3">
+          <div className="flex h-[104px] w-[180px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
+            <ToolLogoImg tool={tool} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function StockPriceTechnologyCTASection() {
   return (
-    <section className="w-full">
-      {/* Technology Used */}
-      <div className="w-full bg-[#7b8084] py-[82px] md:py-[92px]">
-        <div className="mx-auto w-full max-w-[1200px] px-5 text-center sm:px-8 xl:px-0">
-          <h2 className="text-[42px] font-bold leading-[1.15] tracking-[-0.035em] text-white sm:text-[52px]">
+    <section className="w-full overflow-hidden bg-white px-6 pt-[8px] pb-[80px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Our Stack
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Technology Used
           </h2>
 
-          <div className="mx-auto mt-[18px] h-[2px] w-[118px] bg-[#159bd7]" />
-
-          <div className="mt-[30px] flex flex-wrap items-center justify-center gap-x-[34px] gap-y-[16px]">
-            {technologies.map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-[10px] text-[22px] font-semibold text-white sm:text-[26px]"
-              >
-                <FaCircleCheck className="text-[22px] text-white sm:text-[24px]" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            The real, open-source tools that power this prediction model.
+          </p>
         </div>
       </div>
 
-      {/* CTA Phone Section - no white gap */}
-      <div className="w-full bg-[#0789ae]">
-        <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-8 px-5 py-[42px] sm:px-8 md:flex-row md:items-center md:justify-between xl:px-0">
+      {/* Continuous marquee slider */}
+      <div className="relative mt-12 w-full">
+        <div className="bi-tools overflow-hidden">
+          <div className="bi-tools-track flex w-max">
+            <ToolTrack prefix="a" />
+            <ToolTrack prefix="b" />
+            <ToolTrack prefix="c" />
+            <ToolTrack prefix="d" />
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-28" />
+      </div>
+
+      {/* CTA */}
+      <div className="mx-auto mt-16 max-w-[1240px]">
+        <div className="flex flex-col items-center gap-6 rounded-2xl bg-[#c91f28] px-6 py-10 text-center md:flex-row md:justify-between md:px-10 md:text-left">
           <div>
-            <h3 className="text-[26px] font-semibold leading-[1.25] text-white sm:text-[30px]">
-              Would like to start a project with us?
+            <h3 className="text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-white md:text-[26px]">
+              Would you like to start a project with us?
             </h3>
 
-            <p className="mt-[18px] text-[14px] font-normal text-white">
-              Feel free to drop an email{" "}
-              <a
-                href="mailto:sales@brainstation-23.com"
-                className="hover:underline"
-              >
-                (sales@brainstation-23.com)
-              </a>{" "}
-              and share your idea.
+            <p className="mt-2.5 text-[14px] font-medium leading-[1.5] text-white/85">
+              Share your idea and our team will help you turn it into a working
+              product.
             </p>
           </div>
 
-          <a
-            href="tel:+8801404055226"
-            className="inline-flex h-[50px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[34px] text-[16px] font-bold text-black transition hover:bg-white hover:text-[#0789ae]"
+          <Link
+            href="/contact"
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-8 py-3.5 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#f7e6e7]"
           >
-            +8801404055226
-          </a>
+            Contact Us
+          </Link>
         </div>
       </div>
+
+      <style jsx global>{`
+        @keyframes bi-tools-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .bi-tools-track {
+          animation: bi-tools-scroll 26s linear infinite;
+        }
+
+        .bi-tools:hover .bi-tools-track,
+        .bi-tools:focus-within .bi-tools-track {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .bi-tools-track {
+            animation: none;
+          }
+        }
+      `}</style>
     </section>
   );
 }
