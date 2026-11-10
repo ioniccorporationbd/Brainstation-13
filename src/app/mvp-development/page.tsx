@@ -4,7 +4,6 @@ import MvpIntroSection from './MvpIntroSection';
 import MvpBenefitsSection from './MvpBenefitsSection';
 import MvpTraditionalVsAiSection from './MvpTraditionalVsAiSection';
 import MvpAiDrivenSdlcProcessSection from './MvpAiDrivenSdlcProcessSection';
-import MvpTechnologyStackSection from './MvpTechnologyStackSection';
 import MvpFaqSection from './MvpFaqSection';
 
 
@@ -16,7 +15,6 @@ const page = () => {
             <MvpBenefitsSection/>
             <MvpTraditionalVsAiSection/>
             <MvpAiDrivenSdlcProcessSection/>
-            <MvpTechnologyStackSection/>
             <MvpFaqSection/>
         </div>
     );

@@ -1,11 +1,11 @@
 import {
-  BadgeCheck,
   Bot,
   Clock3,
   Coins,
   Settings,
   ShieldCheck,
   Smile,
+  Users,
 } from "lucide-react";
 
 type ComparisonRow = {
@@ -17,83 +17,76 @@ type ComparisonRow = {
 
 const comparisonRows: ComparisonRow[] = [
   {
-    aspect: "Skilled Personnel Requirement",
-    traditional:
-      "Relies on legacy tech experts; 60-70% of time spent on upskilling",
-    ai: "Reduces need for specialized skills by 40% with AI-driven analysis",
-    icon: BadgeCheck,
+    aspect: "Skilled Personnel",
+    traditional: "Depends on specialized experts with long upskilling cycles.",
+    ai: "AI-assisted analysis reduces the need for narrow specialists.",
+    icon: Users,
   },
   {
     aspect: "Time Efficiency",
-    traditional:
-      "Typically 2-3x longer due to manual updates and testing",
-    ai: "AI speeds up projects by up to 75%, completing in days instead of months",
+    traditional: "Manual updates and testing slow every release.",
+    ai: "Automation accelerates delivery and shortens feedback cycles.",
     icon: Clock3,
   },
   {
     aspect: "Error Reduction",
-    traditional:
-      "Higher risk of errors, 30% chance of initial bugs",
-    ai: "AI reduces errors by 50% with automated validation",
+    traditional: "Manual review leaves room for human error.",
+    ai: "Automated validation catches issues earlier and more reliably.",
     icon: Settings,
   },
   {
     aspect: "Cost Savings",
-    traditional:
-      "Increased costs due to labor and time requirements",
-    ai: "Saves 30-40% in costs by reducing manual work and project duration",
+    traditional: "Higher labor and longer timelines raise total cost.",
+    ai: "Less manual work and shorter durations lower overall cost.",
     icon: Coins,
   },
   {
     aspect: "Testing & Validation",
-    traditional:
-      "New tests needed, adding 20-25% extra time",
-    ai: "AI leverages existing tests for rapid validation and implementation",
+    traditional: "Every change needs new tests and setup time.",
+    ai: "Reuses existing tests for faster, safer validation.",
     icon: ShieldCheck,
   },
   {
     aspect: "Client Satisfaction",
-    traditional:
-      "65% satisfaction due to extended timelines",
-    ai: "85-90% satisfaction with faster, reliable project completion",
+    traditional: "Extended timelines can strain stakeholder confidence.",
+    ai: "Faster, reliable delivery improves satisfaction.",
     icon: Smile,
   },
 ];
 
 export default function MvpTraditionalVsAiSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0a] px-6 py-[104px] text-white">
+    <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1180px]">
-        <div className="mx-auto max-w-[900px] text-center">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+        {/* Centered Heading */}
+        <div className="mx-auto max-w-[820px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             AI-Assisted MVP Delivery
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.1] tracking-[-0.02em] text-white md:text-[56px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Traditional Approach vs AI-Assisted Approach
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[820px] text-[18px] font-semibold leading-[1.6] tracking-[-0.01em] text-white/90 md:text-[21px]">
-            Discover how AI-powered solutions are revolutionizing traditional
-            business processes across multiple aspects and transforming the way
-            we work.
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            See how an AI-assisted workflow improves the way modern MVPs are
+            delivered — across people, time, quality, cost, and satisfaction.
           </p>
         </div>
 
-        <div className="mt-[78px] overflow-hidden rounded-[10px] bg-[#1a1a1a] px-6 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.22)] md:px-10 md:py-12">
+        {/* Comparison Card */}
+        <div className="mt-12 overflow-hidden rounded-2xl border border-[#ececec] bg-white">
           {/* Desktop Table */}
           <div className="hidden lg:block">
-            <div className="grid grid-cols-[1fr_1.08fr_1.08fr] gap-10 border-b border-white/14 pb-8">
-              <h3 className="text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
+            <div className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 border-b border-[#ececec] bg-[#fafafa] px-8 py-5">
+              <h3 className="text-[14px] font-bold uppercase tracking-[0.08em] text-[#565656]">
                 Aspect
               </h3>
-
-              <h3 className="text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
+              <h3 className="text-[14px] font-bold uppercase tracking-[0.08em] text-[#565656]">
                 Traditional Approach
               </h3>
-
-              <h3 className="flex items-center gap-3 text-[20px] font-bold leading-none tracking-[-0.01em] text-white">
-                <Bot size={22} className="text-[#f87171]" />
+              <h3 className="flex items-center gap-2 text-[14px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                <Bot size={16} strokeWidth={2} />
                 AI-Assisted Approach
               </h3>
             </div>
@@ -104,24 +97,22 @@ export default function MvpTraditionalVsAiSection() {
               return (
                 <div
                   key={row.aspect}
-                  className="group grid grid-cols-[1fr_1.08fr_1.08fr] gap-10 border-b border-white/14 py-8 transition duration-300 hover:bg-white/[0.035]"
+                  className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 border-b border-[#f0f0f0] px-8 py-6 transition-colors duration-300 last:border-b-0 hover:bg-[#fafafa]"
                 >
-                  <div className="flex items-start gap-4">
-                    <Icon
-                      size={23}
-                      strokeWidth={1.8}
-                      className="mt-1 shrink-0 text-white"
-                    />
-                    <h4 className="text-[18px] font-bold leading-[1.45] tracking-[-0.01em] text-white">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
+                      <Icon size={18} strokeWidth={1.9} />
+                    </span>
+                    <h4 className="text-[15px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                       {row.aspect}
                     </h4>
                   </div>
 
-                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.01em] text-white/92">
+                  <p className="text-[14px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
                     {row.traditional}
                   </p>
 
-                  <p className="text-[17px] font-bold leading-[1.55] tracking-[-0.01em] text-white/92">
+                  <p className="text-[14px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
                     {row.ai}
                   </p>
                 </div>
@@ -129,38 +120,37 @@ export default function MvpTraditionalVsAiSection() {
             })}
           </div>
 
-          {/* Mobile Cards */}
-          <div className="grid grid-cols-1 gap-5 lg:hidden">
+          {/* Mobile / Tablet Cards */}
+          <div className="grid grid-cols-1 divide-y divide-[#ececec] lg:hidden">
             {comparisonRows.map((row) => {
               const Icon = row.icon;
 
               return (
-                <article
-                  key={row.aspect}
-                  className="rounded-[8px] border border-white/10 bg-[#141414] p-6"
-                >
+                <article key={row.aspect} className="p-6">
                   <div className="flex items-center gap-3">
-                    <Icon size={24} className="text-[#f87171]" />
-                    <h3 className="text-[21px] font-bold leading-[1.25] tracking-[-0.018em] text-white">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
+                      <Icon size={18} strokeWidth={1.9} />
+                    </span>
+                    <h3 className="text-[17px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
                       {row.aspect}
                     </h3>
                   </div>
 
-                  <div className="mt-6 space-y-5">
+                  <div className="mt-5 space-y-4">
                     <div>
-                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#f87171]">
-                        Traditional Approach
+                      <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#565656]">
+                        Traditional
                       </p>
-                      <p className="mt-2 text-[16px] font-semibold leading-[1.55] text-white/90">
+                      <p className="mt-1.5 text-[14px] font-medium leading-[1.5] text-[#565656]">
                         {row.traditional}
                       </p>
                     </div>
 
                     <div>
-                      <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-                        AI-Assisted Approach
+                      <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+                        AI-Assisted
                       </p>
-                      <p className="mt-2 text-[16px] font-semibold leading-[1.55] text-white/90">
+                      <p className="mt-1.5 text-[14px] font-semibold leading-[1.5] text-[#0a0a0a]">
                         {row.ai}
                       </p>
                     </div>
@@ -171,14 +161,6 @@ export default function MvpTraditionalVsAiSection() {
           </div>
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

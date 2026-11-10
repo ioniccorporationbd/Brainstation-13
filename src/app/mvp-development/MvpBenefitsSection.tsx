@@ -1,9 +1,4 @@
-import {
-  Banknote,
-  Gauge,
-  Lightbulb,
-  Rocket,
-} from "lucide-react";
+import { Banknote, Gauge, Lightbulb, Rocket } from "lucide-react";
 
 type MvpBenefit = {
   title: string;
@@ -15,7 +10,7 @@ const benefits: MvpBenefit[] = [
   {
     title: "Speed to Market",
     description:
-      "Rapid prototyping and sprint-based delivery get your MVP in users’ hands in 8–12 weeks.",
+      "Rapid prototyping and sprint-based delivery get your MVP into users' hands fast.",
     icon: Rocket,
   },
   {
@@ -33,98 +28,58 @@ const benefits: MvpBenefit[] = [
   {
     title: "Expert Guidance",
     description:
-      "Our product strategists, UX designers, and engineers align your vision with market realities and technical feasibility.",
+      "Product strategists, UX designers, and engineers align your vision with market realities and technical feasibility.",
     icon: Gauge,
   },
 ];
 
 export default function MvpBenefitsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[96px] text-[#0a0a0a]">
-      {/* Soft Circle Background */}
-      <div className="pointer-events-none absolute -left-[360px] top-[-40px] hidden h-[820px] w-[820px] rounded-full lg:block">
-        {Array.from({ length: 48 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute left-1/2 top-1/2 rounded-full border border-[#c91f28]/20"
-            style={{
-              width: `${820 - index * 17}px`,
-              height: `${820 - index * 17}px`,
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
-      </div>
+    <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        {/* Centered Heading */}
+        <div className="mx-auto max-w-[780px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            MVP Advantage
+          </p>
 
-      <div className="relative z-10 mx-auto max-w-[1240px]">
-        {/* Top Content */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              MVP Advantage
-            </p>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Why Build an MVP with Magnetic Solution Limited?
+          </h2>
 
-            <h2 className="max-w-[650px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
-              Why Build an MVP with Magnetic Solution Limited?
-            </h2>
-          </div>
-
-          <div className="lg:pb-2">
-            <p className="max-w-[690px] text-left text-[19px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[21px]">
-              Build smarter, validate faster, and reduce product risk with a
-              focused MVP strategy designed around real users, business goals,
-              and rapid market learning.
-            </p>
-          </div>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Build smarter, validate faster, and reduce product risk with a
+            focused MVP strategy designed around real users, business goals, and
+            rapid market learning.
+          </p>
         </div>
 
-        {/* Cards */}
-        <div className="mt-[76px] grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-4">
-          {benefits.map((item, index) => {
+        {/* Cards - 4 per row desktop */}
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {benefits.map((item) => {
             const Icon = item.icon;
 
             return (
               <article
                 key={item.title}
-                className="group relative min-h-[320px] overflow-hidden rounded-[22px] border border-[#ececec] bg-white px-8 py-9 shadow-[0_16px_45px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-[#e9b0b4] hover:shadow-[0_28px_80px_rgba(0,0,0,0.14)]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <div className="pointer-events-none absolute -right-20 -top-20 h-[210px] w-[210px] rounded-full bg-[#c91f28]/10 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/25" />
-                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[210px] w-[210px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/15" />
-
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#ffffff] text-[#c91f28] ring-1 ring-[#ececec] transition-all duration-300 group-hover:bg-[#c91f28] group-hover:text-white group-hover:ring-[#c91f28]">
-                      <Icon size={30} strokeWidth={1.7} />
-                    </div>
-
-                    <span className="text-[18px] font-bold leading-none text-[#0a0a0a]/20 transition-all duration-300 group-hover:text-[#c91f28]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-10 text-left text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-6 text-left text-[17px] font-medium leading-[1.65] tracking-[-0.01em] text-[#6b7280]">
-                    {item.description}
-                  </p>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#c91f28] transition-all duration-300 group-hover:w-full" />
+                <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                  {item.description}
+                </p>
               </article>
             );
           })}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
