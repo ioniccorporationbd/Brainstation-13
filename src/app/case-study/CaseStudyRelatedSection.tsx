@@ -12,98 +12,86 @@ type RelatedCaseStudy = {
 
 const relatedCaseStudies: RelatedCaseStudy[] = [
   {
-    title: "Pro Athletics",
-    category: "ECOMMERCE",
+    title: "Fueling financial inclusion with digital wallets",
+    category: "Fintech",
     description:
-      "In today’s fast-paced business environment, meeting the high-tech demands of customers is significant for sustained success.",
+      "A compliant digital wallet platform that brought secure, everyday financial services to underbanked communities at national scale.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop",
-    href: "/case-studies/pro-athletics",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1400&auto=format&fit=crop",
+    href: "/case-study/digital-wallet",
   },
   {
-    title: "Empowering Shwapno: A Journey Towards Digital Excellence in Retail",
-    category: ".NET, ECOMMERCE",
+    title: "Safety at Sea — IoT for stronger maritime security",
+    category: "IoT",
     description:
-      "For the last decade, the rapid advancement in information and communication technology has transformed retail experiences.",
+      "An IoT-based boat safety system giving crews and authorities real-time visibility to prevent and respond to incidents at sea.",
     image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1400&auto=format&fit=crop",
-    href: "/case-studies/empowering-shwapno",
-  },
-  {
-    title: "Career Guidance Solutions",
-    category: "LMS",
-    description:
-      "The legal industry is experiencing a transformative shift with the integration of AI technologies and digital platforms.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
-    href: "/case-studies/career-guidance-solutions",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1400&auto=format&fit=crop",
+    href: "/case-study/safety-at-sea",
   },
 ];
 
 export default function CaseStudyRelatedSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#0a0a0a]">
-      <div className="mx-auto max-w-[1240px]">
-        {/* Top Header */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-start">
-          <div>
-            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Related Case Studies
-            </p>
+    <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1180px]">
+        {/* Centered Heading */}
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Related Case Studies
+          </p>
 
-            <h2 className="text-[48px] font-bold leading-[1.04] tracking-[-0.02em] text-[#0a0a0a] md:text-[72px]">
-              You might also like
-            </h2>
-          </div>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            You Might Also Like
+          </h2>
 
-          <div className="lg:pt-2">
-            <p className="max-w-[520px] text-[21px] font-medium leading-[1.42] tracking-[-0.015em] text-[#565656] md:text-[24px]">
-              Browse our library of 100+ case studies to find the perfect
-              solution for your needs.
-            </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Explore more of the products and platforms we have designed and
+            delivered.
+          </p>
 
-            <Link
-              href="/case-studies"
-              className="mt-10 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[17px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
-            >
-              See all Case Studies
-            </Link>
-          </div>
+          <Link
+            href="/case-studies"
+            className="mt-8 inline-flex rounded-full border border-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+          >
+            See all Case Studies
+          </Link>
         </div>
 
-        {/* Cards */}
-        <div className="mt-[86px] grid grid-cols-1 gap-[34px] md:grid-cols-2 xl:grid-cols-3">
+        {/* Cards - 2 per row desktop */}
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {relatedCaseStudies.map((item) => (
-            <article key={item.title} className="group">
+            <article
+              key={item.title}
+              className="group overflow-hidden rounded-2xl border border-[#ececec] bg-white transition-colors duration-300 hover:border-[#c91f28]"
+            >
               <Link href={item.href} className="block">
-                <div className="relative h-[255px] overflow-hidden rounded-[9px] bg-[#ffffff] shadow-[0_16px_45px_rgba(0,0,0,0.06)] md:h-[285px]">
+                <div className="relative h-[240px] w-full overflow-hidden md:h-[280px]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 390px"
+                    sizes="(max-width: 768px) 100vw, 560px"
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/10 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                 </div>
 
-                <div className="mt-7">
-                  <span className="inline-flex rounded-full bg-[#f7f7f8] px-5 py-2 text-[15px] font-bold uppercase leading-none tracking-[-0.025em] text-[#565656] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                <div className="p-6">
+                  <span className="inline-flex rounded-full bg-[#fdecec] px-3 py-1.5 text-[12px] font-bold uppercase leading-none tracking-[0.08em] text-[#c91f28] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                     {item.category}
                   </span>
 
-                  <h3 className="mt-5 max-w-[390px] text-[24px] font-bold leading-[1.28] tracking-[-0.02em] text-[#0a0a0a] md:text-[28px]">
+                  <h3 className="mt-4 text-[21px] font-bold leading-[1.28] tracking-[-0.015em] text-[#0a0a0a]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 max-w-[390px] text-[18px] font-medium leading-[1.5] tracking-[-0.035em] text-[#565656]">
+                  <p className="mt-3 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
                     {item.description}
                   </p>
 
-                  <div className="mt-7 inline-flex items-center gap-3 text-[16px] font-bold text-[#c91f28] transition duration-300 group-hover:gap-5 group-hover:text-[#c91f28]">
+                  <div className="mt-6 inline-flex items-center gap-2.5 text-[15px] font-bold text-[#c91f28] transition duration-300 group-hover:gap-4">
                     View Case Study
-                    <ArrowRight size={18} strokeWidth={1.8} />
+                    <ArrowRight size={17} strokeWidth={2} />
                   </div>
                 </div>
               </Link>
@@ -111,14 +99,6 @@ export default function CaseStudyRelatedSection() {
           ))}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
