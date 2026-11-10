@@ -4,7 +4,6 @@ import {
   ClipboardCheck,
   Network,
   Rocket,
-  TimerReset,
 } from "lucide-react";
 
 type ProcessStep = {
@@ -18,168 +17,117 @@ type ProcessStep = {
 const processSteps: ProcessStep[] = [
   {
     step: "Step 1",
-    eyebrow: "AI-Powered Discovery Audit",
+    eyebrow: "Discover & Assess",
     title: "Discovery & Assessment",
     points: [
       "Stakeholder interviews, process reviews, and technology audits.",
-      "Current state mapping and gap analysis to pinpoint opportunities.",
+      "Current-state mapping and gap analysis to pinpoint opportunities.",
     ],
     icon: BrainCircuit,
   },
   {
     step: "Step 2",
-    eyebrow: "Hybrid Team Onboarding",
+    eyebrow: "Plan the Roadmap",
     title: "Strategic Roadmap & Blueprint",
     points: [
-      "Define target state architecture, integration patterns, and change management plans.",
+      "Define target architecture, integration patterns, and change plans.",
       "Prioritize initiatives by business value, complexity, and risk.",
     ],
     icon: Network,
   },
   {
     step: "Step 3",
-    eyebrow: "Build with AI Guardrails",
+    eyebrow: "Design & Validate",
     title: "Solution Design & Validation",
     points: [
-      "Detailed design artifacts including data models, integration flows, and security frameworks.",
+      "Detailed design for data models, integration flows, and security.",
       "Proof of concept development and user feedback loops.",
     ],
     icon: ClipboardCheck,
   },
   {
     step: "Step 4",
-    eyebrow: "Scale with Confidence",
-    title: "Implementation Support",
+    eyebrow: "Implement & Optimize",
+    title: "Implementation & Improvement",
     points: [
-      "Hands-on guidance for project governance, vendor selection, and best-practice adoption.",
-      "Knowledge transfer and training to empower your internal teams.",
+      "Hands-on guidance for governance, vendor selection, and best practice.",
+      "Knowledge transfer plus ongoing optimization as needs evolve.",
     ],
     icon: Rocket,
-  },
-  {
-    step: "Step 5",
-    eyebrow: "Continuous Improvement",
-    title: "Continuous Improvement",
-    points: [
-      "Ongoing performance monitoring, post-implementation reviews, and optimization workshops.",
-      "Iterative roadmap updates as technology and market needs evolve.",
-    ],
-    icon: TimerReset,
   },
 ];
 
 export default function TechnologyConsultingProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-[#ffffff] px-6 py-[96px] text-[#0a0a0a]">
-      {/* Soft Circle Background */}
-      <div className="pointer-events-none absolute -left-[360px] top-[40px] hidden h-[780px] w-[780px] rounded-full lg:block">
-        {Array.from({ length: 44 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute left-1/2 top-1/2 rounded-full border border-[#c91f28]/20"
-            style={{
-              width: `${780 - index * 17}px`,
-              height: `${780 - index * 17}px`,
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
-      </div>
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        {/* Heading */}
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Technology Consulting Process
+          </p>
 
-      <div className="relative z-10 mx-auto max-w-[1240px]">
-        {/* Top Content */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-          <div>
-            <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Technology Consulting Process
-            </p>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Our Technology Consulting Process
+          </h2>
 
-            <h2 className="max-w-[620px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[56px]">
-              Our Technology Consulting Process
-            </h2>
-          </div>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            A clear four-step path to assess, plan, validate, and implement your
+            technology strategy without compromising security.
+          </p>
 
-          <div className="lg:pb-2">
-            <p className="max-w-[690px] text-left text-[19px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[21px]">
-              We blend human expertise with AI precision to deliver faster
-              outcomes without compromising security. Our consulting process
-              helps you assess, plan, validate, implement, and continuously
-              improve your technology strategy.
-            </p>
-
-            <Link
-              href="/schedule-a-call"
-              className="mt-8 inline-flex rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
-            >
-              Schedule a Call
-            </Link>
-          </div>
+          <Link
+            href="/schedule-a-call"
+            className="mt-8 inline-flex rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+          >
+            Schedule a Call
+          </Link>
         </div>
 
-        {/* Cards */}
-        <div className="mt-[76px] grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
-          {processSteps.map((item, index) => {
+        {/* 4 Process Cards - 4 per row desktop */}
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {processSteps.map((item) => {
             const Icon = item.icon;
 
             return (
               <article
                 key={item.title}
-                className="group relative min-h-[365px] overflow-hidden rounded-[22px] border border-[#ececec] bg-white px-8 py-9 shadow-[0_16px_45px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-[#e9b0b4] hover:shadow-[0_28px_80px_rgba(0,0,0,0.14)]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                {/* Hover Glow */}
-                <div className="pointer-events-none absolute -right-20 -top-20 h-[210px] w-[210px] rounded-full bg-[#c91f28]/10 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/25" />
-                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[210px] w-[210px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/15" />
-
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#ffffff] text-[#c91f28] ring-1 ring-[#ececec] transition-all duration-300 group-hover:bg-[#c91f28] group-hover:text-white group-hover:ring-[#c91f28]">
-                      <Icon size={30} strokeWidth={1.7} />
-                    </div>
-
-                    <span className="rounded-full bg-[#c91f28] px-4 py-2 text-[13px] font-bold leading-none text-white transition-all duration-300 group-hover:bg-[#a71920] group-hover:text-white">
-                      {item.step}
-                    </span>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                    <Icon size={22} strokeWidth={1.8} />
                   </div>
 
-                  <p className="mt-8 text-left text-[14px] font-bold uppercase leading-none tracking-[0.08em] text-[#c91f28]">
-                    {item.eyebrow}
-                  </p>
-
-                  <h3 className="mt-5 text-left text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-7 space-y-4">
-                    {item.points.map((point) => (
-                      <p
-                        key={point}
-                        className="flex gap-3 text-left text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]"
-                      >
-                        <span className="mt-[10px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
-                        <span>{point}</span>
-                      </p>
-                    ))}
-                  </div>
+                  <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                    {item.step}
+                  </span>
                 </div>
 
-                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#c91f28] transition-all duration-300 group-hover:w-full" />
+                <p className="mt-5 text-[11px] font-bold uppercase leading-none tracking-[0.1em] text-[#c91f28]">
+                  {item.eyebrow}
+                </p>
 
-                <span className="pointer-events-none absolute bottom-5 right-7 text-[60px] font-bold leading-none text-[#0a0a0a]/[0.04] transition-all duration-300 group-hover:text-[#c91f28]/10">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <h3 className="mt-3 text-[18px] font-bold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
+                  {item.title}
+                </h3>
+
+                <ul className="mt-3 space-y-3">
+                  {item.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]"
+                    >
+                      <span className="mt-[7px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </article>
             );
           })}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

@@ -4,7 +4,6 @@ import TechnologyConsultingConsultationsSection from "./TechnologyConsultingCons
 import TechnologyConsultingProcessSection from "./TechnologyConsultingProcessSection";
 import TechnologyConsultingEngagementModelsSection from "./TechnologyConsultingEngagementModelsSection";
 import TechnologyConsultingPartnerSection from "./TechnologyConsultingPartnerSection";
-import TechnologyConsultingSuccessStoriesSection from "./TechnologyConsultingSuccessStoriesSection";
 import TechnologyConsultingFaqSection from "./TechnologyConsultingFaqSection";
 
 export default function Page() {
@@ -13,11 +12,10 @@ export default function Page() {
       <TechnologyConsultingHeroSection />
       <TechnologyConsultingBenefitsSection />
       <TechnologyConsultingConsultationsSection />
-      <TechnologyConsultingProcessSection/>
-      <TechnologyConsultingEngagementModelsSection/>
-      <TechnologyConsultingPartnerSection/>
-      <TechnologyConsultingSuccessStoriesSection/>
-      <TechnologyConsultingFaqSection/>
+      <TechnologyConsultingProcessSection />
+      <TechnologyConsultingEngagementModelsSection />
+      <TechnologyConsultingPartnerSection />
+      <TechnologyConsultingFaqSection />
     </main>
   );
 }

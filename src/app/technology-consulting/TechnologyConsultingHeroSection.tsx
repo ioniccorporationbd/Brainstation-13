@@ -2,48 +2,26 @@ import Link from "next/link";
 
 export default function TechnologyConsultingHeroSection() {
   return (
-    <section className="relative min-h-[680px] overflow-hidden bg-[#0a0a0a] px-6 text-white">
-      {/* Circle Background */}
-      <div className="pointer-events-none absolute inset-0">
-        {Array.from({ length: 48 }).map((_, index) => (
-          <span
-            key={index}
-            className="absolute rounded-full border border-[#c91f28]/20"
-            style={{
-              width: `${1360 - index * 30}px`,
-              height: `${1360 - index * 30}px`,
-              left: "68%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 mx-auto grid min-h-[680px] max-w-[1320px] grid-cols-1 items-center gap-14 py-20 lg:grid-cols-[0.95fr_1fr]">
+    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[104px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
-          <span className="inline-flex rounded-[7px] bg-[#1a1a1a] px-5 py-3 text-[18px] font-bold leading-none tracking-[-0.01em] text-[#c91f28]">
-            Technology Consulting Services
+          <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-[0.12em] text-[#c91f28]">
+            Technology Consulting
           </span>
 
-          <h1 className="mt-10 max-w-[760px] text-[44px] font-normal leading-[1.2] tracking-[-0.02em] text-white md:text-[58px]">
-            Navigate Technical Complexity <br />
-            with Expert Guidance
+          <h1 className="mt-7 max-w-[680px] text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">
+            Navigate Complexity With Expert Guidance.
           </h1>
 
-          <p className="mt-9 max-w-[760px] text-[20px] font-medium leading-[1.5] tracking-[-0.01em] text-white/90 md:text-[23px]">
-            At Magnetic Solution Limited, we help businesses harness technology to unlock
-            new opportunities, drive innovation, and scale efficiently. Whether
-            you&apos;re modernizing legacy systems, integrating emerging
-            technologies, or building new digital products, our technology
-            consultants work alongside your team to ensure every solution is
-            strategic, scalable, and sustainable.
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">
+            We help teams modernize systems, adopt emerging technology, and
+            build digital products with strategy that scales.
           </p>
 
           <Link
             href="/schedule-a-call"
-            className="mt-10 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[17px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920] hover:shadow-[0_14px_34px_rgba(201,31,40,0.32)]"
+            className="mt-9 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
           >
             Schedule a Call
           </Link>
@@ -51,28 +29,16 @@ export default function TechnologyConsultingHeroSection() {
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative h-[350px] w-full max-w-[680px] overflow-hidden rounded-[8px] bg-[#141414] shadow-[0_24px_70px_rgba(0,0,0,0.24)] md:h-[390px]">
+          <div className="h-[340px] w-full max-w-[560px] overflow-hidden rounded-2xl border border-[#ececec] md:h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop"
-              alt="Technology consulting and digital strategy"
-              className="h-full w-full object-cover opacity-75"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
+              alt="Technology consulting strategy session"
+              loading="lazy"
+              className="h-full w-full object-cover"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/50 via-[#0a0a0a]/10 to-[#0a0a0a]/35" />
-
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,31,40,0.16),transparent_55%)]" />
           </div>
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
