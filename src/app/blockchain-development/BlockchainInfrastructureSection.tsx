@@ -54,7 +54,7 @@ const blockchainInfrastructureServices = [
     icon: ScrollText,
   },
   {
-    title: "Blockchain Certified Professionals",
+    title: "Blockchain Talent & Consultants",
     description:
       "Hire blockchain consultants and dedicated blockchain developers to transform enterprise adoption from concept to operational reality.",
     icon: BadgeCheck,
@@ -63,65 +63,61 @@ const blockchainInfrastructureServices = [
 
 export default function BlockchainInfrastructureSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#11182f]">
-      <div className="mx-auto max-w-[970px]">
-        <h2 className="mb-[66px] text-[38px] font-light leading-[1.1] tracking-[-0.065em] text-[#11182f] md:text-[44px]">
-          Looking to Create Blockchain Infrastructure?
-        </h2>
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="max-w-[760px]">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Infrastructure
+          </p>
 
-        <div className="grid grid-cols-1 gap-y-[46px] md:grid-cols-2 lg:grid-cols-3">
-          {blockchainInfrastructureServices.map((service, index) => {
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Looking to Create Blockchain Infrastructure?
+          </h2>
+
+          <p className="mt-4 max-w-[620px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Audit, identity, private networks and managed operations — the
+            building blocks teams ask for most.
+          </p>
+        </div>
+
+        <div className="mt-11 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {blockchainInfrastructureServices.map((service) => {
             const Icon = service.icon;
 
             return (
-              <div
+              <article
                 key={service.title}
-                className={`min-h-[210px] px-[26px] ${
-                  index % 3 !== 0 ? "lg:border-l lg:border-[#dceaf3]" : ""
-                } ${index % 2 !== 0 ? "md:border-l md:border-[#dceaf3] lg:border-l" : ""}`}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <Icon
-                  size={46}
-                  strokeWidth={1.55}
-                  className="mb-[22px] text-[#4fa0d1]"
-                />
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={20} strokeWidth={2.1} />
+                </span>
 
-                <h3 className="mb-[20px] text-[24px] font-normal leading-[1.28] tracking-[-0.055em] text-[#050b18]">
+                <h3 className="mt-5 text-[15.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
                   {service.title}
                 </h3>
 
-                <p className="max-w-[280px] text-[15.5px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a]">
+                <p className="mt-3 text-[14px] font-medium leading-[1.6] text-[#565656]">
                   {service.description}
                 </p>
-              </div>
+              </article>
             );
           })}
 
-          <div className="flex min-h-[220px] items-center justify-center px-[26px] md:border-l md:border-[#dceaf3] lg:border-l">
-            <div className="flex h-[220px] w-full max-w-[280px] flex-col items-center justify-center rounded-[7px] bg-[#243f5a] px-8 text-center text-white">
-              <h3 className="text-[18px] font-bold leading-[1.4] tracking-[-0.04em] text-white">
-                Looking for Certified <br />
-                Blockchain Developers?
-              </h3>
+          <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-6 text-center">
+            <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+              Looking for Dedicated Blockchain Developers?
+            </h3>
 
-              <Link
-                href="/contact-us"
-                className="mt-6 inline-flex rounded-full bg-[#ffab2e] px-5 py-3 text-[13px] font-bold text-black transition hover:bg-[#ffc15a]"
-              >
-                Let&apos;s Talk
-              </Link>
-            </div>
-          </div>
+            <Link
+              href="/contact-us"
+              className="mx-auto mt-5 inline-flex items-center justify-center rounded-full bg-[#c91f28] px-6 py-3 text-[13.5px] font-bold text-white transition duration-300 hover:bg-[#a71920]"
+            >
+              Let&apos;s Talk
+            </Link>
+          </article>
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

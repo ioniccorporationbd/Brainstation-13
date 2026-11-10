@@ -32,58 +32,66 @@ const relatedPosts = [
 
 export default function RelatedBlogsSection() {
   return (
-    <section className="relative bg-white px-6 py-[92px] text-[#071F49]">
-      <div className="mx-auto max-w-[1220px]">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.9fr]">
+    <section className="w-full bg-white px-6 pb-[96px] text-[#0a0a0a] md:pb-[112px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
-            <h2 className="text-[58px] font-light leading-none tracking-[-0.065em] text-[#11182f] md:text-[66px]">
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+              Insights
+            </p>
+
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
               You might also like
             </h2>
           </div>
 
-          <div className="lg:pt-1">
-            <p className="max-w-[520px] text-[22px] font-medium leading-[1.35] tracking-[-0.04em] text-[#42637a]">
+          <div className="lg:pb-2">
+            <p className="max-w-[520px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
               Look through to find the perfect Blockchain/Web3 solution for your
               needs.
             </p>
 
             <Link
               href="/blog"
-              className="mt-8 inline-flex rounded-full bg-[#ffab2e] px-7 py-4 text-[16px] font-bold text-black transition hover:bg-[#ffc15a]"
+              className="mt-6 inline-flex items-center justify-center rounded-full border border-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Latest in Blockchain/Web3
             </Link>
           </div>
         </div>
 
-        <div className="mt-[82px] grid grid-cols-1 gap-[32px] md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {relatedPosts.map((post) => (
-            <article key={post.title} className="group">
-              <Link href={post.href} className="block">
-                <div className="h-[188px] w-full overflow-hidden rounded-[8px] bg-[#f2f6fa]">
+            <article key={post.title} className="group h-full">
+              <Link
+                href={post.href}
+                className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#ececec] bg-white transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="h-[190px] w-full overflow-hidden bg-[#f7f7f7]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
 
-                <div className="mt-[26px]">
-                  <span className="inline-flex rounded-full bg-[#e5f1f7] px-4 py-1.5 text-[18px] font-bold leading-none tracking-[-0.04em] text-[#42637a]">
+                <div className="flex flex-1 flex-col p-6">
+                  <span className="inline-flex w-fit rounded-full bg-[#fdecec] px-3 py-1.5 text-[11px] font-bold uppercase leading-none tracking-[0.1em] text-[#c91f28]">
                     {post.category}
                   </span>
 
-                  <h3 className="mt-5 min-h-[105px] text-[25px] font-bold leading-[1.35] tracking-[-0.055em] text-[#071F49]">
+                  <h3 className="mt-4 text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
                     {post.title}
                   </h3>
 
-                  <p className="mt-3 text-[19px] font-medium leading-[1.35] tracking-[-0.04em] text-[#42637a]">
+                  <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
                     {post.description}
                   </p>
 
-                  <span className="mt-9 inline-flex items-center gap-3 text-[17px] font-semibold text-[#ff9f1a]">
+                  <span className="mt-6 inline-flex items-center gap-2 text-[13.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
                     View Blog
-                    <span className="text-[22px] leading-none">→</span>
+                    <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>
@@ -91,14 +99,6 @@ export default function RelatedBlogsSection() {
           ))}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

@@ -1,105 +1,87 @@
-"use client";
-
-import { Autoplay, FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-
-const logos = [
-  {
-    name: "The Research Council of Norway",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Research_Council_of_Norway_logo.svg/512px-Research_Council_of_Norway_logo.svg.png",
-    className: "max-h-[48px] max-w-[210px]",
-  },
-  {
-    name: "AWS",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-    className: "max-h-[130px] max-w-[230px]",
-  },
-  {
-    name: "Celer Network",
-    image: "https://cryptologos.cc/logos/celer-network-celr-logo.png",
-    className: "max-h-[220px] max-w-[230px]",
-  },
-  {
-    name: "DoraHacks",
-    image: "https://avatars.githubusercontent.com/u/41075535?s=280&v=4",
-    className: "max-h-[170px] max-w-[210px]",
-  },
-  {
-    name: "ICSE 2026",
-    image:
-      "https://conf.researchr.org/getImage/icse-2026/orig/ICSE2026-logo.png",
-    className: "max-h-[240px] max-w-[230px]",
-  },
-  {
-    name: "IEEE Access",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_Access_Logo.svg/512px-IEEE_Access_Logo.svg.png",
-    className: "max-h-[130px] max-w-[230px]",
-  },
-  {
-    name: "IEEE ICBC",
-    image:
-      "https://icbc2024.ieee-icbc.org/wp-content/uploads/sites/419/2023/11/IEEE-ICBC-2024-logo.png",
-    className: "max-h-[130px] max-w-[230px]",
-  },
+const platforms = [
+  { name: "Ethereum", slug: "ethereum", hex: "3C3C3D" },
+  { name: "Bitcoin", slug: "bitcoin", hex: "F7931A" },
+  { name: "Solana", slug: "solana", hex: "9945FF" },
+  { name: "Polygon", slug: "polygon", hex: "7B3FE4" },
+  { name: "Chainlink", slug: "chainlink", hex: "375BD2" },
+  { name: "IPFS", slug: "ipfs", hex: "65C2CB" },
+  { name: "Stellar", slug: "stellar", hex: "7D00FF" },
+  { name: "BNB Chain", slug: "bnbchain", hex: "F3BA2F" },
 ];
+
+const logoUrl = (slug: string, hex: string) =>
+  `https://cdn.simpleicons.org/${slug}/${hex}`;
 
 export default function BlockchainTrustedSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-[105px]">
-      <div className="mx-auto max-w-[1880px] px-6">
-        <h2 className="mx-auto max-w-[1780px] text-center text-[44px] font-normal leading-[1.15] tracking-[-0.055em] text-[#11182f] md:text-[58px] lg:text-[66px]">
-          Trusted by Global Financial Institutions, Researchers, and Web3{" "}
-          <br className="hidden xl:block" />
-          Ecosystems.
-        </h2>
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Platforms &amp; Protocols
+          </p>
 
-        <div className="relative mt-[48px] overflow-hidden">
-          <Swiper
-            modules={[Autoplay, FreeMode]}
-            loop={true}
-            freeMode={true}
-            allowTouchMove={false}
-            speed={6500}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-            }}
-            slidesPerView="auto"
-            spaceBetween={60}
-            className="blockchain-logo-swiper"
-          >
-            {[...logos, ...logos, ...logos].map((logo, index) => (
-              <SwiperSlide
-                key={`${logo.name}-${index}`}
-                className="!flex !w-[260px] items-center justify-center"
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Blockchain Technologies We Work With
+          </h2>
+
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            The networks, protocols and tooling our engineering teams build on.
+          </p>
+        </div>
+
+        <div className="group relative mt-10 overflow-hidden border-y border-[#ececec] py-6">
+          <div className="animate-chain-marquee flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
+            {[...platforms, ...platforms, ...platforms].map((item, index) => (
+              <div
+                key={`${item.name}-${index}`}
+                className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
               >
-                <div className="flex h-[245px] w-[260px] items-center justify-center">
-                  <img
-                    src={logo.image}
-                    alt={logo.name}
-                    className={`object-contain ${logo.className}`}
-                  />
-                </div>
-              </SwiperSlide>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={logoUrl(item.slug, item.hex)}
+                  alt={item.name}
+                  className="h-[26px] w-[26px] shrink-0 object-contain"
+                />
+                <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
+                  {item.name}
+                </span>
+              </div>
             ))}
-          </Swiper>
+          </div>
+
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-[48px] bg-gradient-to-r from-white to-transparent md:w-[120px]" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-[48px] bg-gradient-to-l from-white to-transparent md:w-[120px]" />
         </div>
       </div>
 
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
+      <style>{`
+        @keyframes chain-marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.3333%);
+          }
+        }
 
-      <style jsx global>{`
-        .blockchain-logo-swiper .swiper-wrapper {
-          transition-timing-function: linear !important;
-          align-items: center;
+        .animate-chain-marquee {
+          animation: chain-marquee 32s linear infinite;
+        }
+
+        .group:hover .animate-chain-marquee {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-chain-marquee {
+            animation: none;
+            transform: none;
+          }
+
+          .animate-chain-marquee > div:nth-child(n + 9) {
+            display: none;
+          }
         }
       `}</style>
     </section>

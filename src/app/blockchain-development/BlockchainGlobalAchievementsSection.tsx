@@ -1,80 +1,91 @@
-export default function BlockchainGlobalAchievementsSection() {
-  const pins = [
-    { name: "United States", left: "25.8%", top: "47.8%" },
-    { name: "Brazil", left: "36.8%", top: "70.5%" },
-    { name: "United Kingdom", left: "47.1%", top: "39.8%" },
-    { name: "France", left: "48.9%", top: "47.5%" },
-    { name: "Germany", left: "51.1%", top: "44.8%" },
-    { name: "Sweden", left: "51.7%", top: "34.5%" },
-    { name: "Italy", left: "51.4%", top: "51.4%" },
-    { name: "Singapore", left: "76.4%", top: "66.2%" },
-  ];
+import {
+  FileCode2,
+  Rocket,
+  Search,
+  ShieldCheck,
+} from "lucide-react";
 
+const steps = [
+  {
+    title: "Discovery & Solution Design",
+    description:
+      "We map the business process, data boundaries and compliance needs, then design the ledger model and integration surface before any code is written.",
+    icon: Search,
+  },
+  {
+    title: "Smart Contract & Platform Build",
+    description:
+      "Contracts, chaincode and Web3 services are built in short iterations with reviewable specifications and continuous integration.",
+    icon: FileCode2,
+  },
+  {
+    title: "Security Audit & Testing",
+    description:
+      "Static and dynamic analysis, threat modelling and end-to-end test networks validate logic, access control and failure handling.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Deployment & Managed Support",
+    description:
+      "We hand over runbooks, monitoring and node operations, and stay on for managed support, upgrades and incident response.",
+    icon: Rocket,
+  },
+];
+
+export default function BlockchainGlobalAchievementsSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[82px] text-[#11182f]">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[1120px] text-center">
-          <h2 className="text-[42px] font-light leading-[1.08] tracking-[-0.065em] text-[#11182f] md:text-[48px]">
-            Global Blockchain Achievements
+    <section className="w-full bg-[#fafafa] px-6 pb-[88px] pt-[88px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Our Process
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            How We Deliver Blockchain Projects
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[1080px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a]">
-            Our record in the blockchain integration and development services
-            market speaks for itself — from government-funded IEEE research to
-            global hackathon wins and production deployments across four
-            continents.
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            A four-stage delivery path from process mapping to managed
+            operations.
           </p>
         </div>
 
-        <div className="relative mx-auto mt-[36px] h-[530px] max-w-[1120px]">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-            alt="Global blockchain achievements map"
-            className="absolute inset-0 h-full w-full object-contain opacity-[0.16] grayscale"
-          />
+        <div className="relative mt-12">
+          <div className="pointer-events-none absolute left-0 right-0 top-[34px] hidden h-px bg-[#ececec] lg:block" />
 
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(0,155,211,0.08),transparent_48%)]" />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
 
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.16]"
-            style={{
-              backgroundImage:
-                "linear-gradient(120deg, rgba(0,155,211,0.22) 1px, transparent 1px), linear-gradient(60deg, rgba(0,155,211,0.18) 1px, transparent 1px)",
-              backgroundSize: "90px 90px",
-            }}
-          />
+              return (
+                <article
+                  key={step.title}
+                  className="group relative flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#c91f28] transition-colors duration-300 group-hover:border-[#c91f28]">
+                      <Icon size={19} strokeWidth={2.1} />
+                    </span>
 
-          {pins.map((pin, index) => (
-            <span
-              key={pin.name}
-              title={pin.name}
-              className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
-              style={{
-                left: pin.left,
-                top: pin.top,
-              }}
-            >
-              <span
-                className="absolute left-1/2 top-1/2 h-[34px] w-[34px] -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-[#009bd3]/25"
-                style={{
-                  animationDelay: `${index * 180}ms`,
-                  animationDuration: "2.4s",
-                }}
-              />
+                    <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                      Step {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
 
-              <span className="relative block h-[24px] w-[24px] rounded-full border-[4px] border-white bg-[#009bd3] shadow-[0_8px_22px_rgba(0,155,211,0.35)]" />
-            </span>
-          ))}
+                  <h3 className="mt-5 text-[16.5px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#565656]">
+                    {step.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
