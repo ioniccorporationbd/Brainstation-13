@@ -1,116 +1,153 @@
-import React from 'react';
+import {
+  Award,
+  BarChart3,
+  BookOpen,
+  LayoutDashboard,
+  MessagesSquare,
+  ShieldCheck,
+  Users,
+  Video,
+} from "lucide-react";
 
-// Define types for the data structure
-interface FeatureCardProps {
+type Feature = {
   title: string;
+  icon: typeof LayoutDashboard;
   items: string[];
-}
+};
 
-const featureData: FeatureCardProps[] = [
+const featureData: Feature[] = [
   {
-    title: 'Dynamic Dashboard & User Experience',
+    title: "Dynamic Dashboard & User Experience",
+    icon: LayoutDashboard,
     items: [
-      'Customizable dashboard',
-      'Course overview, calendar, and learning timeline',
-      'Progress status tracking',
-      'Notifications, profile access, and navigation',
+      "Customizable dashboard",
+      "Course overview, calendar and learning timeline",
+      "Progress status tracking",
+      "Notifications, profile access and navigation",
     ],
   },
   {
-    title: 'Course & User Management',
+    title: "Course & User Management",
+    icon: Users,
     items: [
-      'Discussion forums and feedback',
-      'Real-time chat and messaging',
-      'Surveys and polls',
-      'Announcements and notifications',
+      "Course creation and enrolment workflows",
+      "Cohorts, groups and role-based access",
+      "User profiles and bulk account management",
+      "Categories, self-enrolment and course structure",
     ],
   },
   {
-    title: 'Communication & Collaboration',
+    title: "Communication & Collaboration",
+    icon: MessagesSquare,
     items: [
-      'Discussion forums and feedback',
-      'Real-time chat and messaging',
-      'Surveys and polls',
-      'Announcements and notifications',
+      "Discussion forums and feedback",
+      "Real-time chat and messaging",
+      "Surveys and polls",
+      "Announcements and notifications",
     ],
   },
   {
-    title: 'Reporting & Analytics',
+    title: "Reporting & Analytics",
+    icon: BarChart3,
     items: [
-      'Learner progress and completion reports',
-      'Course and assessment analytics',
-      'Grading and performance insights',
-      'Exportable reports for review',
+      "Learner progress and completion reports",
+      "Course and assessment analytics",
+      "Grading and performance insights",
+      "Exportable reports for review",
     ],
   },
   {
-    title: 'Secure Identity & Access Governance',
+    title: "Secure Identity & Access Governance",
+    icon: ShieldCheck,
     items: [
-      'Customizable dashboard',
-      'Course overview, calendar, and learning timeline',
-      'Progress status tracking',
-      'Notifications, profile access, and navigation',
+      "Single sign-on with institutional identity providers",
+      "Role-based permissions and access control",
+      "Audit trails for administrative actions",
+      "Secure authentication and session policies",
     ],
   },
   {
-    title: 'Learning Delivery & Content Management',
+    title: "Learning Delivery & Content Management",
+    icon: BookOpen,
     items: [
-      'Discussion forums and feedback',
-      'Real-time chat and messaging',
-      'Surveys and polls',
-      'Announcements and notifications',
+      "SCORM and xAPI content support",
+      "Assignments, quizzes and lesson modules",
+      "File, page and book resources",
+      "Content versioning and reuse across courses",
     ],
   },
   {
-    title: 'Live Classes & Scheduling',
+    title: "Live Classes & Scheduling",
+    icon: Video,
     items: [
-      'Discussion forums and feedback',
-      'Real-time chat and messaging',
-      'Surveys and polls',
-      'Announcements and notifications',
+      "Live session scheduling with join links",
+      "Class reminders and calendar sync",
+      "Attendance tracking for live sessions",
+      "Session recordings and replay access",
     ],
   },
   {
-    title: 'Assessment, Evaluation & Certification',
+    title: "Assessment, Evaluation & Certification",
+    icon: Award,
     items: [
-      'Learner progress and completion reports',
-      'Course and assessment analytics',
-      'Grading and performance insights',
-      'Exportable reports for review',
+      "Quizzes with question banks and timers",
+      "Rubrics, grading and feedback workflows",
+      "Certificate and badge issuance",
+      "Exam-ready reporting and results export",
     ],
   },
 ];
 
 export default function MoodleFeatures() {
   return (
-    <section className="bg-white py-16 px-4 max-w-7xl mx-auto font-sans">
-      {/* Section Heading */}
-      <h2 className="text-3xl md:text-4xl font-semibold text-slate-800 mb-12 tracking-tight">
-        Features of our Moodle LMS
-      </h2>
+    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Platform Capabilities
+          </p>
 
-      {/* Grid Layout (Responsive: 1 col on mobile, 2 on tablet, 4 on desktop) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {featureData.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-[#0b2545] text-white p-6 rounded-lg shadow-md flex flex-col justify-start min-h-[320px]"
-          >
-            {/* Card Title */}
-            <h3 className="text-xl font-medium mb-5 leading-snug tracking-wide">
-              {feature.title}
-            </h3>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Features of Our Moodle LMS
+          </h2>
 
-            {/* Feature List Items */}
-            <ul className="space-y-3 text-sm text-slate-200/90 list-disc pl-5 marker:text-white">
-              {feature.items.map((item, idx) => (
-                <li key={idx} className="leading-relaxed">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Eight capability areas we configure, extend and support end to end.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {featureData.map((feature) => {
+            const Icon = feature.icon;
+
+            return (
+              <article
+                key={feature.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={20} strokeWidth={2.1} />
+                </span>
+
+                <h3 className="mt-5 text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                  {feature.title}
+                </h3>
+
+                <ul className="mt-3.5 space-y-2.5">
+                  {feature.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.55] text-[#565656]"
+                    >
+                      <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-[#c91f28]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import MoodleHeroSection from './MoodleHeroSection';
 import MoodleFeaturesSection from './MoodleFeaturesSection';
 import MoodleReadyPluginsSection from './MoodleReadyPluginsSection';
-import TrustedCompaniesSection from './TrustedCompaniesSection';
+import ToolsAndTechSection from './ToolsAndTechSection';
 import HowWeWorkSection from './HowWeWorkSection';
 
 const page = () => {
@@ -11,7 +11,7 @@ const page = () => {
             <MoodleHeroSection/>
             <MoodleFeaturesSection/>
             <MoodleReadyPluginsSection/>
-            <TrustedCompaniesSection/>
+            <ToolsAndTechSection/>
             <HowWeWorkSection/>
         </div>
     );
