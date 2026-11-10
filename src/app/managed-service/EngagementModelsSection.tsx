@@ -1,9 +1,4 @@
-import {
-  BadgeCheck,
-  Clock3,
-  Layers3,
-  Shuffle,
-} from "lucide-react";
+import { BadgeCheck, Clock3, Layers3, Shuffle } from "lucide-react";
 
 type EngagementModel = {
   title: string;
@@ -36,57 +31,44 @@ const engagementModels: EngagementModel[] = [
 
 export default function EngagementModelsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0a] px-6 py-[104px] text-white">
-      <div className="mx-auto max-w-[1320px]">
-        <div className="text-center">
-          <h2 className="text-[44px] font-normal leading-[1.14] tracking-[-0.02em] text-white md:text-[58px]">
-            Engagement Models <br />
-            Tailored to You
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Engagement Models Tailored to You
           </h2>
+
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Choose the engagement model that fits your scope, timeline, and
+            budget.
+          </p>
         </div>
 
-        <div className="mt-[92px] grid grid-cols-1 gap-[32px] sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {engagementModels.map((model) => {
             const Icon = model.icon;
 
             return (
               <article
                 key={model.title}
-                className="group relative min-h-[220px] overflow-hidden rounded-[8px] border border-white/0 bg-[#1a1a1a] px-[32px] py-[36px] shadow-[0_18px_50px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-[#c91f28]/70 hover:bg-[#1a1a1a] hover:shadow-[0_28px_80px_rgba(201,31,40,0.18)]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <div className="pointer-events-none absolute -right-20 -top-20 h-[180px] w-[180px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/25" />
-                <div className="pointer-events-none absolute -bottom-24 -left-24 h-[190px] w-[190px] rounded-full bg-[#c91f28]/0 blur-2xl transition-all duration-300 group-hover:bg-[#c91f28]/10" />
-
-                <div className="relative z-10 flex h-full flex-col justify-between">
-                  <div className="mb-8 flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#1a1a1a] text-[#c91f28] ring-1 ring-white/10 transition-all duration-300 group-hover:bg-[#c91f28] group-hover:text-white group-hover:ring-[#c91f28]">
-                    <Icon size={26} strokeWidth={1.8} />
-                  </div>
-
-                  <div>
-                    <h3 className="max-w-[260px] text-[27px] font-bold leading-[1.18] tracking-[-0.02em] text-white md:text-[30px]">
-                      {model.title}
-                    </h3>
-
-                    <p className="mt-7 max-w-[260px] text-[17px] font-bold leading-[1.45] tracking-[-0.01em] text-white/90">
-                      {model.description}
-                    </p>
-                  </div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
+                  <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-[#c91f28] transition-all duration-300 group-hover:w-full" />
+                <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                  {model.title}
+                </h3>
+
+                <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                  {model.description}
+                </p>
               </article>
             );
           })}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

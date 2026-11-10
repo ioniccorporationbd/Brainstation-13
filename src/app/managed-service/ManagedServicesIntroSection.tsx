@@ -1,3 +1,5 @@
+import { CheckCircle2 } from "lucide-react";
+
 export default function ManagedServicesIntroSection() {
   const points = [
     "Accelerate delivery while reducing internal burden",
@@ -7,55 +9,34 @@ export default function ManagedServicesIntroSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[86px] text-[#0a0a0a]">
-      <div className="mx-auto grid max-w-[1220px] grid-cols-1 items-center gap-[80px] lg:grid-cols-[0.95fr_1fr]">
-        {/* Left Image */}
-        <div className="flex justify-center lg:justify-start">
-          <div className="h-[520px] w-full max-w-[520px] overflow-hidden rounded-[8px] bg-[#ffffff]">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
-              alt="Managed services software delivery team planning"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1000px]">
+        <h2 className="max-w-[720px] text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+          What Are Managed Services?
+        </h2>
 
-        {/* Right Content */}
-        <div>
-          <h2 className="max-w-[560px] text-[48px] font-normal leading-[1.08] tracking-[-0.02em] text-[#0a0a0a] md:text-[58px]">
-            What Are Managed <br />
-            Services?
-          </h2>
+        <p className="mt-6 max-w-[760px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[18px]">
+          Managed Services offer a fully managed, outcome-driven software
+          delivery model. We provide a dedicated team of project managers,
+          developers, QA engineers, DevOps, and business analysts, ready to own
+          the full software lifecycle from day one.
+        </p>
 
-          <p className="mt-[28px] max-w-[650px] text-[22px] font-medium leading-[1.42] tracking-[-0.015em] text-[#6b7280]">
-            Managed Services offer a fully managed, outcome-driven software
-            delivery model. We provide you with a dedicated team of project
-            managers, developers, QA engineers, DevOps, business analysts, and
-            more ready to own the full software lifecycle from day one.
-          </p>
-
-          <ul className="mt-[40px] space-y-[24px]">
-            {points.map((point) => (
-              <li
-                key={point}
-                className="flex items-start gap-4 text-[20px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]"
-              >
-                <span className="mt-[10px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#0a0a0a]" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-5 sm:grid-cols-2">
+          {points.map((point) => (
+            <div key={point} className="flex items-start gap-3">
+              <CheckCircle2
+                size={22}
+                strokeWidth={2}
+                className="mt-[1px] shrink-0 text-[#c91f28]"
+              />
+              <span className="text-[16px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]">
+                {point}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#c91f28]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
