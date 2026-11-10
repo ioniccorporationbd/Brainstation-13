@@ -33,7 +33,7 @@ export default function InsuranceHeroSection() {
             </Link>
 
             <Link
-              href="/case-studies/end-to-end-digital-insurance-ecosystem"
+              href="/case-studies"
               className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               View Case Study

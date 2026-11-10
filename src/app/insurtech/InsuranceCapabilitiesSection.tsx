@@ -25,7 +25,7 @@ const capabilities: Capability[] = [
     description:
       "Policyholders manage policies, claims, service requests, telemedicine and wellness tools in one app.",
     icon: Smartphone,
-    href: "/products/insurance-360-app",
+    href: "/case-studies",
   },
   {
     title: "Integrated Claims Solution",

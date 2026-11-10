@@ -1,15 +1,22 @@
+import type { ComponentType } from "react";
 import {
   Boxes,
-  Film,
-  MessageSquare,
+  Brain,
   Eye,
   Factory,
-  Brain,
+  Film,
   Lightbulb,
+  MessageSquare,
   Sparkles,
 } from "lucide-react";
 
-const services = [
+type Service = {
+  title: string;
+  desc: string;
+  icon: ComponentType<{ size?: number; strokeWidth?: number }>;
+};
+
+const services: Service[] = [
   {
     title: "System-Level 3D Modeling",
     desc: "Complete CAD-to-render pipeline for complex mechanical assemblies with engineering accuracy.",
@@ -54,66 +61,44 @@ const services = [
 
 export default function RenderingServicesSection() {
   return (
-    <section className="bg-white px-4 py-24 text-[#090d24]">
-      <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-medium leading-tight md:text-5xl">
-            3D Rendering Services & <br />
-            Industrial Animation
+    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[780px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Rendering &amp; Animation
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            3D Rendering Services &amp; Industrial Animation
           </h2>
 
-          <p className="mt-6 text-lg leading-7 text-[#4f778b]">
-            From CAD data to cinematic visualization — comprehensive 3D modeling
-            services for engineering excellence.
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            From CAD data to cinematic visualization — comprehensive 3D
+            rendering capabilities for engineering excellence.
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 6).map((item, index) => {
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div
+              <article
                 key={item.title}
-                className={`px-8 ${
-                  index % 3 !== 0 ? "lg:border-l lg:border-[#e1edf3]" : ""
-                }`}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <Icon className="h-10 w-10 text-[#459bd0]" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.8} />
+                </div>
 
-                <h3 className="mt-8 max-w-xs text-3xl font-medium leading-tight">
+                <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {item.title}
                 </h3>
 
-                <p className="mt-6 max-w-sm text-base leading-7 text-[#4f778b]">
+                <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
                   {item.desc}
                 </p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-y-16 md:grid-cols-2">
-          {services.slice(6).map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.title}
-                className={`px-8 ${
-                  index === 1 ? "md:border-l md:border-[#e1edf3]" : ""
-                }`}
-              >
-                <Icon className="h-10 w-10 text-[#459bd0]" />
-
-                <h3 className="mt-8 max-w-xs text-3xl font-medium leading-tight">
-                  {item.title}
-                </h3>
-
-                <p className="mt-6 max-w-sm text-base leading-7 text-[#4f778b]">
-                  {item.desc}
-                </p>
-              </div>
+              </article>
             );
           })}
         </div>

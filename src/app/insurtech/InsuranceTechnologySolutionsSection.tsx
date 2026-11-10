@@ -58,7 +58,7 @@ export default function InsuranceTechnologySolutionsSection() {
             </div>
 
             <Link
-              href="/case-studies/end-to-end-digital-insurance-ecosystem"
+              href="/case-studies"
               className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
               View Case Study

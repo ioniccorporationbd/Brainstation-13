@@ -1,4 +1,8 @@
+import Image from "next/image";
 import { Globe2, Mic, Sparkles, UsersRound } from "lucide-react";
+
+const HOLO_IMG =
+  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop";
 
 const features = [
   {
@@ -25,60 +29,72 @@ const features = [
 
 export default function HoloGuideSection() {
   return (
-    <section className="bg-[#101d3b] px-4 py-24 text-white">
-      <div className="mx-auto grid max-w-[1330px] grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_570px]">
-        <div>
-          <span className="inline-flex rounded-md bg-[#213155] px-4 py-2 text-base font-semibold text-[#4399d7]">
-            Featured Product
-          </span>
+    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
+          {/* Left content */}
+          <div>
+            <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+              Featured Product
+            </p>
 
-          <h2 className="mt-8 text-[44px] font-light leading-none tracking-[-0.04em] md:text-[64px]">
-            3D + AI: HoloGuide AI
-          </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+              3D + AI: HoloGuide AI
+            </h2>
 
-          <h3 className="mt-8 text-xl font-medium">
-            Virtual Holographic Front Desk Assistant
-          </h3>
+            <h3 className="mt-3 text-[18px] font-bold tracking-[-0.01em] text-[#c91f28] md:text-[20px]">
+              Virtual Holographic Front Desk Assistant
+            </h3>
 
-          <p className="mt-7 max-w-[690px] text-xl font-medium leading-[1.45] text-white">
-            An interactive holographic AI front desk assistant designed for
-            hotels, hospitals, and corporate spaces. Featuring life-scale 3D
-            holographic characters, natural voice interaction, and real-time 3D
-            rendering. It welcomes guests, answers questions, guides visitors,
-            and enhances customer experience while lowering operational load.
-          </p>
+            <p className="mt-5 max-w-[620px] text-[16px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+              An interactive holographic AI front desk assistant designed for
+              hotels, hospitals and corporate spaces. With life-scale 3D
+              holographic characters, natural voice interaction and real-time
+              rendering, it welcomes guests, answers questions, guides visitors
+              and reduces operational load.
+            </p>
 
-          <div className="mt-14 grid max-w-[740px] grid-cols-1 gap-5 sm:grid-cols-2">
-            {features.map((item) => {
-              const Icon = item.icon;
+            <div className="mt-9 grid max-w-[640px] grid-cols-1 gap-4 sm:grid-cols-2">
+              {features.map((item) => {
+                const Icon = item.icon;
 
-              return (
-                <div
-                  key={item.title}
-                  className="flex min-h-[105px] gap-5 rounded-lg bg-[#213c5a] p-5"
-                >
-                  <Icon className="mt-1 h-9 w-9 shrink-0 text-[#18d8ff]" />
+                return (
+                  <article
+                    key={item.title}
+                    className="group flex items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28]"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                      <Icon size={19} strokeWidth={1.9} />
+                    </div>
 
-                  <div>
-                    <h4 className="text-xl font-semibold leading-tight">
-                      {item.title}
-                    </h4>
-                    <p className="mt-3 text-base font-medium leading-6 text-white">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+                    <div>
+                      <h4 className="text-[15.5px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                        {item.title}
+                      </h4>
+
+                      <p className="mt-1.5 text-[13.5px] font-medium leading-[1.5] text-[#565656]">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
           </div>
-        </div>
 
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=900&auto=format&fit=crop"
-            alt="Holographic AI assistant"
-            className="h-[650px] w-full max-w-[570px] object-cover"
-          />
+          {/* Right image */}
+          <div className="relative w-full">
+            <div className="relative aspect-[4/4.6] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7] lg:max-h-[560px]">
+              <Image
+                src={HOLO_IMG}
+                alt="HoloGuide AI holographic front desk assistant in a hotel lobby"
+                fill
+                loading="eager"
+                sizes="(max-width: 1024px) 100vw, 520px"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
