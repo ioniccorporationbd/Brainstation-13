@@ -2,7 +2,6 @@ import React from 'react';
 import SoftwareTestingHero from './SoftwareTestingHero';
 import TestingIntroSection from './TestingIntroSection';
 import OfferedServicesSection from './OfferedServicesSection';
-import ToolsSliderSection from './ToolsSliderSection';
 
 const page = () => {
     return (
@@ -10,7 +9,6 @@ const page = () => {
             <SoftwareTestingHero/>
             <TestingIntroSection/>
             <OfferedServicesSection/>
-            <ToolsSliderSection/>
         </div>
     );
 };

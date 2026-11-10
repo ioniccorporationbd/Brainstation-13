@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/layout_Components/navbar/Navbar";
 import Footer from "@/layout_Components/footer";
-import GlobalOfficesSection from "@/layout_Components/GlobalOfficesSection";
+import GlobalOfficesGate from "@/layout_Components/GlobalOfficesGate";
 
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="min-h-full overflow-x-clip bg-white text-[#050b18] antialiased">
         <Navbar />
         {children}
-        <GlobalOfficesSection/>
+        <GlobalOfficesGate/>
         <Footer />
       </body>
     </html>
