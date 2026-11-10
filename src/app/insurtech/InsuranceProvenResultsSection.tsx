@@ -1,55 +1,78 @@
+import type { ComponentType } from "react";
+import { Clock, ShieldAlert, Timer, Users } from "lucide-react";
+
 type ResultItem = {
-  value: string;
-  label: string;
+  title: string;
+  description: string;
+  icon: ComponentType<{ size?: number; strokeWidth?: number }>;
 };
 
 const results: ResultItem[] = [
   {
-    value: "70%",
-    label: "Faster claims settlement",
+    title: "Faster Claims Settlement",
+    description:
+      "Automation removes manual steps across adjudication, payment and notification.",
+    icon: Clock,
   },
   {
-    value: "8,000+",
-    label: "Agents managed",
+    title: "Agent Networks at Scale",
+    description:
+      "Digital onboarding and progress tracking support large, distributed agent networks.",
+    icon: Users,
   },
   {
-    value: "<2s",
-    label: "Claim calculation time",
+    title: "Real-Time Calculations",
+    description:
+      "Claim amounts are calculated instantly inside the claims workflow.",
+    icon: Timer,
   },
   {
-    value: "~95",
-    label: "Fraud detection accuracy",
+    title: "AI-Assisted Fraud Detection",
+    description:
+      "Anomalies are flagged before settlement, reducing financial leakage risk.",
+    icon: ShieldAlert,
   },
 ];
 
 export default function InsuranceProvenResultsSection() {
   return (
-    <section className="w-full bg-[#f4f8fc] py-[74px] md:py-[86px] lg:py-[96px]">
-      <div className="mx-auto w-full max-w-[1220px] px-5 sm:px-8 xl:px-0">
-        <h2 className="text-center text-[42px] font-bold leading-[1.15] tracking-[-0.04em] text-black sm:text-[52px] lg:text-[58px]">
-          Proven Results
-        </h2>
+    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Outcomes
+          </p>
 
-        <div className="mx-auto mt-[48px] grid max-w-[1120px] grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
-          {results.map((item) => (
-            <ResultCard key={item.label} item={item} />
-          ))}
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Proven Results
+          </h2>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {results.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article
+                key={item.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 text-center transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.8} />
+                </div>
+
+                <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+                  {item.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
-  );
-}
-
-function ResultCard({ item }: { item: ResultItem }) {
-  return (
-    <article className="flex min-h-[145px] flex-col items-center justify-center border border-[#dcdfe3] bg-transparent px-6 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#05a4df] hover:bg-white hover:shadow-[0_16px_42px_rgba(0,0,0,0.06)]">
-      <h3 className="text-[38px] font-semibold leading-none tracking-[-0.035em] text-[#057caf] sm:text-[42px]">
-        {item.value}
-      </h3>
-
-      <p className="mt-[14px] text-[18px] font-normal leading-[1.25] text-black sm:text-[20px]">
-        {item.label}
-      </p>
-    </article>
   );
 }

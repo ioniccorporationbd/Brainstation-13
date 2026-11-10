@@ -1,73 +1,69 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const CASE_IMAGE =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=90";
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85";
+
+const stack = [".NET Core", "Angular", "Flutter"];
 
 export default function InsuranceTechnologySolutionsSection() {
   return (
-    <section className="w-full bg-white py-[72px] md:py-[86px] lg:py-[96px]">
-      <div className="mx-auto w-full max-w-[1220px] px-5 sm:px-8 xl:px-0">
-        <h2 className="text-center text-[42px] font-bold leading-[1.15] tracking-[-0.045em] text-black sm:text-[52px] lg:text-[58px]">
-          Insurance Technology Solutions
-        </h2>
+    <section className="w-full bg-white px-6 pb-[88px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Case Study
+          </p>
 
-        <div className="mx-auto mt-[52px] grid max-w-[1180px] grid-cols-1 overflow-hidden rounded-[8px] border border-[#dcdfe3] bg-white lg:grid-cols-[580px_1fr]">
-          {/* Left Image */}
-          <div className="h-[360px] w-full overflow-hidden bg-gray-100 sm:h-[480px] lg:h-[620px]">
-            <img
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Insurance Technology Solutions
+          </h2>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 overflow-hidden rounded-2xl border border-[#ececec] bg-white lg:grid-cols-[0.92fr_1fr]">
+          {/* Image */}
+          <div className="relative min-h-[280px] w-full bg-[#f7f7f7] sm:min-h-[360px] lg:min-h-[460px]">
+            <Image
               src={CASE_IMAGE}
-              alt="Digital insurance ecosystem technology solution"
-              className="h-full w-full object-cover"
-              loading="lazy"
+              alt="Insurance analytics dashboard and digital policy platform"
+              fill
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="object-cover"
             />
           </div>
 
-          {/* Right Content */}
-          <div className="px-[30px] py-[42px] sm:px-[44px] lg:px-[46px] lg:py-[44px]">
-            <h3 className="max-w-[520px] text-[34px] font-bold leading-[1.1] tracking-[-0.045em] text-black sm:text-[40px] lg:text-[42px]">
+          {/* Content */}
+          <div className="flex flex-col justify-center px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+            <h3 className="max-w-[480px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
               End-to-End Digital Insurance Ecosystem
             </h3>
 
-            <p className="mt-[34px] max-w-[560px] text-[18px] font-normal leading-[1.55] text-[#335e79] sm:text-[20px]">
-              Modular Insurtech platform for leading insurers like MetLife and
-              Guardian Life, modernizing claims processing, policy
-              administration, and agent operations. Built with .NET Core,
-              Angular, and Flutter, the end-to-end solution automates the claim
-              lifecycle, provides a self-service customer app, and digitizes
-              agent onboarding.
+            <p className="mt-5 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[16.5px]">
+              A modular insurtech platform for leading insurers, modernizing
+              claims processing, policy administration and agent operations.
+              The end-to-end solution automates the claim lifecycle, provides a
+              self-service customer app and digitizes agent onboarding.
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[13px] font-bold text-[#0a0a0a]"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
 
             <Link
               href="/case-studies/end-to-end-digital-insurance-ecosystem"
-              className="mt-[36px] inline-flex items-center gap-[10px] text-[18px] font-semibold text-[#ff9f1c] transition hover:text-[#e48900]"
+              className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
               View Case Study
-              <span className="text-[22px] leading-none">→</span>
+              <ArrowRight size={17} strokeWidth={2.2} />
             </Link>
-
-            <div className="mt-[30px] h-px w-full bg-[#dfe5ea]" />
-
-            <div className="mt-[36px] grid grid-cols-1 gap-[34px] sm:grid-cols-2">
-              <div>
-                <h4 className="text-[58px] font-light leading-none tracking-[-0.06em] text-[#4b9bd0] sm:text-[66px]">
-                  70%
-                </h4>
-
-                <p className="mt-[16px] max-w-[260px] text-[20px] font-normal leading-[1.35] text-[#335e79] sm:text-[22px]">
-                  Faster claim settlements
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-[58px] font-light leading-none tracking-[-0.06em] text-[#4b9bd0] sm:text-[66px]">
-                  30%
-                </h4>
-
-                <p className="mt-[16px] max-w-[260px] text-[20px] font-normal leading-[1.35] text-[#335e79] sm:text-[22px]">
-                  Reduction in Claims Investigation Cost
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

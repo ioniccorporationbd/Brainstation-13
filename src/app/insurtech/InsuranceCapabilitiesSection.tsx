@@ -1,9 +1,21 @@
+import type { ComponentType } from "react";
 import Link from "next/link";
+import {
+  ArrowRight,
+  CreditCard,
+  FileCheck2,
+  FileText,
+  Mail,
+  MessageSquare,
+  ShieldAlert,
+  Smartphone,
+  UserCheck,
+} from "lucide-react";
 
 type Capability = {
   title: string;
   description: string;
-  image: string;
+  icon: ComponentType<{ size?: number; strokeWidth?: number }>;
   href?: string;
 };
 
@@ -11,63 +23,74 @@ const capabilities: Capability[] = [
   {
     title: "Insurance 360 App",
     description:
-      "Policyholders manage policies, claims, services, track requests, access telemedicine, wellness tools, calculators, dashboards efficiently.",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=90",
+      "Policyholders manage policies, claims, service requests, telemedicine and wellness tools in one app.",
+    icon: Smartphone,
     href: "/products/insurance-360-app",
   },
   {
     title: "Integrated Claims Solution",
     description:
-      "End-to-end claims lifecycle supports fraud detection, adjudication, payments, benefits, eligibility, notifications, and analytics efficiently real-time.",
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=90",
+      "End-to-end claims lifecycle with fraud detection, adjudication, payments and real-time analytics.",
+    icon: FileCheck2,
   },
   {
     title: "Agent Onboarding System",
     description:
-      "Digital onboarding enables registration, document verification, training, exam scheduling, evaluation, and large-scale agent progress tracking.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=90",
+      "Digital registration, document verification, training, exams and progress tracking at scale.",
+    icon: UserCheck,
   },
   {
     title: "Broker-Led Automation",
     description:
-      "Email-to-ticket intake captures needs, distributes requests, tracks quotes, and generates smart customer comparison reports.",
-    image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&q=90",
+      "Email-to-ticket intake captures needs, tracks quotes and generates smart comparison reports.",
+    icon: Mail,
   },
   {
     title: "AI Chatbot",
     description:
-      "Chat-based assistant delivers real-time answers, simplifies claims, and ensures always-available, uninterrupted customer service experience.",
-    image:
-      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=900&q=90",
+      "Chat assistant gives instant answers, simplifies claims and keeps support available around the clock.",
+    icon: MessageSquare,
   },
   {
     title: "AI Fraud Screening",
     description:
-      "Detects anomalous claims, flags fraud risk, reads medical documents, and extracts clinical signals accurately fast.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=90",
+      "Flags anomalous claims early, reads medical documents and extracts clinical signals.",
+    icon: ShieldAlert,
+  },
+  {
+    title: "Policy Administration",
+    description:
+      "Centralized policy, customer and benefit records with configurable servicing workflows.",
+    icon: FileText,
+  },
+  {
+    title: "Premium & Billing Management",
+    description:
+      "Premium tracking, payment records and billing visibility across branches and agents.",
+    icon: CreditCard,
   },
 ];
 
 export default function InsuranceCapabilitiesSection() {
   return (
-    <section className="w-full bg-white py-[72px] md:py-[86px] lg:py-[96px]">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8 xl:px-0">
-        <div className="text-center">
-          <p className="text-[20px] font-normal leading-[1.35] text-[#2f8fcd]">
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Business Impact
           </p>
 
-          <h2 className="mt-[18px] text-[42px] font-bold leading-[1.12] tracking-[-0.045em] text-black sm:text-[52px] lg:text-[58px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Our Insurtech Capabilities
           </h2>
+
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Purpose-built modules for every layer of insurance operations, each
+            one deployable on its own.
+          </p>
         </div>
 
-        <div className="mx-auto mt-[58px] grid max-w-[1180px] grid-cols-1 gap-[22px] md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {capabilities.map((item) => (
             <CapabilityCard key={item.title} item={item} />
           ))}
@@ -78,35 +101,31 @@ export default function InsuranceCapabilitiesSection() {
 }
 
 function CapabilityCard({ item }: { item: Capability }) {
+  const Icon = item.icon;
+
   return (
-    <article className="group overflow-hidden rounded-[8px] border border-[#dcdfe3] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#05a4df] hover:shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
-      <div className="h-[190px] w-full overflow-hidden bg-gray-100">
-        <img
-          src={item.image}
-          alt={item.title}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+    <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]">
+      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+        <Icon size={22} strokeWidth={1.8} />
       </div>
 
-      <div className="px-[30px] py-[30px]">
-        <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.035em] text-black sm:text-[26px]">
-          {item.title}
-        </h3>
+      <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+        {item.title}
+      </h3>
 
-        <p className="mt-[16px] max-w-[320px] text-[16px] font-normal leading-[1.5] text-[#335e79] sm:text-[17px]">
-          {item.description}
-        </p>
+      <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+        {item.description}
+      </p>
 
-        {item.href && (
-          <Link
-            href={item.href}
-            className="mt-[12px] inline-flex text-[16px] font-medium text-[#058ec8] transition hover:text-[#006fa0]"
-          >
-            Read More
-          </Link>
-        )}
-      </div>
+      {item.href && (
+        <Link
+          href={item.href}
+          className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:text-[#a71920]"
+        >
+          Read More
+          <ArrowRight size={16} strokeWidth={2} />
+        </Link>
+      )}
     </article>
   );
 }
