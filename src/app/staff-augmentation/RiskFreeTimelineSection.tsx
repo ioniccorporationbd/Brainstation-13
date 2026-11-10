@@ -20,9 +20,9 @@ const riskSteps: RiskStep[] = [
   },
   {
     number: "03",
-    title: "Walk Away Option",
+    title: "Flexible Exit Option",
     description:
-      "If the team doesn\u2019t meet your expectations, exit with no payment and no disruption.",
+      "If the fit isn\u2019t right within the first two weeks, you can step away before committing to a long-term engagement.",
   },
   {
     number: "04",
@@ -36,9 +36,8 @@ export default function RiskFreeTimelineSection() {
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="text-center">
-          <h2 className="mx-auto max-w-[720px] text-[30px] font-bold leading-[1.18] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">
-            Guaranteed Alignment <br />
-            First 2 Weeks Risk-Free*
+          <h2 className="mx-auto text-[20px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[42px]">
+            Risk-Free Talent Alignment
           </h2>
         </div>
 
@@ -70,10 +69,6 @@ export default function RiskFreeTimelineSection() {
           >
             Book my Risk-Free Timeline
           </Link>
-
-          <p className="mt-6 text-[15px] font-semibold tracking-[-0.01em] text-[#565656]">
-            *T&amp;C Apply
-          </p>
         </div>
       </div>
     </section>

@@ -1,10 +1,11 @@
 "use client";
 
 import { Star } from "lucide-react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 const reviews = [
@@ -33,46 +34,37 @@ const reviews = [
 
 export default function StaffAugmentationHeroSection() {
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-[#0a0a0a] px-6 text-white">
-      {/* Team collaboration watermark */}
-      <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
-        <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
-          alt="Team collaboration background"
-          className="absolute left-[47%] top-[52%] h-[520px] w-[390px] -translate-x-1/2 -translate-y-1/2 object-cover object-top opacity-[0.12] grayscale contrast-75 brightness-125 mix-blend-screen"
-        />
-
-        {/* Dark overlay to blend image smoothly */}
-        <div className="absolute left-[37%] top-[18%] h-[560px] w-[520px] bg-gradient-to-b from-[#0a0a0a]/10 via-transparent to-[#0a0a0a]" />
-        <div className="absolute left-[37%] top-[18%] h-[560px] w-[520px] bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
-      </div>
-
-      <div className="relative z-10 mx-auto grid min-h-[760px] max-w-[1320px] grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[110px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:min-h-[520px] lg:grid-cols-[1.15fr_0.85fr]">
         {/* Left Content */}
         <div>
-          <h1 className="max-w-[880px] text-[58px] font-light leading-[1.22] tracking-[-0.02em] text-white md:text-[72px]">
-            IT Staff Augmentation. <br />
-            Scale with Speed. <br />
-            Managed from{" "}
-            <span className="font-light text-[#c91f28]">the UAE</span>
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">
+            Borderless Tech Talent
+          </p>
+
+          <h1 className="max-w-[720px] text-[40px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[60px] lg:text-[66px]">
+            IT Staff Augmentation,
+            <br className="hidden sm:block" /> Built for Speed.
           </h1>
 
-          <p className="mt-[64px] max-w-[760px] text-[27px] font-semibold leading-[1.45] tracking-[-0.018em] text-white/90">
-            Hiring is Slow. Projects Can’t Wait. Onboard Offshore <br />
-            Talents with Onshore Account Management Support.
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">
+            Onboard pre-vetted offshore engineers in weeks, with onshore
+            account management support.
           </p>
         </div>
 
-        {/* Right Review Card */}
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="w-full max-w-[375px] rounded-[8px] bg-[#333333] px-[26px] py-[25px] shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
+        {/* Right: smooth swapping review/facts card */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="w-full max-w-[380px] rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]/50">
             <Swiper
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, EffectFade, Pagination]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
               slidesPerView={1}
               loop
-              speed={700}
+              speed={900}
               autoplay={{
-                delay: 5000,
+                delay: 5500,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
@@ -85,7 +77,7 @@ export default function StaffAugmentationHeroSection() {
                 <SwiperSlide key={`${review.company}-${index}`}>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-[28px] font-bold leading-none tracking-[-0.018em] text-white">
+                      <h3 className="text-[22px] font-bold leading-none tracking-[-0.02em] text-[#0a0a0a]">
                         {review.company}
                       </h3>
 
@@ -100,41 +92,52 @@ export default function StaffAugmentationHeroSection() {
                           ))}
                         </div>
 
-                        <p className="mt-[2px] text-[10px] font-semibold uppercase leading-none text-white">
+                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#565656]">
                           {review.rating}
                         </p>
                       </div>
                     </div>
 
-                    <p className="mt-[34px] max-w-[300px] text-[16px] font-bold leading-[1.45] tracking-[-0.01em] text-white">
-                      “{review.quote}”
+                    <p className="mt-6 max-w-[300px] text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
+                      &ldquo;{review.quote}&rdquo;
                     </p>
 
-                    <p className="mt-[28px] max-w-[280px] text-[14px] font-bold leading-[1.4] tracking-[-0.01em] text-white/65">
-                      {review.author}
-                    </p>
+                    <div className="mt-6 border-t border-[#ececec] pt-5">
+                      <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656]">
+                        {review.author}
+                      </p>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
 
-            <div className="staff-hero-pagination mt-[26px] flex gap-[12px]" />
+            <div className="staff-hero-pagination mt-6 flex gap-[10px]" />
+
+            <p className="sr-only">Client reviews</p>
           </div>
         </div>
       </div>
 
       <style jsx global>{`
         .staff-hero-pagination .swiper-pagination-bullet {
-          width: 20px;
+          width: 22px;
           height: 4px;
           border-radius: 999px;
-          background: rgba(255, 255, 255, 0.22);
+          background: #e2e2e2;
           opacity: 1;
           margin: 0 !important;
+          transition: background 0.3s ease;
         }
 
         .staff-hero-pagination .swiper-pagination-bullet-active {
-          background: rgba(255, 255, 255, 0.9);
+          background: #c91f28;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .staff-hero-pagination .swiper-pagination-bullet {
+            transition: none;
+          }
         }
       `}</style>
     </section>
