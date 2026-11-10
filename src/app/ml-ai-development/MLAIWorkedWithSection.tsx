@@ -2,169 +2,119 @@
 
 import { useState } from "react";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 type ClientLogo = {
   name: string;
   image: string;
-  className?: string;
+  height: string;
 };
 
 const clientLogos: ClientLogo[] = [
-  { name: "Kiksha", image: "https://unavatar.io/kiksha.com", className: "h-[55px]" },
-  { name: "PriyoShop", image: "https://unavatar.io/priyoshop.com", className: "h-[58px]" },
-  { name: "City Bank", image: "https://unavatar.io/thecitybank.com", className: "h-[90px]" },
-  { name: "UCB", image: "https://unavatar.io/ucb.com.bd", className: "h-[68px]" },
-  { name: "AB Bank", image: "https://unavatar.io/abbl.com", className: "h-[62px]" },
-  { name: "British American Tobacco", image: "https://unavatar.io/bat.com", className: "h-[82px]" },
-  { name: "Bank Asia", image: "https://unavatar.io/bankasia-bd.com", className: "h-[58px]" },
-  { name: "Robi", image: "https://unavatar.io/robi.com.bd", className: "h-[58px]" },
-  { name: "bKash", image: "https://unavatar.io/bkash.com", className: "h-[58px]" },
-  { name: "Grameenphone", image: "https://unavatar.io/grameenphone.com", className: "h-[58px]" },
-  { name: "Aarong", image: "https://unavatar.io/aarong.com", className: "h-[58px]" },
-  { name: "LankaBangla", image: "https://unavatar.io/lankabangla.com", className: "h-[58px]" },
+  { name: "Kiksha", image: "https://unavatar.io/kiksha.com", height: "h-10" },
+  { name: "PriyoShop", image: "https://unavatar.io/priyoshop.com", height: "h-10" },
+  { name: "City Bank", image: "https://unavatar.io/thecitybank.com", height: "h-12" },
+  { name: "UCB", image: "https://unavatar.io/ucb.com.bd", height: "h-11" },
+  { name: "AB Bank", image: "https://unavatar.io/abbl.com", height: "h-11" },
+  { name: "British American Tobacco", image: "https://unavatar.io/bat.com", height: "h-12" },
+  { name: "Bank Asia", image: "https://unavatar.io/bankasia-bd.com", height: "h-10" },
+  { name: "Robi", image: "https://unavatar.io/robi.com.bd", height: "h-10" },
+  { name: "bKash", image: "https://unavatar.io/bkash.com", height: "h-10" },
+  { name: "Grameenphone", image: "https://unavatar.io/grameenphone.com", height: "h-10" },
+  { name: "Aarong", image: "https://unavatar.io/aarong.com", height: "h-10" },
+  { name: "LankaBangla", image: "https://unavatar.io/lankabangla.com", height: "h-10" },
 ];
 
 function ClientLogoImg({ client }: { client: ClientLogo }) {
   const [failed, setFailed] = useState(false);
-  const size = client.className ?? "h-[60px]";
 
   if (failed) {
     return (
-      <span className="px-2 text-center text-[19px] font-bold leading-tight tracking-[-0.01em] text-[#111E40]">
+      <span className="px-2 text-center text-[16px] font-bold leading-tight tracking-[-0.01em] text-[#0a0a0a]">
         {client.name}
       </span>
     );
   }
 
   return (
+    /* eslint-disable-next-line @next/next/no-img-element */
     <img
       src={client.image}
       alt={client.name}
-      className={`${size} w-auto max-w-[210px] object-contain`}
+      className={`${client.height} w-auto max-w-[140px] object-contain`}
       loading="lazy"
       onError={() => setFailed(true)}
     />
   );
 }
 
+function ClientTrack({ prefix }: { prefix: string }) {
+  return (
+    <div className="flex shrink-0">
+      {clientLogos.map((client) => (
+        <div key={`${prefix}-${client.name}`} className="shrink-0 px-3">
+          <div className="flex h-[100px] w-[190px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
+            <ClientLogoImg client={client} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function MLAIWorkedWithSection() {
   return (
-    <section className="w-full overflow-hidden bg-white py-[95px] md:py-[120px] lg:py-[138px]">
-      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 xl:px-0">
-        <div className="text-center">
-          <h2 className="text-[38px] font-bold leading-[1.15] tracking-[-0.04em] text-black sm:text-[48px] lg:text-[56px]">
-            Who we&apos;ve worked with
+    <section className="w-full overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Our Clients
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Who We&apos;ve Worked With
           </h2>
 
-          <div className="mx-auto mt-[20px] h-[1px] w-[120px] bg-[#159bd7]" />
-        </div>
-
-        <div className="relative mx-auto mt-[138px] w-full max-w-[980px]">
-          <button
-            type="button"
-            className="worked-prev absolute left-[-18px] top-1/2 z-20 flex h-[46px] w-[46px] -translate-y-1/2 items-center justify-center text-[58px] font-light leading-none text-[#8d8d8d] transition hover:text-[#159bd7] max-md:left-[-10px]"
-            aria-label="Previous client"
-          >
-            ‹
-          </button>
-
-          <button
-            type="button"
-            className="worked-next absolute right-[-18px] top-1/2 z-20 flex h-[46px] w-[46px] -translate-y-1/2 items-center justify-center text-[58px] font-light leading-none text-[#8d8d8d] transition hover:text-[#159bd7] max-md:right-[-10px]"
-            aria-label="Next client"
-          >
-            ›
-          </button>
-
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            loop
-            speed={850}
-            slidesPerView={1}
-            spaceBetween={35}
-            autoplay={{
-              delay: 2200,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            navigation={{
-              prevEl: ".worked-prev",
-              nextEl: ".worked-next",
-            }}
-            pagination={{
-              clickable: true,
-              bulletClass: "worked-bullet",
-              bulletActiveClass: "worked-bullet-active",
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 38,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 48,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 54,
-              },
-            }}
-            className="worked-swiper px-[58px] pb-[98px]"
-          >
-            {clientLogos.map((client) => (
-              <SwiperSlide key={client.name}>
-                <div className="flex h-[105px] items-center justify-center">
-                  <ClientLogoImg client={client} />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Trusted by leading banks, telcos, retailers, and enterprises across
+            Bangladesh and beyond.
+          </p>
         </div>
       </div>
 
+      {/* Continuous marquee slider */}
+      <div className="relative mt-12 w-full">
+        <div className="mlai-clients overflow-hidden">
+          <div className="mlai-clients-track flex w-max">
+            <ClientTrack prefix="a" />
+            <ClientTrack prefix="b" />
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-28" />
+      </div>
+
       <style jsx global>{`
-        .worked-swiper {
-          position: relative;
+        @keyframes mlai-clients-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
         }
 
-        .worked-swiper .swiper-pagination {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          z-index: 20;
-          display: flex;
-          width: auto;
-          transform: translateX(-50%);
-          align-items: center;
-          gap: 13px;
+        .mlai-clients-track {
+          animation: mlai-clients-scroll 42s linear infinite;
         }
 
-        .worked-bullet {
-          display: block;
-          height: 7px;
-          width: 7px;
-          cursor: pointer;
-          border-radius: 999px;
-          background: #d7def0;
-          transition: all 0.25s ease;
+        .mlai-clients:hover .mlai-clients-track,
+        .mlai-clients:focus-within .mlai-clients-track {
+          animation-play-state: paused;
         }
 
-        .worked-bullet-active {
-          background: #315fdc;
-        }
-
-        @media (max-width: 767px) {
-          .worked-swiper {
-            padding-left: 42px !important;
-            padding-right: 42px !important;
-            padding-bottom: 78px !important;
+        @media (prefers-reduced-motion: reduce) {
+          .mlai-clients-track {
+            animation: none;
           }
         }
       `}</style>

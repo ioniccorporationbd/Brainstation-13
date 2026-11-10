@@ -1,64 +1,70 @@
-import React from "react";
+import {
+  Building2,
+  Factory,
+  GraduationCap,
+  HeartPulse,
+  Landmark,
+  Microscope,
+  Pill,
+  RadioTower,
+  ShoppingCart,
+} from "lucide-react";
 
-const industries = [
-  "Banking & Financial Services",
-  "Real Estate & Property Management",
-  "Biomolecular & Scientific Research",
-  "Pharmaceuticals & Life Sciences",
-  "E-commerce & Retail",
-  "Healthcare & Diagnostics",
-  "Telecommunications",
-  "Education & eLearning",
-  "Manufacturing & Industrial Operations",
+type Industry = {
+  title: string;
+  icon: React.ElementType;
+};
+
+const industries: Industry[] = [
+  { title: "Banking & Financial Services", icon: Landmark },
+  { title: "Real Estate & Property Management", icon: Building2 },
+  { title: "Biomolecular & Scientific Research", icon: Microscope },
+  { title: "Pharmaceuticals & Life Sciences", icon: Pill },
+  { title: "E-commerce & Retail", icon: ShoppingCart },
+  { title: "Healthcare & Diagnostics", icon: HeartPulse },
+  { title: "Telecommunications", icon: RadioTower },
+  { title: "Education & eLearning", icon: GraduationCap },
+  { title: "Manufacturing & Industrial Operations", icon: Factory },
 ];
-
-const IMAGE_URL =
-  "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=900&q=90";
 
 export default function MLAIIndustriesSection() {
   return (
-    <section className="w-full bg-[#f7f7f7]">
-      <div className="mx-auto grid min-h-[650px] w-full max-w-[1600px] grid-cols-1 items-center gap-12 px-5 py-[80px] sm:px-8 xl:grid-cols-[minmax(0,420px)_minmax(0,1fr)_minmax(0,520px)] xl:gap-[70px] lg:px-12 xl:px-0">
-        {/* Left Title */}
-        <div className="lg:pl-[8px]">
-          <p className="text-[13px] font-normal uppercase tracking-[0.04em] text-[#111111]">
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Clients We Have Served In
           </p>
 
-          <h2 className="mt-[24px] text-[54px] font-normal leading-[1.05] tracking-[-0.045em] text-black sm:text-[66px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Industries
           </h2>
 
-          <div className="mt-[24px] h-[2px] w-[72px] bg-[#159bd7]" />
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            We build domain-aligned AI models for the sectors we serve, tailored
+            to how each industry actually works.
+          </p>
         </div>
 
-        {/* Center List */}
-        <div className="lg:pt-[10px]">
-          <ul className="space-y-[24px]">
-            {industries.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-[18px] text-[22px] font-normal leading-[1.25] tracking-[-0.025em] text-black sm:text-[25px]"
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {industries.map((industry) => {
+            const Icon = industry.icon;
+
+            return (
+              <article
+                key={industry.title}
+                className="group flex items-center gap-4 rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <span className="mt-[1px] text-[28px] font-bold leading-none text-black">
-                  ✓
-                </span>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={24} strokeWidth={1.8} />
+                </div>
 
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="h-[360px] w-full max-w-[520px] overflow-hidden bg-gray-200 sm:h-[450px] lg:h-[520px]">
-            <img
-              src={IMAGE_URL}
-              alt="AI technology industry specialist working with laptop"
-              className="h-full w-full object-cover"
-            />
-          </div>
+                <h3 className="text-[15.5px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a]">
+                  {industry.title}
+                </h3>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,81 +1,88 @@
-import React from "react";
+import {
+  Activity,
+  Clock,
+  LineChart,
+  MessageSquare,
+  Microscope,
+  ScanFace,
+  ShieldAlert,
+  Target,
+  TrendingUp,
+  UserMinus,
+  Users,
+  Workflow,
+} from "lucide-react";
 
-const services = [
-  "Customer/Human Behavior Analysis",
-  "Face Identification",
-  "Process Automation",
-  "Pattern Analysis",
-  "Intelligent Chatbot",
-  "Fraudulent Identification (Bank)",
-  "Data Analysis for Biological Macromolecular Structures",
-  "Predictive Analytics & Modeling",
-  "Targeted Marketing",
-  "Churn Analysis",
-  "Trend Analysis",
-  "Time Series Analysis",
+type Service = {
+  title: string;
+  icon: React.ElementType;
+};
+
+const services: Service[] = [
+  { title: "Customer/Human Behavior Analysis", icon: Users },
+  { title: "Face Identification", icon: ScanFace },
+  { title: "Process Automation", icon: Workflow },
+  { title: "Pattern Analysis", icon: LineChart },
+  { title: "Intelligent Chatbot", icon: MessageSquare },
+  { title: "Fraudulent Identification (Bank)", icon: ShieldAlert },
+  {
+    title: "Data Analysis for Biological Macromolecular Structures",
+    icon: Microscope,
+  },
+  { title: "Predictive Analytics & Modeling", icon: TrendingUp },
+  { title: "Targeted Marketing", icon: Target },
+  { title: "Churn Analysis", icon: UserMinus },
+  { title: "Trend Analysis", icon: Activity },
+  { title: "Time Series Analysis", icon: Clock },
 ];
 
 export default function MLAIServicesSection() {
   return (
-    <section className="w-full bg-white">
-      {/* Top Text Area */}
-      <div className="mx-auto grid w-full max-w-[1160px] grid-cols-1 gap-[42px] px-5 py-[90px] sm:px-8 md:grid-cols-2 lg:py-[104px] xl:px-0">
-        <p className="max-w-[520px] text-[18px] font-normal leading-[1.65] text-[#6f747b]">
-          ML and AI solutions empower your organization to turn raw data into
-          actionable intelligence. By leveraging advanced algorithms, we help
-          you uncover hidden patterns, improve operational accuracy, and
-          accelerate decision-making. From automating repetitive tasks to
-          enhancing customer interactions, our technologies make your workflows
-          faster, more reliable, and more efficient.
-        </p>
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        {/* Centered Heading */}
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Can Do
+          </p>
 
-        <p className="max-w-[560px] text-[18px] font-normal leading-[1.65] text-[#6f747b]">
-          Every industry operates differently—and so should its AI strategy.
-          That’s why we design highly customized ML and AI models aligned with
-          your business goals, growth stage, and technical environment. Whether
-          you’re in finance, healthcare, research, or e-commerce, our solutions
-          scale seamlessly and evolve with your needs, ensuring long-term impact
-          and measurable results.
-        </p>
-      </div>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+            Offered Services
+          </h2>
 
-      {/* Offered Services Area */}
-      <div className="w-full bg-[#f7f7f7]">
-        <div className="mx-auto grid min-h-[690px] w-full max-w-[1160px] grid-cols-1 gap-[60px] px-5 py-[100px] sm:px-8 md:grid-cols-[360px_1fr] md:items-center lg:gap-[120px] lg:py-[120px] xl:px-0">
-          {/* Left Heading */}
-          <div>
-            <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-[#30343a]">
-              What We Can Do
-            </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            Customized ML and AI models aligned with your business goals. From
+            automation to advanced analytics, we build solutions that scale with
+            you.
+          </p>
+        </div>
 
-            <h2 className="mt-[24px] text-[52px] font-normal leading-[1.02] tracking-[-0.05em] text-black sm:text-[64px] lg:text-[70px]">
-              Offered
-              <br />
-              Services
-            </h2>
+        {/* Cards */}
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-            <div className="mt-[28px] h-[2px] w-[72px] bg-[#159bd7]" />
-          </div>
+            return (
+              <article
+                key={service.title}
+                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.8} />
+                </div>
 
-          {/* Right List */}
-          <div>
-            <ul className="space-y-[18px]">
-              {services.map((service) => (
-                <li
-                  key={service}
-                  className="grid grid-cols-[26px_1fr] items-start gap-[18px]"
-                >
-                  <span className="mt-[2px] text-[34px] font-bold leading-[0.7] text-[#58b7e5]">
-                    ›
+                <div>
+                  <span className="mb-1.5 block text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="text-[20px] font-normal leading-[1.45] text-[#1c1f25] sm:text-[22px]">
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  <h3 className="text-[15.5px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a]">
+                    {service.title}
+                  </h3>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

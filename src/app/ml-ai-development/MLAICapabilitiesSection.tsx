@@ -1,49 +1,91 @@
-import React from "react";
+import {
+  BrainCircuit,
+  Languages,
+  LineChart,
+  Network,
+  ScanEye,
+  Workflow,
+} from "lucide-react";
 
-const capabilities = [
-  "Build scalable ML models for prediction, classification, and automation.",
-  "Enable systems to understand and process human language (NLP).",
-  "Implement computer vision for image, video, face, and object recognition.",
-  "Deliver predictive and prescriptive analytics for smarter decisions.",
-  "Automate workflows to boost efficiency and reduce manual work.",
-  "Support complex decision-making with AI-driven insights.",
+type Capability = {
+  title: string;
+  icon: React.ElementType;
+};
+
+const capabilities: Capability[] = [
+  {
+    title:
+      "Build scalable ML models for prediction, classification, and automation.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Enable systems to understand and process human language (NLP).",
+    icon: Languages,
+  },
+  {
+    title:
+      "Implement computer vision for image, video, face, and object recognition.",
+    icon: ScanEye,
+  },
+  {
+    title: "Deliver predictive and prescriptive analytics for smarter decisions.",
+    icon: LineChart,
+  },
+  {
+    title: "Automate workflows to boost efficiency and reduce manual work.",
+    icon: Workflow,
+  },
+  {
+    title: "Support complex decision-making with AI-driven insights.",
+    icon: Network,
+  },
 ];
-
-const IMAGE_URL =
-  "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1100&q=90";
 
 export default function MLAICapabilitiesSection() {
   return (
-    <section className="w-full bg-[#f7f7f7] py-[80px] md:py-[95px] lg:py-[110px]">
-      <div className="mx-auto grid w-full max-w-[1160px] grid-cols-1 items-center gap-[55px] px-5 sm:px-8 lg:grid-cols-[520px_1fr] lg:gap-[70px] xl:px-0">
-        {/* Left Content */}
-        <div>
-          <h2 className="mb-[28px] text-center text-[30px] font-bold leading-[1.2] tracking-[-0.025em] text-black md:text-[34px] lg:text-[36px]">
+    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What We Deliver
+          </p>
+
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             Our AI Capabilities
           </h2>
 
-          <ul className="space-y-[19px]">
-            {capabilities.map((item) => (
-              <li
-                key={item}
-                className="grid grid-cols-[16px_1fr] gap-[18px] text-[22px] font-normal leading-[1.85] tracking-[-0.025em] text-black md:text-[24px]"
-              >
-                <span className="mt-[15px] h-[7px] w-[7px] rounded-full bg-black" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            End-to-end machine learning and AI engineering — from data
+            preparation and model building to deployment, monitoring, and
+            optimization.
+          </p>
         </div>
 
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="h-[360px] w-full max-w-[590px] overflow-hidden bg-gray-200 sm:h-[470px] lg:h-[580px]">
-            <img
-              src={IMAGE_URL}
-              alt="AI capabilities and machine learning dashboard"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {capabilities.map((capability, index) => {
+            const Icon = capability.icon;
+
+            return (
+              <article
+                key={capability.title}
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                    <Icon size={22} strokeWidth={1.8} />
+                  </div>
+
+                  <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <p className="mt-5 text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                  {capability.title}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

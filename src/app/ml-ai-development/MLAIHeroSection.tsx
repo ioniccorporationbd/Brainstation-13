@@ -1,154 +1,55 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-const typingTexts = [
-  "Artificial Intelligence (AI)",
-  "AI Automation",
-  "Data Intelligence",
-  "Predictive Analytics",
-];
-
-const BG_IMAGE =
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=90";
 
 export default function MLAIHeroSection() {
-  const [textIndex, setTextIndex] = useState(0);
-  const [typedText, setTypedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const fullText = typingTexts[textIndex];
-
-    let typingSpeed = isDeleting ? 38 : 72;
-
-    if (!isDeleting && typedText === fullText) {
-      typingSpeed = 1400;
-    }
-
-    if (isDeleting && typedText === "") {
-      typingSpeed = 350;
-    }
-
-    const timer = setTimeout(() => {
-      if (!isDeleting) {
-        if (typedText.length < fullText.length) {
-          setTypedText(fullText.slice(0, typedText.length + 1));
-        } else {
-          setIsDeleting(true);
-        }
-      } else {
-        if (typedText.length > 0) {
-          setTypedText(fullText.slice(0, typedText.length - 1));
-        } else {
-          setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % typingTexts.length);
-        }
-      }
-    }, typingSpeed);
-
-    return () => clearTimeout(timer);
-  }, [typedText, isDeleting, textIndex]);
-
   return (
-    <section className="relative min-h-[650px] w-full overflow-hidden bg-black">
-      {/* Background Image */}
-      <div
-        className="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${BG_IMAGE})`,
-        }}
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/45" />
-
-      {/* Green Tech Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(0,255,190,0.22),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(0,170,130,0.16),transparent_30%)]" />
-
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[650px] w-full max-w-[1400px] items-center px-5 py-[90px] sm:px-8 lg:py-[110px] xl:px-0">
-        <div className="hero-card w-full max-w-[735px] bg-white/90 px-[34px] py-[42px] shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[4px] sm:px-[54px] sm:py-[58px] lg:ml-[120px]">
-          <h1 className="text-[42px] font-bold leading-[1.08] tracking-[-0.045em] text-black sm:text-[56px] lg:text-[66px]">
-            <span className="block">Machine Learning (ML) &amp;</span>
-            <span className="block min-h-[72px] text-black sm:min-h-[90px]">
-              {typedText}
-              <span className="typing-cursor ml-1 inline-block">|</span>
-            </span>
-          </h1>
-
-          <p className="mt-[32px] max-w-[640px] text-[16px] font-normal leading-[1.8] text-black sm:text-[18px]">
-            Magnetic Solution Limited delivers expert Machine Learning (ML) and AI
-            solutions to help businesses automate processes, analyze data, and
-            drive smarter decisions.
+    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
+        {/* Left - Text */}
+        <div>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+            ML &amp; AI Development
           </p>
 
-          <div className="mt-[38px] flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-[150px]">
+          <h1 className="text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">
+            Machine Learning &amp; AI Solutions
+          </h1>
+
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">
+            We design, build, and deploy production-ready machine learning and
+            AI systems that automate processes, uncover hidden patterns, and
+            help you make smarter decisions.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Link
+              href="/schedule-a-call"
+              className="inline-flex items-center justify-center rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            >
+              Schedule a Call
+            </Link>
+
             <Link
               href="/contact"
-              className="inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f59b15]"
+              className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Instant Quote
             </Link>
-
-            <Link
-              href="/schedule-a-call"
-              className="inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-[#ffad2f] px-[30px] text-[16px] font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f59b15]"
-            >
-              Book a Meeting
-            </Link>
           </div>
         </div>
+
+        {/* Right - Image */}
+        <div className="group relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[440px] lg:h-[480px]">
+          <Image
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1400&auto=format&fit=crop"
+            alt="Machine learning and AI development"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 560px"
+            className="object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
       </div>
-
-      <style jsx>{`
-        .hero-bg {
-          animation: bgZoom 12s ease-in-out infinite alternate;
-        }
-
-        .hero-card {
-          animation: cardEntrance 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
-        }
-
-        .typing-cursor {
-          animation: cursorBlink 0.85s infinite;
-        }
-
-        @keyframes bgZoom {
-          from {
-            transform: scale(1);
-          }
-
-          to {
-            transform: scale(1.06);
-          }
-        }
-
-        @keyframes cardEntrance {
-          from {
-            opacity: 0;
-            transform: translateY(34px) scale(0.98);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
-        @keyframes cursorBlink {
-          0%,
-          45% {
-            opacity: 1;
-          }
-
-          46%,
-          100% {
-            opacity: 0;
-          }
-        }
-      `}</style>
     </section>
   );
 }
