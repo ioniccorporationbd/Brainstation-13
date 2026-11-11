@@ -1,89 +1,70 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const successStats = [
+const successPoints = [
   {
-    value: "100%",
-    label: "Retinopathy levels automatically",
+    label: "Smartphone-based",
+    text: "Retinopathy levels captured with a phone camera",
   },
   {
-    value: "99%",
-    label: "Provides accurate data",
+    label: "Automated grading",
+    text: "Consistent, objective measurement of disease stage",
   },
 ];
 
 export default function PharmaCustomerSuccessSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f4f8fc] px-6 py-[96px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        {/* Section Title */}
-        <div className="max-w-[660px]">
-          <h2 className="text-[46px] font-medium leading-[1.08] tracking-[-0.075em] text-[#050b18] md:text-[68px]">
-            Our Customer Success
-            <br />
-            Stories
+        <div className="max-w-[720px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Customer success
+          </p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
+            Our customer success stories
           </h2>
         </div>
 
-        {/* Main Content */}
-        <div className="mt-[90px] grid grid-cols-1 items-center gap-[78px] lg:grid-cols-[0.9fr_1fr]">
-          {/* Left Image */}
-          <div className="group relative overflow-hidden rounded-[8px] bg-white shadow-[0_22px_70px_rgba(17,30,64,0.08)]">
+        <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="group overflow-hidden rounded-2xl border border-[#ececec] bg-white">
             <img
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1400&auto=format&fit=crop"
-              alt="Doctor using digital healthcare technology"
-              className="h-[430px] w-full object-cover transition duration-700 group-hover:scale-[1.06] md:h-[560px]"
+              src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1400&auto=format&fit=crop"
+              alt="Doctor consulting a patient about screening results"
+              className="h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[440px]"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#111E40]/10 via-transparent to-[#3f93cf]/10" />
-
-            {/* Circle Pattern */}
-            <div className="pointer-events-none absolute -left-24 -top-24 h-[360px] w-[360px] rounded-full border border-white/25" />
-            <div className="pointer-events-none absolute -left-16 -top-16 h-[300px] w-[300px] rounded-full border border-white/25" />
-            <div className="pointer-events-none absolute -left-8 -top-8 h-[240px] w-[240px] rounded-full border border-white/25" />
-            <div className="pointer-events-none absolute left-0 top-0 h-[180px] w-[180px] rounded-full border border-white/25" />
           </div>
 
-          {/* Right Text */}
           <div>
-            <p className="text-[19px] font-medium uppercase leading-none tracking-[-0.035em] text-[#3f93cf] md:text-[22px]">
-              Healthcare Professional
+            <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+              Healthcare professional
             </p>
 
-            <h3 className="mt-7 text-[36px] font-medium leading-[1.1] tracking-[-0.07em] text-[#050b18] md:text-[46px]">
-              Diabetic Retinopathy
+            <h3 className="mt-3 text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[32px]">
+              Diabetic retinopathy
             </h3>
 
-            <p className="mt-8 max-w-[720px] text-[19px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
-              Our app aims to identify this disease by scanning human
-              retinopathy levels using just a smartphone. This can be a
-              convenient solution for patients and doctors. With quick and
-              accurate retinopathy level measurements, doctors can understand
-              their patients’ conditions and consult them according to their
-              stage of the disease.
+            <p className="mt-4 text-[15px] leading-[1.8] text-[#55585e]">
+              Our app aims to identify this disease by scanning human retinopathy
+              levels using just a smartphone. This can be a convenient solution
+              for patients and doctors. With quick and accurate retinopathy level
+              measurements, doctors can understand their patients&rsquo;
+              conditions and consult them according to their stage of the
+              disease.
             </p>
 
             <Link
-              href="/case-studies/diabetic-retinopathy"
-              className="mt-10 inline-flex items-center gap-3 text-[18px] font-bold tracking-[-0.025em] text-[#3f93cf] transition duration-300 hover:gap-5 hover:text-[#ff9f1c]"
+              href="/case-studies"
+              className="mt-7 inline-flex items-center gap-2 text-[14.5px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
             >
-              View Case Study
-              <ArrowRight size={19} strokeWidth={2.2} />
+              View case studies
+              <ArrowRight size={17} />
             </Link>
 
-            <div className="mt-10 h-px w-full bg-[#dce7f0]" />
-
-            {/* Stats */}
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {successStats.map((stat) => (
-                <div key={stat.value}>
-                  <h4 className="text-[58px] font-light leading-none tracking-[-0.08em] text-[#4fa0d1] md:text-[68px]">
-                    {stat.value}
-                  </h4>
-
-                  <p className="mt-5 text-[18px] font-medium leading-[1.35] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
-                    {stat.label}
-                  </p>
+            <div className="mt-8 grid grid-cols-1 gap-4 border-t border-[#ececec] pt-7 sm:grid-cols-2">
+              {successPoints.map((point) => (
+                <div key={point.label} className="rounded-xl border border-[#ececec] bg-[#fafafa] p-5">
+                  <p className="text-[15px] font-bold text-black">{point.label}</p>
+                  <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#55585e]">{point.text}</p>
                 </div>
               ))}
             </div>

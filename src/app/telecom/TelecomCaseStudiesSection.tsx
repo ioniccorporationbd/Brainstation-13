@@ -1,85 +1,54 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 type TelecomCaseStudy = {
   id: string;
-  logoText: string;
-  logoColor: string;
+  label: string;
   category: string;
   title: string;
   image: string;
   description: string;
-  stats: {
-    value: string;
-    label: string;
-  }[];
-  href: string;
+  highlights: string[];
 };
 
 const caseStudies: TelecomCaseStudy[] = [
   {
     id: "bt",
-    logoText: "BT",
-    logoColor: "text-[#1b4f9c]",
-    category: "Order Management Journey",
-    title: "British Telecom",
+    label: "British Telecom",
+    category: "Order management journey",
+    title: "Customer portal and order journey for British Telecom",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
     description:
       "We developed a customer facing website and portal for BT. The application receives huge orders each year and we helped BT to process their whole order journey. We used Adobe Experience Manager (AEM) - a comprehensive content management (CMS) tool for the large enterprise sector. We have helped BT Group with infrastructure and dev support.",
-    stats: [
-      {
-        value: "90%",
-        label: "Online bill pay",
-      },
-      {
-        value: "85%",
-        label: "Track an order",
-      },
-    ],
-    href: "/case-studies/british-telecom",
+    highlights: ["Online bill payment", "Order tracking", "Enterprise CMS delivery"],
   },
   {
     id: "telenor",
-    logoText: "telenor",
-    logoColor: "text-[#1889c9]",
-    category: "Telecom Digital Platform",
-    title: "Telenor",
+    label: "Telenor",
+    category: "Telecom digital platform",
+    title: "Digital engagement platform for Telenor",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1400&auto=format&fit=crop",
     description:
       "We helped telecom teams improve customer engagement, self-service access, digital content management, and operational visibility through scalable software platforms and enterprise integration support.",
-    stats: [
-      {
-        value: "88%",
-        label: "Customer self-service",
-      },
-      {
-        value: "80%",
-        label: "Faster support flow",
-      },
-    ],
-    href: "/case-studies/telenor",
+    highlights: ["Customer self-service", "Digital content management", "Operational visibility"],
   },
 ];
 
 export default function TelecomCaseStudiesSection() {
-  const [active, setActive] = useState<TelecomCaseStudy>(caseStudies[0]);
-
   return (
-    <section className="relative overflow-hidden border-b-[4px] border-[#111E40] bg-white px-6 py-[92px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        {/* Top Header */}
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div>
-            <h2 className="text-[42px] font-medium leading-none tracking-[-0.065em] text-[#050b18] md:text-[58px]">
-              Case Studies
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-[640px]">
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+              Case studies
+            </p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
+              Telecom work in production
             </h2>
-
-            <p className="mt-7 max-w-[520px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
               Check out our case studies that show how innovative solutions
               transformed businesses.
             </p>
@@ -87,104 +56,61 @@ export default function TelecomCaseStudiesSection() {
 
           <Link
             href="/case-studies"
-            className="mt-3 inline-flex w-fit items-center justify-center rounded-full bg-[#ffab2e] px-8 py-4 text-[15px] font-bold tracking-[-0.02em] text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffc15a] hover:shadow-[0_16px_38px_rgba(255,171,46,0.35)]"
+            className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
           >
-            See all Case Studies
+            See all case studies
+            <ArrowRight size={17} />
           </Link>
         </div>
 
-        {/* Logo Tabs */}
-        <div className="mt-[74px] flex flex-wrap gap-5">
-          {caseStudies.map((item) => {
-            const isActive = active.id === item.id;
-
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setActive(item)}
-                className={`flex h-[92px] w-[150px] items-center justify-center rounded-[8px] bg-[#f3f6fa] px-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_45px_rgba(17,30,64,0.12)] ${
-                  isActive
-                    ? "border-b-[3px] border-[#3f93cf] shadow-[0_12px_36px_rgba(17,30,64,0.08)]"
-                    : "border-b-[3px] border-transparent"
-                }`}
-              >
-                <span
-                  className={`text-center text-[24px] font-black leading-none tracking-[-0.05em] ${item.logoColor}`}
-                >
-                  {item.logoText}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Main Content */}
-        <div className="mt-[86px] grid grid-cols-1 items-center gap-[78px] lg:grid-cols-[0.9fr_1fr]">
-          {/* Left Image */}
-          <div className="group relative flex min-h-[360px] items-center justify-center overflow-hidden rounded-[8px] bg-white">
-            <div className="absolute inset-x-8 bottom-6 h-16 rounded-full bg-black/10 blur-2xl" />
-
-            <img
-              key={active.image}
-              src={active.image}
-              alt={active.title}
-              className="relative z-10 h-[330px] w-full max-w-[620px] rounded-[12px] object-cover shadow-[0_24px_70px_rgba(17,30,64,0.12)] transition duration-700 group-hover:scale-[1.05] md:h-[390px]"
-            />
-
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white via-transparent to-[#3f93cf]/5" />
-          </div>
-
-          {/* Right Content */}
-          <div>
-            <p className="text-[22px] font-medium leading-none tracking-[-0.035em] text-[#3f93cf]">
-              {active.category}
-            </p>
-
-            <h3 className="mt-7 max-w-[760px] text-[36px] font-medium leading-[1.1] tracking-[-0.07em] text-[#050b18] md:text-[46px]">
-              {active.title}
-            </h3>
-
-            <p className="mt-8 max-w-[720px] text-[19px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
-              {active.description}
-            </p>
-
-            <Link
-              href={active.href}
-              className="mt-10 inline-flex items-center gap-3 text-[18px] font-bold tracking-[-0.025em] text-[#ff9f1c] transition duration-300 hover:gap-5 hover:text-[#3f93cf]"
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {caseStudies.map((item) => (
+            <article
+              key={item.id}
+              className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#ececec] bg-white transition-colors duration-200 hover:border-[#c91f28]/50"
             >
-              View Case Study
-              <ArrowRight size={19} strokeWidth={2.2} />
-            </Link>
+              <div className="overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[260px]"
+                />
+              </div>
 
-            <div className="mt-10 h-px w-full bg-[#dce7f0]" />
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                  {item.category}
+                </p>
+                <h3 className="mt-3 text-[20px] font-semibold leading-[1.3] text-black">
+                  {item.title}
+                </h3>
+                <p className="mt-3 flex-1 text-[14px] leading-[1.7] text-[#55585e]">
+                  {item.description}
+                </p>
 
-            {/* Stats */}
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {active.stats.map((stat) => (
-                <div key={stat.label}>
-                  <h4 className="text-[58px] font-light leading-none tracking-[-0.08em] text-[#4fa0d1] md:text-[68px]">
-                    {stat.value}
-                  </h4>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {item.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="rounded-lg border border-[#ececec] bg-[#fafafa] px-3 py-1.5 text-[12.5px] font-semibold text-black"
+                    >
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
 
-                  <p className="mt-5 text-[18px] font-medium leading-[1.35] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+                <Link
+                  href="/case-studies"
+                  className="mt-5 inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
+                >
+                  View case studies
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
-
-      {/* Floating Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }
