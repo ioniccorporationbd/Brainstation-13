@@ -1,117 +1,173 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-
+import Link from "next/link";
 import {
-  ResourceHero,
-  Section,
-  SectionHeader,
-} from "@/components/resource-kit/ui";
-import ContactForm from "@/components/resource-kit/ContactForm";
+  ArrowRight,
+  Briefcase,
+  Clock,
+  Globe2,
+  Handshake,
+  MapPin,
+  MessagesSquare,
+} from "lucide-react";
+
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Brain Station 23",
+  title: "Contact | Magnetic Solution Limited",
   description:
-    "Get in touch with Brain Station 23. Reach our team for new projects, partnerships or general inquiries — we respond within one business day.",
+    "Talk to Magnetic Solution Limited about a new project, partnership or role. Send a message through the form and our team will respond within one business day.",
 };
 
-const contactCards = [
+const channels = [
   {
-    icon: Mail,
-    title: "Email Us",
-    lines: ["hello@brainstation-23.com", "careers@brainstation-23.com"],
+    icon: MessagesSquare,
+    title: "Start a project",
+    text: "Tell us what you are building and we will map the fastest credible path.",
+    cta: "Book a discovery call",
+    href: "/schedule-a-call",
   },
   {
-    icon: Phone,
-    title: "Call Us",
-    lines: ["+880 96 1234 5678", "Sun–Thu · 9am–6pm"],
+    icon: Handshake,
+    title: "Partnerships",
+    text: "Referrals, reselling or co-delivery — apply to the partner programme.",
+    cta: "Join as partner",
+    href: "/join-as-partner",
   },
   {
-    icon: MapPin,
-    title: "Visit Us",
-    lines: ["Dhaka, Bangladesh", "Global offices in 4 countries"],
+    icon: Briefcase,
+    title: "Careers",
+    text: "See the roles we are hiring for and apply directly through the form.",
+    cta: "View open roles",
+    href: "/career",
   },
   {
     icon: Clock,
-    title: "Response Time",
-    lines: ["Within 1 business day", "Priority support for clients"],
+    title: "Response time",
+    text: "Every message reaches a person. We reply within one business day.",
+    cta: "How we work",
+    href: "/case-studies",
   },
 ];
 
 export default function ContactPage() {
   return (
     <main>
-      <ResourceHero
-        eyebrow="Resources · Contact"
-        title="Let's Talk"
-        description="Whether you have a project in mind, a partnership to explore or a question to ask, our team is ready to help. Tell us what you need and we'll get back to you quickly."
-        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1800&auto=format&fit=crop"
-        imageAlt="Team available to help customers"
-      />
+      <section className="bg-white px-6 pb-12 pt-14 md:pb-16 md:pt-20">
+        <div className="mx-auto max-w-[1240px]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+            Contact
+          </span>
+          <h1 className="mt-6 max-w-[820px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
+            Let&rsquo;s talk
+          </h1>
+          <p className="mt-5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
+            Whether you have a project in mind, a partnership to explore or a
+            question to ask &mdash; tell us what you need and we&rsquo;ll get
+            back to you quickly.
+          </p>
+        </div>
+      </section>
 
-      <Section>
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      <section className="bg-white px-6 pb-16 md:pb-20">
+        <div className="mx-auto grid max-w-[1240px] items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
           <div>
-            <SectionHeader
-              eyebrow="Send a Message"
-              title="Tell us about your project"
-              description="Fill out the form and a member of our team will reach out to discuss how we can help."
-            />
-            <div className="mt-10">
+            <h2 className="text-[22px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[26px]">
+              Tell us about your project
+            </h2>
+            <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
+              Fill out the form and a member of our team will reach out to
+              discuss how we can help.
+            </p>
+            <div className="mt-6">
               <ContactForm />
             </div>
           </div>
 
           <div className="space-y-4">
-            {contactCards.map((card) => {
-              const Icon = card.icon;
+            {channels.map((channel) => {
+              const Icon = channel.icon;
               return (
                 <div
-                  key={card.title}
-                  className="flex gap-5 rounded-[14px] border border-[#e6edf5] bg-white p-6"
+                  key={channel.title}
+                  className="rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/40 md:p-6"
                 >
-                  <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-[12px] bg-[#eef6fc] text-[#3f93cf]">
-                    <Icon size={24} strokeWidth={1.7} />
-                  </div>
-                  <div>
-                    <h3 className="text-[17px] font-semibold tracking-[-0.02em] text-[#050b18]">
-                      {card.title}
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                      <Icon size={19} strokeWidth={1.9} />
+                    </span>
+                    <h3 className="text-[16px] font-bold text-black">
+                      {channel.title}
                     </h3>
-                    {card.lines.map((line) => (
-                      <p key={line} className="mt-1 text-[15px] leading-[1.5] text-[#5a6b7d]">
-                        {line}
-                      </p>
-                    ))}
                   </div>
+                  <p className="mt-3 text-[14px] leading-[1.65] text-[#55585e]">
+                    {channel.text}
+                  </p>
+                  <Link
+                    href={channel.href}
+                    className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
+                  >
+                    {channel.cta}
+                    <ArrowRight size={14} strokeWidth={2.2} />
+                  </Link>
                 </div>
               );
             })}
+
+            <div className="rounded-xl border border-[#ececec] bg-[#fafafa] p-5 md:p-6">
+              <h3 className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#6b6f76]">
+                About direct channels
+              </h3>
+              <p className="mt-2 text-[13.5px] leading-[1.7] text-[#55585e]">
+                A public email address, phone line and street address have not
+                been verified for this site, so they are intentionally not
+                published here rather than invented. Every message sent through
+                the form is recorded and routed to the right team.
+              </p>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
-      <Section className="bg-[#f4f8fc]">
-        <SectionHeader
-          eyebrow="Global Presence"
-          title="We're close to where you are"
-          align="center"
-        />
-        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {[
-            { country: "Bangladesh", city: "Dhaka (HQ)" },
-            { country: "United States", city: "New York" },
-            { country: "United Kingdom", city: "London" },
-            { country: "United Arab Emirates", city: "Dubai" },
-          ].map((office) => (
-            <div
-              key={office.country}
-              className="rounded-[14px] border border-[#e6edf5] bg-white p-6 text-center"
-            >
-              <p className="text-[16px] font-semibold text-[#050b18]">{office.country}</p>
-              <p className="mt-1 text-[14px] text-[#5a6b7d]">{office.city}</p>
+      <section className="bg-[#fafafa] px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-[1240px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Where we are
+          </p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+            Based in Bangladesh, delivering worldwide
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                  <MapPin size={19} strokeWidth={1.9} />
+                </span>
+                <h3 className="text-[16px] font-bold text-black">
+                  Bangladesh &mdash; home base
+                </h3>
+              </div>
+              <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">
+                Our engineering and delivery team is based in Bangladesh,
+                working with clients across multiple time zones.
+              </p>
             </div>
-          ))}
+            <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                  <Globe2 size={19} strokeWidth={1.9} />
+                </span>
+                <h3 className="text-[16px] font-bold text-black">
+                  Remote-first delivery
+                </h3>
+              </div>
+              <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">
+                We collaborate remotely with clients wherever they are, with
+                overlapping working hours agreed per engagement.
+              </p>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
     </main>
   );
 }

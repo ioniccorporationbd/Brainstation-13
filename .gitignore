@@ -43,3 +43,6 @@ next-env.d.ts
 # dev artifacts
 audit/
 bs_build_*.log
+
+# Local form submissions written by /api/forms at runtime
+.form-inbox/

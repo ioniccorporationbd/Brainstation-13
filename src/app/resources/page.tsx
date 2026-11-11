@@ -1,191 +1,250 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Newspaper,
+  ArrowRight,
   Briefcase,
-  Mic,
-  Handshake,
-  Trophy,
-  Leaf,
   Download,
   FileText,
-  ArrowRight,
+  Handshake,
+  Leaf,
+  Mic,
+  Newspaper,
+  Trophy,
 } from "lucide-react";
 
-import {
-  ResourceHero,
-  Section,
-  SectionHeader,
-  FeatureGrid,
-  CtaBanner,
-} from "@/components/resource-kit/ui";
-import type { FeatureItem } from "@/components/resource-kit/ui";
-
 export const metadata: Metadata = {
-  title: "Our Resources | Brain Station 23",
+  title: "Resources | Magnetic Solution Limited",
   description:
-    "Explore everything Brain Station 23 has to offer — blog insights, case studies, media, partnerships, certifications, sustainability and downloadable guides.",
+    "Explore everything Magnetic Solution Limited publishes — blog insights, case studies, media, partnerships, recognitions, sustainability and downloadable guides.",
 };
 
-const hubs: FeatureItem[] = [
+const hubs = [
   {
     icon: Newspaper,
     title: "Blog & Insights",
     description:
       "Practical articles on engineering, cloud, AI and building great technology teams.",
+    href: "/blog",
   },
   {
     icon: Briefcase,
     title: "Case Studies",
     description:
       "Real projects with measurable outcomes across fintech, retail, health and more.",
+    href: "/case-studies",
   },
   {
     icon: Mic,
     title: "Media",
     description:
       "Press coverage, announcements and media assets for editorial use.",
+    href: "/media",
   },
   {
     icon: Handshake,
     title: "Partners",
     description:
       "The cloud and enterprise platforms we're certified to deliver on.",
+    href: "/partners",
   },
   {
     icon: Trophy,
     title: "Recognitions",
     description:
       "Awards and certifications earned through consistent, quality delivery.",
+    href: "/recognitions",
   },
   {
     icon: Leaf,
     title: "Sustainability",
     description:
       "How we build a responsible, low-carbon and people-first company.",
+    href: "/sustainability",
   },
 ];
 
 const downloads = [
   {
-    icon: FileText,
     title: "Digital Transformation Playbook",
     text: "A step-by-step guide to modernising legacy systems without disruption.",
     type: "Guide · PDF",
   },
   {
-    icon: FileText,
     title: "Cloud Migration Checklist",
     text: "The 20-point checklist we use before every enterprise cloud migration.",
     type: "Checklist · PDF",
   },
   {
-    icon: FileText,
     title: "Security & Compliance Overview",
     text: "How we protect client data — controls mapped to ISO and GDPR.",
     type: "Whitepaper · PDF",
   },
 ];
 
-const hubLinks: Record<string, string> = {
-  "Blog & Insights": "/blog",
-  "Case Studies": "/case-studies",
-  Media: "/media",
-  Partners: "/partners",
-  Recognitions: "/recognitions",
-  Sustainability: "/sustainability",
-};
-
 export default function ResourcesPage() {
   return (
     <main>
-      <ResourceHero
-        eyebrow="Resources"
-        title="Our Resources"
-        description="Everything you need to understand how we work and what we deliver — insights, proof of results, media, partnerships and downloadable guides, all in one place."
-        image="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1800&auto=format&fit=crop"
-        imageAlt="Library of resources and books"
-      />
-
-      <Section>
-        <SectionHeader
-          eyebrow="Explore"
-          title="Browse by topic"
-          description="Jump straight to the resources most relevant to you."
-        />
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {hubs.map((hub) => {
-            const Icon = hub.icon;
-            return (
+      <section className="relative overflow-hidden bg-white px-6 pb-16 pt-14 md:pb-20 md:pt-20">
+        <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+              Resources
+            </span>
+            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
+              Our resources
+            </h1>
+            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
+              Everything you need to understand how we work and what we deliver
+              — insights, proof of results, media, partnerships and guides, in
+              one place.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                key={hub.title}
-                href={hubLinks[hub.title] ?? "/resources"}
-                className="group rounded-[14px] border border-[#e6edf5] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-[#cfe0ef] hover:shadow-[0_22px_50px_rgba(17,30,64,0.10)]"
+                href="/blog"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
               >
-                <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#eef6fc] text-[#3f93cf] transition duration-300 group-hover:bg-[#fff3dd] group-hover:text-[#ffab2e]">
-                  <Icon size={26} strokeWidth={1.7} />
-                </div>
-                <h3 className="text-[21px] font-semibold tracking-[-0.03em] text-[#050b18]">
-                  {hub.title}
-                </h3>
-                <p className="mt-3 text-[16px] leading-[1.55] text-[#5a6b7d]">
-                  {hub.description}
-                </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-bold text-[#3f93cf] transition group-hover:gap-4">
-                  Explore
-                  <ArrowRight size={16} strokeWidth={2.2} />
-                </span>
+                Read the blog
+                <ArrowRight size={17} />
               </Link>
-            );
-          })}
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+              >
+                View case studies
+              </Link>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-[#ececec]">
+            <img
+              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1600&auto=format&fit=crop"
+              alt="Library shelves — a collection of reference material"
+              className="h-[260px] w-full object-cover md:h-[340px]"
+            />
+          </div>
         </div>
-      </Section>
+      </section>
 
-      <Section className="bg-[#f4f8fc]">
-        <SectionHeader
-          eyebrow="Downloads"
-          title="Guides & whitepapers"
-          description="Practical resources distilled from thousands of engagements — free to download."
-        />
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {downloads.map((item) => {
-            const Icon = item.icon;
-            return (
+      <section className="bg-[#fafafa] px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-[1240px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Explore
+          </p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+            Browse by topic
+          </h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
+            Jump straight to the resources most relevant to you.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {hubs.map((hub) => {
+              const Icon = hub.icon;
+              return (
+                <Link
+                  key={hub.title}
+                  href={hub.href}
+                  className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                    <Icon size={21} strokeWidth={1.9} />
+                  </span>
+                  <h3 className="mt-4 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
+                    {hub.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
+                    {hub.description}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28]">
+                    Explore
+                    <ArrowRight
+                      size={15}
+                      strokeWidth={2.2}
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-[1240px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Downloads
+          </p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+            Guides &amp; whitepapers
+          </h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
+            Practical resources distilled from real engagements — free to
+            request.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {downloads.map((item) => (
               <article
                 key={item.title}
-                className="flex flex-col rounded-[14px] border border-[#e6edf5] bg-white p-8"
+                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40 md:p-7"
               >
-                <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#eef6fc] text-[#3f93cf]">
-                  <Icon size={26} strokeWidth={1.7} />
-                </div>
-                <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#8a96a5]">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                  <FileText size={21} strokeWidth={1.9} />
+                </span>
+                <p className="mt-4 text-[11.5px] font-bold uppercase tracking-[0.12em] text-[#6b6f76]">
                   {item.type}
                 </p>
-                <h3 className="mt-2 text-[20px] font-semibold tracking-[-0.03em] text-[#050b18]">
+                <h3 className="mt-1.5 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
                   {item.title}
                 </h3>
-                <p className="mt-3 flex-1 text-[15px] leading-[1.55] text-[#5a6b7d]">
+                <p className="mt-2 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
                   {item.text}
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-6 inline-flex items-center gap-2 text-[15px] font-bold text-[#3f93cf] transition hover:gap-4 hover:text-[#2d8fca]"
+                  className="mt-5 inline-flex items-center gap-1.5 self-start text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
                 >
-                  <Download size={16} strokeWidth={2.1} />
+                  <Download size={15} strokeWidth={2.1} />
                   Request download
                 </Link>
               </article>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
-      <CtaBanner
-        title="Can't find what you're looking for?"
-        description="Our team is happy to share the resources, references and answers you need."
-        primary={{ label: "Contact Us", href: "/contact" }}
-        secondary={{ label: "Read the Blog", href: "/blog" }}
-      />
+      <section className="bg-white px-6 pb-20 md:pb-24">
+        <div className="mx-auto max-w-[1240px]">
+          <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+            <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
+              <div>
+                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">
+                  Can&rsquo;t find what you need?
+                </h2>
+                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
+                  Our team is happy to share the references and answers you
+                  need.
+                </p>
+              </div>
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
+                >
+                  Contact us
+                  <ArrowRight size={17} />
+                </Link>
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+                >
+                  Read the blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
