@@ -1,63 +1,34 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-type RetailCaseStudy = {
-  id: string;
-  logoText: string;
-  logoColor: string;
-  category: string;
-  title: string;
-  image: string;
-  description: string;
-  stats: {
-    value: string;
-    label: string;
-  }[];
-  href: string;
+const caseStudy = {
+  logoText: "otobi",
+  category: "ERP HRMS Solution",
+  title: "OTOBI",
+  image:
+    "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1400&auto=format&fit=crop",
+  description:
+    "Otobi, is the leading lifestyle solution brand in Bangladesh. The fundamental story behind the prestige of OTOBI is having modern manufacturing capacity, innovative designs & one of the largest distribution networks.",
+  problems: [
+    "Fragmented HR data management",
+    "Manual attendance records",
+    "Distribution-scale operations",
+  ],
 };
 
-const caseStudies: RetailCaseStudy[] = [
-  {
-    id: "otobi",
-    logoText: "otobi",
-    logoColor: "text-black",
-    category: "ERP HRMS Solution",
-    title: "OTOBI",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop",
-    description:
-      "Otobi, is the leading lifestyle solution brand in Bangladesh. The fundamental story behind the prestige of OTOBI is having modern manufacturing capacity, innovative designs & one of the largest distribution networks.",
-    stats: [
-      {
-        value: "90%",
-        label: "Fragmented HR Data Management",
-      },
-      {
-        value: "85%",
-        label: "Inaccurate & Manual Attendance Records",
-      },
-    ],
-    href: "/case-studies/otobi",
-  },
-];
-
 export default function RetailCaseStudiesSection() {
-  const [active, setActive] = useState<RetailCaseStudy>(caseStudies[0]);
-
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#11182f]">
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        {/* Top Header */}
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div>
-            <h2 className="text-[42px] font-medium leading-none tracking-[-0.065em] text-[#050b18] md:text-[58px]">
-              Case Studies
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-[640px]">
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+              Case studies
+            </p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
+              Retail work in production
             </h2>
-
-            <p className="mt-7 max-w-[520px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
               Check out our case studies that show how innovative solutions
               transformed businesses.
             </p>
@@ -65,108 +36,69 @@ export default function RetailCaseStudiesSection() {
 
           <Link
             href="/case-studies"
-            className="mt-3 inline-flex w-fit items-center justify-center rounded-full bg-[#ffab2e] px-8 py-4 text-[15px] font-bold tracking-[-0.02em] text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffc15a] hover:shadow-[0_16px_38px_rgba(255,171,46,0.35)]"
+            className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
           >
-            See all Case Studies
+            See all case studies
+            <ArrowRight size={17} />
           </Link>
         </div>
 
-        {/* Logo Tabs */}
-        <div className="mt-[74px] flex flex-wrap gap-5">
-          {caseStudies.map((item) => {
-            const isActive = active.id === item.id;
-
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setActive(item)}
-                className={`flex h-[92px] w-[150px] items-center justify-center rounded-[8px] bg-[#f3f6fa] px-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_45px_rgba(17,30,64,0.12)] ${
-                  isActive
-                    ? "border-b-[3px] border-[#3f93cf] shadow-[0_12px_36px_rgba(17,30,64,0.08)]"
-                    : "border-b-[3px] border-transparent"
-                }`}
-              >
-                <span
-                  className={`text-center text-[34px] font-black lowercase leading-none tracking-[-0.08em] ${item.logoColor}`}
-                >
-                  {item.logoText}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Main Content */}
-        <div className="mt-[44px] grid grid-cols-1 items-center gap-[78px] lg:grid-cols-[0.9fr_1fr]">
-          {/* Left Image */}
-          <div className="group relative overflow-hidden rounded-[8px] bg-[#f4f8fc] shadow-[0_22px_70px_rgba(17,30,64,0.08)]">
+        <article className="mt-10 grid grid-cols-1 overflow-hidden rounded-xl border border-[#ececec] bg-white lg:grid-cols-[1fr_1fr]">
+          <div className="group overflow-hidden">
             <img
-              key={active.image}
-              src={active.image}
-              alt={active.title}
-              className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-[1.05] md:h-[520px]"
+              src={caseStudy.image}
+              alt="Modern sofa showroom for a lifestyle furniture brand"
+              className="h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[320px] lg:h-full"
             />
+          </div>
 
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#4c3f86]/45 via-[#4c3f86]/20 to-transparent" />
-
-            <div className="absolute bottom-8 left-8">
-              <p className="text-[34px] font-black uppercase leading-none tracking-[-0.04em] text-white md:text-[42px]">
-                ERP Solutions
+          <div className="p-6 md:p-9">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-[#fafafa] px-3 py-1.5 text-[13px] font-black tracking-[-0.01em] text-black ring-1 ring-[#ececec]">
+                {caseStudy.logoText}
+              </span>
+              <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                {caseStudy.category}
               </p>
             </div>
-          </div>
 
-          {/* Right Content */}
-          <div>
-            <p className="text-[22px] font-medium leading-none tracking-[-0.035em] text-[#3f93cf]">
-              {active.category}
-            </p>
-
-            <h3 className="mt-7 max-w-[760px] text-[36px] font-medium leading-[1.1] tracking-[-0.07em] text-[#050b18] md:text-[46px]">
-              {active.title}
+            <h3 className="mt-4 text-[22px] font-semibold leading-[1.25] text-black md:text-[28px]">
+              {caseStudy.title}
             </h3>
 
-            <p className="mt-8 max-w-[720px] text-[19px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
-              {active.description}
+            <p className="mt-4 text-[14.5px] leading-[1.75] text-[#55585e]">
+              {caseStudy.description}
             </p>
 
-            <Link
-              href={active.href}
-              className="mt-10 inline-flex items-center gap-3 text-[18px] font-bold tracking-[-0.025em] text-[#ff9f1c] transition duration-300 hover:gap-5 hover:text-[#3f93cf]"
-            >
-              View Case Study
-              <ArrowRight size={19} strokeWidth={2.2} />
-            </Link>
-
-            <div className="mt-10 h-px w-full bg-[#dce7f0]" />
-
-            {/* Stats */}
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {active.stats.map((stat) => (
-                <div key={stat.label}>
-                  <h4 className="text-[58px] font-light leading-none tracking-[-0.08em] text-[#4fa0d1] md:text-[68px]">
-                    {stat.value}
-                  </h4>
-
-                  <p className="mt-5 max-w-[280px] text-[18px] font-medium leading-[1.35] tracking-[-0.035em] text-[#42637a] md:text-[21px]">
-                    {stat.label}
-                  </p>
-                </div>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {caseStudy.problems.map((problem) => (
+                <li
+                  key={problem}
+                  className="rounded-lg border border-[#ececec] bg-[#fafafa] px-3 py-1.5 text-[12.5px] font-semibold text-black"
+                >
+                  {problem}
+                </li>
               ))}
+            </ul>
+
+            <div className="mt-7 flex flex-wrap items-center gap-5">
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
+              >
+                View case studies
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/schedule-a-call"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-5 py-2.5 text-[13.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+              >
+                Talk to our retail team
+              </Link>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-
-      {/* Floating Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

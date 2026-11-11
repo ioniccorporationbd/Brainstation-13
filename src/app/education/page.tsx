@@ -1,83 +1,63 @@
 import type { Metadata } from "next";
-import StandardPage, { type PageData } from "@/components/resource-kit/StandardPage";
+
+import GlobalFaqSection from "@/components/global/GlobalFaqSection";
+
+import EducationHeroSection from "./EducationHeroSection";
+import EducationIntroSection from "./EducationIntroSection";
+import EducationServicesSection from "./EducationServicesSection";
+import EducationBenefitsSection from "./EducationBenefitsSection";
+import EducationCtaSection from "./EducationCtaSection";
 
 export const metadata: Metadata = {
-  title: "Education | Brain Station 23",
-  description: "Learning platforms, assessment and content systems that make education more accessible, measurable and engaging.",
+  title: "Education Solutions | Magnetic Solution Limited",
+  description:
+    "Learning management, assessment and proctoring, content publishing and learning analytics built by Magnetic Solution Limited for education providers.",
 };
 
-const data: PageData = {
-  "eyebrow": "Industry · Education",
-  "title": "Learning technology for modern institutions",
-  "description": "We build learning platforms, assessment tools and content systems that make education more accessible, measurable and engaging.",
-  "intro": [
-    "Education is moving online and hybrid — and the technology has to keep up with pedagogy, not the other way round. We help universities, training providers and EdTech companies ship platforms learners actually finish.",
-    "From LMS to secure assessment, we cover the learner journey end to end."
-  ],
-  "featuresTitle": "Education solutions",
-  "features": [
-    {
-      "icon": "graduation",
-      "title": "Learning management",
-      "description": "Custom LMS, course delivery and progress tracking.",
-      "href": "/lms-development"
-    },
-    {
-      "icon": "monitor",
-      "title": "Assessment & proctoring",
-      "description": "Online exams with AI-assisted integrity and live proctoring.",
-      "href": "/proctoring-pro"
-    },
-    {
-      "icon": "book",
-      "title": "Content publishing",
-      "description": "Authoring, review and digital publishing workflows.",
-      "href": "/time2publish"
-    },
-    {
-      "icon": "users",
-      "title": "Student engagement",
-      "description": "Portals, communities and personalised learning paths."
-    },
-    {
-      "icon": "chart",
-      "title": "Learning analytics",
-      "description": "Outcome tracking and at-risk learner insights."
-    },
-    {
-      "icon": "globe",
-      "title": "Accessibility",
-      "description": "WCAG-compliant, inclusive experiences for every learner."
-    }
-  ],
-  "stats": [
-    {
-      "value": "1M+",
-      "label": "Learners supported"
-    },
-    {
-      "value": "50+",
-      "label": "Education platforms"
-    },
-    {
-      "value": "99.9%",
-      "label": "Exam uptime"
-    },
-    {
-      "value": "30%",
-      "label": "Completion lift"
-    }
-  ],
-  "cta": {
-    "title": "Building for learners?",
-    "description": "Talk to a team that has shipped education products at scale.",
-    "primaryLabel": "Talk to an expert",
-    "primaryHref": "/schedule-a-call",
-    "secondaryLabel": "View case studies",
-    "secondaryHref": "/case-studies"
-  }
-};
+const faqs = [
+  {
+    question: "Do you build on existing LMS platforms or from scratch?",
+    answer:
+      "Both. We extend established platforms where they fit, and build custom learning platforms where off-the-shelf tools cannot match the pedagogy.",
+  },
+  {
+    question: "How do you protect online exams?",
+    answer:
+      "With a combination of live proctoring, browser-level controls, AI-assisted integrity checks and audit trails, configured to your assessment policy.",
+  },
+  {
+    question: "Can you publish and distribute digital course content?",
+    answer:
+      "Yes. We deliver authoring, review and publishing workflows so institutions can produce and update course material without engineering help.",
+  },
+  {
+    question: "Do your platforms meet accessibility requirements?",
+    answer:
+      "We build to WCAG guidelines, with keyboard navigation, screen-reader support and contrast handled as part of delivery, not as an afterthought.",
+  },
+  {
+    question: "How does an engagement usually start?",
+    answer:
+      "With a scoping conversation about your programmes, learner base and current systems, followed by an architecture and a phased delivery plan.",
+  },
+];
 
-export default function Page() {
-  return <StandardPage data={data} />;
+export default function EducationPage() {
+  return (
+    <main>
+      <EducationHeroSection />
+      <EducationIntroSection />
+      <EducationServicesSection />
+      <EducationBenefitsSection />
+      <GlobalFaqSection
+        eyebrow="FAQ"
+        title="Education engagement questions"
+        subtitle="What institutions and EdTech teams usually ask before we start."
+        items={faqs}
+        ctaLabel="Schedule a call"
+        ctaHref="/contact"
+      />
+      <EducationCtaSection />
+    </main>
+  );
 }

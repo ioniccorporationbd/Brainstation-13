@@ -1,80 +1,63 @@
 import type { Metadata } from "next";
-import StandardPage, { type PageData } from "@/components/resource-kit/StandardPage";
+
+import GlobalFaqSection from "@/components/global/GlobalFaqSection";
+
+import EcommerceHeroSection from "./EcommerceHeroSection";
+import EcommerceIntroSection from "./EcommerceIntroSection";
+import EcommerceServicesSection from "./EcommerceServicesSection";
+import EcommerceBenefitsSection from "./EcommerceBenefitsSection";
+import EcommerceCtaSection from "./EcommerceCtaSection";
 
 export const metadata: Metadata = {
-  title: "E-commerce | Brain Station 23",
-  description: "Commerce experiences built to convert and scale — storefronts, checkout, fulfilment and growth analytics.",
+  title: "E-commerce Solutions | Magnetic Solution Limited",
+  description:
+    "Storefronts, checkout, payments, fulfilment and growth analytics built by Magnetic Solution Limited for online commerce.",
 };
 
-const data: PageData = {
-  "eyebrow": "Industry · E-commerce",
-  "title": "Commerce experiences built to convert and scale",
-  "description": "From storefronts and checkout to fulfilment and analytics — we build e-commerce that performs under real traffic and real growth.",
-  "intro": [
-    "Online buyers expect speed, clarity and trust at every step. We design commerce journeys that reduce friction and lift conversion, backed by architecture that scales through peak season.",
-    "Whether you're launching a new brand or replatforming an established catalogue, we own the full stack."
-  ],
-  "featuresTitle": "What we build in commerce",
-  "features": [
-    {
-      "icon": "bag",
-      "title": "Storefront experiences",
-      "description": "Fast, accessible, mobile-first storefronts that reflect your brand."
-    },
-    {
-      "icon": "card",
-      "title": "Payments & checkout",
-      "description": "Local and global gateways, wallets, BNPL and abandoned-cart recovery."
-    },
-    {
-      "icon": "truck",
-      "title": "Logistics & fulfilment",
-      "description": "Inventory sync, shipping and order orchestration across channels."
-    },
-    {
-      "icon": "chart",
-      "title": "Growth analytics",
-      "description": "Attribution, funnel and cohort analytics to guide merchandising."
-    },
-    {
-      "icon": "repeat",
-      "title": "Omnichannel",
-      "description": "Connected web, app, market and store experiences with one source of truth."
-    },
-    {
-      "icon": "target",
-      "title": "Conversion optimisation",
-      "description": "Experimentation and Core Web Vitals tuning to raise revenue per visit."
-    }
-  ],
-  "stats": [
-    {
-      "value": "3x",
-      "label": "Faster checkout flows"
-    },
-    {
-      "value": "99.9%",
-      "label": "Peak-season uptime"
-    },
-    {
-      "value": "45%",
-      "label": "Avg. conversion lift"
-    },
-    {
-      "value": "120+",
-      "label": "Commerce builds"
-    }
-  ],
-  "cta": {
-    "title": "Ready to grow your commerce revenue?",
-    "description": "Let's audit your storefront and find the fastest wins first.",
-    "primaryLabel": "Book a commerce audit",
-    "primaryHref": "/schedule-a-call",
-    "secondaryLabel": "View case studies",
-    "secondaryHref": "/case-studies"
-  }
-};
+const faqs = [
+  {
+    question: "Can you replatform an existing store without losing SEO?",
+    answer:
+      "Yes. We plan redirects, URL structure and content migration before launch so organic traffic and rankings carry over.",
+  },
+  {
+    question: "Do you build on existing platforms or custom stacks?",
+    answer:
+      "Both. We work with established commerce platforms where they fit, and custom storefront and checkout stacks where performance or flexibility demand it.",
+  },
+  {
+    question: "How do you handle payments and local gateways?",
+    answer:
+      "We integrate local and global gateways, wallets and buy-now-pay-later providers, with tokenisation and reconciliation built in.",
+  },
+  {
+    question: "Do you support marketplace and omnichannel models?",
+    answer:
+      "Yes. Connected web, app, marketplace and in-store experiences running off one source of truth for inventory and orders.",
+  },
+  {
+    question: "How does an engagement start?",
+    answer:
+      "With an audit of your storefront, funnel and stack, followed by an architecture and a phased delivery plan.",
+  },
+];
 
-export default function Page() {
-  return <StandardPage data={data} />;
+export default function EcommercePage() {
+  return (
+    <main>
+      <EcommerceHeroSection />
+      <EcommerceIntroSection />
+      <EcommerceServicesSection />
+      <EcommerceBenefitsSection />
+      <GlobalFaqSection
+        eyebrow="FAQ"
+        title="Commerce engagement questions"
+        subtitle="What commerce teams usually ask before we start building."
+        items={faqs}
+        ctaLabel="Schedule a call"
+        ctaHref="/contact"
+      />
+      <EcommerceCtaSection />
+    </main>
+  );
 }
