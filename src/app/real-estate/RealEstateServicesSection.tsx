@@ -66,40 +66,36 @@ const helpItems: HelpItem[] = [
   },
 ];
 
-export default function RealEstateHelpSection() {
+export default function RealEstateServicesSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[96px] text-[#11182f]">
-      <div className="mx-auto max-w-[1180px]">
-        <h2 className="text-[42px] font-medium leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[58px]">
-          How We Can Help
-        </h2>
+    <section id="services" className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="max-w-[720px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Services
+          </p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
+            How we can help
+          </h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
+            Holistic solutions for real estate companies moving to modern
+            digital operations.
+          </p>
+        </div>
 
-        <div className="mt-[76px] grid grid-cols-1 gap-y-[70px] md:grid-cols-2 lg:grid-cols-3">
-          {helpItems.map((item, index) => {
-            const Icon = item.icon;
-            const hasLeftBorder = index % 3 !== 0;
-
-            return (
-              <article
-                key={item.title}
-                className={`group relative min-h-[230px] px-0 transition duration-300 md:px-8 ${
-                  hasLeftBorder ? "lg:border-l lg:border-[#e2ebf3]" : ""
-                }`}
-              >
-                <div className="mb-14 flex h-[42px] w-[42px] items-center justify-center text-[#3f93cf] transition duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:text-[#ffab2e]">
-                  <Icon size={38} strokeWidth={1.6} />
-                </div>
-
-                <h3 className="max-w-[320px] text-[32px] font-medium leading-[1.08] tracking-[-0.065em] text-[#050b18] transition duration-300 group-hover:text-[#3f93cf] md:text-[38px]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-7 max-w-[340px] text-[17px] font-medium leading-[1.45] tracking-[-0.035em] text-[#42637a] md:text-[18px]">
-                  {item.description}
-                </p>
-              </article>
-            );
-          })}
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {helpItems.map((item) => (
+            <article
+              key={item.title}
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
+                <item.icon size={21} />
+              </span>
+              <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] text-black">{item.title}</h3>
+              <p className="mt-2 text-[13.5px] leading-[1.65] text-[#55585e]">{item.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
