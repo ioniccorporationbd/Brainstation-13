@@ -1,73 +1,75 @@
 type IntegrationItem = {
   name: string;
-  logo: string;
+  logo?: string;
   logoClassName?: string;
+  wordmarkClassName?: string;
 };
 
 const integrations: IntegrationItem[] = [
   {
     name: "SAP",
     logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-    logoClassName: "max-h-[52px] max-w-[120px]",
+    logoClassName: "max-h-[48px] max-w-[118px]",
   },
   {
     name: "Oracle",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-    logoClassName: "max-h-[42px] max-w-[165px]",
+    wordmarkClassName: "text-[#c74634]",
   },
   {
     name: "Odoo",
     logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Odoo_logo.svg",
-    logoClassName: "max-h-[66px] max-w-[160px]",
+    logoClassName: "max-h-[52px] max-w-[136px]",
   },
   {
     name: "IFS",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5f/IFS_AB_logo.svg",
-    logoClassName: "max-h-[62px] max-w-[130px]",
+    wordmarkClassName: "text-[#000000]",
   },
 ];
 
 export default function EnterpriseMsfaIntegrationsSection() {
   return (
-    <section className="relative overflow-hidden border-t-[6px] border-[#111E40] bg-white px-6 py-[92px] text-[#11182f]">
-      <div className="mx-auto max-w-[1320px]">
-        {/* Header */}
-        <div className="mx-auto max-w-[920px] text-center">
-          <p className="text-[24px] font-medium leading-none tracking-[-0.04em] text-[#3f93cf]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Enterprise Ecosystem
           </p>
 
-          <h2 className="mt-7 text-[46px] font-bold leading-[1.08] tracking-[-0.065em] text-black md:text-[64px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
             Integrations
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[950px] text-[20px] font-medium leading-[1.45] tracking-[-0.035em] text-black md:text-[23px]">
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
             Connect to your ERP and analytics stack. We provide seamless
             bi-directional handshakes with your core platforms.
           </p>
         </div>
 
-        {/* Integration Cards */}
-        <div className="mx-auto mt-[76px] grid max-w-[1260px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
           {integrations.map((item) => (
             <article
               key={item.name}
-              className="group flex h-[150px] flex-col items-center justify-center rounded-[8px] border border-[#d8dfe7] bg-white px-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#b7dff4] hover:shadow-[0_22px_65px_rgba(17,30,64,0.12)]"
+              className="group flex h-[132px] flex-col items-center justify-center border border-[#ececec] bg-white px-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#c91f28] md:h-[148px]"
             >
-              <div className="flex h-[72px] items-center justify-center">
-                <img
-                  src={item.logo}
-                  alt={`${item.name} logo`}
-                  loading="lazy"
-                  className={`object-contain transition duration-300 group-hover:scale-110 ${
-                    item.logoClassName ?? "max-h-[58px] max-w-[150px]"
-                  }`}
-                />
+              <div className="flex h-[56px] w-full items-center justify-center">
+                {item.logo ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={item.logo}
+                    alt={`${item.name} logo`}
+                    loading="lazy"
+                    className={`object-contain ${item.logoClassName ?? "max-h-[48px] max-w-[130px]"}`}
+                  />
+                ) : (
+                  <span
+                    className={`text-[26px] font-bold uppercase leading-none tracking-[-0.02em] md:text-[30px] ${
+                      item.wordmarkClassName ?? "text-[#000000]"
+                    }`}
+                  >
+                    {item.name}
+                  </span>
+                )}
               </div>
-
-              <p className="mt-3 text-[18px] font-medium leading-none tracking-[-0.035em] text-[#42637a]">
-                {item.name}
-              </p>
             </article>
           ))}
         </div>

@@ -13,7 +13,7 @@ type ArchitectureCard = {
   description: string;
   logos: string[];
   icon: React.ElementType;
-  variant?: "light" | "blue";
+  emphasis?: boolean;
 };
 
 const architectureCards: ArchitectureCard[] = [
@@ -22,9 +22,8 @@ const architectureCards: ArchitectureCard[] = [
     title: "Native & Web Apps",
     description:
       "Flutter App & Next JS Web Portal equipped with encrypted local SQLite storage.",
-    logos: ["Flutter", "NEXT.js"],
+    logos: ["Flutter", "Next.js"],
     icon: MonitorSmartphone,
-    variant: "light",
   },
   {
     eyebrow: "MSFA Core Engine",
@@ -33,16 +32,15 @@ const architectureCards: ArchitectureCard[] = [
       "Scalable microservices handling workflow logic, validation rules, and offline sync.",
     logos: [".NET Core"],
     icon: Layers3,
-    variant: "blue",
+    emphasis: true,
   },
   {
     eyebrow: "Enterprise Systems",
     title: "Core ERP",
     description:
       "Bi-directional integration with SAP, Oracle, IFS and HR Systems.",
-    logos: ["SAP", "ORACLE", "IFS", "odoo"],
+    logos: ["SAP", "Oracle", "IFS", "Odoo"],
     icon: CloudCog,
-    variant: "light",
   },
 ];
 
@@ -63,139 +61,78 @@ const architectureFeatures = [
 
 export default function EnterpriseMsfaArchitectureSection() {
   return (
-    <section className="relative overflow-hidden bg-[#111E40] px-6 py-[96px] text-white">
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[680px] w-[980px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4fa0d1]/8 blur-3xl" />
-
-      <div className="relative z-10 mx-auto max-w-[1320px]">
-        {/* Header */}
-        <div className="mx-auto max-w-[980px] text-center">
-          <p className="text-[22px] font-bold leading-none tracking-[-0.04em] text-[#3f93cf]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Enterprise Architecture
           </p>
 
-          <h2 className="mt-7 text-[44px] font-bold leading-[1.08] tracking-[-0.065em] text-white md:text-[64px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
             Secure. Scalable. Connected.
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[960px] text-[19px] font-bold leading-[1.55] tracking-[-0.035em] text-white/92 md:text-[22px]">
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
             A robust multi-tier architecture bridging offline field execution
             with your core enterprise systems.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="mt-[78px] grid grid-cols-1 gap-7 lg:grid-cols-3">
-          {architectureCards.map((card, index) => {
+        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {architectureCards.map((card) => {
             const Icon = card.icon;
-            const isBlue = card.variant === "blue";
 
             return (
-              <article key={card.title} className="group relative">
-                <div className="mb-5 text-center text-[17px] font-bold tracking-[-0.035em] text-white">
+              <article
+                key={card.title}
+                className={`group flex h-full flex-col border bg-white px-7 pb-8 pt-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#c91f28] ${
+                  card.emphasis
+                    ? "border-[#c91f28]"
+                    : "border-[#ececec]"
+                }`}
+              >
+                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
                   {card.eyebrow}
+                </span>
+
+                <div className="mt-5 flex flex-wrap items-center gap-2">
+                  {card.logos.map((logo) => (
+                    <span
+                      key={logo}
+                      className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.06em] text-[#3a3a3a]"
+                    >
+                      {logo}
+                    </span>
+                  ))}
                 </div>
 
-                <div
-                  className={`relative min-h-[245px] overflow-hidden rounded-[10px] px-8 py-9 text-center shadow-[0_22px_70px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-2 ${
-                    isBlue
-                      ? "bg-[#4b9bca] text-white hover:bg-[#55aadd]"
-                      : "bg-white text-[#11182f] hover:bg-[#f4f8fc]"
-                  }`}
-                >
-                  <div
-                    className={`pointer-events-none absolute -right-16 -top-16 h-[170px] w-[170px] rounded-full blur-2xl transition duration-300 ${
-                      isBlue
-                        ? "bg-white/0 group-hover:bg-white/16"
-                        : "bg-[#4fa0d1]/0 group-hover:bg-[#4fa0d1]/16"
-                    }`}
-                  />
-
-                  <div className="relative z-10">
-                    <div className="mx-auto mb-6 flex min-h-[32px] flex-wrap items-center justify-center gap-7">
-                      {card.logos.map((logo) => (
-                        <span
-                          key={logo}
-                          className={`text-[22px] font-bold leading-none tracking-[-0.04em] ${
-                            isBlue
-                              ? "text-white"
-                              : logo.toLowerCase().includes("sap")
-                                ? "text-[#0b9bd8]"
-                                : logo.toLowerCase().includes("oracle")
-                                  ? "text-[#e22b2b]"
-                                  : logo.toLowerCase().includes("odoo")
-                                    ? "text-[#8a6b8d]"
-                                    : logo.toLowerCase().includes("flutter")
-                                      ? "text-[#4fa0d1]"
-                                      : "text-[#050b18]"
-                          }`}
-                        >
-                          {logo}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div
-                      className={`mx-auto mb-5 flex h-[54px] w-[54px] items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 ${
-                        isBlue
-                          ? "bg-white/16 text-white"
-                          : "bg-[#e8f1f6] text-[#4fa0d1]"
-                      }`}
-                    >
-                      <Icon size={26} strokeWidth={1.8} />
-                    </div>
-
-                    <h3
-                      className={`text-[30px] font-bold leading-[1.12] tracking-[-0.06em] md:text-[34px] ${
-                        isBlue ? "text-white" : "text-[#050b18]"
-                      }`}
-                    >
-                      {card.title}
-                    </h3>
-
-                    <p
-                      className={`mx-auto mt-5 max-w-[380px] text-[18px] font-medium leading-[1.55] tracking-[-0.035em] md:text-[20px] ${
-                        isBlue ? "text-white/95" : "text-[#42637a]"
-                      }`}
-                    >
-                      {card.description}
-                    </p>
-                  </div>
-
-                  <span
-                    className={`absolute right-5 top-5 text-[44px] font-bold leading-none ${
-                      isBlue ? "text-white/10" : "text-[#111E40]/5"
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <div
-                    className={`absolute bottom-0 left-0 h-[4px] w-0 transition-all duration-300 group-hover:w-full ${
-                      isBlue ? "bg-white" : "bg-[#08a9df]"
-                    }`}
-                  />
+                <div className="mt-6 flex h-11 w-11 items-center justify-center rounded-[6px] bg-[#c91f28] text-white transition-colors duration-300 group-hover:bg-[#a71920]">
+                  <Icon size={20} strokeWidth={1.9} />
                 </div>
+
+                <h3 className="mt-5 text-[22px] font-bold leading-tight tracking-[-0.02em] text-[#000000]">
+                  {card.title}
+                </h3>
+
+                <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
+                  {card.description}
+                </p>
               </article>
             );
           })}
         </div>
 
-        {/* Bottom Features */}
-        <div className="mx-auto mt-[62px] grid max-w-[820px] grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-[860px] grid-cols-1 gap-3 sm:grid-cols-3">
           {architectureFeatures.map((feature) => {
             const Icon = feature.icon;
 
             return (
               <div
                 key={feature.title}
-                className="group flex items-center justify-center gap-3 rounded-full border border-white/10 bg-white/6 px-5 py-4 text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/12"
+                className="flex items-center justify-center gap-2.5 border border-[#ececec] bg-white px-4 py-3.5 transition-colors duration-300 hover:border-[#c91f28]"
               >
-                <Icon
-                  size={20}
-                  strokeWidth={1.8}
-                  className="text-[#4fa0d1] transition duration-300 group-hover:text-[#ffab2e]"
-                />
-                <span className="text-[15px] font-bold tracking-[-0.03em]">
+                <Icon size={17} strokeWidth={2} className="text-[#c91f28]" />
+                <span className="text-[13px] font-bold tracking-[-0.01em] text-[#1f1f1f]">
                   {feature.title}
                 </span>
               </div>
@@ -203,15 +140,6 @@ export default function EnterpriseMsfaArchitectureSection() {
           })}
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

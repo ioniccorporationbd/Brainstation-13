@@ -4,11 +4,9 @@ type HighlightItem = {
   title: string;
   description: string;
   points: string[];
+  image: string;
   reverse?: boolean;
 };
-
-const bannerImage =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop";
 
 const highlights: HighlightItem[] = [
   {
@@ -20,6 +18,8 @@ const highlights: HighlightItem[] = [
       "Strict GPS & Timestamp Validation",
       "Ad-hoc routing with Manager Approval",
     ],
+    image:
+      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1400&auto=format&fit=crop",
   },
   {
     title: "True Offline-First",
@@ -30,6 +30,8 @@ const highlights: HighlightItem[] = [
       "Encrypted SQLite Local Data Caching",
       "Automatic Background Sync Queues",
     ],
+    image:
+      "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1400&auto=format&fit=crop",
     reverse: true,
   },
   {
@@ -41,6 +43,8 @@ const highlights: HighlightItem[] = [
       "Automated VAT & Scheme Calculations",
       "Real-Time Credit Limit Blocking & Routing",
     ],
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400&auto=format&fit=crop",
   },
   {
     title: "Promotional Products Tracking",
@@ -51,6 +55,8 @@ const highlights: HighlightItem[] = [
       "Monitor Outlet-Level Campaign Execution",
       "Measure True ROI of Promotional Activities",
     ],
+    image:
+      "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1400&auto=format&fit=crop",
     reverse: true,
   },
   {
@@ -62,42 +68,25 @@ const highlights: HighlightItem[] = [
       "Live Sales, Attendance & Productivity",
       "Exportable 100+ Report Combinations",
     ],
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop",
   },
 ];
 
-function BannerPreview({ title }: { title: string }) {
+function ImagePanel({ title, image }: { title: string; image: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-[12px] bg-[#111E40] shadow-[0_18px_55px_rgba(17,30,64,0.16)]">
-      <div className="relative h-[250px] overflow-hidden md:h-[300px]">
-        <img
-          src={bannerImage}
-          alt={title}
-          className="h-full w-full object-cover opacity-95 transition duration-700 group-hover:scale-[1.08]"
-        />
+    <div className="relative overflow-hidden border border-[#ececec] bg-white">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        className="h-[240px] w-full object-cover transition-transform duration-700 hover:scale-[1.03] md:h-[330px]"
+      />
 
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#111E40]/85 via-[#111E40]/35 to-[#4fa0d1]/25" />
-
-        <div className="absolute -left-20 -top-20 h-[260px] w-[260px] rounded-full bg-[#4fa0d1]/20 blur-3xl transition duration-500 group-hover:bg-[#4fa0d1]/35" />
-
-        <div className="absolute -bottom-20 right-0 h-[240px] w-[280px] rounded-full bg-[#ffab2e]/10 blur-3xl transition duration-500 group-hover:bg-[#ffab2e]/20" />
-
-        <div className="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#111E40] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
-          MSFA Platform
-        </div>
-
-        <div className="absolute bottom-7 left-6 right-6">
-          <h3 className="max-w-[420px] text-[30px] font-bold leading-[1.1] tracking-[-0.06em] text-white md:text-[38px]">
-            {title}
-          </h3>
-
-          <p className="mt-3 max-w-[420px] text-[15px] font-semibold leading-[1.5] text-white/78">
-            Enterprise-grade field execution, reporting, and governance built
-            for scalable last-mile operations.
-          </p>
-        </div>
-
-        <div className="absolute bottom-0 left-0 h-[5px] w-0 bg-[#ffab2e] transition-all duration-500 group-hover:w-full" />
-      </div>
+      <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+        MSFA Platform
+      </span>
     </div>
   );
 }
@@ -105,24 +94,24 @@ function BannerPreview({ title }: { title: string }) {
 function HighlightContent({ item }: { item: HighlightItem }) {
   return (
     <div>
-      <h3 className="text-[30px] font-bold leading-[1.12] tracking-[-0.065em] text-[#050b18] md:text-[36px]">
+      <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#000000] md:text-[32px]">
         {item.title}
       </h3>
 
-      <p className="mt-5 max-w-[520px] text-[17px] font-medium leading-[1.55] tracking-[-0.035em] text-[#42637a] md:text-[18px]">
+      <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">
         {item.description}
       </p>
 
-      <ul className="mt-7 space-y-3">
+      <ul className="mt-6 space-y-2.5">
         {item.points.map((point) => (
           <li
             key={point}
-            className="flex items-start gap-3 text-[15px] font-bold leading-[1.4] tracking-[-0.025em] text-[#050b18] md:text-[16px]"
+            className="flex items-start gap-2.5 text-[14px] font-semibold leading-[1.55] text-[#1f1f1f] md:text-[15px]"
           >
             <CheckCircle2
-              size={18}
-              strokeWidth={1.9}
-              className="mt-[2px] shrink-0 text-[#08a9df]"
+              size={17}
+              strokeWidth={2.1}
+              className="mt-[3px] shrink-0 text-[#c91f28]"
             />
             <span>{point}</span>
           </li>
@@ -134,32 +123,37 @@ function HighlightContent({ item }: { item: HighlightItem }) {
 
 export default function EnterpriseMsfaPlatformHighlightsSection() {
   return (
-    <section className="relative overflow-hidden border-y-[6px] border-[#111E40] bg-white px-6 py-[92px] text-[#11182f]">
-      <div className="mx-auto max-w-[1120px]">
-        <div className="text-center">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+      <div className="mx-auto max-w-[1140px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Platform Highlights
           </p>
 
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.07em] text-[#050b18] md:text-[54px]">
-            Platform Highlights
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
+            Built for Real Field Conditions
           </h2>
+
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
+            Enterprise-grade field execution, reporting, and governance built
+            for scalable last-mile operations.
+          </p>
         </div>
 
-        <div className="mt-[56px] space-y-[52px]">
+        <div className="mt-12 space-y-10 md:space-y-14">
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12"
+              className="grid grid-cols-1 items-center gap-7 lg:grid-cols-2 lg:gap-12"
             >
               {item.reverse ? (
                 <>
                   <HighlightContent item={item} />
-                  <BannerPreview title={item.title} />
+                  <ImagePanel title={item.title} image={item.image} />
                 </>
               ) : (
                 <>
-                  <BannerPreview title={item.title} />
+                  <ImagePanel title={item.title} image={item.image} />
                   <HighlightContent item={item} />
                 </>
               )}
@@ -167,14 +161,6 @@ export default function EnterpriseMsfaPlatformHighlightsSection() {
           ))}
         </div>
       </div>
-
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

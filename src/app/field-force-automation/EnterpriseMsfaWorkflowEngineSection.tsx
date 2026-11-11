@@ -48,55 +48,52 @@ const workflowItems: WorkflowItem[] = [
 
 export default function EnterpriseMsfaWorkflowEngineSection() {
   return (
-    <section className="relative overflow-hidden border-t-[6px] border-[#111E40] bg-white px-6 py-[92px] text-[#11182f]">
-      <div className="mx-auto max-w-[1320px]">
-        {/* Header */}
-        <div className="mx-auto max-w-[900px] text-center">
-          <p className="text-[22px] font-medium leading-none tracking-[-0.04em] text-[#3f93cf]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Workflow Engine
           </p>
 
-          <h2 className="mt-7 text-[44px] font-bold leading-[1.08] tracking-[-0.065em] text-[#050b18] md:text-[60px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
             End-to-End Governance
           </h2>
 
-          <p className="mx-auto mt-7 max-w-[940px] text-[19px] font-medium leading-[1.55] tracking-[-0.035em] text-[#42637a] md:text-[22px]">
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
             Digitally verified, traceable, and fully auditable from the first
             plan to final ERP sync.
           </p>
         </div>
 
-        {/* Workflow */}
-        <div className="relative mt-[72px]">
-          {/* Desktop connector line */}
-          <div className="pointer-events-none absolute left-[8%] right-[8%] top-[31px] hidden h-px bg-gradient-to-r from-transparent via-[#d8e7ef] to-transparent lg:block" />
+        <div className="relative mt-14">
+          <div className="pointer-events-none absolute left-[8%] right-[8%] top-[30px] hidden h-px bg-[#ececec] lg:block" />
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6">
             {workflowItems.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <article
                   key={item.title}
-                  className="group relative flex flex-col items-center text-center"
+                  className="group relative flex flex-col items-center border border-[#ececec] bg-white px-5 pb-7 pt-0 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#c91f28]"
                 >
-                  <div className="relative z-10 flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#08a9df] text-white shadow-[0_16px_36px_rgba(8,169,223,0.26)] transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-110 group-hover:bg-[#ffab2e] group-hover:text-black group-hover:shadow-[0_22px_55px_rgba(255,171,46,0.28)]">
-                    <Icon size={26} strokeWidth={1.75} />
+                  <div className="absolute -top-[30px] flex h-[60px] w-[60px] items-center justify-center rounded-full border border-[#ececec] bg-white">
+                    <div className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#c91f28] text-white transition-colors duration-300 group-hover:bg-[#a71920]">
+                      <Icon size={20} strokeWidth={1.9} />
+                    </div>
                   </div>
 
-                  <div className="mt-6">
-                    <h3 className="text-[20px] font-bold leading-none tracking-[-0.045em] text-[#050b18] md:text-[22px]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-3 text-[19px] font-medium leading-[1.25] tracking-[-0.04em] text-[#42637a] md:text-[21px]">
-                      {item.subtitle}
-                    </p>
-                  </div>
-
-                  <span className="pointer-events-none absolute -top-3 right-[28%] hidden text-[52px] font-bold leading-none text-[#111E40]/[0.035] transition duration-300 group-hover:text-[#08a9df]/10 lg:block">
-                    {String(index + 1).padStart(2, "0")}
+                  <span className="mt-[42px] text-[11px] font-bold uppercase tracking-[0.16em] text-[#b5b5b5]">
+                    Step {String(index + 1).padStart(2, "0")}
                   </span>
+
+                  <h3 className="mt-2 text-[18px] font-bold leading-tight tracking-[-0.01em] text-[#000000]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-[14px] font-medium leading-[1.5] text-[#666666]">
+                    {item.subtitle}
+                  </p>
                 </article>
               );
             })}

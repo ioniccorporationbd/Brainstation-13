@@ -114,28 +114,26 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
   const activeItem = ecosystemItems[activeIndex];
 
   return (
-    <section className="relative overflow-hidden bg-[#111E40] px-6 py-[96px] text-white">
-      <div className="mx-auto max-w-[1320px]">
-        {/* Header */}
-        <div className="mx-auto max-w-[840px] text-center">
-          <p className="text-[20px] font-bold leading-none tracking-[-0.035em] text-[#3f93cf]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Comprehensive Capabilities
           </p>
 
-          <h2 className="mt-7 text-[44px] font-bold leading-[1.08] tracking-[-0.065em] text-white md:text-[62px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
             The Core Ecosystem
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[760px] text-[18px] font-semibold leading-[1.55] tracking-[-0.035em] text-white/75 md:text-[20px]">
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
             Click any module to preview how the platform supports field sales,
             governance, reporting, approvals, route planning, and ERP-ready
             execution.
           </p>
         </div>
 
-        <div className="mt-[76px] grid grid-cols-1 items-center gap-[54px] lg:grid-cols-[0.9fr_1.25fr]">
-          {/* Left Buttons */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
+          <div className="grid grid-cols-2 gap-2 md:gap-2.5">
             {ecosystemItems.map((item, index) => {
               const Icon = item.icon;
               const isActive = activeIndex === index;
@@ -145,113 +143,87 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                   key={item.title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`group flex min-h-[70px] items-center gap-4 rounded-[10px] px-5 py-4 text-left text-[17px] font-bold tracking-[-0.035em] transition-all duration-300 ${
+                  className={`flex min-h-[52px] items-center gap-2 border px-2.5 py-2.5 text-left text-[12px] font-semibold leading-tight transition-colors duration-200 md:min-h-[56px] md:gap-3 md:px-4 md:py-3 md:text-[14px] ${
                     isActive
-                      ? "bg-[#ffab2e] text-black shadow-[0_18px_45px_rgba(255,171,46,0.28)]"
-                      : "bg-white text-[#223f5c] hover:-translate-y-1 hover:bg-[#f4f8fc] hover:shadow-[0_18px_45px_rgba(0,0,0,0.16)]"
+                      ? "border-[#c91f28] bg-[#c91f28] text-white"
+                      : "border-[#ececec] bg-white text-[#2b2b2b] hover:border-[#c91f28]"
                   }`}
                 >
                   <span
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] md:h-8 md:w-8 ${
                       isActive
-                        ? "bg-black/10 text-black"
-                        : "bg-[#e8f1f6] text-[#4fa0d1] group-hover:bg-[#4fa0d1] group-hover:text-white"
+                        ? "bg-white/15 text-white"
+                        : "bg-[#fdecec] text-[#c91f28]"
                     }`}
                   >
-                    <Icon size={20} strokeWidth={1.9} />
+                    <Icon size={16} strokeWidth={2} />
                   </span>
 
-                  <span>{item.title}</span>
+                  <span className="leading-tight">{item.title}</span>
                 </button>
               );
             })}
           </div>
 
-          {/* Right Changing Image */}
-          <div className="relative">
-            <div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4fa0d1]/12 blur-3xl" />
+          <div className="border border-[#ececec] bg-white p-2.5">
+            <div className="relative h-[320px] overflow-hidden bg-[#f5f5f5] md:h-[440px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                key={activeItem.image}
+                src={activeItem.image}
+                alt={activeItem.title}
+                className="h-full w-full object-cover"
+              />
 
-            <div className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 shadow-[0_34px_90px_rgba(0,0,0,0.38)] backdrop-blur-sm">
-              <div className="relative h-[430px] overflow-hidden rounded-[24px] bg-[#f4f8fc] md:h-[520px]">
-                <img
-                  key={activeItem.image}
-                  src={activeItem.image}
-                  alt={activeItem.title}
-                  className="h-full w-full object-cover opacity-90 transition-all duration-700 group-hover:scale-[1.04]"
-                />
+              <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+                {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                {ecosystemItems.length}
+              </span>
 
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#111E40]/88 via-[#111E40]/38 to-transparent" />
+              <div className="absolute inset-x-3 bottom-3 border border-[#ececec] bg-white p-4 md:inset-x-4 md:bottom-4 md:p-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">
+                      Active Module
+                    </p>
 
-                {/* Dashboard Overlay */}
-                <div className="absolute inset-x-6 bottom-6 rounded-[22px] border border-white/15 bg-white/90 p-6 text-[#11182f] shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur md:inset-x-8 md:bottom-8">
-                  <div className="flex flex-wrap items-start justify-between gap-5">
-                    <div>
-                      <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#4fa0d1]">
-                        Active Module
-                      </p>
-
-                      <h3 className="mt-3 text-[30px] font-bold leading-[1.08] tracking-[-0.06em] text-[#050b18] md:text-[38px]">
-                        {activeItem.title}
-                      </h3>
-                    </div>
-
-                    <div className="flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#08a9df] text-white shadow-[0_14px_34px_rgba(8,169,223,0.28)]">
-                      {(() => {
-                        const ActiveIcon = activeItem.icon;
-                        return <ActiveIcon size={28} strokeWidth={1.8} />;
-                      })()}
-                    </div>
+                    <h3 className="mt-1.5 text-[20px] font-bold leading-tight tracking-[-0.02em] text-[#000000] md:text-[24px]">
+                      {activeItem.title}
+                    </h3>
                   </div>
 
-                  <div className="mt-6 grid grid-cols-3 gap-3">
-                    <div className="rounded-[14px] bg-[#f4f8fc] px-4 py-4">
-                      <p className="text-[12px] font-bold text-[#42637a]">
-                        Status
-                      </p>
-                      <p className="mt-2 text-[18px] font-bold text-[#11182f]">
-                        Live
-                      </p>
-                    </div>
-
-                    <div className="rounded-[14px] bg-[#f4f8fc] px-4 py-4">
-                      <p className="text-[12px] font-bold text-[#42637a]">
-                        Sync
-                      </p>
-                      <p className="mt-2 text-[18px] font-bold text-[#11182f]">
-                        ERP
-                      </p>
-                    </div>
-
-                    <div className="rounded-[14px] bg-[#f4f8fc] px-4 py-4">
-                      <p className="text-[12px] font-bold text-[#42637a]">
-                        Mode
-                      </p>
-                      <p className="mt-2 text-[18px] font-bold text-[#11182f]">
-                        Offline
-                      </p>
-                    </div>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-[6px] bg-[#c91f28] text-white">
+                    {(() => {
+                      const ActiveIcon = activeItem.icon;
+                      return <ActiveIcon size={20} strokeWidth={2} />;
+                    })()}
                   </div>
                 </div>
 
-                {/* Floating Badge */}
-                <div className="absolute left-6 top-6 rounded-full bg-[#ffab2e] px-5 py-2 text-[13px] font-bold uppercase tracking-[0.08em] text-black shadow-[0_14px_34px_rgba(255,171,46,0.28)]">
-                  {String(activeIndex + 1).padStart(2, "0")} /{" "}
-                  {ecosystemItems.length}
+                <div className="mt-4 grid grid-cols-3 gap-2">
+                  {[
+                    { label: "Status", value: "Live" },
+                    { label: "Sync", value: "ERP" },
+                    { label: "Mode", value: "Offline" },
+                  ].map((meta) => (
+                    <div
+                      key={meta.label}
+                      className="border border-[#ececec] px-2.5 py-2"
+                    >
+                      <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#8a8a8a]">
+                        {meta.label}
+                      </p>
+                      <p className="mt-1 text-[13px] font-bold text-[#000000]">
+                        {meta.value}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-white/45">
-        Powered by NeuralFlow
-      </span>
     </section>
   );
 }

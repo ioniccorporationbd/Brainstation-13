@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+
 type CaseStudy = {
   title: string;
   description: string;
@@ -26,8 +28,8 @@ const caseStudies: CaseStudy[] = [
     description:
       "Android mobile app for Aristopharma replacing manual order placement and reporting. Built with Oracle, Medical Promotion Officers can log doctor visits, request samples, and check real-time stock. Integrated with GPS tracking for transparent field monitoring.",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop",
-    href: "/case-studies/aristopharma-field-force-management",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1400&auto=format&fit=crop",
+    href: "/case-studies",
     metricOne: "Real-Time",
     metricOneLabel: "Stock & Order Visibility",
     metricTwo: "Automated",
@@ -38,8 +40,8 @@ const caseStudies: CaseStudy[] = [
     description:
       "A scalable field automation platform for territory sales, outlet visits, reporting, and order governance. The solution improved visibility across field teams and enabled faster management decisions.",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop",
-    href: "/case-studies/berger-msfa",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1400&auto=format&fit=crop",
+    href: "/case-studies",
     metricOne: "2,500+",
     metricOneLabel: "Field Users",
     metricTwo: "Unified",
@@ -50,8 +52,8 @@ const caseStudies: CaseStudy[] = [
     description:
       "A reliable offline-ready ordering and reporting system for remote field operations. The platform helped sales teams capture orders, sync data, and maintain full operational visibility.",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600&auto=format&fit=crop",
-    href: "/case-studies/bata-sales-platform",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400&auto=format&fit=crop",
+    href: "/case-studies",
     metricOne: "100%",
     metricOneLabel: "Transparency",
     metricTwo: "Offline",
@@ -60,47 +62,54 @@ const caseStudies: CaseStudy[] = [
 ];
 
 export default function EnterpriseMsfaCaseStudiesSection() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
-    <section className="relative overflow-hidden border-t-[6px] border-[#111E40] bg-white px-6 py-[82px] text-[#11182f]">
+    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        <div className="text-center">
-          <p className="mb-5 text-[14px] font-bold uppercase tracking-[0.16em] text-[#4fa0d1]">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
             Proven Results
           </p>
 
-          <h2 className="text-[44px] font-bold leading-[1.08] tracking-[-0.07em] text-black md:text-[58px]">
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
             Case Studies
           </h2>
         </div>
 
-        <div className="relative mx-auto mt-[58px] max-w-[1120px]">
+        <div className="relative mx-auto mt-11 max-w-[1140px]">
           <button
             type="button"
-            className="case-study-prev absolute left-5 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#ffab2e] text-white shadow-[0_12px_30px_rgba(255,171,46,0.30)] transition duration-300 hover:scale-110 hover:bg-[#ffc15a]"
+            className="case-study-prev absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white md:left-5"
             aria-label="Previous case study"
           >
-            <ChevronLeft size={22} strokeWidth={2.4} />
+            <ChevronLeft size={20} strokeWidth={2.2} />
           </button>
 
           <button
             type="button"
-            className="case-study-next absolute right-5 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#ffab2e] text-white shadow-[0_12px_30px_rgba(255,171,46,0.30)] transition duration-300 hover:scale-110 hover:bg-[#ffc15a]"
+            className="case-study-next absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white md:right-5"
             aria-label="Next case study"
           >
-            <ChevronRight size={22} strokeWidth={2.4} />
+            <ChevronRight size={20} strokeWidth={2.2} />
           </button>
 
           <Swiper
+            key={prefersReducedMotion ? "case-studies-static" : "case-studies-auto"}
             modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
-            spaceBetween={30}
-            speed={850}
+            spaceBetween={24}
+            speed={800}
             loop
-            autoplay={{
-              delay: 4200,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            autoplay={
+              prefersReducedMotion
+                ? false
+                : {
+                    delay: 4200,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }
+            }
             navigation={{
               prevEl: ".case-study-prev",
               nextEl: ".case-study-next",
@@ -113,53 +122,53 @@ export default function EnterpriseMsfaCaseStudiesSection() {
           >
             {caseStudies.map((item) => (
               <SwiperSlide key={item.title}>
-                <article className="grid overflow-hidden rounded-[10px] border border-[#dce8f2] bg-white shadow-[0_20px_70px_rgba(17,30,64,0.08)] lg:grid-cols-[0.92fr_1fr]">
-                  <div className="group relative min-h-[360px] overflow-hidden lg:min-h-[520px]">
+                <article className="grid overflow-hidden border border-[#ececec] bg-white lg:grid-cols-[0.92fr_1fr]">
+                  <div className="relative min-h-[240px] overflow-hidden bg-[#f5f5f5] md:min-h-[340px] lg:min-h-[480px]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.06]"
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.04]"
                     />
-
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#111E40]/20 via-transparent to-[#4fa0d1]/10" />
                   </div>
 
-                  <div className="flex flex-col justify-center px-8 py-10 md:px-12 lg:px-16">
-                    <h3 className="max-w-[560px] text-[34px] font-bold leading-[1.08] tracking-[-0.065em] text-black md:text-[44px]">
+                  <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 lg:px-12">
+                    <h3 className="max-w-[520px] text-[22px] font-bold leading-[1.15] tracking-[-0.02em] text-[#000000] md:text-[30px]">
                       {item.title}
                     </h3>
 
-                    <p className="mt-8 max-w-[600px] text-[18px] font-medium leading-[1.65] tracking-[-0.035em] text-[#42637a] md:text-[20px]">
+                    <p className="mt-5 max-w-[560px] text-[14px] font-medium leading-[1.7] text-[#565656] md:text-[16px]">
                       {item.description}
                     </p>
 
                     <Link
                       href={item.href}
-                      className="mt-8 inline-flex w-fit items-center gap-3 text-[17px] font-bold tracking-[-0.025em] text-[#ffab2e] transition duration-300 hover:gap-5 hover:text-[#3f93cf]"
+                      className="mt-6 inline-flex w-fit items-center gap-2.5 border border-[#ececec] px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
                     >
                       View Case Study
-                      <ArrowRight size={19} strokeWidth={2} />
+                      <ArrowRight size={16} strokeWidth={2.2} />
                     </Link>
 
-                    <div className="mt-10 h-px w-full bg-[#dce8f2]" />
+                    <div className="mt-8 h-px w-full bg-[#ececec]" />
 
-                    <div className="mt-8 grid grid-cols-1 gap-7 sm:grid-cols-2">
+                    <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                       <div>
-                        <p className="text-[46px] font-light leading-none tracking-[-0.08em] text-[#4fa0d1] md:text-[64px]">
+                        <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
                           {item.metricOne}
                         </p>
 
-                        <p className="mt-3 text-[18px] font-bold leading-[1.25] tracking-[-0.035em] text-[#42637a] md:text-[20px]">
+                        <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
                           {item.metricOneLabel}
                         </p>
                       </div>
 
                       <div>
-                        <p className="text-[46px] font-light leading-none tracking-[-0.08em] text-[#4fa0d1] md:text-[64px]">
+                        <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
                           {item.metricTwo}
                         </p>
 
-                        <p className="mt-3 text-[18px] font-bold leading-[1.25] tracking-[-0.035em] text-[#42637a] md:text-[20px]">
+                        <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
                           {item.metricTwoLabel}
                         </p>
                       </div>
@@ -174,14 +183,6 @@ export default function EnterpriseMsfaCaseStudiesSection() {
         </div>
       </div>
 
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
-
-      <span className="fixed bottom-4 right-5 z-20 text-[10px] text-black/25">
-        Powered by NeuralFlow
-      </span>
-
       <style jsx global>{`
         .enterprise-case-study-swiper {
           overflow: hidden;
@@ -192,15 +193,14 @@ export default function EnterpriseMsfaCaseStudiesSection() {
           height: 8px;
           margin: 0 !important;
           border-radius: 999px;
-          background: #b8dff3;
+          background: #d9d9d9;
           opacity: 1;
           transition: all 0.3s ease;
         }
 
         .case-study-pagination .swiper-pagination-bullet-active {
-          width: 10px;
-          height: 10px;
-          background: #08a9df;
+          width: 22px;
+          background: #c91f28;
         }
       `}</style>
     </section>

@@ -1,119 +1,71 @@
 "use client";
 
-import { Autoplay, FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/free-mode";
-
-type ClientLogo = {
-  name: string;
-  logo: string;
-};
-
-const clientLogos: ClientLogo[] = [
-  {
-    name: "Sharif Pharmaceuticals",
-    logo: "https://logo.clearbit.com/sharifpharma.com.bd",
-  },
-  {
-    name: "Bata",
-    logo: "https://logo.clearbit.com/bata.com",
-  },
-  {
-    name: "Incepta Pharmaceuticals",
-    logo: "https://logo.clearbit.com/inceptapharma.com",
-  },
-  {
-    name: "Berger Paints Bangladesh",
-    logo: "https://logo.clearbit.com/bergerbd.com",
-  },
-  {
-    name: "Beacon Pharmaceuticals",
-    logo: "https://logo.clearbit.com/beaconpharma.com.bd",
-  },
-  {
-    name: "Square Pharmaceuticals",
-    logo: "https://logo.clearbit.com/squarepharma.com.bd",
-  },
-  {
-    name: "ACI Limited",
-    logo: "https://logo.clearbit.com/aci-bd.com",
-  },
-  {
-    name: "Beximco Pharmaceuticals",
-    logo: "https://logo.clearbit.com/beximcopharma.com",
-  },
-  {
-    name: "Renata Limited",
-    logo: "https://logo.clearbit.com/renata-ltd.com",
-  },
-  {
-    name: "Eskayef Pharmaceuticals",
-    logo: "https://logo.clearbit.com/skfbd.com",
-  },
+const clients = [
+  "Sharif Pharmaceuticals",
+  "Bata",
+  "Incepta Pharmaceuticals",
+  "Berger Paints Bangladesh",
+  "Beacon Pharmaceuticals",
+  "Square Pharmaceuticals",
+  "ACI Limited",
+  "Beximco Pharmaceuticals",
+  "Renata Limited",
+  "Eskayef Pharmaceuticals",
 ];
 
 export default function EnterpriseMsfaClientsLogoSwiperSection() {
   return (
-    <section className="relative overflow-hidden border-y-[6px] border-[#111E40] bg-white px-6 py-[70px]">
-      <div className="mx-auto max-w-[1320px]">
-        <div className="relative">
-          <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-[120px] bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-[120px] bg-gradient-to-l from-white to-transparent" />
+    <section className="w-full overflow-hidden bg-white px-6 pb-[72px] text-[#000000]">
+      <div className="mx-auto max-w-[1240px]">
+        <p className="text-center text-[13px] font-bold uppercase tracking-[0.16em] text-[#8a8a8a]">
+          Trusted by field teams at leading enterprises
+        </p>
 
-          <Swiper
-            modules={[Autoplay, FreeMode]}
-            loop
-            freeMode
-            speed={4200}
-            slidesPerView={2}
-            spaceBetween={38}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 2.4,
-                spaceBetween: 42,
-              },
-              768: {
-                slidesPerView: 3.4,
-                spaceBetween: 56,
-              },
-              1024: {
-                slidesPerView: 4.5,
-                spaceBetween: 70,
-              },
-              1280: {
-                slidesPerView: 5.3,
-                spaceBetween: 88,
-              },
-            }}
-            className="enterprise-msfa-logo-swiper"
-          >
-            {[...clientLogos, ...clientLogos].map((client, index) => (
-              <SwiperSlide key={`${client.name}-${index}`}>
-                <div className="group flex h-[112px] items-center justify-center rounded-[20px] bg-white px-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(17,30,64,0.12)]">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    loading="lazy"
-                    className="max-h-[66px] max-w-[230px] object-contain transition duration-300 group-hover:scale-110"
-                  />
-                </div>
-              </SwiperSlide>
+        <div className="group relative mt-7 overflow-hidden border-y border-[#ececec] py-5">
+          <div className="animate-msfa-clients flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
+            {[...clients, ...clients, ...clients].map((name, index) => (
+              <div
+                key={`${name}-${index}`}
+                className="mx-2.5 flex h-[52px] shrink-0 items-center border border-[#ececec] px-5 transition-colors duration-300 hover:border-[#c91f28] md:mx-3.5 md:h-[56px] md:px-6"
+              >
+                <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3a3a3a] md:text-[15px]">
+                  {name}
+                </span>
+              </div>
             ))}
-          </Swiper>
+          </div>
+
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-[40px] bg-gradient-to-r from-white to-transparent md:w-[110px]" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-[40px] bg-gradient-to-l from-white to-transparent md:w-[110px]" />
         </div>
       </div>
 
       <style jsx global>{`
-        .enterprise-msfa-logo-swiper .swiper-wrapper {
-          align-items: center;
-          transition-timing-function: linear !important;
+        @keyframes msfa-clients {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-33.3333%);
+          }
+        }
+
+        .animate-msfa-clients {
+          animation: msfa-clients 46s linear infinite;
+        }
+
+        .group:hover .animate-msfa-clients {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-msfa-clients {
+            animation: none;
+          }
+
+          .animate-msfa-clients > div:nth-child(n + 11) {
+            display: none;
+          }
         }
       `}</style>
     </section>
