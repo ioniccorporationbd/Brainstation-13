@@ -1,28 +1,35 @@
-import React from 'react';
-import CyberSecurityBanner from './CyberSecurityBanner';
-import OurFindings from './OurFindings';
-import WhyCyberSecurityMatters from './WhyCyberSecurityMatters';
-import CoreCapabilities from './CoreCapabilities';
-import SecurityApproach from './SecurityApproach';
-import WhyPartner from './WhyPartner';
-import SuccessStories from './SuccessStories';
-import FaqSection from './FaqSection';
+import type { Metadata } from "next";
 
-const page = () => {
-    return (
-        <div>
-            <CyberSecurityBanner/>
-            <OurFindings/>
-            <WhyCyberSecurityMatters/>
-            <CoreCapabilities/>
-            <SecurityApproach/>
-            <WhyPartner/>
-            <SuccessStories/>
-            <FaqSection/>
-         
+import CyberSecurityHeroSection from "./CyberSecurityHeroSection";
+import CyberSecurityFindingsSection from "./CyberSecurityFindingsSection";
+import CyberSecurityMattersSection from "./CyberSecurityMattersSection";
+import CyberSecurityCapabilitiesSection from "./CyberSecurityCapabilitiesSection";
+import CyberSecurityApproachSection from "./CyberSecurityApproachSection";
+import CyberSecurityPartnerSection from "./CyberSecurityPartnerSection";
+import CyberSecurityEngagementsSection from "./CyberSecurityEngagementsSection";
+import CyberSecurityToolsSection from "./CyberSecurityToolsSection";
+import CyberSecurityFaqSection from "./CyberSecurityFaqSection";
+import CyberSecurityCtaSection from "./CyberSecurityCtaSection";
 
-        </div>
-    );
+export const metadata: Metadata = {
+  title: "Cyber Security Services | Magnetic Solution Limited",
+  description:
+    "Security assessments, penetration testing, API and cloud security assessment, plus breach response — delivered by Magnetic Solution Limited.",
 };
 
-export default page;
+export default function CyberSecurityPage() {
+  return (
+    <main>
+      <CyberSecurityHeroSection />
+      <CyberSecurityFindingsSection />
+      <CyberSecurityMattersSection />
+      <CyberSecurityCapabilitiesSection />
+      <CyberSecurityApproachSection />
+      <CyberSecurityPartnerSection />
+      <CyberSecurityEngagementsSection />
+      <CyberSecurityToolsSection />
+      <CyberSecurityFaqSection />
+      <CyberSecurityCtaSection />
+    </main>
+  );
+}
