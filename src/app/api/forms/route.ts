@@ -7,12 +7,13 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-type FormKind = "contact" | "partner" | "career";
+type FormKind = "contact" | "partner" | "career" | "call";
 
 const REQUIRED: Record<FormKind, string[]> = {
   contact: ["name", "email", "message"],
   partner: ["name", "email", "company", "model", "message"],
   career: ["name", "email", "role", "message"],
+  call: ["name", "email", "topic", "message"],
 };
 
 const LIMITS: Record<string, number> = {
@@ -21,6 +22,8 @@ const LIMITS: Record<string, number> = {
   company: 160,
   phone: 40,
   role: 160,
+  topic: 120,
+  slot: 120,
   model: 80,
   message: 4000,
   link: 400,
@@ -31,9 +34,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 function inboxDir() {
   // Submissions are appended as NDJSON in a git-ignored folder next to the app.
   // Override with FORMS_INBOX_DIR when a durable volume is mounted.
-  return (
-    process.env.FORMS_INBOX_DIR || path.join(process.cwd(), ".form-inbox")
-  );
+  return process.env.FORMS_INBOX_DIR || path.join(process.cwd(), ".form-inbox");
 }
 
 export async function POST(request: Request) {

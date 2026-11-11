@@ -1,115 +1,196 @@
 import type { Metadata } from "next";
-import { CalendarCheck, Clock, Check, Globe } from "lucide-react";
-
+import Link from "next/link";
 import {
-  ResourceHero,
-  Section,
-  SectionHeader,
-  CtaBanner,
-} from "@/components/resource-kit/ui";
-import ContactForm from "@/components/resource-kit/ContactForm";
+  ArrowRight,
+  CalendarDays,
+  Clock3,
+  ListChecks,
+  Mail,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
+
+import CallForm from "./CallForm";
 
 export const metadata: Metadata = {
-  title: "Schedule a Call | Brain Station 23",
+  title: "Schedule a Call | Magnetic Solution Limited",
   description:
-    "Book a discovery call with Brain Station 23. Tell us about your project and we'll set up time with the right specialists within one business day.",
+    "Request a call with Magnetic Solution Limited — share your agenda and preferred date, and the team confirms the exact time by email.",
 };
 
-const steps = [
-  { title: "We listen", line: "A short conversation about your goals, constraints and timeline." },
-  { title: "We scope", line: "The right specialists outline an approach, not a sales pitch." },
-  { title: "We plan", line: "You leave with a clear next step — even if it's not with us." },
+const expectations = [
+  {
+    icon: Clock3,
+    title: "30-minute technical call",
+    body: "A focused conversation with the people who would actually do the work — engineering leads and a delivery owner.",
+  },
+  {
+    icon: ListChecks,
+    title: "Come with the constraint",
+    body: "The timeline, the legacy system, the compliance boundary. The useful calls are the specific ones.",
+  },
+  {
+    icon: Users,
+    title: "No sales hand-off",
+    body: "The same team that scopes the work stays on the account. Nothing is passed to a separate sales organisation.",
+  },
 ];
 
-const benefits = [
-  "30-minute discovery call with senior engineers",
-  "Honest feasibility and effort guidance",
-  "No obligation, no hard sell",
-  "Response within one business day",
+const process = [
+  {
+    step: "1",
+    title: "Send the request",
+    body: "Use the form with your agenda and a preferred date. The request is recorded on our server immediately.",
+  },
+  {
+    step: "2",
+    title: "We confirm by email",
+    body: "A person replies to the email you provide to agree the exact time and share the meeting details.",
+  },
+  {
+    step: "3",
+    title: "The call",
+    body: "Thirty minutes, technical, with a short written summary of what was discussed and agreed afterwards.",
+  },
 ];
 
 export default function ScheduleACallPage() {
   return (
     <main>
-      <ResourceHero
-        eyebrow="Let's Talk · Book a Call"
-        title="Schedule a discovery call"
-        description="Tell us what you're building and we'll connect you with the right specialists. Pick a time, share a few details, and we'll come prepared."
-        image="/images/core-capabilities/team-collaboration.png"
-        imageAlt="Brain Station 23 team ready to meet"
-      />
-
-      <Section>
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      {/* Hero + form */}
+      <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
+        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-start gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div>
-            <SectionHeader
-              eyebrow="Request a Slot"
-              title="Tell us about your project"
-              description="Fill in the form and our team will follow up to agree on a time that works for you."
-            />
-            <div className="mt-10">
-              <ContactForm />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+              Contact · Schedule a call
+            </span>
+
+            <h1 className="mt-6 max-w-[560px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
+              Request a call with the delivery team
+            </h1>
+
+            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17px]">
+              Tell us what the call needs to cover and when suits you. This page
+              submits a booking request — a person confirms the exact time by
+              email, so nothing is booked automatically.
+            </p>
+
+            <div className="mt-9 space-y-5">
+              {expectations.map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                    <item.icon size={19} strokeWidth={1.9} />
+                  </span>
+                  <div>
+                    <p className="text-[15.5px] font-bold text-black">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-[14.5px] leading-[1.65] text-[#55585e]">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-9 rounded-xl border border-[#ececec] bg-[#fafafa] p-6">
+              <h2 className="flex items-center gap-2 text-[15.5px] font-bold text-black">
+                <ShieldCheck size={18} className="text-[#c91f28]" />
+                What this page does and does not do
+              </h2>
+              <ul className="mt-3 space-y-2">
+                <li className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-[#55585e]">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
+                  Your request is stored server-side with a reference you can
+                  quote.
+                </li>
+                <li className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-[#55585e]">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
+                  No calendar is connected, so a slot is never reserved
+                  automatically.
+                </li>
+                <li className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-[#55585e]">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
+                  Confirmation always comes from a person replying to your
+                  email.
+                </li>
+              </ul>
             </div>
           </div>
 
           <div>
-            <div className="rounded-[16px] border border-[#e6edf5] bg-[#f9fbfd] p-8">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#eef6fc] text-[#3f93cf]">
-                  <CalendarCheck size={22} strokeWidth={1.8} />
+            <CallForm />
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
+        <div className="mx-auto max-w-[1240px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What happens next
+          </p>
+          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+            Three steps, no auto-booking
+          </h2>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {process.map((item) => (
+              <article
+                key={item.step}
+                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
+                  {item.step}
                 </span>
-                <h3 className="text-[19px] font-semibold tracking-[-0.02em] text-[#050b18]">
-                  What to expect
+                <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
+                  {item.title}
                 </h3>
-              </div>
-              <ol className="mt-6 space-y-5">
-                {steps.map((step, index) => (
-                  <li key={step.title} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#111E40] text-[14px] font-bold text-white">
-                      {index + 1}
-                    </span>
-                    <div>
-                      <p className="text-[16px] font-semibold text-[#050b18]">{step.title}</p>
-                      <p className="mt-1 text-[15px] leading-[1.5] text-[#5a6b7d]">{step.line}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
+                <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
+                  {item.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="mt-6 rounded-[16px] border border-[#e6edf5] bg-white p-8">
-              <ul className="space-y-3">
-                {benefits.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#eaf7ef] text-[#2e9e5b]">
-                      <Check size={13} strokeWidth={3} />
-                    </span>
-                    <span className="text-[15px] font-medium leading-[1.5] text-[#374151]">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 flex items-center gap-3 border-t border-[#eef4f9] pt-5 text-[14px] text-[#5a6b7d]">
-                <Clock size={16} strokeWidth={1.8} className="text-[#3f93cf]" />
-                Prefer email? Write to hello@brainstation-23.com
-              </div>
-            </div>
-
-            <div className="mt-6 flex items-center gap-3 rounded-[16px] bg-[#111E40] p-6 text-white">
-              <Globe size={22} strokeWidth={1.8} className="text-[#4fa0d1]" />
-              <p className="text-[15px] leading-[1.5] text-white/80">
-                Teams across 4 countries on standby — calls scheduled in your timezone.
+      {/* Alternative contact */}
+      <section className="bg-white px-6 py-[72px] md:py-[96px]">
+        <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <div>
+              <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                <CalendarDays size={15} />
+                Prefer to write?
               </p>
+              <h2 className="mt-3 text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">
+                Send the details instead of booking time
+              </h2>
+              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">
+                A written brief is often faster than a call. Use the contact
+                page and the team replies with questions or a proposed plan.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+              >
+                <Mail size={17} />
+                Contact page
+              </Link>
+              <Link
+                href="/about-us"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
+              >
+                About us
+                <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </div>
-      </Section>
-
-      <CtaBanner
-        title="Rather explore our work first?"
-        description="Browse case studies, industries and services to see how we approach delivery."
-        primary={{ label: "View case studies", href: "/case-studies" }}
-        secondary={{ label: "Explore services", href: "/services" }}
-      />
+      </section>
     </main>
   );
 }
