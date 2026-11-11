@@ -8,9 +8,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+
 type TechnologyItem = {
   name: string;
-  logo: string;
+  logo?: string;
 };
 
 const technologies: TechnologyItem[] = [
@@ -34,10 +36,7 @@ const technologies: TechnologyItem[] = [
     name: "Objective-C",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/objectivec/objectivec-plain.svg",
   },
-  {
-    name: "Sencha",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sencha/sencha-original.svg",
-  },
+  { name: "Sencha" },
   {
     name: "Java",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
@@ -69,47 +68,58 @@ const technologies: TechnologyItem[] = [
 ];
 
 export default function BankingFinancialTechnologiesSection() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[95px] text-black">
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        {/* Header */}
         <div className="text-center">
-          <h2 className="text-[42px] font-bold leading-[1.08] tracking-[-0.055em] text-black md:text-[56px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Our stack
+          </p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
             Technologies we use
           </h2>
-
-          <div className="mx-auto mt-6 h-[2px] w-[118px] bg-[#28a8e0]" />
+          <p className="mx-auto mt-4 max-w-[620px] text-[15.5px] leading-[1.75] text-[#55585e]">
+            Proven platforms and frameworks that keep banking applications fast,
+            secure and maintainable.
+          </p>
         </div>
 
-        {/* Slider */}
-        <div className="relative mt-[135px]">
+        <div className="relative mt-12">
           <button
             type="button"
             aria-label="Previous technology"
-            className="bank-tech-prev absolute left-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#8b8b8b] shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-x-1 hover:text-[#28a8e0]"
+            className="bank-tech-prev absolute left-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#55585e] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
           >
-            <ChevronLeft size={34} strokeWidth={2.3} />
+            <ChevronLeft size={20} />
           </button>
 
           <button
             type="button"
             aria-label="Next technology"
-            className="bank-tech-next absolute right-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#8b8b8b] shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition duration-300 hover:translate-x-1 hover:text-[#28a8e0]"
+            className="bank-tech-next absolute right-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#55585e] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
           >
-            <ChevronRight size={34} strokeWidth={2.3} />
+            <ChevronRight size={20} />
           </button>
 
+          <div className="md:px-12">
           <Swiper
+            key={prefersReducedMotion ? "bank-tech-static" : "bank-tech-auto"}
             modules={[Autoplay, Navigation, Pagination]}
             loop
-            speed={900}
+            speed={700}
             slidesPerView={2}
-            spaceBetween={34}
-            autoplay={{
-              delay: 2200,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            spaceBetween={16}
+            autoplay={
+              prefersReducedMotion
+                ? false
+                : {
+                    delay: 2400,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }
+            }
             navigation={{
               prevEl: ".bank-tech-prev",
               nextEl: ".bank-tech-next",
@@ -119,40 +129,35 @@ export default function BankingFinancialTechnologiesSection() {
               el: ".bank-tech-pagination",
             }}
             breakpoints={{
-              480: {
-                slidesPerView: 3,
-                spaceBetween: 45,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 60,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 78,
-              },
-              1280: {
-                slidesPerView: 6,
-                spaceBetween: 90,
-              },
+              480: { slidesPerView: 3, spaceBetween: 16 },
+              768: { slidesPerView: 4, spaceBetween: 18 },
+              1024: { slidesPerView: 5, spaceBetween: 20 },
+              1280: { slidesPerView: 6, spaceBetween: 20 },
             }}
-            className="bank-technologies-swiper px-12"
+            className="bank-technologies-swiper"
           >
             {technologies.map((tech) => (
               <SwiperSlide key={tech.name}>
-                <div className="group flex h-[110px] items-center justify-center rounded-[16px] bg-white px-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_22px_65px_rgba(17,30,64,0.10)]">
-                  <img
-                    src={tech.logo}
-                    alt={tech.name}
-                    loading="lazy"
-                    className="max-h-[58px] max-w-[145px] object-contain transition duration-300 group-hover:scale-110"
-                  />
+                <div className="flex h-[104px] items-center justify-center rounded-xl border border-[#ececec] bg-white px-5 transition-colors duration-200 hover:border-[#c91f28]/50">
+                  {tech.logo ? (
+                    <img
+                      src={tech.logo}
+                      alt={tech.name}
+                      loading="lazy"
+                      className="max-h-[50px] max-w-[128px] object-contain"
+                    />
+                  ) : (
+                    <span className="text-[20px] font-bold tracking-[-0.02em] text-black">
+                      Sencha
+                    </span>
+                  )}
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+          </div>
 
-          <div className="bank-tech-pagination mt-[72px] flex justify-center gap-[11px]" />
+          <div className="bank-tech-pagination mt-9 flex justify-center gap-2" />
         </div>
       </div>
 
@@ -166,14 +171,14 @@ export default function BankingFinancialTechnologiesSection() {
           height: 7px;
           margin: 0 !important;
           border-radius: 999px;
-          background: #d6def2;
+          background: #e4e4e4;
           opacity: 1;
           transition: all 0.3s ease;
         }
 
         .bank-tech-pagination .swiper-pagination-bullet-active {
-          background: #4f7df3;
-          transform: scale(1.1);
+          background: #c91f28;
+          transform: scale(1.15);
         }
       `}</style>
     </section>

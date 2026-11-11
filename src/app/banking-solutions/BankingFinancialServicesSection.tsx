@@ -1,68 +1,86 @@
-import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Building2,
+  Cloud,
+  Cog,
+  CreditCard,
+  Globe2,
+  Repeat,
+  Server,
+  ShieldCheck,
+  SlidersHorizontal,
+  Smartphone,
+  Users,
+} from "lucide-react";
 
-type ServiceItem = {
-  title: string;
-};
-
-const services: ServiceItem[] = [
-  { title: "Retail Internet Banking" },
-  { title: "Corporate Internet Banking" },
-  { title: "Mobile Internet Banking" },
-  { title: "Card Services" },
-  { title: "Extensive Customization" },
-  { title: "FDI Automation" },
-  { title: "Internet Banking System" },
-  { title: "Cyber Security and Audit" },
-  { title: "Banking Process Automation" },
-  { title: "Banking CRM" },
-  { title: "Cloud Services for Banking" },
+const services = [
+  { title: "Retail Internet Banking", icon: Globe2 },
+  { title: "Corporate Internet Banking", icon: Building2 },
+  { title: "Mobile Internet Banking", icon: Smartphone },
+  { title: "Card Services", icon: CreditCard },
+  { title: "Extensive Customization", icon: SlidersHorizontal },
+  { title: "FDI Automation", icon: Repeat },
+  { title: "Internet Banking System", icon: Server },
+  { title: "Cyber Security and Audit", icon: ShieldCheck },
+  { title: "Banking Process Automation", icon: Cog },
+  { title: "Banking CRM", icon: Users },
+  { title: "Cloud Services for Banking", icon: Cloud },
 ];
 
 export default function BankingFinancialServicesSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f7] px-6 py-[120px] text-black">
-      <div className="mx-auto grid max-w-[1220px] grid-cols-1 items-center gap-16 lg:grid-cols-[0.85fr_1.15fr]">
-        {/* Left Title */}
-        <div className="lg:pl-8">
-          <p className="text-[14px] font-medium uppercase tracking-[0.12em] text-[#11182f]">
-            What We Can Do
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
+      <div className="mx-auto max-w-[1240px]">
+        <div className="max-w-[680px]">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            What we can do
           </p>
-
-          <h2 className="mt-7 max-w-[360px] text-[62px] font-light leading-[0.98] tracking-[-0.07em] text-black md:text-[78px]">
-            Offered <br />
-            Services
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
+            Offered services
           </h2>
-
-          <div className="mt-9 h-[2px] w-[88px] bg-[#28a8e0]" />
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
+            A complete portfolio of banking software services, delivered as
+            standalone modules or as one integrated platform.
+          </p>
         </div>
 
-        {/* Right Service List */}
-        <div className="mx-auto w-full max-w-[650px]">
-          <ul className="space-y-[24px]">
-            {services.map((service) => (
-              <li key={service.title}>
-                <button
-                  type="button"
-                  className="group flex w-full items-center gap-8 text-left"
-                >
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center text-[#69bee8] transition duration-300 group-hover:translate-x-1 group-hover:text-[#ffab2e]">
-                    <ChevronRight size={34} strokeWidth={3.2} />
-                  </span>
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:min-h-[168px] sm:p-6"
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
+                <service.icon size={21} />
+              </span>
 
-                  <span className="text-[24px] font-light leading-[1.2] tracking-[-0.04em] text-black transition duration-300 group-hover:text-[#28a8e0] md:text-[29px]">
-                    {service.title}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
+              <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] text-black">
+                {service.title}
+              </h3>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-xl border border-[#ececec] bg-[#fafafa] px-7 py-6 sm:flex-row sm:items-center md:px-9 md:py-7">
+          <div>
+            <p className="text-[17px] font-bold text-black md:text-[19px]">
+              Need a solution shaped around your core banking stack?
+            </p>
+            <p className="mt-1.5 text-[14.5px] text-[#55585e]">
+              Our team can scope a customized build across any of these services.
+            </p>
+          </div>
+
+          <Link
+            href="/contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+          >
+            Talk to our team
+            <ArrowRight size={17} />
+          </Link>
         </div>
       </div>
-
-      {/* Chat Button */}
-      <button className="fixed bottom-10 right-6 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl">
-        <span className="text-2xl text-[#20a7e8]">☁</span>
-      </button>
     </section>
   );
 }

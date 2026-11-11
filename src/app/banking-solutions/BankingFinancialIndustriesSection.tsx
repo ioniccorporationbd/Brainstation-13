@@ -1,59 +1,61 @@
 import { Check } from "lucide-react";
 
 const industries = [
-  "Banks",
-  "Financial Organization",
-  "Banking & Fin-Tech Solution Providers",
+  {
+    title: "Banks",
+    text: "Commercial and retail banks running internet banking, card services and process automation on our platforms.",
+  },
+  {
+    title: "Financial Organization",
+    text: "Non-bank financial institutions that need secure account, payment and reporting workflows.",
+  },
+  {
+    title: "Banking & Fin-Tech Solution Providers",
+    text: "Fintech and solution partners extending banking products with customized modules and integrations.",
+  },
 ];
 
 export default function BankingFinancialIndustriesSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[105px] text-black">
-      <div className="mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-14 lg:grid-cols-[0.8fr_1fr_0.95fr]">
-        {/* Left Title */}
+    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="text-[14px] font-medium uppercase tracking-[0.08em] text-black">
-            Clients We Have Served In
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            Clients we have served in
           </p>
-
-          <h2 className="mt-7 text-[56px] font-light leading-none tracking-[-0.06em] text-black md:text-[70px]">
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
             Industries
           </h2>
 
-          <div className="mt-8 h-[2px] w-[88px] bg-[#28a8e0]" />
-        </div>
-
-        {/* Middle List */}
-        <div>
-          <ul className="space-y-8">
-            {industries.map((item) => (
+          <ul className="mt-8 space-y-4">
+            {industries.map((industry) => (
               <li
-                key={item}
-                className="group flex items-center gap-6 text-[24px] font-medium uppercase leading-[1.2] tracking-[0.15em] text-black md:text-[28px]"
+                key={industry.title}
+                className="group flex gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-6"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center text-black transition duration-300 group-hover:scale-110 group-hover:text-[#28a8e0]">
-                  <Check size={30} strokeWidth={3.2} />
+                <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <Check size={18} strokeWidth={2.6} />
                 </span>
 
-                <span className="transition duration-300 group-hover:text-[#28a8e0]">
-                  {item}
-                </span>
+                <div>
+                  <h3 className="text-[16.5px] font-semibold text-black md:text-[17.5px]">
+                    {industry.title}
+                  </h3>
+                  <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#55585e]">
+                    {industry.text}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Right Image */}
-        <div className="relative">
-          <div className="group relative h-[250px] overflow-hidden md:h-[320px] lg:h-[345px]">
-            <img
-              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1400&auto=format&fit=crop"
-              alt="Banking and financial industry"
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.06]"
-            />
-
-            <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/10" />
-          </div>
+        <div className="overflow-hidden rounded-2xl border border-[#ececec]">
+          <img
+            src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1400&auto=format&fit=crop"
+            alt="Banking and financial industry"
+            className="h-[280px] w-full object-cover md:h-[380px] lg:h-[440px]"
+          />
         </div>
       </div>
     </section>
