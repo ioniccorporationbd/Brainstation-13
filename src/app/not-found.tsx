@@ -1,64 +1,141 @@
-// app/not-found.tsx
-
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  FaHome,
-  FaSearch,
-  FaArrowLeft,
-  FaExclamationTriangle,
-} from "react-icons/fa";
+import { ArrowRight, Compass, Home, LifeBuoy } from "lucide-react";
+import NotFoundGoBack from "./not-found-go-back";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Magnetic Solution Limited",
+  description:
+    "The page you are looking for does not exist or has moved. Return to the Magnetic Solution Limited homepage or explore our services.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: { index: false, follow: false },
+  },
+};
+
+const popular = [
+  { label: "Services", href: "/services" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function NotFound() {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-50 px-5 py-16">
-      <div className="absolute left-[-120px] top-[-120px] h-[320px] w-[320px] rounded-full bg-sky-300/30 blur-[90px]" />
-      <div className="absolute bottom-[-140px] right-[-140px] h-[380px] w-[380px] rounded-full bg-blue-400/25 blur-[110px]" />
+    <main className="bg-white">
+      <style>{`
+        @keyframes nf-rise {
+          from { opacity: 0; transform: translateY(14px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes nf-fade {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .nf-rise { animation: nf-rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+        .nf-fade { animation: nf-fade 0.7s ease-out 0.15s both; }
+        @media (prefers-reduced-motion: reduce) {
+          .nf-rise, .nf-fade { animation: none !important; }
+        }
+      `}</style>
 
-      <section className="relative w-full max-w-[980px] overflow-hidden rounded-[36px] border border-white bg-white/80 p-8 text-center shadow-2xl backdrop-blur md:p-14">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-xl shadow-sky-200">
-          <FaExclamationTriangle className="text-[34px]" />
-        </div>
-
-        <h1 className="mt-8 bg-gradient-to-r from-sky-500 to-blue-700 bg-clip-text text-[96px] font-black leading-none text-transparent md:text-[150px]">
-          404
-        </h1>
-
-        <h2 className="mt-4 text-[32px] font-bold tracking-[-1px] text-[#07111f] md:text-[46px]">
-          Page Not Found
-        </h2>
-
-        <p className="mx-auto mt-5 max-w-[620px] text-[16px] leading-8 text-slate-600 md:text-[18px]">
-          Sorry, the page you are looking for does not exist, has been moved,
-          or the link may be incorrect.
-        </p>
-
-        <div className="mx-auto mt-8 h-[3px] w-[100px] rounded-full bg-gradient-to-r from-sky-400 to-blue-600" />
-
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <section className="px-6 pb-[88px] pt-[68px] md:pb-[120px] md:pt-[92px]">
+        <div className="mx-auto flex max-w-[720px] flex-col items-center text-center">
           <Link
             href="/"
-            className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-8 py-4 text-[15px] font-bold text-white shadow-lg shadow-sky-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            aria-label="Magnetic Solution Limited — Home"
+            className="nf-fade inline-flex items-center justify-center"
           >
-            <FaHome />
-            Back to Home
+            <Image
+              src="/images/brand/magnetic-logo.png"
+              alt="Magnetic Solution Limited"
+              width={190}
+              height={198}
+              priority
+              className="h-[58px] w-auto object-contain"
+            />
           </Link>
 
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-3 rounded-full border border-sky-200 bg-white px-8 py-4 text-[15px] font-bold text-sky-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-sky-50"
-          >
-            <FaSearch />
-            Contact Support
-          </Link>
+          <span className="nf-fade mt-8 inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+            <Compass size={14} strokeWidth={2.2} />
+            Error 404
+          </span>
+
+          <div className="nf-rise mt-7 flex select-none items-end justify-center gap-1 md:gap-2">
+            <span className="text-[92px] font-bold leading-[0.9] tracking-[-0.055em] text-black md:text-[148px]">
+              4
+            </span>
+            <span className="text-[92px] font-bold leading-[0.9] tracking-[-0.055em] text-[#c91f28] md:text-[148px]">
+              0
+            </span>
+            <span className="text-[92px] font-bold leading-[0.9] tracking-[-0.055em] text-black md:text-[148px]">
+              4
+            </span>
+          </div>
+
+          <h1 className="nf-rise mt-6 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+            Page Not Found
+          </h1>
+
+          <p className="nf-rise mt-4 max-w-[540px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
+            The page you are looking for does not exist, may have been moved, or
+            the link is out of date. Nothing is broken on your side — try one of
+            the options below and you will be back on track.
+          </p>
+
+          <div className="nf-rise mt-9 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+            >
+              <Home size={17} />
+              Back to Home
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
+            >
+              Explore Services
+              <ArrowRight size={17} />
+            </Link>
+            <NotFoundGoBack />
+          </div>
+
+          <div className="nf-fade mt-11 w-full rounded-2xl border border-[#ececec] bg-[#fafafa] px-6 py-7 text-left md:px-8">
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+              Popular pages
+            </p>
+            <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-4">
+              {popular.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group flex items-center justify-between gap-2 rounded-lg border border-[#ececec] bg-white px-4 py-3 text-[14px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28]/50"
+                >
+                  <span>{item.label}</span>
+                  <ArrowRight
+                    size={15}
+                    className="shrink-0 text-[#8a8f98] transition-colors duration-200 group-hover:text-[#c91f28]"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <p className="nf-fade mt-8 flex flex-wrap items-center justify-center gap-2 text-[13.5px] leading-[1.7] text-[#8a8f98]">
+            <LifeBuoy size={15} className="shrink-0 text-[#c91f28]" />
+            Still stuck? Our team can point you to the right page —
+            <Link
+              href="/contact"
+              className="font-semibold text-black underline decoration-[#c91f28] decoration-2 underline-offset-4 transition-colors hover:text-[#c91f28]"
+            >
+              contact us
+            </Link>
+          </p>
         </div>
-
-        <Link
-          href="/"
-          className="mt-8 inline-flex items-center gap-2 text-[14px] font-semibold text-slate-500 transition-colors hover:text-sky-600"
-        >
-          <FaArrowLeft />
-          Return to previous safe page
-        </Link>
       </section>
     </main>
   );
