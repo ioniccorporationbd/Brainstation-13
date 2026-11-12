@@ -125,8 +125,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`sticky top-0 z-50 w-full font-sans transition-all duration-300 ${
           isScrolled
-            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)] shadow-[0_14px_35px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)]"
+            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#E53940_0%,#C91F28_50%,#A71920_100%)] shadow-[0_14px_35px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#E53940_0%,#C91F28_50%,#A71920_100%)]"
         }`}
       >
         <Link
@@ -245,7 +245,7 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#C91F28,#A71920)] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
+        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#E53940_0%,#C91F28_50%,#A71920_100%)] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
