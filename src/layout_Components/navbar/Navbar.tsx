@@ -116,7 +116,7 @@ export default function Navbar() {
   const linkBase =
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
     "after:absolute after:-bottom-[7px] after:left-0 after:h-[2px] after:w-full after:origin-left " +
-    "after:scale-x-0 after:rounded-full after:bg-[#C91F28] after:transition-transform after:duration-300 " +
+    "after:scale-x-0 after:rounded-full after:bg-white after:transition-transform after:duration-300 " +
     "after:ease-[cubic-bezier(0.22,1,0.36,1)]";
 
   return (
@@ -125,8 +125,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`sticky top-0 z-50 w-full font-sans transition-all duration-300 ${
           isScrolled
-            ? "border-b border-white/10 bg-black/95 shadow-[0_14px_35px_rgba(0,0,0,0.55)] backdrop-blur-xl"
-            : "border-b border-white/10 bg-black"
+            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)] shadow-[0_14px_35px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)]"
         }`}
       >
         <Link
@@ -210,7 +210,7 @@ export default function Navbar() {
             <Link
               href="/schedule-a-call"
               onClick={closeAll}
-              className="rounded-full bg-primary px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] xl:px-[30px]"
+              className="rounded-full bg-white px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-[#C91F28] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FFF1F1] hover:text-[#A71920] hover:shadow-[0_10px_24px_rgba(0,0,0,0.28)] xl:px-[30px]"
             >
               {t("Schedule a Call")}
             </Link>
@@ -223,7 +223,7 @@ export default function Navbar() {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
             }}
-            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-primary hover:bg-white/15 hover:text-primary min-[1025px]:hidden"
+            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/25 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-[#C91F28] min-[1025px]:hidden"
           >
             {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
@@ -245,7 +245,7 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[#0b0b0b] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
+        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#C91F28,#A71920)] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -267,7 +267,7 @@ export default function Navbar() {
             type="button"
             onClick={closeAll}
             aria-label={t("Close menu")}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-primary hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-[#C91F28]"
           >
             <X size={24} />
           </button>
@@ -283,7 +283,7 @@ export default function Navbar() {
                     onClick={() => toggleMenu(item.key)}
                     className={`relative flex w-full items-center justify-between px-4 py-4 text-left text-[17px] font-semibold text-white transition hover:bg-white/10 ${
                       isRouteActive(item)
-                        ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-[#C91F28]"
+                        ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
                         : ""
                     }`}
                   >
@@ -291,7 +291,7 @@ export default function Navbar() {
                     <ChevronDown
                       size={19}
                       className={`transition-transform duration-300 ${
-                        activeMenu === item.key ? "rotate-180 text-primary" : ""
+                        activeMenu === item.key ? "rotate-180 text-white/80" : ""
                       }`}
                     />
                   </button>
@@ -312,7 +312,7 @@ export default function Navbar() {
                   onClick={closeAll}
                   className={`relative block rounded-2xl border border-white/10 px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10 ${
                     isRouteActive(item)
-                      ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-[#C91F28]"
+                      ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
                       : ""
                   }`}
                 >
@@ -327,7 +327,7 @@ export default function Navbar() {
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="mt-5 flex w-full justify-center rounded-full bg-primary px-7 py-4 text-[16px] font-bold text-white transition hover:bg-primary-hover"
+            className="mt-5 flex w-full justify-center rounded-full bg-white px-7 py-4 text-[16px] font-bold text-[#C91F28] transition hover:bg-[#FFF1F1] hover:text-[#A71920]"
           >
             {t("Schedule a Call")}
           </Link>
