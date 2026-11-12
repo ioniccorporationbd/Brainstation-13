@@ -125,8 +125,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`sticky top-0 z-50 w-full font-sans transition-all duration-300 ${
           isScrolled
-            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)] shadow-[0_14px_35px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#A71920)]"
+            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] backdrop-blur-xl"
+            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#8B1119)]"
         }`}
       >
         <Link
@@ -210,7 +210,7 @@ export default function Navbar() {
             <Link
               href="/schedule-a-call"
               onClick={closeAll}
-              className="rounded-full bg-white px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-[#C91F28] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FFF1F1] hover:text-[#A71920] hover:shadow-[0_10px_24px_rgba(0,0,0,0.28)] xl:px-[30px]"
+              className="rounded-full bg-white px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-black shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white xl:px-[30px]"
             >
               {t("Schedule a Call")}
             </Link>
@@ -245,7 +245,7 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#C91F28,#A71920)] px-5 py-5 shadow-[-20px_0_45px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out min-[1025px]:hidden ${
+        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-5 py-5 transition-transform duration-300 ease-out min-[1025px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -327,7 +327,7 @@ export default function Navbar() {
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="mt-5 flex w-full justify-center rounded-full bg-white px-7 py-4 text-[16px] font-bold text-[#C91F28] transition hover:bg-[#FFF1F1] hover:text-[#A71920]"
+            className="mt-5 flex w-full justify-center rounded-full bg-white px-7 py-4 text-[16px] font-bold text-black shadow-none transition hover:bg-black hover:text-white"
           >
             {t("Schedule a Call")}
           </Link>
