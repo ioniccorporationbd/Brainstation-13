@@ -110,7 +110,7 @@ export default function BlockchainInfrastructureSection() {
             </h3>
 
             <Link
-              href="/contact-us"
+              href="/contact"
               className="mx-auto mt-5 inline-flex items-center justify-center rounded-full bg-[#c91f28] px-6 py-3 text-[13.5px] font-bold text-white transition duration-300 hover:bg-[#a71920]"
             >
               Let&apos;s Talk

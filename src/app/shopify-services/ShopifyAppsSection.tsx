@@ -13,78 +13,78 @@ const shopifyApps: ShopifyAppItem[] = [
     title: "PickSlide: Collection Carousel",
     description: "Elevate Your Store with Stunning Collection Showcases",
     image: "https://cdn-icons-png.flaticon.com/512/1055/1055666.png",
-    href: "/shopify-apps/pickslide",
+    href: "https://apps.shopify.com/pickslide-collection-carousel",
   },
   {
     title: "QuickTrack | Order Tracking",
     description:
       "Enable customers to easily monitor the progress of their order",
     image: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
-    href: "/shopify-apps/quicktrack",
+    href: "https://apps.shopify.com/order-tracking-status",
   },
   {
     title: "Diary – Calendar & Notebook",
     description: "Organize your business and stay on top of your tasks.",
     image: "https://cdn-icons-png.flaticon.com/512/2693/2693507.png",
-    href: "/shopify-apps/diary",
+    href: "https://apps.shopify.com/bs23-calendar-notebook",
   },
   {
     title: "PrintMax – Receipts & Invoice",
     description:
       "Customize order receipts, Discount QR & multi-order printing",
     image: "https://cdn-icons-png.flaticon.com/512/3022/3022251.png",
-    href: "/shopify-apps/printmax",
+    href: "https://apps.shopify.com/printmax-order-receipt",
   },
   {
     title: "Bannerify – Animated Popup",
     description:
       "Showcase your store with 5 dynamic templates popup banners.",
     image: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-    href: "/shopify-apps/bannerify",
+    href: "https://apps.shopify.com/bannerify-animated-popup",
   },
   {
     title: "Mystery Box – More Sales",
     description: "Curated surprises unleashed: Effortless automated mystery box",
     image: "https://cdn-icons-png.flaticon.com/512/679/679720.png",
-    href: "/shopify-apps/mystery-box",
+    href: "https://apps.shopify.com/mystery-box-1",
   },
   {
     title: "TicTacSales | Discount Clock",
     description:
       "Showing the remaining time until the end of a discount period",
     image: "https://cdn-icons-png.flaticon.com/512/2784/2784459.png",
-    href: "/shopify-apps/tictacsales",
+    href: "https://apps.shopify.com/tictacsales-discount-clock",
   },
   {
     title: "Visualizer | Locations & More",
     description: "Visualize store locations and notifications to the customers",
     image: "https://cdn-icons-png.flaticon.com/512/854/854878.png",
-    href: "/shopify-apps/visualizer",
+    href: "https://apps.shopify.com/visualizer-user-more",
   },
   {
     title: "ImageToonify – Watermark & BG",
     description: "Protect & Customize: Watermark & Images Background with Ease",
     image: "https://cdn-icons-png.flaticon.com/512/1040/1040241.png",
-    href: "/shopify-apps/imagetoonify",
+    href: "https://apps.shopify.com/watermarkme-image-enhancer-1",
   },
   {
     title: "MailService – Email Marketing",
     description: "Merchants to promote new and discounted products via email.",
     image: "https://cdn-icons-png.flaticon.com/512/732/732200.png",
-    href: "/shopify-apps/mailservice",
+    href: "https://apps.shopify.com/email-marketing-7",
   },
   {
     title: "Formify – Dynamic Forms",
     description:
       "Create Customizable Forms with Real-Time Previews and Popups!",
     image: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
-    href: "/shopify-apps/formify",
+    href: "https://apps.shopify.com/formify-dynamic-forms-1",
   },
   {
     title: "StockCheck: Inventory Monitor",
     description: "Display low-stock products based on the threshold",
     image: "https://cdn-icons-png.flaticon.com/512/564/564619.png",
-    href: "/shopify-apps/stockcheck",
+    href: "https://apps.shopify.com/stock-alert-5",
   },
 ];
 
@@ -130,13 +130,15 @@ export default function ShopifyAppsSection() {
                 {app.description}
               </p>
 
-              <Link
+              <a
                 href={app.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-[0.06em] text-[#c91f28] transition hover:text-[#a71920]"
               >
                 Learn More
                 <ArrowRight size={13} strokeWidth={2.4} />
-              </Link>
+              </a>
             </article>
           ))}
         </div>

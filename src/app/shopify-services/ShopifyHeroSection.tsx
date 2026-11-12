@@ -32,16 +32,18 @@ export default function ShopifyHeroSection() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
-            <Link
-              href="/shopify-apps"
+            <a
+              href="https://apps.shopify.com/partners/brainstation-23"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
               Explore Our Shopify Apps
               <ArrowRight size={16} strokeWidth={2.2} />
-            </Link>
+            </a>
 
             <Link
-              href="/contact-us"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Talk to Our Team

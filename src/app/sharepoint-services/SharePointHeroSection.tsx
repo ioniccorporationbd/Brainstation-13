@@ -41,7 +41,7 @@ export default function SharePointHeroSection() {
             </Link>
 
             <Link
-              href="/contact-us"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Talk to Our Team

@@ -30,7 +30,7 @@ export default function DataMigrationHeroSection() {
             </Link>
 
             <Link
-              href="/book-a-meeting"
+              href="/schedule-a-call"
               className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               Book a Meeting

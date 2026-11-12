@@ -8,7 +8,7 @@ const relatedPosts = [
       "Malaysia is entering a new era of tax compliance with the mandatory adoption of e-invoicing, set to roll out in phases from August 2024. But...",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
-    href: "/blog/e-invoicing-in-malaysia",
+    href: "/blog",
   },
   {
     category: "Machine Learning & AI",
@@ -17,7 +17,7 @@ const relatedPosts = [
       "The software industry faces a critical question: How can enterprises accelerate delivery without sacrificing quality or compliance? AI-first...",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
-    href: "/blog/ai-first-software-engineering",
+    href: "/blog",
   },
   {
     category: "LMS",
@@ -26,7 +26,7 @@ const relatedPosts = [
       "Due to the COVID-19 pandemic, businesses have adapted to the changing industry landscape, resulting in a shift towards...",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-    href: "/blog/improve-lms-utilization",
+    href: "/blog",
   },
 ];
 

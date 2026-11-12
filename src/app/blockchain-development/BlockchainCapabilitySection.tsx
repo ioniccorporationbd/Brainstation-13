@@ -97,7 +97,7 @@ export default function BlockchainCapabilitySection() {
           </h3>
 
           <Link
-            href="/contact-us"
+            href="/contact"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-white transition duration-300 hover:bg-[#a71920]"
           >
             Let&apos;s Talk
