@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 
 type IndustryCard = {
@@ -67,13 +68,12 @@ const industries: IndustryCard[] = [
   },
 ];
 
-export default function IndustriesInnovationSection() {
+export default async function IndustriesInnovationSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[72px] md:py-[96px] lg:py-[112px]">
       <div className="mx-auto w-full max-w-[1210px] px-5 sm:px-8">
-        <h2 className="mx-auto max-w-[680px] text-center text-[38px] font-semibold leading-[1.14] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">
-          Industries We Power with Innovation
-        </h2>
+        <h2 className="mx-auto max-w-[680px] text-center text-[38px] font-semibold leading-[1.14] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">{t("Industries We Power with Innovation")}</h2>
 
         <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {industries.map((industry) => (
@@ -87,7 +87,8 @@ export default function IndustriesInnovationSection() {
   );
 }
 
-function IndustryItem({ industry }: { industry: IndustryCard }) {
+async function IndustryItem({ industry }: { industry: IndustryCard }) {
+  const { t } = await getTranslator();
   return (
     <Link
       href={industry.href}
@@ -102,16 +103,14 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
       />
 
       <h3 className="mt-6 text-[23px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[25px]">
-        {industry.title}
+        {t(industry.title)}
       </h3>
 
       <p className="mt-3 text-[15px] font-normal leading-[1.6] text-[#52525B]">
-        {industry.description}
+        {t(industry.description)}
       </p>
 
-      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[14px] font-semibold text-primary transition-colors group-hover:text-primary-hover">
-        Learn More
-        <span className="transition-transform duration-300 group-hover:translate-x-1">
+      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[14px] font-semibold text-primary transition-colors group-hover:text-primary-hover">{t("Learn More")}<span className="transition-transform duration-300 group-hover:translate-x-1">
           →
         </span>
       </span>
@@ -119,19 +118,16 @@ function IndustryItem({ industry }: { industry: IndustryCard }) {
   );
 }
 
-function ContactCard() {
+async function ContactCard() {
+  const { t } = await getTranslator();
   return (
     <div className="flex min-h-[292px] flex-col items-center justify-center rounded-[18px] border border-black/[0.08] bg-white p-7 text-center shadow-[0_1px_3px_rgba(0,0,0,0.05)] md:col-span-2 lg:col-span-1">
-      <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#0A0A0A]">
-        Is your industry here?
-      </h3>
+      <h3 className="text-[24px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#0A0A0A]">{t("Is your industry here?")}</h3>
 
       <Link
         href="/contact"
         className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-      >
-        Let&apos;s Talk
-      </Link>
+      >{t("Let's Talk")}</Link>
     </div>
   );
 }

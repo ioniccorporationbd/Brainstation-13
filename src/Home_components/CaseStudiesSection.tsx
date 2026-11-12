@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,28 +18,22 @@ const STATS = [
   { value: '99.5%', label: 'Facial Recognition Accuracy Rate' },
 ];
 
-export default function CaseStudiesSection() {
+export default async function CaseStudiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">
-              Case Studies
-            </h2>
-            <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">
-              Check out our case studies to see how innovative solutions transformed real
-              businesses.
-            </p>
+            <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Case Studies")}</h2>
+            <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">{t("Check out our case studies to see how innovative solutions transformed real businesses.")}</p>
           </div>
 
           <Link
             href="/case-studies"
             className="inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3.5 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920] md:text-[15px]"
-          >
-            See all Case Studies
-            <span aria-hidden>→</span>
+          >{t("See all Case Studies")}<span aria-hidden>→</span>
           </Link>
         </div>
 
@@ -54,7 +49,7 @@ export default function CaseStudiesSection() {
                 {client.name}
               </span>
               <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#71717A]">
-                {client.tag}
+                {t(client.tag)}
               </span>
             </div>
           ))}
@@ -66,7 +61,7 @@ export default function CaseStudiesSection() {
             <div className="relative h-[280px] sm:h-[340px] md:h-full md:min-h-[520px]">
               <Image
                 src="/images/shikkha/shikkha-student.webp"
-                alt="Facial recognition attendance case study"
+                alt={t("Facial recognition attendance case study")}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -75,26 +70,16 @@ export default function CaseStudiesSection() {
             </div>
 
             <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-[#C91F28] md:text-[14px]">
-                AI &amp; ML · LMS
-              </p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-[#C91F28] md:text-[14px]">{t("AI & ML · LMS")}</p>
 
-              <h3 className="mt-4 text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[30px]">
-                Streamlining Attendance at IIITK with Facial Recognition
-              </h3>
+              <h3 className="mt-4 text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[30px]">{t("Streamlining Attendance at IIITK with Facial Recognition")}</h3>
 
-              <p className="mt-5 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
-                The Indian Institute of Information Technology, Kottayam (IIITK) is an
-                autonomous engineering institute located in Valavoor, Palai, Kottayam District,
-                Kerala, India.
-              </p>
+              <p className="mt-5 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">{t("The Indian Institute of Information Technology, Kottayam (IIITK) is an autonomous engineering institute located in Valavoor, Palai, Kottayam District, Kerala, India.")}</p>
 
               <Link
                 href="/case-study"
                 className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
-              >
-                View Case Study
-                <span aria-hidden>→</span>
+              >{t("View Case Study")}<span aria-hidden>→</span>
               </Link>
 
               <div className="mt-9 grid grid-cols-2 gap-6 border-t border-[#F0F0F2] pt-7">
@@ -104,7 +89,7 @@ export default function CaseStudiesSection() {
                       {stat.value}
                     </div>
                     <p className="mt-2 text-[13px] leading-[1.4] text-[#52525B] md:text-[14px]">
-                      {stat.label}
+                      {t(stat.label)}
                     </p>
                   </div>
                 ))}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getTranslator } from "@/i18n/server";
 import Link from 'next/link';
 
 const introCards = [
@@ -25,13 +26,12 @@ const introCards = [
   },
 ];
 
-export default function AboutSection() {
+export default async function AboutSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
-        <h2 className="mx-auto max-w-[760px] text-center text-[30px] font-semibold leading-[1.16] tracking-[-0.02em] text-[#0A0A0A] sm:text-[38px] lg:text-[44px]">
-          A global software company powering digital transformation.
-        </h2>
+        <h2 className="mx-auto max-w-[760px] text-center text-[30px] font-semibold leading-[1.16] tracking-[-0.02em] text-[#0A0A0A] sm:text-[38px] lg:text-[44px]">{t("A global software company powering digital transformation.")}</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {introCards.map((card) => (
@@ -52,11 +52,11 @@ export default function AboutSection() {
 
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[21px]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-2 text-[15px] font-normal leading-[1.55] text-[#52525B]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </div>
             </article>
@@ -67,9 +67,7 @@ export default function AboutSection() {
           <Link
             href="/about-us"
             className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
-            About Us
-          </Link>
+          >{t("About Us")}</Link>
         </div>
       </div>
     </section>

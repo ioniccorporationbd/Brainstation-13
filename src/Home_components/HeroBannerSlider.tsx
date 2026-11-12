@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { useEffect, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -62,6 +63,7 @@ const slides: SlideItem[] = [
 ];
 
 export default function HeroBannerSlider() {
+  const { t } = useTranslation();
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -101,18 +103,18 @@ export default function HeroBannerSlider() {
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px] lg:pl-[18px]">
                   <h1 className="max-w-[660px] text-balance text-[32px] font-semibold leading-[1.14] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
-                    {slide.title}
+                    {t(slide.title)}
                   </h1>
 
                   <p className="mt-7 max-w-[620px] text-pretty text-[17px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[20px]">
-                    {slide.description}
+                    {t(slide.description)}
                   </p>
 
                   <Link
                     href={slide.buttonHref}
                     className="mt-12 inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
                   >
-                    {slide.buttonText}
+                    {t(slide.buttonText)}
                   </Link>
                 </div>
 
@@ -137,7 +139,7 @@ export default function HeroBannerSlider() {
                     </h3>
 
                     <p className="mt-[10px] text-[20px] font-normal leading-[1.15] text-[#52525B]">
-                      {slide.statOneText}
+                      {t(slide.statOneText)}
                     </p>
                   </div>
 
@@ -148,7 +150,7 @@ export default function HeroBannerSlider() {
                     </h3>
 
                     <p className="mt-[10px] text-[20px] font-normal leading-[1.15] text-[#52525B]">
-                      {slide.statTwoText}
+                      {t(slide.statTwoText)}
                     </p>
                   </div>
 
@@ -189,7 +191,7 @@ export default function HeroBannerSlider() {
                       </h3>
 
                       <p className="mt-2 text-[16px] leading-[1.25] text-[#52525B]">
-                        {slide.statOneText}
+                        {t(slide.statOneText)}
                       </p>
                     </div>
 
@@ -199,7 +201,7 @@ export default function HeroBannerSlider() {
                       </h3>
 
                       <p className="mt-2 text-[16px] leading-[1.25] text-[#52525B]">
-                        {slide.statTwoText}
+                        {t(slide.statTwoText)}
                       </p>
                     </div>
                   </div>

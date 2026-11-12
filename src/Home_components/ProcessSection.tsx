@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import Image from 'next/image';
 
 // Step meaning and order preserved. Unverified numeric/marketing claims from the
@@ -48,33 +49,25 @@ const PROCESS_STEPS = [
   },
 ];
 
-export default function ProcessSection() {
+export default async function ProcessSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
       <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-12 px-5 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
         <div>
-          <h2 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">
-            Our Process
-          </h2>
+          <h2 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Our Process")}</h2>
 
-          <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[20px]">
-            AI-Optimized, Transparent &amp; Scalable.
-          </p>
+          <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[20px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
 
-          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
-            We blend human expertise with AI precision — delivering faster outcomes
-            without compromising security.
-          </p>
+          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
 
-          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">
-            Schedule a Call
-          </button>
+          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
 
           <div className="mt-14 overflow-hidden rounded-2xl border border-[#E7E7EA] md:mt-16">
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-              alt="Team presentation"
+              alt={t("Team presentation")}
               width={620}
               height={640}
               className="h-[380px] w-full object-cover md:h-[520px]"
@@ -109,12 +102,12 @@ export default function ProcessSection() {
                       {item.icon}
                     </span>
                     <span className="text-[12px] font-semibold uppercase tracking-[0.04em] text-[#C91F28] md:text-[13px]">
-                      {item.label}
+                      {t(item.label)}
                     </span>
                   </div>
 
                   <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] md:text-[20px]">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
 
                   <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[14px] leading-[1.5] text-[#52525B] marker:text-[#C91F28] md:text-[15px]">

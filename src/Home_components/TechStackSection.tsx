@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getTranslator } from "@/i18n/server";
 
 type Logo = { src: string; alt: string; w: number; h: number; invert?: boolean };
 
@@ -23,7 +24,8 @@ const LOGOS: Logo[] = [
   { src: '/images/trusted/virtual-affairs.svg', alt: 'Virtual Affairs', w: 170, h: 38 },
 ];
 
-export default function TechStackSection() {
+export default async function TechStackSection() {
+  const { t } = await getTranslator();
   const marquee = [...LOGOS, ...LOGOS];
 
   return (
@@ -31,13 +33,9 @@ export default function TechStackSection() {
       <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
         <div className="text-center">
           <h2 className="text-[26px] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] md:text-[36px]">
-            <span className="text-[#C91F28]">Yes!</span> We cover your tech stack.
-          </h2>
+            <span className="text-[#C91F28]">{t("Yes!")}</span>{t("We cover your tech stack.")}</h2>
 
-          <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px]">
-            From global technology partners to the brands we build for — a collective we work with
-            across Cloud, ERP, Learning, Commerce, and Creative Technology.
-          </p>
+          <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px]">{t("From global technology partners to the brands we build for — a collective we work with across Cloud, ERP, Learning, Commerce, and Creative Technology.")}</p>
         </div>
 
         <div className="brand-marquee relative mt-14 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 
 const aiStats = [
@@ -32,30 +33,22 @@ const aiStats = [
   },
 ];
 
-export default function AIDevelopmentExcellenceSection() {
+export default async function AIDevelopmentExcellenceSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[76px] md:py-[96px] lg:py-[118px]">
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
           <div>
-            <h2 className="max-w-[420px] text-[38px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[52px]">
-              AI-Driven Development Excellence
-            </h2>
+            <h2 className="max-w-[420px] text-[38px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[52px]">{t("AI-Driven Development Excellence")}</h2>
 
-            <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B]">
-              We integrate cutting-edge AI across the development lifecycle&mdash;
-              delivering solutions 10X faster with unmatched reliability. Our
-              engineers augment human expertise with AI to automate, optimize,
-              and future-proof your software.
-            </p>
+            <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B]">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
 
             <Link
               href="/schedule-a-call"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            >
-              Schedule a Call
-            </Link>
+            >{t("Schedule a Call")}</Link>
           </div>
 
           {/* Right: statistics as a 2x2 card grid */}
@@ -70,15 +63,15 @@ export default function AIDevelopmentExcellenceSection() {
                 </span>
 
                 <span className="mt-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-primary/70">
-                  {item.label}
+                  {t(item.label)}
                 </span>
 
                 <h3 className="mt-4 text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] sm:text-[21px]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-2 text-[15px] font-normal leading-[1.55] text-[#52525B]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </div>
             ))}
@@ -89,14 +82,9 @@ export default function AIDevelopmentExcellenceSection() {
         <div className="mt-14 border-t border-black/[0.08] pt-10">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12">
             <div className="border-l-2 border-primary pl-5">
-              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A]">
-                10X Faster Delivery
-              </h3>
+              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A]">{t("10X Faster Delivery")}</h3>
 
-              <p className="mt-2 max-w-[560px] text-[15px] font-normal leading-[1.55] text-[#52525B]">
-                Our world-class engineers leverage cutting-edge AI to deliver
-                solutions 10X faster without compromising quality.
-              </p>
+              <p className="mt-2 max-w-[560px] text-[15px] font-normal leading-[1.55] text-[#52525B]">{t("Our world-class engineers leverage cutting-edge AI to deliver solutions 10X faster without compromising quality.")}</p>
             </div>
 
             <div className="flex items-center gap-3 lg:border-l lg:border-black/[0.08] lg:pl-8">
@@ -107,9 +95,7 @@ export default function AIDevelopmentExcellenceSection() {
                 height={32}
                 className="h-8 w-8"
               />
-              <p className="text-[15px] font-medium text-[#52525B]">
-                100% IP Protection
-              </p>
+              <p className="text-[15px] font-medium text-[#52525B]">{t("100% IP Protection")}</p>
             </div>
 
             <div className="flex items-center gap-3 lg:border-l lg:border-black/[0.08] lg:pl-8">
@@ -120,9 +106,7 @@ export default function AIDevelopmentExcellenceSection() {
                 height={32}
                 className="h-8 w-8"
               />
-              <p className="text-[15px] font-medium text-[#52525B]">
-                Top 1% Talent
-              </p>
+              <p className="text-[15px] font-medium text-[#52525B]">{t("Top 1% Talent")}</p>
             </div>
           </div>
         </div>

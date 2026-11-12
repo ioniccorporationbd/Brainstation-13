@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 
 type Capability = {
@@ -88,21 +89,18 @@ const CARD_BASE =
   "motion-safe:hover:scale-[1.03] motion-safe:active:scale-[0.99] " +
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28] focus-visible:ring-offset-2";
 
-export default function CoreCapabilitiesSection() {
+export default async function CoreCapabilitiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[70px] md:py-[90px] lg:py-[112px]">
       <div className="mx-auto w-full max-w-[1328px] px-5 sm:px-8 xl:px-0">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="max-w-[600px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px]">
-            Drive Growth with Our Core Capabilities
-          </h2>
+          <h2 className="max-w-[600px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px]">{t("Drive Growth with Our Core Capabilities")}</h2>
 
           <Link
             href="/services"
             className="inline-flex items-center gap-3 text-[15px] font-semibold text-primary transition-colors hover:text-primary-hover md:pb-2"
-          >
-            Explore All Services
-            <span aria-hidden="true" className="text-[18px] leading-none">
+          >{t("Explore All Services")}<span aria-hidden="true" className="text-[18px] leading-none">
               →
             </span>
           </Link>
@@ -122,7 +120,8 @@ export default function CoreCapabilitiesSection() {
   );
 }
 
-function CapabilityCard({ item }: { item: Capability }) {
+async function CapabilityCard({ item }: { item: Capability }) {
+  const { t } = await getTranslator();
   return (
     <Link
       href={item.href}
@@ -137,11 +136,11 @@ function CapabilityCard({ item }: { item: Capability }) {
       />
 
       <h3 className="mt-6 text-[21px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] transition-colors group-hover:text-[#C91F28] sm:text-[23px] xl:text-[26px]">
-        {item.title}
+        {t(item.title)}
       </h3>
 
       <p className="mt-2.5 max-w-[360px] text-[15px] font-normal leading-[1.55] text-[#52525B]">
-        {item.description}
+        {t(item.description)}
       </p>
     </Link>
   );
