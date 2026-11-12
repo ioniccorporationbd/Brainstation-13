@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -68,6 +69,7 @@ const caseStudies: CaseStudy[] = [
 ];
 
 export default function FintechCaseStudiesSection() {
+  const { t } = useTranslation();
   const [active, setActive] = useState<CaseStudy>(caseStudies[0]);
 
   return (
@@ -75,28 +77,19 @@ export default function FintechCaseStudiesSection() {
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Case studies
-            </p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-              Financial products in production
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-              A few engagements that show how fintech delivery looks in
-              practice.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Financial products in production")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("A few engagements that show how fintech delivery looks in practice.")}</p>
           </div>
 
           <Link
             href="/case-studies"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-          >
-            See all case studies
-            <ArrowRight size={17} />
+          >{t("See all case studies")}<ArrowRight size={17} />
           </Link>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Fintech case studies">
+        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Fintech case studies")}>
           {caseStudies.map((item) => {
             const isActive = active.id === item.id;
             return (
@@ -112,7 +105,7 @@ export default function FintechCaseStudiesSection() {
                     : "border-[#ececec] bg-white text-black hover:border-[#c91f28] hover:text-[#c91f28]"
                 }`}
               >
-                {item.label}
+                {t(item.label)}
               </button>
             );
           })}
@@ -133,7 +126,7 @@ export default function FintechCaseStudiesSection() {
               {active.category}
             </p>
             <h3 className="mt-3 text-[22px] font-bold leading-[1.25] tracking-[-0.015em] text-black md:text-[28px]">
-              {active.title}
+              {t(active.title)}
             </h3>
 
             <ul className="mt-5 flex flex-wrap gap-2">
@@ -147,12 +140,10 @@ export default function FintechCaseStudiesSection() {
               ))}
             </ul>
 
-            <p className="mt-5 text-[15px] leading-[1.8] text-[#55585e]">{active.description}</p>
+            <p className="mt-5 text-[15px] leading-[1.8] text-[#55585e]">{t(active.description)}</p>
 
             <div className="mt-6">
-              <h4 className="text-[14px] font-bold uppercase tracking-[0.1em] text-black">
-                Key results
-              </h4>
+              <h4 className="text-[14px] font-bold uppercase tracking-[0.1em] text-black">{t("Key results")}</h4>
               <ul className="mt-3 space-y-2">
                 {active.results.map((result) => (
                   <li key={result} className="flex gap-3 text-[14.5px] leading-[1.6] text-[#55585e]">
@@ -166,9 +157,7 @@ export default function FintechCaseStudiesSection() {
             <Link
               href="/case-studies"
               className="mt-7 inline-flex items-center gap-2 text-[14.5px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
-            >
-              View case studies
-              <ArrowRight size={17} />
+            >{t("View case studies")}<ArrowRight size={17} />
             </Link>
           </div>
         </div>

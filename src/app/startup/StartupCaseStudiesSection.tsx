@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import { ArrowRight } from "lucide-react";
 
 type CaseStudy = {
@@ -40,30 +41,22 @@ const cases: CaseStudy[] = [
   },
 ];
 
-export default function StartupCaseStudiesSection() {
+export default async function StartupCaseStudiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Case studies
-            </p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-              Startup products in market
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-              Engagements where early-stage products had to ship and hold up in
-              real use.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Startup products in market")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Engagements where early-stage products had to ship and hold up in real use.")}</p>
           </div>
 
           <Link
             href="/case-studies"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-          >
-            See all case studies
-            <ArrowRight size={17} />
+          >{t("See all case studies")}<ArrowRight size={17} />
           </Link>
         </div>
 
@@ -94,11 +87,11 @@ export default function StartupCaseStudiesSection() {
                 </div>
 
                 <h3 className="mt-4 text-[20px] font-semibold leading-[1.25] text-black md:text-[23px]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] leading-[1.7] text-[#55585e]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
 
                 <ul className="mt-5 flex flex-wrap gap-2">
@@ -115,9 +108,7 @@ export default function StartupCaseStudiesSection() {
                 <Link
                   href="/case-studies"
                   className="mt-6 inline-flex w-fit items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
-                >
-                  View case studies
-                  <ArrowRight size={16} />
+                >{t("View case studies")}<ArrowRight size={16} />
                 </Link>
               </div>
             </article>

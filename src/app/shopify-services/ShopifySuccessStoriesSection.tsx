@@ -1,6 +1,7 @@
 "use client";
 
 import { Autoplay, Pagination } from "swiper/modules";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -32,19 +33,16 @@ const successStories: SuccessStory[] = [
 ];
 
 export default function ShopifySuccessStoriesSection() {
+  const { t } = useTranslation();
   const reduceMotion = usePrefersReducedMotion();
 
   return (
     <section className="w-full overflow-hidden bg-[#fafafa] px-6 pb-[96px] pt-[88px] text-[#0a0a0a] md:pb-[112px] md:pt-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Success Stories
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Success Stories")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Shopify eCommerce Success Stories
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify eCommerce Success Stories")}</h2>
         </div>
 
         <div className="mx-auto mt-11 max-w-[1080px]">
@@ -81,11 +79,11 @@ export default function ShopifySuccessStoriesSection() {
 
                   <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
                     <h3 className="max-w-[520px] text-[23px] font-bold leading-[1.22] tracking-[-0.02em] text-[#0a0a0a] md:text-[29px]">
-                      {story.title}
+                      {t(story.title)}
                     </h3>
 
                     <p className="mt-5 max-w-[540px] text-[15.5px] font-medium leading-[1.65] text-[#565656] md:text-[16.5px]">
-                      {story.description}
+                      {t(story.description)}
                     </p>
                   </div>
                 </div>

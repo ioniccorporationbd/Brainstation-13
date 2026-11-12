@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const industries = [
   "E-commerce",
@@ -12,23 +13,17 @@ const industries = [
   "Startups",
 ];
 
-export default function IndustriesSection() {
+export default async function IndustriesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Industries We Build For
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Industries We Build For")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Industries We Serve
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Industries We Serve")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Domain experience across regulated, high-traffic and fast-moving
-            sectors.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Domain experience across regulated, high-traffic and fast-moving sectors.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

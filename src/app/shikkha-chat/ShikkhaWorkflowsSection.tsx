@@ -1,4 +1,5 @@
 import type { ElementType } from "react";
+import { getTranslator } from "@/i18n/server";
 import {
   BarChart3,
   BookOpen,
@@ -42,21 +43,15 @@ const workflows: Workflow[] = [
   },
 ];
 
-export default function ShikkhaWorkflowsSection() {
+export default async function ShikkhaWorkflowsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[760px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            How it works
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            How Shikkha Chat runs the school day
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            Real, integrated workflows across roles — one action flows straight
-            to the next person who needs it.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How it works")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How Shikkha Chat runs the school day")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Real, integrated workflows across roles — one action flows straight to the next person who needs it.")}</p>
         </div>
 
         <ol className="mt-12 space-y-4 md:border-l md:border-[#e8e8e8] md:pl-10 md:space-y-5">
@@ -70,11 +65,10 @@ export default function ShikkhaWorkflowsSection() {
                       <Icon size={21} strokeWidth={1.9} />
                     </span>
                     <div>
-                      <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                        Step 0{index + 1}
+                      <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Step 0")}{index + 1}
                       </p>
                       <h3 className="mt-1.5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[18px]">
-                        {flow.title}
+                        {t(flow.title)}
                       </h3>
                       <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
                         {flow.steps}

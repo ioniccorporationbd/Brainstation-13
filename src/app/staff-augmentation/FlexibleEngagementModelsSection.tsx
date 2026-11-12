@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import {
   ChevronDown,
   Coins,
@@ -173,18 +174,14 @@ function ExpandableCell({
 }
 
 export default function FlexibleEngagementModelsSection() {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">
-            Flexible Engagement Models
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">{t("Flexible Engagement Models")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[820px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Compare our flexible IT staff augmentation models to find the
-            perfect fit for your project needs and business objectives.
-          </p>
+          <p className="mx-auto mt-5 max-w-[820px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Compare our flexible IT staff augmentation models to find the perfect fit for your project needs and business objectives.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 xl:grid-cols-[1fr_300px]">
@@ -193,10 +190,7 @@ export default function FlexibleEngagementModelsSection() {
             <div className="min-w-[760px]">
               <div className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px]">
                 <div>
-                  <h3 className="text-[22px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a]">
-                    Comparison <br />
-                    Aspects
-                  </h3>
+                  <h3 className="text-[22px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a]">{t("Comparison")}<br />{t("Aspects")}</h3>
                 </div>
 
                 {(["remote", "hybrid", "flexiRemote"] as ModelKey[]).map(
@@ -207,9 +201,7 @@ export default function FlexibleEngagementModelsSection() {
                       </h3>
 
                       {key === "remote" && (
-                        <span className="mt-3 inline-flex rounded-full bg-[#0a0a0a] px-4 py-1.5 text-[12px] font-bold text-white">
-                          Popular
-                        </span>
+                        <span className="mt-3 inline-flex rounded-full bg-[#0a0a0a] px-4 py-1.5 text-[12px] font-bold text-white">{t("Popular")}</span>
                       )}
                     </div>
                   )
@@ -260,9 +252,7 @@ export default function FlexibleEngagementModelsSection() {
 
           {/* Shared talents card */}
           <div className="rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 md:px-8 md:py-9">
-            <h3 className="text-[22px] font-bold leading-none tracking-[-0.015em] text-[#0a0a0a]">
-              Shared Talents
-            </h3>
+            <h3 className="text-[22px] font-bold leading-none tracking-[-0.015em] text-[#0a0a0a]">{t("Shared Talents")}</h3>
 
             <div className="mt-8">
               {rows.map((row) => (

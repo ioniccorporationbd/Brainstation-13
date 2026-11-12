@@ -12,6 +12,7 @@ import {
   Users,
   Workflow,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Service = {
   title: string;
@@ -36,25 +37,18 @@ const services: Service[] = [
   { title: "Time Series Analysis", icon: Clock },
 ];
 
-export default function MLAIServicesSection() {
+export default async function MLAIServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Can Do
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Offered Services
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Customized ML and AI models aligned with your business goals. From
-            automation to advanced analytics, we build solutions that scale with
-            you.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Customized ML and AI models aligned with your business goals. From automation to advanced analytics, we build solutions that scale with you.")}</p>
         </div>
 
         {/* Cards */}
@@ -77,7 +71,7 @@ export default function MLAIServicesSection() {
                   </span>
 
                   <h3 className="text-[15.5px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a]">
-                    {service.title}
+                    {t(service.title)}
                   </h3>
                 </div>
               </article>

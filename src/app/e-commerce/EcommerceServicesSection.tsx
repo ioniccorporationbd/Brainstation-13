@@ -1,3 +1,4 @@
+import { getTranslator } from "@/i18n/server";
 import {
   BarChart3,
   CreditCard,
@@ -52,20 +53,15 @@ const services: ServiceItem[] = [
   },
 ];
 
-export default function EcommerceServicesSection() {
+export default async function EcommerceServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section id="services" className="relative overflow-hidden bg-white px-6 pb-[88px] pt-[64px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Services
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            What we build in commerce
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Storefront, payments, fulfilment and the data layer &mdash; delivered as one joined-up platform.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Services")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("What we build in commerce")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Storefront, payments, fulfilment and the data layer — delivered as one joined-up platform.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,8 +73,8 @@ export default function EcommerceServicesSection() {
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={21} />
               </span>
-              <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] text-black">{item.title}</h3>
-              <p className="mt-2 text-[13.5px] leading-[1.65] text-[#55585e]">{item.description}</p>
+              <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] text-black">{t(item.title)}</h3>
+              <p className="mt-2 text-[13.5px] leading-[1.65] text-[#55585e]">{t(item.description)}</p>
             </article>
           ))}
         </div>

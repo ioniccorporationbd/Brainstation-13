@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import PharmaSolutionsGridSection from "./PharmaSolutionsGridSection";
 import PharmaCustomerSuccessSection from "./PharmaCustomerSuccessSection";
 import PharmaCtaSection from "./PharmaCtaSection";
 
-export const metadata: Metadata = {
-  title: "Pharma Solutions | Magnetic Solution Limited",
-  description:
-    "HCP activation, compliance automation, pharma e-commerce and LMS platforms built by Magnetic Solution Limited for healthcare and pharmaceutical enterprises.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Pharma Solutions | Magnetic Solution Limited"),
+    description: t("HCP activation, compliance automation, pharma e-commerce and LMS platforms built by Magnetic Solution Limited for healthcare and pharmaceutical enterprises."),
+  };
+}
 
 const faqs = [
   {
@@ -61,7 +64,8 @@ const faqs = [
   },
 ];
 
-export default function PharmaPage() {
+export default async function PharmaPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <PharmaHeroSection />
@@ -69,8 +73,8 @@ export default function PharmaPage() {
       <PharmaCustomerSuccessSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Frequently asked questions"
-        subtitle="Common questions about our pharma and healthcare engagements."
+        title={t("Frequently asked questions")}
+        subtitle={t("Common questions about our pharma and healthcare engagements.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

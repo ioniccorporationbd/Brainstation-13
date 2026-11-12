@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -67,26 +68,19 @@ const solutions: SolutionTab[] = [
 ];
 
 export default function FintechSolutionsTabsSection() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<SolutionTab>(solutions[0]);
 
   return (
     <section id="solutions" className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Our solutions
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Complete financial technology solutions
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Our fintech expertise spans digital banking, payments, lending,
-            insurance and cross-border transfers &mdash; enterprise-grade
-            platforms that move financial services forward.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our solutions")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Complete financial technology solutions")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Our fintech expertise spans digital banking, payments, lending, insurance and cross-border transfers — enterprise-grade platforms that move financial services forward.")}</p>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Fintech solutions">
+        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Fintech solutions")}>
           {solutions.map((item) => {
             const isActive = activeTab.id === item.id;
             return (
@@ -102,7 +96,7 @@ export default function FintechSolutionsTabsSection() {
                     : "border-[#ececec] bg-white text-black hover:border-[#c91f28] hover:text-[#c91f28]"
                 }`}
               >
-                {item.label}
+                {t(item.label)}
               </button>
             );
           })}
@@ -112,16 +106,15 @@ export default function FintechSolutionsTabsSection() {
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
             <div>
               <h3 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[32px]">
-                {activeTab.title}
+                {t(activeTab.title)}
               </h3>
               <p className="mt-4 max-w-[560px] text-[15px] leading-[1.8] text-[#55585e]">
-                {activeTab.description}
+                {t(activeTab.description)}
               </p>
               <Link
                 href={activeTab.href}
                 className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Explore {activeTab.label}
+              >{t("Explore")}{t(activeTab.label)}
                 <ArrowRight size={17} />
               </Link>
             </div>
@@ -134,7 +127,7 @@ export default function FintechSolutionsTabsSection() {
                 className="h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[330px]"
               />
               <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                {activeTab.label}
+                {t(activeTab.label)}
               </span>
             </div>
           </div>

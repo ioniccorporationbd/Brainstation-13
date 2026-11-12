@@ -1,4 +1,5 @@
 import { BarChart3, Cloud, Database, DatabaseZap } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Service = {
   title: string;
@@ -33,23 +34,17 @@ const services: Service[] = [
   },
 ];
 
-export default function DataCoreServicesSection() {
+export default async function DataCoreServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Do
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Our Core Data Services
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Core Data Services")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            End-to-end data engineering — from ingestion and pipelines to
-            governance, analytics, and managed databases.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("End-to-end data engineering — from ingestion and pipelines to governance, analytics, and managed databases.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -72,11 +67,11 @@ export default function DataCoreServicesSection() {
                 </div>
 
                 <h3 className="mt-5 text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
 
                 <p className="mt-3 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {service.description}
+                  {t(service.description)}
                 </p>
               </article>
             );

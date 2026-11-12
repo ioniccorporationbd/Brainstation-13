@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const industries = [
   {
@@ -15,17 +16,14 @@ const industries = [
   },
 ];
 
-export default function BankingFinancialIndustriesSection() {
+export default async function BankingFinancialIndustriesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Clients we have served in
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Industries
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Clients we have served in")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Industries")}</h2>
 
           <ul className="mt-8 space-y-4">
             {industries.map((industry) => (
@@ -39,10 +37,10 @@ export default function BankingFinancialIndustriesSection() {
 
                 <div>
                   <h3 className="text-[16.5px] font-semibold text-black md:text-[17.5px]">
-                    {industry.title}
+                    {t(industry.title)}
                   </h3>
                   <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#55585e]">
-                    {industry.text}
+                    {t(industry.text)}
                   </p>
                 </div>
               </li>
@@ -53,7 +51,7 @@ export default function BankingFinancialIndustriesSection() {
         <div className="overflow-hidden rounded-2xl border border-[#ececec]">
           <img
             src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1400&auto=format&fit=crop"
-            alt="Banking and financial industry"
+            alt={t("Banking and financial industry")}
             className="h-[280px] w-full object-cover md:h-[380px] lg:h-[440px]"
           />
         </div>

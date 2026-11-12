@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import SoftwareItesServicesSection from "./SoftwareItesServicesSection";
 import SoftwareItesCaseStudiesSection from "./SoftwareItesCaseStudiesSection";
 import SoftwareItesCtaSection from "./SoftwareItesCtaSection";
 
-export const metadata: Metadata = {
-  title: "Software & IT Services | Magnetic Solution Limited",
-  description:
-    "Custom applications, enterprise ERP, BI analytics, cloud and AR/VR solutions built by Magnetic Solution Limited for ICT and software businesses.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Software & IT Services | Magnetic Solution Limited"),
+    description: t("Custom applications, enterprise ERP, BI analytics, cloud and AR/VR solutions built by Magnetic Solution Limited for ICT and software businesses."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function SoftwareItesPage() {
+export default async function SoftwareItesPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <SoftwareItesHeroSection />
@@ -49,8 +53,8 @@ export default function SoftwareItesPage() {
       <SoftwareItesCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Software engagement questions"
-        subtitle="What ICT and software businesses usually ask before we start."
+        title={t("Software engagement questions")}
+        subtitle={t("What ICT and software businesses usually ask before we start.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

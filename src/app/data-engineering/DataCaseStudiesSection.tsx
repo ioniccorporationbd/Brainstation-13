@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -49,32 +50,24 @@ const caseStudies: CaseStudy[] = [
   },
 ];
 
-export default function DataCaseStudiesSection() {
+export default async function DataCaseStudiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[720px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Our Work
-            </p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our Work")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-              Case Studies
-            </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Case Studies")}</h2>
 
-            <p className="mt-4 text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-              A closer look at how our data engineering work has transformed
-              businesses.
-            </p>
+            <p className="mt-4 text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A closer look at how our data engineering work has transformed businesses.")}</p>
           </div>
 
           <Link
             href="/case-studies"
             className="inline-flex w-fit items-center justify-center rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-          >
-            See all Case Studies
-          </Link>
+          >{t("See all Case Studies")}</Link>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -95,23 +88,21 @@ export default function DataCaseStudiesSection() {
 
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
-                  {item.tag}
+                  {t(item.tag)}
                 </p>
 
                 <h3 className="mt-3 text-[19px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
 
                 <Link
                   href={item.href}
                   className="mt-5 inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition hover:text-[#a71920]"
-                >
-                  View Case Study
-                  <ArrowRight size={16} strokeWidth={2.2} />
+                >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
                 </Link>
               </div>
             </article>

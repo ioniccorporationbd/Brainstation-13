@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import RealEstateServicesSection from "./RealEstateServicesSection";
 import RealEstateCaseStudiesSection from "./RealEstateCaseStudiesSection";
 import RealEstateCtaSection from "./RealEstateCtaSection";
 
-export const metadata: Metadata = {
-  title: "Real Estate Solutions | Magnetic Solution Limited",
-  description:
-    "Property marketplaces, smart-building integrations, ERP, cloud and AR/VR engagement built by Magnetic Solution Limited for real estate companies.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Real Estate Solutions | Magnetic Solution Limited"),
+    description: t("Property marketplaces, smart-building integrations, ERP, cloud and AR/VR engagement built by Magnetic Solution Limited for real estate companies."),
+  };
+}
 
 const faqs = [
   {
@@ -36,7 +39,8 @@ const faqs = [
   },
 ];
 
-export default function RealEstatePage() {
+export default async function RealEstatePage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <RealEstateHeroSection />
@@ -44,8 +48,8 @@ export default function RealEstatePage() {
       <RealEstateCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Real estate engagement questions"
-        subtitle="What property companies usually ask before we start building."
+        title={t("Real estate engagement questions")}
+        subtitle={t("What property companies usually ask before we start building.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

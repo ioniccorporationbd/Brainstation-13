@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -11,24 +12,17 @@ const studies = [
   "Immersive Digital Showroom",
 ];
 
-export default function CaseStudiesSection() {
+export default async function CaseStudiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Case Studies
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case Studies")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Complex Stories, Rendered Simply
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Complex Stories, Rendered Simply")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Expert 3D modeling and animation for industrial applications. From
-            semiconductor fabs to global logistics, we visualize complex systems
-            with cinematic clarity.
-          </p>
+          <p className="mx-auto mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap justify-center gap-3">
@@ -50,7 +44,7 @@ export default function CaseStudiesSection() {
           <div className="relative aspect-[4/3.6] w-full overflow-hidden rounded-xl bg-[#f7f7f7]">
             <Image
               src={CASE_IMG}
-              alt="Nissan Driver’s Guide AR experience"
+              alt={t("Nissan Driver’s Guide AR experience")}
               fill
               loading="eager"
               sizes="(max-width: 1024px) 100vw, 520px"
@@ -59,27 +53,16 @@ export default function CaseStudiesSection() {
           </div>
 
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Automotive AR Experience
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Automotive AR Experience")}</p>
 
-            <h3 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
-              Driver’s Guide for Nissan
-            </h3>
+            <h3 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">{t("Driver’s Guide for Nissan")}</h3>
 
-            <p className="mt-4 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[16.5px]">
-              AR mobile app for Nissan Middle East replacing traditional
-              manuals. Built with Unity 3D, drivers scan interior controls for
-              instant alerts and emergency procedures. Multilingual with cloud
-              updates.
-            </p>
+            <p className="mt-4 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[16.5px]">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
 
             <Link
               href="/case-studies"
               className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#c91f28] px-6 py-3 text-[14.5px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-            >
-              View Case Study
-              <ArrowRight size={16} strokeWidth={2.2} />
+            >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
             </Link>
 
             <div className="mt-8 grid grid-cols-2 gap-8 border-t border-[#ececec] pt-7">
@@ -88,9 +71,7 @@ export default function CaseStudiesSection() {
                   80%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">
-                  Faster knowledge access
-                </p>
+                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">{t("Faster knowledge access")}</p>
               </div>
 
               <div>
@@ -98,9 +79,7 @@ export default function CaseStudiesSection() {
                   99.5%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">
-                  Better customer retention
-                </p>
+                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">{t("Better customer retention")}</p>
               </div>
             </div>
           </div>

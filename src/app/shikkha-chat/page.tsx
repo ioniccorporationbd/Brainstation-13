@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -13,11 +14,13 @@ import ShikkhaUseCasesSection from "./ShikkhaUseCasesSection";
 import ShikkhaWebsiteSection from "./ShikkhaWebsiteSection";
 import ShikkhaWorkflowsSection from "./ShikkhaWorkflowsSection";
 
-export const metadata: Metadata = {
-  title: "Shikkha Chat | Magnetic Solution Limited",
-  description:
-    "Shikkha Chat is a complete education management ERP for modern schools — administration, AI Pathshala learning, teachers, students, parents and government oversight in one secure platform.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Shikkha Chat | Magnetic Solution Limited"),
+    description: t("Shikkha Chat is a complete education management ERP for modern schools — administration, AI Pathshala learning, teachers, students, parents and government oversight in one secure platform."),
+  };
+}
 
 const faqs = [
   {
@@ -52,7 +55,8 @@ const faqs = [
   },
 ];
 
-export default function ShikkhaChatPage() {
+export default async function ShikkhaChatPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <ShikkhaHeroSection />
@@ -66,8 +70,8 @@ export default function ShikkhaChatPage() {
       <ShikkhaSecuritySection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Questions schools ask about Shikkha Chat"
-        subtitle="Straight answers about modules, the public website, AI Pathshala and role-based access."
+        title={t("Questions schools ask about Shikkha Chat")}
+        subtitle={t("Straight answers about modules, the public website, AI Pathshala and role-based access.")}
         items={faqs}
         ctaLabel="Request a Demo"
         ctaHref="/schedule-a-call"

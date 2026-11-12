@@ -12,6 +12,7 @@ import {
   RefreshCcw,
   ShieldCheck,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type TrustCard = {
   title: string;
@@ -94,18 +95,15 @@ const trustCards: TrustCard[] = [
   },
 ];
 
-export default function WhyClientsTrustUsSection() {
+export default async function WhyClientsTrustUsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Why Clients Trust Us
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Clients Trust Us")}</h2>
 
-          <p className="mx-auto mt-4 max-w-[520px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
-            Complete solution components working together for your success
-          </p>
+          <p className="mx-auto mt-4 max-w-[520px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">{t("Complete solution components working together for your success")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -122,11 +120,11 @@ export default function WhyClientsTrustUsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </article>
             );

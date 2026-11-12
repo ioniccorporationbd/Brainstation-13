@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -34,6 +35,7 @@ const platforms = [
 ];
 
 export default function PlatformsSection() {
+  const { t } = useTranslation();
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -50,18 +52,11 @@ export default function PlatformsSection() {
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Distribution
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Distribution")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Platforms We Ship On
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Platforms We Ship On")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Games we build run on the stores and consoles your players already
-            use.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Games we build run on the stores and consoles your players already use.")}</p>
         </div>
 
         <div className="mt-8 border-y border-[#ececec] py-6">

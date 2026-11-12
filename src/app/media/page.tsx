@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -12,11 +13,13 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Media | Magnetic Solution Limited",
-  description:
-    "Media and press resources for Magnetic Solution Limited — how to request interviews, commentary, company information and brand assets.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Media | Magnetic Solution Limited"),
+    description: t("Media and press resources for Magnetic Solution Limited — how to request interviews, commentary, company information and brand assets."),
+  };
+}
 
 /**
  * Content policy: third-party coverage, award announcements and certification
@@ -67,48 +70,37 @@ const topics = [
   },
 ];
 
-export default function MediaPage() {
+export default async function MediaPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       {/* Hero */}
       <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              Company · Media
-            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Media")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">
-              Media, press and brand resources
-            </h1>
+            <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Media, press and brand resources")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">
-              Announcements, company information and assets for editorial use.
-              For interviews, commentary or a press kit, our communications team
-              responds from a single contact point.
-            </p>
+            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("Announcements, company information and assets for editorial use. For interviews, commentary or a press kit, our communications team responds from a single contact point.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Contact communications
-                <ArrowRight size={18} />
+              >{t("Contact communications")}<ArrowRight size={18} />
               </Link>
               <Link
                 href="/about-us"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Company overview
-              </Link>
+              >{t("Company overview")}</Link>
             </div>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1400&auto=format&fit=crop"
-              alt="Newspapers and press materials laid out on a desk"
+              alt={t("Newspapers and press materials laid out on a desk")}
               className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
             />
           </div>
@@ -118,16 +110,9 @@ export default function MediaPage() {
       {/* Resources */}
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Media resources
-          </p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            What we can provide, and how to ask for it
-          </h2>
-          <p className="mt-4 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e]">
-            Requests are handled editorially rather than through a marketing
-            funnel — you get a direct answer, not a brochure.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Media resources")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What we can provide, and how to ask for it")}</h2>
+          <p className="mt-4 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Requests are handled editorially rather than through a marketing funnel — you get a direct answer, not a brochure.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {resources.map((item) => (
@@ -140,10 +125,10 @@ export default function MediaPage() {
                 </span>
                 <div>
                   <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
                   <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                    {item.body}
+                    {t(item.body)}
                   </p>
                 </div>
               </article>
@@ -157,17 +142,11 @@ export default function MediaPage() {
         <div className="mx-auto max-w-[1240px]">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-                Topics
-              </p>
-              <h2 className="mt-3 max-w-[640px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-                Subjects our team can speak to
-              </h2>
+              <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Topics")}</p>
+              <h2 className="mt-3 max-w-[640px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Subjects our team can speak to")}</h2>
             </div>
             <span className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-[#55585e]">
-              <Sparkles size={16} className="text-[#c91f28]" />
-              Briefings arranged on request
-            </span>
+              <Sparkles size={16} className="text-[#c91f28]" />{t("Briefings arranged on request")}</span>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -177,10 +156,10 @@ export default function MediaPage() {
                 className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <h3 className="text-[15.5px] font-bold tracking-[-0.01em] text-black">
-                  {topic.title}
+                  {t(topic.title)}
                 </h3>
                 <p className="mt-2.5 text-[14px] leading-[1.65] text-[#55585e]">
-                  {topic.body}
+                  {t(topic.body)}
                 </p>
               </article>
             ))}
@@ -196,15 +175,8 @@ export default function MediaPage() {
               <ShieldCheck size={21} strokeWidth={1.9} />
             </span>
             <div>
-              <h3 className="text-[16.5px] font-bold text-black">
-                No unverified coverage
-              </h3>
-              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                We do not publish press coverage, award announcements or
-                certification news that cannot be confirmed against the original
-                source. Published articles and mentions are supplied on request
-                with their original links.
-              </p>
+              <h3 className="text-[16.5px] font-bold text-black">{t("No unverified coverage")}</h3>
+              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("We do not publish press coverage, award announcements or certification news that cannot be confirmed against the original source. Published articles and mentions are supplied on request with their original links.")}</p>
             </div>
           </div>
 
@@ -213,20 +185,12 @@ export default function MediaPage() {
               <FileText size={21} strokeWidth={1.9} />
             </span>
             <div>
-              <h3 className="text-[16.5px] font-bold text-black">
-                Press kit on request
-              </h3>
-              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                Company description, logo files and product imagery are sent as
-                a single package when you tell us the publication, the story
-                angle and your deadline.
-              </p>
+              <h3 className="text-[16.5px] font-bold text-black">{t("Press kit on request")}</h3>
+              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Company description, logo files and product imagery are sent as a single package when you tell us the publication, the story angle and your deadline.")}</p>
               <Link
                 href="/contact"
                 className="mt-4 inline-flex items-center gap-2 text-[14.5px] font-bold text-[#c91f28] transition-colors hover:text-[#a71920]"
-              >
-                Request the press kit
-                <ArrowRight size={16} strokeWidth={2.2} />
+              >{t("Request the press kit")}<ArrowRight size={16} strokeWidth={2.2} />
               </Link>
             </div>
           </div>
@@ -239,32 +203,20 @@ export default function MediaPage() {
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                <Mail size={15} />
-                Media contact
-              </p>
-              <h2 className="mt-3 text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">
-                Have a story or a deadline?
-              </h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">
-                Send the details through the contact form and mention media in
-                the message — requests are routed to the people who can answer
-                technically.
-              </p>
+                <Mail size={15} />{t("Media contact")}</p>
+              <h2 className="mt-3 text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Have a story or a deadline?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("Send the details through the contact form and mention media in the message — requests are routed to the people who can answer technically.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Contact us
-                <ArrowRight size={17} />
+              >{t("Contact us")}<ArrowRight size={17} />
               </Link>
               <Link
                 href="/about-us"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Our approach
-              </Link>
+              >{t("Our approach")}</Link>
             </div>
           </div>
         </div>

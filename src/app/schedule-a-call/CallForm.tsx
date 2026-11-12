@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import {
   AlertCircle,
   CalendarCheck,
@@ -32,6 +33,7 @@ const topics = [
 ];
 
 export default function CallForm() {
+  const { t } = useTranslation();
   const [values, setValues] = useState<Values>({
     name: "",
     email: "",
@@ -108,23 +110,11 @@ export default function CallForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CalendarCheck size={28} strokeWidth={1.9} />
         </span>
-        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black">
-          Booking request received
-        </h3>
-        <p className="mt-3 max-w-[430px] text-[15px] leading-[1.7] text-[#55585e]">
-          Thank you, {values.name.split(" ")[0] || "there"}. Your request has
-          been recorded with reference{" "}
-          <strong className="break-all text-black">{reference || "—"}</strong>{" "}
-          and is queued for the team.
-        </p>
+        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black">{t("Booking request received")}</h3>
+        <p className="mt-3 max-w-[430px] text-[15px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your request has been recorded with reference")}{" "}
+          <strong className="break-all text-black">{reference || "—"}</strong>{" "}{t("and is queued for the team.")}</p>
         <p className="mt-3 max-w-[430px] rounded-lg bg-[#fafafa] px-4 py-3 text-[13px] leading-[1.65] text-[#55585e]">
-          <strong className="text-black">
-            This is not a confirmed meeting.
-          </strong>{" "}
-          No calendar slot has been reserved and no invite has been issued. A
-          person will reply to {values.email || "your email"} to confirm an
-          exact time.
-        </p>
+          <strong className="text-black">{t("This is not a confirmed meeting.")}</strong>{" "}{t("No calendar slot has been reserved and no invite has been issued. A person will reply to")}{values.email || "your email"}{t("to confirm an exact time.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -141,9 +131,7 @@ export default function CallForm() {
             setReference("");
           }}
           className="mt-7 inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-        >
-          Submit another request
-        </button>
+        >{t("Submit another request")}</button>
       </div>
     );
   }
@@ -159,8 +147,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-name"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            Full name <span className="text-[#c91f28]">*</span>
+          >{t("Full name")}<span className="text-[#c91f28]">*</span>
           </label>
           <input
             id="cc-name"
@@ -179,8 +166,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-email"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            Work email <span className="text-[#c91f28]">*</span>
+          >{t("Work email")}<span className="text-[#c91f28]">*</span>
           </label>
           <input
             id="cc-email"
@@ -202,9 +188,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-company"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            Company
-          </label>
+          >{t("Company")}</label>
           <input
             id="cc-company"
             className={field}
@@ -218,9 +202,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-phone"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            Phone
-          </label>
+          >{t("Phone")}</label>
           <input
             id="cc-phone"
             className={field}
@@ -234,8 +216,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-topic"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            What is the call about? <span className="text-[#c91f28]">*</span>
+          >{t("What is the call about?")}<span className="text-[#c91f28]">*</span>
           </label>
           <select
             id="cc-topic"
@@ -255,9 +236,7 @@ export default function CallForm() {
           <label
             htmlFor="cc-slot"
             className="mb-1.5 block text-[13px] font-semibold text-black"
-          >
-            Preferred date
-          </label>
+          >{t("Preferred date")}</label>
           <input
             id="cc-slot"
             type="date"
@@ -272,8 +251,7 @@ export default function CallForm() {
         <label
           htmlFor="cc-message"
           className="mb-1.5 block text-[13px] font-semibold text-black"
-        >
-          Agenda <span className="text-[#c91f28]">*</span>
+        >{t("Agenda")}<span className="text-[#c91f28]">*</span>
         </label>
         <textarea
           id="cc-message"
@@ -298,10 +276,7 @@ export default function CallForm() {
       ) : null}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-[12.5px] leading-[1.6] text-[#6b6f76]">
-          Requests are queued on our server. A person confirms the time by email
-          — nothing is booked automatically.
-        </p>
+        <p className="text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Requests are queued on our server. A person confirms the time by email — nothing is booked automatically.")}</p>
         <button
           type="submit"
           disabled={status === "sending"}
@@ -309,13 +284,9 @@ export default function CallForm() {
         >
           {status === "sending" ? (
             <>
-              <Loader2 size={17} className="animate-spin" />
-              Sending
-            </>
+              <Loader2 size={17} className="animate-spin" />{t("Sending")}</>
           ) : (
-            <>
-              Request a call
-              <Send size={16} />
+            <>{t("Request a call")}<Send size={16} />
             </>
           )}
         </button>

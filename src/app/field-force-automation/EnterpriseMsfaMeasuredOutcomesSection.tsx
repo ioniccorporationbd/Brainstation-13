@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import {
   BarChart3,
   Clock3,
@@ -53,23 +55,17 @@ const outcomes: OutcomeCard[] = [
   },
 ];
 
-export default function EnterpriseMsfaMeasuredOutcomesSection() {
+export default async function EnterpriseMsfaMeasuredOutcomesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Business Impact
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Business Impact")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Measured Outcomes
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Measured Outcomes")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Real operational improvements across productivity, processing,
-            compliance, cost control, leakage prevention, and reporting speed.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Real operational improvements across productivity, processing, compliance, cost control, leakage prevention, and reporting speed.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -88,7 +84,7 @@ export default function EnterpriseMsfaMeasuredOutcomesSection() {
                     </p>
 
                     <h3 className="mt-3 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#000000]">
-                      {item.title}
+                      {t(item.title)}
                     </h3>
                   </div>
 
@@ -98,7 +94,7 @@ export default function EnterpriseMsfaMeasuredOutcomesSection() {
                 </div>
 
                 <p className="mt-4 text-[14px] font-medium leading-[1.6] text-[#5f5f5f]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </article>
             );

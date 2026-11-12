@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import {
   CloudCog,
   Database,
@@ -59,23 +61,17 @@ const architectureFeatures = [
   },
 ];
 
-export default function EnterpriseMsfaArchitectureSection() {
+export default async function EnterpriseMsfaArchitectureSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Enterprise Architecture
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Enterprise Architecture")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Secure. Scalable. Connected.
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Secure. Scalable. Connected.")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            A robust multi-tier architecture bridging offline field execution
-            with your core enterprise systems.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A robust multi-tier architecture bridging offline field execution with your core enterprise systems.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -92,7 +88,7 @@ export default function EnterpriseMsfaArchitectureSection() {
                 }`}
               >
                 <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-                  {card.eyebrow}
+                  {t(card.eyebrow)}
                 </span>
 
                 <div className="mt-5 flex flex-wrap items-center gap-2">
@@ -111,11 +107,11 @@ export default function EnterpriseMsfaArchitectureSection() {
                 </div>
 
                 <h3 className="mt-5 text-[22px] font-bold leading-tight tracking-[-0.02em] text-[#000000]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </article>
             );
@@ -133,7 +129,7 @@ export default function EnterpriseMsfaArchitectureSection() {
               >
                 <Icon size={17} strokeWidth={2} className="text-[#c91f28]" />
                 <span className="text-[13px] font-bold tracking-[-0.01em] text-[#1f1f1f]">
-                  {feature.title}
+                  {t(feature.title)}
                 </span>
               </div>
             );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import { Check, Play } from "lucide-react";
 
 const games = [
@@ -66,7 +67,8 @@ const games = [
   },
 ];
 
-export default function RecentGamesSection() {
+export default async function RecentGamesSection() {
+  const { t } = await getTranslator();
   return (
     <section
       id="recent-games"
@@ -74,18 +76,11 @@ export default function RecentGamesSection() {
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Portfolio
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Portfolio")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Our Recent Games
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Recent Games")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            A selection of games and interactive experiences delivered by our
-            team.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A selection of games and interactive experiences delivered by our team.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
@@ -110,11 +105,11 @@ export default function RecentGamesSection() {
 
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {game.title}
+                  {t(game.title)}
                 </h3>
 
                 <p className="mt-1 text-[13.5px] font-semibold text-[#c91f28]">
-                  {game.subtitle}
+                  {t(game.subtitle)}
                 </p>
 
                 <ul className="mt-4 space-y-2">

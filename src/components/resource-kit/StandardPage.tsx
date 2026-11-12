@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   ArrowRight,
   Check,
@@ -150,7 +151,8 @@ export type PageData = {
   };
 };
 
-function FeatureCard({ feature }: { feature: StdFeature }) {
+async function FeatureCard({ feature }: { feature: StdFeature }) {
+  const { t } = await getTranslator();
   const Icon = iconMap[feature.icon] ?? Check;
   const inner = (
     <>
@@ -158,14 +160,13 @@ function FeatureCard({ feature }: { feature: StdFeature }) {
         <Icon size={26} strokeWidth={1.7} />
       </div>
       <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a]">
-        {feature.title}
+        {t(feature.title)}
       </h3>
       <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#565656]">
-        {feature.description}
+        {t(feature.description)}
       </p>
       {feature.href ? (
-        <span className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-[#c91f28] transition-colors group-hover:text-[#c91f28]">
-          Learn more <ArrowRight size={16} strokeWidth={2.2} />
+        <span className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-[#c91f28] transition-colors group-hover:text-[#c91f28]">{t("Learn more")}<ArrowRight size={16} strokeWidth={2.2} />
         </span>
       ) : null}
     </>
@@ -184,7 +185,8 @@ function FeatureCard({ feature }: { feature: StdFeature }) {
   return <article className={cardClass}>{inner}</article>;
 }
 
-export default function StandardPage({ data }: { data: PageData }) {
+export default async function StandardPage({ data }: { data: PageData }) {
+  const { t } = await getTranslator();
   const { eyebrow, title, description, intro, features, featuresTitle, stats, bullets, cta } = data;
 
   return (
@@ -265,7 +267,7 @@ export default function StandardPage({ data }: { data: PageData }) {
                   {stat.value}
                 </p>
                 <p className="mt-4 text-[14px] font-medium leading-[1.4] text-white/70 md:text-[16px]">
-                  {stat.label}
+                  {t(stat.label)}
                 </p>
               </div>
             ))}
@@ -278,7 +280,7 @@ export default function StandardPage({ data }: { data: PageData }) {
         <section className="px-6 py-[92px]">
           <div className="mx-auto max-w-[980px]">
             <h2 className="text-center text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px]">
-              {bullets.title}
+              {t(bullets.title)}
             </h2>
             <ul className="mt-12 grid grid-cols-1 gap-x-12 gap-y-5 sm:grid-cols-2">
               {bullets.items.map((item) => (
@@ -301,10 +303,10 @@ export default function StandardPage({ data }: { data: PageData }) {
         <section className="bg-white px-6 pb-[110px] pt-[10px]">
           <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
             <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px]">
-              {cta.title}
+              {t(cta.title)}
             </h2>
             <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[19px]">
-              {cta.description}
+              {t(cta.description)}
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link

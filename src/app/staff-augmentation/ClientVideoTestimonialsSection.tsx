@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 type VideoItem = {
   title: string;
   subtitle: string;
@@ -27,19 +29,15 @@ const videos: VideoItem[] = [
   },
 ];
 
-export default function ClientVideoTestimonialsSection() {
+export default async function ClientVideoTestimonialsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[84px]">
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[32px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">
-            Let&apos;s Hear Our Clients
-          </h2>
+          <h2 className="text-[32px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.45] tracking-[-0.015em] text-[#565656] md:text-[17px]">
-            See what our clients have to say about working with our Borderless
-            Tech Professionals (BTP)
-          </p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.45] tracking-[-0.015em] text-[#565656] md:text-[17px]">{t("See what our clients have to say about working with our Borderless Tech Professionals (BTP)")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -58,11 +56,11 @@ export default function ClientVideoTestimonialsSection() {
 
               <div className="mt-5">
                 <h3 className="text-[20px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {video.title}
+                  {t(video.title)}
                 </h3>
 
                 <p className="mt-2 text-[15px] font-medium tracking-[-0.01em] text-[#565656]">
-                  {video.subtitle}
+                  {t(video.subtitle)}
                 </p>
               </div>
             </article>

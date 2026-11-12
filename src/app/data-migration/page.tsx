@@ -1,4 +1,5 @@
 import React from "react";
+import { getTranslator } from "@/i18n/server";
 import DataMigrationHeroSection from "./DataMigrationHeroSection";
 import DataMigrationWorkedWithSection from "./DataMigrationWorkedWithSection";
 import DataMigrationServicesSection from "./DataMigrationServicesSection";

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import StaffAugmentationHeroSection from './StaffAugmentationHeroSection';
 import CompanyStatsAwardsSection from './CompanyStatsAwardsSection';
 import BorderlessTechProfessionalsSection from './BorderlessTechProfessionalsSection';

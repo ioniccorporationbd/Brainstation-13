@@ -8,6 +8,7 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const modules = [
   { title: "Finance", description: "Cash flow, payments and budgets in one ledger.", icon: Wallet },
@@ -20,21 +21,15 @@ const modules = [
   { title: "Reporting", description: "Dashboards across every module you run.", icon: BarChart3 },
 ];
 
-export default function ErpDevelopmentModulesSection() {
+export default async function ErpDevelopmentModulesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[700px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Coverage
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            ERP modules
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Start with the modules you need today and extend to the rest without
-            re-platforming.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Coverage")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("ERP modules")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Start with the modules you need today and extend to the rest without re-platforming.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -47,10 +42,10 @@ export default function ErpDevelopmentModulesSection() {
                 <item.icon size={19} />
               </span>
               <h3 className="mt-4 text-[16px] font-semibold leading-[1.3] text-black">
-                {item.title}
+                {t(item.title)}
               </h3>
               <p className="mt-1.5 text-[14px] leading-[1.65] text-[#55585e]">
-                {item.description}
+                {t(item.description)}
               </p>
             </article>
           ))}

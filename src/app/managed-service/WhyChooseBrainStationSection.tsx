@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const reasons = [
   {
     title: "Full Ownership with Built-In Accountability",
@@ -46,24 +48,17 @@ const reasons = [
   },
 ];
 
-export default function WhyChooseBrainStationSection() {
+export default async function WhyChooseBrainStationSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Managed Service Advantage
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Managed Service Advantage")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Why Choose Magnetic Solution Limited?
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Choose Magnetic Solution Limited?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            We combine complete ownership, engineering quality, delivery
-            governance, and flexible scaling to help businesses build, maintain,
-            and improve software products with confidence.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We combine complete ownership, engineering quality, delivery governance, and flexible scaling to help businesses build, maintain, and improve software products with confidence.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -77,11 +72,11 @@ export default function WhyChooseBrainStationSection() {
               </div>
 
               <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                {item.title}
+                {t(item.title)}
               </h3>
 
               <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                {item.description}
+                {t(item.description)}
               </p>
             </article>
           ))}

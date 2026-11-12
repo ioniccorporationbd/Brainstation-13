@@ -1,4 +1,5 @@
 import GlobalFaqSection, { type FaqItem } from "../../components/global/GlobalFaqSection";
+import { getTranslator } from "@/i18n/server";
 
 const faqs: FaqItem[] = [
   {
@@ -28,12 +29,13 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function MLAIFAQSection() {
+export default async function MLAIFAQSection() {
+  const { t } = await getTranslator();
   return (
     <GlobalFaqSection
       eyebrow="FAQ"
-      title="Frequently Asked Questions"
-      subtitle="Get answers to common questions about the Machine Learning (ML) & Artificial Intelligence (AI) process."
+      title={t("Frequently Asked Questions")}
+      subtitle={t("Get answers to common questions about the Machine Learning (ML) & Artificial Intelligence (AI) process.")}
       items={faqs}
       defaultOpen={0}
     />

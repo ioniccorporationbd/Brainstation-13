@@ -1,6 +1,7 @@
 "use client";
 
 import { Star } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -33,24 +34,17 @@ const reviews = [
 ];
 
 export default function StaffAugmentationHeroSection() {
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[110px]">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:min-h-[520px] lg:grid-cols-[1.15fr_0.85fr]">
         {/* Left Content */}
         <div>
-          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">
-            Borderless Tech Talent
-          </p>
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
-          <h1 className="max-w-[720px] text-[40px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[60px] lg:text-[66px]">
-            IT Staff Augmentation,
-            <br className="hidden sm:block" /> Built for Speed.
-          </h1>
+          <h1 className="max-w-[720px] text-[40px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[60px] lg:text-[66px]">{t("IT Staff Augmentation,")}<br className="hidden sm:block" />{t("Built for Speed.")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">
-            Onboard pre-vetted offshore engineers in weeks, with onshore
-            account management support.
-          </p>
+          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
         </div>
 
         {/* Right: smooth swapping review/facts card */}
@@ -99,7 +93,7 @@ export default function StaffAugmentationHeroSection() {
                     </div>
 
                     <p className="mt-6 max-w-[300px] text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
-                      &ldquo;{review.quote}&rdquo;
+                      &ldquo;{t(review.quote)}&rdquo;
                     </p>
 
                     <div className="mt-6 border-t border-[#ececec] pt-5">
@@ -114,7 +108,7 @@ export default function StaffAugmentationHeroSection() {
 
             <div className="staff-hero-pagination mt-6 flex gap-[10px]" />
 
-            <p className="sr-only">Client reviews</p>
+            <p className="sr-only">{t("Client reviews")}</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -11,11 +12,13 @@ import FintechSecurityReliabilitySection from "./FintechSecurityReliabilitySecti
 import FintechStrategiesSection from "./FintechStrategiesSection";
 import FintechCtaSection from "./FintechCtaSection";
 
-export const metadata: Metadata = {
-  title: "Fintech Solutions | Magnetic Solution Limited",
-  description:
-    "Digital banking, payments, wallets, lending and cross-border platforms engineered by Magnetic Solution Limited for security, compliance and scale.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Fintech Solutions | Magnetic Solution Limited"),
+    description: t("Digital banking, payments, wallets, lending and cross-border platforms engineered by Magnetic Solution Limited for security, compliance and scale."),
+  };
+}
 
 const faqs = [
   {
@@ -45,7 +48,8 @@ const faqs = [
   },
 ];
 
-export default function FintechPage() {
+export default async function FintechPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <FintechHeroSection />
@@ -57,8 +61,8 @@ export default function FintechPage() {
       <FintechStrategiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Fintech delivery questions"
-        subtitle="The things clients ask before we start building."
+        title={t("Fintech delivery questions")}
+        subtitle={t("The things clients ask before we start building.")}
         items={faqs}
         ctaLabel="Talk to a fintech expert"
         ctaHref="/schedule-a-call"

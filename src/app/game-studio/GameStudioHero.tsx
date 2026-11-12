@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -7,39 +8,29 @@ const HERO_IMG =
 
 const keywords = ["PC", "Console", "Mobile", "VR", "Multiplayer"];
 
-export default function GameStudioHero() {
+export default async function GameStudioHero() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[72px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
       <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-            Game Studio
-          </p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Game Studio")}</p>
 
-          <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">
-            We Build Games Worth Playing
-          </h1>
+          <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">{t("We Build Games Worth Playing")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">
-            Full-cycle game development for PC, console and mobile — from
-            concept and art direction to engineering, testing and launch.
-          </p>
+          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">{t("Full-cycle game development for PC, console and mobile — from concept and art direction to engineering, testing and launch.")}</p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
               href="/schedule-a-call"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-            >
-              Start Your Game
-              <ArrowRight size={16} strokeWidth={2.2} />
+            >{t("Start Your Game")}<ArrowRight size={16} strokeWidth={2.2} />
             </Link>
 
             <Link
               href="#recent-games"
               className="inline-flex items-center justify-center rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
-            >
-              View Our Games
-            </Link>
+            >{t("View Our Games")}</Link>
           </div>
 
           <div className="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -60,7 +51,7 @@ export default function GameStudioHero() {
           <div className="relative aspect-[4/3.4] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
             <Image
               src={HERO_IMG}
-              alt="Game developer working at a multi-monitor gaming setup"
+              alt={t("Game developer working at a multi-monitor gaming setup")}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 600px"

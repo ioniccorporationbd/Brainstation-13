@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
 
 type Values = {
@@ -20,6 +21,7 @@ const field =
 const interests = ["A new project", "Partnership", "Careers", "Something else"];
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const [values, setValues] = useState<Values>({
     name: "",
     email: "",
@@ -95,20 +97,10 @@ export default function ContactForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={28} strokeWidth={1.9} />
         </span>
-        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black">
-          Message received
-        </h3>
-        <p className="mt-3 max-w-[420px] text-[15px] leading-[1.7] text-[#55585e]">
-          Thank you, {values.name.split(" ")[0] || "there"}. Your message has
-          been recorded on our server with reference{" "}
-          <strong className="break-all text-black">{reference || "—"}</strong>{" "}
-          and is waiting for the team.
-        </p>
-        <p className="mt-3 max-w-[420px] text-[12.5px] leading-[1.6] text-[#6b6f76]">
-          No email is sent automatically because a public mailbox is not
-          configured for this site yet — the reference above is proof the
-          submission was stored.
-        </p>
+        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black">{t("Message received")}</h3>
+        <p className="mt-3 max-w-[420px] text-[15px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your message has been recorded on our server with reference")}{" "}
+          <strong className="break-all text-black">{reference || "—"}</strong>{" "}{t("and is waiting for the team.")}</p>
+        <p className="mt-3 max-w-[420px] text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("No email is sent automatically because a public mailbox is not configured for this site yet — the reference above is proof the submission was stored.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -124,9 +116,7 @@ export default function ContactForm() {
             setReference("");
           }}
           className="mt-7 inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-        >
-          Send another message
-        </button>
+        >{t("Send another message")}</button>
       </div>
     );
   }
@@ -142,9 +132,7 @@ export default function ContactForm() {
           <label
             htmlFor="ct-name"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Full name *
-          </label>
+          >{t("Full name *")}</label>
           <input
             id="ct-name"
             className={`mt-2 ${field}`}
@@ -167,9 +155,7 @@ export default function ContactForm() {
           <label
             htmlFor="ct-email"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Work email *
-          </label>
+          >{t("Work email *")}</label>
           <input
             id="ct-email"
             type="email"
@@ -193,9 +179,8 @@ export default function ContactForm() {
           <label
             htmlFor="ct-company"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Company{" "}
-            <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Company")}{" "}
+            <span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="ct-company"
@@ -209,8 +194,7 @@ export default function ContactForm() {
           <label
             htmlFor="ct-phone"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Phone <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Phone")}<span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="ct-phone"
@@ -224,9 +208,7 @@ export default function ContactForm() {
           <label
             htmlFor="ct-interest"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            What can we help with?
-          </label>
+          >{t("What can we help with?")}</label>
           <select
             id="ct-interest"
             className={`mt-2 ${field}`}
@@ -244,9 +226,7 @@ export default function ContactForm() {
           <label
             htmlFor="ct-message"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Message *
-          </label>
+          >{t("Message *")}</label>
           <textarea
             id="ct-message"
             rows={6}
@@ -255,7 +235,7 @@ export default function ContactForm() {
             onChange={(event) => update("message", event.target.value)}
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? "ct-message-error" : undefined}
-            placeholder="Tell us about your project or inquiry"
+            placeholder={t("Tell us about your project or inquiry")}
           />
           {errors.message ? (
             <p
@@ -295,20 +275,13 @@ export default function ContactForm() {
       >
         {status === "sending" ? (
           <>
-            <Loader2 size={17} className="animate-spin" />
-            Sending…
-          </>
+            <Loader2 size={17} className="animate-spin" />{t("Sending…")}</>
         ) : (
-          <>
-            Send message
-            <Send size={16} />
+          <>{t("Send message")}<Send size={16} />
           </>
         )}
       </button>
-      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">
-        Your message is stored on our server and routed to the right team — we
-        reply within one business day.
-      </p>
+      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Your message is stored on our server and routed to the right team — we reply within one business day.")}</p>
     </form>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -97,6 +98,7 @@ const caseStudies: CaseStudy[] = [
 const categories = ["All", ...Array.from(new Set(caseStudies.map((item) => item.category)))];
 
 export default function CaseStudiesGridSection() {
+  const { t } = useTranslation();
   const [active, setActive] = useState("All");
 
   const visible = useMemo(
@@ -108,19 +110,12 @@ export default function CaseStudiesGridSection() {
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Selected work
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Case studies across industries
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            From high-volume fintech to global learning platforms &mdash; here&rsquo;s a
-            snapshot of the outcomes we deliver.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Selected work")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Case studies across industries")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Filter case studies by category">
+        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Filter case studies by category")}>
           {categories.map((category) => {
             const isActive = category === active;
             return (
@@ -136,15 +131,13 @@ export default function CaseStudiesGridSection() {
                     : "border-[#ececec] bg-white text-black hover:border-[#c91f28] hover:text-[#c91f28]"
                 }`}
               >
-                {category}
+                {t(category)}
               </button>
             );
           })}
         </div>
 
-        <p className="mt-4 text-[13px] font-medium text-[#7a7d84]" aria-live="polite">
-          Showing {visible.length} of {caseStudies.length} case studies
-        </p>
+        <p className="mt-4 text-[13px] font-medium text-[#7a7d84]" aria-live="polite">{t("Showing")} {visible.length} {t("of")} {caseStudies.length} {t("case studies")}</p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((item) => {
@@ -153,26 +146,26 @@ export default function CaseStudiesGridSection() {
                 <div className="relative overflow-hidden">
                   <img
                     src={item.image}
-                    alt={item.alt}
+                    alt={t(item.alt)}
                     className="h-[200px] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                    {item.category}
+                    {t(item.category)}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-[18px] font-semibold leading-[1.32] tracking-[-0.01em] text-black">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
                   <p className="mt-2.5 flex-1 text-[14px] leading-[1.65] text-[#55585e]">
-                    {item.excerpt}
+                    {t(item.excerpt)}
                   </p>
                   <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#ececec] pt-4">
                     <span className="text-[12px] font-semibold uppercase leading-tight tracking-[0.06em] text-[#7a7d84]">
-                      {item.capability}
+                      {t(item.capability)}
                     </span>
                     <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[13.5px] font-bold text-[#c91f28] transition-all duration-200 group-hover:gap-2.5">
-                      {item.href ? "View case study" : "Discuss this project"}
+                      {item.href ? t("View case study") : t("Discuss this project")}
                       <ArrowRight size={15} strokeWidth={2.2} />
                     </span>
                   </div>

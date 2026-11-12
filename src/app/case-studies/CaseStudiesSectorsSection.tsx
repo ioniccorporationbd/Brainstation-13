@@ -1,4 +1,5 @@
 import { Car, Cpu, HeartPulse, Landmark, ShoppingBag, Ship } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const sectors = [
   { title: "Fintech & payments", description: "Wallets, transfers and compliance-heavy platforms.", icon: Landmark },
@@ -9,18 +10,15 @@ const sectors = [
   { title: "Maritime & IoT", description: "Connected devices in low-coverage environments.", icon: Ship },
 ];
 
-export default function CaseStudiesSectorsSection() {
+export default async function CaseStudiesSectorsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] pt-[8px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[720px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Where we work
-            </p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Sectors we build for
-            </h2>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Where we work")}</p>
+            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Sectors we build for")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -33,8 +31,8 @@ export default function CaseStudiesSectorsSection() {
                   <item.icon size={19} />
                 </span>
                 <div>
-                  <h3 className="text-[15.5px] font-semibold text-black">{item.title}</h3>
-                  <p className="mt-1 text-[13.5px] leading-[1.6] text-[#55585e]">{item.description}</p>
+                  <h3 className="text-[15.5px] font-semibold text-black">{t(item.title)}</h3>
+                  <p className="mt-1 text-[13.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
                 </div>
               </div>
             ))}

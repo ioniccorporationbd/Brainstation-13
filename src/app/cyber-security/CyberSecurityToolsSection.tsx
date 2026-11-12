@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const tools = [
   { name: "Burp Suite", slug: "burpsuite" },
   { name: "Metasploit", slug: "metasploit" },
@@ -7,22 +9,17 @@ const tools = [
   { name: "Snort", slug: "snort" },
 ];
 
-export default function CyberSecurityToolsSection() {
+export default async function CyberSecurityToolsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Tooling
-            </p>
-            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Tools we work in
-            </h2>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Tooling")}</p>
+            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Tools we work in")}</h2>
           </div>
-          <p className="max-w-[420px] text-[14.5px] leading-[1.7] text-[#55585e]">
-            The open standards and platforms named in our approach.
-          </p>
+          <p className="max-w-[420px] text-[14.5px] leading-[1.7] text-[#55585e]">{t("The open standards and platforms named in our approach.")}</p>
         </div>
 
         <div className="cloud-tools-marquee group relative mt-9 overflow-hidden rounded-xl border border-[#ececec] py-6"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import AutomotiveServicesSection from "./AutomotiveServicesSection";
 import AutomotiveCaseStudiesSection from "./AutomotiveCaseStudiesSection";
 import AutomotiveCtaSection from "./AutomotiveCtaSection";
 
-export const metadata: Metadata = {
-  title: "Automotive Solutions | Magnetic Solution Limited",
-  description:
-    "Automotive technology, connected mobility, enterprise systems and customer experience solutions built by Magnetic Solution Limited.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Automotive Solutions | Magnetic Solution Limited"),
+    description: t("Automotive technology, connected mobility, enterprise systems and customer experience solutions built by Magnetic Solution Limited."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function AutomotivePage() {
+export default async function AutomotivePage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <AutomotiveHeroSection />
@@ -49,8 +53,8 @@ export default function AutomotivePage() {
       <AutomotiveCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Questions we hear before we start"
-        subtitle="What teams usually ask about scope, delivery and working together."
+        title={t("Questions we hear before we start")}
+        subtitle={t("What teams usually ask about scope, delivery and working together.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

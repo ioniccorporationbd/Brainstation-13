@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 
 type RiskStep = {
   number: string;
@@ -31,14 +32,13 @@ const riskSteps: RiskStep[] = [
   },
 ];
 
-export default function RiskFreeTimelineSection() {
+export default async function RiskFreeTimelineSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="text-center">
-          <h2 className="mx-auto text-[20px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[42px]">
-            Risk-Free Talent Alignment
-          </h2>
+          <h2 className="mx-auto text-[20px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[42px]">{t("Risk-Free Talent Alignment")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -52,11 +52,11 @@ export default function RiskFreeTimelineSection() {
               </span>
 
               <h3 className="mt-6 text-[20px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                {step.title}
+                {t(step.title)}
               </h3>
 
               <p className="mt-3 text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                {step.description}
+                {t(step.description)}
               </p>
             </article>
           ))}
@@ -66,9 +66,7 @@ export default function RiskFreeTimelineSection() {
           <Link
             href="/schedule-a-call"
             className="inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-          >
-            Book my Risk-Free Timeline
-          </Link>
+          >{t("Book my Risk-Free Timeline")}</Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import {
   ArrowLeftRight,
@@ -14,11 +15,13 @@ import {
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
-export const metadata: Metadata = {
-  title: "Cross-Border Payments | Magnetic Solution Limited",
-  description:
-    "Cross-border payments platform engineering — multi-currency collections, payouts, FX, routing, reconciliation and compliance controls for money-movement businesses.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Cross-Border Payments | Magnetic Solution Limited"),
+    description: t("Cross-border payments platform engineering — multi-currency collections, payouts, FX, routing, reconciliation and compliance controls for money-movement businesses."),
+  };
+}
 
 const strip = [
   { label: "Corridors", value: "Multi-country collections and payouts" },
@@ -148,48 +151,37 @@ const faqs = [
   },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const { t } = await getTranslator();
   return (
     <main>
       {/* Hero */}
       <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              Fintech · Cross-border payments
-            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Fintech · Cross-border payments")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">
-              Move money across borders without losing visibility
-            </h1>
+            <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Move money across borders without losing visibility")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">
-              Engineering for remittance and payout businesses: multi-currency
-              collections, disbursements, FX handling, partner routing and a
-              reconciliation trail that survives audit.
-            </p>
+            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("Engineering for remittance and payout businesses: multi-currency collections, disbursements, FX handling, partner routing and a reconciliation trail that survives audit.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/schedule-a-call"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Schedule a call
-                <ArrowRight size={18} />
+              >{t("Schedule a call")}<ArrowRight size={18} />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Send a brief
-              </Link>
+              >{t("Send a brief")}</Link>
             </div>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1400&auto=format&fit=crop"
-              alt="Currency notes and a globe on a desk representing cross-border money movement"
+              alt={t("Currency notes and a globe on a desk representing cross-border money movement")}
               className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
             />
           </div>
@@ -202,7 +194,7 @@ export default function Page() {
           {strip.map((item) => (
             <div key={item.label}>
               <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">
-                {item.label}
+                {t(item.label)}
               </dt>
               <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">
                 {item.value}
@@ -215,17 +207,9 @@ export default function Page() {
       {/* Features */}
       <section className="bg-white px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Capabilities
-          </p>
-          <h2 className="mt-3 max-w-[760px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            What the platform covers
-          </h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">
-            Each capability is a working part of the product, not a slide. They
-            share one data model, so trust, compliance and reporting do not have
-            to be bolted on afterwards.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
+          <h2 className="mt-3 max-w-[760px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What the platform covers")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Each capability is a working part of the product, not a slide. They share one data model, so trust, compliance and reporting do not have to be bolted on afterwards.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item) => (
@@ -237,10 +221,10 @@ export default function Page() {
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
                 <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
                 <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
-                  {item.body}
+                  {t(item.body)}
                 </p>
               </article>
             ))}
@@ -252,18 +236,9 @@ export default function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Architecture
-            </p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              How the platform is put together
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">
-              The orchestration layer sits between your channels and the
-              partners that actually move money. Everything below it is
-              replaceable, so adding a corridor does not mean rewriting the
-              product.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Architecture")}</p>
+            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How the platform is put together")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">{t("The orchestration layer sits between your channels and the partners that actually move money. Everything below it is replaceable, so adding a corridor does not mean rewriting the product.")}</p>
 
             <ul className="mt-7 space-y-3.5">
               {architectureBullets.map((bullet) => (
@@ -282,24 +257,12 @@ export default function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">
-              Built for operations teams, not just developers
-            </h3>
-            <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">
-              Support can see the exact state of a transaction, the partner
-              response and the ledger impact from one screen. Failed payouts are
-              triaged with reason codes instead of guesswork, and manual
-              overrides are logged with the operator identity.
-            </p>
+            <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Built for operations teams, not just developers")}</h3>
+            <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Support can see the exact state of a transaction, the partner response and the ledger impact from one screen. Failed payouts are triaged with reason codes instead of guesswork, and manual overrides are logged with the operator identity.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-                <CircleDot size={14} />
-                Delivery note
-              </p>
-              <p className="mt-2 text-[13.5px] leading-[1.6] text-[#55585e]">
-                Architecture decisions are documented with the trade-offs they
-                carry, so your team can maintain the platform after hand-over.
-              </p>
+                <CircleDot size={14} />{t("Delivery note")}</p>
+              <p className="mt-2 text-[13.5px] leading-[1.6] text-[#55585e]">{t("Architecture decisions are documented with the trade-offs they carry, so your team can maintain the platform after hand-over.")}</p>
             </div>
           </div>
         </div>
@@ -308,12 +271,8 @@ export default function Page() {
       {/* Process */}
       <section className="bg-white px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Delivery process
-          </p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            How an engagement runs
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Delivery process")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How an engagement runs")}</h2>
 
           <ol className="mt-10 space-y-4">
             {processSteps.map((step, index) => (
@@ -326,10 +285,10 @@ export default function Page() {
                 </span>
                 <div className="md:flex md:flex-1 md:items-start md:gap-8">
                   <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">
-                    {step.title}
+                    {t(step.title)}
                   </h3>
                   <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">
-                    {step.body}
+                    {t(step.body)}
                   </p>
                 </div>
               </li>
@@ -342,17 +301,9 @@ export default function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Integrations
-            </p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Connects to what you already run
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">
-              Existing systems stay in place. Connectors are versioned and
-              certified before traffic is switched on, so an upgrade on either
-              side is a planned event rather than an outage.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Integrations")}</p>
+            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Connects to what you already run")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {integrations.map((item) => (
@@ -370,9 +321,7 @@ export default function Page() {
           </div>
 
           <div className="space-y-5">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Controls
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Controls")}</p>
             {compliance.map((item) => (
               <article
                 key={item.title}
@@ -383,10 +332,10 @@ export default function Page() {
                 </span>
                 <div>
                   <h3 className="text-[16px] font-bold tracking-[-0.01em] text-black">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
                   <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                    {item.body}
+                    {t(item.body)}
                   </p>
                 </div>
               </article>
@@ -397,8 +346,8 @@ export default function Page() {
 
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Questions we hear before we start"
-        subtitle="Scope, integration and controls — the things teams ask first."
+        title={t("Questions we hear before we start")}
+        subtitle={t("Scope, integration and controls — the things teams ask first.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/schedule-a-call"
@@ -409,29 +358,19 @@ export default function Page() {
         <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">
-                Planning a cross-border product?
-              </h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">
-                Share the corridors, partners and volumes you are targeting. We
-                will come back with an architecture view and a phased
-                integration plan.
-              </p>
+              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Planning a cross-border product?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("Share the corridors, partners and volumes you are targeting. We will come back with an architecture view and a phased integration plan.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
                 href="/schedule-a-call"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Schedule a call
-                <ArrowRight size={17} />
+              >{t("Schedule a call")}<ArrowRight size={17} />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Contact us
-              </Link>
+              >{t("Contact us")}</Link>
             </div>
           </div>
         </div>

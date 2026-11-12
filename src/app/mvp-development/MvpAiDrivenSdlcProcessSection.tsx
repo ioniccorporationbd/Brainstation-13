@@ -6,6 +6,7 @@ import {
   Rocket,
   ShieldCheck,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type WorkflowStep = {
   title: string;
@@ -164,25 +165,18 @@ const workflowSteps: WorkflowStep[] = [
   },
 ];
 
-export default function MvpAiDrivenSdlcProcessSection() {
+export default async function MvpAiDrivenSdlcProcessSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            AI-Powered MVP Delivery
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("AI-Powered MVP Delivery")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Our AI-Driven SDLC Process For MVP
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our AI-Driven SDLC Process For MVP")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[700px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            From requirement analysis to release automation, our AI-assisted
-            workflow helps teams build, test, and launch MVPs faster with better
-            clarity, quality, and delivery control.
-          </p>
+          <p className="mx-auto mt-5 max-w-[700px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("From requirement analysis to release automation, our AI-assisted workflow helps teams build, test, and launch MVPs faster with better clarity, quality, and delivery control.")}</p>
         </div>
 
         {/* 6 cards - 3 per row desktop, 2 tablet, 1 mobile */}
@@ -202,10 +196,10 @@ export default function MvpAiDrivenSdlcProcessSection() {
 
                   <div>
                     <h3 className="text-[18px] font-bold leading-[1.2] tracking-[-0.015em] text-[#0a0a0a]">
-                      {step.title}
+                      {t(step.title)}
                     </h3>
                     <p className="mt-0.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-                      {step.subtitle}
+                      {t(step.subtitle)}
                     </p>
                   </div>
                 </div>
@@ -214,10 +208,10 @@ export default function MvpAiDrivenSdlcProcessSection() {
                   {step.items.map((item, itemIndex) => (
                     <div key={item.title}>
                       <h4 className="text-[14px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                        {itemIndex + 1}. {item.title}
+                        {itemIndex + 1}. {t(item.title)}
                       </h4>
                       <p className="mt-1.5 text-[13px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
-                        {item.description}
+                        {t(item.description)}
                       </p>
                     </div>
                   ))}

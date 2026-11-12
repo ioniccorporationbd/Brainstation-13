@@ -1,3 +1,4 @@
+import { getTranslator } from "@/i18n/server";
 import {
   BarChart3,
   Cloud,
@@ -20,23 +21,17 @@ const products = [
   { title: "Adobe Commerce", icon: ShoppingCart },
 ];
 
-export default function AemWorkedWithSection() {
+export default async function AemWorkedWithSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Platform
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Platform")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            The Adobe Stack We Work Across
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("The Adobe Stack We Work Across")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Product modules and adjacent Adobe solutions our AEM work connects
-            to.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Product modules and adjacent Adobe solutions our AEM work connects to.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -53,7 +48,7 @@ export default function AemWorkedWithSection() {
                 </span>
 
                 <span className="text-[14px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                  {product.title}
+                  {t(product.title)}
                 </span>
               </div>
             );

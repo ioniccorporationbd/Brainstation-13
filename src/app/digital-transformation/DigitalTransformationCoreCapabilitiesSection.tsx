@@ -1,4 +1,5 @@
 import { BrainCircuit, CloudCog, LineChart, Workflow } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type CapabilityCard = {
   title: string;
@@ -33,23 +34,17 @@ const capabilities: CapabilityCard[] = [
   },
 ];
 
-export default function DigitalTransformationCoreCapabilitiesSection() {
+export default async function DigitalTransformationCoreCapabilitiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Deliver
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Deliver")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Core Capabilities
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Core Capabilities")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            The building blocks we combine to modernize your systems and
-            operations end to end.
-          </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("The building blocks we combine to modernize your systems and operations end to end.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -66,11 +61,11 @@ export default function DigitalTransformationCoreCapabilitiesSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </article>
             );

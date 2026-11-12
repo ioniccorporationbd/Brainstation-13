@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -12,11 +13,13 @@ import {
   Trophy,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Resources | Magnetic Solution Limited",
-  description:
-    "Explore everything Magnetic Solution Limited publishes — blog insights, case studies, media, partnerships, recognitions, sustainability and downloadable guides.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Resources | Magnetic Solution Limited"),
+    description: t("Explore everything Magnetic Solution Limited publishes — blog insights, case studies, media, partnerships, recognitions, sustainability and downloadable guides."),
+  };
+}
 
 const hubs = [
   {
@@ -81,43 +84,32 @@ const downloads = [
   },
 ];
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <section className="relative overflow-hidden bg-white px-6 pb-16 pt-14 md:pb-20 md:pt-20">
         <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              Resources
-            </span>
-            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
-              Our resources
-            </h1>
-            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-              Everything you need to understand how we work and what we deliver
-              — insights, proof of results, media, partnerships and guides, in
-              one place.
-            </p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Resources")}</span>
+            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Our resources")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Everything you need to understand how we work and what we deliver — insights, proof of results, media, partnerships and guides, in one place.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/blog"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-              >
-                Read the blog
-                <ArrowRight size={17} />
+              >{t("Read the blog")}<ArrowRight size={17} />
               </Link>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                View case studies
-              </Link>
+              >{t("View case studies")}</Link>
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1600&auto=format&fit=crop"
-              alt="Library shelves — a collection of reference material"
+              alt={t("Library shelves — a collection of reference material")}
               className="h-[260px] w-full object-cover md:h-[340px]"
             />
           </div>
@@ -126,15 +118,9 @@ export default function ResourcesPage() {
 
       <section className="bg-[#fafafa] px-6 py-16 md:py-20">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Explore
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            Browse by topic
-          </h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            Jump straight to the resources most relevant to you.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Explore")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Browse by topic")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Jump straight to the resources most relevant to you.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {hubs.map((hub) => {
@@ -149,14 +135,12 @@ export default function ResourcesPage() {
                     <Icon size={21} strokeWidth={1.9} />
                   </span>
                   <h3 className="mt-4 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
-                    {hub.title}
+                    {t(hub.title)}
                   </h3>
                   <p className="mt-2 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
-                    {hub.description}
+                    {t(hub.description)}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28]">
-                    Explore
-                    <ArrowRight
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28]">{t("Explore")}<ArrowRight
                       size={15}
                       strokeWidth={2.2}
                       className="transition-transform duration-200 group-hover:translate-x-1"
@@ -171,16 +155,9 @@ export default function ResourcesPage() {
 
       <section className="bg-white px-6 py-16 md:py-20">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Downloads
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            Guides &amp; whitepapers
-          </h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            Practical resources distilled from real engagements — free to
-            request.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Downloads")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Guides & whitepapers")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Practical resources distilled from real engagements — free to request.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {downloads.map((item) => (
@@ -192,21 +169,19 @@ export default function ResourcesPage() {
                   <FileText size={21} strokeWidth={1.9} />
                 </span>
                 <p className="mt-4 text-[11.5px] font-bold uppercase tracking-[0.12em] text-[#6b6f76]">
-                  {item.type}
+                  {t(item.type)}
                 </p>
                 <h3 className="mt-1.5 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
                 <p className="mt-2 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
-                  {item.text}
+                  {t(item.text)}
                 </p>
                 <Link
                   href="/contact"
                   className="mt-5 inline-flex items-center gap-1.5 self-start text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
                 >
-                  <Download size={15} strokeWidth={2.1} />
-                  Request download
-                </Link>
+                  <Download size={15} strokeWidth={2.1} />{t("Request download")}</Link>
               </article>
             ))}
           </div>
@@ -218,28 +193,19 @@ export default function ResourcesPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">
-                  Can&rsquo;t find what you need?
-                </h2>
-                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-                  Our team is happy to share the references and answers you
-                  need.
-                </p>
+                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Can’t find what you need?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Our team is happy to share the references and answers you need.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-                >
-                  Contact us
-                  <ArrowRight size={17} />
+                >{t("Contact us")}<ArrowRight size={17} />
                 </Link>
                 <Link
                   href="/blog"
                   className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-                >
-                  Read the blog
-                </Link>
+                >{t("Read the blog")}</Link>
               </div>
             </div>
           </div>

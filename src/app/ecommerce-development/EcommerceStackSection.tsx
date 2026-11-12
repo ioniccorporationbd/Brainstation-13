@@ -1,4 +1,5 @@
 import { Boxes, Gauge, Lock, Server } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const stackPoints = [
   {
@@ -23,19 +24,16 @@ const stackPoints = [
   },
 ];
 
-export default function EcommerceStackSection() {
+export default async function EcommerceStackSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
           <div className="max-w-[640px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Architecture
-            </p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Architecture")}</p>
 
-            <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[36px]">
-              Built for the modern commerce stack
-            </h2>
+            <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[36px]">{t("Built for the modern commerce stack")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -52,11 +50,11 @@ export default function EcommerceStackSection() {
                   </span>
 
                   <h3 className="mt-4 text-[15px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                    {point.title}
+                    {t(point.title)}
                   </h3>
 
                   <p className="mt-1.5 text-[13.5px] font-medium leading-[1.55] text-[#565656]">
-                    {point.description}
+                    {t(point.description)}
                   </p>
                 </div>
               );

@@ -1,4 +1,5 @@
 import { Boxes, Code2, Cpu, Layers3, Rocket, Settings2 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const cards = [
   {
@@ -33,22 +34,15 @@ const cards = [
   },
 ];
 
-export default function FintechDeliveryModelsSection() {
+export default async function FintechDeliveryModelsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Flexible delivery models
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            From go-to-market to fully customized
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Choose a ready-to-launch fintech platform or build a fully tailored
-            solution with enterprise-grade architecture, ownership and
-            scalability.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Flexible delivery models")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("From go-to-market to fully customized")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Choose a ready-to-launch fintech platform or build a fully tailored solution with enterprise-grade architecture, ownership and scalability.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -65,8 +59,8 @@ export default function FintechDeliveryModelsSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] text-black">{card.title}</h3>
-              <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">{card.description}</p>
+              <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] text-black">{t(card.title)}</h3>
+              <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">{t(card.description)}</p>
             </article>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import { ArrowRight } from "lucide-react";
 
 const caseStudy = {
@@ -16,30 +17,22 @@ const caseStudy = {
   ],
 };
 
-export default function NonProfitCaseStudiesSection() {
+export default async function NonProfitCaseStudiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Case studies
-            </p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-              Delivered for mission-led teams
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-              A closer look at how digital systems changed the way a
-              distribution-led organisation runs its people operations.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Delivered for mission-led teams")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("A closer look at how digital systems changed the way a distribution-led organisation runs its people operations.")}</p>
           </div>
 
           <Link
             href="/case-studies"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3 text-[14.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-          >
-            See all case studies
-            <ArrowRight size={17} />
+          >{t("See all case studies")}<ArrowRight size={17} />
           </Link>
         </div>
 
@@ -47,7 +40,7 @@ export default function NonProfitCaseStudiesSection() {
           <div className="group overflow-hidden">
             <img
               src={caseStudy.image}
-              alt="Modern sofa showroom for a lifestyle furniture brand"
+              alt={t("Modern sofa showroom for a lifestyle furniture brand")}
               className="h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[320px] lg:h-full"
             />
           </div>
@@ -63,11 +56,11 @@ export default function NonProfitCaseStudiesSection() {
             </div>
 
             <h3 className="mt-4 text-[22px] font-semibold leading-[1.25] text-black md:text-[28px]">
-              {caseStudy.title}
+              {t(caseStudy.title)}
             </h3>
 
             <p className="mt-4 text-[14.5px] leading-[1.75] text-[#55585e]">
-              {caseStudy.description}
+              {t(caseStudy.description)}
             </p>
 
             <ul className="mt-6 flex flex-wrap gap-2">
@@ -85,16 +78,12 @@ export default function NonProfitCaseStudiesSection() {
               <Link
                 href="/case-studies"
                 className="inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
-              >
-                View case studies
-                <ArrowRight size={16} />
+              >{t("View case studies")}<ArrowRight size={16} />
               </Link>
               <Link
                 href="/schedule-a-call"
                 className="inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-5 py-2.5 text-[13.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Talk to our non-profit team
-              </Link>
+              >{t("Talk to our non-profit team")}</Link>
             </div>
           </div>
         </article>

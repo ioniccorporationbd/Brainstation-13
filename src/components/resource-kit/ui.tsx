@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import Image from "next/image";
 import { ArrowRight, Check } from "lucide-react";
 import type { ElementType, ReactNode } from "react";
@@ -99,13 +100,14 @@ export type FeatureItem = {
   description: string;
 };
 
-export function FeatureGrid({
+export async function FeatureGrid({
   items,
   columns = 3,
 }: {
   items: FeatureItem[];
   columns?: 2 | 3;
 }) {
+  const { t } = await getTranslator();
   const grid =
     columns === 2
       ? "sm:grid-cols-2"
@@ -124,10 +126,10 @@ export function FeatureGrid({
               <Icon size={26} strokeWidth={1.7} />
             </div>
             <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a]">
-              {item.title}
+              {t(item.title)}
             </h3>
             <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#565656]">
-              {item.description}
+              {t(item.description)}
             </p>
           </article>
         );
@@ -139,13 +141,14 @@ export function FeatureGrid({
 /* ------------------------------------------------------------------ */
 /*  Stat band                                                         */
 /* ------------------------------------------------------------------ */
-export function StatBand({
+export async function StatBand({
   stats,
   tone = "dark",
 }: {
   stats: { value: string; label: string }[];
   tone?: "dark" | "light";
 }) {
+  const { t } = await getTranslator();
   const dark = tone === "dark";
   return (
     <section className={dark ? "bg-[#0a0a0a]" : "bg-[#ffffff]"}>
@@ -164,7 +167,7 @@ export function StatBand({
                 dark ? "text-white/70" : "text-[#565656]"
               }`}
             >
-              {stat.label}
+              {t(stat.label)}
             </p>
           </div>
         ))}
@@ -280,7 +283,7 @@ export function LogoRow({
 /* ------------------------------------------------------------------ */
 /*  CTA banner                                                        */
 /* ------------------------------------------------------------------ */
-export function CtaBanner({
+export async function CtaBanner({
   title,
   description,
   primary,
@@ -291,6 +294,7 @@ export function CtaBanner({
   primary: { label: string; href: string };
   secondary?: { label: string; href: string };
 }) {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 pb-[110px] pt-[10px]">
       <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
@@ -305,7 +309,7 @@ export function CtaBanner({
             href={primary.href}
             className="inline-flex items-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[15px] font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#a71920] hover:shadow-[0_16px_38px_rgba(201,31,40,0.30)]"
           >
-            {primary.label}
+            {t(primary.label)}
             <ArrowRight size={18} strokeWidth={2.2} />
           </Link>
           {secondary ? (
@@ -313,7 +317,7 @@ export function CtaBanner({
               href={secondary.href}
               className="inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:border-white/50 hover:bg-white/10"
             >
-              {secondary.label}
+              {t(secondary.label)}
             </Link>
           ) : null}
         </div>

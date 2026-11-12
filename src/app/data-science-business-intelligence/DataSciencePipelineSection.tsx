@@ -1,4 +1,5 @@
 import { Archive, BarChart3, Database, FilePlus2, Share2 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const stages = [
   { title: "Create", description: "Capture data where the work happens — forms, apps, imports.", icon: FilePlus2 },
@@ -8,21 +9,15 @@ const stages = [
   { title: "Archive", description: "Retire old data on policy without losing lineage.", icon: Archive },
 ];
 
-export default function DataSciencePipelineSection() {
+export default async function DataSciencePipelineSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[680px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            End to end
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Data Science Pipeline
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Every stage is designed, instrumented and handed over — no step left
-            to a spreadsheet.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("End to end")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Data Science Pipeline")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
@@ -40,10 +35,10 @@ export default function DataSciencePipelineSection() {
                     <span className="text-[11px] font-bold tracking-[0.12em] text-[#c91f28]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    {stage.title}
+                    {t(stage.title)}
                   </h3>
                   <p className="mt-1 text-[14px] leading-[1.6] text-[#55585e]">
-                    {stage.description}
+                    {t(stage.description)}
                   </p>
                 </div>
               </li>
@@ -53,7 +48,7 @@ export default function DataSciencePipelineSection() {
           <div className="overflow-hidden rounded-2xl border border-[#ececec] lg:sticky lg:top-24">
             <img
               src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1200&auto=format&fit=crop"
-              alt="Line chart of a business trend plotted on screen"
+              alt={t("Line chart of a business trend plotted on screen")}
               className="h-[260px] w-full object-cover md:h-[380px] lg:h-[510px]"
             />
           </div>

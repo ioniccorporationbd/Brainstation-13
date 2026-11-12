@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import { Globe2, Mic, Sparkles, UsersRound } from "lucide-react";
 
 const HOLO_IMG =
@@ -27,32 +28,21 @@ const features = [
   },
 ];
 
-export default function HoloGuideSection() {
+export default async function HoloGuideSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
           {/* Left content */}
           <div>
-            <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-              Featured Product
-            </p>
+            <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Featured Product")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-              3D + AI: HoloGuide AI
-            </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("3D + AI: HoloGuide AI")}</h2>
 
-            <h3 className="mt-3 text-[18px] font-bold tracking-[-0.01em] text-[#c91f28] md:text-[20px]">
-              Virtual Holographic Front Desk Assistant
-            </h3>
+            <h3 className="mt-3 text-[18px] font-bold tracking-[-0.01em] text-[#c91f28] md:text-[20px]">{t("Virtual Holographic Front Desk Assistant")}</h3>
 
-            <p className="mt-5 max-w-[620px] text-[16px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-              An interactive holographic AI front desk assistant designed for
-              hotels, hospitals and corporate spaces. With life-scale 3D
-              holographic characters, natural voice interaction and real-time
-              rendering, it welcomes guests, answers questions, guides visitors
-              and reduces operational load.
-            </p>
+            <p className="mt-5 max-w-[620px] text-[16px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("An interactive holographic AI front desk assistant designed for hotels, hospitals and corporate spaces. With life-scale 3D holographic characters, natural voice interaction and real-time rendering, it welcomes guests, answers questions, guides visitors and reduces operational load.")}</p>
 
             <div className="mt-9 grid max-w-[640px] grid-cols-1 gap-4 sm:grid-cols-2">
               {features.map((item) => {
@@ -69,11 +59,11 @@ export default function HoloGuideSection() {
 
                     <div>
                       <h4 className="text-[15.5px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                        {item.title}
+                        {t(item.title)}
                       </h4>
 
                       <p className="mt-1.5 text-[13.5px] font-medium leading-[1.5] text-[#565656]">
-                        {item.desc}
+                        {t(item.desc)}
                       </p>
                     </div>
                   </article>
@@ -87,7 +77,7 @@ export default function HoloGuideSection() {
             <div className="relative aspect-[4/4.6] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7] lg:max-h-[560px]">
               <Image
                 src={HOLO_IMG}
-                alt="HoloGuide AI holographic front desk assistant in a hotel lobby"
+                alt={t("HoloGuide AI holographic front desk assistant in a hotel lobby")}
                 fill
                 loading="eager"
                 sizes="(max-width: 1024px) 100vw, 520px"

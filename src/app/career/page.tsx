@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -10,11 +11,13 @@ import {
 
 import CareerApplyForm from "./CareerApplyForm";
 
-export const metadata: Metadata = {
-  title: "Careers | Magnetic Solution Limited",
-  description:
-    "Join Magnetic Solution Limited and build software that matters. Explore open roles in engineering, design, data and delivery.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Careers | Magnetic Solution Limited"),
+    description: t("Join Magnetic Solution Limited and build software that matters. Explore open roles in engineering, design, data and delivery."),
+  };
+}
 
 const perks = [
   {
@@ -105,43 +108,32 @@ const steps = [
   },
 ];
 
-export default function CareerPage() {
+export default async function CareerPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <section className="bg-white px-6 pb-16 pt-14 md:pb-20 md:pt-20">
         <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              Careers
-            </span>
-            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
-              Build software that matters
-            </h1>
-            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-              We&rsquo;re always looking for curious, driven people who want to
-              solve hard problems for real clients &mdash; with a team that
-              ships enterprise-grade technology.
-            </p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Careers")}</span>
+            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Build software that matters")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("We’re always looking for curious, driven people who want to solve hard problems for real clients — with a team that ships enterprise-grade technology.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#open-roles"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-              >
-                View open roles
-                <ArrowRight size={17} />
+              >{t("View open roles")}<ArrowRight size={17} />
               </a>
               <a
                 href="#apply"
                 className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Apply now
-              </a>
+              >{t("Apply now")}</a>
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
-              alt="Team celebrating together in the office"
+              alt={t("Team celebrating together in the office")}
               className="h-[260px] w-full object-cover md:h-[360px]"
             />
           </div>
@@ -150,12 +142,8 @@ export default function CareerPage() {
 
       <section className="bg-[#fafafa] px-6 py-16 md:py-20">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Why Magnetic Solution Limited
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            A place to do the best work of your career
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Magnetic Solution Limited")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("A place to do the best work of your career")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {perks.map((perk) => {
               const Icon = perk.icon;
@@ -168,10 +156,10 @@ export default function CareerPage() {
                     <Icon size={21} strokeWidth={1.9} />
                   </span>
                   <h3 className="mt-4 text-[16.5px] font-bold leading-[1.3] text-black">
-                    {perk.title}
+                    {t(perk.title)}
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">
-                    {perk.description}
+                    {t(perk.description)}
                   </p>
                 </div>
               );
@@ -185,16 +173,9 @@ export default function CareerPage() {
         className="scroll-mt-24 bg-white px-6 py-16 md:py-20"
       >
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Open positions
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            Current opportunities
-          </h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            Don&rsquo;t see your role? Send us your application anyway &mdash;
-            we&rsquo;re always growing.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Open positions")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Current opportunities")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Don’t see your role? Send us your application anyway — we’re always growing.")}</p>
 
           <div className="mt-10 overflow-hidden rounded-xl border border-[#ececec]">
             {roles.map((role, index) => (
@@ -206,24 +187,22 @@ export default function CareerPage() {
               >
                 <div>
                   <h3 className="text-[17.5px] font-bold tracking-[-0.01em] text-black">
-                    {role.title}
+                    {t(role.title)}
                   </h3>
                   <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13.5px] text-[#6b6f76]">
                     <span className="font-semibold text-[#c91f28]">
-                      {role.dept}
+                      {t(role.dept)}
                     </span>
                     <span className="text-[#d5d8dd]">•</span>
-                    <span>{role.location}</span>
+                    <span>{t(role.location)}</span>
                     <span className="text-[#d5d8dd]">•</span>
-                    <span>{role.type}</span>
+                    <span>{t(role.type)}</span>
                   </div>
                 </div>
                 <a
                   href="#apply"
                   className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-                >
-                  Apply now
-                  <ArrowRight size={15} strokeWidth={2.2} />
+                >{t("Apply now")}<ArrowRight size={15} strokeWidth={2.2} />
                 </a>
               </div>
             ))}
@@ -233,12 +212,8 @@ export default function CareerPage() {
 
       <section className="bg-[#fafafa] px-6 py-16 md:py-20">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Our process
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            What to expect
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our process")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What to expect")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((item) => (
               <div
@@ -249,10 +224,10 @@ export default function CareerPage() {
                   {item.step}
                 </p>
                 <h3 className="mt-4 text-[16.5px] font-bold text-black">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
                 <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">
-                  {item.text}
+                  {t(item.text)}
                 </p>
               </div>
             ))}
@@ -263,21 +238,11 @@ export default function CareerPage() {
       <section id="apply" className="scroll-mt-24 bg-white px-6 py-16 md:py-20">
         <div className="mx-auto grid max-w-[1240px] items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Apply
-            </p>
-            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Ready to join the team?
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-              Send your details for the role that fits you best. We review every
-              application and reply when there is a match.
-            </p>
-            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[13.5px] leading-[1.7] text-[#55585e]">
-              Applying for a role not listed? Choose{" "}
-              <strong className="text-black">General application</strong> and
-              tell us what you do best.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Apply")}</p>
+            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Ready to join the team?")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Send your details for the role that fits you best. We review every application and reply when there is a match.")}</p>
+            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[13.5px] leading-[1.7] text-[#55585e]">{t("Applying for a role not listed? Choose")}{" "}
+              <strong className="text-black">{t("General application")}</strong>{t("and tell us what you do best.")}</p>
           </div>
           <CareerApplyForm roles={roles.map((role) => role.title)} />
         </div>
@@ -288,20 +253,13 @@ export default function CareerPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">
-                  Questions before you apply?
-                </h2>
-                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-                  Our team is happy to answer anything about roles, process or
-                  life at Magnetic Solution Limited.
-                </p>
+                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Questions before you apply?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Our team is happy to answer anything about roles, process or life at Magnetic Solution Limited.")}</p>
               </div>
               <Link
                 href="/contact"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920] sm:w-auto"
-              >
-                Contact us
-                <ArrowRight size={17} />
+              >{t("Contact us")}<ArrowRight size={17} />
               </Link>
             </div>
           </div>

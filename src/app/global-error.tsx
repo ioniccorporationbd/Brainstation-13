@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 /**
  * Last-resort boundary. Replaces the root layout, so it must render
  * <html>/<body> itself and cannot rely on Tailwind being loaded — the styles
@@ -11,6 +13,7 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const { t } = useTranslation();
   return (
     <html lang="en">
       <body>
@@ -102,35 +105,27 @@ export default function GlobalError({
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/brand/magnetic-logo.png"
-            alt="Magnetic Solution Limited"
+            alt={t("Magnetic Solution Limited")}
             className="ge-logo"
           />
-          <title>Internal Server Error | Magnetic Solution Limited</title>
+          <title>{t("Internal Server Error | Magnetic Solution Limited")}</title>
           <meta name="robots" content="noindex, nofollow" />
-          <span className="ge-pill">Error 500</span>
+          <span className="ge-pill">{t("Error 500")}</span>
           <p className="ge-code">
             5<span className="accent">0</span>0
           </p>
-          <h1 className="ge-title">Something went wrong</h1>
-          <p className="ge-desc">
-            The application could not start this page. Try again — if it keeps
-            happening, contact our team and we will look into it right away.
-          </p>
+          <h1 className="ge-title">{t("Something went wrong")}</h1>
+          <p className="ge-desc">{t("The application could not start this page. Try again — if it keeps happening, contact our team and we will look into it right away.")}</p>
           <div className="ge-actions">
             <button
               type="button"
               onClick={reset}
               className="ge-btn ge-btn-primary"
-            >
-              Try Again
-            </button>
+            >{t("Try Again")}</button>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a href="/" className="ge-btn ge-btn-secondary">
-              Back to Home
-            </a>
+            <a href="/" className="ge-btn ge-btn-secondary">{t("Back to Home")}</a>
           </div>
-          <p className="ge-note">
-            Need help? <a href="/contact">Contact our team</a>
+          <p className="ge-note">{t("Need help?")}<a href="/contact">{t("Contact our team")}</a>
           </p>
         </main>
       </body>

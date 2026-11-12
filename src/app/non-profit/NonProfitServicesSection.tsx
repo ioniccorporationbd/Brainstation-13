@@ -1,3 +1,4 @@
+import { getTranslator } from "@/i18n/server";
 import {
   BarChart3,
   Bot,
@@ -66,7 +67,8 @@ const services: ServiceItem[] = [
   },
 ];
 
-export default function NonProfitServicesSection() {
+export default async function NonProfitServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section
       id="services"
@@ -74,16 +76,9 @@ export default function NonProfitServicesSection() {
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Services
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            How we can help
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Digital solutions that help non-profit teams run programmes and stay
-            autonomous.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Services")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("How we can help")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Digital solutions that help non-profit teams run programmes and stay autonomous.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -96,10 +91,10 @@ export default function NonProfitServicesSection() {
                 <item.icon size={21} />
               </span>
               <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] text-black">
-                {item.title}
+                {t(item.title)}
               </h3>
               <p className="mt-2 text-[13.5px] leading-[1.65] text-[#55585e]">
-                {item.description}
+                {t(item.description)}
               </p>
             </article>
           ))}

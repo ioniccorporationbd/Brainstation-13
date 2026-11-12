@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { getTranslator } from "@/i18n/server";
 import { Clock, ShieldAlert, Timer, Users } from "lucide-react";
 
 type ResultItem = {
@@ -34,18 +35,15 @@ const results: ResultItem[] = [
   },
 ];
 
-export default function InsuranceProvenResultsSection() {
+export default async function InsuranceProvenResultsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Outcomes
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Outcomes")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Proven Results
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Proven Results")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -62,11 +60,11 @@ export default function InsuranceProvenResultsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </article>
             );

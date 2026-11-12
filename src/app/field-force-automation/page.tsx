@@ -12,11 +12,14 @@ import EnterpriseMsfaIntegrationsSection from "./EnterpriseMsfaIntegrationsSecti
 import EnterpriseMsfaAiRoadmapSection from "./EnterpriseMsfaAiRoadmapSection";
 import EnterpriseMsfaCaseStudiesSection from "./EnterpriseMsfaCaseStudiesSection";
 
-export const metadata: Metadata = {
-  title: "Field Force Automation | Magnetic Solution Limited",
-  description:
-    "Digitize, govern, and optimize last-mile field sales execution with Magnetic Solution Limited's offline-first, ERP-integrated field force automation platform.",
-};
+import { getTranslator } from "@/i18n/server";
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Field Force Automation | Magnetic Solution Limited"),
+    description: t("Digitize, govern, and optimize last-mile field sales execution with Magnetic Solution Limited's offline-first, ERP-integrated field force automation platform."),
+  };
+}
 
 const FieldForceAutomationPage = () => {
   return (

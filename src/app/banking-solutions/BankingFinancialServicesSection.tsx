@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   ArrowRight,
   Building2,
@@ -28,21 +29,15 @@ const services = [
   { title: "Cloud Services for Banking", icon: Cloud },
 ];
 
-export default function BankingFinancialServicesSection() {
+export default async function BankingFinancialServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[680px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What we can do
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Offered services
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            A complete portfolio of banking software services, delivered as
-            standalone modules or as one integrated platform.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What we can do")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Offered services")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("A complete portfolio of banking software services, delivered as standalone modules or as one integrated platform.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -56,7 +51,7 @@ export default function BankingFinancialServicesSection() {
               </span>
 
               <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] text-black">
-                {service.title}
+                {t(service.title)}
               </h3>
             </article>
           ))}
@@ -64,20 +59,14 @@ export default function BankingFinancialServicesSection() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-xl border border-[#ececec] bg-[#fafafa] px-7 py-6 sm:flex-row sm:items-center md:px-9 md:py-7">
           <div>
-            <p className="text-[17px] font-bold text-black md:text-[19px]">
-              Need a solution shaped around your core banking stack?
-            </p>
-            <p className="mt-1.5 text-[14.5px] text-[#55585e]">
-              Our team can scope a customized build across any of these services.
-            </p>
+            <p className="text-[17px] font-bold text-black md:text-[19px]">{t("Need a solution shaped around your core banking stack?")}</p>
+            <p className="mt-1.5 text-[14.5px] text-[#55585e]">{t("Our team can scope a customized build across any of these services.")}</p>
           </div>
 
           <Link
             href="/contact"
             className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-          >
-            Talk to our team
-            <ArrowRight size={17} />
+          >{t("Talk to our team")}<ArrowRight size={17} />
           </Link>
         </div>
       </div>

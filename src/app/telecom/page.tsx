@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import TelecomServicesSection from "./TelecomServicesSection";
 import TelecomCaseStudiesSection from "./TelecomCaseStudiesSection";
 import TelecomCtaSection from "./TelecomCtaSection";
 
-export const metadata: Metadata = {
-  title: "Telecom Solutions | Magnetic Solution Limited",
-  description:
-    "Network platforms, enterprise CMS, ERP, cloud and analytics solutions built by Magnetic Solution Limited for telecom operators and service providers.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Telecom Solutions | Magnetic Solution Limited"),
+    description: t("Network platforms, enterprise CMS, ERP, cloud and analytics solutions built by Magnetic Solution Limited for telecom operators and service providers."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function TelecomPage() {
+export default async function TelecomPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <TelecomHeroSection />
@@ -49,8 +53,8 @@ export default function TelecomPage() {
       <TelecomCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Telecom engagement questions"
-        subtitle="What operators usually ask before we start building."
+        title={t("Telecom engagement questions")}
+        subtitle={t("What operators usually ask before we start building.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

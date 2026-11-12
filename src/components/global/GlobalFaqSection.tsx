@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 
@@ -44,6 +45,7 @@ export default function GlobalFaqSection({
   ctaHref,
   className = "",
 }: GlobalFaqSectionProps) {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(
     defaultOpen ?? null
   );
@@ -95,7 +97,7 @@ export default function GlobalFaqSection({
                   className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
                   <span className="text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]">
-                    {faq.question}
+                    {t(faq.question)}
                   </span>
 
                   <Plus
@@ -116,7 +118,7 @@ export default function GlobalFaqSection({
                 >
                   <div className="overflow-hidden">
                     <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
-                      {faq.answer}
+                      {t(faq.answer)}
                     </p>
                   </div>
                 </div>

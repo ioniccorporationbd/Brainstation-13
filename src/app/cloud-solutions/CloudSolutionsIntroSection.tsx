@@ -1,4 +1,5 @@
 import { Cloud, ShieldCheck } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const blocks = [
   {
@@ -13,16 +14,13 @@ const blocks = [
   },
 ];
 
-export default function CloudSolutionsIntroSection() {
+export default async function CloudSolutionsIntroSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[80px] pt-[8px] text-black md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
-        <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-          Overview
-        </p>
-        <h2 className="mt-4 max-w-[760px] text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[38px]">
-          Cloud that your team can actually operate
-        </h2>
+        <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Overview")}</p>
+        <h2 className="mt-4 max-w-[760px] text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[38px]">{t("Cloud that your team can actually operate")}</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
           {blocks.map((block) => (
@@ -35,11 +33,11 @@ export default function CloudSolutionsIntroSection() {
               </span>
 
               <h3 className="mt-5 text-[19px] font-bold tracking-[-0.01em] text-black md:text-[21px]">
-                {block.title}
+                {t(block.title)}
               </h3>
 
               <p className="mt-3 text-[15px] leading-[1.75] text-[#55585e] md:text-[15.5px]">
-                {block.text}
+                {t(block.text)}
               </p>
             </article>
           ))}

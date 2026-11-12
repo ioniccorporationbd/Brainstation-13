@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const clientNames = ["VENTRO", "ChoiceLEGACY", "SUZUKI", "IMAGINECREATE AI"];
 
@@ -65,30 +66,21 @@ const solutions = [
   },
 ];
 
-export default function ShopifySolutionsSection() {
+export default async function ShopifySolutionsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Solutions
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Solutions")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Shopify Solutions We Deliver
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify Solutions We Deliver")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            From fast-growing startups to established enterprise brands, we
-            serve merchants, product companies, and B2B clients that demand more
-            than out-of-the-box Shopify.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("From fast-growing startups to established enterprise brands, we serve merchants, product companies, and B2B clients that demand more than out-of-the-box Shopify.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-2.5">
-          <span className="mr-1 text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">
-            Trusted by
-          </span>
+          <span className="mr-1 text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Trusted by")}</span>
 
           {clientNames.map((name) => (
             <span
@@ -117,11 +109,11 @@ export default function ShopifySolutionsSection() {
 
               <div className="flex flex-1 flex-col p-6 md:p-7">
                 <h3 className="text-[20px] font-bold leading-[1.28] tracking-[-0.02em] text-[#0a0a0a]">
-                  {solution.title}
+                  {t(solution.title)}
                 </h3>
 
                 <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
-                  {solution.description}
+                  {t(solution.description)}
                 </p>
 
                 <ul className="mt-5 space-y-2.5">

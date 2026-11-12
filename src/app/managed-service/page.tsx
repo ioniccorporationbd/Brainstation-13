@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import ManagedServiceHeroSection from './ManagedServiceHeroSection';
 import ManagedServicesIntroSection from './ManagedServicesIntroSection';
 import WhyChooseBrainStationSection from './WhyChooseBrainStationSection';

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import {
   ArrowLeft,
   ArrowRight,
@@ -37,6 +38,7 @@ function Meta({ post }: { post: BlogPost }) {
 }
 
 function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
+  const { t } = useTranslation();
   return (
     <section className="bg-white px-6 py-14 md:py-20">
       <div className="mx-auto max-w-[820px]">
@@ -45,14 +47,12 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
           onClick={onBack}
           className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
         >
-          <ArrowLeft size={15} />
-          All articles
-        </button>
+          <ArrowLeft size={15} />{t("All articles")}</button>
 
         <div className="mt-8">
           <Meta post={post} />
           <h1 className="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.025em] text-black md:text-[40px]">
-            {post.title}
+            {t(post.title)}
           </h1>
         </div>
 
@@ -65,27 +65,19 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
         <p className="mt-8 text-[17px] font-medium leading-[1.65] text-[#22252a] md:text-[19px]">
           {post.excerpt}
         </p>
-        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[14.5px] leading-[1.7] text-[#55585e]">
-          This page carries the published summary of the article. For the
-          complete write-up, including the technical detail behind it, talk to
-          our team and we will share it with you.
-        </p>
+        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[14.5px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-          >
-            Request the full article
-            <ArrowRight size={16} />
+          >{t("Request the full article")}<ArrowRight size={16} />
           </a>
           <button
             type="button"
             onClick={onBack}
             className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[14.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-          >
-            Back to the blog
-          </button>
+          >{t("Back to the blog")}</button>
         </div>
       </div>
     </section>
@@ -101,6 +93,7 @@ export default function BlogExplorer({
   posts: BlogPost[];
   categories: string[];
 }) {
+  const { t } = useTranslation();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [page, setPage] = useState(1);
@@ -149,15 +142,13 @@ export default function BlogExplorer({
             </div>
             <div className="p-7 md:p-10">
               <div className="flex items-center gap-3">
-                <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
-                  Featured
-                </span>
+                <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured")}</span>
                 <span className="text-[12.5px] font-medium text-[#6b6f76]">
                   {featured.category} &middot; {featured.date}
                 </span>
               </div>
               <h2 className="mt-5 text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[32px]">
-                {featured.title}
+                {t(featured.title)}
               </h2>
               <p className="mt-4 text-[15px] leading-[1.7] text-[#55585e] md:text-[16px]">
                 {featured.excerpt}
@@ -166,9 +157,7 @@ export default function BlogExplorer({
                 type="button"
                 onClick={() => setOpenSlug(featured.slug)}
                 className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3 text-[14.5px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-              >
-                Read article
-                <ArrowRight size={16} />
+              >{t("Read article")}<ArrowRight size={16} />
               </button>
             </div>
           </article>
@@ -188,8 +177,8 @@ export default function BlogExplorer({
                 setQuery(event.target.value);
                 setPage(1);
               }}
-              aria-label="Search articles"
-              placeholder="Search articles"
+              aria-label={t("Search articles")}
+              placeholder={t("Search articles")}
               className="h-[48px] w-full rounded-lg border border-[#ececec] bg-white pl-11 pr-4 text-[14.5px] text-black outline-none transition focus:border-[#c91f28] focus:ring-2 focus:ring-[#fdecec]"
             />
           </div>
@@ -227,9 +216,7 @@ export default function BlogExplorer({
         </div>
 
         {visible.length === 0 ? (
-          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] text-[#55585e]">
-            No articles match that search. Try another keyword or category.
-          </p>
+          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] text-[#55585e]">{t("No articles match that search. Try another keyword or category.")}</p>
         ) : (
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {visible.map((post) => (
@@ -247,7 +234,7 @@ export default function BlogExplorer({
                 <div className="flex flex-1 flex-col p-6">
                   <Meta post={post} />
                   <h3 className="mt-4 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
-                    {post.title}
+                    {t(post.title)}
                   </h3>
                   <p className="mt-3 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
                     {post.excerpt}
@@ -256,9 +243,7 @@ export default function BlogExplorer({
                     type="button"
                     onClick={() => setOpenSlug(post.slug)}
                     className="mt-5 inline-flex items-center gap-1.5 self-start text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
-                  >
-                    Read article
-                    <ArrowRight
+                  >{t("Read article")}<ArrowRight
                       size={15}
                       strokeWidth={2.2}
                       className="transition-transform duration-200 group-hover:translate-x-1"
@@ -272,7 +257,7 @@ export default function BlogExplorer({
 
         {totalPages > 1 ? (
           <nav
-            aria-label="Pagination"
+            aria-label={t("Pagination")}
             className="mt-10 flex items-center justify-between gap-4"
           >
             <button
@@ -281,9 +266,7 @@ export default function BlogExplorer({
               disabled={safePage === 1}
               className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
             >
-              <ArrowLeft size={15} />
-              Previous
-            </button>
+              <ArrowLeft size={15} />{t("Previous")}</button>
             <div className="flex items-center gap-2">
               {Array.from({ length: totalPages }, (_, index) => index + 1).map(
                 (item) => (
@@ -308,9 +291,7 @@ export default function BlogExplorer({
               onClick={() => setPage(Math.min(totalPages, safePage + 1))}
               disabled={safePage === totalPages}
               className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              Next
-              <ArrowRight size={15} />
+            >{t("Next")}<ArrowRight size={15} />
             </button>
           </nav>
         ) : null}

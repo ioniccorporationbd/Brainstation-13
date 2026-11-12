@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import StartupServicesSection from "./StartupServicesSection";
 import StartupCaseStudiesSection from "./StartupCaseStudiesSection";
 import StartupCtaSection from "./StartupCtaSection";
 
-export const metadata: Metadata = {
-  title: "Startup Solutions | Magnetic Solution Limited",
-  description:
-    "Technology solutions for startups — MVP development, product engineering and the digital platforms that make growth possible.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Startup Solutions | Magnetic Solution Limited"),
+    description: t("Technology solutions for startups — MVP development, product engineering and the digital platforms that make growth possible."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function StartupPage() {
+export default async function StartupPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <StartupHeroSection />
@@ -49,8 +53,8 @@ export default function StartupPage() {
       <StartupCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Questions we hear before we start"
-        subtitle="What teams usually ask about scope, delivery and working together."
+        title={t("Questions we hear before we start")}
+        subtitle={t("What teams usually ask about scope, delivery and working together.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

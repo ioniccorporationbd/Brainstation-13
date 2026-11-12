@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import {
   Bell,
   CreditCard,
@@ -110,6 +111,7 @@ const ecosystemItems: EcosystemItem[] = [
 ];
 
 export default function EnterpriseMsfaCoreEcosystemSection() {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(8);
   const activeItem = ecosystemItems[activeIndex];
 
@@ -117,19 +119,11 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Comprehensive Capabilities
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            The Core Ecosystem
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("The Core Ecosystem")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Click any module to preview how the platform supports field sales,
-            governance, reporting, approvals, route planning, and ERP-ready
-            execution.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
@@ -159,7 +153,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                     <Icon size={16} strokeWidth={2} />
                   </span>
 
-                  <span className="leading-tight">{item.title}</span>
+                  <span className="leading-tight">{t(item.title)}</span>
                 </button>
               );
             })}
@@ -183,12 +177,10 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
               <div className="absolute inset-x-3 bottom-3 border border-[#ececec] bg-white p-4 md:inset-x-4 md:bottom-4 md:p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">
-                      Active Module
-                    </p>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Active Module")}</p>
 
                     <h3 className="mt-1.5 text-[20px] font-bold leading-tight tracking-[-0.02em] text-[#000000] md:text-[24px]">
-                      {activeItem.title}
+                      {t(activeItem.title)}
                     </h3>
                   </div>
 
@@ -202,16 +194,16 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
 
                 <div className="mt-4 grid grid-cols-3 gap-2">
                   {[
-                    { label: "Status", value: "Live" },
-                    { label: "Sync", value: "ERP" },
-                    { label: "Mode", value: "Offline" },
+                    { label: t("Status"), value: t("Live") },
+                    { label: t("Sync"), value: t("ERP") },
+                    { label: t("Mode"), value: t("Offline") },
                   ].map((meta) => (
                     <div
                       key={meta.label}
                       className="border border-[#ececec] px-2.5 py-2"
                     >
                       <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#8a8a8a]">
-                        {meta.label}
+                        {t(meta.label)}
                       </p>
                       <p className="mt-1 text-[13px] font-bold text-[#000000]">
                         {meta.value}

@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import {
   BarChart3,
   Globe2,
@@ -52,24 +54,17 @@ const challenges: ChallengeCard[] = [
   },
 ];
 
-export default function EnterpriseMsfaChallengesSection() {
+export default async function EnterpriseMsfaChallengesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            The Global Challenge
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The Global Challenge")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Why Field Sales Breaks at Scale
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Why Field Sales Breaks at Scale")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Without a production-ready execution platform, enterprises face
-            fragmented tools, data loss, and severe operational bottlenecks in
-            last-mile markets.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Without a production-ready execution platform, enterprises face fragmented tools, data loss, and severe operational bottlenecks in last-mile markets.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -86,11 +81,11 @@ export default function EnterpriseMsfaChallengesSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#000000]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </article>
             );

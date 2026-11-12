@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 type IntegrationItem = {
   name: string;
   logo?: string;
@@ -26,23 +28,17 @@ const integrations: IntegrationItem[] = [
   },
 ];
 
-export default function EnterpriseMsfaIntegrationsSection() {
+export default async function EnterpriseMsfaIntegrationsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Enterprise Ecosystem
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Enterprise Ecosystem")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Integrations
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Integrations")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Connect to your ERP and analytics stack. We provide seamless
-            bi-directional handshakes with your core platforms.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Connect to your ERP and analytics stack. We provide seamless bi-directional handshakes with your core platforms.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">

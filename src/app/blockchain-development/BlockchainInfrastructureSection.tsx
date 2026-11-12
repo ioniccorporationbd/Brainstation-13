@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   BadgeCheck,
   ChartNetwork,
@@ -61,23 +62,17 @@ const blockchainInfrastructureServices = [
   },
 ];
 
-export default function BlockchainInfrastructureSection() {
+export default async function BlockchainInfrastructureSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[760px]">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Infrastructure
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Infrastructure")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Looking to Create Blockchain Infrastructure?
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Looking to Create Blockchain Infrastructure?")}</h2>
 
-          <p className="mt-4 max-w-[620px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Audit, identity, private networks and managed operations — the
-            building blocks teams ask for most.
-          </p>
+          <p className="mt-4 max-w-[620px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Audit, identity, private networks and managed operations — the building blocks teams ask for most.")}</p>
         </div>
 
         <div className="mt-11 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -94,27 +89,23 @@ export default function BlockchainInfrastructureSection() {
                 </span>
 
                 <h3 className="mt-5 text-[15.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-medium leading-[1.6] text-[#565656]">
-                  {service.description}
+                  {t(service.description)}
                 </p>
               </article>
             );
           })}
 
           <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-6 text-center">
-            <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-              Looking for Dedicated Blockchain Developers?
-            </h3>
+            <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">{t("Looking for Dedicated Blockchain Developers?")}</h3>
 
             <Link
               href="/contact"
               className="mx-auto mt-5 inline-flex items-center justify-center rounded-full bg-[#c91f28] px-6 py-3 text-[13.5px] font-bold text-white transition duration-300 hover:bg-[#a71920]"
-            >
-              Let&apos;s Talk
-            </Link>
+            >{t("Let's Talk")}</Link>
           </article>
         </div>
       </div>

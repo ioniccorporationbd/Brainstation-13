@@ -4,6 +4,7 @@ import {
   GraduationCap,
   Handshake,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type EngagementModel = {
   title: string;
@@ -34,24 +35,18 @@ const engagementModels: EngagementModel[] = [
   },
 ];
 
-export default function TechnologyConsultingEngagementModelsSection() {
+export default async function TechnologyConsultingEngagementModelsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Flexible Engagement
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Flexible Engagement")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Engagement Models Tailored to You
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Engagement Models Tailored to You")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Choose the collaboration model that fits your goals, timeline, and
-            budget.
-          </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Choose the collaboration model that fits your goals, timeline, and budget.")}</p>
         </div>
 
         {/* Cards */}
@@ -69,11 +64,11 @@ export default function TechnologyConsultingEngagementModelsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {model.title}
+                  {t(model.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {model.description}
+                  {t(model.description)}
                 </p>
               </article>
             );

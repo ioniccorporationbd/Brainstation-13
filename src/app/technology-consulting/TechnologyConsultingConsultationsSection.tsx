@@ -1,4 +1,5 @@
 import { BrainCircuit, CloudCog, ShieldCheck, Target } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type ConsultationCard = {
   title: string;
@@ -43,24 +44,18 @@ const consultations: ConsultationCard[] = [
   },
 ];
 
-export default function TechnologyConsultingConsultationsSection() {
+export default async function TechnologyConsultingConsultationsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Cover
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Cover")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Consultations We Provide
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Consultations We Provide")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            From architecture to AI, we cover the technical decisions that
-            shape how your business grows.
-          </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("From architecture to AI, we cover the technical decisions that shape how your business grows.")}</p>
         </div>
 
         {/* Cards */}
@@ -78,7 +73,7 @@ export default function TechnologyConsultingConsultationsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <ul className="mt-3 space-y-3">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import MLAIHeroSection from './MLAIHeroSection';
 import MLAIServicesSection from './MLAIServicesSection';
 import MLAITechnologiesSection from './MLAITechnologiesSection';

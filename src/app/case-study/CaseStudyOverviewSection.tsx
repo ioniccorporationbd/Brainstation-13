@@ -7,6 +7,7 @@ import {
   PackageSearch,
   Sparkles,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Challenge = {
   text: string;
@@ -44,25 +45,18 @@ const challenges: Challenge[] = [
   },
 ];
 
-export default function CaseStudyOverviewSection() {
+export default async function CaseStudyOverviewSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Problem Statement
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Problem Statement")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Business Challenges
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Business Challenges")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            The legacy platform could not support the scale, brand standards, and
-            hyperlocal experience the business required — creating seven core
-            challenges to solve.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("The legacy platform could not support the scale, brand standards, and hyperlocal experience the business required — creating seven core challenges to solve.")}</p>
         </div>
 
         {/* Cards - 4 per row desktop */}
@@ -86,7 +80,7 @@ export default function CaseStudyOverviewSection() {
                 </div>
 
                 <p className="mt-5 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {challenge.text}
+                  {t(challenge.text)}
                 </p>
               </article>
             );

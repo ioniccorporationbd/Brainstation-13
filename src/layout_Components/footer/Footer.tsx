@@ -263,7 +263,7 @@ export default async function Footer() {
                     <div className="mt-[12px] flex items-center gap-[5px]">
                       <span className="h-[8px] w-[8px] rounded-full bg-[#C91F28]" />
                       <span className="text-[12px] text-white">
-                        {item.label}
+                        {t(item.label)}
                       </span>
                     </div>
                   </div>

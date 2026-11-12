@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 
 const relatedPosts = [
   {
@@ -30,33 +31,25 @@ const relatedPosts = [
   },
 ];
 
-export default function RelatedBlogsSection() {
+export default async function RelatedBlogsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[96px] text-[#0a0a0a] md:pb-[112px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Insights
-            </p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Insights")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-              You might also like
-            </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You might also like")}</h2>
           </div>
 
           <div className="lg:pb-2">
-            <p className="max-w-[520px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-              Look through to find the perfect Blockchain/Web3 solution for your
-              needs.
-            </p>
+            <p className="max-w-[520px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Look through to find the perfect Blockchain/Web3 solution for your needs.")}</p>
 
             <Link
               href="/blog"
               className="mt-6 inline-flex items-center justify-center rounded-full border border-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
-            >
-              Latest in Blockchain/Web3
-            </Link>
+            >{t("Latest in Blockchain/Web3")}</Link>
           </div>
         </div>
 
@@ -82,16 +75,14 @@ export default function RelatedBlogsSection() {
                   </span>
 
                   <h3 className="mt-4 text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
-                    {post.title}
+                    {t(post.title)}
                   </h3>
 
                   <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
-                    {post.description}
+                    {t(post.description)}
                   </p>
 
-                  <span className="mt-6 inline-flex items-center gap-2 text-[13.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                    View Blog
-                    <span aria-hidden="true">→</span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-[13.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">{t("View Blog")}<span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>

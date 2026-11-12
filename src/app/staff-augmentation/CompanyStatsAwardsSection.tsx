@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const stats = [
   {
     number: "850+",
@@ -83,7 +85,8 @@ function CircularText({
   );
 }
 
-export default function CompanyStatsAwardsSection() {
+export default async function CompanyStatsAwardsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-[#ffffff] px-6 py-[72px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1320px]">
@@ -101,7 +104,7 @@ export default function CompanyStatsAwardsSection() {
                 </h3>
 
                 <p className="mt-4 whitespace-pre-line text-[17px] font-bold leading-[1.35] text-[#0a0a0a]">
-                  {item.label}
+                  {t(item.label)}
                 </p>
               </div>
             </div>
@@ -121,14 +124,10 @@ export default function CompanyStatsAwardsSection() {
               <div className="absolute inset-[11px] [clip-path:polygon(50%_0%,93%_25%,93%_75%,50%_100%,7%_75%,7%_25%)] bg-[#0a0a0a]" />
 
               <div className="relative z-10 text-center">
-                <p className="mb-2 text-[8px] font-bold uppercase leading-[1.1] tracking-[0.08em] text-[#565656]">
-                  TOP <br /> SOFTWARE <br /> DEVELOPERS
-                </p>
+                <p className="mb-2 text-[8px] font-bold uppercase leading-[1.1] tracking-[0.08em] text-[#565656]">{t("TOP")}<br />{t("SOFTWARE")}<br />{t("DEVELOPERS")}</p>
 
                 <div className="bg-white px-4 py-1">
-                  <p className="text-[20px] font-bold leading-none text-[#0a0a0a]">
-                    Clutch
-                  </p>
+                  <p className="text-[20px] font-bold leading-none text-[#0a0a0a]">{t("Clutch")}</p>
                 </div>
 
                 <p className="mt-3 whitespace-pre-line text-[7px] font-bold uppercase leading-[1.25] tracking-[0.08em] text-[#565656]">

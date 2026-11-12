@@ -1,4 +1,5 @@
 import { Gamepad2 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const whyItems = [
   "Our designers are passionate about game design and experts in holistic design",
@@ -7,18 +8,15 @@ const whyItems = [
   "Our developers are enthusiastic about video games",
 ];
 
-export default function WhyChooseJourneySection() {
+export default async function WhyChooseJourneySection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[16px] text-[#0a0a0a] md:pb-[24px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Why Us
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Us")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Why Choose Us
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Choose Us")}</h2>
         </div>
 
         <div className="mx-auto mt-10 grid max-w-[1040px] gap-4 sm:grid-cols-2">

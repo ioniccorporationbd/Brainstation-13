@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import {
   BarChart3,
   CheckCircle2,
@@ -46,23 +48,17 @@ const workflowItems: WorkflowItem[] = [
   },
 ];
 
-export default function EnterpriseMsfaWorkflowEngineSection() {
+export default async function EnterpriseMsfaWorkflowEngineSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Workflow Engine
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Workflow Engine")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            End-to-End Governance
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("End-to-End Governance")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Digitally verified, traceable, and fully auditable from the first
-            plan to final ERP sync.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Digitally verified, traceable, and fully auditable from the first plan to final ERP sync.")}</p>
         </div>
 
         <div className="relative mt-14">
@@ -83,16 +79,15 @@ export default function EnterpriseMsfaWorkflowEngineSection() {
                     </div>
                   </div>
 
-                  <span className="mt-[42px] text-[11px] font-bold uppercase tracking-[0.16em] text-[#b5b5b5]">
-                    Step {String(index + 1).padStart(2, "0")}
+                  <span className="mt-[42px] text-[11px] font-bold uppercase tracking-[0.16em] text-[#b5b5b5]">{t("Step")}{String(index + 1).padStart(2, "0")}
                   </span>
 
                   <h3 className="mt-2 text-[18px] font-bold leading-tight tracking-[-0.01em] text-[#000000]">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
 
                   <p className="mt-2 text-[14px] font-medium leading-[1.5] text-[#666666]">
-                    {item.subtitle}
+                    {t(item.subtitle)}
                   </p>
                 </article>
               );

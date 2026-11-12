@@ -1,4 +1,5 @@
 import { Cpu, Lightbulb, Map, ShieldCheck } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type BenefitCard = {
   title: string;
@@ -41,25 +42,18 @@ const benefits: BenefitCard[] = [
   },
 ];
 
-export default function TechnologyConsultingBenefitsSection() {
+export default async function TechnologyConsultingBenefitsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Consulting Advantage
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Consulting Advantage")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Key Benefits
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Key Benefits")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Our consulting helps businesses reduce risk, modernize
-            architecture, improve security, and unlock innovation through
-            practical, business-aligned technology decisions.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Our consulting helps businesses reduce risk, modernize architecture, improve security, and unlock innovation through practical, business-aligned technology decisions.")}</p>
         </div>
 
         {/* Cards */}
@@ -77,7 +71,7 @@ export default function TechnologyConsultingBenefitsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <ul className="mt-3 space-y-3">

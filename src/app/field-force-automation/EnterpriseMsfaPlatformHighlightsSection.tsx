@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type HighlightItem = {
   title: string;
@@ -73,7 +74,8 @@ const highlights: HighlightItem[] = [
   },
 ];
 
-function ImagePanel({ title, image }: { title: string; image: string }) {
+async function ImagePanel({ title, image }: { title: string; image: string }) {
+  const { t } = await getTranslator();
   return (
     <div className="relative overflow-hidden border border-[#ececec] bg-white">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -84,22 +86,21 @@ function ImagePanel({ title, image }: { title: string; image: string }) {
         className="h-[240px] w-full object-cover transition-transform duration-700 hover:scale-[1.03] md:h-[330px]"
       />
 
-      <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
-        MSFA Platform
-      </span>
+      <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">{t("MSFA Platform")}</span>
     </div>
   );
 }
 
-function HighlightContent({ item }: { item: HighlightItem }) {
+async function HighlightContent({ item }: { item: HighlightItem }) {
+  const { t } = await getTranslator();
   return (
     <div>
       <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#000000] md:text-[32px]">
-        {item.title}
+        {t(item.title)}
       </h3>
 
       <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">
-        {item.description}
+        {t(item.description)}
       </p>
 
       <ul className="mt-6 space-y-2.5">
@@ -121,23 +122,17 @@ function HighlightContent({ item }: { item: HighlightItem }) {
   );
 }
 
-export default function EnterpriseMsfaPlatformHighlightsSection() {
+export default async function EnterpriseMsfaPlatformHighlightsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1140px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Platform Highlights
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Platform Highlights")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Built for Real Field Conditions
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Built for Real Field Conditions")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Enterprise-grade field execution, reporting, and governance built
-            for scalable last-mile operations.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Enterprise-grade field execution, reporting, and governance built for scalable last-mile operations.")}</p>
         </div>
 
         <div className="mt-12 space-y-10 md:space-y-14">

@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import BlogExplorer, { type BlogPost } from "./BlogExplorer";
 
-export const metadata: Metadata = {
-  title: "Blog & Insights | Magnetic Solution Limited",
-  description:
-    "Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people who do the work at Magnetic Solution Limited.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Blog & Insights | Magnetic Solution Limited"),
+    description: t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people who do the work at Magnetic Solution Limited."),
+  };
+}
 
 const featured: BlogPost = {
   slug: "legacy-modernisation",
@@ -103,35 +106,25 @@ const categories = [
   "Product",
 ];
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <section className="relative overflow-hidden bg-white px-6 pb-14 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto max-w-[1240px]">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-            Blog
-          </span>
-          <h1 className="mt-6 max-w-[820px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">
-            Insights &amp; ideas from the teams that ship
-          </h1>
-          <p className="mt-5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-            Practical thinking on software engineering, cloud, AI, security and
-            building teams that ship — written by the people doing the work.
-          </p>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Blog")}</span>
+          <h1 className="mt-6 max-w-[820px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Insights & ideas from the teams that ship")}</h1>
+          <p className="mt-5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/case-studies"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-            >
-              See how it applies in practice
-              <ArrowRight size={17} />
+            >{t("See how it applies in practice")}<ArrowRight size={17} />
             </Link>
             <Link
               href="/resources"
               className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-            >
-              Browse resources
-            </Link>
+            >{t("Browse resources")}</Link>
           </div>
         </div>
       </section>
@@ -143,29 +136,19 @@ export default function BlogPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">
-                  Want insight like this for your roadmap?
-                </h2>
-                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">
-                  Get practical engineering and technology perspective from our
-                  team &mdash; applied to your product, your stack and your
-                  constraints.
-                </p>
+                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Want insight like this for your roadmap?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Get practical engineering and technology perspective from our team — applied to your product, your stack and your constraints.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Link
                   href="/schedule-a-call"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-                >
-                  Book a discovery call
-                  <ArrowRight size={17} />
+                >{t("Book a discovery call")}<ArrowRight size={17} />
                 </Link>
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-                >
-                  Contact us
-                </Link>
+                >{t("Contact us")}</Link>
               </div>
             </div>
           </div>

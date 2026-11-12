@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import NonProfitServicesSection from "./NonProfitServicesSection";
 import NonProfitCaseStudiesSection from "./NonProfitCaseStudiesSection";
 import NonProfitCtaSection from "./NonProfitCtaSection";
 
-export const metadata: Metadata = {
-  title: "Non-Profit Solutions | Magnetic Solution Limited",
-  description:
-    "Digital solutions for non-profit organisations — community platforms, programme reporting and tools built for humanitarian work.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Non-Profit Solutions | Magnetic Solution Limited"),
+    description: t("Digital solutions for non-profit organisations — community platforms, programme reporting and tools built for humanitarian work."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function NonProfitPage() {
+export default async function NonProfitPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <NonProfitHeroSection />
@@ -49,8 +53,8 @@ export default function NonProfitPage() {
       <NonProfitCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Questions we hear before we start"
-        subtitle="What teams usually ask about scope, delivery and working together."
+        title={t("Questions we hear before we start")}
+        subtitle={t("What teams usually ask about scope, delivery and working together.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

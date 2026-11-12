@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 
@@ -38,24 +39,18 @@ const faqs: FaqItem[] = [
 ];
 
 export default function ManagedServicesFaqSection() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            FAQ
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("FAQ")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Frequently Asked Questions")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Everything you need to know about working with our managed delivery
-            teams.
-          </p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Everything you need to know about working with our managed delivery teams.")}</p>
         </div>
 
         <div className="mt-12 space-y-3">
@@ -82,7 +77,7 @@ export default function ManagedServicesFaqSection() {
                   className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
                   <span className="text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]">
-                    {faq.question}
+                    {t(faq.question)}
                   </span>
 
                   <Plus
@@ -103,7 +98,7 @@ export default function ManagedServicesFaqSection() {
                 >
                   <div className="overflow-hidden">
                     <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
-                      {faq.answer}
+                      {t(faq.answer)}
                     </p>
                   </div>
                 </div>
@@ -116,9 +111,7 @@ export default function ManagedServicesFaqSection() {
           <Link
             href="/schedule-a-call"
             className="inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-          >
-            Schedule a Call
-          </Link>
+          >{t("Schedule a Call")}</Link>
         </div>
       </div>
     </section>

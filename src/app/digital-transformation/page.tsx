@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import DigitalTransformationHeroSection from './DigitalTransformationHeroSection';
 import DigitalTransformationFindingsSection from './DigitalTransformationFindingsSection';
 import WhyDigitalTransformationMattersSection from './WhyDigitalTransformationMattersSection';

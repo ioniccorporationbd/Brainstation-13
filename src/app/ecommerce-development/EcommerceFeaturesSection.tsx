@@ -1,3 +1,4 @@
+import { getTranslator } from "@/i18n/server";
 import {
   CreditCard,
   Layers,
@@ -40,22 +41,17 @@ const features = [
   },
 ];
 
-export default function EcommerceFeaturesSection() {
+export default async function EcommerceFeaturesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Capabilities
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            What We Deliver
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Deliver")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Six disciplines that cover a complete commerce build.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Six disciplines that cover a complete commerce build.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -72,11 +68,11 @@ export default function EcommerceFeaturesSection() {
                 </span>
 
                 <h3 className="mt-5 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {feature.title}
+                  {t(feature.title)}
                 </h3>
 
                 <p className="mt-2.5 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
-                  {feature.description}
+                  {t(feature.description)}
                 </p>
               </article>
             );

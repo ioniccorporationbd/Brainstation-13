@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const findings = [
   {
     source: "IBM Cost of a Data Breach Report 2023",
@@ -25,27 +27,21 @@ const findings = [
   },
 ];
 
-export default function CyberSecurityFindingsSection() {
+export default async function CyberSecurityFindingsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] pt-[8px] text-black md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              The threat landscape
-            </p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-              Our findings
-            </h2>
-            <p className="mt-4 max-w-[440px] text-[15.5px] leading-[1.75] text-[#55585e]">
-              Published research and public breach cases show where attackers
-              concentrate and where response time pays back.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The threat landscape")}</p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Our findings")}</h2>
+            <p className="mt-4 max-w-[440px] text-[15.5px] leading-[1.75] text-[#55585e]">{t("Published research and public breach cases show where attackers concentrate and where response time pays back.")}</p>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-[#ececec]">
               <img
                 src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
-                alt="Close-up of a secure circuit board"
+                alt={t("Close-up of a secure circuit board")}
                 className="h-[220px] w-full object-cover md:h-[280px]"
               />
             </div>
@@ -66,7 +62,7 @@ export default function CyberSecurityFindingsSection() {
                       {item.source}
                     </p>
                     <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#55585e] sm:text-[15px]">
-                      {item.text}
+                      {t(item.text)}
                     </p>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { getTranslator } from "@/i18n/server";
 import Image from "next/image";
 import {
   ArrowUpRight,
@@ -42,23 +43,17 @@ const services: Service[] = [
   },
 ];
 
-export default function ModelingServicesSection() {
+export default async function ModelingServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Build
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Build")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            3D Modeling Services for Complex Industries
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("3D Modeling Services for Complex Industries")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Engineering-accurate 3D visualizations tailored for the world&apos;s
-            most demanding manufacturing and engineering sectors.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Engineering-accurate 3D visualizations tailored for the world's most demanding manufacturing and engineering sectors.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -87,11 +82,11 @@ export default function ModelingServicesSection() {
                 <div className="flex items-start justify-between gap-5 px-6 py-6 sm:px-7">
                   <div>
                     <h3 className="text-[20px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                      {item.title}
+                      {t(item.title)}
                     </h3>
 
                     <p className="mt-3 max-w-[420px] text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
-                      {item.desc}
+                      {t(item.desc)}
                     </p>
                   </div>
 

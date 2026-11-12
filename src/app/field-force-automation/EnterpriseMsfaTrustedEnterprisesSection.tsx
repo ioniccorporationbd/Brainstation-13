@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   BarChart3,
   Building2,
@@ -86,24 +87,17 @@ const stats: StatCard[] = [
   },
 ];
 
-export default function EnterpriseMsfaTrustedEnterprisesSection() {
+export default async function EnterpriseMsfaTrustedEnterprisesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[760px]">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Proven in Production
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Proven in Production")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Trusted By Leading Enterprises
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Trusted By Leading Enterprises")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Enterprise-grade field execution trusted by large sales teams,
-            pharmaceutical brands, retail networks, and multi-layer distribution
-            organizations.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Enterprise-grade field execution trusted by large sales teams, pharmaceutical brands, retail networks, and multi-layer distribution organizations.")}</p>
         </div>
 
         <div className="mt-11 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -123,7 +117,7 @@ export default function EnterpriseMsfaTrustedEnterprisesSection() {
               </h3>
 
               <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
-                {item.description}
+                {t(item.description)}
               </p>
             </article>
           ))}
@@ -147,11 +141,11 @@ export default function EnterpriseMsfaTrustedEnterprisesSection() {
                 </p>
 
                 <h3 className="mt-3 text-[15px] font-bold leading-tight text-[#000000]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-1.5 text-[13px] font-medium leading-none text-[#7a7a7a]">
-                  {item.subtitle}
+                  {t(item.subtitle)}
                 </p>
               </article>
             );
@@ -161,28 +155,20 @@ export default function EnterpriseMsfaTrustedEnterprisesSection() {
         <div className="mt-10 border border-[#ececec] bg-[#fafafa] px-7 py-7 md:px-9">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-                Enterprise Ready
-              </p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Enterprise Ready")}</p>
 
-              <h3 className="mt-2.5 max-w-[560px] text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-[#000000] md:text-[26px]">
-                Built for high-volume, multi-territory field operations.
-              </h3>
+              <h3 className="mt-2.5 max-w-[560px] text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-[#000000] md:text-[26px]">{t("Built for high-volume, multi-territory field operations.")}</h3>
 
               <div className="mt-3 inline-flex items-center gap-2">
                 <BarChart3 size={16} strokeWidth={2} className="text-[#c91f28]" />
-                <span className="text-[13px] font-semibold text-[#4a4a4a]">
-                  Live Performance Visibility
-                </span>
+                <span className="text-[13px] font-semibold text-[#4a4a4a]">{t("Live Performance Visibility")}</span>
               </div>
             </div>
 
             <Link
               href="/schedule-a-call"
               className="inline-flex shrink-0 items-center justify-center rounded-[6px] bg-[#c91f28] px-6 py-3.5 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#a71920]"
-            >
-              Schedule a Call
-            </Link>
+            >{t("Schedule a Call")}</Link>
           </div>
         </div>
       </div>

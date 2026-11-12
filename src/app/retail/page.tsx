@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -7,11 +8,13 @@ import RetailServicesSection from "./RetailServicesSection";
 import RetailCaseStudiesSection from "./RetailCaseStudiesSection";
 import RetailCtaSection from "./RetailCtaSection";
 
-export const metadata: Metadata = {
-  title: "Retail Solutions | Magnetic Solution Limited",
-  description:
-    "POS, inventory, e-commerce, ERP and analytics solutions built by Magnetic Solution Limited for retail enterprises and distribution networks.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Retail Solutions | Magnetic Solution Limited"),
+    description: t("POS, inventory, e-commerce, ERP and analytics solutions built by Magnetic Solution Limited for retail enterprises and distribution networks."),
+  };
+}
 
 const faqs = [
   {
@@ -41,7 +44,8 @@ const faqs = [
   },
 ];
 
-export default function RetailPage() {
+export default async function RetailPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <RetailHeroSection />
@@ -49,8 +53,8 @@ export default function RetailPage() {
       <RetailCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Retail engagement questions"
-        subtitle="What retail teams usually ask before we start building."
+        title={t("Retail engagement questions")}
+        subtitle={t("What retail teams usually ask before we start building.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

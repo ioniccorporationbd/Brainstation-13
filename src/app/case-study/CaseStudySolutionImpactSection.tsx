@@ -14,6 +14,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type InfoItem = {
   text: string;
@@ -122,26 +123,19 @@ function InfoCard({
   );
 }
 
-export default function CaseStudySolutionImpactSection() {
+export default async function CaseStudySolutionImpactSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Solution Provided */}
         <div>
           <div className="mx-auto max-w-[760px] text-center">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Delivery Scope
-            </p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Delivery Scope")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-              Solution Provided
-            </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Solution Provided")}</h2>
 
-            <p className="mx-auto mt-5 max-w-[680px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-              We engineered a scalable, hyperlocal, customer-focused e-commerce
-              ecosystem — from intelligent search and personalization to
-              inventory sync, fulfillment visibility, and analytics.
-            </p>
+            <p className="mx-auto mt-5 max-w-[680px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We engineered a scalable, hyperlocal, customer-focused e-commerce ecosystem — from intelligent search and personalization to inventory sync, fulfillment visibility, and analytics.")}</p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -159,19 +153,11 @@ export default function CaseStudySolutionImpactSection() {
         {/* Impact */}
         <div className="mt-[88px]">
           <div className="mx-auto max-w-[720px] text-center">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Business Results
-            </p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Business Results")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-              Impact
-            </h2>
+            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Impact")}</h2>
 
-            <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-              A look at how the rebuilt platform improved the customer
-              experience, day-to-day operations, and decision-making across the
-              business.
-            </p>
+            <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A look at how the rebuilt platform improved the customer experience, day-to-day operations, and decision-making across the business.")}</p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">

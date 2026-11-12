@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import ErpDevelopmentHeroSection from "./ErpDevelopmentHeroSection";
 import ErpDevelopmentIntroSection from "./ErpDevelopmentIntroSection";
@@ -10,13 +11,16 @@ import ErpDevelopmentOutcomesSection from "./ErpDevelopmentOutcomesSection";
 import ErpDevelopmentFaqSection from "./ErpDevelopmentFaqSection";
 import ErpDevelopmentCtaSection from "./ErpDevelopmentCtaSection";
 
-export const metadata: Metadata = {
-  title: "ERP Development | Magnetic Solution Limited",
-  description:
-    "Custom ERPNext, Frappe and enterprise systems that unify operations, automate workflows and scale with your business.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("ERP Development | Magnetic Solution Limited"),
+    description: t("Custom ERPNext, Frappe and enterprise systems that unify operations, automate workflows and scale with your business."),
+  };
+}
 
-export default function ErpDevelopmentPage() {
+export default async function ErpDevelopmentPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <ErpDevelopmentHeroSection />

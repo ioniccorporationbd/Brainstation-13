@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
 
 type Values = {
@@ -18,6 +19,7 @@ const field =
   "h-[46px] w-full rounded-lg border border-[#ececec] bg-white px-4 text-[14.5px] text-black outline-none transition focus:border-[#c91f28] focus:ring-2 focus:ring-[#fdecec]";
 
 export default function CareerApplyForm({ roles }: { roles: string[] }) {
+  const { t } = useTranslation();
   const [values, setValues] = useState<Values>({
     name: "",
     email: "",
@@ -98,18 +100,9 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={22} />
         </span>
-        <h3 className="mt-4 text-[19px] font-bold text-black">
-          Application received
-        </h3>
-        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-          Thank you, {values.name.split(" ")[0] || "there"}. Your application
-          for <strong className="text-black">{values.role}</strong> has been
-          recorded on our server and reviewed by our hiring team.
-        </p>
-        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">
-          Reference: {reference || "—"} &middot; No email is sent automatically
-          because a public mailbox is not configured for this site yet.
-        </p>
+        <h3 className="mt-4 text-[19px] font-bold text-black">{t("Application received")}</h3>
+        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your application for")}<strong className="text-black">{values.role}</strong>{t("has been recorded on our server and reviewed by our hiring team.")}</p>
+        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -125,9 +118,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
             setReference("");
           }}
           className="mt-5 inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-        >
-          Submit another application
-        </button>
+        >{t("Submit another application")}</button>
       </div>
     );
   }
@@ -143,9 +134,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-name"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Full name *
-          </label>
+          >{t("Full name *")}</label>
           <input
             id="ca-name"
             className={`mt-2 ${field}`}
@@ -168,9 +157,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-email"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Email *
-          </label>
+          >{t("Email *")}</label>
           <input
             id="ca-email"
             type="email"
@@ -194,8 +181,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-phone"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Phone <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Phone")}<span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="ca-phone"
@@ -209,9 +195,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-role"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Role *
-          </label>
+          >{t("Role *")}</label>
           <select
             id="ca-role"
             className={`mt-2 ${field}`}
@@ -224,7 +208,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
                 {role}
               </option>
             ))}
-            <option value="General application">General application</option>
+            <option value="General application">{t("General application")}</option>
           </select>
           {errors.role ? (
             <p className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]">
@@ -236,16 +220,15 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-link"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Portfolio / CV link{" "}
-            <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Portfolio / CV link")}{" "}
+            <span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="ca-link"
             className={`mt-2 ${field}`}
             value={values.link}
             onChange={(event) => update("link", event.target.value)}
-            placeholder="https://"
+            placeholder={t("https://")}
             aria-invalid={Boolean(errors.link)}
           />
           {errors.link ? (
@@ -258,9 +241,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <label
             htmlFor="ca-message"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            About you *
-          </label>
+          >{t("About you *")}</label>
           <textarea
             id="ca-message"
             rows={5}
@@ -269,7 +250,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
             onChange={(event) => update("message", event.target.value)}
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? "ca-message-error" : undefined}
-            placeholder="A short note on your experience, the work you enjoy and what you are looking for."
+            placeholder={t("A short note on your experience, the work you enjoy and what you are looking for.")}
           />
           {errors.message ? (
             <p
@@ -309,19 +290,13 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
       >
         {status === "sending" ? (
           <>
-            <Loader2 size={17} className="animate-spin" />
-            Sending…
-          </>
+            <Loader2 size={17} className="animate-spin" />{t("Sending…")}</>
         ) : (
-          <>
-            Submit application
-            <Send size={16} />
+          <>{t("Submit application")}<Send size={16} />
           </>
         )}
       </button>
-      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">
-        Submissions are stored on our server and reviewed by the hiring team.
-      </p>
+      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Submissions are stored on our server and reviewed by the hiring team.")}</p>
     </form>
   );
 }

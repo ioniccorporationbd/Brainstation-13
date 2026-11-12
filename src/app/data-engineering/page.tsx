@@ -1,4 +1,5 @@
 import React from "react";
+import { getTranslator } from "@/i18n/server";
 import DataEngineeringHeroSection from "./DataEngineeringHeroSection";
 import DataTrustedBySection from "./DataTrustedBySection";
 import DataCoreServicesSection from "./DataCoreServicesSection";

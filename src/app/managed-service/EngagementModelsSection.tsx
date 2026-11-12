@@ -1,4 +1,5 @@
 import { BadgeCheck, Clock3, Layers3, Shuffle } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type EngagementModel = {
   title: string;
@@ -29,19 +30,15 @@ const engagementModels: EngagementModel[] = [
   },
 ];
 
-export default function EngagementModelsSection() {
+export default async function EngagementModelsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Engagement Models Tailored to You
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Engagement Models Tailored to You")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Choose the engagement model that fits your scope, timeline, and
-            budget.
-          </p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Choose the engagement model that fits your scope, timeline, and budget.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -58,11 +55,11 @@ export default function EngagementModelsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {model.title}
+                  {t(model.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {model.description}
+                  {t(model.description)}
                 </p>
               </article>
             );

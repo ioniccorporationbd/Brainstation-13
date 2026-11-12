@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Image from "next/image";
 
 type PluginItem = {
@@ -86,6 +87,7 @@ const plugins: PluginItem[] = [
 ];
 
 export default function MoodleReadyPluginsSection() {
+  const { t } = useTranslation();
   const [active, setActive] = useState<number>(0);
   const plugin = plugins[active];
 
@@ -93,17 +95,11 @@ export default function MoodleReadyPluginsSection() {
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Extensions
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Extensions")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Moodle Ready Plugins
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Moodle Ready Plugins")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Plugins we build, integrate and maintain for Moodle sites.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-2.5">
@@ -128,11 +124,11 @@ export default function MoodleReadyPluginsSection() {
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
             <div>
               <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
-                {plugin.title}
+                {t(plugin.title)}
               </h3>
 
               <p className="mt-4 max-w-[560px] text-[15.5px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">
-                {plugin.description}
+                {t(plugin.description)}
               </p>
             </div>
 

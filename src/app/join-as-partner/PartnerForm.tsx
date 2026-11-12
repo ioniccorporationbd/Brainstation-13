@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
 
 type Values = {
@@ -19,6 +20,7 @@ const field =
   "h-[46px] w-full rounded-lg border border-[#ececec] bg-white px-4 text-[14.5px] text-black outline-none transition focus:border-[#c91f28] focus:ring-2 focus:ring-[#fdecec]";
 
 export default function PartnerForm({ models }: { models: string[] }) {
+  const { t } = useTranslation();
   const [values, setValues] = useState<Values>({
     name: "",
     email: "",
@@ -101,18 +103,10 @@ export default function PartnerForm({ models }: { models: string[] }) {
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={22} />
         </span>
-        <h3 className="mt-4 text-[19px] font-bold text-black">
-          Application received
-        </h3>
-        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-          Thank you. Your interest in the{" "}
-          <strong className="text-black">{values.model}</strong> track has been
-          recorded on our server and the partnerships team will review it.
-        </p>
-        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">
-          Reference: {reference || "—"} &middot; No email is sent automatically
-          because a public mailbox is not configured for this site yet.
-        </p>
+        <h3 className="mt-4 text-[19px] font-bold text-black">{t("Application received")}</h3>
+        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Thank you. Your interest in the")}{" "}
+          <strong className="text-black">{values.model}</strong>{t("track has been recorded on our server and the partnerships team will review it.")}</p>
+        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -129,9 +123,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
             setReference("");
           }}
           className="mt-5 inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-        >
-          Submit another application
-        </button>
+        >{t("Submit another application")}</button>
       </div>
     );
   }
@@ -147,9 +139,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-name"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Full name *
-          </label>
+          >{t("Full name *")}</label>
           <input
             id="jp-name"
             className={`mt-2 ${field}`}
@@ -172,9 +162,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-email"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Work email *
-          </label>
+          >{t("Work email *")}</label>
           <input
             id="jp-email"
             type="email"
@@ -198,9 +186,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-company"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Company *
-          </label>
+          >{t("Company *")}</label>
           <input
             id="jp-company"
             className={`mt-2 ${field}`}
@@ -219,8 +205,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-phone"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Phone <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Phone")}<span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="jp-phone"
@@ -234,9 +219,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-model"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Partnership model *
-          </label>
+          >{t("Partnership model *")}</label>
           <select
             id="jp-model"
             className={`mt-2 ${field}`}
@@ -254,16 +237,15 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-link"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            Company website{" "}
-            <span className="font-normal text-[#6b6f76]">(optional)</span>
+          >{t("Company website")}{" "}
+            <span className="font-normal text-[#6b6f76]">{t("(optional)")}</span>
           </label>
           <input
             id="jp-link"
             className={`mt-2 ${field}`}
             value={values.link}
             onChange={(event) => update("link", event.target.value)}
-            placeholder="https://"
+            placeholder={t("https://")}
             aria-invalid={Boolean(errors.link)}
           />
           {errors.link ? (
@@ -276,9 +258,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <label
             htmlFor="jp-message"
             className="text-[13px] font-semibold text-[#22252a]"
-          >
-            About your business *
-          </label>
+          >{t("About your business *")}</label>
           <textarea
             id="jp-message"
             rows={5}
@@ -287,7 +267,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
             onChange={(event) => update("message", event.target.value)}
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? "jp-message-error" : undefined}
-            placeholder="Who are your clients, what do they need, and how would you like to work together?"
+            placeholder={t("Who are your clients, what do they need, and how would you like to work together?")}
           />
           {errors.message ? (
             <p
@@ -327,20 +307,13 @@ export default function PartnerForm({ models }: { models: string[] }) {
       >
         {status === "sending" ? (
           <>
-            <Loader2 size={17} className="animate-spin" />
-            Sending…
-          </>
+            <Loader2 size={17} className="animate-spin" />{t("Sending…")}</>
         ) : (
-          <>
-            Submit application
-            <Send size={16} />
+          <>{t("Submit application")}<Send size={16} />
           </>
         )}
       </button>
-      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">
-        Applications are stored on our server and reviewed by the partnerships
-        team.
-      </p>
+      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Applications are stored on our server and reviewed by the partnerships team.")}</p>
     </form>
   );
 }

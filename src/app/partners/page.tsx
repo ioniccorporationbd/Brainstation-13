@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,11 +14,13 @@ import {
   Workflow,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Partners | Magnetic Solution Limited",
-  description:
-    "How Magnetic Solution Limited works with platform vendors, technology partners and delivery allies — and how partnership and certification status is confirmed.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Partners | Magnetic Solution Limited"),
+    description: t("How Magnetic Solution Limited works with platform vendors, technology partners and delivery allies — and how partnership and certification status is confirmed."),
+  };
+}
 
 /**
  * Content policy: vendor partnership claims, partner-logo walls and tier
@@ -72,49 +75,37 @@ const principles = [
   },
 ];
 
-export default function PartnersPage() {
+export default async function PartnersPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       {/* Hero */}
       <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              Company · Partners
-            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Partners")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">
-              Partnerships built around the work, not the logo
-            </h1>
+            <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Partnerships built around the work, not the logo")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">
-              Magnetic Solution Limited works with platform vendors, delivery
-              allies and product teams to ship software that holds up in
-              production. Where a formal partnership exists, it is confirmed in
-              writing — not published as decoration.
-            </p>
+            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("Magnetic Solution Limited works with platform vendors, delivery allies and product teams to ship software that holds up in production. Where a formal partnership exists, it is confirmed in writing — not published as decoration.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Discuss a partnership
-                <ArrowRight size={18} />
+              >{t("Discuss a partnership")}<ArrowRight size={18} />
               </Link>
               <Link
                 href="/about-us"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                About the company
-              </Link>
+              >{t("About the company")}</Link>
             </div>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop"
-              alt="Two delivery teams working together in a planning session"
+              alt={t("Two delivery teams working together in a planning session")}
               className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
             />
           </div>
@@ -124,17 +115,9 @@ export default function PartnersPage() {
       {/* Partnership models */}
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Ways we work together
-          </p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            Four partnership models
-          </h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">
-            Each model is a working arrangement, not a marketing tier. The
-            terms, responsibilities and reporting follow what the programme
-            actually needs.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ways we work together")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Four partnership models")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Each model is a working arrangement, not a marketing tier. The terms, responsibilities and reporting follow what the programme actually needs.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {models.map((model) => (
@@ -146,10 +129,10 @@ export default function PartnersPage() {
                   <model.icon size={21} strokeWidth={1.9} />
                 </span>
                 <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
-                  {model.title}
+                  {t(model.title)}
                 </h3>
                 <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
-                  {model.body}
+                  {t(model.body)}
                 </p>
               </article>
             ))}
@@ -161,29 +144,14 @@ export default function PartnersPage() {
       <section className="bg-white px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Ecosystem
-            </p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Where we plug in
-            </h2>
-            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">
-              We integrate with the systems your business already depends on
-              instead of replacing them. The specific vendors, versions and
-              support terms are agreed per project.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ecosystem")}</p>
+            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Where we plug in")}</h2>
+            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">{t("We integrate with the systems your business already depends on instead of replacing them. The specific vendors, versions and support terms are agreed per project.")}</p>
 
             <div className="mt-8 rounded-xl border border-[#ececec] bg-[#fafafa] p-6">
               <h3 className="flex items-center gap-2 text-[15.5px] font-bold text-black">
-                <ShieldCheck size={18} className="text-[#c91f28]" />
-                Verified information only
-              </h3>
-              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                Partner logos, tier levels and certification badges previously
-                published on this page could not be verified, so they are not
-                shown. Ask for the current partner and certification list for a
-                specific platform and you will receive it with documentation.
-              </p>
+                <ShieldCheck size={18} className="text-[#c91f28]" />{t("Verified information only")}</h3>
+              <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Partner logos, tier levels and certification badges previously published on this page could not be verified, so they are not shown. Ask for the current partner and certification list for a specific platform and you will receive it with documentation.")}</p>
             </div>
           </div>
 
@@ -197,7 +165,7 @@ export default function PartnersPage() {
                   <item.icon size={19} strokeWidth={1.9} />
                 </span>
                 <span className="text-[14.5px] font-semibold text-black">
-                  {item.label}
+                  {t(item.label)}
                 </span>
               </div>
             ))}
@@ -208,12 +176,8 @@ export default function PartnersPage() {
       {/* Principles */}
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Ground rules
-          </p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            How we keep partnerships honest
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ground rules")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How we keep partnerships honest")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {principles.map((item) => (
@@ -222,10 +186,10 @@ export default function PartnersPage() {
                 className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
                 <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
-                  {item.body}
+                  {t(item.body)}
                 </p>
               </article>
             ))}
@@ -238,28 +202,19 @@ export default function PartnersPage() {
         <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">
-                Partnering with us on a programme?
-              </h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">
-                Tell us the scope, the platform and who else is involved. We
-                will confirm what we can own and how the interfaces are managed.
-              </p>
+              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Partnering with us on a programme?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("Tell us the scope, the platform and who else is involved. We will confirm what we can own and how the interfaces are managed.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-              >
-                Start a conversation
-                <ArrowRight size={17} />
+              >{t("Start a conversation")}<ArrowRight size={17} />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
-              >
-                Explore services
-              </Link>
+              >{t("Explore services")}</Link>
             </div>
           </div>
         </div>

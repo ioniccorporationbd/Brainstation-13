@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const platforms = [
   { name: "Android", image: "https://cdn.simpleicons.org/android/3DDC84" },
   { name: "iOS", image: "https://cdn.simpleicons.org/apple/000000" },
@@ -11,23 +13,17 @@ const platforms = [
   { name: "Mastercard", image: "https://cdn.simpleicons.org/mastercard/EB001B" },
 ];
 
-export default function WorkedWithSection() {
+export default async function WorkedWithSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Integrations
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Integrations")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Platforms We Build For
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Platforms We Build For")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            App stores, payment providers and platform SDKs our builds
-            integrate with.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("App stores, payment providers and platform SDKs our builds integrate with.")}</p>
         </div>
 
         <div className="group relative mt-10 overflow-hidden border-y border-[#ececec] py-6">

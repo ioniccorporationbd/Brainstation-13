@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { ChevronDown, Plus } from "lucide-react";
 
 type FaqItem = {
@@ -42,6 +43,7 @@ const faqs: FaqItem[] = [
 ];
 
 export default function StaffAugmentationFaqSection() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -51,9 +53,7 @@ export default function StaffAugmentationFaqSection() {
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1000px]">
-        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">
-          Frequently Asked Questions
-        </h2>
+        <h2 className="text-center text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">{t("Frequently Asked Questions")}</h2>
 
         <div className="mt-12">
           {visibleFaqs.map((faq, index) => {
@@ -69,7 +69,7 @@ export default function StaffAugmentationFaqSection() {
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
                   <span className="max-w-[840px] text-[17px] font-semibold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[19px]">
-                    {faq.question}
+                    {t(faq.question)}
                   </span>
 
                   <Plus
@@ -90,7 +90,7 @@ export default function StaffAugmentationFaqSection() {
                 >
                   <div className="overflow-hidden">
                     <p className="max-w-[820px] text-[15px] font-medium leading-[1.7] tracking-[-0.01em] text-[#565656] md:text-[16px]">
-                      {faq.answer}
+                      {t(faq.answer)}
                     </p>
                   </div>
                 </div>
@@ -105,9 +105,7 @@ export default function StaffAugmentationFaqSection() {
               type="button"
               onClick={() => setVisibleCount(faqs.length)}
               className="inline-flex items-center gap-2 rounded-full border border-[#ececec] px-6 py-3 text-[14px] font-semibold tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28]"
-            >
-              Show more questions
-              <ChevronDown size={16} strokeWidth={2} />
+            >{t("Show more questions")}<ChevronDown size={16} strokeWidth={2} />
             </button>
           </div>
         )}

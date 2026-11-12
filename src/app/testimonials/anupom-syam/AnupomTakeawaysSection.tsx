@@ -1,4 +1,5 @@
 import type { ElementType } from "react";
+import { getTranslator } from "@/i18n/server";
 import { Banknote, Lock, Sparkles, Target, Users, Zap } from "lucide-react";
 
 import TestimonialProvenanceNote from "../TestimonialProvenanceNote";
@@ -45,28 +46,17 @@ const facts = [
   { value: "Augmentation", label: "Engagement type" },
 ];
 
-export default function AnupomTakeawaysSection() {
+export default async function AnupomTakeawaysSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[820px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            The engagement
-          </p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            What made the difference
-          </h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The engagement")}</p>
+          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What made the difference")}</h2>
           <div className="mt-5 space-y-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            <p>
-              The engagement blended senior fintech engineers with AI-assisted
-              delivery, letting a lean founding team ship a production platform
-              without building a large in-house department.
-            </p>
-            <p>
-              The points below group the qualities highlighted in the
-              testimonial &mdash; the things that, in the client&rsquo;s words,
-              made the difference.
-            </p>
+            <p>{t("The engagement blended senior fintech engineers with AI-assisted delivery, letting a lean founding team ship a production platform without building a large in-house department.")}</p>
+            <p>{t("The points below group the qualities highlighted in the testimonial — the things that, in the client’s words, made the difference.")}</p>
           </div>
         </div>
 
@@ -82,10 +72,10 @@ export default function AnupomTakeawaysSection() {
                   <Icon size={20} strokeWidth={1.9} />
                 </div>
                 <h3 className="mt-4 text-[16.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
-                  {feature.title}
+                  {t(feature.title)}
                 </h3>
                 <p className="mt-2 text-[14.5px] leading-[1.65] text-[#55585e]">
-                  {feature.description}
+                  {t(feature.description)}
                 </p>
               </article>
             );
@@ -99,7 +89,7 @@ export default function AnupomTakeawaysSection() {
                 {fact.value}
               </dd>
               <dt className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#6b6f76]">
-                {fact.label}
+                {t(fact.label)}
               </dt>
             </div>
           ))}

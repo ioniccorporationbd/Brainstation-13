@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const matters = [
   {
     title: "Reduced Risk Exposure",
@@ -21,20 +23,15 @@ const matters = [
   },
 ];
 
-export default function CyberSecurityMattersSection() {
+export default async function CyberSecurityMattersSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[680px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Why it matters
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Why cyber security matters
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Four outcomes every security programme is measured on.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why it matters")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Why cyber security matters")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Four outcomes every security programme is measured on.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
@@ -48,12 +45,12 @@ export default function CyberSecurityMattersSection() {
                   {index + 1}
                 </span>
                 <h3 className="text-[17.5px] font-bold tracking-[-0.01em] text-black md:text-[19px]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
               </div>
 
               <p className="mt-4 text-[14.5px] leading-[1.75] text-[#55585e] md:text-[15px]">
-                {item.description}
+                {t(item.description)}
               </p>
             </article>
           ))}

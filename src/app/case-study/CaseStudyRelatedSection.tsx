@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -31,31 +32,23 @@ const relatedCaseStudies: RelatedCaseStudy[] = [
   },
 ];
 
-export default function CaseStudyRelatedSection() {
+export default async function CaseStudyRelatedSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1180px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Related Case Studies
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Related Case Studies")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            You Might Also Like
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You Might Also Like")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            Explore more of the products and platforms we have designed and
-            delivered.
-          </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Explore more of the products and platforms we have designed and delivered.")}</p>
 
           <Link
             href="/case-studies"
             className="mt-8 inline-flex rounded-full border border-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
-          >
-            See all Case Studies
-          </Link>
+          >{t("See all Case Studies")}</Link>
         </div>
 
         {/* Cards - 2 per row desktop */}
@@ -82,16 +75,14 @@ export default function CaseStudyRelatedSection() {
                   </span>
 
                   <h3 className="mt-4 text-[21px] font-bold leading-[1.28] tracking-[-0.015em] text-[#0a0a0a]">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                    {item.description}
+                    {t(item.description)}
                   </p>
 
-                  <div className="mt-6 inline-flex items-center gap-2.5 text-[15px] font-bold text-[#c91f28] transition duration-300 group-hover:gap-4">
-                    View Case Study
-                    <ArrowRight size={17} strokeWidth={2} />
+                  <div className="mt-6 inline-flex items-center gap-2.5 text-[15px] font-bold text-[#c91f28] transition duration-300 group-hover:gap-4">{t("View Case Study")}<ArrowRight size={17} strokeWidth={2} />
                   </div>
                 </div>
               </Link>

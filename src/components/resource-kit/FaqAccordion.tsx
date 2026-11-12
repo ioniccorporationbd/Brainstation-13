@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { ChevronDown } from "lucide-react";
 
 export type FaqItem = {
@@ -9,6 +10,7 @@ export type FaqItem = {
 };
 
 export default function FaqAccordion({ items }: { items: FaqItem[] }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -24,7 +26,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               className="flex w-full items-center justify-between gap-6 py-6 text-left"
             >
               <span className="text-[18px] font-semibold tracking-[-0.02em] text-[#0a0a0a] md:text-[20px]">
-                {item.question}
+                {t(item.question)}
               </span>
               <ChevronDown
                 size={22}
@@ -39,7 +41,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               }`}
             >
               <p className="max-w-[780px] text-[16px] leading-[1.65] text-[#565656] md:text-[17px]">
-                {item.answer}
+                {t(item.answer)}
               </p>
             </div>
           </div>

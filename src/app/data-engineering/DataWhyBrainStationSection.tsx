@@ -1,4 +1,5 @@
 import { Cpu, Globe2, Network, TrendingUp } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Feature = {
   title: string;
@@ -33,23 +34,17 @@ const features: Feature[] = [
   },
 ];
 
-export default function DataWhyBrainStationSection() {
+export default async function DataWhyBrainStationSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Why Magnetic
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Magnetic")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Why Magnetic Solution Limited
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Magnetic Solution Limited")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            A data-engineering partner that pairs deep technical depth with a
-            delivery process built for reliability and measurable impact.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A data-engineering partner that pairs deep technical depth with a delivery process built for reliability and measurable impact.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -67,11 +62,11 @@ export default function DataWhyBrainStationSection() {
 
                 <div>
                   <h3 className="text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                    {feature.title}
+                    {t(feature.title)}
                   </h3>
 
                   <p className="mt-2 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                    {feature.description}
+                    {t(feature.description)}
                   </p>
                 </div>
               </article>

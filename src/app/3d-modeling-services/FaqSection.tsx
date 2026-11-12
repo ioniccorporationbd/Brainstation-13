@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import GlobalFaqSection, {
   type FaqItem,
 } from "../../components/global/GlobalFaqSection";
@@ -36,12 +38,13 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function FaqSection() {
+export default async function FaqSection() {
+  const { t } = await getTranslator();
   return (
     <GlobalFaqSection
       eyebrow="FAQ"
-      title="Frequently Asked Questions"
-      subtitle="Get answers to common questions about 3D Modeling and Rendering Services from Magnetic Solution Limited."
+      title={t("Frequently Asked Questions")}
+      subtitle={t("Get answers to common questions about 3D Modeling and Rendering Services from Magnetic Solution Limited.")}
       items={faqs}
       defaultOpen={0}
     />

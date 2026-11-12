@@ -5,6 +5,7 @@ import {
   Layers3,
   ShieldCheck,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type PartnerPoint = {
   title: string;
@@ -45,25 +46,18 @@ const partnerPoints: PartnerPoint[] = [
   },
 ];
 
-export default function TechnologyConsultingPartnerSection() {
+export default async function TechnologyConsultingPartnerSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Heading */}
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Consulting Partnership
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Consulting Partnership")}</p>
 
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] sm:text-[34px] lg:text-[40px]">
-            Why Partner with Magnetic Solution Limited?
-          </h2>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] sm:text-[34px] lg:text-[40px]">{t("Why Partner with Magnetic Solution Limited?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[620px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            We help organizations make better technology decisions with
-            practical guidance, proven delivery models, and enterprise-ready
-            support from strategy to execution.
-          </p>
+          <p className="mx-auto mt-5 max-w-[620px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We help organizations make better technology decisions with practical guidance, proven delivery models, and enterprise-ready support from strategy to execution.")}</p>
         </div>
 
         {/* Cards - 3 per row for 5 items */}
@@ -81,11 +75,11 @@ export default function TechnologyConsultingPartnerSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </article>
             );

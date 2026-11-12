@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -8,11 +9,13 @@ import EducationServicesSection from "./EducationServicesSection";
 import EducationBenefitsSection from "./EducationBenefitsSection";
 import EducationCtaSection from "./EducationCtaSection";
 
-export const metadata: Metadata = {
-  title: "Education Solutions | Magnetic Solution Limited",
-  description:
-    "Learning management, assessment and proctoring, content publishing and learning analytics built by Magnetic Solution Limited for education providers.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return {
+    title: t("Education Solutions | Magnetic Solution Limited"),
+    description: t("Learning management, assessment and proctoring, content publishing and learning analytics built by Magnetic Solution Limited for education providers."),
+  };
+}
 
 const faqs = [
   {
@@ -42,7 +45,8 @@ const faqs = [
   },
 ];
 
-export default function EducationPage() {
+export default async function EducationPage() {
+  const { t } = await getTranslator();
   return (
     <main>
       <EducationHeroSection />
@@ -51,8 +55,8 @@ export default function EducationPage() {
       <EducationBenefitsSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title="Education engagement questions"
-        subtitle="What institutions and EdTech teams usually ask before we start."
+        title={t("Education engagement questions")}
+        subtitle={t("What institutions and EdTech teams usually ask before we start.")}
         items={faqs}
         ctaLabel="Schedule a call"
         ctaHref="/contact"

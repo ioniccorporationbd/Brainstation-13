@@ -6,6 +6,7 @@ import {
   ScanEye,
   Workflow,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Capability = {
   title: string;
@@ -41,24 +42,17 @@ const capabilities: Capability[] = [
   },
 ];
 
-export default function MLAICapabilitiesSection() {
+export default async function MLAICapabilitiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Deliver
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Deliver")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Our AI Capabilities
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our AI Capabilities")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            End-to-end machine learning and AI engineering — from data
-            preparation and model building to deployment, monitoring, and
-            optimization.
-          </p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("End-to-end machine learning and AI engineering — from data preparation and model building to deployment, monitoring, and optimization.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -81,7 +75,7 @@ export default function MLAICapabilitiesSection() {
                 </div>
 
                 <p className="mt-5 text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {capability.title}
+                  {t(capability.title)}
                 </p>
               </article>
             );

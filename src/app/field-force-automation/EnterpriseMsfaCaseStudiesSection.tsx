@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -62,26 +63,23 @@ const caseStudies: CaseStudy[] = [
 ];
 
 export default function EnterpriseMsfaCaseStudiesSection() {
+  const { t } = useTranslation();
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Proven Results
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Proven Results")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">
-            Case Studies
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Case Studies")}</h2>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1140px]">
           <button
             type="button"
             className="case-study-prev absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white md:left-5"
-            aria-label="Previous case study"
+            aria-label={t("Previous case study")}
           >
             <ChevronLeft size={20} strokeWidth={2.2} />
           </button>
@@ -89,7 +87,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
           <button
             type="button"
             className="case-study-next absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white md:right-5"
-            aria-label="Next case study"
+            aria-label={t("Next case study")}
           >
             <ChevronRight size={20} strokeWidth={2.2} />
           </button>
@@ -135,19 +133,17 @@ export default function EnterpriseMsfaCaseStudiesSection() {
 
                   <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 lg:px-12">
                     <h3 className="max-w-[520px] text-[22px] font-bold leading-[1.15] tracking-[-0.02em] text-[#000000] md:text-[30px]">
-                      {item.title}
+                      {t(item.title)}
                     </h3>
 
                     <p className="mt-5 max-w-[560px] text-[14px] font-medium leading-[1.7] text-[#565656] md:text-[16px]">
-                      {item.description}
+                      {t(item.description)}
                     </p>
 
                     <Link
                       href={item.href}
                       className="mt-6 inline-flex w-fit items-center gap-2.5 border border-[#ececec] px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
-                    >
-                      View Case Study
-                      <ArrowRight size={16} strokeWidth={2.2} />
+                    >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
                     </Link>
 
                     <div className="mt-8 h-px w-full bg-[#ececec]" />

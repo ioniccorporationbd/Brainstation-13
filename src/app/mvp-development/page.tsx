@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTranslator } from "@/i18n/server";
 import MvpDevelopmentHeroSection from './MvpDevelopmentHeroSection';
 import MvpIntroSection from './MvpIntroSection';
 import MvpBenefitsSection from './MvpBenefitsSection';

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   BadgeDollarSign,
   Blocks,
@@ -47,23 +48,17 @@ const services = [
   },
 ];
 
-export default function BlockchainCapabilitySection() {
+export default async function BlockchainCapabilitySection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Capabilities
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Turning Blockchain Complexity into Business Capability
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Turning Blockchain Complexity into Business Capability")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Six capability areas across settlement, compliance and tokenized
-            assets.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Six capability areas across settlement, compliance and tokenized assets.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -80,11 +75,11 @@ export default function BlockchainCapabilitySection() {
                 </span>
 
                 <h3 className="mt-5 text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
 
                 <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
-                  {service.description}
+                  {t(service.description)}
                 </p>
               </article>
             );
@@ -92,16 +87,12 @@ export default function BlockchainCapabilitySection() {
         </div>
 
         <div className="mx-auto mt-6 flex max-w-[420px] flex-col items-center rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-10 text-center">
-          <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
-            Have something more specific in mind?
-          </h3>
+          <h3 className="text-[18px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">{t("Have something more specific in mind?")}</h3>
 
           <Link
             href="/contact"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-white transition duration-300 hover:bg-[#a71920]"
-          >
-            Let&apos;s Talk
-          </Link>
+          >{t("Let's Talk")}</Link>
         </div>
       </div>
     </section>

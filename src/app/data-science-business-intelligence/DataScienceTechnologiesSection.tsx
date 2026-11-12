@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 const tech = [
   { name: "Databricks", icon: "https://cdn.simpleicons.org/databricks/c91f28" },
   { name: "Snowflake", icon: "https://cdn.simpleicons.org/snowflake/c91f28" },
@@ -13,23 +15,17 @@ const tech = [
   { name: "Alteryx", icon: null },
 ];
 
-export default function DataScienceTechnologiesSection() {
+export default async function DataScienceTechnologiesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              Stack
-            </p>
-            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-              Technologies &amp; tools
-            </h2>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Stack")}</p>
+            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Technologies & tools")}</h2>
           </div>
-          <p className="max-w-[430px] text-[14.5px] leading-[1.7] text-[#55585e]">
-            A sample of the platforms our data work runs on. Logo use does not
-            imply partnership or certification.
-          </p>
+          <p className="max-w-[430px] text-[14.5px] leading-[1.7] text-[#55585e]">{t("A sample of the platforms our data work runs on. Logo use does not imply partnership or certification.")}</p>
         </div>
 
         <div

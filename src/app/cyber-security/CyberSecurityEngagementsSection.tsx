@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import { ArrowRight, Cloud, Code2, Siren } from "lucide-react";
 
 const engagements = [
@@ -25,21 +26,15 @@ const engagements = [
   },
 ];
 
-export default function CyberSecurityEngagementsSection() {
+export default async function CyberSecurityEngagementsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[700px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            In practice
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Engagements
-          </h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">
-            Representative cloud, API and incident response work &mdash; the
-            methods we apply and the outcomes they produce.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("In practice")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Engagements")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Representative cloud, API and incident response work — the methods we apply and the outcomes they produce.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
@@ -53,21 +48,19 @@ export default function CyberSecurityEngagementsSection() {
               </span>
 
               <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-                {item.tag}
+                {t(item.tag)}
               </p>
               <h3 className="mt-2 text-[18px] font-bold leading-[1.25] tracking-[-0.01em] text-black md:text-[19px]">
-                {item.title}
+                {t(item.title)}
               </h3>
               <p className="mt-3 flex-1 text-[14.5px] leading-[1.7] text-[#55585e]">
-                {item.description}
+                {t(item.description)}
               </p>
 
               <Link
                 href="/schedule-a-call"
                 className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#c91f28] transition-colors duration-200 hover:text-[#a71920]"
-              >
-                Discuss a similar engagement
-                <ArrowRight size={15} />
+              >{t("Discuss a similar engagement")}<ArrowRight size={15} />
               </Link>
             </article>
           ))}

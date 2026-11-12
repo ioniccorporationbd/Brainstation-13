@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -38,30 +39,24 @@ const testimonials = [
 ];
 
 export default function ShopifyTestimonialsSection() {
+  const { t } = useTranslation();
   const reduceMotion = usePrefersReducedMotion();
 
   return (
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Testimonials
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Testimonials")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Trusted for eCommerce Excellence
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Trusted for eCommerce Excellence")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Real feedback from clients who&apos;ve experienced our eCommerce
-            expertise and enterprise-scale support.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Real feedback from clients who've experienced our eCommerce expertise and enterprise-scale support.")}</p>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1080px]">
           <button
             type="button"
-            aria-label="Previous testimonial"
+            aria-label={t("Previous testimonial")}
             className="shopify-testimonial-prev absolute left-[-18px] top-1/2 z-10 hidden -translate-y-1/2 text-[#d0d0d0] transition hover:text-[#c91f28] md:block"
           >
             <ChevronLeft size={34} strokeWidth={2.5} />
@@ -105,7 +100,7 @@ export default function ShopifyTestimonialsSection() {
               <SwiperSlide key={`${item.logoText}-${index}`}>
                 <div className="flex min-h-[210px] flex-col rounded-2xl border border-[#ececec] bg-white px-7 py-8">
                   <p className="flex-1 text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#3f3f3f]">
-                    &quot;{item.quote}&quot;
+                    &quot;{t(item.quote)}&quot;
                   </p>
 
                   <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -130,7 +125,7 @@ export default function ShopifyTestimonialsSection() {
 
           <button
             type="button"
-            aria-label="Next testimonial"
+            aria-label={t("Next testimonial")}
             className="shopify-testimonial-next absolute right-[-18px] top-1/2 z-10 hidden -translate-y-1/2 text-[#d0d0d0] transition hover:text-[#c91f28] md:block"
           >
             <ChevronRight size={34} strokeWidth={2.5} />

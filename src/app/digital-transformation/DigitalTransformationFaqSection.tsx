@@ -1,4 +1,5 @@
 import GlobalFaqSection, { type FaqItem } from "../../components/global/GlobalFaqSection";
+import { getTranslator } from "@/i18n/server";
 
 const faqs: FaqItem[] = [
   {
@@ -28,12 +29,13 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function DigitalTransformationFaqSection() {
+export default async function DigitalTransformationFaqSection() {
+  const { t } = await getTranslator();
   return (
     <GlobalFaqSection
       eyebrow="FAQ"
-      title="Frequently Asked Questions"
-      subtitle="Everything you need to know about our digital transformation engagements."
+      title={t("Frequently Asked Questions")}
+      subtitle={t("Everything you need to know about our digital transformation engagements.")}
       items={faqs}
       defaultOpen={0}
       ctaLabel="Schedule a Call"

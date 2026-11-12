@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type FeatureCard = {
   title: string;
@@ -70,22 +71,16 @@ const cards: FeatureCard[] = [
   },
 ];
 
-export default function BorderlessTechProfessionalsSection() {
+export default async function BorderlessTechProfessionalsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
-        <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">
-          Borderless Talent Advantage
-        </p>
+        <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
-        <h2 className="max-w-[820px] text-[32px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-          Borderless Tech Professionals (BTP)
-        </h2>
+        <h2 className="max-w-[820px] text-[32px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Borderless Tech Professionals (BTP)")}</h2>
 
-        <p className="mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-          Scale faster with pre-vetted engineers, flexible engagement models,
-          local oversight, and risk-free onboarding support.
-        </p>
+        <p className="mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Scale faster with pre-vetted engineers, flexible engagement models, local oversight, and risk-free onboarding support.")}</p>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => {
@@ -101,11 +96,11 @@ export default function BorderlessTechProfessionalsSection() {
                 </div>
 
                 <h3 className="mt-5 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
 
                 <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {card.description}
+                  {t(card.description)}
                 </p>
               </article>
             );

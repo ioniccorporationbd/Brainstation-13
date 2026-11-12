@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import {
   BrainCircuit,
   ClipboardCheck,
@@ -58,32 +59,23 @@ const steps: StepItem[] = [
   },
 ];
 
-export default function ManagedHowItWorksSection() {
+export default async function ManagedHowItWorksSection() {
+  const { t } = await getTranslator();
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         {/* Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Managed Service Process
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Managed Service Process")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            How It Works
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("How It Works")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            We blend human expertise with AI precision to deliver faster
-            outcomes without compromising security, ownership, or delivery
-            quality.
-          </p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, ownership, or delivery quality.")}</p>
 
           <Link
             href="/schedule-a-call"
             className="mt-8 inline-flex rounded-full bg-[#c91f28] px-7 py-3.5 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-          >
-            Schedule a Call
-          </Link>
+          >{t("Schedule a Call")}</Link>
         </div>
 
         {/* Steps */}
@@ -107,11 +99,11 @@ export default function ManagedHowItWorksSection() {
                 </div>
 
                 <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
 
                 <p className="mt-2 text-[13.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </article>
             );

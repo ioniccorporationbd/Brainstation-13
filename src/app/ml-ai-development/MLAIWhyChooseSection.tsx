@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 type Reason = {
   title: string;
@@ -41,24 +42,17 @@ const reasons: Reason[] = [
   },
 ];
 
-export default function MLAIWhyChooseSection() {
+export default async function MLAIWhyChooseSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Why Magnetic
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Magnetic")}</p>
 
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px]">
-            Why Choose Magnetic Solution Limited for Machine Learning
-            Development?
-          </h2>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px]">{t("Why Choose Magnetic Solution Limited for Machine Learning Development?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[660px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            A team that pairs deep data-science expertise with a delivery process
-            built for reliability, security, and measurable business impact.
-          </p>
+          <p className="mx-auto mt-5 max-w-[660px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A team that pairs deep data-science expertise with a delivery process built for reliability, security, and measurable business impact.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -75,7 +69,7 @@ export default function MLAIWhyChooseSection() {
                 </div>
 
                 <p className="text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-                  {reason.title}
+                  {t(reason.title)}
                 </p>
               </article>
             );

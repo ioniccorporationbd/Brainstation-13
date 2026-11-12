@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { ChevronDown, CircleCheck } from "lucide-react";
 
 type DeliverItem = {
@@ -66,6 +67,7 @@ const deliverItems: DeliverItem[] = [
 ];
 
 export default function InsuranceWhatWeDeliverSection() {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
@@ -73,18 +75,11 @@ export default function InsuranceWhatWeDeliverSection() {
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
         {/* Left title */}
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Deliverables
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Deliverables")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            What We Deliver
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Deliver")}</h2>
 
-          <p className="mt-5 max-w-[340px] text-[15.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
-            Six production modules that cover the insurance lifecycle, from
-            claim intake to customer self-service.
-          </p>
+          <p className="mt-5 max-w-[340px] text-[15.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
         </div>
 
         {/* Right accordion */}
@@ -106,7 +101,7 @@ export default function InsuranceWhatWeDeliverSection() {
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors duration-300 sm:px-6 sm:py-5"
                 >
                   <span className="text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a] sm:text-[17px]">
-                    {item.title}
+                    {t(item.title)}
                   </span>
 
                   <span

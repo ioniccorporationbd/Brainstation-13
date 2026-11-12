@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import {
   Bot,
   CheckCircle2,
@@ -34,22 +36,17 @@ const services = [
   },
 ];
 
-export default function OfferedServicesSection() {
+export default async function OfferedServicesSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            What We Can Do
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            Offered Services
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            Five testing disciplines, one dedicated QA team working on-demand.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Five testing disciplines, one dedicated QA team working on-demand.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -78,11 +75,11 @@ export default function OfferedServicesSection() {
                 </span>
 
                 <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
 
                 <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#565656]">
-                  {service.desc}
+                  {t(service.desc)}
                 </p>
               </article>
             );

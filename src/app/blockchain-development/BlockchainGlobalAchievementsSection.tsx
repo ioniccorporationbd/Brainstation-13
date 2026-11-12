@@ -4,6 +4,7 @@ import {
   Search,
   ShieldCheck,
 } from "lucide-react";
+import { getTranslator } from "@/i18n/server";
 
 const steps = [
   {
@@ -32,23 +33,17 @@ const steps = [
   },
 ];
 
-export default function BlockchainGlobalAchievementsSection() {
+export default async function BlockchainGlobalAchievementsSection() {
+  const { t } = await getTranslator();
   return (
     <section className="w-full bg-[#fafafa] px-6 pb-[88px] pt-[88px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Our Process
-          </p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our Process")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            How We Deliver Blockchain Projects
-          </h2>
+          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("How We Deliver Blockchain Projects")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">
-            A four-stage delivery path from process mapping to managed
-            operations.
-          </p>
+          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A four-stage delivery path from process mapping to managed operations.")}</p>
         </div>
 
         <div className="relative mt-12">
@@ -68,17 +63,16 @@ export default function BlockchainGlobalAchievementsSection() {
                       <Icon size={19} strokeWidth={2.1} />
                     </span>
 
-                    <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                      Step {String(index + 1).padStart(2, "0")}
+                    <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Step")}{String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 
                   <h3 className="mt-5 text-[16.5px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                    {step.title}
+                    {t(step.title)}
                   </h3>
 
                   <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#565656]">
-                    {step.description}
+                    {t(step.description)}
                   </p>
                 </article>
               );

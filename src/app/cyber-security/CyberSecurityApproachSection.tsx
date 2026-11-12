@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslator } from "@/i18n/server";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
@@ -29,29 +30,21 @@ const steps = [
   },
 ];
 
-export default function CyberSecurityApproachSection() {
+export default async function CyberSecurityApproachSection() {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              How we work
-            </p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-              Our security approach
-            </h2>
-            <p className="mt-4 max-w-[460px] text-[15.5px] leading-[1.75] text-[#55585e]">
-              A five-stage engagement that moves from scoping to verified
-              remediation, with evidence at every step.
-            </p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How we work")}</p>
+            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Our security approach")}</h2>
+            <p className="mt-4 max-w-[460px] text-[15.5px] leading-[1.75] text-[#55585e]">{t("A five-stage engagement that moves from scoping to verified remediation, with evidence at every step.")}</p>
 
             <Link
               href="/schedule-a-call"
               className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3 text-[14.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
-            >
-              Schedule a Call
-              <ArrowRight size={17} />
+            >{t("Schedule a Call")}<ArrowRight size={17} />
             </Link>
           </div>
 
@@ -67,10 +60,10 @@ export default function CyberSecurityApproachSection() {
 
                 <div>
                   <h3 className="text-[16.5px] font-semibold leading-[1.3] text-black md:text-[17.5px]">
-                    {item.title}
+                    {t(item.title)}
                   </h3>
                   <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#55585e]">
-                    {item.description}
+                    {t(item.description)}
                   </p>
                 </div>
               </li>

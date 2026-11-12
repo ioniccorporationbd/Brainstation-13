@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 type TechnologyItem = {
   name: string;
   logo: string;
@@ -28,20 +30,14 @@ const technologies: TechnologyItem[] = [
 ];
 
 export default function CloudSolutionsTechnologiesSection() {
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden bg-white px-0 pb-[88px] md:pb-[104px]">
       <div className="mx-auto max-w-[1240px] px-6">
         <div className="text-center">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Our stack
-          </p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">
-            Platforms and tooling we build on
-          </h2>
-          <p className="mx-auto mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e]">
-            The platforms and open-source tools that appear most often in the
-            cloud estates we design and operate.
-          </p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our stack")}</p>
+          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Platforms and tooling we build on")}</h2>
+          <p className="mx-auto mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e]">{t("The platforms and open-source tools that appear most often in the cloud estates we design and operate.")}</p>
         </div>
       </div>
 

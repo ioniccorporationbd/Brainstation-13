@@ -1,3 +1,5 @@
+import { getTranslator } from "@/i18n/server";
+
 import GlobalFaqSection, {
   type FaqItem,
 } from "../../components/global/GlobalFaqSection";
@@ -30,12 +32,13 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function WebMobileFaqSection() {
+export default async function WebMobileFaqSection() {
+  const { t } = await getTranslator();
   return (
     <GlobalFaqSection
       eyebrow="FAQ"
-      title="Frequently Asked Questions"
-      subtitle="Get answers to common questions about mobile app development and our delivery process."
+      title={t("Frequently Asked Questions")}
+      subtitle={t("Get answers to common questions about mobile app development and our delivery process.")}
       items={faqs}
       defaultOpen={0}
       ctaLabel="Book a Meeting"

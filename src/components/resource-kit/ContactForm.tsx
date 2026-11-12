@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import { CheckCircle2, Send } from "lucide-react";
 
 type Field = { id: string; label: string };
@@ -13,6 +14,7 @@ const textFields: Field[] = [
 ];
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
@@ -21,20 +23,13 @@ export default function ContactForm() {
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#eaf7ef] text-[#2e9e5b]">
           <CheckCircle2 size={34} strokeWidth={1.8} />
         </span>
-        <h3 className="mt-6 text-[24px] font-semibold tracking-[-0.03em] text-[#0a0a0a]">
-          Thank you for reaching out
-        </h3>
-        <p className="mt-3 max-w-[420px] text-[16px] leading-[1.6] text-[#565656]">
-          Your message has been recorded. A member of our team will get back to
-          you within one business day.
-        </p>
+        <h3 className="mt-6 text-[24px] font-semibold tracking-[-0.03em] text-[#0a0a0a]">{t("Thank you for reaching out")}</h3>
+        <p className="mt-3 max-w-[420px] text-[16px] leading-[1.6] text-[#565656]">{t("Your message has been recorded. A member of our team will get back to you within one business day.")}</p>
         <button
           type="button"
           onClick={() => setSubmitted(false)}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#c91f28] px-7 py-3 text-[15px] font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
-        >
-          Send another message
-        </button>
+        >{t("Send another message")}</button>
       </div>
     );
   }
@@ -54,7 +49,7 @@ export default function ContactForm() {
               htmlFor={field.id}
               className="text-[14px] font-semibold text-[#0a0a0a]"
             >
-              {field.label}
+              {t(field.label)}
             </label>
             <input
               id={field.id}
@@ -72,25 +67,21 @@ export default function ContactForm() {
         <label
           htmlFor="message"
           className="text-[14px] font-semibold text-[#0a0a0a]"
-        >
-          How can we help?
-        </label>
+        >{t("How can we help?")}</label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
           className="rounded-[8px] border border-[#ececec] bg-[#ffffff] px-4 py-3 text-[15px] text-[#0a0a0a] outline-none transition focus:border-[#c91f28] focus:bg-white focus:ring-2 focus:ring-[#ececec]"
-          placeholder="Tell us about your project or inquiry"
+          placeholder={t("Tell us about your project or inquiry")}
         />
       </div>
 
       <button
         type="submit"
         className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#141414] hover:shadow-[0_14px_30px_rgba(0,0,0,0.25)]"
-      >
-        Send Message
-        <Send size={17} strokeWidth={2.1} />
+      >{t("Send Message")}<Send size={17} strokeWidth={2.1} />
       </button>
     </form>
   );
