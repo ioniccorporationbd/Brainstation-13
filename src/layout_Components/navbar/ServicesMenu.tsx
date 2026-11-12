@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -80,12 +84,13 @@ const enterpriseLinks: MenuLinkItem[] = [
 ];
 
 export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
+  const { t } = useTranslation();
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Collaboration Model" links={collaborationLinks} closeMenu={closeMenu} />
-        <MobileGroup title="Top Services" links={[...topServices, ...serviceColumnTwo]} closeMenu={closeMenu} />
-        <MobileGroup title="Enterprise Focused" links={enterpriseLinks} closeMenu={closeMenu} />
+        <MobileGroup title={t("Collaboration Model")} links={collaborationLinks} closeMenu={closeMenu} />
+        <MobileGroup title={t("Top Services")} links={[...topServices, ...serviceColumnTwo]} closeMenu={closeMenu} />
+        <MobileGroup title={t("Enterprise Focused")} links={enterpriseLinks} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -95,12 +100,8 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[489px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,60px)] pr-[clamp(20px,2.4vw,56px)] pt-[31px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
-              Collaboration Models
-            </h2>
-            <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              AI-accelerated delivery — up to 10X faster.
-            </p>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("Collaboration Models")}</h2>
+            <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("AI-accelerated delivery — up to 10X faster.")}</p>
           </div>
 
           <div className="mt-[19px] space-y-[15px]">
@@ -114,15 +115,14 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
               href="/case-study"
               onClick={closeMenu}
               className="inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-primary"
-            >
-              View Case Study <span className="text-[22px] font-normal leading-none">→</span>
+            >{t("View Case Study")}<span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
         </aside>
 
         <div className="grid grid-cols-[repeat(3,minmax(0,1fr))] gap-x-[clamp(16px,2.6vw,60px)] bg-white px-[clamp(18px,3vw,58px)] pb-[40px] pt-[33px]">
           <div className="min-w-0">
-            <ColumnTitle href="/services" closeMenu={closeMenu}>Top Services</ColumnTitle>
+            <ColumnTitle href="/services" closeMenu={closeMenu}>{t("Top Services")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {topServices.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -132,8 +132,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
               href="/services"
               onClick={closeMenu}
               className="mt-[64px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-primary"
-            >
-              All Services <span className="text-[22px] font-normal leading-none">→</span>
+            >{t("All Services")}<span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
 
@@ -146,7 +145,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
           </div>
 
           <div className="min-w-0">
-            <ColumnTitle href="/enterprise-grade-security" closeMenu={closeMenu}>Enterprise Focused</ColumnTitle>
+            <ColumnTitle href="/enterprise-grade-security" closeMenu={closeMenu}>{t("Enterprise Focused")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {enterpriseLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -168,6 +167,7 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const { t } = useTranslation();
   const Icon = item.icon;
   return (
     <Link
@@ -178,12 +178,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
       <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-primary">
         <Icon size={16} strokeWidth={1.9} />
       </span>
-      <span className="min-w-0 break-words">{item.label}</span>
+      <span className="min-w-0 break-words">{t(item.label)}</span>
     </Link>
   );
 }
 
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
+  const { t } = useTranslation();
   return (
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
@@ -195,7 +196,7 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
               <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
-              <span className="min-w-0 break-words">{item.label}</span>
+              <span className="min-w-0 break-words">{t(item.label)}</span>
             </Link>
           );
         })}

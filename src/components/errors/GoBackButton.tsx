@@ -4,12 +4,15 @@ import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 /**
  * Returns the user to the previous page when the tab has history, otherwise to
  * the homepage — the same behaviour required on every error surface.
  */
 export default function GoBackButton({ className }: { className?: string }) {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const goBack = () => {
     if (typeof window !== "undefined" && window.history.length > 1) {
@@ -29,7 +32,7 @@ export default function GoBackButton({ className }: { className?: string }) {
       }
     >
       <ArrowLeft size={17} />
-      Go Back
+      {t("Go Back")}
     </button>
   );
 }

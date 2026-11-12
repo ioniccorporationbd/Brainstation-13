@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -64,14 +68,15 @@ const testimonialLinks: MenuLinkItem[] = [
 ];
 
 export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
+  const { t } = useTranslation();
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Education" links={education} closeMenu={closeMenu} />
-        <MobileGroup title="LMS" links={lms} closeMenu={closeMenu} disabled />
-        <MobileGroup title="AI Solution" links={aiSolution} closeMenu={closeMenu} disabled />
-        <MobileGroup title="Healthcare" links={healthcare} closeMenu={closeMenu} disabled />
-        <MobileGroup title="Fintech" links={fintech} closeMenu={closeMenu} disabled />
+        <MobileGroup title={t("Education")} links={education} closeMenu={closeMenu} />
+        <MobileGroup title={t("LMS")} links={lms} closeMenu={closeMenu} disabled />
+        <MobileGroup title={t("AI Solution")} links={aiSolution} closeMenu={closeMenu} disabled />
+        <MobileGroup title={t("Healthcare")} links={healthcare} closeMenu={closeMenu} disabled />
+        <MobileGroup title={t("Fintech")} links={fintech} closeMenu={closeMenu} disabled />
       </div>
     );
   }
@@ -81,21 +86,15 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[466px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,51px)] pr-[clamp(20px,2.4vw,60px)] pt-[40px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
-              Products
-            </h2>
-            <p className="mt-[13px] max-w-[500px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              Purpose-built products for fintech, healthcare, learning and education — engineered to scale.
-            </p>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("Products")}</h2>
+            <p className="mt-[13px] max-w-[500px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("Purpose-built products for fintech, healthcare, learning and education — engineered to scale.")}</p>
           </div>
 
           <div className="mt-[39px] border-t border-[#d5d5d5] pt-[22px]">
-            <ColumnTitle>Testimonials</ColumnTitle>
+            <ColumnTitle>{t("Testimonials")}</ColumnTitle>
 
             <p className="mt-[14px] flex items-center gap-[10px] text-[13px] font-medium text-[#5f6674]">
-              <span className="text-[15px] leading-none text-[#f04438]">★★★★★</span>
-              Rated 5.0 on Clutch
-            </p>
+              <span className="text-[15px] leading-none text-[#f04438]">★★★★★</span>{t("Rated 5.0 on Clutch")}</p>
 
             <div className="mt-[18px] space-y-[15px]">
               {testimonialLinks.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
@@ -106,20 +105,20 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
         <div className="grid grid-cols-2 gap-x-[48px] bg-white px-[clamp(18px,3vw,56px)] pb-[40px] pt-[40px]">
           {/* Column 1 — Education (active) + LMS, AI Solution (disabled) */}
           <div className="min-w-0">
-            <ColumnTitle>Education</ColumnTitle>
+            <ColumnTitle>{t("Education")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
-              {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
+              {education.map((item) => <TextLink key={t(item.label)} item={item} closeMenu={closeMenu} />)}
             </div>
 
             <div className="mt-[26px]">
-              <ColumnTitle disabled>LMS</ColumnTitle>
+              <ColumnTitle disabled>{t("LMS")}</ColumnTitle>
               <div className="mt-[23px] space-y-[15px]">
                 {lms.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
               </div>
             </div>
 
             <div className="mt-[26px]">
-              <ColumnTitle disabled>AI Solution</ColumnTitle>
+              <ColumnTitle disabled>{t("AI Solution")}</ColumnTitle>
               <div className="mt-[23px] space-y-[15px]">
                 {aiSolution.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
               </div>
@@ -128,13 +127,13 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
 
           {/* Column 2 — Healthcare, Fintech (disabled) */}
           <div className="min-w-0">
-            <ColumnTitle disabled>Healthcare</ColumnTitle>
+            <ColumnTitle disabled>{t("Healthcare")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {healthcare.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
             </div>
 
             <div className="mt-[26px]">
-              <ColumnTitle disabled>Fintech</ColumnTitle>
+              <ColumnTitle disabled>{t("Fintech")}</ColumnTitle>
               <div className="mt-[23px] space-y-[15px]">
                 {fintech.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} disabled />)}
               </div>
@@ -161,6 +160,7 @@ function ColumnTitle({ children, disabled = false }: { children: ReactNode; disa
 }
 
 function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; closeMenu: () => void; disabled?: boolean }) {
+  const { t } = useTranslation();
   const Icon = item.icon;
   const isPlaceholder = item.placeholder || !item.href;
 
@@ -176,7 +176,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
         <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary">
           <Icon size={16} strokeWidth={1.9} />
         </span>
-        <span className="flex items-center gap-[6px]">{item.label}</span>
+        <span className="flex items-center gap-[6px]">{t(item.label)}</span>
       </a>
     );
   }
@@ -188,7 +188,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
           <Icon size={16} strokeWidth={1.9} />
         </span>
         <span className="flex items-center gap-[8px]">
-          {item.label}
+          {t(item.label)}
           {item.note ? <span className="rounded-full bg-[#eef1f5] px-[8px] py-[1px] text-[11px] font-semibold uppercase tracking-[0.04em] text-[#8a94a3]">{item.note}</span> : null}
         </span>
       </div>
@@ -208,7 +208,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
         <Icon size={16} strokeWidth={1.9} />
       </span>
       <span className="flex items-center gap-[6px]">
-        {item.label}
+        {t(item.label)}
         {external ? <ExternalLink size={13} strokeWidth={2.2} className="text-[#9aa3af] transition-colors group-hover:text-primary" /> : null}
       </span>
     </Link>
@@ -216,6 +216,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
 }
 
 function MobileGroup({ title, links, closeMenu, disabled = false }: { title: string; links: MenuLinkItem[]; closeMenu: () => void; disabled?: boolean }) {
+  const { t } = useTranslation();
   return (
     <div>
       <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-primary"}`}>{title}</p>
@@ -230,7 +231,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
                 <Icon size={14} strokeWidth={1.9} />
               </span>
               <span className="flex items-center gap-[6px]">
-                {item.label}
+                {t(item.label)}
                 {external ? <ExternalLink size={12} strokeWidth={2.2} className="text-[#9aa3af]" /> : null}
                 {item.note ? <span className="rounded-full bg-[#eef1f5] px-[7px] py-[1px] text-[10px] font-semibold uppercase tracking-[0.04em] text-[#8a94a3]">{item.note}</span> : null}
               </span>
@@ -240,7 +241,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
           if (disabled) {
             return (
               <a
-                key={item.label}
+                key={t(item.label)}
                 href="#"
                 aria-disabled="true"
                 onClick={(e) => { e.preventDefault(); }}
@@ -253,7 +254,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
 
           if (isPlaceholder) {
             return (
-              <div key={item.label} className="flex cursor-default items-center gap-[10px] text-[15px] font-medium text-[#9aa3af]">
+              <div key={t(item.label)} className="flex cursor-default items-center gap-[10px] text-[15px] font-medium text-[#9aa3af]">
                 {inner}
               </div>
             );
@@ -261,7 +262,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
 
           return (
             <Link
-              key={item.label}
+              key={t(item.label)}
               href={item.href as string}
               onClick={closeMenu}
               target={external ? "_blank" : undefined}

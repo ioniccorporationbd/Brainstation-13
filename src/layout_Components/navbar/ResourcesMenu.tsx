@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -50,12 +54,13 @@ const connectLinks: MenuLinkItem[] = [
 ];
 
 export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
+  const { t } = useTranslation();
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Company" links={companyLinks} closeMenu={closeMenu} />
-        <MobileGroup title="Resources" links={resourceLinks} closeMenu={closeMenu} />
-        <MobileGroup title="Careers & Contact" links={connectLinks} closeMenu={closeMenu} />
+        <MobileGroup title={t("Company")} links={companyLinks} closeMenu={closeMenu} />
+        <MobileGroup title={t("Resources")} links={resourceLinks} closeMenu={closeMenu} />
+        <MobileGroup title={t("Careers & Contact")} links={connectLinks} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -65,16 +70,12 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[466px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,51px)] pr-[clamp(20px,2.4vw,60px)] pt-[40px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
-              About Magnetic Solution Limited
-            </h2>
-            <p className="mt-[13px] max-w-[260px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              A global software company since 2006, powering digital transformation.
-            </p>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("About Magnetic Solution Limited")}</h2>
+            <p className="mt-[13px] max-w-[260px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("A global software company since 2006, powering digital transformation.")}</p>
           </div>
 
           <div className="mt-[32px] border-t border-[#d5d5d5] pt-[22px]">
-            <ColumnTitle>Company</ColumnTitle>
+            <ColumnTitle>{t("Company")}</ColumnTitle>
             <div className="mt-[18px] space-y-[15px]">
               {companyLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -85,7 +86,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
 
         <div className="grid grid-cols-2 gap-x-[60px] bg-white px-[clamp(18px,3vw,56px)] pb-[40px] pt-[40px]">
           <div className="min-w-0">
-            <ColumnTitle>Resources</ColumnTitle>
+            <ColumnTitle>{t("Resources")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {resourceLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -94,7 +95,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
           </div>
 
           <div className="min-w-0">
-            <ColumnTitle>Careers &amp; Contact</ColumnTitle>
+            <ColumnTitle>{t("Careers & Contact")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {connectLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -116,6 +117,7 @@ function ColumnTitle({ children }: { children: ReactNode }) {
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const { t } = useTranslation();
   const Icon = item.icon;
   return (
     <Link
@@ -126,12 +128,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
       <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-primary">
         <Icon size={16} strokeWidth={1.9} />
       </span>
-      <span>{item.label}</span>
+      <span>{t(item.label)}</span>
     </Link>
   );
 }
 
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
+  const { t } = useTranslation();
   return (
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
@@ -143,7 +146,7 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
               <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
-              <span>{item.label}</span>
+              <span>{t(item.label)}</span>
             </Link>
           );
         })}

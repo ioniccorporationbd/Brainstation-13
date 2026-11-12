@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -105,6 +106,7 @@ export default function ErrorPage({
    *  convention such as error.tsx cannot export metadata itself). */
   emitHead?: boolean;
 }) {
+  const { t } = useTranslation();
   useErrorPageFlag();
 
   const def = DEFINITIONS[code];
@@ -120,7 +122,7 @@ export default function ErrorPage({
       <script dangerouslySetInnerHTML={{ __html: bootstrap }} />
       {emitHead ? (
         <>
-          <title>{`${def.title} | Magnetic Solution Limited`}</title>
+          <title>{`${t(def.title)} | Magnetic Solution Limited`}</title>
           <meta name="robots" content="noindex, nofollow" />
         </>
       ) : null}
@@ -145,12 +147,12 @@ export default function ErrorPage({
         <div className="mx-auto flex max-w-[720px] flex-col items-center text-center">
           <Link
             href="/"
-            aria-label="Magnetic Solution Limited — Home"
+            aria-label={t("Magnetic Solution Limited — Home")}
             className="nf-fade inline-flex items-center justify-center"
           >
             <Image
               src="/images/brand/magnetic-logo.png"
-              alt="Magnetic Solution Limited"
+              alt={t("Magnetic Solution Limited")}
               width={190}
               height={198}
               priority
@@ -158,8 +160,7 @@ export default function ErrorPage({
             />
           </Link>
 
-          <span className="nf-fade mt-8 inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-            Error {code}
+          <span className="nf-fade mt-8 inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Error")}{code}
           </span>
 
           <span
@@ -183,11 +184,11 @@ export default function ErrorPage({
           </div>
 
           <h1 className="nf-rise mt-6 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
-            {def.heading}
+            {t(def.heading)}
           </h1>
 
           <p className="nf-rise mt-4 max-w-[540px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
-            {def.description}
+            {t(def.description)}
           </p>
 
           <div className="nf-rise mt-9 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center">
@@ -203,17 +204,13 @@ export default function ErrorPage({
                     onClick={onRetry}
                     className={primary}
                   >
-                    <RefreshCw size={17} />
-                    Try Again
-                  </button>
+                    <RefreshCw size={17} />{t("Try Again")}</button>
                 );
               }
               if (action === "home") {
                 return (
                   <Link key="home" href="/" className={primary}>
-                    <Home size={17} />
-                    Back to Home
-                  </Link>
+                    <Home size={17} />{t("Back to Home")}</Link>
                 );
               }
               if (action === "services") {
@@ -222,18 +219,14 @@ export default function ErrorPage({
                     key="services"
                     href="/services"
                     className={secondaryBtn}
-                  >
-                    Explore Services
-                    <ArrowRight size={17} />
+                  >{t("Explore Services")}<ArrowRight size={17} />
                   </Link>
                 );
               }
               if (action === "support") {
                 return (
                   <Link key="support" href="/contact" className={primary}>
-                    <LifeBuoy size={17} />
-                    Contact Support
-                  </Link>
+                    <LifeBuoy size={17} />{t("Contact Support")}</Link>
                 );
               }
               return <GoBackButton key="goback" className={primary} />;
@@ -242,9 +235,7 @@ export default function ErrorPage({
 
           {withPopular ? (
             <div className="nf-fade mt-11 w-full rounded-2xl border border-[#ececec] bg-[#fafafa] px-6 py-7 text-left md:px-8">
-              <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-                Popular pages
-              </p>
+              <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Popular pages")}</p>
               <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-4">
                 {popular.map((item) => (
                   <Link
@@ -252,7 +243,7 @@ export default function ErrorPage({
                     href={item.href}
                     className="group flex items-center justify-between gap-2 whitespace-nowrap rounded-lg border border-[#ececec] bg-white px-3.5 py-3 text-[13.5px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28]/50"
                   >
-                    <span>{item.label}</span>
+                    <span>{t(item.label)}</span>
                     <ArrowRight
                       size={15}
                       className="shrink-0 text-[#8a8f98] transition-colors duration-200 group-hover:text-[#c91f28]"
@@ -263,14 +254,10 @@ export default function ErrorPage({
             </div>
           ) : (
             <p className="nf-fade mt-9 flex flex-wrap items-center justify-center gap-2 text-[13.5px] leading-[1.7] text-[#8a8f98]">
-              <LifeBuoy size={15} className="shrink-0 text-[#c91f28]" />
-              Need help with this error?
-              <Link
+              <LifeBuoy size={15} className="shrink-0 text-[#c91f28]" />{t("Need help with this error?")}<Link
                 href="/contact"
                 className="font-semibold text-black underline decoration-[#c91f28] decoration-2 underline-offset-4 transition-colors hover:text-[#c91f28]"
-              >
-                contact our team
-              </Link>
+              >{t("contact our team")}</Link>
             </p>
           )}
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 
 const industriesLeft = [
@@ -150,27 +151,21 @@ const recognizedItems = [
   },
 ];
 
-export default function Footer() {
+export default async function Footer() {
+  const { t } = await getTranslator();
   return (
     <footer className="relative overflow-hidden border-t-[4px] border-[#C91F28] bg-black text-white">
       {/* CTA Card */}
       <div className="mx-auto w-full max-w-[1400px] px-5 pt-[60px] sm:px-8 xl:px-0">
         <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[14px] border border-white/10 bg-[#0A0A0A] px-6 py-10 text-center">
-          <h2 className="text-[32px] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">
-            Ready to Scale Your Team?
-          </h2>
+          <h2 className="text-[32px] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">{t("Ready to Scale Your Team?")}</h2>
 
-          <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-white/70 sm:text-[16px] md:text-[17px]">
-            Let’s discuss how our resource augmentation and AI-powered
-            development can accelerate your project delivery.
-          </p>
+          <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-white/70 sm:text-[16px] md:text-[17px]">{t("Let’s discuss how our resource augmentation and AI-powered development can accelerate your project delivery.")}</p>
 
           <Link
             href="/schedule-a-call"
             className="mt-[32px] inline-flex h-[40px] items-center justify-center rounded-full bg-[#C91F28] px-[26px] text-[13px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
-          >
-            Schedule a Call
-          </Link>
+          >{t("Schedule a Call")}</Link>
         </section>
       </div>
 
@@ -181,12 +176,12 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              aria-label="Magnetic Solution Limited — Home"
+              aria-label={t("Magnetic Solution Limited — Home")}
               className="inline-flex rounded-xl bg-white px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-transform duration-200 hover:scale-[1.02]"
             >
               <Image
                 src="/images/brand/magnetic-logo.png"
-                alt="Magnetic Solution Limited"
+                alt={t("Magnetic Solution Limited")}
                 width={502}
                 height={522}
                 className="h-[92px] w-auto object-contain"
@@ -194,11 +189,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-[22px] max-w-[320px] text-[14px] font-normal leading-[21px] text-white/70">
-              AI-ready software service company specializing in resource
-              augmentation. We deliver 10X faster solutions for startups, SMEs,
-              and Enterprises across Fintech, Pharma, Retail & Distribution.
-            </p>
+            <p className="mt-[22px] max-w-[320px] text-[14px] font-normal leading-[21px] text-white/70">{t("AI-ready software service company specializing in resource augmentation. We deliver 10X faster solutions for startups, SMEs, and Enterprises across Fintech, Pharma, Retail & Distribution.")}</p>
 
             <div className="mt-[22px] flex items-center gap-[24px]">
               {socialItems.map((item) => (
@@ -223,7 +214,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <FooterTitle>Industries</FooterTitle>
+            <FooterTitle>{t("Industries")}</FooterTitle>
 
             <div className="mt-[21px] grid grid-cols-2 gap-x-[45px] gap-y-[14px] sm:gap-x-[90px]">
               <FooterLinks links={industriesLeft} />
@@ -233,7 +224,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <FooterTitle>Company</FooterTitle>
+            <FooterTitle>{t("Company")}</FooterTitle>
 
             <div className="mt-[21px]">
               <FooterLinks links={companyLinks} />
@@ -242,7 +233,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <FooterTitle>Resources</FooterTitle>
+            <FooterTitle>{t("Resources")}</FooterTitle>
 
             <div className="mt-[21px]">
               <FooterLinks links={resourceLinks} />
@@ -254,9 +245,7 @@ export default function Footer() {
         <section className="mt-[34px] border-t border-white/10 pt-[31px]">
           <div className="grid gap-10 lg:grid-cols-[410px_1fr] lg:gap-[90px]">
             <div>
-              <p className="text-[13px] font-semibold text-white">
-                Compliance:
-              </p>
+              <p className="text-[13px] font-semibold text-white">{t("Compliance:")}</p>
 
               <div className="mt-[24px] grid grid-cols-4 gap-[24px] max-[420px]:grid-cols-2">
                 {complianceItems.map((item, index) => (
@@ -283,9 +272,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-[13px] font-semibold text-white">
-                Partnerships:
-              </p>
+              <p className="text-[13px] font-semibold text-white">{t("Partnerships:")}</p>
 
               <div className="mt-[25px] grid grid-cols-2 items-center gap-x-[45px] gap-y-[25px] sm:grid-cols-3 lg:gap-x-[70px] xl:grid-cols-5">
                 {partnerItems.map((item) => (
@@ -305,9 +292,7 @@ export default function Footer() {
 
         {/* Recognized */}
         <section className="mt-[34px] border-t border-white/10 pt-[31px]">
-          <p className="text-[13px] font-semibold text-white">
-            Recognized by:
-          </p>
+          <p className="text-[13px] font-semibold text-white">{t("Recognized by:")}</p>
 
           <div className="mt-[25px] grid grid-cols-2 items-center gap-x-[45px] gap-y-8 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-[80px]">
             {recognizedItems.map((item) => (
@@ -325,13 +310,9 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <section className="mt-[35px] flex flex-col gap-5 border-t border-white/10 pt-[31px] md:flex-row md:items-center md:justify-between">
-          <p className="text-[13px] font-medium text-white/80">
-            © 2026 Magnetic Solution Limited. All rights reserved.
-          </p>
+          <p className="text-[13px] font-medium text-white/80">{t("© 2026 Magnetic Solution Limited. All rights reserved.")}</p>
 
-          <span className="text-[13px] font-medium text-white/60 transition-colors duration-200 hover:text-[#C91F28]">
-            Privacy Policy
-          </span>
+          <span className="text-[13px] font-medium text-white/60 transition-colors duration-200 hover:text-[#C91F28]">{t("Privacy Policy")}</span>
         </section>
       </div>
 
@@ -348,7 +329,7 @@ function FooterTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
-function FooterLinks({
+async function FooterLinks({
   links,
 }: {
   links: {
@@ -356,6 +337,7 @@ function FooterLinks({
     href: string;
   }[];
 }) {
+  const { t } = await getTranslator();
   return (
     <ul className="space-y-[13px]">
       {links.map((item) => (
@@ -364,7 +346,7 @@ function FooterLinks({
             href={item.href}
             className="text-[14px] font-medium leading-[20px] text-white/75 transition-colors duration-200 hover:text-[#C91F28]"
           >
-            {item.label}
+            {t(item.label)}
           </Link>
         </li>
       ))}

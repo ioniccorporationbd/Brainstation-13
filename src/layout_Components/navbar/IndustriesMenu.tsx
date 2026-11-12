@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -53,10 +57,11 @@ const caseStudyLinks: MenuLinkItem[] = [
 ];
 
 export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
+  const { t } = useTranslation();
   if (mobile) {
     return (
       <div className="space-y-[24px]">
-        <MobileGroup title="Industries" links={[...industriesOne, ...industriesTwo, { label: "All Industries", href: "/industries", icon: Building2 }]} closeMenu={closeMenu} />
+        <MobileGroup title={t("Industries")} links={[...industriesOne, ...industriesTwo, { label: t("All Industries"), href: "/industries", icon: Building2 }]} closeMenu={closeMenu} />
       </div>
     );
   }
@@ -66,16 +71,12 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[466px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,51px)] pr-[clamp(20px,2.4vw,60px)] pt-[40px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">
-              Industries
-            </h2>
-            <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674]">
-              Deep expertise across 130+ industries.
-            </p>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("Industries")}</h2>
+            <p className="mt-[12px] max-w-[460px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("Deep expertise across 130+ industries.")}</p>
           </div>
 
           <div className="mt-[32px] border-t border-[#d5d5d5] pt-[22px]">
-            <ColumnTitle href="/case-studies" closeMenu={closeMenu}>Featured Case Studies</ColumnTitle>
+            <ColumnTitle href="/case-studies" closeMenu={closeMenu}>{t("Featured Case Studies")}</ColumnTitle>
             <div className="mt-[18px] space-y-[15px]">
               {caseStudyLinks.map((item) => (
                 <TextLink key={item.href} item={item} closeMenu={closeMenu} />
@@ -86,12 +87,11 @@ export default function IndustriesMenu({ closeMenu, mobile = false }: Props) {
 
         <div className="grid grid-cols-[repeat(3,minmax(0,1fr))] gap-x-[clamp(16px,3vw,64px)] bg-white px-[clamp(18px,3vw,56px)] pb-[40px] pt-[40px]">
           <div className="min-w-0">
-            <ColumnTitle href="/industries" closeMenu={closeMenu}>Industries</ColumnTitle>
+            <ColumnTitle href="/industries" closeMenu={closeMenu}>{t("Industries")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
               {industriesOne.map((item) => <TextLink key={item.href} item={item} closeMenu={closeMenu} />)}
             </div>
-            <Link href="/industries" onClick={closeMenu} className="mt-[62px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-primary">
-              All Industries <span className="text-[22px] font-normal leading-none">→</span>
+            <Link href="/industries" onClick={closeMenu} className="mt-[62px] inline-flex items-center gap-[13px] text-[17px] font-semibold leading-[24px] text-[#050b18] transition-colors hover:text-primary">{t("All Industries")}<span className="text-[22px] font-normal leading-none">→</span>
             </Link>
           </div>
 
@@ -117,6 +117,7 @@ function ColumnTitle({ children }: { href: string; closeMenu: () => void; childr
 }
 
 function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => void }) {
+  const { t } = useTranslation();
   const Icon = item.icon;
   return (
     <Link
@@ -127,12 +128,13 @@ function TextLink({ item, closeMenu }: { item: MenuLinkItem; closeMenu: () => vo
       <span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-[8px] bg-[#fdeaea] text-primary transition-colors duration-300 group-hover:bg-[#f8dada] group-hover:text-primary">
         <Icon size={16} strokeWidth={1.9} />
       </span>
-      <span className="min-w-0 break-words">{item.label}</span>
+      <span className="min-w-0 break-words">{t(item.label)}</span>
     </Link>
   );
 }
 
 function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLinkItem[]; closeMenu: () => void }) {
+  const { t } = useTranslation();
   return (
     <div>
       <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
@@ -144,7 +146,7 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
               <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
                 <Icon size={14} strokeWidth={1.9} />
               </span>
-              <span className="min-w-0 break-words">{item.label}</span>
+              <span className="min-w-0 break-words">{t(item.label)}</span>
             </Link>
           );
         })}
