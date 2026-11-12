@@ -80,4 +80,18 @@ export const shared: Dict = {
   "Explore Services": "সার্ভিস দেখুন",
   "Contact Support": "সাপোর্টে যোগাযোগ করুন",
   "Popular pages": "জনপ্রিয় পেজ",
+
+  // Shared forms / generic labels
+  "Full Name": "পূর্ণ নাম",
+  "Work Email": "ওয়ার্ক ইমেইল",
+  Company: "প্রতিষ্ঠান",
+  "Phone Number": "ফোন নম্বর",
+  "Thank you for reaching out": "যোগাযোগ করার জন্য ধন্যবাদ",
+  "Your message has been recorded. A member of our team will get back to you within one business day.":
+    "আপনার বার্তা আমরা পেয়েছি। আমাদের টিম এক কর্মদিবসের মধ্যে আপনার সঙ্গে যোগাযোগ করবে।",
+  "Send another message": "আরেকটি বার্তা পাঠান",
+  "How can we help?": "আমরা কীভাবে সাহায্য করতে পারি?",
+  "Tell us about your project or inquiry": "আপনার প্রজেক্ট বা জিজ্ঞাসা সম্পর্কে জানান",
+  "Send Message": "বার্তা পাঠান",
+  "Learn more": "আরও জানুন",
 };
