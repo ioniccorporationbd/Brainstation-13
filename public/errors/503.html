@@ -32,13 +32,33 @@ p.desc{font-size:16px;line-height:1.75;color:#55585e;max-width:540px;margin:16px
   <img src="/images/brand/magnetic-logo.png" alt="Magnetic Solution Limited" class="logo" />
   <span class="pill">Error 503</span>
   <p class="code">5<span class="accent">0</span>3</p>
-  <h1>Temporarily unavailable</h1>
-  <p class="desc">This service is temporarily unavailable, usually during short maintenance. Please try again shortly — or contact our team if you need it urgently.</p>
+  <h1 data-bn="h1">We are temporarily unavailable</h1>
+  <p class="desc" data-bn="desc">The site is undergoing scheduled maintenance right now. We will be back shortly — thank you for your patience.</p>
   <div class="actions">
-    <button class="btn primary" onclick="location.reload()">Try Again</button>
-    <a class="btn secondary" href="/">Back to Home</a>
+    <button class="btn primary" onclick="location.reload()"><span data-bn="try">Try Again</span></button>
+    <a class="btn secondary" href="/"><span data-bn="home">Back to Home</span></a>
   </div>
-  <p class="note">Need help? <a href="/contact">Contact our team</a></p>
+  <p class="note"><span data-bn="help">Need help? </span><a href="/contact" data-bn="contact">Contact our team</a></p>
 </main>
+<script>
+(function(){
+  var bn = {"title": "সার্ভিস অনুপলব্ধ | Magnetic Solution Limited", "h1": "আমরা সাময়িকভাবে অনুপলব্ধ", "desc": "সাইটে এখন নির্ধারিত রক্ষণাবেক্ষণ চলছে। আমরা শীঘ্রই ফিরে আসছি — আপনার ধৈর্যের জন্য ধন্যবাদ।", "try": "আবার চেষ্টা করুন", "home": "হোমে ফিরে যান", "help": "সহায়তা প্রয়োজন? ", "contact": "আমাদের টিমের সাথে যোগাযোগ করুন"};
+  var m = document.cookie.match(/(?:^|;\s*)magnetic-locale=(en|bn)/);
+  var loc = m ? m[1] : "bn";
+  if (loc !== "bn") return;
+  document.documentElement.lang = "bn-BD";
+  document.documentElement.style.setProperty("--bn-font","1");
+  document.querySelectorAll("[data-bn]").forEach(function(el){
+    var v = bn[el.getAttribute("data-bn")];
+    if (v) el.textContent = v;
+  });
+  document.title = bn.title;
+  var f = document.createElement("link");
+  f.rel = "stylesheet";
+  f.href = "https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap";
+  document.head.appendChild(f);
+  document.body.style.fontFamily = '"Hind Siliguri", Ubuntu, Arial, sans-serif';
+})();
+</script>
 </body>
 </html>
