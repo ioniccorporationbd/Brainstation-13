@@ -36,7 +36,7 @@ export default async function TestimonialsHeroSection() {
           <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">{t("“Their resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.”")}</p>
           <div className="mt-6 flex items-center justify-between border-t border-[#f2f2f2] pt-5">
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[14px] font-bold text-[#c91f28]">{t("AS")}</span>
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[14px] font-bold text-[#c91f28]">{"AS"}</span>
               <div>
                 <p className="text-[14.5px] font-semibold text-black">{t("Anupom Syam")}</p>
                 <p className="text-[13px] text-[#6b6f76]">{t("Founder & CEO, Tackle")}</p>

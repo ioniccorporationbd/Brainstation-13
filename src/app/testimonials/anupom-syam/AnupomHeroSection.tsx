@@ -28,7 +28,7 @@ export default async function AnupomHeroSection() {
             <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Anupom Syam, Founder & CEO at Tackle, on how resource augmentation changed the delivery velocity of their fintech platform.")}</p>
 
             <div className="mt-7 flex items-center gap-4 rounded-xl border border-[#ececec] bg-white px-5 py-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[15px] font-bold text-[#c91f28]">{t("AS")}</span>
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[15px] font-bold text-[#c91f28]">{"AS"}</span>
               <div>
                 <p className="text-[16px] font-semibold leading-[1.3] text-black">{t("Anupom Syam")}</p>
                 <p className="mt-0.5 text-[13.5px] leading-[1.4] text-[#6b6f76]">{t("Founder & CEO, Tackle")}</p>

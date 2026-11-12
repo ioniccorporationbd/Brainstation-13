@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:i18n": "node scripts/i18n-parity.mjs"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.44.0",

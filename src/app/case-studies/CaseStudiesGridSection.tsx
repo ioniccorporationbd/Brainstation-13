@@ -137,7 +137,7 @@ export default function CaseStudiesGridSection() {
           })}
         </div>
 
-        <p className="mt-4 text-[13px] font-medium text-[#7a7d84]" aria-live="polite">{t("Showing")} {visible.length} {t("of")} {caseStudies.length} {t("case studies")}</p>
+        <p className="mt-4 text-[13px] font-medium text-[#7a7d84]" aria-live="polite">{t("Showing")} {visible.length}/{caseStudies.length} {t("case studies")}</p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((item) => {

@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return {
     title: t("Services | Magnetic Solution Limited"),
-    description: t("Full-lifecycle engineering across AI, cloud, data and enterprise software \\u2014 strategy, build and run under one accountable team."),
+    description: t("Full-lifecycle engineering across AI, cloud, data and enterprise software \u2014 strategy, build and run under one accountable team."),
   };
 }
 

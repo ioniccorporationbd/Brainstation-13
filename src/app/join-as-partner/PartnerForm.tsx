@@ -245,7 +245,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
             className={`mt-2 ${field}`}
             value={values.link}
             onChange={(event) => update("link", event.target.value)}
-            placeholder={t("https://")}
+            placeholder="https://"
             aria-invalid={Boolean(errors.link)}
           />
           {errors.link ? (
