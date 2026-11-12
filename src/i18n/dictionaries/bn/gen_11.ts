@@ -288,4 +288,12 @@ export const gen_11: Dict = {
   "WE HAVE GLOBAL OFFICES": "বিশ্বজুড়ে আমাদের অফিস",
   "In-house": "ইন-হাউস",
   "In-House": "ইন-হাউস",
+  "FTEs": "এফটিই",
+  "Clients": "ক্লায়েন্ট",
+  "Served": "সার্ভড",
+  "Years of": "বছরের",
+  "Experience": "অভিজ্ঞতা",
+  "Country": "দেশ",
+  "Global": "গ্লোবাল",
+  "Offices": "অফিস",
 };
