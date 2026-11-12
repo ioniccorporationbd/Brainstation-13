@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, MoveUpRight } from "lucide-react";
 
 const industriesLeft = [
   { label: "Fintech", href: "/fintech" },
@@ -336,40 +335,6 @@ export default function Footer() {
         </section>
       </div>
 
-      {/* Cookie Button */}
-      <button
-        type="button"
-        className="fixed bottom-0 left-[76px] z-50 bg-[#C91F28] px-[11px] py-[9px] text-[10px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920] max-sm:left-3"
-      >
-        Privacy &amp; Cookies Policy
-      </button>
-
-      {/* Floating Chat */}
-      <div className="fixed bottom-[24px] right-[25px] z-50 flex h-[45px] items-center gap-[10px] rounded-full bg-white px-[14px] shadow-lg">
-        <button
-          type="button"
-          aria-label="Chat"
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#C91F28] text-white transition-colors duration-200 hover:bg-[#A71920]"
-        >
-          <MessageCircle size={17} />
-        </button>
-
-        <button
-          type="button"
-          aria-label="Message"
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-black text-white"
-        >
-          <MessageCircle size={14} />
-        </button>
-
-        <button
-          type="button"
-          aria-label="Expand"
-          className="flex h-[30px] w-[30px] items-center justify-center rounded-full text-black"
-        >
-          <MoveUpRight size={15} />
-        </button>
-      </div>
     </footer>
   );
 }
