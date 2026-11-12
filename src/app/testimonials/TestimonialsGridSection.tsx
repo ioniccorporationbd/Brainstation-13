@@ -114,14 +114,14 @@ async function Card({ item }: { item: Testimonial }) {
     return (
       <Link
         href={item.href}
-        className={`group ${base} hover:border-[#c91f28]/50`}
+        className={`group ${t(base)} hover:border-[#c91f28]/50`}
       >
         {body}
       </Link>
     );
   }
   return (
-    <article className={`${base} hover:border-[#c91f28]/30`}>{body}</article>
+    <article className={`${t(base)} hover:border-[#c91f28]/30`}>{body}</article>
   );
 }
 

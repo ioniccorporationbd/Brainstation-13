@@ -179,7 +179,7 @@ export default function CallForm() {
           />
           {errors.email ? (
             <p className="mt-1.5 text-[12.5px] text-[#c91f28]">
-              {errors.email}
+              {t(errors.email)}
             </p>
           ) : null}
         </div>
@@ -263,7 +263,7 @@ export default function CallForm() {
         />
         {errors.message ? (
           <p className="mt-1.5 text-[12.5px] text-[#c91f28]">
-            {errors.message}
+            {t(errors.message)}
           </p>
         ) : null}
       </div>

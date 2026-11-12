@@ -5,6 +5,7 @@ import { en } from "./dictionaries/en";
 export type Translator = (key: string) => string;
 
 const warned = new Set<string>();
+let lowerIndex: Map<string, string> | null = null;
 
 const collapse = (s: string) => s.replace(/\s+/g, " ").trim();
 
@@ -26,6 +27,23 @@ export function translate(locale: Locale, key: string): string {
     }
   }
   if (typeof hit === "string" && hit.trim().length > 0) return hit;
+
+  // Case-insensitive fallback: UI labels are frequently CSS-uppercased, so
+  // "GOVERNMENT" must still find the "Government" dictionary entry.
+  if (locale === "bn") {
+    const lower = collapse(key).toLowerCase();
+    if (!lowerIndex) {
+      lowerIndex = new Map();
+      for (const [k, v] of Object.entries(bn)) {
+        if (typeof v === "string" && v.trim().length > 0) {
+          const lk = collapse(k).toLowerCase();
+          if (!lowerIndex.has(lk)) lowerIndex.set(lk, v);
+        }
+      }
+    }
+    const lhit = lowerIndex.get(lower);
+    if (typeof lhit === "string" && lhit.trim().length > 0) return lhit;
+  }
 
   if (locale === "bn" && process.env.NODE_ENV !== "production" && !warned.has(key)) {
     warned.add(key);

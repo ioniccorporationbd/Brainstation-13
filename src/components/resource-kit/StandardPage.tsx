@@ -321,7 +321,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
                   href={cta.secondaryHref}
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-[15px] font-bold text-white transition duration-300 hover:border-white/50 hover:bg-white/10"
                 >
-                  {cta.secondaryLabel}
+                  {t(cta.secondaryLabel)}
                 </Link>
               ) : null}
             </div>

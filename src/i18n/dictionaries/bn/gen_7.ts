@@ -286,7 +286,7 @@ export const gen_7: Dict = {
   "Public home page of an institution website built with Shikkha Chat": "Shikkha চ্যাট দিয়ে নির্মিত একটি ইনস্টিটিউশন ওয়েবসাইট-এর পাবলিক হোম পেজ",
   "Public school website": "পাবলিক স্কুল ওয়েবসাইট",
   "Publish": "প্রকাশ করুন",
-  "Publish lessons, quizzes and assessments in AI Pathshala": "এআই Pathshalaতে লেসন, কুইজ ও অ্যাসেসমেন্ট প্রকাশ করুন",
+  "Publish lessons, quizzes and assessments in AI Pathshala": "এআই Pathshala-তে লেসন, কুইজ ও অ্যাসেসমেন্ট প্রকাশ করুন",
   "Publish to web, app and print-ready formats from one source.": "এক সোর্স থেকে ওয়েব, অ্যাপ ও প্রিন্ট-রেডি ফরম্যাট-এ প্রকাশ করুন।",
   "Published research and public breach cases show where attackers concentrate and where response time pays back.": "প্রকাশিত রিসার্চ ও পাবলিক ব্রিচ কেস দেখায় অ্যাটাকার-রা কোথায় মনোযোগ দেয় এবং রেসপন্স টাইম কোথায় লাভ দেয়।",
   "Publishing workflows break in the hand-offs": "হ্যান্ড-অফ-এর সময় পাবলিশিং ওয়ার্কফ্লো ভেঙে পড়ে",

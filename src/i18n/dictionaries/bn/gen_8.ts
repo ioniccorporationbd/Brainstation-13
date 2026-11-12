@@ -370,7 +370,7 @@ export const gen_8: Dict = {
   "Smart buildings": "স্মার্ট বিল্ডিং",
   "Smart comparison reports for customer options and insurance products.": "কাস্টমার অপশন ও ইনস্যুরেন্স প্রোডাক্ট-এর জন্য স্মার্ট কম্পারিজন রিপোর্ট।",
   "Smart digital wallet for seamless financial control": "নিরবচ্ছিন্ন আর্থিক নিয়ন্ত্রণের জন্য স্মার্ট ডিজিটাল ওয়ালেট",
-  "Smart scheduling plugin for Moodle. Manage meetings, consultations, classes and booking slots with a clean and simple scheduling experience.": "Moodleএর জন্য স্মার্ট শিডিউলিং প্লাগইন। পরিষ্কার ও সরল শিডিউলিং অভিজ্ঞতায় মিটিং, কনসালটেশন, ক্লাস ও বুকিং স্লট পরিচালনা করুন।",
+  "Smart scheduling plugin for Moodle. Manage meetings, consultations, classes and booking slots with a clean and simple scheduling experience.": "Moodle-এর জন্য স্মার্ট শিডিউলিং প্লাগইন। পরিষ্কার ও সরল শিডিউলিং অভিজ্ঞতায় মিটিং, কনসালটেশন, ক্লাস ও বুকিং স্লট পরিচালনা করুন।",
   "Smartphone-based": "স্মার্টফোন-ভিত্তিক",
   "Snort": "Snort",
   "Snowflake": "স্নোফ্লাক",

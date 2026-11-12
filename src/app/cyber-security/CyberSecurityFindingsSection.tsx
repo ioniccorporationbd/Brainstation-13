@@ -59,7 +59,7 @@ export default async function CyberSecurityFindingsSection() {
                   </span>
                   <div>
                     <p className="text-[12.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                      {item.source}
+                      {t(item.source)}
                     </p>
                     <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#55585e] sm:text-[15px]">
                       {t(item.text)}

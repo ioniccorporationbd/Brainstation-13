@@ -29,10 +29,10 @@ function Meta({ post }: { post: BlogPost }) {
       <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
         {t(post.category)}
       </span>
-      <span className="font-medium text-[#6b6f76]">{post.date}</span>
+      <span className="font-medium text-[#6b6f76]">{t(post.date)}</span>
       <span className="inline-flex items-center gap-1 font-medium text-[#6b6f76]">
         <Clock size={13} strokeWidth={2} />
-        {post.readTime}
+        {t(post.readTime)}
       </span>
     </div>
   );
@@ -64,7 +64,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
         />
 
         <p className="mt-8 text-[17px] font-medium leading-[1.65] text-[#22252a] md:text-[19px]">
-          {post.excerpt}
+          {t(post.excerpt)}
         </p>
         <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
 
@@ -109,7 +109,7 @@ export default function BlogExplorer({
       const matchesCategory = category === "All" || post.category === category;
       const matchesQuery =
         q === "" ||
-        `${post.title} ${post.excerpt} ${post.category}`
+        `${t(post.title)} ${t(post.excerpt)} ${t(post.category)}`
           .toLowerCase()
           .includes(q);
       return matchesCategory && matchesQuery;
@@ -145,14 +145,14 @@ export default function BlogExplorer({
               <div className="flex items-center gap-3">
                 <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured")}</span>
                 <span className="text-[12.5px] font-medium text-[#6b6f76]">
-                  {t(featured.category)} &middot; {featured.date}
+                  {t(featured.category)} &middot; {t(featured.date)}
                 </span>
               </div>
               <h2 className="mt-5 text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[32px]">
                 {t(featured.title)}
               </h2>
               <p className="mt-4 text-[15px] leading-[1.7] text-[#55585e] md:text-[16px]">
-                {featured.excerpt}
+                {t(featured.excerpt)}
               </p>
               <button
                 type="button"
@@ -238,7 +238,7 @@ export default function BlogExplorer({
                     {t(post.title)}
                   </h3>
                   <p className="mt-3 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
-                    {post.excerpt}
+                    {t(post.excerpt)}
                   </p>
                   <button
                     type="button"

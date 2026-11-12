@@ -140,8 +140,8 @@ export default async function GlobalOfficesPage() {
                     className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
                   >
                     {item.badge === "Headquarters"
-                      ? "Contact the team"
-                      : "Schedule a call"}
+                      ? t("Contact the team")
+                      : t("Schedule a call")}
                     <ArrowRight size={14} strokeWidth={2.2} />
                   </Link>
                 </article>

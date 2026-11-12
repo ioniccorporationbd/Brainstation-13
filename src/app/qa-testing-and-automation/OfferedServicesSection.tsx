@@ -68,7 +68,7 @@ export default async function OfferedServicesSection() {
             return (
               <article
                 key={service.title}
-                className={`group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28] ${spanClass}`}
+                className={`group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28] ${t(spanClass)}`}
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={20} strokeWidth={2.1} />

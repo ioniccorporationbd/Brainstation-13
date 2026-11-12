@@ -93,7 +93,7 @@ export default async function TechnologyConsultingProcessSection() {
                   </div>
 
                   <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                    {item.step}
+                    {t(item.step)}
                   </span>
                 </div>
 

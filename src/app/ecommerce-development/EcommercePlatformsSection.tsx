@@ -26,7 +26,7 @@ export default async function EcommercePlatformsSection() {
           <div className="animate-platform-marquee flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
             {[...platforms, ...platforms, ...platforms].map((platform, index) => (
               <div
-                key={`${platform.name}-${index}`}
+                key={`${t(platform.name)}-${index}`}
                 className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -57,7 +57,7 @@ export default function ContactForm() {
               type={field.id === "email" ? "email" : "text"}
               required={field.id === "fullName" || field.id === "email"}
               className="h-[50px] rounded-[8px] border border-[#ececec] bg-[#ffffff] px-4 text-[15px] text-[#0a0a0a] outline-none transition focus:border-[#c91f28] focus:bg-white focus:ring-2 focus:ring-[#ececec]"
-              placeholder={field.label}
+              placeholder={t(field.label)}
             />
           </div>
         ))}

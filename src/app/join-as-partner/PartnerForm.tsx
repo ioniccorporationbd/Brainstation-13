@@ -105,7 +105,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
         </span>
         <h3 className="mt-4 text-[19px] font-bold text-black">{t("Application received")}</h3>
         <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Thank you. Your interest in the")}{" "}
-          <strong className="text-black">{values.model}</strong>{t("track has been recorded on our server and the partnerships team will review it.")}</p>
+          <strong className="text-black">{t(values.model)}</strong>{t("track has been recorded on our server and the partnerships team will review it.")}</p>
         <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
         <button
           type="button"
@@ -142,7 +142,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           >{t("Full name *")}</label>
           <input
             id="jp-name"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.name}
             onChange={(event) => update("name", event.target.value)}
             aria-invalid={Boolean(errors.name)}
@@ -166,7 +166,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           <input
             id="jp-email"
             type="email"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.email}
             onChange={(event) => update("email", event.target.value)}
             aria-invalid={Boolean(errors.email)}
@@ -178,7 +178,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
               id="jp-email-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.email}
+              {t(errors.email)}
             </p>
           ) : null}
         </div>
@@ -189,7 +189,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           >{t("Company *")}</label>
           <input
             id="jp-company"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.company}
             onChange={(event) => update("company", event.target.value)}
             aria-invalid={Boolean(errors.company)}
@@ -209,7 +209,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           </label>
           <input
             id="jp-phone"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.phone}
             onChange={(event) => update("phone", event.target.value)}
             autoComplete="tel"
@@ -222,7 +222,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           >{t("Partnership model *")}</label>
           <select
             id="jp-model"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.model}
             onChange={(event) => update("model", event.target.value)}
           >
@@ -242,7 +242,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           </label>
           <input
             id="jp-link"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.link}
             onChange={(event) => update("link", event.target.value)}
             placeholder="https://"
@@ -274,7 +274,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
               id="jp-message-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.message}
+              {t(errors.message)}
             </p>
           ) : null}
         </div>

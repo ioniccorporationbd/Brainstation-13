@@ -48,7 +48,7 @@ export default async function RiskFreeTimelineSection() {
               className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
             >
               <span className="text-[26px] font-bold leading-none tracking-[-0.01em] text-[#c91f28]">
-                {step.number}
+                {t(step.number)}
               </span>
 
               <h3 className="mt-6 text-[20px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">

@@ -53,7 +53,7 @@ function ClientTrack({ prefix }: { prefix: string }) {
   return (
     <div className="flex shrink-0">
       {clientLogos.map((client) => (
-        <div key={`${prefix}-${t(client.name)}`} className="shrink-0 px-3">
+        <div key={`${t(prefix)}-${t(client.name)}`} className="shrink-0 px-3">
           <div className="flex h-[100px] w-[190px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
             <ClientLogoImg client={client} />
           </div>

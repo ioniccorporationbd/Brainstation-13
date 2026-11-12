@@ -50,7 +50,7 @@ export default async function CloudSolutionsProcessSection() {
                 className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[14.5px] font-bold text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
-                  {item.step}
+                  {t(item.step)}
                 </span>
 
                 <div>

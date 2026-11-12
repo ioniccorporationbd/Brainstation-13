@@ -93,7 +93,7 @@ function ToolTrack({ prefix }: { prefix: string }) {
   return (
     <div className="flex shrink-0">
       {tools.map((tool) => (
-        <div key={`${prefix}-${t(tool.name)}`} className="shrink-0 px-3">
+        <div key={`${t(prefix)}-${t(tool.name)}`} className="shrink-0 px-3">
           <div className="flex h-[104px] w-[180px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
             <ToolLogoImg tool={tool} />
           </div>

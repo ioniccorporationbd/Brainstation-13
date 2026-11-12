@@ -135,7 +135,7 @@ export default function ContactForm() {
           >{t("Full name *")}</label>
           <input
             id="ct-name"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.name}
             onChange={(event) => update("name", event.target.value)}
             aria-invalid={Boolean(errors.name)}
@@ -159,7 +159,7 @@ export default function ContactForm() {
           <input
             id="ct-email"
             type="email"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.email}
             onChange={(event) => update("email", event.target.value)}
             aria-invalid={Boolean(errors.email)}
@@ -171,7 +171,7 @@ export default function ContactForm() {
               id="ct-email-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.email}
+              {t(errors.email)}
             </p>
           ) : null}
         </div>
@@ -184,7 +184,7 @@ export default function ContactForm() {
           </label>
           <input
             id="ct-company"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.company}
             onChange={(event) => update("company", event.target.value)}
             autoComplete="organization"
@@ -198,7 +198,7 @@ export default function ContactForm() {
           </label>
           <input
             id="ct-phone"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.phone}
             onChange={(event) => update("phone", event.target.value)}
             autoComplete="tel"
@@ -211,7 +211,7 @@ export default function ContactForm() {
           >{t("What can we help with?")}</label>
           <select
             id="ct-interest"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.role}
             onChange={(event) => update("role", event.target.value)}
           >
@@ -242,7 +242,7 @@ export default function ContactForm() {
               id="ct-message-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.message}
+              {t(errors.message)}
             </p>
           ) : null}
         </div>

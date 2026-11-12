@@ -136,7 +136,7 @@ export default async function ShikkhaDashboardsSection() {
                 <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-[#ececec] bg-[#fafafa]">
                   <Image
                     src={role.screen}
-                    alt={`${role.label} dashboard in Shikkha Chat`}
+                    alt={`${t(role.label)} dashboard in Shikkha Chat`}
                     width={1600}
                     height={1000}
                     sizes="(max-width: 1024px) 100vw, 560px"

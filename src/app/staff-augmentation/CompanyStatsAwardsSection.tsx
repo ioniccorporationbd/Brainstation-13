@@ -46,6 +46,11 @@ async function CircularText({
   index: number;
 }) {
   const { t } = await getTranslator();
+  const tr = (value: string) =>
+    value
+      .split("\n")
+      .map((part) => t(part.trim()))
+      .join(" ");
   const pathId = `circle-path-${index}`;
 
   return (
@@ -78,7 +83,7 @@ async function CircularText({
 
         <text className="fill-[#9CA3AF] text-[15px] font-bold uppercase tracking-[8px]">
           <textPath href={`#${t(pathId)}`} startOffset="0%">
-            {t(text)} • {t(text)} •
+            {tr(text)} • {tr(text)} •
           </textPath>
         </text>
       </g>
@@ -88,6 +93,11 @@ async function CircularText({
 
 export default async function CompanyStatsAwardsSection() {
   const { t } = await getTranslator();
+  const tr = (value: string) =>
+    value
+      .split("\n")
+      .map((part) => t(part.trim()))
+      .join("\n");
   return (
     <section className="bg-[#ffffff] px-6 py-[72px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1320px]">
@@ -97,7 +107,7 @@ export default async function CompanyStatsAwardsSection() {
               key={item.number}
               className="relative mx-auto flex h-[190px] w-[190px] items-center justify-center text-center"
             >
-              <CircularText text={t(item.circleText)} index={index} />
+              <CircularText text={item.circleText} index={index} />
 
               <div className="relative z-10">
                 <h3 className="text-[36px] font-normal leading-none tracking-[-0.015em] text-[#0a0a0a]">
@@ -105,7 +115,7 @@ export default async function CompanyStatsAwardsSection() {
                 </h3>
 
                 <p className="mt-4 whitespace-pre-line text-[17px] font-bold leading-[1.35] text-[#0a0a0a]">
-                  {t(item.label)}
+                  {tr(item.label)}
                 </p>
               </div>
             </div>
@@ -117,7 +127,7 @@ export default async function CompanyStatsAwardsSection() {
         <div className="mt-[76px] grid grid-cols-2 items-center justify-items-center gap-x-10 gap-y-10 sm:grid-cols-3 lg:grid-cols-7">
           {clutchAwards.map((award, index) => (
             <div
-              key={`${t(award)}-${index}`}
+              key={`${award}-${index}`}
               className="relative flex h-[125px] w-[125px] items-center justify-center"
             >
               <div className="absolute inset-0 [clip-path:polygon(50%_0%,93%_25%,93%_75%,50%_100%,7%_75%,7%_25%)] bg-[#6b7280]" />
@@ -132,7 +142,7 @@ export default async function CompanyStatsAwardsSection() {
                 </div>
 
                 <p className="mt-3 whitespace-pre-line text-[7px] font-bold uppercase leading-[1.25] tracking-[0.08em] text-[#565656]">
-                  {t(award)}
+                  {tr(award)}
                 </p>
               </div>
             </div>

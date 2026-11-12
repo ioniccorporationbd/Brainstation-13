@@ -52,7 +52,7 @@ export default function GlobalFaqSection({
 
   return (
     <section
-      className={`bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px] ${className}`}
+      className={`bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px] ${t(className)}`}
     >
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">

@@ -67,16 +67,15 @@ export default async function RenderingServicesSection() {
       <div className="mx-auto max-w-[1240px]">
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-            Rendering &amp; Animation
+            {t("Rendering & Animation")}
           </p>
 
           <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            3D Rendering Services &amp; Industrial Animation
+            {t("3D Rendering Services & Industrial Animation")}
           </h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-            From CAD data to cinematic visualization — comprehensive 3D
-            rendering capabilities for engineering excellence.
+            {t("From CAD data to cinematic visualization — comprehensive 3D rendering capabilities for engineering excellence.")}
           </p>
         </div>
 

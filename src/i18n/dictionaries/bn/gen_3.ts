@@ -66,7 +66,7 @@ export const gen_3: Dict = {
   "Coverage": "কভারেজ",
   "Covers authoring through distribution, with an audit trail across the whole pipeline.": "সম্পূর্ণ পাইপলাইনজুড়ে অডিট ট্রেইলসহ অথরিং থেকে ডিস্ট্রিবিউশন পর্যন্ত কভার করে।",
   "Covers the period from candidate check-in to the final session report.": "প্রার্থীর চেক-ইন থেকে চূড়ান্ত সেশন রিপোর্ট পর্যন্ত সময়কাল কভার করে।",
-  "Coversheet for Moodle": "Moodleএর জন্য কভারশিট",
+  "Coversheet for Moodle": "Moodle-এর জন্য কভারশিট",
   "Create": "তৈরি করুন",
   "Create Customizable Forms with Real-Time Previews and Popups!": "রিয়েল-টাইম প্রিভিউ ও পপআপসহ কাস্টমাইজযোগ্য ফর্ম তৈরি করুন!",
   "Create QR codes directly from the Moodle Atto editor. Quickly share links, course pages, resources and activity access points.": "সরাসরি Moodle Atto এডিটর থেকে কিউআর কোড তৈরি করুন। দ্রুত লিংক, কোর্স পেজ, রিসোর্স ও অ্যাক্টিভিটি অ্যাক্সেস পয়েন্ট শেয়ার করুন।",

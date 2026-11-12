@@ -137,7 +137,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           >{t("Full name *")}</label>
           <input
             id="ca-name"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.name}
             onChange={(event) => update("name", event.target.value)}
             aria-invalid={Boolean(errors.name)}
@@ -161,7 +161,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <input
             id="ca-email"
             type="email"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.email}
             onChange={(event) => update("email", event.target.value)}
             aria-invalid={Boolean(errors.email)}
@@ -173,7 +173,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
               id="ca-email-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.email}
+              {t(errors.email)}
             </p>
           ) : null}
         </div>
@@ -185,7 +185,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           </label>
           <input
             id="ca-phone"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.phone}
             onChange={(event) => update("phone", event.target.value)}
             autoComplete="tel"
@@ -198,7 +198,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           >{t("Role *")}</label>
           <select
             id="ca-role"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.role}
             onChange={(event) => update("role", event.target.value)}
             aria-invalid={Boolean(errors.role)}
@@ -225,7 +225,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           </label>
           <input
             id="ca-link"
-            className={`mt-2 ${field}`}
+            className={`mt-2 ${t(field)}`}
             value={values.link}
             onChange={(event) => update("link", event.target.value)}
             placeholder="https://"
@@ -257,7 +257,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
               id="ca-message-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.message}
+              {t(errors.message)}
             </p>
           ) : null}
         </div>

@@ -106,7 +106,7 @@ export const home: Dict = {
   "We blend human expertise with AI precision — delivering faster outcomes without compromising security.": "আমরা হিউম্যান এক্সপার্টিজ-এর সঙ্গে এআই-এর নির্ভুলতা মিলিয়েছি—সিকিউরিটি-তে আপস না করেই দ্রুততর ফলাফল দিই।",
   "Team presentation": "টিম প্রেজেন্টেশন",
   "Proctoring Pro — Online Exam Monitoring & Integrity": "প্রক্টরিং প্রো — অনলাইন এক্সাম মনিটরিং ও ইন্টিগ্রিটি",
-  "Conduct secure, scalable online exams with real-time monitoring, identity verification, and easy integration with Moodle.": "রিয়েল-টাইম মনিটরিং, আইডেন্টিটি ভেরিফিকেশন ও Moodleএর সহজ ইন্টিগ্রেশন-সহ নিরাপদ, স্কেলযোগ্য অনলাইন এক্সাম নিন।",
+  "Conduct secure, scalable online exams with real-time monitoring, identity verification, and easy integration with Moodle.": "রিয়েল-টাইম মনিটরিং, আইডেন্টিটি ভেরিফিকেশন ও Moodle-এর সহজ ইন্টিগ্রেশন-সহ নিরাপদ, স্কেলযোগ্য অনলাইন এক্সাম নিন।",
   "Wallet23 — Digital Wallet & Payment Systems": "ওয়ালেট23 — ডিজিটাল ওয়ালেট ও পেমেন্ট সিস্টেম",
   "Go live in 15 days with P2P transfers, merchant payments, QR transactions, and enterprise-grade security.": "১৫ দিনে লাইভ করুন—পি২পি ট্রান্সফার, মার্চেন্ট পেমেন্ট, কিউআর ট্রানজেকশন ও এন্টারপ্রাইজ-গ্রেড সিকিউরিটি সহ।",
   "Remity — Cross-Border Payments": "রিমিটি — ক্রস-বর্ডার পেমেন্ট",

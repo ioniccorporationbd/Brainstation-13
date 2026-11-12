@@ -53,7 +53,7 @@ export default async function HowWeWorkSection() {
               </div>
 
               <p className="mt-5 text-[11.5px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-                {item.step}
+                {t(item.step)}
               </p>
 
               <h3 className="mt-2 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
