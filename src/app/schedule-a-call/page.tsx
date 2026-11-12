@@ -122,7 +122,7 @@ export default async function ScheduleACallPage() {
                 className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
-                  {item.step}
+                  {t(item.step)}
                 </span>
                 <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
                   {t(item.title)}

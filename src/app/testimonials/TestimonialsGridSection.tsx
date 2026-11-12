@@ -88,10 +88,10 @@ async function Card({ item }: { item: Testimonial }) {
           </span>
           <div>
             <p className="text-[14.5px] font-semibold leading-[1.3] text-black">
-              {item.name}
+              {t(item.name)}
             </p>
             <p className="mt-0.5 text-[13px] leading-[1.4] text-[#6b6f76]">
-              {item.role}
+              {t(item.role)}
             </p>
           </div>
         </div>

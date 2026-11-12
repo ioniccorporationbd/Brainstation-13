@@ -31,7 +31,7 @@ export default async function MobileAppTypesSection() {
                 </span>
 
                 <span className="text-[15px] font-medium leading-[1.5] text-[#565656]">
-                  {item}
+                  {t(item)}
                 </span>
               </li>
             ))}

@@ -35,7 +35,7 @@ export default async function CaseStudiesSection() {
                   : "border border-[#ececec] bg-white text-[#565656]"
               }`}
             >
-              {study}
+              {t(study)}
             </span>
           ))}
         </div>

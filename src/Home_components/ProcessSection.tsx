@@ -112,7 +112,7 @@ export default async function ProcessSection() {
 
                   <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[14px] leading-[1.5] text-[#52525B] marker:text-[#C91F28] md:text-[15px]">
                     {item.points.map((point) => (
-                      <li key={point}>{point}</li>
+                      <li key={point}>{t(point)}</li>
                     ))}
                   </ul>
                 </div>

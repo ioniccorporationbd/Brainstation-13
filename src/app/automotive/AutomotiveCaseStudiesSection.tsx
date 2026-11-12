@@ -95,12 +95,12 @@ export default async function AutomotiveCaseStudiesSection() {
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <span
-                    className={`inline-flex items-center rounded-md bg-[#fafafa] px-3 py-1.5 ring-1 ring-[#ececec] ${item.logoClassName}`}
+                    className={`inline-flex items-center rounded-md bg-[#fafafa] px-3 py-1.5 ring-1 ring-[#ececec] ${t(item.logoClassName)}`}
                   >
-                    {item.logoText}
+                    {t(item.logoText)}
                   </span>
                   <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                    {item.category}
+                    {t(item.category)}
                   </p>
                 </div>
 
@@ -118,7 +118,7 @@ export default async function AutomotiveCaseStudiesSection() {
                       key={highlight}
                       className="rounded-lg border border-[#ececec] bg-[#fafafa] px-3 py-1.5 text-[12.5px] font-semibold text-black"
                     >
-                      {highlight}
+                      {t(highlight)}
                     </li>
                   ))}
                 </ul>

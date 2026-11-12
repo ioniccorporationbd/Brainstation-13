@@ -42,7 +42,7 @@ export default async function MvpIntroSection() {
                     <Check size={16} strokeWidth={2.6} />
                   </span>
                   <span className="text-[16px] font-bold tracking-[-0.01em] text-[#0a0a0a]">
-                    {item}
+                    {t(item)}
                   </span>
                 </li>
               ))}

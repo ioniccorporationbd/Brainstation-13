@@ -187,7 +187,7 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
   const { t } = useTranslation();
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-primary">{title}</p>
+      <p className="mb-[12px] text-[15px] font-semibold text-primary">{t(title)}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;

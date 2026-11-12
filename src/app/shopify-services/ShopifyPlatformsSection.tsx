@@ -32,7 +32,7 @@ export default async function ShopifyPlatformsSection() {
             {[...technologies, ...technologies, ...technologies].map(
               (item, index) => (
                 <div
-                  key={`${item.name}-${index}`}
+                  key={`${t(item.name)}-${index}`}
                   className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -42,7 +42,7 @@ export default async function ShopifyPlatformsSection() {
                     className="h-[26px] w-[26px] shrink-0 object-contain"
                   />
                   <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
-                    {item.name}
+                    {t(item.name)}
                   </span>
                 </div>
               ),

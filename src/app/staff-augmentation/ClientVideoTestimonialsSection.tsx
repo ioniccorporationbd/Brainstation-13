@@ -37,7 +37,7 @@ export default async function ClientVideoTestimonialsSection() {
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="text-[32px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.45] tracking-[-0.015em] text-[#565656] md:text-[17px]">{t("See what our clients have to say about working with our Borderless Tech Professionals (BTP)")}</p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.45] tracking-[-0.015em] text-[#565656] md:text-[17px]"></p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -45,8 +45,8 @@ export default async function ClientVideoTestimonialsSection() {
             <article key={video.videoId} className="group">
               <div className="relative aspect-video overflow-hidden rounded-2xl border border-[#ececec] bg-[#0a0a0a] transition-colors duration-300 hover:border-[#c91f28]">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.videoId}`}
-                  title={video.title}
+                  src={`https://www.youtube.com/embed/${t(video.videoId)}`}
+                  title={t(video.title)}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   loading="lazy"

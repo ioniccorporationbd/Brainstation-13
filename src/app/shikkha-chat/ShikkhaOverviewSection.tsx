@@ -32,7 +32,7 @@ export default async function ShikkhaOverviewSection() {
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
                 <span className="text-[14.5px] leading-[1.6] text-[#3f434a] md:text-[15.5px]">
-                  {bullet}
+                  {t(bullet)}
                 </span>
               </li>
             ))}

@@ -80,7 +80,7 @@ export default async function EnterpriseMsfaMeasuredOutcomesSection() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[30px]">
-                      {item.value}
+                      {t(item.value)}
                     </p>
 
                     <h3 className="mt-3 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#000000]">

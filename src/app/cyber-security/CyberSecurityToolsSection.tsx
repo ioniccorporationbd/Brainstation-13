@@ -37,12 +37,12 @@ export default async function CyberSecurityToolsSection() {
               >
                 <img
                   src={`https://cdn.simpleicons.org/${tool.slug}/c91f28`}
-                  alt={`${tool.name} logo`}
+                  alt={`${t(tool.name)} logo`}
                   loading="lazy"
                   className="h-6 w-6 shrink-0 object-contain"
                 />
                 <span className="truncate text-[13px] font-semibold text-black">
-                  {tool.name}
+                  {t(tool.name)}
                 </span>
               </div>
             ))}

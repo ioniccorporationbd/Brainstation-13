@@ -36,19 +36,19 @@ export default async function ErpDevelopmentPlatformsSection() {
           <div className="erp-platforms-track flex w-max items-center gap-4 [animation:erpPlatformsScroll_30s_linear_infinite]">
             {[...platforms, ...platforms].map((platform, index) => (
               <div
-                key={`${platform.name}-${index}`}
+                key={`${t(platform.name)}-${index}`}
                 className="flex h-[74px] w-[224px] shrink-0 items-center justify-center gap-2.5 rounded-lg border border-[#ececec] bg-white px-4"
               >
                 {platform.slug ? (
                   <img
                     src={`https://cdn.simpleicons.org/${platform.slug}/c91f28`}
-                    alt={`${platform.name} logo`}
+                    alt={`${t(platform.name)} logo`}
                     loading="lazy"
                     className="h-6 w-6 shrink-0 object-contain"
                   />
                 ) : null}
                 <span className="truncate text-[13px] font-semibold text-black">
-                  {platform.name}
+                  {t(platform.name)}
                 </span>
               </div>
             ))}

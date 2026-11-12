@@ -94,7 +94,7 @@ async function SolveCard({ block }: { block: SolveBlock }) {
               <CircleCheck size={18} strokeWidth={2} />
             </span>
 
-            <span>{item}</span>
+            <span>{t(item)}</span>
           </li>
         ))}
       </ul>

@@ -197,7 +197,7 @@ export default async function Footer() {
                   key={item.label}
                   href={item.href}
                   target="_blank"
-                  aria-label={item.label}
+                  aria-label={t(item.label)}
                   className="inline-flex h-[22px] items-center justify-center opacity-80 transition-opacity duration-200 hover:opacity-100"
                 >
                   <Image
@@ -249,7 +249,7 @@ export default async function Footer() {
 
               <div className="mt-[24px] grid grid-cols-4 gap-[24px] max-[420px]:grid-cols-2">
                 {complianceItems.map((item, index) => (
-                  <div key={`${item.label}-${index}`} className="w-fit">
+                  <div key={`${t(item.label)}-${index}`} className="w-fit">
                     <div className="flex h-[52px] items-center">
                       <Image
                         src={item.image}

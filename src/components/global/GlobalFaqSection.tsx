@@ -58,17 +58,17 @@ export default function GlobalFaqSection({
         <div className="text-center">
           {eyebrow ? (
             <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
-              {eyebrow}
+              {t(eyebrow)}
             </p>
           ) : null}
 
           <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
-            {title}
+            {t(title)}
           </h2>
 
           {subtitle ? (
             <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
-              {subtitle}
+              {t(subtitle)}
             </p>
           ) : null}
         </div>
@@ -133,7 +133,7 @@ export default function GlobalFaqSection({
               href={ctaHref}
               className="inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
-              {ctaLabel}
+              {t(ctaLabel)}
             </Link>
           </div>
         ) : null}

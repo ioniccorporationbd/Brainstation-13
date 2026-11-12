@@ -101,7 +101,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           <CheckCircle2 size={22} />
         </span>
         <h3 className="mt-4 text-[19px] font-bold text-black">{t("Application received")}</h3>
-        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your application for")}<strong className="text-black">{values.role}</strong>{t("has been recorded on our server and reviewed by our hiring team.")}</p>
+        <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your application for")}<strong className="text-black">{t(values.role)}</strong>{t("has been recorded on our server and reviewed by our hiring team.")}</p>
         <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#6b6f76]">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
         <button
           type="button"
@@ -149,7 +149,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
               id="ca-name-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.name}
+              {t(errors.name)}
             </p>
           ) : null}
         </div>
@@ -205,14 +205,14 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           >
             {roles.map((role) => (
               <option key={role} value={role}>
-                {role}
+                {t(role)}
               </option>
             ))}
             <option value="General application">{t("General application")}</option>
           </select>
           {errors.role ? (
             <p className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]">
-              {errors.role}
+              {t(errors.role)}
             </p>
           ) : null}
         </div>
@@ -279,7 +279,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
           className="mt-5 flex items-start gap-2.5 rounded-lg border border-[#c91f28]/30 bg-[#fdecec] px-4 py-3 text-[13.5px] font-medium text-[#a71920]"
         >
           <AlertCircle size={16} className="mt-0.5 shrink-0" />
-          {serverError}
+          {t(serverError)}
         </div>
       ) : null}
 

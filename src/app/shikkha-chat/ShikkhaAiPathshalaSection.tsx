@@ -38,7 +38,7 @@ export default async function ShikkhaAiPathshalaSection() {
                   className="shrink-0 text-[#c91f28]"
                 />
                 <span className="text-[14px] font-medium text-[#3f434a]">
-                  {item}
+                  {t(item)}
                 </span>
               </li>
             ))}

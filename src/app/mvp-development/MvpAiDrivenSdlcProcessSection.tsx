@@ -223,7 +223,7 @@ export default async function MvpAiDrivenSdlcProcessSection() {
                       key={tool}
                       className="rounded-full bg-[#fdecec] px-2.5 py-1 text-[11px] font-bold text-[#c91f28]"
                     >
-                      {tool}
+                      {t(tool)}
                     </span>
                   ))}
                 </div>

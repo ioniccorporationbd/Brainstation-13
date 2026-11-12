@@ -97,7 +97,7 @@ export default async function EnterpriseMsfaArchitectureSection() {
                       key={logo}
                       className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.06em] text-[#3a3a3a]"
                     >
-                      {logo}
+                      {t(logo)}
                     </span>
                   ))}
                 </div>

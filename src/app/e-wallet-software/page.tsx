@@ -197,7 +197,7 @@ export default async function Page() {
                 {t(item.label)}
               </dt>
               <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">
-                {item.value}
+                {t(item.value)}
               </dd>
             </div>
           ))}
@@ -249,7 +249,7 @@ export default async function Page() {
                     className="mt-0.5 shrink-0 text-[#c91f28]"
                   />
                   <span className="text-[14.5px] leading-[1.65] text-[#55585e]">
-                    {bullet}
+                    {t(bullet)}
                   </span>
                 </li>
               ))}
@@ -313,7 +313,7 @@ export default async function Page() {
                 >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
                   <span className="text-[13.5px] font-semibold text-black">
-                    {item}
+                    {t(item)}
                   </span>
                 </div>
               ))}

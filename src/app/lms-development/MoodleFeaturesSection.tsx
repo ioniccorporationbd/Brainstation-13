@@ -137,7 +137,7 @@ export default async function MoodleFeatures() {
                       className="flex gap-2.5 text-[13.5px] font-medium leading-[1.55] text-[#565656]"
                     >
                       <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-[#c91f28]" />
-                      <span>{item}</span>
+                      <span>{t(item)}</span>
                     </li>
                   ))}
                 </ul>

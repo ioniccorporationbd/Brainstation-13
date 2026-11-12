@@ -86,7 +86,7 @@ export default async function AnupomTakeawaysSection() {
           {facts.map((fact) => (
             <div key={fact.label} className="bg-white px-6 py-6">
               <dd className="text-[24px] font-bold leading-[1.1] tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
-                {fact.value}
+                {t(fact.value)}
               </dd>
               <dt className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#6b6f76]">
                 {t(fact.label)}

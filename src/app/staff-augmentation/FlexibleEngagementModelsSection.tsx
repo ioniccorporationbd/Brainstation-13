@@ -142,6 +142,7 @@ function ExpandableCell({
   short: string;
   detail: string;
 }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   return (
@@ -152,7 +153,7 @@ function ExpandableCell({
         className="flex w-full items-start justify-between gap-4 text-left"
       >
         <span className="max-w-[185px] text-[16px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28]">
-          {short}
+          {t(short)}
         </span>
 
         <ChevronDown
@@ -166,7 +167,7 @@ function ExpandableCell({
 
       {open && (
         <p className="mt-4 max-w-[220px] text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
-          {detail}
+          {t(detail)}
         </p>
       )}
     </div>
@@ -225,7 +226,7 @@ export default function FlexibleEngagementModelsSection() {
                         />
 
                         <span className="text-[17px] font-bold leading-tight tracking-[-0.015em] text-[#0a0a0a]">
-                          {row.aspect}
+                          {t(row.aspect)}
                         </span>
                       </div>
 

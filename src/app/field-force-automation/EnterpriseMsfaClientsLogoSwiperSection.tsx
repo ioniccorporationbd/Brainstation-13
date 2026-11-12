@@ -26,11 +26,11 @@ export default function EnterpriseMsfaClientsLogoSwiperSection() {
           <div className="animate-msfa-clients flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
             {[...clients, ...clients, ...clients].map((name, index) => (
               <div
-                key={`${name}-${index}`}
+                key={`${t(name)}-${index}`}
                 className="mx-2.5 flex h-[52px] shrink-0 items-center border border-[#ececec] px-5 transition-colors duration-300 hover:border-[#c91f28] md:mx-3.5 md:h-[56px] md:px-6"
               >
                 <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3a3a3a] md:text-[15px]">
-                  {name}
+                  {t(name)}
                 </span>
               </div>
             ))}

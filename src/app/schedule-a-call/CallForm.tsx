@@ -158,7 +158,7 @@ export default function CallForm() {
             aria-invalid={Boolean(errors.name)}
           />
           {errors.name ? (
-            <p className="mt-1.5 text-[12.5px] text-[#c91f28]">{errors.name}</p>
+            <p className="mt-1.5 text-[12.5px] text-[#c91f28]">{t(errors.name)}</p>
           ) : null}
         </div>
 
@@ -226,7 +226,7 @@ export default function CallForm() {
           >
             {topics.map((topic) => (
               <option key={topic} value={topic}>
-                {topic}
+                {t(topic)}
               </option>
             ))}
           </select>
@@ -271,7 +271,7 @@ export default function CallForm() {
       {serverError ? (
         <p className="mt-5 flex items-start gap-2 rounded-lg bg-[#fdecec] px-4 py-3 text-[13.5px] leading-[1.6] text-[#a71920]">
           <AlertCircle size={16} className="mt-0.5 shrink-0" />
-          {serverError}
+          {t(serverError)}
         </p>
       ) : null}
 

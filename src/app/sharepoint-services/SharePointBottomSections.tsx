@@ -46,7 +46,7 @@ export async function SharePointIndustriesSection() {
                   </span>
 
                   <span className="text-[12.5px] font-bold uppercase tracking-[0.1em] text-[#0a0a0a]">
-                    {industry}
+                    {t(industry)}
                   </span>
                 </div>
               ))}
@@ -85,7 +85,7 @@ export async function SharePointWorkedWithSection() {
             {[...microsoftStack, ...microsoftStack, ...microsoftStack].map(
               (item, index) => (
                 <div
-                  key={`${item.name}-${index}`}
+                  key={`${t(item.name)}-${index}`}
                   className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -95,7 +95,7 @@ export async function SharePointWorkedWithSection() {
                     className="h-[26px] w-[26px] shrink-0 object-contain"
                   />
                   <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
-                    {item.name}
+                    {t(item.name)}
                   </span>
                 </div>
               ),

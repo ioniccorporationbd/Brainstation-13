@@ -25,7 +25,7 @@ export default async function ShikkhaSecuritySection() {
                   <Lock size={13} strokeWidth={2.4} />
                 </span>
                 <span className="text-[14.5px] leading-[1.6] text-[#3f434a] md:text-[15.5px]">
-                  {bullet}
+                  {t(bullet)}
                 </span>
               </li>
             ))}

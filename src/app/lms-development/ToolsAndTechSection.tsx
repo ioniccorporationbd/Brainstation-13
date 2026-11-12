@@ -28,7 +28,7 @@ export default async function ToolsAndTechSection() {
           <div className="animate-tech-marquee flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
             {[...tools, ...tools, ...tools].map((tool, index) => (
               <div
-                key={`${tool.name}-${index}`}
+                key={`${t(tool.name)}-${index}`}
                 className="mx-4 flex h-[64px] w-[120px] shrink-0 items-center justify-center md:mx-8 md:h-[72px] md:w-[152px]"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}

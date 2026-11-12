@@ -26,7 +26,7 @@ export default async function ManagedServicesIntroSection() {
                 className="mt-[1px] shrink-0 text-[#c91f28]"
               />
               <span className="text-[16px] font-semibold leading-[1.45] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]">
-                {point}
+                {t(point)}
               </span>
             </div>
           ))}

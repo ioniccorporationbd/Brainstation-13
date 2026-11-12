@@ -7,7 +7,7 @@ import type { ElementType, ReactNode } from "react";
 /* ------------------------------------------------------------------ */
 /*  Hero                                                              */
 /* ------------------------------------------------------------------ */
-export function ResourceHero({
+export async function ResourceHero({
   eyebrow,
   title,
   description,
@@ -20,18 +20,19 @@ export function ResourceHero({
   image: string;
   imageAlt: string;
 }) {
+  const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white px-6 py-[92px] text-[#0a0a0a]">
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto max-w-[920px] text-center">
           <span className="inline-flex rounded-[8px] bg-[#f7f7f8] px-5 py-2 text-[16px] font-bold tracking-[-0.03em] text-[#c91f28]">
-            {eyebrow}
+            {t(eyebrow)}
           </span>
           <h1 className="mt-7 text-[42px] font-medium leading-[1.08] tracking-[-0.07em] text-[#0a0a0a] md:text-[58px]">
-            {title}
+            {t(title)}
           </h1>
           <p className="mx-auto mt-7 max-w-[860px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#565656] md:text-[22px]">
-            {description}
+            {t(description)}
           </p>
         </div>
 
@@ -52,7 +53,7 @@ export function ResourceHero({
 /* ------------------------------------------------------------------ */
 /*  Section header                                                    */
 /* ------------------------------------------------------------------ */
-export function SectionHeader({
+export async function SectionHeader({
   eyebrow,
   title,
   description,
@@ -63,6 +64,7 @@ export function SectionHeader({
   description?: string;
   align?: "left" | "center";
 }) {
+  const { t } = await getTranslator();
   const centered = align === "center";
   return (
     <div
@@ -72,7 +74,7 @@ export function SectionHeader({
     >
       {eyebrow ? (
         <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-          {eyebrow}
+          {t(eyebrow)}
         </p>
       ) : null}
       <h2
@@ -80,11 +82,11 @@ export function SectionHeader({
           eyebrow ? "mt-3" : ""
         }`}
       >
-        {title}
+        {t(title)}
       </h2>
       {description ? (
         <p className="mt-5 text-[17px] font-medium leading-[1.5] tracking-[-0.035em] text-[#565656] md:text-[19px]">
-          {description}
+          {t(description)}
         </p>
       ) : null}
     </div>
@@ -160,7 +162,7 @@ export async function StatBand({
                 dark ? "text-[#c91f28]" : "text-[#c91f28]"
               }`}
             >
-              {stat.value}
+              {t(stat.value)}
             </p>
             <p
               className={`mt-4 text-[14px] font-medium leading-[1.4] md:text-[16px] ${
@@ -179,7 +181,7 @@ export async function StatBand({
 /* ------------------------------------------------------------------ */
 /*  Split block (image + content)                                     */
 /* ------------------------------------------------------------------ */
-export function SplitBlock({
+export async function SplitBlock({
   image,
   imageAlt,
   eyebrow,
@@ -196,6 +198,7 @@ export function SplitBlock({
   bullets?: string[];
   reverse?: boolean;
 }) {
+  const { t } = await getTranslator();
   return (
     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
       <div
@@ -213,7 +216,7 @@ export function SplitBlock({
       <div className={reverse ? "lg:order-1" : ""}>
         {eyebrow ? (
           <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
-            {eyebrow}
+            {t(eyebrow)}
           </p>
         ) : null}
         <h2
@@ -221,7 +224,7 @@ export function SplitBlock({
             eyebrow ? "mt-3" : ""
           }`}
         >
-          {title}
+          {t(title)}
         </h2>
         <div className="mt-6 space-y-4">
           {paragraphs.map((paragraph) => (
@@ -229,7 +232,7 @@ export function SplitBlock({
               key={paragraph}
               className="text-[16px] font-normal leading-[1.6] text-[#565656] md:text-[17px]"
             >
-              {paragraph}
+              {t(paragraph)}
             </p>
           ))}
         </div>
@@ -241,7 +244,7 @@ export function SplitBlock({
                   <Check size={13} strokeWidth={3} />
                 </span>
                 <span className="text-[15px] font-medium leading-[1.5] text-[#374151] md:text-[16px]">
-                  {bullet}
+                  {t(bullet)}
                 </span>
               </li>
             ))}
@@ -299,10 +302,10 @@ export async function CtaBanner({
     <section className="bg-white px-6 pb-[110px] pt-[10px]">
       <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
         <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px]">
-          {title}
+          {t(title)}
         </h2>
         <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[19px]">
-          {description}
+          {t(description)}
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link

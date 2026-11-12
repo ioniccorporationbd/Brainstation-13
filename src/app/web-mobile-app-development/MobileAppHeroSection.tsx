@@ -40,7 +40,7 @@ export default async function MobileAppHeroSection() {
                   <span className="h-1 w-1 rounded-full bg-[#d4d4d4]" />
                 ) : null}
                 <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#565656]">
-                  {word}
+                  {t(word)}
                 </span>
               </span>
             ))}

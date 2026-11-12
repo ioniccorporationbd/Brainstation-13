@@ -141,7 +141,7 @@ export default async function ShikkhaModulesSection() {
                   {t(module.title)}
                 </h3>
                 <p className="mt-2.5 text-[14.5px] leading-[1.65] text-[#55585e]">
-                  {module.summary}
+                  {t(module.summary)}
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-1.5 border-t border-[#f2f2f2] pt-4">
                   {module.features.map((feature) => (
@@ -154,7 +154,7 @@ export default async function ShikkhaModulesSection() {
                         strokeWidth={2.6}
                         className="text-[#c91f28]"
                       />
-                      {feature}
+                      {t(feature)}
                     </li>
                   ))}
                 </ul>

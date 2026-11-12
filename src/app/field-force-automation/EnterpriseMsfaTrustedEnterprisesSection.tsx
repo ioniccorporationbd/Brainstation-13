@@ -108,12 +108,12 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
             >
               <div className="flex items-start justify-between gap-3">
                 <span className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
-                  {item.metric}
+                  {t(item.metric)}
                 </span>
               </div>
 
               <h3 className="mt-5 text-[19px] font-bold leading-[1.25] tracking-[-0.01em] text-[#000000]">
-                {item.company}
+                {t(item.company)}
               </h3>
 
               <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
@@ -137,7 +137,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                 </div>
 
                 <p className="mt-4 text-[24px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
-                  {item.value}
+                  {t(item.value)}
                 </p>
 
                 <h3 className="mt-3 text-[15px] font-bold leading-tight text-[#000000]">

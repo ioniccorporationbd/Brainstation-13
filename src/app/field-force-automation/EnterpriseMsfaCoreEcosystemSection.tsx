@@ -206,7 +206,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                         {t(meta.label)}
                       </p>
                       <p className="mt-1 text-[13px] font-bold text-[#000000]">
-                        {meta.value}
+                        {t(meta.value)}
                       </p>
                     </div>
                   ))}

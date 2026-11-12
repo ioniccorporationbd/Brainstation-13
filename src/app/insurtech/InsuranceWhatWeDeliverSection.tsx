@@ -131,7 +131,7 @@ export default function InsuranceWhatWeDeliverSection() {
                             <CircleCheck size={18} strokeWidth={2} />
                           </span>
 
-                          <span>{point}</span>
+                          <span>{t(point)}</span>
                         </li>
                       ))}
                     </ul>

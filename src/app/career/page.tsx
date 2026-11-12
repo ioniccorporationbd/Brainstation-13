@@ -221,7 +221,7 @@ export default async function CareerPage() {
                 className="rounded-xl border border-[#ececec] bg-white p-6"
               >
                 <p className="text-[30px] font-bold leading-none tracking-[-0.04em] text-[#c91f28]">
-                  {item.step}
+                  {t(item.step)}
                 </p>
                 <h3 className="mt-4 text-[16.5px] font-bold text-black">
                   {t(item.title)}

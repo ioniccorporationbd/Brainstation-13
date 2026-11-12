@@ -39,7 +39,7 @@ export default async function AemHeroSection() {
                 key={word}
                 className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#565656]"
               >
-                {word}
+                {t(word)}
               </span>
             ))}
           </div>

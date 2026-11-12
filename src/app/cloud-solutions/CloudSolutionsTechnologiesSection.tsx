@@ -45,7 +45,7 @@ export default function CloudSolutionsTechnologiesSection() {
         <div className="cloud-tech-track flex w-max items-center gap-4">
           {[...technologies, ...technologies].map((tech, index) => (
             <div
-              key={`${tech.name}-${index}`}
+              key={`${t(tech.name)}-${index}`}
               className="flex h-[104px] w-[190px] shrink-0 items-center justify-center rounded-xl border border-[#ececec] bg-white px-6 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <img

@@ -75,7 +75,7 @@ export default function TrustedTechTeamsSection() {
           <div className="staff-trusted-track flex w-max items-center gap-[88px]">
             {duplicatedLogos.map((logo, index) => (
               <div
-                key={`${logo.name}-${index}`}
+                key={`${t(logo.name)}-${index}`}
                 className="flex h-[44px] min-w-[130px] items-center justify-center"
               >
                 <Image

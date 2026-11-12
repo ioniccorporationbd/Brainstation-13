@@ -72,7 +72,7 @@ export default async function TelecomCaseStudiesSection() {
 
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                  {item.category}
+                  {t(item.category)}
                 </p>
                 <h3 className="mt-3 text-[20px] font-semibold leading-[1.3] text-black">
                   {t(item.title)}
@@ -87,7 +87,7 @@ export default async function TelecomCaseStudiesSection() {
                       key={highlight}
                       className="rounded-lg border border-[#ececec] bg-[#fafafa] px-3 py-1.5 text-[12.5px] font-semibold text-black"
                     >
-                      {highlight}
+                      {t(highlight)}
                     </li>
                   ))}
                 </ul>

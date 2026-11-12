@@ -147,7 +147,7 @@ export default function ContactForm() {
               id="ct-name-error"
               className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
             >
-              {errors.name}
+              {t(errors.name)}
             </p>
           ) : null}
         </div>
@@ -217,7 +217,7 @@ export default function ContactForm() {
           >
             {interests.map((item) => (
               <option key={item} value={item}>
-                {item}
+                {t(item)}
               </option>
             ))}
           </select>
@@ -264,7 +264,7 @@ export default function ContactForm() {
           className="mt-5 flex items-start gap-2.5 rounded-lg border border-[#c91f28]/30 bg-[#fdecec] px-4 py-3 text-[13.5px] font-medium text-[#a71920]"
         >
           <AlertCircle size={16} className="mt-0.5 shrink-0" />
-          {serverError}
+          {t(serverError)}
         </div>
       ) : null}
 

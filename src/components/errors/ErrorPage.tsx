@@ -173,12 +173,12 @@ export default function ErrorPage({
           <div className="nf-rise mt-6 flex select-none items-end justify-center gap-1 md:gap-2">
             {digits.map((d, i) => (
               <span
-                key={`${d}-${i}`}
+                key={`${t(d)}-${i}`}
                 className={`text-[92px] font-bold leading-[0.9] tracking-[-0.055em] md:text-[148px] ${
                   i === 1 ? "text-[#c91f28]" : "text-black"
                 }`}
               >
-                {d}
+                {t(d)}
               </span>
             ))}
           </div>

@@ -49,10 +49,10 @@ export default async function RealEstateCaseStudiesSection() {
           <div className="p-6 md:p-9">
             <div className="flex items-center gap-3">
               <span className="inline-flex items-center rounded-md bg-[#fafafa] px-3 py-1.5 text-[12px] font-black tracking-[-0.01em] text-[#c91f28] ring-1 ring-[#ececec]">
-                {caseStudy.logoText}
+                {t(caseStudy.logoText)}
               </span>
               <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-                {caseStudy.category}
+                {t(caseStudy.category)}
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export default async function RealEstateCaseStudiesSection() {
                   key={highlight}
                   className="rounded-lg border border-[#ececec] bg-[#fafafa] px-3 py-1.5 text-[12.5px] font-semibold text-black"
                 >
-                  {highlight}
+                  {t(highlight)}
                 </li>
               ))}
             </ul>

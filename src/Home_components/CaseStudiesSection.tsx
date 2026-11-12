@@ -46,7 +46,7 @@ export default async function CaseStudiesSection() {
             >
               <span className="h-2 w-2 shrink-0 rounded-full bg-[#C91F28]" aria-hidden />
               <span className="text-[13px] font-semibold tracking-[-0.01em] text-[#0A0A0A] md:text-[14px]">
-                {client.name}
+                {t(client.name)}
               </span>
               <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#71717A]">
                 {t(client.tag)}
@@ -86,7 +86,7 @@ export default async function CaseStudiesSection() {
                 {STATS.map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[36px] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">
-                      {stat.value}
+                      {t(stat.value)}
                     </div>
                     <p className="mt-2 text-[13px] leading-[1.4] text-[#52525B] md:text-[14px]">
                       {t(stat.label)}

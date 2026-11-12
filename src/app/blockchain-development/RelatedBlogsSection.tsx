@@ -71,7 +71,7 @@ export default async function RelatedBlogsSection() {
 
                 <div className="flex flex-1 flex-col p-6">
                   <span className="inline-flex w-fit rounded-full bg-[#fdecec] px-3 py-1.5 text-[11px] font-bold uppercase leading-none tracking-[0.1em] text-[#c91f28]">
-                    {post.category}
+                    {t(post.category)}
                   </span>
 
                   <h3 className="mt-4 text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">

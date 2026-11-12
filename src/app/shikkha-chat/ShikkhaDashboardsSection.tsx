@@ -153,14 +153,14 @@ export default async function ShikkhaDashboardsSection() {
                     </h3>
                   </div>
                   <p className="mt-3 text-[14px] leading-[1.65] text-[#55585e]">
-                    {role.who}
+                    {t(role.who)}
                   </p>
                   <ul className="mt-4 space-y-2">
                     {role.caps.map((cap) => (
                       <li key={cap} className="flex items-start gap-2.5">
                         <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
                         <span className="text-[14px] leading-[1.6] text-[#3f434a]">
-                          {cap}
+                          {t(cap)}
                         </span>
                       </li>
                     ))}

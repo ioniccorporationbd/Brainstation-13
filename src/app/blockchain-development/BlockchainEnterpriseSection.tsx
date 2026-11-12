@@ -95,7 +95,7 @@ export default function BlockchainEnterpriseSection() {
                   : "bg-transparent text-[#565656] hover:bg-[#f7f7f7] hover:text-[#0a0a0a]"
               }`}
             >
-              {item.tab}
+              {t(item.tab)}
             </button>
           ))}
         </div>
@@ -115,7 +115,7 @@ export default function BlockchainEnterpriseSection() {
                 href={activeItem.buttonHref}
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#c91f28] px-7 py-3.5 text-[14px] font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
               >
-                {activeItem.buttonText}
+                {t(activeItem.buttonText)}
                 <ArrowRight size={15} strokeWidth={2.2} />
               </Link>
             </div>

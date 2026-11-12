@@ -40,19 +40,19 @@ export default async function DataScienceTechnologiesSection() {
           <div className="ds-tech-track flex w-max items-center gap-4 [animation:dsTechScroll_34s_linear_infinite]">
             {[...tech, ...tech].map((item, index) => (
               <div
-                key={`${item.name}-${index}`}
+                key={`${t(item.name)}-${index}`}
                 className="flex h-[74px] w-[200px] shrink-0 items-center justify-center gap-2.5 rounded-lg border border-[#ececec] bg-white px-4"
               >
                 {item.icon ? (
                   <img
                     src={item.icon}
-                    alt={`${item.name} logo`}
+                    alt={`${t(item.name)} logo`}
                     loading="lazy"
                     className="h-6 w-6 shrink-0 object-contain"
                   />
                 ) : null}
                 <span className="truncate text-[13px] font-semibold text-black">
-                  {item.name}
+                  {t(item.name)}
                 </span>
               </div>
             ))}

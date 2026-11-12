@@ -115,7 +115,7 @@ export default function MoodleReadyPluginsSection() {
                   : "border-[#ececec] bg-white text-[#565656] hover:border-[#c91f28] hover:text-[#c91f28]"
               }`}
             >
-              {item.name}
+              {t(item.name)}
             </button>
           ))}
         </div>

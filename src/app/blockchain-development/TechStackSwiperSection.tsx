@@ -62,7 +62,7 @@ export default async function TechStackSwiperSection() {
       <div className="group mt-10 overflow-hidden border-y border-[#ececec] py-5">
         <div className="animate-stack-forward flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
           {[...rowOne, ...rowOne, ...rowOne].map((item, index) => (
-            <LogoItem key={`${item.name}-a-${index}`} {...item} />
+            <LogoItem key={`${t(item.name)}-a-${index}`} {...item} />
           ))}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default async function TechStackSwiperSection() {
       <div className="group mt-4 overflow-hidden border-b border-[#ececec] py-5">
         <div className="animate-stack-reverse flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
           {[...rowTwo, ...rowTwo, ...rowTwo].map((item, index) => (
-            <LogoItem key={`${item.name}-b-${index}`} {...item} />
+            <LogoItem key={`${t(item.name)}-b-${index}`} {...item} />
           ))}
         </div>
       </div>

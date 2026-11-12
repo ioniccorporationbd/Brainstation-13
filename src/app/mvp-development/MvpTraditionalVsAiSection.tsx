@@ -93,16 +93,16 @@ export default async function MvpTraditionalVsAiSection() {
                       <Icon size={18} strokeWidth={1.9} />
                     </span>
                     <h4 className="text-[15px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
-                      {row.aspect}
+                      {t(row.aspect)}
                     </h4>
                   </div>
 
                   <p className="text-[14px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
-                    {row.traditional}
+                    {t(row.traditional)}
                   </p>
 
                   <p className="text-[14px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
-                    {row.ai}
+                    {t(row.ai)}
                   </p>
                 </div>
               );
@@ -121,7 +121,7 @@ export default async function MvpTraditionalVsAiSection() {
                       <Icon size={18} strokeWidth={1.9} />
                     </span>
                     <h3 className="text-[17px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
-                      {row.aspect}
+                      {t(row.aspect)}
                     </h3>
                   </div>
 
@@ -129,14 +129,14 @@ export default async function MvpTraditionalVsAiSection() {
                     <div>
                       <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#565656]">{t("Traditional")}</p>
                       <p className="mt-1.5 text-[14px] font-medium leading-[1.5] text-[#565656]">
-                        {row.traditional}
+                        {t(row.traditional)}
                       </p>
                     </div>
 
                     <div>
                       <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("AI-Assisted")}</p>
                       <p className="mt-1.5 text-[14px] font-semibold leading-[1.5] text-[#0a0a0a]">
-                        {row.ai}
+                        {t(row.ai)}
                       </p>
                     </div>
                   </div>

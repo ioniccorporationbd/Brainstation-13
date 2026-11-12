@@ -68,11 +68,11 @@ export default function StaffAugmentationHeroSection() {
               }}
             >
               {reviews.map((review, index) => (
-                <SwiperSlide key={`${review.company}-${index}`}>
+                <SwiperSlide key={`${t(review.company)}-${index}`}>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
                       <h3 className="text-[22px] font-bold leading-none tracking-[-0.02em] text-[#0a0a0a]">
-                        {review.company}
+                        {t(review.company)}
                       </h3>
 
                       <div>
@@ -87,7 +87,7 @@ export default function StaffAugmentationHeroSection() {
                         </div>
 
                         <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#565656]">
-                          {review.rating}
+                          {t(review.rating)}
                         </p>
                       </div>
                     </div>
@@ -98,7 +98,7 @@ export default function StaffAugmentationHeroSection() {
 
                     <div className="mt-6 border-t border-[#ececec] pt-5">
                       <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656]">
-                        {review.author}
+                        {t(review.author)}
                       </p>
                     </div>
                   </div>

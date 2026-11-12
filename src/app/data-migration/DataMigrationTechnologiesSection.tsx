@@ -71,12 +71,13 @@ const tools: ToolLogo[] = [
 ];
 
 function ToolLogoImg({ tool }: { tool: ToolLogo }) {
+  const { t } = useTranslation();
   const [failed, setFailed] = useState(false);
 
   if (failed) {
     return (
       <span className="px-2 text-center text-[15px] font-bold leading-tight text-[#0a0a0a]">
-        {tool.name}
+        {t(tool.name)}
       </span>
     );
   }
@@ -94,10 +95,11 @@ function ToolLogoImg({ tool }: { tool: ToolLogo }) {
 }
 
 function ToolTrack({ prefix }: { prefix: string }) {
+  const { t } = useTranslation();
   return (
     <div className="flex shrink-0">
       {tools.map((tool) => (
-        <div key={`${prefix}-${tool.name}`} className="shrink-0 px-3">
+        <div key={`${prefix}-${t(tool.name)}`} className="shrink-0 px-3">
           <div className="flex h-[104px] w-[180px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
             <ToolLogoImg tool={tool} />
           </div>

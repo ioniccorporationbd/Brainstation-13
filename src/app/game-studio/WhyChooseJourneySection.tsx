@@ -30,7 +30,7 @@ export default async function WhyChooseJourneySection() {
               </span>
 
               <p className="text-[15px] font-semibold leading-[1.6] text-[#565656] md:text-[15.5px]">
-                {item}
+                {t(item)}
               </p>
             </div>
           ))}

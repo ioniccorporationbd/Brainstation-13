@@ -151,21 +151,21 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                     <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                       <div>
                         <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
-                          {item.metricOne}
+                          {t(item.metricOne)}
                         </p>
 
                         <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
-                          {item.metricOneLabel}
+                          {t(item.metricOneLabel)}
                         </p>
                       </div>
 
                       <div>
                         <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
-                          {item.metricTwo}
+                          {t(item.metricTwo)}
                         </p>
 
                         <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
-                          {item.metricTwoLabel}
+                          {t(item.metricTwoLabel)}
                         </p>
                       </div>
                     </div>

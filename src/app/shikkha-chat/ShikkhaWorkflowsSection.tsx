@@ -71,7 +71,7 @@ export default async function ShikkhaWorkflowsSection() {
                         {t(flow.title)}
                       </h3>
                       <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
-                        {flow.steps}
+                        {t(flow.steps)}
                       </p>
                     </div>
                   </div>

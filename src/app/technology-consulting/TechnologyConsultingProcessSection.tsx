@@ -112,7 +112,7 @@ export default async function TechnologyConsultingProcessSection() {
                       className="flex gap-2.5 text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]"
                     >
                       <span className="mt-[7px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
-                      <span>{point}</span>
+                      <span>{t(point)}</span>
                     </li>
                   ))}
                 </ul>

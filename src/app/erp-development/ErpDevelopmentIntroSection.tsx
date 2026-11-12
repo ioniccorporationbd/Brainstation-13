@@ -29,7 +29,7 @@ export default async function ErpDevelopmentIntroSection() {
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] leading-[1.65] text-black">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
-                  {item}
+                  {t(item)}
                 </li>
               ))}
             </ul>

@@ -25,12 +25,13 @@ const clientLogos: ClientLogo[] = [
 ];
 
 function ClientLogoImg({ logo }: { logo: ClientLogo }) {
+  const { t } = useTranslation();
   const [failed, setFailed] = useState(false);
 
   if (failed) {
     return (
       <span className="px-2 text-center text-[16px] font-bold leading-tight tracking-[-0.01em] text-[#0a0a0a]">
-        {logo.name}
+        {t(logo.name)}
       </span>
     );
   }
@@ -48,10 +49,11 @@ function ClientLogoImg({ logo }: { logo: ClientLogo }) {
 }
 
 function LogoTrack({ prefix }: { prefix: string }) {
+  const { t } = useTranslation();
   return (
     <div className="flex shrink-0">
       {clientLogos.map((logo) => (
-        <div key={`${prefix}-${logo.name}`} className="shrink-0 px-3">
+        <div key={`${prefix}-${t(logo.name)}`} className="shrink-0 px-3">
           <div className="flex h-[100px] w-[190px] items-center justify-center rounded-2xl border border-[#ececec] bg-white px-4 transition-colors duration-300 hover:border-[#c91f28]">
             <ClientLogoImg logo={logo} />
           </div>

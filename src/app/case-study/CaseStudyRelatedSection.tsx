@@ -71,7 +71,7 @@ export default async function CaseStudyRelatedSection() {
 
                 <div className="p-6">
                   <span className="inline-flex rounded-full bg-[#fdecec] px-3 py-1.5 text-[12px] font-bold uppercase leading-none tracking-[0.08em] text-[#c91f28] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
-                    {item.category}
+                    {t(item.category)}
                   </span>
 
                   <h3 className="mt-4 text-[21px] font-bold leading-[1.28] tracking-[-0.015em] text-[#0a0a0a]">

@@ -92,7 +92,7 @@ export default async function RecentGamesSection() {
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#f7f7f7]">
                 <Image
                   src={game.image}
-                  alt={`${game.title} — game artwork`}
+                  alt={`${t(game.title)} — game artwork`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 300px"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -123,7 +123,7 @@ export default async function RecentGamesSection() {
                         strokeWidth={3}
                         className="mt-[3px] shrink-0 text-[#c91f28]"
                       />
-                      <span>{point}</span>
+                      <span>{t(point)}</span>
                     </li>
                   ))}
                 </ul>

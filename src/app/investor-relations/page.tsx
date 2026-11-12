@@ -128,7 +128,7 @@ export default async function InvestorRelationsPage() {
                 {t(item.label)}
               </dt>
               <dd className="mt-2 text-[17px] font-bold leading-[1.35] tracking-[-0.01em] text-black">
-                {item.value}
+                {t(item.value)}
               </dd>
             </div>
           ))}
@@ -188,7 +188,7 @@ export default async function InvestorRelationsPage() {
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c91f28]" />
                   <span className="text-[14.5px] leading-[1.65] text-[#55585e]">
-                    {item}
+                    {t(item)}
                   </span>
                 </li>
               ))}

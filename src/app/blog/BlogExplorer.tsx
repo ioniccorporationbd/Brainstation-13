@@ -23,10 +23,11 @@ export type BlogPost = {
 const PAGE_SIZE = 4;
 
 function Meta({ post }: { post: BlogPost }) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] font-semibold">
       <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
-        {post.category}
+        {t(post.category)}
       </span>
       <span className="font-medium text-[#6b6f76]">{post.date}</span>
       <span className="inline-flex items-center gap-1 font-medium text-[#6b6f76]">
@@ -144,7 +145,7 @@ export default function BlogExplorer({
               <div className="flex items-center gap-3">
                 <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured")}</span>
                 <span className="text-[12.5px] font-medium text-[#6b6f76]">
-                  {featured.category} &middot; {featured.date}
+                  {t(featured.category)} &middot; {featured.date}
                 </span>
               </div>
               <h2 className="mt-5 text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[32px]">
@@ -207,7 +208,7 @@ export default function BlogExplorer({
                         : "border-[#ececec] bg-white text-[#3f434a] hover:border-[#c91f28]/50 hover:text-[#c91f28]"
                     }`}
                   >
-                    {item}
+                    {t(item)}
                   </button>
                 );
               })}

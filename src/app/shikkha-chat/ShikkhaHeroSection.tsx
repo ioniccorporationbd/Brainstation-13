@@ -65,7 +65,7 @@ export default async function ShikkhaHeroSection() {
                   strokeWidth={2.4}
                   className="text-[#c91f28]"
                 />
-                {chip}
+                {t(chip)}
               </li>
             ))}
           </ul>
@@ -89,7 +89,7 @@ export default async function ShikkhaHeroSection() {
               <dt className="sr-only">{t(fact.label)}</dt>
               <dd>
                 <span className="block text-[30px] font-bold leading-none tracking-[-0.03em] text-[#c91f28] md:text-[34px]">
-                  {fact.value}
+                  {t(fact.value)}
                 </span>
                 <span className="mt-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-[#6b6f76]">
                   {t(fact.label)}

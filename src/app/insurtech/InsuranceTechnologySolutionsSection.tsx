@@ -43,7 +43,7 @@ export default async function InsuranceTechnologySolutionsSection() {
                   key={tech}
                   className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[13px] font-bold text-[#0a0a0a]"
                 >
-                  {tech}
+                  {t(tech)}
                 </span>
               ))}
             </div>

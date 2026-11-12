@@ -52,7 +52,7 @@ export default async function EnterpriseMsfaIntegrationsSection() {
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     src={item.logo}
-                    alt={`${item.name} logo`}
+                    alt={`${t(item.name)} logo`}
                     loading="lazy"
                     className={`object-contain ${item.logoClassName ?? "max-h-[48px] max-w-[130px]"}`}
                   />
@@ -62,7 +62,7 @@ export default async function EnterpriseMsfaIntegrationsSection() {
                       item.wordmarkClassName ?? "text-[#000000]"
                     }`}
                   >
-                    {item.name}
+                    {t(item.name)}
                   </span>
                 )}
               </div>

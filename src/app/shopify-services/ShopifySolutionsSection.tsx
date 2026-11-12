@@ -87,7 +87,7 @@ export default async function ShopifySolutionsSection() {
               key={name}
               className="rounded-full border border-[#ececec] bg-white px-4 py-2 text-[12.5px] font-bold tracking-[0.04em] text-[#3f3f3f]"
             >
-              {name}
+              {t(name)}
             </span>
           ))}
         </div>
@@ -125,7 +125,7 @@ export default async function ShopifySolutionsSection() {
                       <span className="mt-0.5 flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
                         <Check size={11} strokeWidth={3} />
                       </span>
-                      <span>{point}</span>
+                      <span>{t(point)}</span>
                     </li>
                   ))}
                 </ul>

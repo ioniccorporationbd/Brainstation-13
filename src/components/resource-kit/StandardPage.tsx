@@ -197,13 +197,13 @@ export default async function StandardPage({ data }: { data: PageData }) {
         <div className="pointer-events-none absolute -right-24 bottom-0 h-[360px] w-[360px] rounded-full bg-[#c91f28]/20 blur-[110px]" />
         <div className="relative mx-auto max-w-[1080px] text-center">
           <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#f87171]">
-            {eyebrow}
+            {t(eyebrow)}
           </span>
           <h1 className="mx-auto mt-7 max-w-[920px] text-[38px] font-medium leading-[1.08] tracking-[-0.055em] md:text-[60px]">
-            {title}
+            {t(title)}
           </h1>
           <p className="mx-auto mt-6 max-w-[760px] text-[17px] font-normal leading-[1.55] text-white/70 md:text-[21px]">
-            {description}
+            {t(description)}
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -232,7 +232,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
                 key={paragraph}
                 className="mt-4 text-[17px] font-medium leading-[1.6] tracking-[-0.02em] text-[#565656] md:text-[19px] first:mt-0"
               >
-                {paragraph}
+                {t(paragraph)}
               </p>
             ))}
           </div>
@@ -264,7 +264,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-[44px] font-light leading-none tracking-[-0.02em] text-[#c91f28] md:text-[58px]">
-                  {stat.value}
+                  {t(stat.value)}
                 </p>
                 <p className="mt-4 text-[14px] font-medium leading-[1.4] text-white/70 md:text-[16px]">
                   {t(stat.label)}
@@ -289,7 +289,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
                     <Check size={14} strokeWidth={3} />
                   </span>
                   <span className="text-[16px] font-medium leading-[1.55] text-[#374151]">
-                    {item}
+                    {t(item)}
                   </span>
                 </li>
               ))}

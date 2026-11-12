@@ -36,7 +36,7 @@ export default async function EcommercePlatformsSection() {
                   className="h-[24px] w-[24px] shrink-0 object-contain opacity-90 transition-opacity duration-300 hover:opacity-100"
                 />
                 <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
-                  {platform.name}
+                  {t(platform.name)}
                 </span>
               </div>
             ))}

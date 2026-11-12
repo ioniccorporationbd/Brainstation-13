@@ -97,7 +97,7 @@ export default function ShopifyTestimonialsSection() {
             }}
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={`${item.logoText}-${index}`}>
+              <SwiperSlide key={`${t(item.logoText)}-${index}`}>
                 <div className="flex min-h-[210px] flex-col rounded-2xl border border-[#ececec] bg-white px-7 py-8">
                   <p className="flex-1 text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#3f3f3f]">
                     &quot;{t(item.quote)}&quot;
@@ -105,7 +105,7 @@ export default function ShopifyTestimonialsSection() {
 
                   <div className="mt-7 flex flex-wrap items-center gap-4">
                     <span className="text-[15px] font-bold tracking-[0.08em] text-[#0a0a0a]">
-                      {item.logoText}
+                      {t(item.logoText)}
                     </span>
 
                     <div className="flex items-center gap-[3px]">

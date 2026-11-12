@@ -2,83 +2,48 @@
 
 import { Globe } from "lucide-react";
 
-import { LOCALE_LABEL, locales, type Locale } from "@/i18n/config";
 import { useTranslation } from "@/i18n/LanguageProvider";
 
 type Props = {
-  /** "desktop" renders the compact pill, "mobile" the full-width drawer row. */
+  /** "desktop" matches the navbar CTA sizing, "mobile" the full-width drawer CTA. */
   variant?: "desktop" | "mobile";
 };
 
+/**
+ * Single language button: shows the language you can switch TO.
+ * Bangla mode → "English"; English mode → "বাংলা". One button, no dropdown.
+ */
 export default function LanguageSwitcher({ variant = "desktop" }: Props) {
   const { locale, setLocale, t } = useTranslation();
-
-  const handleSelect = (next: Locale) => {
-    if (next !== locale) setLocale(next);
-  };
+  const next = locale === "bn" ? "en" : "bn";
+  const label = next === "en" ? "English" : "বাংলা";
+  const aria = next === "en" ? t("Switch to English") : t("Switch to Bangla");
 
   if (variant === "mobile") {
     return (
-      <div
-        role="group"
-        aria-label={t("Change language")}
-        className="mt-6 flex items-center gap-2 rounded-2xl border border-white/10 px-4 py-3"
+      <button
+        type="button"
+        onClick={() => setLocale(next)}
+        aria-label={aria}
+        lang={next === "en" ? "en" : "bn-BD"}
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-4 text-[16px] font-bold text-white transition hover:border-primary hover:bg-primary-hover"
       >
-        <Globe size={18} className="shrink-0 text-white/70" aria-hidden="true" />
-        <span className="mr-1 text-[14px] font-medium text-white/70">
-          {t("Language")}:
-        </span>
-        <div className="ml-auto flex items-center gap-1">
-          {locales.map((code) => {
-            const active = locale === code;
-            return (
-              <button
-                key={code}
-                type="button"
-                onClick={() => handleSelect(code)}
-                aria-pressed={active}
-                aria-label={code === "bn" ? t("Switch to Bangla") : t("Switch to English")}
-                className={`rounded-full px-3.5 py-1.5 text-[14px] font-semibold transition-colors duration-200 ${
-                  active
-                    ? "bg-[#C91F28] text-white"
-                    : "text-white/70 hover:bg-white/10 hover:text-white"
-                }`}
-              >
-                {LOCALE_LABEL[code]}
-              </button>
-            );
-          })}
-        </div>
-      </div>
+        <Globe size={18} aria-hidden="true" />
+        {t(label)}
+      </button>
     );
   }
 
   return (
-    <div
-      role="group"
-      aria-label={t("Change language")}
-      className="flex items-center gap-1 rounded-full border border-white/15 bg-white/5 p-1"
+    <button
+      type="button"
+      onClick={() => setLocale(next)}
+      aria-label={aria}
+      lang={next === "en" ? "en" : "bn-BD"}
+      className="flex items-center gap-2 rounded-full border border-white/25 px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary-hover hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] xl:px-[30px]"
     >
-      <Globe size={15} className="ml-2 mr-0.5 shrink-0 text-white/60" aria-hidden="true" />
-      {locales.map((code) => {
-        const active = locale === code;
-        return (
-          <button
-            key={code}
-            type="button"
-            onClick={() => handleSelect(code)}
-            aria-pressed={active}
-            aria-label={code === "bn" ? t("Switch to Bangla") : t("Switch to English")}
-            className={`rounded-full px-3 py-1 text-[13px] font-semibold leading-[18px] transition-colors duration-200 ${
-              active
-                ? "bg-[#C91F28] text-white shadow-[0_4px_12px_rgba(201,31,40,0.35)]"
-                : "text-white/70 hover:bg-white/10 hover:text-white"
-            }`}
-          >
-            {LOCALE_LABEL[code]}
-          </button>
-        );
-      })}
-    </div>
+      <Globe size={16} aria-hidden="true" />
+      {t(label)}
+    </button>
   );
 }

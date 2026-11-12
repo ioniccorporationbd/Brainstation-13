@@ -95,7 +95,7 @@ const impactItems: InfoItem[] = [
   },
 ];
 
-function InfoCard({
+async function InfoCard({
   text,
   icon: Icon,
   index,
@@ -104,6 +104,7 @@ function InfoCard({
   icon: React.ElementType;
   index: number;
 }) {
+  const { t } = await getTranslator();
   return (
     <article className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]">
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
@@ -116,7 +117,7 @@ function InfoCard({
         </p>
 
         <p className="text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
-          {text}
+          {t(text)}
         </p>
       </div>
     </article>
@@ -142,7 +143,7 @@ export default async function CaseStudySolutionImpactSection() {
             {solutionItems.map((item, index) => (
               <InfoCard
                 key={item.text}
-                text={item.text}
+                text={t(item.text)}
                 icon={item.icon}
                 index={index}
               />
@@ -164,7 +165,7 @@ export default async function CaseStudySolutionImpactSection() {
             {impactItems.map((item, index) => (
               <InfoCard
                 key={item.text}
-                text={item.text}
+                text={t(item.text)}
                 icon={item.icon}
                 index={index}
               />

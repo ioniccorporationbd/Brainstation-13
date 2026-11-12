@@ -172,7 +172,7 @@ export default function Navbar() {
                   aria-expanded={activeMenu === item.key}
                   aria-haspopup="true"
                   aria-current={isRouteActive(item) ? "page" : undefined}
-                  className={`group flex items-center gap-[7px] ${linkBase} ${
+                  className={`group flex items-center gap-[7px] ${t(linkBase)} ${
                     active
                       ? "text-white after:scale-x-100"
                       : "text-white hover:after:scale-x-100"
@@ -193,7 +193,7 @@ export default function Navbar() {
                   href={item.href}
                   onClick={closeAll}
                   aria-current={isRouteActive(item) ? "page" : undefined}
-                  className={`${linkBase} ${
+                  className={`${t(linkBase)} ${
                     active
                       ? "text-white after:scale-x-100"
                       : "text-white hover:after:scale-x-100"

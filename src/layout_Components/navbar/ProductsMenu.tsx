@@ -107,7 +107,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
           <div className="min-w-0">
             <ColumnTitle>{t("Education")}</ColumnTitle>
             <div className="mt-[23px] space-y-[15px]">
-              {education.map((item) => <TextLink key={t(item.label)} item={item} closeMenu={closeMenu} />)}
+              {education.map((item) => <TextLink key={item.label} item={item} closeMenu={closeMenu} />)}
             </div>
 
             <div className="mt-[26px]">
@@ -219,7 +219,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
   const { t } = useTranslation();
   return (
     <div>
-      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-primary"}`}>{title}</p>
+      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-primary"}`}>{t(title)}</p>
       <div className="space-y-[10px]">
         {links.map((item) => {
           const Icon = item.icon;
@@ -241,7 +241,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
           if (disabled) {
             return (
               <a
-                key={t(item.label)}
+                key={item.label}
                 href="#"
                 aria-disabled="true"
                 onClick={(e) => { e.preventDefault(); }}
@@ -254,7 +254,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
 
           if (isPlaceholder) {
             return (
-              <div key={t(item.label)} className="flex cursor-default items-center gap-[10px] text-[15px] font-medium text-[#9aa3af]">
+              <div key={item.label} className="flex cursor-default items-center gap-[10px] text-[15px] font-medium text-[#9aa3af]">
                 {inner}
               </div>
             );
@@ -262,7 +262,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
 
           return (
             <Link
-              key={t(item.label)}
+              key={item.label}
               href={item.href as string}
               onClick={closeMenu}
               target={external ? "_blank" : undefined}

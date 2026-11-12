@@ -27,8 +27,8 @@ export default async function DataScienceResourcesSection() {
                 key={item.name}
                 className="rounded-xl border border-[#ececec] bg-white p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
-                <p className="text-[14.5px] font-semibold text-black">{item.name}</p>
-                <p className="mt-1 text-[13px] leading-[1.6] text-[#55585e]">{item.use}</p>
+                <p className="text-[14.5px] font-semibold text-black">{t(item.name)}</p>
+                <p className="mt-1 text-[13px] leading-[1.6] text-[#55585e]">{t(item.use)}</p>
               </li>
             ))}
           </ul>

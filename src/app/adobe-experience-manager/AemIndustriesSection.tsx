@@ -38,7 +38,7 @@ export default async function AemIndustriesSection() {
               </span>
 
               <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#0a0a0a]">
-                {industry}
+                {t(industry)}
               </span>
             </div>
           ))}

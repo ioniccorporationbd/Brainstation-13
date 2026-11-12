@@ -30,10 +30,10 @@ export default function BankingFinancialClientsSection() {
         <div className="bank-clients-track flex w-max items-center gap-3">
           {[...clients, ...clients].map((name, index) => (
             <span
-              key={`${name}-${index}`}
+              key={`${t(name)}-${index}`}
               className="inline-flex h-[56px] shrink-0 items-center rounded-xl border border-[#ececec] bg-white px-6 text-[14.5px] font-semibold text-black"
             >
-              {name}
+              {t(name)}
             </span>
           ))}
         </div>

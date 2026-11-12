@@ -114,7 +114,7 @@ async function HighlightContent({ item }: { item: HighlightItem }) {
               strokeWidth={2.1}
               className="mt-[3px] shrink-0 text-[#c91f28]"
             />
-            <span>{point}</span>
+            <span>{t(point)}</span>
           </li>
         ))}
       </ul>
@@ -144,11 +144,11 @@ export default async function EnterpriseMsfaPlatformHighlightsSection() {
               {item.reverse ? (
                 <>
                   <HighlightContent item={item} />
-                  <ImagePanel title={item.title} image={item.image} />
+                  <ImagePanel title={t(item.title)} image={item.image} />
                 </>
               ) : (
                 <>
-                  <ImagePanel title={item.title} image={item.image} />
+                  <ImagePanel title={t(item.title)} image={item.image} />
                   <HighlightContent item={item} />
                 </>
               )}

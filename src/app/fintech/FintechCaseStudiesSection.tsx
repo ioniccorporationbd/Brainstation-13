@@ -123,7 +123,7 @@ export default function FintechCaseStudiesSection() {
 
           <div>
             <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
-              {active.category}
+              {t(active.category)}
             </p>
             <h3 className="mt-3 text-[22px] font-bold leading-[1.25] tracking-[-0.015em] text-black md:text-[28px]">
               {t(active.title)}
@@ -135,7 +135,7 @@ export default function FintechCaseStudiesSection() {
                   key={tag}
                   className="rounded-lg border border-[#ececec] bg-white px-3.5 py-1.5 text-[13px] font-semibold text-black"
                 >
-                  {tag}
+                  {t(tag)}
                 </li>
               ))}
             </ul>
@@ -148,7 +148,7 @@ export default function FintechCaseStudiesSection() {
                 {active.results.map((result) => (
                   <li key={result} className="flex gap-3 text-[14.5px] leading-[1.6] text-[#55585e]">
                     <span className="mt-[9px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
-                    <span>{result}</span>
+                    <span>{t(result)}</span>
                   </li>
                 ))}
               </ul>

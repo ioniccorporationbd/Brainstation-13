@@ -59,7 +59,7 @@ export default async function AIDevelopmentExcellenceSection() {
                 className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
               >
                 <span className="text-[34px] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
-                  {item.number}
+                  {t(item.number)}
                 </span>
 
                 <span className="mt-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-primary/70">

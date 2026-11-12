@@ -55,7 +55,7 @@ export default async function FintechTechStackSection() {
               key={`chip-${tech.slug}`}
               className="rounded-lg border border-[#ececec] bg-white px-3.5 py-1.5 text-[13px] font-semibold text-black"
             >
-              {tech.name}
+              {t(tech.name)}
             </li>
           ))}
         </ul>

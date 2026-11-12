@@ -169,7 +169,7 @@ export default async function GlobalOfficesPage() {
             {facts.map((fact) => (
               <div key={fact.label} className="bg-white px-6 py-6">
                 <dd className="text-[20px] font-bold leading-[1.2] tracking-[-0.02em] text-[#c91f28] md:text-[22px]">
-                  {fact.value}
+                  {t(fact.value)}
                 </dd>
                 <dt className="mt-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#6b6f76]">
                   {t(fact.label)}

@@ -19,7 +19,7 @@ export default async function CloudSolutionsStatsSection() {
               className="rounded-xl border border-[#ececec] bg-white px-5 py-7 text-center md:px-6 md:py-8"
             >
               <p className="text-[30px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[40px]">
-                {stat.value}
+                {t(stat.value)}
               </p>
               <p className="mt-3 text-[13.5px] font-medium leading-[1.4] text-[#55585e] md:text-[14.5px]">
                 {t(stat.label)}

@@ -30,7 +30,7 @@ export default async function WorkedWithSection() {
           <div className="animate-platform-marquee flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">
             {[...platforms, ...platforms, ...platforms].map((platform, index) => (
               <div
-                key={`${platform.name}-${index}`}
+                key={`${t(platform.name)}-${index}`}
                 className="mx-3 flex h-[56px] shrink-0 items-center gap-3 px-4 md:mx-5 md:h-[60px] md:px-5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -40,7 +40,7 @@ export default async function WorkedWithSection() {
                   className="h-[24px] w-[24px] shrink-0 object-contain opacity-90 transition-opacity duration-300 hover:opacity-100"
                 />
                 <span className="whitespace-nowrap text-[14px] font-bold tracking-[-0.01em] text-[#3f3f3f]">
-                  {platform.name}
+                  {t(platform.name)}
                 </span>
               </div>
             ))}
