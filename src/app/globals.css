@@ -104,6 +104,21 @@ body {
   color: #0a0a0a;
 }
 
+/* Bangla mode: Ubuntu has no Bengali glyphs, so use a Bengali-first stack
+   while keeping the same visual weight and generous line height. */
+html[lang="bn-BD"] body {
+  font-family: "Hind Siliguri", var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+html[lang="bn-BD"] h1,
+html[lang="bn-BD"] h2,
+html[lang="bn-BD"] h3,
+html[lang="bn-BD"] h4 {
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
 ::selection {
   background: var(--primary);
   color: #ffffff;

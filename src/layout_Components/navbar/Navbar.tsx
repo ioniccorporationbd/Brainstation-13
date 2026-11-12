@@ -6,6 +6,9 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
+import LanguageSwitcher from "@/components/global/LanguageSwitcher";
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 import ServicesMenu from "./ServicesMenu";
 import IndustriesMenu from "./IndustriesMenu";
 import ProductsMenu from "./ProductsMenu";
@@ -34,6 +37,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,7 +133,7 @@ export default function Navbar() {
           href="/"
           onClick={closeAll}
           className="absolute left-[120px] top-0 z-30 flex h-[76px] items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[88px] 2xl:h-[100px]"
-          aria-label="Magnetic Solution Limited — Home"
+          aria-label={t("Magnetic Solution Limited — Home")}
         >
           <Image
             src="/images/brand/magnetic-logo.png"
@@ -157,7 +161,7 @@ export default function Navbar() {
             />
           </span>
 
-          <div className="hidden items-center gap-[30px] min-[1025px]:flex">
+          <div className="hidden items-center gap-5 min-[1025px]:flex xl:gap-[30px]">
             {navItems.map((item) => {
               const active = activeMenu === item.key || isRouteActive(item);
               return item.hasMegaMenu ? (
@@ -174,7 +178,7 @@ export default function Navbar() {
                       : "text-white hover:after:scale-x-100"
                   }`}
                 >
-                  {item.label}
+                  {t(item.label)}
                   <ChevronDown
                     size={17}
                     strokeWidth={2.2}
@@ -195,23 +199,26 @@ export default function Navbar() {
                       : "text-white hover:after:scale-x-100"
                   }`}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
               );
             })}
           </div>
 
-          <Link
-            href="/schedule-a-call"
-            onClick={closeAll}
-            className="hidden rounded-full bg-primary px-[30px] py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] min-[1025px]:inline-flex"
-          >
-            Schedule a Call
-          </Link>
+          <div className="hidden items-center gap-4 min-[1025px]:flex">
+            <LanguageSwitcher />
+            <Link
+              href="/schedule-a-call"
+              onClick={closeAll}
+              className="rounded-full bg-primary px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_10px_24px_rgba(201,31,40,0.36)] xl:px-[30px]"
+            >
+              {t("Schedule a Call")}
+            </Link>
+          </div>
 
           <button
             type="button"
-            aria-label="Toggle menu"
+            aria-label={t("Toggle menu")}
             onClick={() => {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
@@ -243,7 +250,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label="Magnetic Solution Limited — Home">
+          <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label={t("Magnetic Solution Limited — Home")}>
             <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
                 src="/images/brand/magnetic-logo.png"
@@ -259,7 +266,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={closeAll}
-            aria-label="Close menu"
+            aria-label={t("Close menu")}
             className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-primary hover:text-white"
           >
             <X size={24} />
@@ -280,7 +287,7 @@ export default function Navbar() {
                         : ""
                     }`}
                   >
-                    {item.label}
+                    {t(item.label)}
                     <ChevronDown
                       size={19}
                       className={`transition-transform duration-300 ${
@@ -309,18 +316,20 @@ export default function Navbar() {
                       : ""
                   }`}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
               )
             )}
           </nav>
 
+          <LanguageSwitcher variant="mobile" />
+
           <Link
             href="/schedule-a-call"
             onClick={closeAll}
-            className="mt-7 flex w-full justify-center rounded-full bg-primary px-7 py-4 text-[16px] font-bold text-white transition hover:bg-primary-hover"
+            className="mt-5 flex w-full justify-center rounded-full bg-primary px-7 py-4 text-[16px] font-bold text-white transition hover:bg-primary-hover"
           >
-            Schedule a Call
+            {t("Schedule a Call")}
           </Link>
         </div>
       </aside>
