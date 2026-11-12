@@ -16,5 +16,9 @@ export default function GlobalOfficesGate() {
     return null;
   }
 
-  return <GlobalOfficesSection />;
+  return (
+    <div data-global-offices>
+      <GlobalOfficesSection />
+    </div>
+  );
 }

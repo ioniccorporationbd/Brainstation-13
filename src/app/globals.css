@@ -297,3 +297,10 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+/* Error surfaces (404/401/403/500/502/503) hide the global chrome.
+   The flag is set on <html> by the shared ErrorPage component. */
+html[data-error-page="1"] footer,
+html[data-error-page="1"] [data-global-offices] {
+  display: none !important;
+}

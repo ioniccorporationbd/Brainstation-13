@@ -5,10 +5,18 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=()",
+  },
 ];
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Enables the supported unauthorized()/forbidden() interrupts that render
+    // app/unauthorized.tsx (401) and app/forbidden.tsx (403).
+    authInterrupts: true,
+  },
   async headers() {
     return [
       {
@@ -22,10 +30,18 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
       { protocol: "https", hostname: "logo.clearbit.com", pathname: "/**" },
       { protocol: "https", hostname: "upload.wikimedia.org", pathname: "/**" },
-      { protocol: "https", hostname: "cdn-icons-png.flaticon.com", pathname: "/**" },
+      {
+        protocol: "https",
+        hostname: "cdn-icons-png.flaticon.com",
+        pathname: "/**",
+      },
       { protocol: "https", hostname: "pngimg.com", pathname: "/**" },
       { protocol: "https", hostname: "images.credly.com", pathname: "/**" },
-      { protocol: "https", hostname: "cdn.prod.website-files.com", pathname: "/**" },
+      {
+        protocol: "https",
+        hostname: "cdn.prod.website-files.com",
+        pathname: "/**",
+      },
       { protocol: "https", hostname: "www.liblogo.com", pathname: "/**" },
     ],
   },
