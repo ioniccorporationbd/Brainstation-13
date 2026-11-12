@@ -37,8 +37,11 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={HTML_LANG[locale]} className="h-full">
+    <html lang={HTML_LANG[locale]} translate="no" className="h-full">
       <head>
+        {/* The site translates itself; browser auto-translation (Chrome/Google
+            Translate) rewrites the DOM and would fight the app's locale state. */}
+        <meta name="google" content="notranslate" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
