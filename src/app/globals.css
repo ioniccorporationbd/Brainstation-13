@@ -85,6 +85,7 @@
    bg-primary / hover:bg-primary-hover / text-secondary / bg-brand-white etc.
    (Tailwind's built-in white/black already equal --white/--secondary.) */
 @theme inline {
+  --font-sans: "Ubuntu", "Noto Serif Bengali", Arial, sans-serif;
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-secondary: var(--secondary);
@@ -96,7 +97,7 @@ html {
 }
 
 body {
-  font-family: var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: "Ubuntu", "Noto Serif Bengali", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -104,10 +105,11 @@ body {
   color: #0a0a0a;
 }
 
-/* Bangla mode: Ubuntu has no Bengali glyphs, so use a Bengali-first stack
-   while keeping the same visual weight and generous line height. */
+/* Bangla mode: same Bangla font as the ionic-main reference build
+   (Noto Serif Bengali). Ubuntu has no Bengali glyphs, so it only serves
+   Latin characters; every Bangla glyph resolves to Noto Serif Bengali. */
 html[lang="bn-BD"] body {
-  font-family: "Hind Siliguri", var(--font-ubuntu), Ubuntu, Arial, sans-serif;
+  font-family: "Noto Serif Bengali", "Ubuntu", Arial, sans-serif;
   line-height: 1.65;
 }
 
