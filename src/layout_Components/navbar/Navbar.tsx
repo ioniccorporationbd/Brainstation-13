@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
@@ -112,6 +112,18 @@ export default function Navbar() {
     pathname === item.href ||
     (item.href !== "/" && !!pathname && pathname.startsWith(`${item.href}/`));
 
+  /* The navbar logo must always take the visitor to the home page. From any
+     other route the Link below navigates to "/"; on the home page itself the
+     navigation would be a no-op, so it closes the menus and scrolls back to
+     the top instead. */
+  const handleLogoClick = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    closeAll();
+    if (pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   // Shared link styling: animated brand-red underline reveal (text colour stays white on hover).
   const linkBase =
     "relative text-[16px] font-medium leading-[24px] transition-colors duration-300 " +
@@ -131,7 +143,7 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          onClick={closeAll}
+          onClick={handleLogoClick}
           className="absolute left-[120px] top-0 z-30 flex h-[76px] items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[88px] 2xl:h-[100px]"
           aria-label={t("Magnetic Solution Limited — Home")}
         >
@@ -250,7 +262,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/" onClick={closeAll} className="flex min-w-0 items-center gap-2" aria-label={t("Magnetic Solution Limited — Home")}>
+          <Link href="/" onClick={handleLogoClick} className="flex min-w-0 items-center gap-2" aria-label={t("Magnetic Solution Limited — Home")}>
             <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
                 src="/images/brand/magnetic-logo.png"
