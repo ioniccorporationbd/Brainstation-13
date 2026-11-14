@@ -98,28 +98,28 @@ export default function HeroBannerSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
-            <div className="relative min-h-[650px] w-full overflow-hidden">
-              <div className="brand-container relative grid min-h-[650px] grid-cols-1 pt-[76px] lg:grid-cols-[51.5%_48.5%]">
+            <div className="relative w-full overflow-hidden md:min-h-[650px]">
+              <div className="brand-container relative grid grid-cols-1 pt-[76px] md:min-h-[650px] lg:grid-cols-[51.5%_48.5%]">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px]">
-                  <h1 className="max-w-[660px] text-balance text-[32px] font-semibold leading-[1.14] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
+                  <h1 className="max-w-[660px] text-balance text-[28px] font-semibold leading-[1.16] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
                     {t(slide.title)}
                   </h1>
 
-                  <p className="mt-7 max-w-[620px] text-pretty text-[17px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[20px]">
+                  <p className="mt-6 max-w-[620px] text-pretty text-[16px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[20px]">
                     {t(slide.description)}
                   </p>
 
                   <Link
                     href={slide.buttonHref}
-                    className="mt-12 inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
+                    className="mt-8 inline-flex h-[52px] sm:mt-12 w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
                   >
                     {t(slide.buttonText)}
                   </Link>
                 </div>
 
                 {/* RIGHT SIDE DESKTOP */}
-                <div className="relative z-10 hidden min-h-[560px] md:block">
+                <div className="relative z-10 hidden min-h-[560px] origin-top-left md:block lg:scale-[0.72] xl:scale-100">
                   {/* Circle Pattern */}
                   <div className="pointer-events-none absolute left-[48%] top-[47%] h-[910px] w-[910px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_12px)]" />
 
@@ -165,8 +165,8 @@ export default function HeroBannerSlider() {
                 </div>
 
                 {/* MOBILE / TABLET SMALL */}
-                <div className="relative z-20 mt-10 grid gap-5 pb-[135px] md:hidden">
-                  <div className="pointer-events-none absolute left-1/2 top-[170px] h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_11px)]" />
+                <div className="relative z-20 mt-8 grid gap-4 pb-14 md:hidden">
+                  <div className="pointer-events-none absolute left-1/2 top-[420px] -z-10 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_11px)]" />
 
                   <div className="relative z-10 overflow-hidden rounded-[10px] shadow-[6px_6px_0_rgba(0,0,0,0.08)]">
                     <img

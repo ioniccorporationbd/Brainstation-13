@@ -47,18 +47,18 @@ const magneticOffices: MagneticOffice[] = [
 export default function GlobalOfficesSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full bg-white py-[72px] md:py-[100px]">
-      <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+    <section className="w-full bg-white py-14 sm:py-[72px] md:py-[100px]">
+      <div className="brand-container">
         <div className="max-w-[620px]">
-          <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>
+          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>
           <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-2">
+        <div className="mt-8 grid gap-6 md:mt-12 md:grid-cols-2">
           {magneticOffices.map((office) => (
             <article
               key={office.name}
-              className="group flex flex-col rounded-2xl border border-[#E7E7EA] bg-white p-7 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_24px_50px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-9"
+              className="group flex flex-col rounded-2xl border border-[#E7E7EA] bg-white p-6 sm:p-7 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_24px_50px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-9"
             >
               <div className="flex items-center justify-between">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#C91F28] text-white">

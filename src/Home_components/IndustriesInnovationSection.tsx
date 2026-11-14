@@ -71,9 +71,9 @@ const industries: IndustryCard[] = [
 export default async function IndustriesInnovationSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[72px] md:py-[96px] lg:py-[112px]">
+    <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[96px] lg:py-[112px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[680px] text-center text-[38px] font-semibold leading-[1.14] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">{t("Industries We Power with Innovation")}</h2>
+        <h2 className="mx-auto max-w-[680px] text-center text-[29px] font-semibold leading-[1.16] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">{t("Industries We Power with Innovation")}</h2>
 
         <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {industries.map((industry) => (
@@ -102,7 +102,7 @@ async function IndustryItem({ industry }: { industry: IndustryCard }) {
         className="h-[44px] w-[44px] object-contain"
       />
 
-      <h3 className="mt-6 text-[23px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[25px]">
+      <h3 className="mt-6 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[25px]">
         {t(industry.title)}
       </h3>
 

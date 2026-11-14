@@ -21,12 +21,12 @@ const STATS = [
 export default async function CaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
+    <section className="w-full overflow-x-clip bg-white py-[54px] sm:py-[72px] md:py-[100px]">
       <div className="brand-container">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Case Studies")}</h2>
+            <h2 className="text-[28px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Case Studies")}</h2>
             <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">{t("Check out our case studies to see how innovative solutions transformed real businesses.")}</p>
           </div>
 

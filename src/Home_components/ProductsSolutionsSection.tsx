@@ -61,10 +61,10 @@ const products: ProductItem[] = [
 export default async function ProductsSolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[72px] md:py-[92px] lg:py-[110px]">
+    <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[50px]">{t("Our Products & Solutions")}</h2>
+          <h2 className="text-[28px] font-semibold leading-[1.14] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[50px]">{t("Our Products & Solutions")}</h2>
 
           <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px]">{t("Accelerating Digital Transformation Across Banking, FinTech, EdTech, Pharma, and Enterprise Operations")}</p>
         </div>

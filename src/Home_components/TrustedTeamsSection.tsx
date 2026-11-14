@@ -60,7 +60,7 @@ const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 export default function TrustedTeamsSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[130px] pt-[22px]">
+    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[18px] sm:pb-[100px] sm:pt-[22px] md:pb-[130px]">
       <div className="brand-container">
         <div className="trusted-heading text-center">
           <h2 className="text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] lg:text-[32px]">{t("Trusted By Fast-Moving Tech Teams")}</h2>
@@ -68,15 +68,15 @@ export default function TrustedTeamsSection() {
           <p className="mt-[6px] text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] lg:text-[32px]">{t("From Startups to Enterprises")}</p>
         </div>
 
-        <div className="trusted-slider relative mt-[92px] w-full overflow-hidden">
+        <div className="trusted-slider relative mt-[48px] w-full overflow-hidden sm:mt-[72px] md:mt-[92px]">
           <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-white to-transparent max-sm:w-[45px]" />
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-white to-transparent max-sm:w-[45px]" />
 
-          <div className="trusted-logo-track flex w-max items-center gap-[88px]">
+          <div className="trusted-logo-track flex w-max items-center gap-[56px] sm:gap-[72px] md:gap-[88px]">
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={`${t(logo.name)}-${index}`}
-                className="flex h-[44px] min-w-[130px] items-center justify-center"
+                className="flex h-[44px] min-w-[110px] items-center justify-center sm:min-w-[130px]"
               >
                 <Image
                   src={logo.image}

@@ -36,12 +36,12 @@ const aiStats = [
 export default async function AIDevelopmentExcellenceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[76px] md:py-[96px] lg:py-[118px]">
+    <section className="w-full bg-white py-[54px] sm:py-[76px] md:py-[96px] lg:py-[118px]">
       <div className="brand-container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
           <div>
-            <h2 className="max-w-[420px] text-[38px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[52px]">{t("AI-Driven Development Excellence")}</h2>
+            <h2 className="max-w-[420px] text-[29px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[52px]">{t("AI-Driven Development Excellence")}</h2>
 
             <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B]">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
 

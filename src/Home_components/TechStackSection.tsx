@@ -29,7 +29,7 @@ export default async function TechStackSection() {
   const marquee = [...LOGOS, ...LOGOS];
 
   return (
-    <section className="w-full overflow-hidden bg-white py-[72px] md:py-[92px] lg:py-[104px]">
+    <section className="w-full overflow-hidden bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
           <h2 className="text-[26px] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] md:text-[36px]">

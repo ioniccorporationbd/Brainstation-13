@@ -29,9 +29,9 @@ const introCards = [
 export default async function AboutSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[72px] md:py-[92px] lg:py-[110px]">
+    <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[760px] text-center text-[30px] font-semibold leading-[1.16] tracking-[-0.02em] text-[#0A0A0A] sm:text-[38px] lg:text-[44px]">{t("A global software company powering digital transformation.")}</h2>
+        <h2 className="mx-auto max-w-[760px] text-center text-[25px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[38px] lg:text-[44px]">{t("A global software company powering digital transformation.")}</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {introCards.map((card) => (
