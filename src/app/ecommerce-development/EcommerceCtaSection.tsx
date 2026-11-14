@@ -9,7 +9,7 @@ export default async function EcommerceCtaSection() {
       <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
         <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Next Step")}</p>
 
-        <h2 className="mx-auto max-w-[720px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Replatforming or launching?")}</h2>
+        <h2 className="mx-auto max-w-[720px] text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Replatforming or launching?")}</h2>
 
         <p className="mx-auto mt-4 max-w-[620px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[15px]">{t("We'll scope the fastest safe path to a high-performing storefront.")}</p>
 

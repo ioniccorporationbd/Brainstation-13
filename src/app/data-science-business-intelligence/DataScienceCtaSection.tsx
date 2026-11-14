@@ -10,7 +10,7 @@ export default async function DataScienceCtaSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
-              <h2 className="text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Would like to start a project with us?")}</h2>
+              <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Would like to start a project with us?")}</h2>
               <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[15px]">{t("Share the data problem you are trying to solve and we will map the pipeline behind it.")}</p>
             </div>
 

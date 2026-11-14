@@ -38,7 +38,7 @@ export default async function RiskFreeTimelineSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
-          <h2 className="mx-auto text-[20px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[46px] lg:text-[50px]">{t("Risk-Free Talent Alignment")}</h2>
+          <h2 className="mx-auto text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] sm:text-[30px] md:text-[46px] lg:text-[50px]">{t("Risk-Free Talent Alignment")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

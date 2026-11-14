@@ -19,7 +19,7 @@ export default async function ErpDevelopmentPlatformsSection() {
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Stack")}</p>
-            <h2 className="mt-4 text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("ERP platforms & technologies")}</h2>
+            <h2 className="mt-4 text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("ERP platforms & technologies")}</h2>
           </div>
           <p className="max-w-[430px] text-[14.5px] leading-[1.7] text-[#52525B]">{t("A sample of the platforms we build on and integrate with. Logo use does not imply partnership or certification.")}</p>
         </div>

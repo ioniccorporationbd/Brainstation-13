@@ -65,7 +65,7 @@ export default function DataTrustedBySection() {
   return (
     <section className="w-full overflow-hidden bg-white pb-[64px] pt-[8px] text-[#0a0a0a] md:pb-[80px]">
       <div className="brand-container text-center">
-        <h2 className="text-[22px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">{t("Trusted by fast-moving teams, from startups to enterprises")}</h2>
+        <h2 className="text-[27px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">{t("Trusted by fast-moving teams, from startups to enterprises")}</h2>
       </div>
 
       {/* Continuous right-to-left marquee */}
