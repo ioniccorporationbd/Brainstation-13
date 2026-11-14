@@ -34,12 +34,12 @@ const services: Service[] = [
 export default async function DataMigrationServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Do")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Core Data Services")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Core Data Services")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Proven migration techniques that clean, validate, and consolidate scattered legacy data into secure, future-ready systems.")}</p>
         </div>
@@ -63,7 +63,7 @@ export default async function DataMigrationServicesSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-[16px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[16px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(service.title)}
                 </h3>
               </article>

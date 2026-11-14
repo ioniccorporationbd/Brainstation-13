@@ -38,12 +38,12 @@ const solveBlocks: SolveBlock[] = [
 export default async function InsuranceWhatWeSolveSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Challenges & Approach")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Challenges & Approach")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Solve")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Solve")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -74,7 +74,7 @@ async function SolveCard({ block }: { block: SolveBlock }) {
         </div>
 
         <div>
-          <h3 className="text-[19px] font-bold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
+          <h3 className="text-[19px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
             {t(block.title)}
           </h3>
 

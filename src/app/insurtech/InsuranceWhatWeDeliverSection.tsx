@@ -71,13 +71,13 @@ export default function InsuranceWhatWeDeliverSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
+    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
         {/* Left title */}
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Deliverables")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Deliverables")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Deliver")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Deliver")}</h2>
 
           <p className="mt-5 max-w-[340px] text-[15.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
         </div>

@@ -53,13 +53,13 @@ const caseStudies: CaseStudy[] = [
 export default async function DataCaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[720px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our Work")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Work")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Case Studies")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Case Studies")}</h2>
 
             <p className="mt-4 text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A closer look at how our data engineering work has transformed businesses.")}</p>
           </div>
@@ -91,7 +91,7 @@ export default async function DataCaseStudiesSection() {
                   {t(item.tag)}
                 </p>
 
-                <h3 className="mt-3 text-[19px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-3 text-[19px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 

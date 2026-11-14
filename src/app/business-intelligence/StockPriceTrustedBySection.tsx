@@ -66,9 +66,9 @@ function LogoTrack({ prefix }: { prefix: string }) {
 export default function StockPriceTrustedBySection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pt-[8px] pb-[80px] text-[#0a0a0a] md:pb-[96px]">
-      <div className="mx-auto max-w-[1240px] text-center">
-        <h2 className="text-[22px] font-bold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">{t("Trusted by fast-moving teams, from startups to enterprises")}</h2>
+    <section className="w-full overflow-hidden bg-white pt-[8px] pb-[52px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="brand-container text-center">
+        <h2 className="text-[22px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">{t("Trusted by fast-moving teams, from startups to enterprises")}</h2>
       </div>
 
       {/* Continuous right-to-left marquee */}

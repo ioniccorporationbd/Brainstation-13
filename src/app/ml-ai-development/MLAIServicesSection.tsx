@@ -40,13 +40,13 @@ const services: Service[] = [
 export default async function MLAIServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Can Do")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Customized ML and AI models aligned with your business goals. From automation to advanced analytics, we build solutions that scale with you.")}</p>
         </div>
@@ -70,7 +70,7 @@ export default async function MLAIServicesSection() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="text-[15.5px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a]">
+                  <h3 className="text-[15.5px] font-semibold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a]">
                     {t(service.title)}
                   </h3>
                 </div>
