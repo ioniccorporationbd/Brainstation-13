@@ -144,7 +144,7 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="absolute left-[120px] top-0 z-30 flex h-[76px] items-center justify-center bg-white px-4 min-[1025px]:px-5 xl:h-[88px] 2xl:h-[100px]"
+          className="absolute left-0 top-0 z-30 flex h-[64px] items-center justify-center bg-white px-3 min-[768px]:h-[72px] min-[768px]:px-4 min-[768px]:left-6 min-[1440px]:left-[120px] min-[1200px]:h-[76px] min-[1200px]:px-5 xl:h-[88px] 2xl:h-[100px]"
           aria-label={t("Magnetic Solution Limited — Home")}
         >
           <Image
@@ -157,11 +157,11 @@ export default function Navbar() {
           />
         </Link>
         <nav
-          className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between px-5 transition-all duration-300 min-[1025px]:px-8 xl:h-[88px] 2xl:h-[100px]"
+          className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-4 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-6 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-8 xl:h-[88px] 2xl:h-[100px]"
         >
           <span
             aria-hidden="true"
-            className="invisible -ml-5 flex shrink-0 items-center justify-center self-stretch bg-white px-4 min-[1025px]:-ml-8 min-[1025px]:px-5"
+            className="invisible -ml-4 flex shrink-0 items-center justify-center self-stretch bg-white px-3 min-[768px]:-ml-6 min-[768px]:px-4 min-[1200px]:-ml-8 min-[1200px]:px-5"
           >
             <Image
               src="/images/brand/magnetic-logo.png"
@@ -173,7 +173,7 @@ export default function Navbar() {
             />
           </span>
 
-          <div className="hidden items-center gap-5 min-[1025px]:flex xl:gap-[30px]">
+          <div className="hidden items-center gap-5 min-[1200px]:flex xl:gap-[30px]">
             {navItems.map((item) => {
               const active = activeMenu === item.key || isRouteActive(item);
               return item.hasMegaMenu ? (
@@ -217,12 +217,12 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="hidden items-center gap-4 min-[1025px]:flex">
+          <div className="ml-auto hidden shrink-0 items-center gap-3 min-[480px]:flex min-[1200px]:ml-0 min-[1200px]:gap-4">
             <LanguageSwitcher />
             <Link
               href="/schedule-a-call"
               onClick={closeAll}
-              className="rounded-full bg-white px-6 py-[14px] text-[16px] font-semibold leading-[20px] text-black shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white xl:px-[30px]"
+              className="hidden rounded-full bg-white px-5 py-[12px] text-[15px] font-semibold leading-[20px] text-black shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white min-[768px]:inline-flex min-[1200px]:px-6 min-[1200px]:py-[14px] min-[1200px]:text-[16px] xl:px-[30px]"
             >
               {t("Schedule a Call")}
             </Link>
@@ -235,13 +235,13 @@ export default function Navbar() {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
             }}
-            className="flex h-[46px] w-[46px] items-center justify-center rounded-full border border-white/25 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-[#C91F28] min-[1025px]:hidden"
+            className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-[#C91F28] min-[768px]:h-[46px] min-[768px]:w-[46px] min-[1200px]:hidden"
           >
             {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
         </nav>
 
-        <div className="absolute left-0 top-[76px] hidden w-full min-[1025px]:block xl:top-[88px] 2xl:top-[100px]">
+        <div className="absolute left-0 top-[76px] hidden w-full min-[1200px]:block xl:top-[88px] 2xl:top-[100px]">
           {activeMenu === "services" && <ServicesMenu closeMenu={closeAll} />}
           {activeMenu === "industries" && <IndustriesMenu closeMenu={closeAll} />}
           {activeMenu === "products" && <ProductsMenu closeMenu={closeAll} />}
@@ -251,17 +251,17 @@ export default function Navbar() {
 
       <div
         onClick={closeAll}
-        className={`fixed inset-0 z-[60] bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 min-[1025px]:hidden ${
+        className={`fixed inset-0 z-[60] bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 min-[1200px]:hidden ${
           mobileOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-screen w-[340px] max-w-[88%] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-5 py-5 transition-transform duration-300 ease-out min-[1025px]:hidden ${
+        className={`fixed right-0 top-0 z-[70] h-[100dvh] w-[340px] max-w-[88vw] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-4 py-4 transition-transform duration-300 ease-out min-[768px]:px-5 min-[768px]:py-5 min-[1200px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-5 flex shrink-0 items-center justify-between min-[768px]:mb-6">
           <Link href="/" onClick={handleLogoClick} className="flex min-w-0 items-center gap-2" aria-label={t("Magnetic Solution Limited — Home")}>
             <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
               <Image
@@ -285,7 +285,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="h-[calc(100vh-105px)] overflow-y-auto pr-1">
+        <div className="h-[calc(100dvh-92px)] overflow-y-auto overscroll-contain pr-1 min-[768px]:h-[calc(100dvh-104px)]">
           <nav className="flex flex-col gap-2">
             {navItems.map((item) =>
               item.hasMegaMenu ? (
@@ -293,7 +293,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleMenu(item.key)}
-                    className={`relative flex w-full items-center justify-between px-4 py-4 text-left text-[17px] font-semibold text-white transition hover:bg-white/10 ${
+                    className={`relative flex w-full items-center justify-between px-3.5 py-3.5 text-left text-[16px] font-semibold text-white transition hover:bg-white/10 ${
                       isRouteActive(item)
                         ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
                         : ""
@@ -322,7 +322,7 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={closeAll}
-                  className={`relative block rounded-2xl border border-white/10 px-4 py-4 text-[17px] font-semibold text-white transition hover:bg-white/10 ${
+                  className={`relative block rounded-2xl border border-white/10 px-3.5 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10 ${
                     isRouteActive(item)
                       ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
                       : ""
