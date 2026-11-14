@@ -61,7 +61,7 @@ export default function TrustedTeamsSection() {
   const { t } = useTranslation();
   return (
     <section className="w-full overflow-hidden bg-white pb-[130px] pt-[22px]">
-      <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 xl:px-0">
+      <div className="brand-container">
         <div className="trusted-heading text-center">
           <h2 className="text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] lg:text-[32px]">{t("Trusted By Fast-Moving Tech Teams")}</h2>
 

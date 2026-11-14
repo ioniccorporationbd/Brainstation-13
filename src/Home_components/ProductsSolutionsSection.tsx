@@ -62,7 +62,7 @@ export default async function ProductsSolutionsSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[72px] md:py-[92px] lg:py-[110px]">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[50px]">{t("Our Products & Solutions")}</h2>
 

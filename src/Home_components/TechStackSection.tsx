@@ -30,7 +30,7 @@ export default async function TechStackSection() {
 
   return (
     <section className="w-full overflow-hidden bg-white py-[72px] md:py-[92px] lg:py-[104px]">
-      <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+      <div className="brand-container">
         <div className="text-center">
           <h2 className="text-[26px] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] md:text-[36px]">
             <span className="text-[#C91F28]">{t("Yes!")}</span>{" "}{t("We cover your tech stack.")}</h2>

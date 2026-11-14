@@ -22,7 +22,7 @@ export default async function CaseStudiesSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div className="brand-container">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>

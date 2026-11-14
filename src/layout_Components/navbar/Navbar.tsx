@@ -142,7 +142,7 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-4 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-6 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-8 xl:h-[88px] 2xl:h-[100px]"
+          className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-9 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-11 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-[52px] xl:h-[88px] 2xl:h-[100px]"
         >
           <Link
             href="/"

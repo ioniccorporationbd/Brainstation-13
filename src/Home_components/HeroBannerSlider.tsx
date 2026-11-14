@@ -99,9 +99,9 @@ export default function HeroBannerSlider() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
             <div className="relative min-h-[650px] w-full overflow-hidden">
-              <div className="relative mx-auto grid min-h-[650px] w-full max-w-[1400px] grid-cols-1 px-5 pt-[76px] sm:px-8 lg:grid-cols-[51.5%_48.5%] lg:px-10 xl:px-0">
+              <div className="brand-container relative grid min-h-[650px] grid-cols-1 pt-[76px] lg:grid-cols-[51.5%_48.5%]">
                 {/* LEFT SIDE */}
-                <div className="relative z-20 flex flex-col justify-start pt-[34px] lg:pl-[18px]">
+                <div className="relative z-20 flex flex-col justify-start pt-[34px]">
                   <h1 className="max-w-[660px] text-balance text-[32px] font-semibold leading-[1.14] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
                     {t(slide.title)}
                   </h1>

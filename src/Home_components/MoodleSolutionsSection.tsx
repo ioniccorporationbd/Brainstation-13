@@ -23,7 +23,7 @@ export default async function MoodleSolutionsSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[80px] md:py-[104px] lg:py-[128px]">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+      <div className="brand-container">
         {/* Header */}
         <div className="text-center">
           <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-[0.16em] text-primary">{t("Moodle Capabilities")}</p>

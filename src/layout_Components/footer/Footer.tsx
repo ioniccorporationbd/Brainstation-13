@@ -156,7 +156,7 @@ export default async function Footer() {
   return (
     <footer className="relative overflow-hidden border-t-[4px] border-[#C91F28] bg-black text-white">
       {/* CTA Card */}
-      <div className="mx-auto w-full max-w-[1400px] px-5 pt-[60px] sm:px-8 xl:px-0">
+      <div className="brand-container pt-[60px]">
         <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[14px] border border-white/10 bg-[#0A0A0A] px-6 py-10 text-center">
           <h2 className="text-[32px] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">{t("Ready to Scale Your Team?")}</h2>
 
@@ -170,8 +170,8 @@ export default async function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="mx-auto w-full max-w-[1400px] px-5 pb-10 pt-[64px] sm:px-8 xl:px-0">
-        <section className="grid gap-10 md:grid-cols-2 lg:grid-cols-[360px_1fr_180px_240px] lg:gap-[90px]">
+      <div className="brand-container pb-10 pt-[64px]">
+        <section className="footer-grid">
           {/* Logo + About */}
           <div>
             <Link
@@ -216,7 +216,7 @@ export default async function Footer() {
           <div>
             <FooterTitle>{t("Industries")}</FooterTitle>
 
-            <div className="mt-[21px] grid grid-cols-2 gap-x-[45px] gap-y-[14px] sm:gap-x-[90px]">
+            <div className="mt-[21px] grid grid-cols-2 gap-y-[14px] footer-ind-gap">
               <FooterLinks links={industriesLeft} />
               <FooterLinks links={industriesRight} />
             </div>

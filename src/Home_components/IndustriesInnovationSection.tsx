@@ -72,7 +72,7 @@ export default async function IndustriesInnovationSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[72px] md:py-[96px] lg:py-[112px]">
-      <div className="mx-auto w-full max-w-[1210px] px-5 sm:px-8">
+      <div className="brand-container">
         <h2 className="mx-auto max-w-[680px] text-center text-[38px] font-semibold leading-[1.14] tracking-[-0.02em] text-[#0A0A0A] sm:text-[48px] lg:text-[56px]">{t("Industries We Power with Innovation")}</h2>
 
         <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">

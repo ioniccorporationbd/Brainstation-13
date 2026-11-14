@@ -121,6 +121,58 @@ html[lang="bn-BD"] h4 {
   letter-spacing: 0;
 }
 
+/* Shared content container — the single left/right boundary used by the
+   navbar, every homepage section and the footer (navbar grid + 20px extra
+   gutter on each side). Backgrounds stay full-width; only content is boxed. */
+.brand-container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1320px;
+  padding-inline: 36px;
+}
+@media (min-width: 768px) {
+  .brand-container {
+    padding-inline: 44px;
+  }
+}
+@media (min-width: 1200px) {
+  .brand-container {
+    padding-inline: 52px;
+  }
+}
+
+/* Footer main grid (plain CSS: Tailwind v4 sorts arbitrary min-[..] variants
+   before the named md breakpoint, so md:grid-cols-2 would win over it) */
+.footer-grid {
+  display: grid;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: 280px 1fr 150px 210px;
+    gap: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer-grid {
+    grid-template-columns: 320px 1fr 150px 210px;
+    gap: 56px;
+  }
+}
+.footer-ind-gap {
+  column-gap: 45px;
+}
+@media (min-width: 1440px) {
+  .footer-ind-gap {
+    column-gap: 90px;
+  }
+}
+
 /* Bangla mode: navbar glyphs look lighter than Latin at the same weight,
    so nudge each navbar tier +100 to keep visual parity. Font sizes stay identical. */
 html[lang="bn-BD"] .bn-links a,

@@ -93,7 +93,7 @@ export default async function CoreCapabilitiesSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[70px] md:py-[90px] lg:py-[112px]">
-      <div className="mx-auto w-full max-w-[1328px] px-5 sm:px-8 xl:px-0">
+      <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <h2 className="max-w-[600px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px]">{t("Drive Growth with Our Core Capabilities")}</h2>
 

@@ -53,7 +53,7 @@ export default async function ProcessSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full overflow-x-clip bg-white py-[72px] md:py-[100px]">
-      <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-12 px-5 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
+      <div className="brand-container grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
         <div>
           <h2 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Our Process")}</h2>

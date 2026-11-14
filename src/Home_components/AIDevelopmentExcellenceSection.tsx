@@ -37,7 +37,7 @@ export default async function AIDevelopmentExcellenceSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white py-[76px] md:py-[96px] lg:py-[118px]">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+      <div className="brand-container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
           <div>
