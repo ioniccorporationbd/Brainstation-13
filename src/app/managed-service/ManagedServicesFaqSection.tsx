@@ -46,9 +46,9 @@ export default function ManagedServicesFaqSection() {
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("FAQ")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("FAQ")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Frequently Asked Questions")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Frequently Asked Questions")}</h2>
 
           <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Everything you need to know about working with our managed delivery teams.")}</p>
         </div>

@@ -36,11 +36,11 @@ const reviews = [
 export default function StaffAugmentationHeroSection() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[110px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:min-h-[520px] lg:grid-cols-[1.15fr_0.85fr]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px] lg:py-[110px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-14 lg:min-h-[520px] lg:grid-cols-[1.15fr_0.85fr]">
         {/* Left Content */}
         <div>
-          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">{t("Borderless Tech Talent")}</p>
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
           <h1 className="max-w-[720px] text-[40px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[60px] lg:text-[66px]">{t("IT Staff Augmentation,")}<br className="hidden sm:block" />{t("Built for Speed.")}</h1>
 

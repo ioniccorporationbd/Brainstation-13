@@ -51,12 +51,12 @@ const reasons = [
 export default async function WhyChooseBrainStationSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Managed Service Advantage")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Managed Service Advantage")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Choose Magnetic Solution Limited?")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Choose Magnetic Solution Limited?")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We combine complete ownership, engineering quality, delivery governance, and flexible scaling to help businesses build, maintain, and improve software products with confidence.")}</p>
         </div>
@@ -71,7 +71,7 @@ export default async function WhyChooseBrainStationSection() {
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+              <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                 {t(item.title)}
               </h3>
 

@@ -99,8 +99,8 @@ export default async function CompanyStatsAwardsSection() {
       .map((part) => t(part.trim()))
       .join("\n");
   return (
-    <section className="bg-[#ffffff] px-6 py-[72px] text-[#0a0a0a]">
-      <div className="mx-auto max-w-[1320px]">
+    <section className="bg-[#ffffff] py-[48px] md:py-[72px] text-[#0a0a0a]">
+      <div className="brand-container">
         <div className="grid grid-cols-1 items-center gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
           {stats.map((item, index) => (
             <div

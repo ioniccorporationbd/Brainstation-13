@@ -45,13 +45,13 @@ const benefits: BenefitCard[] = [
 export default async function TechnologyConsultingBenefitsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         {/* Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Consulting Advantage")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Consulting Advantage")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Key Benefits")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Key Benefits")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Our consulting helps businesses reduce risk, modernize architecture, improve security, and unlock innovation through practical, business-aligned technology decisions.")}</p>
         </div>
@@ -70,7 +70,7 @@ export default async function TechnologyConsultingBenefitsSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 

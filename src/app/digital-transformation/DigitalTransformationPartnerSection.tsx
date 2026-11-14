@@ -37,12 +37,12 @@ const partnerCards: PartnerCard[] = [
 export default async function DigitalTransformationPartnerSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[1160px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The Magnetic Advantage")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The Magnetic Advantage")}</p>
 
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] sm:text-[34px] lg:text-[38px]">{t("Why Partner With Magnetic Solution Limited")}</h2>
+          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] sm:text-[34px] lg:text-[38px]">{t("Why Partner With Magnetic Solution Limited")}</h2>
 
           <p className="mx-auto mt-5 max-w-[620px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A partner that combines deep engineering expertise with enterprise-grade security and end-to-end accountability.")}</p>
         </div>
@@ -60,7 +60,7 @@ export default async function DigitalTransformationPartnerSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 

@@ -37,12 +37,12 @@ const capabilities: CapabilityCard[] = [
 export default async function DigitalTransformationCoreCapabilitiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Deliver")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Deliver")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Core Capabilities")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Core Capabilities")}</h2>
 
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("The building blocks we combine to modernize your systems and operations end to end.")}</p>
         </div>
@@ -60,7 +60,7 @@ export default async function DigitalTransformationCoreCapabilitiesSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 

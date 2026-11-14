@@ -79,7 +79,7 @@ export default function DeliveryCentersGallerySection() {
   return (
     <section className="overflow-hidden bg-white py-[80px] text-[#0a0a0a] md:py-[92px]">
       <div className="mx-auto max-w-[1120px] px-6 text-center">
-        <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">{t("Built for Collaborative Delivery")}</h2>
+        <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px]">{t("Built for Collaborative Delivery")}</h2>
 
         <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Modern, collaborative workspaces designed to keep distributed teams aligned, focused, and shipping with confidence.")}</p>
       </div>

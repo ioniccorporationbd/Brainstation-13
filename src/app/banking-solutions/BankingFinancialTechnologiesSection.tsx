@@ -73,19 +73,19 @@ export default function BankingFinancialTechnologiesSection() {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="text-center">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our stack")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Technologies we use")}</h2>
-          <p className="mx-auto mt-4 max-w-[620px] text-[15.5px] leading-[1.75] text-[#55585e]">{t("Proven platforms and frameworks that keep banking applications fast, secure and maintainable.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our stack")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Technologies we use")}</h2>
+          <p className="mx-auto mt-4 max-w-[620px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("Proven platforms and frameworks that keep banking applications fast, secure and maintainable.")}</p>
         </div>
 
         <div className="relative mt-12">
           <button
             type="button"
             aria-label={t("Previous technology")}
-            className="bank-tech-prev absolute left-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#55585e] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
+            className="bank-tech-prev absolute left-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#52525B] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
           >
             <ChevronLeft size={20} />
           </button>
@@ -93,7 +93,7 @@ export default function BankingFinancialTechnologiesSection() {
           <button
             type="button"
             aria-label={t("Next technology")}
-            className="bank-tech-next absolute right-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#55585e] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
+            className="bank-tech-next absolute right-0 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#52525B] transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] md:flex"
           >
             <ChevronRight size={20} />
           </button>

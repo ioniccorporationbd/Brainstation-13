@@ -11,14 +11,14 @@ const chips = [
 export default async function BankingFinancialHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Banking & Financial Solutions")}</span>
 
           <h1 className="mt-6 max-w-[620px] text-[38px] font-bold leading-[1.04] tracking-[-0.03em] text-black md:text-[52px] lg:text-[58px]">{t("Modern banking software, engineered for trust")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
+          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -35,7 +35,7 @@ export default async function BankingFinancialHeroSection() {
 
           <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3">
             {chips.map((chip) => (
-              <li key={chip.label} className="flex items-center gap-2 text-[13.5px] font-medium text-[#55585e]">
+              <li key={chip.label} className="flex items-center gap-2 text-[13.5px] font-medium text-[#52525B]">
                 <chip.icon size={17} className="text-[#c91f28]" />
                 {t(chip.label)}
               </li>

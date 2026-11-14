@@ -74,11 +74,11 @@ const cards: FeatureCard[] = [
 export default async function BorderlessTechProfessionalsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
-        <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
+        <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
-        <h2 className="max-w-[820px] text-[32px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Borderless Tech Professionals (BTP)")}</h2>
+        <h2 className="max-w-[820px] text-[32px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Borderless Tech Professionals (BTP)")}</h2>
 
         <p className="mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Scale faster with pre-vetted engineers, flexible engagement models, local oversight, and risk-free onboarding support.")}</p>
 
@@ -95,7 +95,7 @@ export default async function BorderlessTechProfessionalsSection() {
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 

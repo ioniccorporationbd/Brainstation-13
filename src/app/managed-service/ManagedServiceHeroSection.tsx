@@ -4,8 +4,8 @@ import { getTranslator } from "@/i18n/server";
 export default async function ManagedServiceHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px] lg:py-[104px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px] lg:py-[104px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-[0.12em] text-[#c91f28]">{t("Managed Service")}</span>

@@ -62,13 +62,13 @@ const steps: StepItem[] = [
 export default async function ManagedHowItWorksSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         {/* Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Managed Service Process")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Managed Service Process")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("How It Works")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("How It Works")}</h2>
 
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, ownership, or delivery quality.")}</p>
 
@@ -98,7 +98,7 @@ export default async function ManagedHowItWorksSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 

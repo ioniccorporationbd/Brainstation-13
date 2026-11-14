@@ -98,10 +98,10 @@ const trustCards: TrustCard[] = [
 export default async function WhyClientsTrustUsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Clients Trust Us")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Clients Trust Us")}</h2>
 
           <p className="mx-auto mt-4 max-w-[520px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">{t("Complete solution components working together for your success")}</p>
         </div>
@@ -119,7 +119,7 @@ export default async function WhyClientsTrustUsSection() {
                   <Icon size={26} strokeWidth={1.7} />
                 </div>
 
-                <h3 className="mt-5 text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 
