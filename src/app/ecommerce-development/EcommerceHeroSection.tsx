@@ -18,7 +18,7 @@ export default async function EcommerceHeroSection() {
 
           <h1 className="max-w-[620px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">{t("Headless Commerce, Engineered to Convert")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">{t("We build storefronts and commerce back ends that load fast, integrate cleanly and scale without re-platforming pain.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("We build storefronts and commerce back ends that load fast, integrate cleanly and scale without re-platforming pain.")}</p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
@@ -39,7 +39,7 @@ export default async function EcommerceHeroSection() {
                 {index > 0 ? (
                   <span className="h-1 w-1 rounded-full bg-[#d4d4d4]" />
                 ) : null}
-                <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#565656]">
+                <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#52525B]">
                   {t(word)}
                 </span>
               </span>

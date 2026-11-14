@@ -35,7 +35,7 @@ export default async function CyberSecurityFindingsSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The threat landscape")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Our findings")}</h2>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Our findings")}</h2>
             <p className="mt-4 max-w-[440px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("Published research and public breach cases show where attackers concentrate and where response time pays back.")}</p>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-[#ececec]">
@@ -51,7 +51,7 @@ export default async function CyberSecurityFindingsSection() {
             {findings.map((item, index) => (
               <li
                 key={item.source}
-                className="rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-6"
+                className="rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-7"
               >
                 <div className="flex items-start gap-4">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[12.5px] font-bold text-[#c91f28]">

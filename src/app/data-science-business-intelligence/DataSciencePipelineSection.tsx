@@ -16,7 +16,7 @@ export default async function DataSciencePipelineSection() {
       <div className="brand-container">
         <div className="max-w-[680px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("End to end")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Data Science Pipeline")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Data Science Pipeline")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
         </div>
 

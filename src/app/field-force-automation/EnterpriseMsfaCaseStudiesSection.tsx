@@ -72,7 +72,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Proven Results")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Case Studies")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Case Studies")}</h2>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1140px]">
@@ -136,7 +136,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                       {t(item.title)}
                     </h3>
 
-                    <p className="mt-5 max-w-[560px] text-[14px] font-medium leading-[1.7] text-[#565656] md:text-[16px]">
+                    <p className="mt-5 max-w-[560px] text-[14px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
                       {t(item.description)}
                     </p>
 

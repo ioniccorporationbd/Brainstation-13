@@ -114,7 +114,7 @@ export default async function CompanyStatsAwardsSection() {
                   {t(item.number)}
                 </h3>
 
-                <p className="mt-4 whitespace-pre-line text-[17px] font-bold leading-[1.35] text-[#0a0a0a]">
+                <p className="mt-4 whitespace-pre-line text-[15px] md:text-[16px] font-bold leading-[1.35] text-[#0a0a0a]">
                   {tr(item.label)}
                 </p>
               </div>
@@ -135,13 +135,13 @@ export default async function CompanyStatsAwardsSection() {
               <div className="absolute inset-[11px] [clip-path:polygon(50%_0%,93%_25%,93%_75%,50%_100%,7%_75%,7%_25%)] bg-[#0a0a0a]" />
 
               <div className="relative z-10 text-center">
-                <p className="mb-2 text-[8px] font-bold uppercase leading-[1.1] tracking-[0.08em] text-[#565656]">{t("TOP")}<br />{t("SOFTWARE")}<br />{t("DEVELOPERS")}</p>
+                <p className="mb-2 text-[8px] font-bold uppercase leading-[1.1] tracking-[0.08em] text-[#52525B]">{t("TOP")}<br />{t("SOFTWARE")}<br />{t("DEVELOPERS")}</p>
 
                 <div className="bg-white px-4 py-1">
                   <p className="text-[20px] font-bold leading-none text-[#0a0a0a]">{t("Clutch")}</p>
                 </div>
 
-                <p className="mt-3 whitespace-pre-line text-[7px] font-bold uppercase leading-[1.25] tracking-[0.08em] text-[#565656]">
+                <p className="mt-3 whitespace-pre-line text-[7px] font-bold uppercase leading-[1.25] tracking-[0.08em] text-[#52525B]">
                   {tr(award)}
                 </p>
               </div>

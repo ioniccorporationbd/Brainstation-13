@@ -20,9 +20,9 @@ export default async function CaseStudiesSection() {
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Case Studies")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Complex Stories, Rendered Simply")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Complex Stories, Rendered Simply")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[660px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
+          <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap justify-center gap-3">
@@ -32,7 +32,7 @@ export default async function CaseStudiesSection() {
               className={`rounded-full px-4 py-2 text-[13px] font-bold transition-colors duration-300 ${
                 index === 0
                   ? "bg-[#fdecec] text-[#c91f28]"
-                  : "border border-[#ececec] bg-white text-[#565656]"
+                  : "border border-[#ececec] bg-white text-[#52525B]"
               }`}
             >
               {t(study)}
@@ -57,7 +57,7 @@ export default async function CaseStudiesSection() {
 
             <h3 className="mt-3 text-[26px] font-semibold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">{t("Driver’s Guide for Nissan")}</h3>
 
-            <p className="mt-4 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[16.5px]">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
+            <p className="mt-4 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
 
             <Link
               href="/case-studies"
@@ -71,7 +71,7 @@ export default async function CaseStudiesSection() {
                   80%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">{t("Faster knowledge access")}</p>
+                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#52525B]">{t("Faster knowledge access")}</p>
               </div>
 
               <div>
@@ -79,7 +79,7 @@ export default async function CaseStudiesSection() {
                   99.5%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#565656]">{t("Better customer retention")}</p>
+                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#52525B]">{t("Better customer retention")}</p>
               </div>
             </div>
           </div>

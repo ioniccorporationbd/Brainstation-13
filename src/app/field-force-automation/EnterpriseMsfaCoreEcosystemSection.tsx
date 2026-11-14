@@ -121,9 +121,9 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("The Core Ecosystem")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("The Core Ecosystem")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">

@@ -8,7 +8,7 @@ const HERO_IMAGE =
 export default async function InsuranceHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left content */}
         <div>
@@ -16,7 +16,7 @@ export default async function InsuranceHeroSection() {
 
           <h1 className="text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("AI-Driven Insurance Technology")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("Modular insurtech that modernizes claims, policies and agent operations — adopt one module or the full stack, integrate with your core systems.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Modular insurtech that modernizes claims, policies and agent operations — adopt one module or the full stack, integrate with your core systems.")}</p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
@@ -30,7 +30,7 @@ export default async function InsuranceHeroSection() {
             >{t("View Case Study")}</Link>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] font-semibold text-[#565656]">
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] font-semibold text-[#52525B]">
             <span>{t("Claims")}</span>
             <span className="h-1 w-1 rounded-full bg-[#c91f28]" />
             <span>{t("Policy Admin")}</span>

@@ -74,9 +74,9 @@ export default async function ShopifySolutionsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Solutions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify Solutions We Deliver")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Shopify Solutions We Deliver")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("From fast-growing startups to established enterprise brands, we serve merchants, product companies, and B2B clients that demand more than out-of-the-box Shopify.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("From fast-growing startups to established enterprise brands, we serve merchants, product companies, and B2B clients that demand more than out-of-the-box Shopify.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-2.5">
@@ -112,7 +112,7 @@ export default async function ShopifySolutionsSection() {
                   {t(solution.title)}
                 </h3>
 
-                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
                   {t(solution.description)}
                 </p>
 
@@ -120,7 +120,7 @@ export default async function ShopifySolutionsSection() {
                   {solution.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-2.5 text-[13.5px] font-medium leading-[1.5] text-[#565656]"
+                      className="flex items-start gap-2.5 text-[13.5px] font-medium leading-[1.5] text-[#52525B]"
                     >
                       <span className="mt-0.5 flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
                         <Check size={11} strokeWidth={3} />

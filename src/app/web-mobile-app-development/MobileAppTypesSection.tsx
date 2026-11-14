@@ -18,7 +18,7 @@ export default async function MobileAppTypesSection() {
         <div>
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("App Types")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Types of Mobile Apps We Develop")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Types of Mobile Apps We Develop")}</h2>
 
           <ul className="mt-8 space-y-3.5">
             {appTypes.map((item) => (
@@ -30,7 +30,7 @@ export default async function MobileAppTypesSection() {
                   <Check size={13} strokeWidth={2.8} />
                 </span>
 
-                <span className="text-[15px] font-medium leading-[1.5] text-[#565656]">
+                <span className="text-[15px] font-medium leading-[1.5] text-[#52525B]">
                   {t(item)}
                 </span>
               </li>

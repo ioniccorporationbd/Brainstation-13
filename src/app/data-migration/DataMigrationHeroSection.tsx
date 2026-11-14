@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function DataMigrationHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left - Text */}
         <div>
@@ -13,7 +13,7 @@ export default async function DataMigrationHeroSection() {
 
           <h1 className="text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("Data Migration Services")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("Modernize legacy systems with secure, clean, and fast data migration — moving complex data to modern platforms with zero data loss and minimal downtime.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Modernize legacy systems with secure, clean, and fast data migration — moving complex data to modern platforms with zero data loss and minimal downtime.")}</p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
@@ -29,7 +29,7 @@ export default async function DataMigrationHeroSection() {
         </div>
 
         {/* Right - Image */}
-        <div className="group relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[440px] lg:h-[480px]">
+        <div className="group relative h-[280px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[420px] lg:h-[480px]">
           <Image
             src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1400&auto=format&fit=crop"
             alt={t("Data migration and database modernization")}

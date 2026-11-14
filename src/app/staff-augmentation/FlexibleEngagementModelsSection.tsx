@@ -159,14 +159,14 @@ function ExpandableCell({
         <ChevronDown
           size={16}
           strokeWidth={1.8}
-          className={`mt-1 shrink-0 text-[#565656] transition-transform duration-300 ${
+          className={`mt-1 shrink-0 text-[#52525B] transition-transform duration-300 ${
             open ? "rotate-180" : ""
           }`}
         />
       </button>
 
       {open && (
-        <p className="mt-4 max-w-[220px] text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">
+        <p className="mt-4 max-w-[220px] text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#52525B]">
           {t(detail)}
         </p>
       )}
@@ -177,12 +177,12 @@ function ExpandableCell({
 export default function FlexibleEngagementModelsSection() {
   const { t } = useTranslation();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">{t("Flexible Engagement Models")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Flexible Engagement Models")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[820px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Compare our flexible IT staff augmentation models to find the perfect fit for your project needs and business objectives.")}</p>
+          <p className="mx-auto mt-5 max-w-[820px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Compare our flexible IT staff augmentation models to find the perfect fit for your project needs and business objectives.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 xl:grid-cols-[1fr_300px]">

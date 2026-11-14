@@ -36,7 +36,7 @@ export default async function CyberSecurityCapabilitiesSection() {
       <div className="brand-container">
         <div className="max-w-[680px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What we do")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Core capabilities")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Core capabilities")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("Four services that cover the full cycle: find it, prove it, fix it and keep it closed.")}</p>
         </div>
 
@@ -44,7 +44,7 @@ export default async function CyberSecurityCapabilitiesSection() {
           {capabilities.map((item) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:min-h-[248px] sm:p-6"
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:min-h-[248px] sm:p-7"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={21} />
@@ -62,7 +62,7 @@ export default async function CyberSecurityCapabilitiesSection() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-xl border border-[#ececec] bg-[#fafafa] px-7 py-6 sm:flex-row sm:items-center md:px-9 md:py-7">
           <div>
-            <p className="text-[17px] font-bold text-black md:text-[19px]">{t("Not sure where your exposure is?")}</p>
+            <p className="text-[15px] font-bold text-black md:text-[19px]">{t("Not sure where your exposure is?")}</p>
             <p className="mt-1.5 text-[14.5px] text-[#52525B]">{t("Start with a scoped assessment and a prioritised findings report.")}</p>
           </div>
 

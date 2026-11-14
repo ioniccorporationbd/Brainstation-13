@@ -98,12 +98,12 @@ const trustCards: TrustCard[] = [
 export default async function WhyClientsTrustUsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Clients Trust Us")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Why Clients Trust Us")}</h2>
 
-          <p className="mx-auto mt-4 max-w-[520px] text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]">{t("Complete solution components working together for your success")}</p>
+          <p className="mx-auto mt-4 max-w-[520px] text-[15px] md:text-[16px] font-medium leading-[1.5] tracking-[-0.01em] text-[#52525B]">{t("Complete solution components working together for your success")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -113,17 +113,17 @@ export default async function WhyClientsTrustUsSection() {
             return (
               <article
                 key={card.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="text-[#c91f28]">
                   <Icon size={26} strokeWidth={1.7} />
                 </div>
 
-                <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(card.title)}
                 </h3>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+                <p className="mt-2 text-[14px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
                   {t(card.description)}
                 </p>
               </article>

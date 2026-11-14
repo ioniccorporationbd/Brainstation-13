@@ -69,9 +69,9 @@ export default async function EnterpriseMsfaArchitectureSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Architecture")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Secure. Scalable. Connected.")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Secure. Scalable. Connected.")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A robust multi-tier architecture bridging offline field execution with your core enterprise systems.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("A robust multi-tier architecture bridging offline field execution with your core enterprise systems.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">

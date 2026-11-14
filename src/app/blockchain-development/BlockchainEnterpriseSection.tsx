@@ -78,9 +78,9 @@ export default function BlockchainEnterpriseSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Industry Solutions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Blockchain for Enterprise")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Blockchain for Enterprise")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Our blockchain and Web3 solutions help financial institutions reduce risk, increase transparency, and operate with confidence — from secure transactions and real-time visibility to automated compliance and smarter decision-making.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Our blockchain and Web3 solutions help financial institutions reduce risk, increase transparency, and operate with confidence — from secure transactions and real-time visibility to automated compliance and smarter decision-making.")}</p>
         </div>
 
         <div className="mx-auto mt-10 flex max-w-[1000px] flex-wrap items-center justify-center gap-2 rounded-2xl border border-[#ececec] bg-white p-2">
@@ -92,7 +92,7 @@ export default function BlockchainEnterpriseSection() {
               className={`rounded-full px-4 py-2.5 text-[13px] font-bold leading-none transition-colors duration-300 ${
                 activeIndex === index
                   ? "bg-[#c91f28] text-white"
-                  : "bg-transparent text-[#565656] hover:bg-[#f7f7f7] hover:text-[#0a0a0a]"
+                  : "bg-transparent text-[#52525B] hover:bg-[#f7f7f7] hover:text-[#0a0a0a]"
               }`}
             >
               {t(item.tab)}
@@ -107,7 +107,7 @@ export default function BlockchainEnterpriseSection() {
                 {t(activeItem.title)}
               </h3>
 
-              <p className="mt-4 max-w-[500px] text-[15.5px] font-medium leading-[1.65] text-[#565656] md:text-[16.5px]">
+              <p className="mt-4 max-w-[500px] text-[15.5px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">
                 {t(activeItem.description)}
               </p>
 

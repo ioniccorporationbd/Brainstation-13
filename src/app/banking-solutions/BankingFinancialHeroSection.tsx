@@ -18,7 +18,7 @@ export default async function BankingFinancialHeroSection() {
 
           <h1 className="mt-6 max-w-[620px] text-[38px] font-bold leading-[1.04] tracking-[-0.03em] text-black md:text-[52px] lg:text-[58px]">{t("Modern banking software, engineered for trust")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[15px]">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -48,7 +48,7 @@ export default async function BankingFinancialHeroSection() {
             <img
               src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1400&auto=format&fit=crop"
               alt={t("Digital banking and secure card payments")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
 

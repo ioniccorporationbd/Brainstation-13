@@ -33,7 +33,7 @@ export default async function CyberSecurityEngagementsSection() {
       <div className="brand-container">
         <div className="max-w-[700px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("In practice")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Engagements")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Engagements")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("Representative cloud, API and incident response work — the methods we apply and the outcomes they produce.")}</p>
         </div>
 
@@ -50,7 +50,7 @@ export default async function CyberSecurityEngagementsSection() {
               <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
                 {t(item.tag)}
               </p>
-              <h3 className="mt-2 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-black md:text-[19px]">
+              <h3 className="mt-2 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-black md:text-[20px]">
                 {t(item.title)}
               </h3>
               <p className="mt-3 flex-1 text-[14.5px] leading-[1.7] text-[#52525B]">

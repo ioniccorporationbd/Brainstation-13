@@ -22,7 +22,7 @@ export default function BankingFinancialClientsSection() {
       <div className="brand-container">
         <div className="text-center">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Trusted by banks")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Who we've worked with")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Who we've worked with")}</h2>
         </div>
       </div>
 

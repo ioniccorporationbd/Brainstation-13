@@ -43,14 +43,14 @@ export default function ManagedServicesFaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px]">
+    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[104px]">
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("FAQ")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Frequently Asked Questions")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Frequently Asked Questions")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Everything you need to know about working with our managed delivery teams.")}</p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Everything you need to know about working with our managed delivery teams.")}</p>
         </div>
 
         <div className="mt-12 space-y-3">
@@ -97,7 +97,7 @@ export default function ManagedServicesFaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
                       {t(faq.answer)}
                     </p>
                   </div>

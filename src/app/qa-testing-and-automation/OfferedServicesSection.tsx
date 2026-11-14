@@ -44,9 +44,9 @@ export default async function OfferedServicesSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Offered Services")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Five testing disciplines, one dedicated QA team working on-demand.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Five testing disciplines, one dedicated QA team working on-demand.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -74,11 +74,11 @@ export default async function OfferedServicesSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(service.title)}
                 </h3>
 
-                <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#565656]">
+                <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#52525B]">
                   {t(service.desc)}
                 </p>
               </article>

@@ -77,7 +77,7 @@ export default function BankingFinancialTechnologiesSection() {
       <div className="brand-container">
         <div className="text-center">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our stack")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Technologies we use")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Technologies we use")}</h2>
           <p className="mx-auto mt-4 max-w-[620px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("Proven platforms and frameworks that keep banking applications fast, secure and maintainable.")}</p>
         </div>
 

@@ -97,9 +97,9 @@ export default async function ShopifyAppsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Shopify Apps")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("We design, build, and operate high-performance Shopify apps that bring real value to merchants.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("We design, build, and operate high-performance Shopify apps that bring real value to merchants.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -121,7 +121,7 @@ export default async function ShopifyAppsSection() {
                 {t(app.title)}
               </h3>
 
-              <p className="mt-2.5 flex-1 text-[13.5px] font-medium leading-[1.55] text-[#565656]">
+              <p className="mt-2.5 flex-1 text-[13.5px] font-medium leading-[1.6] text-[#52525B]">
                 {t(app.description)}
               </p>
 

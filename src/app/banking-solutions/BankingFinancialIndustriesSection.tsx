@@ -23,13 +23,13 @@ export default async function BankingFinancialIndustriesSection() {
       <div className="grid brand-container grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Clients we have served in")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Industries")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Industries")}</h2>
 
           <ul className="mt-8 space-y-4">
             {industries.map((industry) => (
               <li
                 key={industry.title}
-                className="group flex gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-6"
+                className="group flex gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7"
               >
                 <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Check size={18} strokeWidth={2.6} />

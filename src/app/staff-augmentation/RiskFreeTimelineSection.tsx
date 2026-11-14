@@ -35,10 +35,10 @@ const riskSteps: RiskStep[] = [
 export default async function RiskFreeTimelineSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
-          <h2 className="mx-auto text-[20px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[42px]">{t("Risk-Free Talent Alignment")}</h2>
+          <h2 className="mx-auto text-[20px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] min-[380px]:text-[22px] sm:text-[30px] md:text-[46px] lg:text-[50px]">{t("Risk-Free Talent Alignment")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -55,7 +55,7 @@ export default async function RiskFreeTimelineSection() {
                 {t(step.title)}
               </h3>
 
-              <p className="mt-3 text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]">
+              <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
                 {t(step.description)}
               </p>
             </article>

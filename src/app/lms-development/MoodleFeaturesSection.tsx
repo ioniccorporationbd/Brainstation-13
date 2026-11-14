@@ -108,9 +108,9 @@ export default async function MoodleFeatures() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Platform Capabilities")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Features of Our Moodle LMS")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Features of Our Moodle LMS")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Eight capability areas we configure, extend and support end to end.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Eight capability areas we configure, extend and support end to end.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -120,13 +120,13 @@ export default async function MoodleFeatures() {
             return (
               <article
                 key={feature.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="mt-5 text-[16px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(feature.title)}
                 </h3>
 
@@ -134,7 +134,7 @@ export default async function MoodleFeatures() {
                   {feature.items.map((item) => (
                     <li
                       key={item}
-                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.55] text-[#565656]"
+                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.6] text-[#52525B]"
                     >
                       <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-[#c91f28]" />
                       <span>{t(item)}</span>

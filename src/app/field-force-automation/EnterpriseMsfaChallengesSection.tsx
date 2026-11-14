@@ -62,9 +62,9 @@ export default async function EnterpriseMsfaChallengesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The Global Challenge")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Why Field Sales Breaks at Scale")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Why Field Sales Breaks at Scale")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Without a production-ready execution platform, enterprises face fragmented tools, data loss, and severe operational bottlenecks in last-mile markets.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Without a production-ready execution platform, enterprises face fragmented tools, data loss, and severe operational bottlenecks in last-mile markets.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -80,7 +80,7 @@ export default async function EnterpriseMsfaChallengesSection() {
                   <Icon size={20} strokeWidth={1.9} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#000000]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#000000]">
                   {t(card.title)}
                 </h3>
 

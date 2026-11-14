@@ -16,20 +16,20 @@ export default async function WhyChooseJourneySection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Why Us")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Why Choose Us")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Why Choose Us")}</h2>
         </div>
 
         <div className="mx-auto mt-10 grid max-w-[1040px] gap-4 sm:grid-cols-2">
           {whyItems.map((item) => (
             <div
               key={item}
-              className="flex items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] md:p-6"
+              className="flex items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] md:p-7"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
                 <Gamepad2 size={18} strokeWidth={2.2} />
               </span>
 
-              <p className="text-[15px] font-semibold leading-[1.6] text-[#565656] md:text-[15.5px]">
+              <p className="text-[15px] font-semibold leading-[1.6] text-[#52525B] md:text-[15.5px]">
                 {t(item)}
               </p>
             </div>

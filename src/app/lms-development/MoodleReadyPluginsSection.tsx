@@ -97,9 +97,9 @@ export default function MoodleReadyPluginsSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Extensions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Moodle Ready Plugins")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Moodle Ready Plugins")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-2.5">
@@ -112,7 +112,7 @@ export default function MoodleReadyPluginsSection() {
               className={`rounded-full border px-4 py-2.5 text-[13.5px] font-bold transition-colors duration-300 ${
                 active === index
                   ? "border-[#c91f28] bg-[#c91f28] text-white"
-                  : "border-[#ececec] bg-white text-[#565656] hover:border-[#c91f28] hover:text-[#c91f28]"
+                  : "border-[#ececec] bg-white text-[#52525B] hover:border-[#c91f28] hover:text-[#c91f28]"
               }`}
             >
               {t(item.name)}
@@ -120,14 +120,14 @@ export default function MoodleReadyPluginsSection() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-6 md:p-10">
+        <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
             <div>
               <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
                 {t(plugin.title)}
               </h3>
 
-              <p className="mt-4 max-w-[560px] text-[15.5px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">
+              <p className="mt-4 max-w-[560px] text-[15.5px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
                 {t(plugin.description)}
               </p>
             </div>

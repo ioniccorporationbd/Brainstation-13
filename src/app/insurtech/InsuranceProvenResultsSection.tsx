@@ -43,7 +43,7 @@ export default async function InsuranceProvenResultsSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Outcomes")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Proven Results")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Proven Results")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -53,17 +53,17 @@ export default async function InsuranceProvenResultsSection() {
             return (
               <article
                 key={item.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 text-center transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 text-center transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 
-                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
                   {t(item.description)}
                 </p>
               </article>

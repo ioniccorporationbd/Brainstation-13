@@ -20,7 +20,7 @@ export default async function BankingFinancialIntroSection() {
     <section className="relative overflow-hidden bg-white pb-[52px] pt-[8px] text-black md:pb-[104px]">
       <div className="brand-container">
         <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Overview")}</p>
-        <h2 className="mt-4 max-w-[720px] text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[44px]">{t("Secure, customized banking software built around your institution")}</h2>
+        <h2 className="mt-4 max-w-[720px] text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Secure, customized banking software built around your institution")}</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
           {blocks.map((block) => (

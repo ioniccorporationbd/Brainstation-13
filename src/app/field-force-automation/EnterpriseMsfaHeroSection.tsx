@@ -29,7 +29,7 @@ export default async function EnterpriseMsfaHeroSection() {
             <span className="text-[#c91f28]">{t("true scale")}</span>
           </h1>
 
-          <p className="mt-5 max-w-[560px] text-[16px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
+          <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
 
           <div className="mt-7 flex flex-wrap gap-2.5">
             {heroFeatures.map((item) => {
@@ -71,7 +71,7 @@ export default async function EnterpriseMsfaHeroSection() {
             <img
               src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1400&auto=format&fit=crop"
               alt={t("Field sales representative capturing an order on a mobile device")}
-              className="h-[300px] w-full object-cover md:h-[420px] lg:h-[460px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
 

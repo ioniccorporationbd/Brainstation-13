@@ -18,7 +18,7 @@ export default async function CloudSolutionsHeroSection() {
 
           <h1 className="mt-6 max-w-[620px] text-[38px] font-bold leading-[1.04] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Cloud platforms built for reliability and speed")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("Migration, infrastructure-as-code and observability that make your systems faster, safer and cheaper to run.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[15px]">{t("Migration, infrastructure-as-code and observability that make your systems faster, safer and cheaper to run.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -48,7 +48,7 @@ export default async function CloudSolutionsHeroSection() {
             <img
               src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1400&auto=format&fit=crop"
               alt={t("Cloud infrastructure engineers working in a data centre")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
 

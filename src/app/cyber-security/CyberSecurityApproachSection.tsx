@@ -38,7 +38,7 @@ export default async function CyberSecurityApproachSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Our security approach")}</h2>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Our security approach")}</h2>
             <p className="mt-4 max-w-[460px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("A five-stage engagement that moves from scoping to verified remediation, with evidence at every step.")}</p>
 
             <Link
@@ -52,7 +52,7 @@ export default async function CyberSecurityApproachSection() {
             {steps.map((item, index) => (
               <li
                 key={item.title}
-                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[14.5px] font-bold text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   {String(index + 1).padStart(2, "0")}

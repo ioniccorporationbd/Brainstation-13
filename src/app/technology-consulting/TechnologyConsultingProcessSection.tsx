@@ -61,15 +61,15 @@ const processSteps: ProcessStep[] = [
 export default async function TechnologyConsultingProcessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         {/* Heading */}
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Technology Consulting Process")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Technology Consulting Process")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our Technology Consulting Process")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("A clear four-step path to assess, plan, validate, and implement your technology strategy without compromising security.")}</p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("A clear four-step path to assess, plan, validate, and implement your technology strategy without compromising security.")}</p>
 
           <Link
             href="/schedule-a-call"
@@ -85,7 +85,7 @@ export default async function TechnologyConsultingProcessSection() {
             return (
               <article
                 key={item.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
@@ -101,7 +101,7 @@ export default async function TechnologyConsultingProcessSection() {
                   {t(item.eyebrow)}
                 </p>
 
-                <h3 className="mt-3 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-3 text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 
@@ -109,7 +109,7 @@ export default async function TechnologyConsultingProcessSection() {
                   {item.points.map((point) => (
                     <li
                       key={point}
-                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#565656]"
+                      className="flex gap-2.5 text-[13.5px] font-medium leading-[1.5] tracking-[-0.01em] text-[#52525B]"
                     >
                       <span className="mt-[7px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
                       <span>{t(point)}</span>

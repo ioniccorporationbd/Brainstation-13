@@ -36,7 +36,7 @@ const reviews = [
 export default function StaffAugmentationHeroSection() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px] lg:py-[110px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[110px]">
       <div className="grid brand-container grid-cols-1 items-center gap-14 lg:min-h-[520px] lg:grid-cols-[1.15fr_0.85fr]">
         {/* Left Content */}
         <div>
@@ -44,7 +44,7 @@ export default function StaffAugmentationHeroSection() {
 
           <h1 className="max-w-[720px] text-[40px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[60px] lg:text-[66px]">{t("IT Staff Augmentation,")}<br className="hidden sm:block" />{t("Built for Speed.")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
         </div>
 
         {/* Right: smooth swapping review/facts card */}
@@ -86,18 +86,18 @@ export default function StaffAugmentationHeroSection() {
                           ))}
                         </div>
 
-                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#565656]">
+                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#52525B]">
                           {t(review.rating)}
                         </p>
                       </div>
                     </div>
 
-                    <p className="mt-6 max-w-[300px] text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
+                    <p className="mt-6 max-w-[300px] text-[15px] md:text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
                       &ldquo;{t(review.quote)}&rdquo;
                     </p>
 
                     <div className="mt-6 border-t border-[#ececec] pt-5">
-                      <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#565656]">
+                      <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#52525B]">
                         {t(review.author)}
                       </p>
                     </div>

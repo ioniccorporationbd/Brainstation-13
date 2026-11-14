@@ -31,9 +31,9 @@ export async function SharePointIndustriesSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Industries We Build For")}</p>
 
-            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Industries")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Industries")}</h2>
 
-            <p className="mt-4 max-w-[460px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("SharePoint and Microsoft 365 engagements across document-heavy, regulated and customer-facing sectors.")}</p>
+            <p className="mt-4 max-w-[460px] text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("SharePoint and Microsoft 365 engagements across document-heavy, regulated and customer-facing sectors.")}</p>
 
             <div className="mt-8 space-y-3">
               {industries.map((industry) => (
@@ -75,9 +75,9 @@ export async function SharePointWorkedWithSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Microsoft Technologies")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Technologies We Build With")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Technologies We Build With")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("The Microsoft products our SharePoint work connects to.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("The Microsoft products our SharePoint work connects to.")}</p>
         </div>
 
         <div className="group relative mt-10 overflow-hidden border-y border-[#ececec] py-6">
@@ -147,9 +147,9 @@ export async function SharePointPurchaseCTASection() {
       <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
         <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Start a Project")}</p>
 
-        <h2 className="mx-auto max-w-[720px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">{t("Would you like to start a project with us?")}</h2>
+        <h2 className="mx-auto max-w-[720px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Would you like to start a project with us?")}</h2>
 
-        <p className="mx-auto mt-4 max-w-[620px] text-[16px] font-medium leading-[1.6] text-[#565656] md:text-[17px]">{t("Share your idea and we'll come back with a scoped SharePoint plan.")}</p>
+        <p className="mx-auto mt-4 max-w-[620px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[15px]">{t("Share your idea and we'll come back with a scoped SharePoint plan.")}</p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
           <Link

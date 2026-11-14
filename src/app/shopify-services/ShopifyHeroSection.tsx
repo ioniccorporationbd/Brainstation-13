@@ -24,7 +24,7 @@ export default async function ShopifyHeroSection() {
 
           <h1 className="max-w-[620px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">{t("Shopify Commerce, Engineered for Scale")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">{t("Storefronts, custom apps and integrations for merchants and B2B brands that have outgrown out-of-the-box Shopify.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Storefronts, custom apps and integrations for merchants and B2B brands that have outgrown out-of-the-box Shopify.")}</p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <a
@@ -45,7 +45,7 @@ export default async function ShopifyHeroSection() {
             {keywords.map((word) => (
               <span
                 key={word}
-                className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#565656]"
+                className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#52525B]"
               >
                 {t(word)}
               </span>

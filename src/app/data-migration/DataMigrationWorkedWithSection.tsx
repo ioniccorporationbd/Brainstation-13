@@ -66,7 +66,7 @@ function LogoTrack({ prefix }: { prefix: string }) {
 export default function DataMigrationWorkedWithSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container text-center">
         <h2 className="text-[22px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">{t("Trusted by fast-moving teams, from startups to enterprises")}</h2>
       </div>

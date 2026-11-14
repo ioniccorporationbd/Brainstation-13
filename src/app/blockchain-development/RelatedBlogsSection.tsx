@@ -40,11 +40,11 @@ export default async function RelatedBlogsSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Insights")}</p>
 
-            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You might also like")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("You might also like")}</h2>
           </div>
 
           <div className="lg:pb-2">
-            <p className="max-w-[520px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Look through to find the perfect Blockchain/Web3 solution for your needs.")}</p>
+            <p className="max-w-[520px] text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Look through to find the perfect Blockchain/Web3 solution for your needs.")}</p>
 
             <Link
               href="/blog"
@@ -78,7 +78,7 @@ export default async function RelatedBlogsSection() {
                     {t(post.title)}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#565656]">
+                  <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
                     {t(post.description)}
                   </p>
 

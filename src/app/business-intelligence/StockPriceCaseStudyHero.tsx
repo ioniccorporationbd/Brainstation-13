@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function StockPriceCaseStudyHero() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left - Text */}
         <div>
@@ -13,7 +13,7 @@ export default async function StockPriceCaseStudyHero() {
 
           <h1 className="text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("Stock Price Prediction With AI")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("An AI and machine-learning proof of concept that predicts the most profitable time to buy or sell a stock.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("An AI and machine-learning proof of concept that predicts the most profitable time to buy or sell a stock.")}</p>
 
           <dl className="mt-7 grid max-w-[540px] grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-[#ececec] bg-white p-4">
@@ -41,7 +41,7 @@ export default async function StockPriceCaseStudyHero() {
         </div>
 
         {/* Right - Image */}
-        <div className="group relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[440px] lg:h-[480px]">
+        <div className="group relative h-[280px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[420px] lg:h-[480px]">
           <Image
             src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1400&auto=format&fit=crop"
             alt={t("Stock price prediction and financial analytics")}

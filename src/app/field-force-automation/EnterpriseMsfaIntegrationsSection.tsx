@@ -36,9 +36,9 @@ export default async function EnterpriseMsfaIntegrationsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Ecosystem")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Integrations")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Integrations")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Connect to your ERP and analytics stack. We provide seamless bi-directional handshakes with your core platforms.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Connect to your ERP and analytics stack. We provide seamless bi-directional handshakes with your core platforms.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">

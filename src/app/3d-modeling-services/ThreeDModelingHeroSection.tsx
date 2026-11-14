@@ -8,7 +8,7 @@ const MACHINE_IMG =
 export default async function ThreeDModelingHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative w-full overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px]">
+    <section className="relative w-full overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-16">
         {/* Left content */}
         <div>
@@ -16,7 +16,7 @@ export default async function ThreeDModelingHeroSection() {
 
           <h1 className="text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("3D Modeling & Rendering for Modern Industries")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[17px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("High-precision 3D animation, technical explainers and AI-driven system visualizations for global industries.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("High-precision 3D animation, technical explainers and AI-driven system visualizations for global industries.")}</p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
@@ -30,7 +30,7 @@ export default async function ThreeDModelingHeroSection() {
             >{t("Schedule a Call")}</Link>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] font-semibold text-[#565656]">
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-[14px] font-semibold text-[#52525B]">
             <span>{t("Automotive")}</span>
             <span className="h-1 w-1 rounded-full bg-[#c91f28]" />
             <span>{t("Heavy Machinery")}</span>

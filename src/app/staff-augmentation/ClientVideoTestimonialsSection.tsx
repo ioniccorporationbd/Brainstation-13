@@ -37,7 +37,7 @@ export default async function ClientVideoTestimonialsSection() {
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="text-[32px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] font-medium leading-[1.45] tracking-[-0.015em] text-[#565656] md:text-[17px]"></p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.45] tracking-[-0.015em] text-[#52525B] md:text-[15px]"></p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -59,7 +59,7 @@ export default async function ClientVideoTestimonialsSection() {
                   {t(video.title)}
                 </h3>
 
-                <p className="mt-2 text-[15px] font-medium tracking-[-0.01em] text-[#565656]">
+                <p className="mt-2 text-[15px] font-medium tracking-[-0.01em] text-[#52525B]">
                   {t(video.subtitle)}
                 </p>
               </div>

@@ -112,14 +112,14 @@ function ToolTrack({ prefix }: { prefix: string }) {
 export default function DataMigrationTechnologiesSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[96px]">
+    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Stack")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Tools That We Use")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Tools That We Use")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Battle-tested platforms for secure, high-volume data migration, transformation, and analytics.")}</p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Battle-tested platforms for secure, high-volume data migration, transformation, and analytics.")}</p>
         </div>
       </div>
 

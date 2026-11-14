@@ -36,7 +36,7 @@ export default async function BankingFinancialServicesSection() {
       <div className="brand-container">
         <div className="max-w-[680px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What we can do")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Offered services")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Offered services")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("A complete portfolio of banking software services, delivered as standalone modules or as one integrated platform.")}</p>
         </div>
 
@@ -44,7 +44,7 @@ export default async function BankingFinancialServicesSection() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:min-h-[168px] sm:p-6"
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:min-h-[168px] sm:p-7"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <service.icon size={21} />
@@ -59,7 +59,7 @@ export default async function BankingFinancialServicesSection() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-xl border border-[#ececec] bg-[#fafafa] px-7 py-6 sm:flex-row sm:items-center md:px-9 md:py-7">
           <div>
-            <p className="text-[17px] font-bold text-black md:text-[19px]">{t("Need a solution shaped around your core banking stack?")}</p>
+            <p className="text-[15px] font-bold text-black md:text-[19px]">{t("Need a solution shaped around your core banking stack?")}</p>
             <p className="mt-1.5 text-[14.5px] text-[#52525B]">{t("Our team can scope a customized build across any of these services.")}</p>
           </div>
 

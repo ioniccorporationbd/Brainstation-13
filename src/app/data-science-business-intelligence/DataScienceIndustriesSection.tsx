@@ -16,7 +16,7 @@ export default async function DataScienceIndustriesSection() {
       <div className="brand-container">
         <div className="max-w-[700px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our experience in")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Industries")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Industries")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("The data problems differ by sector; the discipline does not.")}</p>
         </div>
 

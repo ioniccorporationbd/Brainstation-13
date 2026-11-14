@@ -18,7 +18,7 @@ export default async function AemHeroSection() {
 
           <h1 className="max-w-[640px] text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[54px]">{t("Adobe Experience Manager (AEM), Delivered Right")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[18px]">{t("Implementation, integration, managed service, migration and upgrade — the full AEM lifecycle handled by engineers who work in it daily.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Implementation, integration, managed service, migration and upgrade — the full AEM lifecycle handled by engineers who work in it daily.")}</p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
@@ -37,7 +37,7 @@ export default async function AemHeroSection() {
             {keywords.map((word) => (
               <span
                 key={word}
-                className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#565656]"
+                className="rounded-full border border-[#ececec] bg-white px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#52525B]"
               >
                 {t(word)}
               </span>

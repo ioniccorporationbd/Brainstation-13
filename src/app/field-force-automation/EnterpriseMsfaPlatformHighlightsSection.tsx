@@ -99,7 +99,7 @@ async function HighlightContent({ item }: { item: HighlightItem }) {
         {t(item.title)}
       </h3>
 
-      <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">
+      <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
         {t(item.description)}
       </p>
 
@@ -107,7 +107,7 @@ async function HighlightContent({ item }: { item: HighlightItem }) {
         {item.points.map((point) => (
           <li
             key={point}
-            className="flex items-start gap-2.5 text-[14px] font-semibold leading-[1.55] text-[#1f1f1f] md:text-[15px]"
+            className="flex items-start gap-2.5 text-[14px] font-semibold leading-[1.6] text-[#1f1f1f] md:text-[15px]"
           >
             <CheckCircle2
               size={17}
@@ -130,9 +130,9 @@ export default async function EnterpriseMsfaPlatformHighlightsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Platform Highlights")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Built for Real Field Conditions")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Built for Real Field Conditions")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Enterprise-grade field execution, reporting, and governance built for scalable last-mile operations.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Enterprise-grade field execution, reporting, and governance built for scalable last-mile operations.")}</p>
         </div>
 
         <div className="mt-12 space-y-10 md:space-y-14">

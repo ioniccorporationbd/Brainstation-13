@@ -77,9 +77,9 @@ export default function InsuranceWhatWeDeliverSection() {
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Deliverables")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Deliver")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("What We Deliver")}</h2>
 
-          <p className="mt-5 max-w-[340px] text-[15.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
+          <p className="mt-5 max-w-[340px] text-[15.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
         </div>
 
         {/* Right accordion */}
@@ -125,7 +125,7 @@ export default function InsuranceWhatWeDeliverSection() {
                       {item.points.map((point) => (
                         <li
                           key={point}
-                          className="grid grid-cols-[18px_1fr] gap-3 text-[14.5px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]"
+                          className="grid grid-cols-[18px_1fr] gap-3 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]"
                         >
                           <span className="mt-0.5 text-[#c91f28]">
                             <CircleCheck size={18} strokeWidth={2} />

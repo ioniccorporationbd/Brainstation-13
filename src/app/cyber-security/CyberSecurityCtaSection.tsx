@@ -11,7 +11,7 @@ export default async function CyberSecurityCtaSection() {
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
               <h2 className="text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Find your exposure before someone else does")}</h2>
-              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[16.5px]">{t("Start with a scoped assessment and a prioritised findings report.")}</p>
+              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[15px]">{t("Start with a scoped assessment and a prioritised findings report.")}</p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

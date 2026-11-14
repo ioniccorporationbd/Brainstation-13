@@ -4,7 +4,7 @@ import { getTranslator } from "@/i18n/server";
 export default async function ManagedServiceHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px] lg:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
@@ -12,7 +12,7 @@ export default async function ManagedServiceHeroSection() {
 
           <h1 className="mt-7 max-w-[640px] text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("Fully Managed Software Delivery.")}</h1>
 
-          <p className="mt-6 max-w-[540px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[19px]">{t("From planning to release and post-launch support, we own the full software lifecycle for you.")}</p>
+          <p className="mt-6 max-w-[540px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("From planning to release and post-launch support, we own the full software lifecycle for you.")}</p>
 
           <Link
             href="/schedule-a-call"
@@ -22,7 +22,7 @@ export default async function ManagedServiceHeroSection() {
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
-          <div className="h-[340px] w-full max-w-[560px] overflow-hidden rounded-2xl border border-[#ececec] md:h-[400px]">
+          <div className="h-[280px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[420px] lg:h-[480px]">
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
               alt={t("Managed software delivery team")}

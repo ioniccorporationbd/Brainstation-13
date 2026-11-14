@@ -41,9 +41,9 @@ export default async function BlockchainGlobalAchievementsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Process")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("How We Deliver Blockchain Projects")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("How We Deliver Blockchain Projects")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A four-stage delivery path from process mapping to managed operations.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("A four-stage delivery path from process mapping to managed operations.")}</p>
         </div>
 
         <div className="relative mt-12">
@@ -56,7 +56,7 @@ export default async function BlockchainGlobalAchievementsSection() {
               return (
                 <article
                   key={step.title}
-                  className="group relative flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]"
+                  className="group relative flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
                 >
                   <div className="flex items-center gap-3">
                     <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#c91f28] transition-colors duration-300 group-hover:border-[#c91f28]">
@@ -71,7 +71,7 @@ export default async function BlockchainGlobalAchievementsSection() {
                     {t(step.title)}
                   </h3>
 
-                  <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#565656]">
+                  <p className="mt-2.5 text-[14px] font-medium leading-[1.6] text-[#52525B]">
                     {t(step.description)}
                   </p>
                 </article>

@@ -43,7 +43,7 @@ export default async function InsuranceWhatWeSolveSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Challenges & Approach")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("What We Solve")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("What We Solve")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -88,7 +88,7 @@ async function SolveCard({ block }: { block: SolveBlock }) {
         {block.items.map((item) => (
           <li
             key={item}
-            className="grid grid-cols-[18px_1fr] gap-3 text-[15px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656]"
+            className="grid grid-cols-[18px_1fr] gap-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]"
           >
             <span className="mt-0.5 text-[#c91f28]">
               <CircleCheck size={18} strokeWidth={2} />

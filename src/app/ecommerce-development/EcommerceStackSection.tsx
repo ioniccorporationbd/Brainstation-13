@@ -53,7 +53,7 @@ export default async function EcommerceStackSection() {
                     {t(point.title)}
                   </h3>
 
-                  <p className="mt-1.5 text-[13.5px] font-medium leading-[1.55] text-[#565656]">
+                  <p className="mt-1.5 text-[13.5px] font-medium leading-[1.6] text-[#52525B]">
                     {t(point.description)}
                   </p>
                 </div>

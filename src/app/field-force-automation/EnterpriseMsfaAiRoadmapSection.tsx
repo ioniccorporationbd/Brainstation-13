@@ -62,9 +62,9 @@ export default async function EnterpriseMsfaAiRoadmapSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The AI Roadmap")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Next-Generation Intelligence")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Next-Generation Intelligence")}</h2>
 
-          <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Continuous evolution. Our upcoming release pipeline is heavily focused on integrating advanced AI models, computer vision, and predictive analytics.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Continuous evolution. Our upcoming release pipeline is heavily focused on integrating advanced AI models, computer vision, and predictive analytics.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -86,7 +86,7 @@ export default async function EnterpriseMsfaAiRoadmapSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#000000]">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#000000]">
                   {t(card.title)}
                 </h3>
 

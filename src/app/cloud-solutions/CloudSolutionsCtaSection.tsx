@@ -11,7 +11,7 @@ export default async function CloudSolutionsCtaSection() {
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
               <h2 className="text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Get more from your cloud")}</h2>
-              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[16.5px]">{t("Request a free architecture and cost review.")}</p>
+              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[15px]">{t("Request a free architecture and cost review.")}</p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

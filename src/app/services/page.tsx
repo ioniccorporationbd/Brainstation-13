@@ -29,7 +29,7 @@ export default async function Page() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Services")}</span>
             <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Full-lifecycle engineering, under one accountable team")}</h1>
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[15px]">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/schedule-a-call"
@@ -46,7 +46,7 @@ export default async function Page() {
             <img
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop"
               alt={t("Engineering team reviewing work together in a meeting room")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
         </div>
@@ -73,7 +73,7 @@ export default async function Page() {
         </dl>
       </section>
 
-      <section className="bg-white py-[48px] md:py-[96px]">
+      <section className="bg-white py-[48px] md:py-[104px]">
         <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("How we engage")}</p>
@@ -122,7 +122,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] md:py-[96px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Service lines")}</p>
           <h2 className="mt-3 max-w-[760px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("What we do")}</h2>
@@ -204,7 +204,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-white py-[48px] md:py-[96px]">
+      <section className="bg-white py-[48px] md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Delivery model")}</p>
           <h2 className="mt-3 max-w-[720px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("How a typical engagement runs")}</h2>
