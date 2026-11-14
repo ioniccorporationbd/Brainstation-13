@@ -65,12 +65,12 @@ const blockchainInfrastructureServices = [
 export default async function BlockchainInfrastructureSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="max-w-[760px]">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Infrastructure")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Infrastructure")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Looking to Create Blockchain Infrastructure?")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Looking to Create Blockchain Infrastructure?")}</h2>
 
           <p className="mt-4 max-w-[620px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Audit, identity, private networks and managed operations — the building blocks teams ask for most.")}</p>
         </div>
@@ -88,7 +88,7 @@ export default async function BlockchainInfrastructureSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="mt-5 text-[15.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(service.title)}
                 </h3>
 
@@ -100,7 +100,7 @@ export default async function BlockchainInfrastructureSection() {
           })}
 
           <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-6 text-center">
-            <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">{t("Looking for Dedicated Blockchain Developers?")}</h3>
+            <h3 className="text-[16.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">{t("Looking for Dedicated Blockchain Developers?")}</h3>
 
             <Link
               href="/contact"

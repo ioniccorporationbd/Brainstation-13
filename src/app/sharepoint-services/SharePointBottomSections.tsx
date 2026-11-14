@@ -25,13 +25,13 @@ const microsoftStack = [
 export async function SharePointIndustriesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Industries We Build For")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Industries We Build For")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Industries")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Industries")}</h2>
 
             <p className="mt-4 max-w-[460px] text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("SharePoint and Microsoft 365 engagements across document-heavy, regulated and customer-facing sectors.")}</p>
 
@@ -70,12 +70,12 @@ export async function SharePointIndustriesSection() {
 export async function SharePointWorkedWithSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Microsoft Technologies")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Microsoft Technologies")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Technologies We Build With")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Technologies We Build With")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("The Microsoft products our SharePoint work connects to.")}</p>
         </div>
@@ -143,11 +143,11 @@ export async function SharePointWorkedWithSection() {
 export async function SharePointPurchaseCTASection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[96px] text-[#0a0a0a] md:pb-[112px]">
-      <div className="mx-auto max-w-[1240px] overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
-        <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Start a Project")}</p>
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
+      <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
+        <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Start a Project")}</p>
 
-        <h2 className="mx-auto max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[38px]">{t("Would you like to start a project with us?")}</h2>
+        <h2 className="mx-auto max-w-[720px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[44px]">{t("Would you like to start a project with us?")}</h2>
 
         <p className="mx-auto mt-4 max-w-[620px] text-[16px] font-medium leading-[1.6] text-[#565656] md:text-[17px]">{t("Share your idea and we'll come back with a scoped SharePoint plan.")}</p>
 

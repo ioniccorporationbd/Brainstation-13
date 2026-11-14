@@ -28,13 +28,13 @@ const capabilities = [
 export default async function BlockchainExcellenceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-[#fafafa] px-6 pb-[88px] pt-[88px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
+      <div className="brand-container">
         <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("AI × Blockchain")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("AI × Blockchain")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Blockchain Excellence with AI")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Blockchain Excellence with AI")}</h2>
 
             <p className="mt-5 max-w-[460px] text-[16px] font-medium leading-[1.7] text-[#565656] md:text-[17px]">{t("We combine artificial intelligence with blockchain engineering to build systems that are faster to develop, safer to deploy, and smarter in operation.")}</p>
 
@@ -66,7 +66,7 @@ export default async function BlockchainExcellenceSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <h3 className="mt-2.5 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-2.5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 

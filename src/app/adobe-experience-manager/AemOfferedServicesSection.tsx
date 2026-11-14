@@ -20,12 +20,12 @@ const services = [
 export default async function AemOfferedServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What We Can Do")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Offered Services")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Six services that cover the full AEM platform lifecycle.")}</p>
         </div>
@@ -43,7 +43,7 @@ export default async function AemOfferedServicesSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="text-[16.5px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[16.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(service.title)}
                 </h3>
               </article>

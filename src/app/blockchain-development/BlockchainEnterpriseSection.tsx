@@ -73,12 +73,12 @@ export default function BlockchainEnterpriseSection() {
   const activeItem = enterpriseItems[activeIndex];
 
   return (
-    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Industry Solutions")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Industry Solutions")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Blockchain for Enterprise")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Blockchain for Enterprise")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Our blockchain and Web3 solutions help financial institutions reduce risk, increase transparency, and operate with confidence — from secure transactions and real-time visibility to automated compliance and smarter decision-making.")}</p>
         </div>
@@ -103,7 +103,7 @@ export default function BlockchainEnterpriseSection() {
         <div className="mx-auto mt-8 max-w-[1100px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-8 md:px-12 md:py-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_0.95fr]">
             <div>
-              <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
+              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
                 {t(activeItem.title)}
               </h3>
 

@@ -37,12 +37,12 @@ export default function ShopifySuccessStoriesSection() {
   const reduceMotion = usePrefersReducedMotion();
 
   return (
-    <section className="w-full overflow-hidden bg-[#fafafa] px-6 pb-[96px] pt-[88px] text-[#0a0a0a] md:pb-[112px] md:pt-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full overflow-hidden bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[112px] md:pt-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Success Stories")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Success Stories")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify eCommerce Success Stories")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Shopify eCommerce Success Stories")}</h2>
         </div>
 
         <div className="mx-auto mt-11 max-w-[1080px]">
@@ -78,7 +78,7 @@ export default function ShopifySuccessStoriesSection() {
                   </div>
 
                   <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
-                    <h3 className="max-w-[520px] text-[23px] font-bold leading-[1.22] tracking-[-0.02em] text-[#0a0a0a] md:text-[29px]">
+                    <h3 className="max-w-[520px] text-[23px] font-semibold leading-[1.22] tracking-[-0.02em] text-[#0a0a0a] md:text-[29px]">
                       {t(story.title)}
                     </h3>
 

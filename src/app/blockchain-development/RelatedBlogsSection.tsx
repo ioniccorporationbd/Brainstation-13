@@ -34,13 +34,13 @@ const relatedPosts = [
 export default async function RelatedBlogsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[96px] text-[#0a0a0a] md:pb-[112px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
+      <div className="brand-container">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Insights")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Insights")}</p>
 
-            <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You might also like")}</h2>
+            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You might also like")}</h2>
           </div>
 
           <div className="lg:pb-2">
@@ -74,7 +74,7 @@ export default async function RelatedBlogsSection() {
                     {t(post.category)}
                   </span>
 
-                  <h3 className="mt-4 text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
+                  <h3 className="mt-4 text-[19px] font-semibold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
                     {t(post.title)}
                   </h3>
 

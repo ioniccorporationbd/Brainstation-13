@@ -17,8 +17,8 @@ const keywords = [
 export default async function ShopifyHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[72px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
-      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+    <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Shopify Commerce")}</p>
 
