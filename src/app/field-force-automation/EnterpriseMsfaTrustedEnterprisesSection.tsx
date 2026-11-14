@@ -90,12 +90,12 @@ const stats: StatCard[] = [
 export default async function EnterpriseMsfaTrustedEnterprisesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
+      <div className="brand-container">
         <div className="max-w-[760px]">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Proven in Production")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Proven in Production")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Trusted By Leading Enterprises")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Trusted By Leading Enterprises")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Enterprise-grade field execution trusted by large sales teams, pharmaceutical brands, retail networks, and multi-layer distribution organizations.")}</p>
         </div>
@@ -112,7 +112,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                 </span>
               </div>
 
-              <h3 className="mt-5 text-[19px] font-bold leading-[1.25] tracking-[-0.01em] text-[#000000]">
+              <h3 className="mt-5 text-[19px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#000000]">
                 {t(item.company)}
               </h3>
 
@@ -140,7 +140,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                   {t(item.value)}
                 </p>
 
-                <h3 className="mt-3 text-[15px] font-bold leading-tight text-[#000000]">
+                <h3 className="mt-3 text-[15px] font-semibold leading-tight text-[#000000]">
                   {t(item.title)}
                 </h3>
 
@@ -155,9 +155,9 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
         <div className="mt-10 border border-[#ececec] bg-[#fafafa] px-7 py-7 md:px-9">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Enterprise Ready")}</p>
+              <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Ready")}</p>
 
-              <h3 className="mt-2.5 max-w-[560px] text-[22px] font-bold leading-[1.25] tracking-[-0.02em] text-[#000000] md:text-[26px]">{t("Built for high-volume, multi-territory field operations.")}</h3>
+              <h3 className="mt-2.5 max-w-[560px] text-[22px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#000000] md:text-[26px]">{t("Built for high-volume, multi-territory field operations.")}</h3>
 
               <div className="mt-3 inline-flex items-center gap-2">
                 <BarChart3 size={16} strokeWidth={2} className="text-[#c91f28]" />

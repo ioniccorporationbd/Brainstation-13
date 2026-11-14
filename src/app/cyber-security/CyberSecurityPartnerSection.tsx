@@ -31,11 +31,11 @@ const partners = [
 export default async function CyberSecurityPartnerSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why us")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Why partner with Magnetic Solution Limited?")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Why us")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Why partner with Magnetic Solution Limited?")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -51,7 +51,7 @@ export default async function CyberSecurityPartnerSection() {
               <h3 className="mt-5 text-[16.5px] font-semibold leading-[1.3] text-black">
                 {t(item.title)}
               </h3>
-              <p className="mt-2 text-[14.5px] leading-[1.65] text-[#55585e]">
+              <p className="mt-2 text-[14.5px] leading-[1.65] text-[#52525B]">
                 {t(item.description)}
               </p>
             </article>

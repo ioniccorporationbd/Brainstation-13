@@ -3,8 +3,8 @@ import { getTranslator } from "@/i18n/server";
 export default async function ErpDevelopmentIntroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] pt-[8px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
@@ -15,11 +15,11 @@ export default async function ErpDevelopmentIntroSection() {
           </div>
 
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why custom")}</p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("The system bends to you, not the other way round")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Why custom")}</p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("The system bends to you, not the other way round")}</h2>
 
-            <p className="mt-5 text-[15.5px] leading-[1.8] text-[#55585e]">{t("Off-the-shelf ERP forces you to bend your processes to the software. We build on ERPNext, Frappe and modern frameworks so the system bends to you — modules, integrations and workflows that match reality.")}</p>
-            <p className="mt-4 text-[15.5px] leading-[1.8] text-[#55585e]">{t("From finance and inventory to HR and field operations, we deliver ERP that people actually adopt.")}</p>
+            <p className="mt-5 text-[15.5px] leading-[1.8] text-[#52525B]">{t("Off-the-shelf ERP forces you to bend your processes to the software. We build on ERPNext, Frappe and modern frameworks so the system bends to you — modules, integrations and workflows that match reality.")}</p>
+            <p className="mt-4 text-[15.5px] leading-[1.8] text-[#52525B]">{t("From finance and inventory to HR and field operations, we deliver ERP that people actually adopt.")}</p>
 
             <ul className="mt-7 space-y-3">
               {[

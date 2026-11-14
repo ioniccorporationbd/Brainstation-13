@@ -20,8 +20,8 @@ const heroFeatures = [
 export default async function EnterpriseMsfaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-[0.14em] text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
 

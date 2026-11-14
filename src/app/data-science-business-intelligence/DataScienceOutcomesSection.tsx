@@ -11,13 +11,13 @@ const outcomes = [
 export default async function DataScienceOutcomesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[700px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Benefits")}</p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What a working data stack changes")}</h2>
-            <p className="mt-3 text-[15px] leading-[1.7] text-[#55585e] md:text-[15.5px]">{t("Outcomes we review with every client — described, not scored.")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Benefits")}</p>
+            <h2 className="mt-3 text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("What a working data stack changes")}</h2>
+            <p className="mt-3 text-[15px] leading-[1.7] text-[#52525B] md:text-[15.5px]">{t("Outcomes we review with every client — described, not scored.")}</p>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -30,7 +30,7 @@ export default async function DataScienceOutcomesSection() {
                   <item.icon size={19} />
                 </span>
                 <h3 className="mt-4 text-[15.5px] font-semibold text-black">{t(item.title)}</h3>
-                <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#55585e]">
+                <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#52525B]">
                   {t(item.description)}
                 </p>
               </article>

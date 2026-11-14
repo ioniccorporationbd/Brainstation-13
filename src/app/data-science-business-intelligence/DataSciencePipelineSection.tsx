@@ -12,12 +12,12 @@ const stages = [
 export default async function DataSciencePipelineSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="max-w-[680px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("End to end")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Data Science Pipeline")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("End to end")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Data Science Pipeline")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
@@ -37,7 +37,7 @@ export default async function DataSciencePipelineSection() {
                     </span>
                     {t(stage.title)}
                   </h3>
-                  <p className="mt-1 text-[14px] leading-[1.6] text-[#55585e]">
+                  <p className="mt-1 text-[14px] leading-[1.6] text-[#52525B]">
                     {t(stage.description)}
                   </p>
                 </div>

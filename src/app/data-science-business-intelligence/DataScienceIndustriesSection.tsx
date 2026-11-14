@@ -12,12 +12,12 @@ const industries = [
 export default async function DataScienceIndustriesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="max-w-[700px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our experience in")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Industries")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("The data problems differ by sector; the discipline does not.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our experience in")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Industries")}</h2>
+          <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("The data problems differ by sector; the discipline does not.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -32,7 +32,7 @@ export default async function DataScienceIndustriesSection() {
               <h3 className="mt-4 text-[14.5px] font-semibold leading-[1.35] text-black">
                 {t(item.title)}
               </h3>
-              <p className="mt-1.5 text-[13px] leading-[1.6] text-[#55585e]">
+              <p className="mt-1.5 text-[13px] leading-[1.6] text-[#52525B]">
                 {t(item.description)}
               </p>
             </article>

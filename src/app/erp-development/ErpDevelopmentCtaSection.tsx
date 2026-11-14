@@ -5,13 +5,13 @@ import { ArrowRight } from "lucide-react";
 export default async function ErpDevelopmentCtaSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[96px] pt-[8px] md:pb-[112px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[112px]">
+      <div className="brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
-              <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Outgrowing your current ERP?")}</h2>
-              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Let's map the modules and integrations you need first.")}</p>
+              <h2 className="text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Outgrowing your current ERP?")}</h2>
+              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[16.5px]">{t("Let's map the modules and integrations you need first.")}</p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

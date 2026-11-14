@@ -58,12 +58,12 @@ const outcomes: OutcomeCard[] = [
 export default async function EnterpriseMsfaMeasuredOutcomesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Business Impact")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Business Impact")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Measured Outcomes")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("Measured Outcomes")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Real operational improvements across productivity, processing, compliance, cost control, leakage prevention, and reporting speed.")}</p>
         </div>
@@ -83,7 +83,7 @@ export default async function EnterpriseMsfaMeasuredOutcomesSection() {
                       {t(item.value)}
                     </p>
 
-                    <h3 className="mt-3 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#000000]">
+                    <h3 className="mt-3 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#000000]">
                       {t(item.title)}
                     </h3>
                   </div>

@@ -12,13 +12,13 @@ const resources = [
 export default async function DataScienceResourcesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Team & tooling")}</p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Resources")}</h2>
-            <p className="mt-4 max-w-[420px] text-[15px] leading-[1.75] text-[#55585e]">{t("Where our team applies each platform. Named for clarity — not a certification or partnership claim.")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Team & tooling")}</p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Resources")}</h2>
+            <p className="mt-4 max-w-[420px] text-[15px] leading-[1.6] text-[#52525B]">{t("Where our team applies each platform. Named for clarity — not a certification or partnership claim.")}</p>
           </div>
 
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -28,7 +28,7 @@ export default async function DataScienceResourcesSection() {
                 className="rounded-xl border border-[#ececec] bg-white p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <p className="text-[14.5px] font-semibold text-black">{t(item.name)}</p>
-                <p className="mt-1 text-[13px] leading-[1.6] text-[#55585e]">{t(item.use)}</p>
+                <p className="mt-1 text-[13px] leading-[1.6] text-[#52525B]">{t(item.use)}</p>
               </li>
             ))}
           </ul>

@@ -10,8 +10,8 @@ const stats = [
 export default async function CloudSolutionsStatsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="brand-container">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {stats.map((stat) => (
             <div
@@ -21,7 +21,7 @@ export default async function CloudSolutionsStatsSection() {
               <p className="text-[30px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[40px]">
                 {t(stat.value)}
               </p>
-              <p className="mt-3 text-[13.5px] font-medium leading-[1.4] text-[#55585e] md:text-[14.5px]">
+              <p className="mt-3 text-[13.5px] font-medium leading-[1.4] text-[#52525B] md:text-[14.5px]">
                 {t(stat.label)}
               </p>
             </div>

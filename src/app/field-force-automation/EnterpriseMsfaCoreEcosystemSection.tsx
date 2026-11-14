@@ -116,12 +116,12 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
   const activeItem = ecosystemItems[activeIndex];
 
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("The Core Ecosystem")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[42px]">{t("The Core Ecosystem")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
         </div>
@@ -179,7 +179,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                   <div>
                     <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Active Module")}</p>
 
-                    <h3 className="mt-1.5 text-[20px] font-bold leading-tight tracking-[-0.02em] text-[#000000] md:text-[24px]">
+                    <h3 className="mt-1.5 text-[20px] font-semibold leading-tight tracking-[-0.02em] text-[#000000] md:text-[24px]">
                       {t(activeItem.title)}
                     </h3>
                   </div>
