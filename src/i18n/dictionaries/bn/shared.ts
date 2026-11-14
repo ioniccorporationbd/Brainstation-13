@@ -15,7 +15,7 @@ export const shared: Dict = {
   "Compliance:": "কমপ্লায়েন্স:",
   "Partnerships:": "পার্টনারশিপ:",
   "Recognized by:": "স্বীকৃতি:",
-  "© 2026 Magnetic Solution Limited. All rights reserved.": "© 2026 Magnetic সলিউশন Limited. সর্বস্বত্ব সংরক্ষিত।",
+  "© 2026 Magnetic Solution Limited. All rights reserved.": "© 2026 Magnetic Solution Limited. সর্বস্বত্ব সংরক্ষিত।",
   "Privacy Policy": "প্রাইভেসি পলিসি",
   "Our headquarters and engineering base — where we build and deliver software and technology solutions for clients.": "আমাদের হেডকোয়ার্টার ও ইঞ্জিনিয়ারিং বেস — যেখানে ক্লায়েন্টদের জন্য সফটওয়্যার ও টেকনোলজি সলিউশন তৈরি ও ডেলিভারি করা হয়।",
   "Global Delivery": "গ্লোবাল ডেলিভারি",

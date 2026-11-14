@@ -6,7 +6,7 @@ export const menus: Dict = {
   "Managed Service": "ম্যানেজড সার্ভিস",
   "Digital Transformation": "ডিজিটাল ট্রান্সফরমেশন",
   "Technology Consulting": "টেকনোলজি কনসাল্টিং",
-  "MVP Development": "এমভিপি ডেভেলপমেন্ট",
+  "MVP Development": "MVP ডেভেলপমেন্ট",
   "ML & AI Development": "এমএল ও এআই ডেভেলপমেন্ট",
   "Data Engineering": "ডেটা ইঞ্জিনিয়ারিং",
   "Data Migration": "ডেটা মাইগ্রেশন",
@@ -49,6 +49,6 @@ export const menus: Dict = {
   "Our Resources": "আমাদের রিসোর্স",
   "Join as Partner": "পার্টনার হিসেবে যোগ দিন",
   "Careers & Contact": "ক্যারিয়ার ও যোগাযোগ",
-  "About Magnetic Solution Limited": "Magnetic সলিউশন লিমিটেড সম্পর্কে",
+  "About Magnetic Solution Limited": "Magnetic Solution Limited সম্পর্কে",
   "A global software company since 2006, powering digital transformation.": "2006 সাল থেকে একটি গ্লোবাল সফটওয়্যার কোম্পানি, ডিজিটাল ট্রান্সফরমেশন-এ অগ্রণী।",
 };
