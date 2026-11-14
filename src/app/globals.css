@@ -121,6 +121,20 @@ html[lang="bn-BD"] h4 {
   letter-spacing: 0;
 }
 
+/* Bangla mode: navbar glyphs look lighter than Latin at the same weight,
+   so nudge each navbar tier +100 to keep visual parity. Font sizes stay identical. */
+html[lang="bn-BD"] .bn-links a,
+html[lang="bn-BD"] .bn-links button {
+  font-weight: 600;
+}
+html[lang="bn-BD"] .bn-cta {
+  font-weight: 700;
+}
+html[lang="bn-BD"] .bn-drawer a,
+html[lang="bn-BD"] .bn-drawer button {
+  font-weight: 700;
+}
+
 ::selection {
   background: var(--primary);
   color: #ffffff;

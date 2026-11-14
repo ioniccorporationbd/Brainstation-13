@@ -141,39 +141,25 @@ export default function Navbar() {
             : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#8B1119)]"
         }`}
       >
-        <Link
-          href="/"
-          onClick={handleLogoClick}
-          className="absolute left-0 top-0 z-30 flex h-[64px] items-center justify-center bg-white px-3 min-[768px]:h-[72px] min-[768px]:px-4 min-[768px]:left-6 min-[1440px]:left-[120px] min-[1200px]:h-[76px] min-[1200px]:px-5 xl:h-[88px] 2xl:h-[100px]"
-          aria-label={t("Magnetic Solution Limited — Home")}
-        >
-          <Image
-            src="/images/brand/magnetic-logo.png"
-            alt="Magnetic Solution Ltd"
-            width={190}
-            height={198}
-            priority
-            className="h-[80%] w-auto object-contain"
-          />
-        </Link>
         <nav
           className="mx-auto flex h-[64px] max-w-[1320px] items-center justify-between gap-3 px-4 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-6 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-8 xl:h-[88px] 2xl:h-[100px]"
         >
-          <span
-            aria-hidden="true"
-            className="invisible -ml-4 flex shrink-0 items-center justify-center self-stretch bg-white px-3 min-[768px]:-ml-6 min-[768px]:px-4 min-[1200px]:-ml-8 min-[1200px]:px-5"
+          <Link
+            href="/"
+            onClick={handleLogoClick}
+            className="relative z-30 flex h-[64px] shrink-0 items-center justify-center self-stretch bg-white px-3 min-[768px]:h-[72px] min-[768px]:px-4 min-[1200px]:h-[76px] min-[1200px]:px-5 xl:h-[88px] 2xl:h-[100px]"
+            aria-label={t("Magnetic Solution Limited — Home")}
           >
             <Image
               src="/images/brand/magnetic-logo.png"
-              alt=""
+              alt="Magnetic Solution Ltd"
               width={190}
               height={198}
               priority
-              className="h-full w-auto object-contain"
+              className="h-[80%] w-auto object-contain"
             />
-          </span>
-
-          <div className="hidden items-center gap-5 min-[1200px]:flex xl:gap-[30px]">
+          </Link>
+          <div className="bn-links hidden items-center gap-5 min-[1200px]:flex xl:gap-[30px]">
             {navItems.map((item) => {
               const active = activeMenu === item.key || isRouteActive(item);
               return item.hasMegaMenu ? (
@@ -222,7 +208,7 @@ export default function Navbar() {
             <Link
               href="/schedule-a-call"
               onClick={closeAll}
-              className="hidden rounded-full bg-white px-5 py-[12px] text-[15px] font-semibold leading-[20px] text-black shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white min-[768px]:inline-flex min-[1200px]:px-6 min-[1200px]:py-[14px] min-[1200px]:text-[16px] xl:px-[30px]"
+              className="bn-cta hidden rounded-full bg-white px-5 py-[12px] text-[15px] font-semibold leading-[20px] text-black shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:bg-black hover:text-white min-[768px]:inline-flex min-[1200px]:px-6 min-[1200px]:py-[14px] min-[1200px]:text-[16px] xl:px-[30px]"
             >
               {t("Schedule a Call")}
             </Link>
@@ -257,7 +243,7 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[70] h-[100dvh] w-[340px] max-w-[88vw] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-4 py-4 transition-transform duration-300 ease-out min-[768px]:px-5 min-[768px]:py-5 min-[1200px]:hidden ${
+        className={`bn-drawer fixed right-0 top-0 z-[70] h-[100dvh] w-[340px] max-w-[88vw] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-4 py-4 transition-transform duration-300 ease-out min-[768px]:px-5 min-[768px]:py-5 min-[1200px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
