@@ -99,7 +99,7 @@ export default function HeroBannerSlider() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
             <div className="relative w-full overflow-hidden md:min-h-[650px]">
-              <div className="brand-container relative grid grid-cols-1 pt-[76px] md:min-h-[650px] lg:grid-cols-[51.5%_48.5%]">
+              <div className="brand-container hero-grid pt-[76px] md:min-h-[650px]">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px]">
                   <h1 className="max-w-[660px] text-balance text-[28px] font-semibold leading-[1.16] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[50px] lg:text-[56px]">
@@ -119,7 +119,7 @@ export default function HeroBannerSlider() {
                 </div>
 
                 {/* RIGHT SIDE DESKTOP */}
-                <div className="relative z-10 hidden min-h-[560px] origin-top-left md:block lg:scale-[0.72] xl:scale-100">
+                <div className="hero-collage relative z-10 hidden min-h-[560px] md:block">
                   {/* Circle Pattern */}
                   <div className="pointer-events-none absolute left-[48%] top-[47%] h-[910px] w-[910px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_12px)]" />
 

@@ -127,7 +127,7 @@ html[lang="bn-BD"] h4 {
 .brand-container {
   margin-inline: auto;
   width: 100%;
-  max-width: none;
+  max-width: 1440px;
   padding-inline: 36px;
 }
 @media (min-width: 768px) {
@@ -386,4 +386,39 @@ img {
 html[data-error-page="1"] footer,
 html[data-error-page="1"] [data-global-offices] {
   display: none !important;
+}
+
+/* Hero banner: deterministic grid + collage scale ladder (arbitrary variants order unreliable) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hero-collage {
+  transform-origin: top left;
+}
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 51.5% 48.5%;
+  }
+  .hero-collage {
+    transform: scale(0.63);
+  }
+}
+@media (min-width: 1200px) {
+  .hero-collage {
+    transform: scale(0.72);
+  }
+}
+@media (min-width: 1280px) {
+  .hero-collage {
+    transform: scale(0.79);
+  }
+}
+@media (min-width: 1440px) {
+  .hero-grid {
+    grid-template-columns: 46% 54%;
+  }
+  .hero-collage {
+    transform: scale(1);
+  }
 }
