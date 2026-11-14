@@ -25,12 +25,12 @@ const steps = [
 export default async function BuildGameSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[88px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
         <div>
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our Approach")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Approach")}</p>
 
-          <h2 className="max-w-[560px] text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Build a Game With Us")}</h2>
+          <h2 className="max-w-[560px] text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Build a Game With Us")}</h2>
 
           <p className="mt-5 max-w-[560px] text-[16px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Get your game created from the ground up, or cover any production need with specialized knowledge and a team that ships.")}</p>
 
@@ -45,7 +45,7 @@ export default async function BuildGameSection() {
                 </span>
 
                 <div>
-                  <h3 className="text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                  <h3 className="text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                     {t(step.title)}
                   </h3>
 

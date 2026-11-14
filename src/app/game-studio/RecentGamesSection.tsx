@@ -72,13 +72,13 @@ export default async function RecentGamesSection() {
   return (
     <section
       id="recent-games"
-      className="w-full scroll-mt-24 bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]"
+      className="w-full scroll-mt-24 bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Portfolio")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Portfolio")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Recent Games")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Our Recent Games")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("A selection of games and interactive experiences delivered by our team.")}</p>
         </div>
@@ -104,7 +104,7 @@ export default async function RecentGamesSection() {
               </div>
 
               <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[17px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(game.title)}
                 </h3>
 

@@ -5,13 +5,13 @@ import { Phone } from "lucide-react";
 export default async function FinalPickSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[88px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="grid grid-cols-1 items-center gap-8 rounded-2xl border border-[#ececec] bg-white p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-14">
           <div>
-            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Let's Build")}</p>
+            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Let's Build")}</p>
 
-            <h2 className="max-w-[620px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px]">{t("Have a complex story that needs visualizing?")}</h2>
+            <h2 className="max-w-[620px] text-[26px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px]">{t("Have a complex story that needs visualizing?")}</h2>
 
             <p className="mt-4 max-w-[580px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#565656] md:text-[16.5px]">{t("From semiconductor fabs to automotive systems, we turn engineering data into cinematic 3D. Book a consultation to explore what's possible.")}</p>
           </div>

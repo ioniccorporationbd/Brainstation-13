@@ -92,12 +92,12 @@ export default function MoodleReadyPluginsSection() {
   const plugin = plugins[active];
 
   return (
-    <section className="w-full bg-white px-6 pb-[88px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Extensions")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Extensions")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Moodle Ready Plugins")}</h2>
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("Moodle Ready Plugins")}</h2>
 
           <p className="mt-4 text-[16px] font-medium leading-[1.65] text-[#565656] md:text-[17px]">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
         </div>
@@ -123,7 +123,7 @@ export default function MoodleReadyPluginsSection() {
         <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-6 md:p-10">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
             <div>
-              <h3 className="text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
+              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
                 {t(plugin.title)}
               </h3>
 

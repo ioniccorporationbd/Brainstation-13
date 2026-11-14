@@ -8,8 +8,8 @@ const MACHINE_IMG =
 export default async function ThreeDModelingHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative w-full overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-16">
+    <section className="relative w-full overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[96px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-16">
         {/* Left content */}
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("3D Modeling & Rendering")}</p>

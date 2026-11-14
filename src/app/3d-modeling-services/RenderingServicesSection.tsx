@@ -63,14 +63,14 @@ const services: Service[] = [
 export default async function RenderingServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white px-6 pb-[80px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
             {t("Rendering & Animation")}
           </p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
             {t("3D Rendering Services & Industrial Animation")}
           </h2>
 
@@ -92,7 +92,7 @@ export default async function RenderingServicesSection() {
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
                   {t(item.title)}
                 </h3>
 
