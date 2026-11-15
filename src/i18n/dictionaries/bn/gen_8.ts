@@ -377,6 +377,7 @@ export const gen_8: Dict = {
   "Social Responsibility": "সামাজিক দায়বদ্ধতা",
   "Software & IT Services | Magnetic Solution Limited": "সফটওয়্যার ও আইটি সার্ভিসসমূহ | Magnetic Solution Limited",
   "Software & ITES": "সফটওয়্যার ও ITES",
+  "Software developers collaborating in a modern technology office": "আধুনিক টেকনোলজি অফিসে সফটওয়্যার ডেভেলপারদের একসাথে কাজের দৃশ্য",
   "Software Product Consulting": "সফটওয়্যার প্রোডাক্ট কনসাল্টিং",
   "Software Testing as a Service": "সফটওয়্যার টেস্টিং অ্যাজ আ সার্ভিস",
   "Software Testing as a Service or TaaS is a cost-saving approach to increase test execution speed with on-demand resources. STAS represents an avenue for outsourcing many types of testing that are demanded in today’s IT environment. Magnetic Solution Limited offers STAS for organizations looking to ensure quality testing of applications that require extensive automation and a short test execution cycle.": "সফটওয়্যার টেস্টিং অ্যাজ এ সার্ভিস বা TaaS হলো অন-ডিমান্ড রিসোর্স দিয়ে টেস্ট এক্সিকিউশন স্পিড বাড়ানোর একটি সাশ্রয়ী পদ্ধতি। STAS আজকের আইটি এনভায়রনমেন্ট-এ চাহিদাসম্পন্ন বহু ধরনের টেস্টিং আউটসোর্সিং-এর একটি পথ। যে প্রতিষ্ঠানগুলো ব্যাপক অটোমেশন ও সংক্ষিপ্ত টেস্ট এক্সিকিউশন সাইকেল প্রয়োজন এমন অ্যাপ্লিকেশন-এর গুণমানসম্মত টেস্টিং নিশ্চিত করতে চায়, তাদের জন্য Magnetic Solution Limited STAS সরবরাহ করে।",
