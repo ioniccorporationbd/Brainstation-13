@@ -50,7 +50,7 @@ export default function GlobalOfficesSection() {
     <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
         <div className="max-w-[620px]">
-          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>
           <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
         </div>
 

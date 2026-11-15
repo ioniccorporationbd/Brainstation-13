@@ -63,7 +63,7 @@ export default function GlobalFaqSection({
             </p>
           ) : null}
 
-          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">
             {t(title)}
           </h2>
 
