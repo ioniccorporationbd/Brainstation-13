@@ -121,6 +121,19 @@ html[lang="bn-BD"] h4 {
   letter-spacing: 0;
 }
 
+/* Mobile title safety net (<=767px only): long English compounds such as
+   "Augmentation," and long Bangla words wrap instead of clipping inside
+   overflow-hidden sections. Desktop/tablet typography is untouched. */
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */
