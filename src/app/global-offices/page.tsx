@@ -76,8 +76,8 @@ export default async function GlobalOfficesPage() {
         <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Global offices")}</span>
-            <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("One team, everywhere you work")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("One team, everywhere you work")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/schedule-a-call"
@@ -104,8 +104,8 @@ export default async function GlobalOfficesPage() {
       <section className="bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our locations")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Where we deliver from")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">{t("Two verified operating bases: a headquarters and engineering centre in Bangladesh, and a remote-first delivery model that puts senior engineers close to your working day.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Where we deliver from")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Two verified operating bases: a headquarters and engineering centre in Bangladesh, and a remote-first delivery model that puts senior engineers close to your working day.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {presence.map((item) => {
@@ -120,15 +120,15 @@ export default async function GlobalOfficesPage() {
                       <Icon size={21} strokeWidth={1.9} />
                     </span>
                     <div>
-                      <h3 className="text-[18px] font-semibold leading-[1.25] text-black md:text-[20px]">
+                      <h3 className="text-[18px] font-semibold leading-[1.25] text-black md:text-[20px] text-balance">
                         {t(item.title)}
                       </h3>
-                      <p className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#52525B]">
+                      <p className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#52525B] text-pretty">
                         {t(item.badge)}
                       </p>
                     </div>
                   </div>
-                  <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B]">
+                  <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.text)}
                   </p>
                   <Link
@@ -153,7 +153,7 @@ export default async function GlobalOfficesPage() {
             <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
               <ShieldCheck size={17} strokeWidth={1.9} />
             </span>
-            <p className="text-[14px] leading-[1.6] text-[#52525B]">
+            <p className="text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
               <strong className="font-semibold text-black">{t("Verified information only.")}</strong>{" "}{t("A public street address, branch office list, office phone number and office email address have not been verified for Magnetic Solution Limited, so they are intentionally not published here rather than invented. Locations listed by a previous brand are not presented as ours. Write to us through the")}{" "}
               <Link
                 href="/contact"
@@ -180,7 +180,7 @@ export default async function GlobalOfficesPage() {
 
           <div className="mt-14">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Working across borders, without the friction")}</h2>
+            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Working across borders, without the friction")}</h2>
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {workingModel.map((card) => {
                 const Icon = card.icon;
@@ -192,10 +192,10 @@ export default async function GlobalOfficesPage() {
                     <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={21} strokeWidth={1.9} />
                     </span>
-                    <h3 className="mt-4 text-[18px] font-semibold leading-[1.3] text-black md:text-[20px]">
+                    <h3 className="mt-4 text-[18px] font-semibold leading-[1.3] text-black md:text-[20px] text-balance">
                       {t(card.title)}
                     </h3>
-                    <p className="mt-2 text-[15px] leading-[1.6] text-[#52525B]">
+                    <p className="mt-2 text-[15px] leading-[1.6] text-[#52525B] text-pretty">
                       {t(card.text)}
                     </p>
                   </article>
@@ -205,8 +205,8 @@ export default async function GlobalOfficesPage() {
           </div>
 
           <div className="mt-14 rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 text-center md:px-12 md:py-12">
-            <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Not near an office? That's fine.")}</h2>
-            <p className="mx-auto mt-3 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">{t("Most of our work is delivered remotely with overlapping hours in your timezone. Distance has never been a barrier to shipping great software.")}</p>
+            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Not near an office? That's fine.")}</h2>
+            <p className="mx-auto mt-3 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Most of our work is delivered remotely with overlapping hours in your timezone. Distance has never been a barrier to shipping great software.")}</p>
             <Link
               href="/schedule-a-call"
               className="mt-7 inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"

@@ -67,9 +67,9 @@ export default async function ScheduleACallPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Contact · Schedule a call")}</span>
 
-            <h1 className="mt-6 max-w-[560px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Request a call with the delivery team")}</h1>
+            <h1 className="mt-6 max-w-[560px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] text-balance">{t("Request a call with the delivery team")}</h1>
 
-            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17px]">{t("Tell us what the call needs to cover and when suits you. This page submits a booking request — a person confirms the exact time by email, so nothing is booked automatically.")}</p>
+            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.6] text-[#55585e] md:text-[17px]">{t("Tell us what the call needs to cover and when suits you. This page submits a booking request — a person confirms the exact time by email, so nothing is booked automatically.")}</p>
 
             <div className="mt-9 space-y-5">
               {expectations.map((item) => (
@@ -81,7 +81,7 @@ export default async function ScheduleACallPage() {
                     <p className="text-[15.5px] font-bold text-black">
                       {t(item.title)}
                     </p>
-                    <p className="mt-1 text-[14.5px] leading-[1.65] text-[#55585e]">
+                    <p className="mt-1 text-[14.5px] leading-[1.6] text-[#55585e]">
                       {t(item.body)}
                     </p>
                   </div>
@@ -90,7 +90,7 @@ export default async function ScheduleACallPage() {
             </div>
 
             <div className="mt-9 rounded-xl border border-[#ececec] bg-[#fafafa] p-6">
-              <h2 className="flex items-center gap-2 text-[15.5px] font-bold text-black">
+              <h2 className="flex items-center gap-2 text-[15.5px] font-bold text-black text-balance">
                 <ShieldCheck size={18} className="text-[#c91f28]" />{t("What this page does and does not do")}</h2>
               <ul className="mt-3 space-y-2">
                 <li className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-[#55585e]">
@@ -113,7 +113,7 @@ export default async function ScheduleACallPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
         <div className="mx-auto max-w-[1240px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What happens next")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Three steps, no auto-booking")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Three steps, no auto-booking")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {process.map((item) => (
@@ -124,7 +124,7 @@ export default async function ScheduleACallPage() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                   {t(item.step)}
                 </span>
-                <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black leading-[1.3] text-balance">
                   {t(item.title)}
                 </h3>
                 <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
@@ -143,8 +143,8 @@ export default async function ScheduleACallPage() {
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
                 <CalendarDays size={15} />{t("Prefer to write?")}</p>
-              <h2 className="mt-3 text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Send the details instead of booking time")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("A written brief is often faster than a call. Use the contact page and the team replies with questions or a proposed plan.")}</p>
+              <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Send the details instead of booking time")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.6] text-[#55585e] md:text-[16px]">{t("A written brief is often faster than a call. Use the contact page and the team replies with questions or a proposed plan.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

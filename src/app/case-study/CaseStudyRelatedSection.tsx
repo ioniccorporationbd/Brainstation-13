@@ -41,7 +41,7 @@ export default async function CaseStudyRelatedSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Related Case Studies")}</p>
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">{t("You Might Also Like")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("You Might Also Like")}</h2>
 
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Explore more of the products and platforms we have designed and delivered.")}</p>
 
@@ -74,7 +74,7 @@ export default async function CaseStudyRelatedSection() {
                     {t(item.category)}
                   </span>
 
-                  <h3 className="mt-4 text-[21px] font-bold leading-[1.28] tracking-[-0.015em] text-[#0a0a0a]">
+                  <h3 className="mt-4 text-[18px] md:text-[20px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a] text-balance">
                     {t(item.title)}
                   </h3>
 

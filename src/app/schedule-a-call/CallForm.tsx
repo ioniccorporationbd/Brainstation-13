@@ -110,10 +110,10 @@ export default function CallForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CalendarCheck size={28} strokeWidth={1.9} />
         </span>
-        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black">{t("Booking request received")}</h3>
+        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black leading-[1.3] text-balance">{t("Booking request received")}</h3>
         <p className="mt-3 max-w-[430px] text-[15px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your request has been recorded with reference")}{" "}
           <strong className="break-all text-black">{reference || "—"}</strong>{" "}{t("and is queued for the team.")}</p>
-        <p className="mt-3 max-w-[430px] rounded-lg bg-[#fafafa] px-4 py-3 text-[13px] leading-[1.65] text-[#55585e]">
+        <p className="mt-3 max-w-[430px] rounded-lg bg-[#fafafa] px-4 py-3 text-[13px] leading-[1.6] text-[#55585e]">
           <strong className="text-black">{t("This is not a confirmed meeting.")}</strong>{" "}{t("No calendar slot has been reserved and no invite has been issued. A person will reply to")}{values.email || "your email"}{t("to confirm an exact time.")}</p>
         <button
           type="button"
@@ -269,14 +269,14 @@ export default function CallForm() {
       </div>
 
       {serverError ? (
-        <p className="mt-5 flex items-start gap-2 rounded-lg bg-[#fdecec] px-4 py-3 text-[13.5px] leading-[1.6] text-[#a71920]">
+        <p className="mt-5 flex items-start gap-2 rounded-lg bg-[#fdecec] px-4 py-3 text-[14.5px] leading-[1.6] text-[#a71920]">
           <AlertCircle size={16} className="mt-0.5 shrink-0" />
           {t(serverError)}
         </p>
       ) : null}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-        <p className="text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Requests are queued on our server. A person confirms the time by email — nothing is booked automatically.")}</p>
+        <p className="text-[13px] leading-[1.6] text-[#6b6f76]">{t("Requests are queued on our server. A person confirms the time by email — nothing is booked automatically.")}</p>
         <button
           type="submit"
           disabled={status === "sending"}

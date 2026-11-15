@@ -10,8 +10,8 @@ export default async function SafetyAtSeaCtaSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
-              <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Have a complex IoT problem?")}</h2>
-              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Let’s design a system that works in the real world.")}</p>
+              <h2 className="text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Have a complex IoT problem?")}</h2>
+              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16px]">{t("Let’s design a system that works in the real world.")}</p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

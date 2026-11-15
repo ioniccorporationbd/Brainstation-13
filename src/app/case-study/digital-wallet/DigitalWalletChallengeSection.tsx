@@ -27,7 +27,7 @@ export default async function DigitalWalletChallengeSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The problem")}</p>
-            <h2 className="mt-4 max-w-[560px] text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Banking built for a different customer")}</h2>
+            <h2 className="mt-4 max-w-[560px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Banking built for a different customer")}</h2>
 
             <p className="mt-5 text-[15.5px] leading-[1.8] text-[#55585e]">{t("Access to simple financial services — payments, transfers, savings — remains out of reach for millions. Traditional banking infrastructure was too costly and slow to extend.")}</p>
 
@@ -41,8 +41,8 @@ export default async function DigitalWalletChallengeSection() {
                     <item.icon size={19} />
                   </span>
                   <div>
-                    <h3 className="text-[15.5px] font-semibold text-black">{t(item.title)}</h3>
-                    <p className="mt-1 text-[14px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
+                    <h3 className="text-[15.5px] md:text-[16px] font-semibold leading-[1.35] text-black text-balance">{t(item.title)}</h3>
+                    <p className="mt-1 text-[14.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
                   </div>
                 </li>
               ))}

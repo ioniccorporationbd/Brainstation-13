@@ -39,7 +39,7 @@ export default async function SafetyAtSeaImpactSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[720px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Impact")}</p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("The results that mattered")}</h2>
+            <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("The results that mattered")}</h2>
             <p className="mt-3 text-[15px] leading-[1.7] text-[#55585e] md:text-[15.5px]">{t("Outcomes described in terms of what changed, not projected percentages.")}</p>
           </div>
 
@@ -52,8 +52,8 @@ export default async function SafetyAtSeaImpactSection() {
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <item.icon size={19} />
                 </span>
-                <h3 className="mt-4 text-[15.5px] font-semibold leading-[1.35] text-black">{t(item.title)}</h3>
-                <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#55585e]">{t(item.description)}</p>
+                <h3 className="mt-4 text-[15.5px] font-semibold leading-[1.35] text-black text-balance">{t(item.title)}</h3>
+                <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
               </article>
             ))}
           </div>
