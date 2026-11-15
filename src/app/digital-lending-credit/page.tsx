@@ -156,14 +156,14 @@ export default async function Page() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Fintech · Lending & credit")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Lending journeys that hold up to audit")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Lending journeys that hold up to audit")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("Origination, decisioning and servicing in one flow: applications captured once, decisions explainable, disbursements controlled and repayment schedules that reconcile to the last unit.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Origination, decisioning and servicing in one flow: applications captured once, decisions explainable, disbursements controlled and repayment schedules that reconcile to the last unit.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
@@ -182,15 +182,15 @@ export default async function Page() {
             <img
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop"
               alt={t("Financial documents, calculator and pen on a desk")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
         </div>
       </section>
 
       {/* Strip */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-10">
-        <dl className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
+        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {strip.map((item) => (
             <div key={item.label}>
               <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">
@@ -205,11 +205,11 @@ export default async function Page() {
       </section>
 
       {/* Features */}
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
-          <h2 className="mt-3 max-w-[760px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What the platform covers")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Each capability is a working part of the product, not a slide. They share one data model, so trust, compliance and reporting do not have to be bolted on afterwards.")}</p>
+          <h2 className="mt-3 max-w-[760px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("What the platform covers")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Each capability is a working part of the product, not a slide. They share one data model, so trust, compliance and reporting do not have to be bolted on afterwards.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item) => (
@@ -220,10 +220,10 @@ export default async function Page() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
                   {t(item.body)}
                 </p>
               </article>
@@ -233,12 +233,12 @@ export default async function Page() {
       </section>
 
       {/* Architecture */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Architecture")}</p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("A pipeline you can inspect at any stage")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">{t("Each stage — capture, decision, disbursement, servicing — owns its data and hands over through an explicit contract. That makes the journey explainable per application and testable per stage.")}</p>
+            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("A pipeline you can inspect at any stage")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Each stage — capture, decision, disbursement, servicing — owns its data and hands over through an explicit contract. That makes the journey explainable per application and testable per stage.")}</p>
 
             <ul className="mt-7 space-y-3.5">
               {architectureBullets.map((bullet) => (
@@ -248,7 +248,7 @@ export default async function Page() {
                     strokeWidth={2}
                     className="mt-0.5 shrink-0 text-[#c91f28]"
                   />
-                  <span className="text-[14.5px] leading-[1.65] text-[#55585e]">
+                  <span className="text-[14.5px] leading-[1.65] text-[#52525B]">
                     {t(bullet)}
                   </span>
                 </li>
@@ -257,22 +257,22 @@ export default async function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Explainable decisions, exact numbers")}</h3>
-            <p className="mt-3 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Every decision records which policy version ran, which inputs it saw and what it returned. Money is stored in integer minor units with explicit rounding, so schedules, statements and reports agree to the last unit instead of drifting by fractions.")}</p>
+            <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Explainable decisions, exact numbers")}</h3>
+            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Every decision records which policy version ran, which inputs it saw and what it returned. Money is stored in integer minor units with explicit rounding, so schedules, statements and reports agree to the last unit instead of drifting by fractions.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
                 <CircleDot size={14} />{t("Delivery note")}</p>
-              <p className="mt-2 text-[13.5px] leading-[1.6] text-[#55585e]">{t("Architecture decisions are documented with the trade-offs they carry, so your team can maintain the platform after hand-over.")}</p>
+              <p className="mt-2 text-[13.5px] leading-[1.6] text-[#52525B]">{t("Architecture decisions are documented with the trade-offs they carry, so your team can maintain the platform after hand-over.")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Delivery process")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How an engagement runs")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How an engagement runs")}</h2>
 
           <ol className="mt-10 space-y-4">
             {processSteps.map((step, index) => (
@@ -284,10 +284,10 @@ export default async function Page() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                  <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">
                     {t(step.title)}
                   </h3>
-                  <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">
                     {t(step.body)}
                   </p>
                 </div>
@@ -298,12 +298,12 @@ export default async function Page() {
       </section>
 
       {/* Integrations + compliance */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Integrations")}</p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Connects to what you already run")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.7] text-[#55585e]">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
+            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Connects to what you already run")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {integrations.map((item) => (
@@ -325,16 +325,16 @@ export default async function Page() {
             {compliance.map((item) => (
               <article
                 key={item.title}
-                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <ShieldCheck size={20} strokeWidth={1.9} />
                 </span>
                 <div>
-                  <h3 className="text-[16px] font-bold tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
                     {t(item.body)}
                   </p>
                 </div>
@@ -354,12 +354,12 @@ export default async function Page() {
       />
 
       {/* CTA */}
-      <section className="bg-white px-6 pb-[72px] pt-[8px] md:pb-[96px]">
-        <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+      <section className="bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Building or replacing a lending platform?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("Share the products, policy scope and integrations you need. We will propose a phased plan from origination through servicing.")}</p>
+              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[34px]">{t("Building or replacing a lending platform?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Share the products, policy scope and integrations you need. We will propose a phased plan from origination through servicing.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
