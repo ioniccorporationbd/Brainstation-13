@@ -14,7 +14,7 @@ export default async function InsuranceHeroSection() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Insurtech")}</p>
 
-          <h1 className="text-[38px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("AI-Driven Insurance Technology")}</h1>
+          <h1 className="text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("AI-Driven Insurance Technology")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Modular insurtech that modernizes claims, policies and agent operations — adopt one module or the full stack, integrate with your core systems.")}</p>
 

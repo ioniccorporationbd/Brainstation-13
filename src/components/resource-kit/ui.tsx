@@ -78,7 +78,7 @@ export async function SectionHeader({
         </p>
       ) : null}
       <h2
-        className={`text-[34px] font-medium leading-[1.1] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] ${
+        className={`text-[clamp(27px,8.0vw,34px)] font-medium leading-[1.1] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] ${
           eyebrow ? "mt-3" : ""
         }`}
       >

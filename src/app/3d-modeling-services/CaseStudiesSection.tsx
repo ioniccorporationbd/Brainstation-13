@@ -67,7 +67,7 @@ export default async function CaseStudiesSection() {
 
             <div className="mt-8 grid grid-cols-2 gap-8 border-t border-[#ececec] pt-7">
               <div>
-                <h4 className="text-[34px] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
+                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
                   80%
                 </h4>
 
@@ -75,7 +75,7 @@ export default async function CaseStudiesSection() {
               </div>
 
               <div>
-                <h4 className="text-[34px] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
+                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
                   99.5%
                 </h4>
 

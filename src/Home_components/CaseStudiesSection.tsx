@@ -85,7 +85,7 @@ export default async function CaseStudiesSection() {
               <div className="mt-9 grid grid-cols-2 gap-6 border-t border-[#F0F0F2] pt-7">
                 {STATS.map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-[36px] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">
+                    <div className="text-[clamp(29px,8.4vw,36px)] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">
                       {t(stat.value)}
                     </div>
                     <p className="mt-2 text-[13px] leading-[1.4] text-[#52525B] md:text-[14px]">

@@ -58,7 +58,7 @@ export default async function AIDevelopmentExcellenceSection() {
                 key={item.title}
                 className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
               >
-                <span className="text-[34px] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
+                <span className="text-[clamp(27px,8.0vw,34px)] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
                   {t(item.number)}
                 </span>
 

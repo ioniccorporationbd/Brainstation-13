@@ -10,7 +10,7 @@ export default async function MvpDevelopmentHeroSection() {
         <div>
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-[0.12em] text-[#c91f28]">{t("MVP Development")}</span>
 
-          <h1 className="mt-7 max-w-[680px] text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("Turn Ideas Into MVPs — Faster.")}</h1>
+          <h1 className="mt-7 max-w-[680px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("Turn Ideas Into MVPs — Faster.")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Validate your concept with a lean, high-impact product built to attract early users, prove value, and support your next funding round.")}</p>
 

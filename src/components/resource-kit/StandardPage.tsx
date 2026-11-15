@@ -199,7 +199,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
           <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#f87171]">
             {t(eyebrow)}
           </span>
-          <h1 className="mx-auto mt-7 max-w-[920px] text-[38px] font-medium leading-[1.08] tracking-[-0.055em] md:text-[60px]">
+          <h1 className="mx-auto mt-7 max-w-[920px] text-[clamp(30px,8.9vw,38px)] font-medium leading-[1.08] tracking-[-0.055em] md:text-[60px]">
             {t(title)}
           </h1>
           <p className="mx-auto mt-6 max-w-[760px] text-[17px] font-normal leading-[1.55] text-white/70 md:text-[21px]">

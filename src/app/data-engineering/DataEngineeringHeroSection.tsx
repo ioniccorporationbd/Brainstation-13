@@ -11,7 +11,7 @@ export default async function DataEngineeringHeroSection() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Data Engineering")}</p>
 
-          <h1 className="text-[38px] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("AI-Ready Data Platforms for the Enterprise")}</h1>
+          <h1 className="text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.1] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px]">{t("AI-Ready Data Platforms for the Enterprise")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("We design cloud-native, governance-first data platforms built for reliability and AI readiness — delivered by certified teams for faster, lower-risk rollout.")}</p>
 
