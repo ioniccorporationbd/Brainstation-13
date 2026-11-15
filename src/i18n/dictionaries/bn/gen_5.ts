@@ -8,7 +8,7 @@ export const gen_5: Dict = {
   "Ground rules": "মৌলিক নিয়মাবলি",
   "Grounded": "ভিত্তিসম্পন্ন",
   "Grow": "প্রবৃদ্ধি",
-  "Grow with Magnetic Solution Limited": "Magnetic Solution Limited-এর সাথে বেড়ে উঠুন",
+  "Grow with Magnetic Solution Limited": "ম্যাগনেটিক সলিউশন লিমিটেডের সাথে বেড়ে উঠুন",
   "Grow your concept with us to lay a solid foundation for your product in game design and concept design.": "আমাদের সাথে আপনার কনসেপ্ট বিকশিত করুন, যাতে গেম ডিজাইন ও কনসেপ্ট ডিজাইন-এ আপনার প্রোডাক্ট-এর জন্য একটি মজবুত ভিত্তি তৈরি হয়।",
   "Growth analytics": "গ্রোথ অ্যানালিটিক্স",
   "Growth ready": "প্রবৃদ্ধির জন্য প্রস্তুত",

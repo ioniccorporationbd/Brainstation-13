@@ -397,7 +397,7 @@ export const gen_3: Dict = {
   "ERP": "ইআরপি",
   "ERP & business systems": "ইআরপি ও বিজনেস সিস্টেম",
   "ERP Development | Magnetic Solution Limited": "ইআরপি ডেভেলপমেন্ট | Magnetic Solution Limited",
-  "ERP HRMS Solution": "ইআরপি HRMS সলিউশন",
+  "ERP HRMS Solution": "ইআরপি এইচআরএমএস সলিউশন",
   "ERP Integrated": "ইআরপি ইন্টিগ্রেটেড",
   "ERP Solutions": "ইআরপি সলিউশনস",
   "ERP capabilities": "ইআরপি সক্ষমতা",

@@ -362,7 +362,7 @@ export const gen_9: Dict = {
   "Turn Ideas Into MVPs — Faster.": "আইডিয়া-কে এমভিপি-তে রূপান্তর করুন — আরও দ্রুত।",
   "Turn operational data into answers the business can act on.": "অপারেশনাল ডেটা-কে এমন উত্তর-এ রূপান্তর করুন যার উপর বিজনেস কাজ করতে পারে।",
   "Turn outdated applications and manual processes into intelligent, automated workflows with AI, RPA, and cloud.": "এআই, আরপিএ ও ক্লাউড দিয়ে পুরনো অ্যাপ্লিকেশন ও ম্যানুয়াল প্রসেস-কে স্মার্ট, অটোমেটেড ওয়ার্কফ্লো-এ পরিণত করুন।",
-  "Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.": "আপনার ক্লায়েন্ট সম্পর্ক ও দক্ষতাকে নতুন সুযোগে রূপান্তর করুন। আমাদের পার্টনার প্রোগ্রাম আপনাকে ইঞ্জিনিয়ারিং পেশি, ক্রেডিবিলিটি ও সাপোর্ট দেয় এন্টারপ্রাইজ-গ্রেড টেকনোলজি একসাথে ডেলিভার করার জন্য।",
+  "Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.": "আপনার ক্লায়েন্ট সম্পর্ক ও দক্ষতাকে নতুন সুযোগে রূপান্তর করুন। আমাদের পার্টনার প্রোগ্রাম আপনাকে এন্টারপ্রাইজ-গ্রেড টেকনোলজি একসাথে ডেলিভার করার জন্য প্রয়োজনীয় প্রকৌশল সক্ষমতা, আস্থা ও সাপোর্ট দেয়।",
   "Turning Blockchain Complexity into Business Capability": "ব্লকচেইন জটিলতাকে বিজনেস সক্ষমতায় রূপান্তর",
   "Turning an idea into a product?": "একটি আইডিয়া-কে প্রোডাক্ট-এ রূপান্তর করছেন?",
   "Twitter X": "Twitter X",
