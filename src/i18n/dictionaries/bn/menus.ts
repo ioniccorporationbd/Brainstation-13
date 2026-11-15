@@ -11,7 +11,7 @@ export const menus: Dict = {
   "Data Engineering": "ডেটা ইঞ্জিনিয়ারিং",
   "Data Migration": "ডেটা মাইগ্রেশন",
   "Business Intelligence": "বিজনেস ইন্টেলিজেন্স",
-  "3D Modeling Services": "3ডি মডেলিং সার্ভিস",
+  "3D Modeling Services": "৩ডি মডেলিং সার্ভিস",
   "Game Studio": "গেম স্টুডিও",
   "QA Testing & Automation": "কিউএ টেস্টিং ও অটোমেশন",
   "LMS Development": "এলএমএস ডেভেলপমেন্ট",
