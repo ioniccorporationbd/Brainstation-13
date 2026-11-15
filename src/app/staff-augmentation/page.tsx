@@ -1,7 +1,6 @@
 import React from 'react';
 import { getTranslator } from "@/i18n/server";
 import StaffAugmentationHeroSection from './StaffAugmentationHeroSection';
-import CompanyStatsAwardsSection from './CompanyStatsAwardsSection';
 import BorderlessTechProfessionalsSection from './BorderlessTechProfessionalsSection';
 import BtpDifferentSection from './BtpDifferentSection';
 import RiskFreeTimelineSection from './RiskFreeTimelineSection';
@@ -17,7 +16,6 @@ const page = () => {
     return (
         <div>
             <StaffAugmentationHeroSection/>
-            <CompanyStatsAwardsSection/>
             <BorderlessTechProfessionalsSection/>
             <BtpDifferentSection/>
             <RiskFreeTimelineSection/>
