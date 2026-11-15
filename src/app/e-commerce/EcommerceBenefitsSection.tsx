@@ -31,7 +31,7 @@ export default async function EcommerceBenefitsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[900px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why it works")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Built for traffic, not just launch day")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Built for traffic, not just launch day")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -44,11 +44,11 @@ export default async function EcommerceBenefitsSection() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <ArrowUpRight size={18} />
                 </span>
-                <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] text-black">
+                <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] text-black md:text-[16px] text-balance">
                   {t(benefit.title)}
                 </h3>
               </div>
-              <p className="mt-3 text-[13.5px] leading-[1.65] text-[#52525B]">{t(benefit.description)}</p>
+              <p className="mt-3 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(benefit.description)}</p>
             </article>
           ))}
         </div>

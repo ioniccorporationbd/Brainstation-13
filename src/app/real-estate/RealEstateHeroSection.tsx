@@ -16,9 +16,9 @@ export default async function RealEstateHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Industry · Real Estate")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Real estate technology built for Industry 4.0")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Real estate technology built for Industry 4.0")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("We help real estate companies align their business with modern technology — from process automation to reality technologies that open new avenues of engagement.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We help real estate companies align their business with modern technology — from process automation to reality technologies that open new avenues of engagement.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link

@@ -25,8 +25,8 @@ export default async function NonProfitCaseStudiesSection() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Delivered for mission-led teams")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("A closer look at how digital systems changed the way a distribution-led organisation runs its people operations.")}</p>
+            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Delivered for mission-led teams")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("A closer look at how digital systems changed the way a distribution-led organisation runs its people operations.")}</p>
           </div>
 
           <Link
@@ -55,11 +55,11 @@ export default async function NonProfitCaseStudiesSection() {
               </p>
             </div>
 
-            <h3 className="mt-4 text-[22px] font-semibold leading-[1.25] text-black md:text-[28px]">
+            <h3 className="mt-4 text-[22px] font-semibold leading-[1.22] text-black md:text-[26px] text-balance">
               {t(caseStudy.title)}
             </h3>
 
-            <p className="mt-4 text-[14.5px] leading-[1.6] text-[#52525B]">
+            <p className="mt-4 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
               {t(caseStudy.description)}
             </p>
 

@@ -76,8 +76,8 @@ export default function FintechSolutionsTabsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our solutions")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Complete financial technology solutions")}</h2>
-          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Our fintech expertise spans digital banking, payments, lending, insurance and cross-border transfers — enterprise-grade platforms that move financial services forward.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Complete financial technology solutions")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our fintech expertise spans digital banking, payments, lending, insurance and cross-border transfers — enterprise-grade platforms that move financial services forward.")}</p>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Fintech solutions")}>
@@ -105,10 +105,10 @@ export default function FintechSolutionsTabsSection() {
         <div className="mt-7 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 md:p-9">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
             <div>
-              <h3 className="text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[32px]">
+              <h3 className="text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-black md:text-[26px] text-balance">
                 {t(activeTab.title)}
               </h3>
-              <p className="mt-4 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+              <p className="mt-4 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                 {t(activeTab.description)}
               </p>
               <Link

@@ -20,7 +20,7 @@ export default async function PharmaCustomerSuccessSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Customer success")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Our customer success stories")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Our customer success stories")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -35,9 +35,9 @@ export default async function PharmaCustomerSuccessSection() {
           <div>
             <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Healthcare professional")}</p>
 
-            <h3 className="mt-3 text-[24px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[32px]">{t("Diabetic retinopathy")}</h3>
+            <h3 className="mt-3 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-black md:text-[26px] text-balance">{t("Diabetic retinopathy")}</h3>
 
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Our app aims to identify this disease by scanning human retinopathy levels using just a smartphone. This can be a convenient solution for patients and doctors. With quick and accurate retinopathy level measurements, doctors can understand their patients’ conditions and consult them according to their stage of the disease.")}</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our app aims to identify this disease by scanning human retinopathy levels using just a smartphone. This can be a convenient solution for patients and doctors. With quick and accurate retinopathy level measurements, doctors can understand their patients’ conditions and consult them according to their stage of the disease.")}</p>
 
             <Link
               href="/case-studies"
@@ -49,7 +49,7 @@ export default async function PharmaCustomerSuccessSection() {
               {successPoints.map((point) => (
                 <div key={point.label} className="rounded-xl border border-[#ececec] bg-[#fafafa] p-7">
                   <p className="text-[15px] md:text-[16px] font-bold text-black">{t(point.label)}</p>
-                  <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#52525B]">{t(point.text)}</p>
+                  <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(point.text)}</p>
                 </div>
               ))}
             </div>
