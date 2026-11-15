@@ -41,8 +41,8 @@ export default async function FintechDeliveryModelsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Flexible delivery models")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("From go-to-market to fully customized")}</h2>
-          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Choose a ready-to-launch fintech platform or build a fully tailored solution with enterprise-grade architecture, ownership and scalability.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("From go-to-market to fully customized")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Choose a ready-to-launch fintech platform or build a fully tailored solution with enterprise-grade architecture, ownership and scalability.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,8 +59,8 @@ export default async function FintechDeliveryModelsSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black">{t(card.title)}</h3>
-              <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">{t(card.description)}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t(card.title)}</h3>
+              <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(card.description)}</p>
             </article>
           ))}
         </div>

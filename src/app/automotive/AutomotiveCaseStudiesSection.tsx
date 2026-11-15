@@ -67,8 +67,8 @@ export default async function AutomotiveCaseStudiesSection() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Automotive work in production")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Selected automotive engagements across mobility apps, service platforms and fleet operations.")}</p>
+            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Automotive work in production")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Selected automotive engagements across mobility apps, service platforms and fleet operations.")}</p>
           </div>
 
           <Link
@@ -104,11 +104,11 @@ export default async function AutomotiveCaseStudiesSection() {
                   </p>
                 </div>
 
-                <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] text-black md:text-[23px]">
+                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">
                   {t(item.title)}
                 </h3>
 
-                <p className="mt-3 text-[14px] leading-[1.6] text-[#52525B]">
+                <p className="mt-3 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.description)}
                 </p>
 
