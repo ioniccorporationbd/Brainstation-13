@@ -236,7 +236,7 @@ export const gen_7: Dict = {
   "Product features": "প্রোডাক্ট ফিচার",
   "Product modelling": "প্রোডাক্ট মডেলিং",
   "Product modules and adjacent Adobe solutions our AEM work connects to.": "প্রোডাক্ট মডিউল এবং আমাদের AEM কাজ যেসব সংলগ্ন Adobe সলিউশন-এর সাথে সংযুক্ত হয়।",
-  "Product strategists, UX designers, and engineers align your vision with market realities and technical feasibility.": "প্রোডাক্ট কৌশলবিদ, UX ডিজাইনার ও ইঞ্জিনিয়ার আপনার ভিশন-কে মার্কেট রিয়েলিটি ও টেকনিক্যাল ফিজিবিলিটি-র সাথে সামঞ্জস্যপূর্ণ করেন।",
+  "Product strategists, UX designers, and engineers align your vision with market realities and technical feasibility.": "প্রোডাক্ট কৌশলবিদ, ইউএক্স ডিজাইনার ও ইঞ্জিনিয়ার আপনার ভিশন-কে মার্কেট রিয়েলিটি ও টেকনিক্যাল ফিজিবিলিটি-র সাথে সামঞ্জস্যপূর্ণ করেন।",
   "Product team building an MVP prototype": "এমভিপি প্রোটোটাইপ তৈরি করছে একটি প্রোডাক্ট টিম",
   "Product · AI agents": "প্রোডাক্ট · এআই এজেন্ট",
   "Product · Assessment": "প্রোডাক্ট · অ্যাসেসমেন্ট",

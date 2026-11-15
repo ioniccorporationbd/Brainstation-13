@@ -32,7 +32,7 @@ export const gen_6: Dict = {
   "Lush green forest canopy representing environmental sustainability": "পরিবেশগত সাসটেইনেবিলিটি-এর প্রতীক সবুজ বনভূমির ক্যানোপি",
   "MSFA Core Engine": "MSFA কোর ইঞ্জিন",
   "MSFA Platform": "MSFA প্ল্যাটফর্ম",
-  "MVP Advantage": "MVP সুবিধা",
+  "MVP Advantage": "এমভিপি সুবিধা",
   "MVP Foundation": "MVP ফাউন্ডেশন",
   "MVP delivery": "এমভিপি ডেলিভারি",
   "MVP design and scoping": "এমভিপি ডিজাইন ও স্কোপিং",
