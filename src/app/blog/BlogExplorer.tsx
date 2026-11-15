@@ -46,7 +46,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+          className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 max-sm:min-h-[44px] text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
         >
           <ArrowLeft size={15} />{t("All articles")}</button>
 
@@ -68,16 +68,16 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
         </p>
         <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[14.5px] font-semibold text-white transition-colors hover:bg-[#a71920]"
+            className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-6 py-3.5 text-[14.5px] font-semibold text-white transition-colors hover:bg-[#a71920]"
           >{t("Request the full article")}<ArrowRight size={16} />
           </a>
           <button
             type="button"
             onClick={onBack}
-            className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[14.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+            className="inline-flex items-center justify-center sm:shrink-0 rounded-lg border border-[#ececec] bg-white px-6 py-3.5 text-[14.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
           >{t("Back to the blog")}</button>
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function BlogExplorer({
                       setCategory(item);
                       setPage(1);
                     }}
-                    className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition-colors ${
+                    className={`rounded-full border px-4 py-2 max-sm:min-h-[44px] max-sm:inline-flex max-sm:items-center max-sm:justify-center text-[13px] font-semibold transition-colors ${
                       active
                         ? "border-[#c91f28] bg-[#c91f28] text-white"
                         : "border-[#ececec] bg-white text-[#3f434a] hover:border-[#c91f28]/50 hover:text-[#c91f28]"
@@ -265,7 +265,7 @@ export default function BlogExplorer({
               type="button"
               onClick={() => setPage(Math.max(1, safePage - 1))}
               disabled={safePage === 1}
-              className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 max-sm:min-h-[44px] text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ArrowLeft size={15} />{t("Previous")}</button>
             <div className="flex flex-wrap items-center gap-2">
@@ -276,7 +276,7 @@ export default function BlogExplorer({
                     type="button"
                     aria-current={item === safePage ? "page" : undefined}
                     onClick={() => setPage(item)}
-                    className={`h-9 w-9 rounded-md border text-[13.5px] font-semibold transition-colors ${
+                    className={`h-9 w-9 max-sm:h-11 max-sm:w-11 rounded-md border text-[13.5px] font-semibold transition-colors ${
                       item === safePage
                         ? "border-[#c91f28] bg-[#c91f28] text-white"
                         : "border-[#ececec] bg-white text-[#3f434a] hover:border-[#c91f28]/50 hover:text-[#c91f28]"
@@ -291,7 +291,7 @@ export default function BlogExplorer({
               type="button"
               onClick={() => setPage(Math.min(totalPages, safePage + 1))}
               disabled={safePage === totalPages}
-              className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 max-sm:min-h-[44px] text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
             >{t("Next")}<ArrowRight size={15} />
             </button>
           </nav>

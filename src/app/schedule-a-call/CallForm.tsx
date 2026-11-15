@@ -275,12 +275,12 @@ export default function CallForm() {
         </p>
       ) : null}
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className="text-[12.5px] leading-[1.6] text-[#6b6f76]">{t("Requests are queued on our server. A person confirms the time by email — nothing is booked automatically.")}</p>
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "sending" ? (
             <>

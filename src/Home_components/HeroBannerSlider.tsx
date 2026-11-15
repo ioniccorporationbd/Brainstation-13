@@ -112,7 +112,7 @@ export default function HeroBannerSlider() {
 
                   <Link
                     href={slide.buttonHref}
-                    className="mt-8 inline-flex h-[52px] sm:mt-12 w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
+                    className="mt-8 inline-flex h-[52px] sm:mt-12 w-fit items-center justify-center rounded-full bg-primary px-[32px] max-sm:h-auto max-sm:min-h-[48px] max-sm:px-5 max-sm:py-3 max-sm:text-[14px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
                   >
                     {t(slide.buttonText)}
                   </Link>

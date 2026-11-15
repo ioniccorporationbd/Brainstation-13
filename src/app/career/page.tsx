@@ -118,15 +118,15 @@ export default async function CareerPage() {
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Careers")}</span>
             <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Build software that matters")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("We’re always looking for curious, driven people who want to solve hard problems for real clients — with a team that ships enterprise-grade technology.")}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#open-roles"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
+                className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
               >{t("View open roles")}<ArrowRight size={17} />
               </a>
               <a
                 href="#apply"
-                className="inline-flex items-center justify-center rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+                className="inline-flex items-center justify-center sm:shrink-0 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
               >{t("Apply now")}</a>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default async function CareerPage() {
                 </div>
                 <a
                   href="#apply"
-                  className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
+                  className="inline-flex w-fit items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 max-sm:min-h-[44px] text-[13.5px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
                 >{t("Apply now")}<ArrowRight size={15} strokeWidth={2.2} />
                 </a>
               </div>
@@ -258,7 +258,7 @@ export default async function CareerPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920] sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920] sm:w-auto"
               >{t("Contact us")}<ArrowRight size={17} />
               </Link>
             </div>
