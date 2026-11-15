@@ -71,7 +71,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
   const { t } = useTranslation();
   if (mobile) {
     return (
-      <div className="space-y-[24px]">
+      <div className="space-y-5">
         <MobileGroup title={t("Education")} links={education} closeMenu={closeMenu} />
         <MobileGroup title={t("LMS")} links={lms} closeMenu={closeMenu} disabled />
         <MobileGroup title={t("AI Solution")} links={aiSolution} closeMenu={closeMenu} disabled />
@@ -219,20 +219,21 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
   const { t } = useTranslation();
   return (
     <div>
-      <p className={`mb-[12px] text-[15px] font-semibold ${disabled ? "text-[#b6bdc8]" : "text-primary"}`}>{t(title)}</p>
-      <div className="space-y-[10px]">
+      <p className={`mb-1.5 px-2 text-[12.5px] font-semibold uppercase tracking-[0.06em] ${disabled ? "text-[#a7b0bc]" : "text-[#C91F28]"}`}>{t(title)}</p>
+      <div className="flex flex-col">
         {links.map((item) => {
           const Icon = item.icon;
           const isPlaceholder = item.placeholder || !item.href;
           const external = item.newTab;
+          const baseRow = "flex min-h-[42px] items-center gap-3 rounded-lg px-2 py-2 text-[15px] font-medium";
           const inner = (
             <>
-              <span className={`flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] ${isPlaceholder ? "bg-[#eef1f5] text-[#a7b0bc]" : "bg-[#fdeaea] text-primary"}`}>
-                <Icon size={14} strokeWidth={1.9} />
+              <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${isPlaceholder ? "bg-[#eef1f5] text-[#a7b0bc]" : "bg-[#fdf2f2] text-[#C91F28] group-hover:bg-[#fbe3e5]"}`}>
+                <Icon size={15} strokeWidth={1.9} aria-hidden="true" />
               </span>
-              <span className="flex items-center gap-[6px]">
+              <span className="flex min-w-0 flex-wrap items-center gap-[6px] break-words">
                 {t(item.label)}
-                {external ? <ExternalLink size={12} strokeWidth={2.2} className="text-[#9aa3af]" /> : null}
+                {external ? <ExternalLink size={12} strokeWidth={2.2} className="text-[#9aa3af]" aria-hidden="true" /> : null}
                 {item.note ? <span className="rounded-full bg-[#eef1f5] px-[7px] py-[1px] text-[10px] font-semibold uppercase tracking-[0.04em] text-[#8a94a3]">{t(item.note)}</span> : null}
               </span>
             </>
@@ -245,7 +246,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
                 href="#"
                 aria-disabled="true"
                 onClick={(e) => { e.preventDefault(); }}
-                className="flex cursor-not-allowed items-center gap-[10px] text-[15px] font-medium text-[#374151] opacity-60"
+                className={`${baseRow} cursor-not-allowed text-[#374151] opacity-60`}
               >
                 {inner}
               </a>
@@ -254,7 +255,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
 
           if (isPlaceholder) {
             return (
-              <div key={item.label} className="flex cursor-default items-center gap-[10px] text-[15px] font-medium text-[#9aa3af]">
+              <div key={item.label} className={`${baseRow} cursor-default text-[#9aa3af]`}>
                 {inner}
               </div>
             );
@@ -267,7 +268,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
               onClick={closeMenu}
               target={external ? "_blank" : undefined}
               rel={external ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-primary"
+              className={`${baseRow} group text-[#2b2b33] transition-colors duration-200 hover:bg-white hover:text-[#C91F28] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40`}
             >
               {inner}
             </Link>

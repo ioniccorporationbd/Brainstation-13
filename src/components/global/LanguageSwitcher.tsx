@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ variant = "desktop" }: Props) {
         onClick={() => setLocale(next)}
         aria-label={aria}
         lang={next === "en" ? "en" : "bn-BD"}
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-4 text-[16px] font-bold text-white shadow-none transition hover:border-black hover:bg-black hover:text-white"
+        className="flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-[#e3e3e3] bg-white px-7 py-3.5 text-[16px] font-semibold text-[#141418] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40 focus-visible:ring-offset-2"
       >
         <Globe size={18} aria-hidden="true" />
         {label}

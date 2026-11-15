@@ -195,9 +195,11 @@ html[lang="bn-BD"] .bn-links button {
 html[lang="bn-BD"] .bn-cta {
   font-weight: 700;
 }
+/* White drawer: Bangla labels keep parity with the Latin 500/600 weights
+   instead of the old heavy 700 used on the red panel. */
 html[lang="bn-BD"] .bn-drawer a,
 html[lang="bn-BD"] .bn-drawer button {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 ::selection {

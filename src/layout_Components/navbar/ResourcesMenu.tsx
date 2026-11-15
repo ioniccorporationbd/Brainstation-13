@@ -57,7 +57,7 @@ export default function ResourcesMenu({ closeMenu, mobile = false }: Props) {
   const { t } = useTranslation();
   if (mobile) {
     return (
-      <div className="space-y-[24px]">
+      <div className="space-y-5">
         <MobileGroup title={t("Company")} links={companyLinks} closeMenu={closeMenu} />
         <MobileGroup title={t("Resources")} links={resourceLinks} closeMenu={closeMenu} />
         <MobileGroup title={t("Careers & Contact")} links={connectLinks} closeMenu={closeMenu} />
@@ -137,16 +137,21 @@ function MobileGroup({ title, links, closeMenu }: { title: string; links: MenuLi
   const { t } = useTranslation();
   return (
     <div>
-      <p className="mb-[12px] text-[15px] font-semibold text-primary">{t(title)}</p>
-      <div className="space-y-[10px]">
+      <p className="mb-1.5 px-2 text-[12.5px] font-semibold uppercase tracking-[0.06em] text-[#C91F28]">{t(title)}</p>
+      <div className="flex flex-col">
         {links.map((item) => {
           const Icon = item.icon;
           return (
-            <Link key={item.href} href={item.href} onClick={closeMenu} className="flex items-center gap-[10px] text-[15px] font-medium text-[#374151] transition-colors hover:text-primary">
-              <span className="flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-[6px] bg-[#fdeaea] text-primary">
-                <Icon size={14} strokeWidth={1.9} />
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMenu}
+              className="group flex min-h-[42px] items-center gap-3 rounded-lg px-2 py-2 text-[15px] font-medium text-[#2b2b33] transition-colors duration-200 hover:bg-white hover:text-[#C91F28] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
+            >
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdf2f2] text-[#C91F28] transition-colors duration-200 group-hover:bg-[#fbe3e5]">
+                <Icon size={15} strokeWidth={1.9} aria-hidden="true" />
               </span>
-              <span>{t(item.label)}</span>
+              <span className="min-w-0 break-words">{t(item.label)}</span>
             </Link>
           );
         })}

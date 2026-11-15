@@ -36,6 +36,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const asideRef = useRef<HTMLElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
   const { t } = useTranslation();
 
@@ -65,6 +68,52 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  /* Mobile drawer behaviour: lock focus inside the open drawer, close it on
+     Escape, and return focus to the hamburger on close. */
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const triggerEl = triggerRef.current;
+    const raf = window.requestAnimationFrame(() => closeBtnRef.current?.focus());
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const root = asideRef.current;
+      if (!root) return;
+      const nodes = Array.from(
+        root.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => el.tabIndex !== -1 && el.offsetParent !== null);
+      if (nodes.length === 0) return;
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.cancelAnimationFrame(raf);
+      document.removeEventListener("keydown", onKeyDown);
+      const target = triggerEl;
+      if (target && target.offsetParent !== null) {
+        target.focus({ preventScroll: true });
+      } else if (previouslyFocused && document.contains(previouslyFocused)) {
+        previouslyFocused.focus({ preventScroll: true });
+      }
     };
   }, [mobileOpen]);
 
@@ -215,8 +264,11 @@ export default function Navbar() {
           </div>
 
           <button
+            ref={triggerRef}
             type="button"
             aria-label={t("Toggle menu")}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-drawer"
             onClick={() => {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
@@ -236,99 +288,147 @@ export default function Navbar() {
       </header>
 
       <div
+        aria-hidden="true"
         onClick={closeAll}
-        className={`fixed inset-0 z-[60] bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 min-[1200px]:hidden ${
+        className={`fixed inset-0 z-[60] bg-black/45 transition-opacity duration-300 motion-reduce:transition-none min-[1200px]:hidden ${
           mobileOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
 
       <aside
-        className={`bn-drawer fixed right-0 top-0 z-[70] h-[100dvh] w-[340px] max-w-[88vw] bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] px-4 py-4 transition-transform duration-300 ease-out min-[768px]:px-5 min-[768px]:py-5 min-[1200px]:hidden ${
+        ref={asideRef}
+        id="mobile-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t("Main menu")}
+        aria-hidden={!mobileOpen}
+        inert={!mobileOpen}
+        className={`bn-drawer fixed right-0 top-0 z-[70] flex h-[100dvh] w-[360px] max-w-[92vw] flex-col bg-white shadow-[-24px_0_60px_rgba(15,23,42,0.22)] transition-transform duration-[320ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none min-[1200px]:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="mb-5 flex shrink-0 items-center justify-between min-[768px]:mb-6">
-          <Link href="/" onClick={handleLogoClick} className="flex min-w-0 items-center gap-2" aria-label={t("Magnetic Solution Limited — Home")}>
-            <span className="flex h-[48px] items-center justify-center rounded-[10px] bg-white px-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.28)]">
-              <Image
-                src="/images/brand/magnetic-logo.png"
-                alt="Magnetic Solution Ltd"
-                width={190}
-                height={198}
-                priority
-                className="h-full w-auto object-contain"
-              />
-            </span>
+        <div className="flex h-[68px] shrink-0 items-center justify-between gap-3 border-b border-[#efefef] px-5 min-[768px]:h-[76px] min-[768px]:px-6">
+          <Link
+            href="/"
+            onClick={handleLogoClick}
+            className="flex min-w-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
+            aria-label={t("Magnetic Solution Limited — Home")}
+          >
+            <Image
+              src="/images/brand/magnetic-logo.png"
+              alt="Magnetic Solution Ltd"
+              width={190}
+              height={198}
+              priority
+              className="h-[36px] w-auto object-contain min-[768px]:h-[40px]"
+            />
           </Link>
 
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={closeAll}
             aria-label={t("Close menu")}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-[#C91F28]"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e6e6] text-[#141418] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
           >
-            <X size={24} />
+            <X size={20} aria-hidden="true" />
           </button>
         </div>
 
-        <div className="h-[calc(100dvh-92px)] overflow-y-auto overscroll-contain pr-1 min-[768px]:h-[calc(100dvh-104px)]">
-          <nav className="flex flex-col gap-2">
-            {navItems.map((item) =>
-              item.hasMegaMenu ? (
-                <div key={item.key} className="overflow-hidden rounded-2xl border border-white/10">
-                  <button
-                    type="button"
-                    onClick={() => toggleMenu(item.key)}
-                    className={`relative flex w-full items-center justify-between px-3.5 py-3.5 text-left text-[16px] font-semibold text-white transition hover:bg-white/10 ${
-                      isRouteActive(item)
-                        ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
-                        : ""
+        <div className="flex-1 overflow-y-auto overscroll-contain px-4 pb-7 pt-3 min-[768px]:px-5">
+          <nav aria-label={t("Mobile navigation")} className="flex flex-col gap-1">
+            {navItems.map((item) => {
+              const routeActive = isRouteActive(item);
+              const open = activeMenu === item.key;
+
+              if (!item.hasMegaMenu) {
+                return (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    onClick={closeAll}
+                    aria-current={routeActive ? "page" : undefined}
+                    className={`flex min-h-[52px] items-center rounded-xl px-4 py-3 text-[16px] font-medium transition-colors duration-200 hover:bg-[#fdf2f2] hover:text-[#C91F28] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40 ${
+                      routeActive ? "bg-[#fdf2f2] text-[#C91F28]" : "text-[#141418]"
                     }`}
                   >
-                    {t(item.label)}
+                    <span className="min-w-0 break-words">{t(item.label)}</span>
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={item.key}>
+                  <button
+                    type="button"
+                    id={`drawer-trigger-${item.key}`}
+                    aria-expanded={open}
+                    aria-controls={`drawer-panel-${item.key}`}
+                    onClick={() => {
+                      const opening = activeMenu !== item.key;
+                      toggleMenu(item.key);
+                      if (opening) {
+                        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                        window.requestAnimationFrame(() => {
+                          document
+                            .getElementById(`drawer-trigger-${item.key}`)
+                            ?.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" });
+                        });
+                      }
+                    }}
+                    className={`flex min-h-[52px] w-full items-center justify-between gap-3 rounded-xl px-4 py-3 text-left text-[16px] font-medium transition-colors duration-200 hover:bg-[#fdf2f2] hover:text-[#C91F28] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40 ${
+                      open || routeActive ? "bg-[#fdf2f2] text-[#C91F28]" : "text-[#141418]"
+                    }`}
+                  >
+                    <span className="min-w-0 break-words">{t(item.label)}</span>
                     <ChevronDown
-                      size={19}
-                      className={`transition-transform duration-300 ${
-                        activeMenu === item.key ? "rotate-180 text-white/80" : ""
+                      size={18}
+                      aria-hidden="true"
+                      className={`shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
+                        open ? "rotate-180 text-[#C91F28]" : "text-[#9aa0aa]"
                       }`}
                     />
                   </button>
 
-                  {activeMenu === item.key && (
-                    <div className="border-t border-white/10 bg-white px-3 py-4">
-                      {activeMenu === "services" && <ServicesMenu closeMenu={closeAll} mobile />}
-                      {activeMenu === "industries" && <IndustriesMenu closeMenu={closeAll} mobile />}
-                      {activeMenu === "products" && <ProductsMenu closeMenu={closeAll} mobile />}
-                      {activeMenu === "resources" && <ResourcesMenu closeMenu={closeAll} mobile />}
+                  <div
+                    id={`drawer-panel-${item.key}`}
+                    role="region"
+                    aria-labelledby={`drawer-trigger-${item.key}`}
+                    aria-hidden={!open}
+                    inert={!open}
+                    className={`grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
+                      open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div
+                        className={`mb-1 mt-1 rounded-xl border border-[#f0f0f0] bg-[#fafafa] px-3 py-4 transition-opacity duration-300 motion-reduce:transition-none ${
+                          open ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        {item.key === "services" && <ServicesMenu closeMenu={closeAll} mobile />}
+                        {item.key === "industries" && <IndustriesMenu closeMenu={closeAll} mobile />}
+                        {item.key === "products" && <ProductsMenu closeMenu={closeAll} mobile />}
+                        {item.key === "resources" && <ResourcesMenu closeMenu={closeAll} mobile />}
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </div>
-              ) : (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  onClick={closeAll}
-                  className={`relative block rounded-2xl border border-white/10 px-3.5 py-3.5 text-[16px] font-semibold text-white transition hover:bg-white/10 ${
-                    isRouteActive(item)
-                      ? "after:absolute after:bottom-2 after:left-4 after:right-4 after:h-[2px] after:rounded-full after:bg-white"
-                      : ""
-                  }`}
-                >
-                  {t(item.label)}
-                </Link>
-              )
-            )}
+              );
+            })}
           </nav>
 
-          <LanguageSwitcher variant="mobile" />
+          <div className="mt-5 border-t border-[#efefef] pt-5">
+            <LanguageSwitcher variant="mobile" />
 
-          <Link
-            href="/schedule-a-call"
-            onClick={closeAll}
-            className="mt-5 flex w-full justify-center rounded-full bg-white px-7 py-4 text-[16px] font-bold text-black shadow-none transition hover:bg-black hover:text-white"
-          >
-            {t("Schedule a Call")}
-          </Link>
+            <Link
+              href="/schedule-a-call"
+              onClick={closeAll}
+              className="mt-3 flex min-h-[52px] w-full items-center justify-center rounded-full bg-[#C91F28] px-7 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-[#a3131b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40 focus-visible:ring-offset-2"
+            >
+              {t("Schedule a Call")}
+            </Link>
+          </div>
         </div>
       </aside>
     </>
