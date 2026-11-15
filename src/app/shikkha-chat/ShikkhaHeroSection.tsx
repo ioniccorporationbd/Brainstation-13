@@ -22,8 +22,8 @@ export default async function ShikkhaHeroSection() {
   const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
-      <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
-        <div>
+      <div className="mx-auto grid min-w-0 brand-container items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-16">
+        <div className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
             <Sparkles size={14} strokeWidth={2.2} />{t("Product · Education ERP")}</span>
 
@@ -42,15 +42,15 @@ export default async function ShikkhaHeroSection() {
 
           <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Shikkha Chat brings school administration, AI-powered learning, teachers, students, parents and government oversight together in one secure platform — across every class, section and subject.")}</p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/schedule-a-call"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+              className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
             >{t("Request a Demo")}<ArrowRight size={17} />
             </Link>
             <Link
               href="#dashboards"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
+              className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
             >{t("See the dashboards")}</Link>
           </div>
 
@@ -71,7 +71,7 @@ export default async function ShikkhaHeroSection() {
           </ul>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <ShikkhaFrame
             src="/images/shikkha/shikkha-teacher.webp"
             alt={t("Shikkha Chat teacher dashboard")}
