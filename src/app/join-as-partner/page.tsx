@@ -97,12 +97,12 @@ export default async function JoinAsPartnerPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white px-6 pb-16 pt-14 md:pb-20 md:pt-20">
-        <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <section className="bg-white pb-16 pt-14 md:pb-20 md:pt-20">
+        <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Join as partner")}</span>
-            <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Grow with Magnetic Solution Limited")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.")}</p>
+            <h1 className="mt-6 text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Grow with Magnetic Solution Limited")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#apply"
@@ -125,25 +125,25 @@ export default async function JoinAsPartnerPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-[#fafafa] py-16 md:py-20">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why partner")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("A partnership built around your growth")}</h2>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("A partnership built around your growth")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <div
                   key={benefit.title}
-                  className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40"
+                  className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <Icon size={21} strokeWidth={1.9} />
                   </span>
-                  <h3 className="mt-4 text-[16.5px] font-bold leading-[1.3] text-black">
+                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black">
                     {t(benefit.title)}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">
+                  <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">
                     {t(benefit.description)}
                   </p>
                 </div>
@@ -155,12 +155,12 @@ export default async function JoinAsPartnerPage() {
 
       <section
         id="models"
-        className="scroll-mt-24 bg-white px-6 py-16 md:py-20"
+        className="scroll-mt-24 bg-white py-16 md:py-20"
       >
-        <div className="mx-auto max-w-[1240px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Programme")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Partnership models")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Choose the model that matches how you work with clients today — and grow into deeper collaboration over time.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Partnership models")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Choose the model that matches how you work with clients today — and grow into deeper collaboration over time.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {models.map((model) => (
               <article
@@ -172,15 +172,15 @@ export default async function JoinAsPartnerPage() {
                     <Handshake size={19} strokeWidth={1.9} />
                   </span>
                   <div>
-                    <h3 className="text-[17px] font-bold text-black">
+                    <h3 className="text-[18px] md:text-[20px] font-semibold text-black">
                       {t(model.name)}
                     </h3>
-                    <p className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#6b6f76]">
+                    <p className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#52525B]">
                       {t(model.audience)}
                     </p>
                   </div>
                 </div>
-                <p className="mt-4 text-[14.5px] leading-[1.7] text-[#55585e]">
+                <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
                   {t(model.text)}
                 </p>
                 <a
@@ -194,23 +194,23 @@ export default async function JoinAsPartnerPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-[#fafafa] py-16 md:py-20">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How it works")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Get started in four steps")}</h2>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Get started in four steps")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="rounded-xl border border-[#ececec] bg-white p-6"
+                className="rounded-xl border border-[#ececec] bg-white p-7"
               >
                 <p className="text-[30px] font-bold leading-none tracking-[-0.04em] text-[#c91f28]">
                   {t(item.step)}
                 </p>
-                <h3 className="mt-4 text-[16.5px] font-bold text-black">
+                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold text-black">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2 text-[14px] leading-[1.65] text-[#55585e]">
+                <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">
                   {t(item.text)}
                 </p>
               </div>
@@ -219,25 +219,25 @@ export default async function JoinAsPartnerPage() {
         </div>
       </section>
 
-      <section id="apply" className="scroll-mt-24 bg-white px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-[1240px] items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <section id="apply" className="scroll-mt-24 bg-white py-16 md:py-20">
+        <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Apply")}</p>
-            <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Start the conversation")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Tell us about your business and the kind of partnership you have in mind. Our partnerships team reviews every application.")}</p>
-            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[13.5px] leading-[1.7] text-[#55585e]">{t("We don’t publish partner logos or client names we cannot verify — every partnership on this site is one we can stand behind.")}</p>
+            <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Start the conversation")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Tell us about your business and the kind of partnership you have in mind. Our partnerships team reviews every application.")}</p>
+            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[13.5px] leading-[1.6] text-[#52525B]">{t("We don’t publish partner logos or client names we cannot verify — every partnership on this site is one we can stand behind.")}</p>
           </div>
           <PartnerForm models={models.map((model) => model.name)} />
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-20 md:pb-24">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white pb-20 md:pb-24">
+        <div className="mx-auto brand-container">
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Prefer to talk it through first?")}</h2>
-                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Book a short call and we will walk through fit, expectations and the commercial model.")}</p>
+                <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Prefer to talk it through first?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Book a short call and we will walk through fit, expectations and the commercial model.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Link
