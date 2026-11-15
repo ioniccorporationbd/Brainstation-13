@@ -121,9 +121,9 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("The Core Ecosystem")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("The Core Ecosystem")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
@@ -179,7 +179,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                   <div>
                     <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Active Module")}</p>
 
-                    <h3 className="mt-1.5 text-[20px] font-semibold leading-tight tracking-[-0.02em] text-[#000000] md:text-[24px]">
+                    <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-1.5 font-semibold tracking-[-0.02em] text-[#000000] text-balance">
                       {t(activeItem.title)}
                     </h3>
                   </div>
@@ -200,12 +200,12 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                   ].map((meta) => (
                     <div
                       key={meta.label}
-                      className="border border-[#ececec] px-2.5 py-2"
+                      className="border border-[#ececec] px-1 py-2 sm:px-2.5"
                     >
-                      <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#8a8a8a]">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.06em] text-[#8a8a8a] sm:text-[10px] sm:tracking-[0.1em]">
                         {t(meta.label)}
                       </p>
-                      <p className="mt-1 text-[13px] font-bold text-[#000000]">
+                      <p className="mt-1 text-[11px] font-bold text-[#000000] sm:text-[13px]">
                         {t(meta.value)}
                       </p>
                     </div>
