@@ -27,18 +27,18 @@ const benefits = [
 export default async function EducationBenefitsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="max-w-[900px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why it works")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Platforms learners actually finish")}</h2>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Platforms learners actually finish")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="group flex h-full flex-col justify-between rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group flex h-full flex-col justify-between rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <div>
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
@@ -48,7 +48,7 @@ export default async function EducationBenefitsSection() {
                   {t(benefit.title)}
                 </h3>
               </div>
-              <p className="mt-3 text-[13.5px] leading-[1.65] text-[#55585e]">{t(benefit.description)}</p>
+              <p className="mt-3 text-[13.5px] leading-[1.65] text-[#52525B]">{t(benefit.description)}</p>
             </article>
           ))}
         </div>

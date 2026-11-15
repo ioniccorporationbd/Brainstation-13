@@ -21,13 +21,13 @@ const caseStudy = {
 export default async function SoftwareItesCaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Software work in production")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Check out our case studies that show how innovative solutions transformed businesses.")}</p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Software work in production")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Check out our case studies that show how innovative solutions transformed businesses.")}</p>
           </div>
 
           <Link
@@ -60,7 +60,7 @@ export default async function SoftwareItesCaseStudiesSection() {
               {t(caseStudy.title)}
             </h3>
 
-            <p className="mt-4 text-[14.5px] leading-[1.75] text-[#55585e]">
+            <p className="mt-4 text-[14.5px] leading-[1.6] text-[#52525B]">
               {t(caseStudy.description)}
             </p>
 
