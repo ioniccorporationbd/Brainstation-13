@@ -97,10 +97,10 @@ export default function ContactForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={28} strokeWidth={1.9} />
         </span>
-        <h3 className="mt-5 text-[22px] font-semibold tracking-[-0.02em] text-black">{t("Message received")}</h3>
-        <p className="mt-3 max-w-[420px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your message has been recorded on our server with reference")}{" "}
+        <h3 className="mt-5 text-[22px] md:text-[26px] font-semibold leading-[1.3] tracking-[-0.02em] text-black text-balance">{t("Message received")}</h3>
+        <p className="mt-3 max-w-[420px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your message has been recorded on our server with reference")}{" "}
           <strong className="break-all text-black">{reference || "—"}</strong>{" "}{t("and is waiting for the team.")}</p>
-        <p className="mt-3 max-w-[420px] text-[12.5px] leading-[1.6] text-[#52525B]">{t("No email is sent automatically because a public mailbox is not configured for this site yet — the reference above is proof the submission was stored.")}</p>
+        <p className="mt-3 max-w-[420px] text-[13px] leading-[1.6] text-[#52525B] text-pretty">{t("No email is sent automatically because a public mailbox is not configured for this site yet — the reference above is proof the submission was stored.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -281,7 +281,7 @@ export default function ContactForm() {
           </>
         )}
       </button>
-      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#52525B]">{t("Your message is stored on our server and routed to the right team — we reply within one business day.")}</p>
+      <p className="mt-3 text-[13px] leading-[1.6] text-[#52525B] text-pretty">{t("Your message is stored on our server and routed to the right team — we reply within one business day.")}</p>
     </form>
   );
 }

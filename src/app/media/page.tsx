@@ -80,9 +80,9 @@ export default async function MediaPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Media")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Media, press and brand resources")}</h1>
+            <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Media, press and brand resources")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Announcements, company information and assets for editorial use. For interviews, commentary or a press kit, our communications team responds from a single contact point.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Announcements, company information and assets for editorial use. For interviews, commentary or a press kit, our communications team responds from a single contact point.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -111,8 +111,8 @@ export default async function MediaPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Media resources")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("What we can provide, and how to ask for it")}</h2>
-          <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Requests are handled editorially rather than through a marketing funnel — you get a direct answer, not a brochure.")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What we can provide, and how to ask for it")}</h2>
+          <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Requests are handled editorially rather than through a marketing funnel — you get a direct answer, not a brochure.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {resources.map((item) => (
@@ -124,10 +124,10 @@ export default async function MediaPage() {
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
                 <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.body)}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default async function MediaPage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Topics")}</p>
-              <h2 className="mt-3 max-w-[640px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Subjects our team can speak to")}</h2>
+              <h2 className="mt-3 max-w-[640px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Subjects our team can speak to")}</h2>
             </div>
             <span className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-[#52525B]">
               <Sparkles size={16} className="text-[#c91f28]" />{t("Briefings arranged on request")}</span>
@@ -155,10 +155,10 @@ export default async function MediaPage() {
                 key={topic.title}
                 className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
-                <h3 className="text-[15.5px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="text-[15.5px] md:text-[16px] font-semibold leading-[1.35] tracking-[-0.01em] text-black text-balance">
                   {t(topic.title)}
                 </h3>
-                <p className="mt-2.5 text-[14px] leading-[1.65] text-[#52525B]">
+                <p className="mt-2.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(topic.body)}
                 </p>
               </article>
@@ -175,8 +175,8 @@ export default async function MediaPage() {
               <ShieldCheck size={21} strokeWidth={1.9} />
             </span>
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-black">{t("No unverified coverage")}</h3>
-              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("We do not publish press coverage, award announcements or certification news that cannot be confirmed against the original source. Published articles and mentions are supplied on request with their original links.")}</p>
+              <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("No unverified coverage")}</h3>
+              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We do not publish press coverage, award announcements or certification news that cannot be confirmed against the original source. Published articles and mentions are supplied on request with their original links.")}</p>
             </div>
           </div>
 
@@ -185,8 +185,8 @@ export default async function MediaPage() {
               <FileText size={21} strokeWidth={1.9} />
             </span>
             <div>
-              <h3 className="text-[18px] md:text-[20px] font-semibold text-black">{t("Press kit on request")}</h3>
-              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Company description, logo files and product imagery are sent as a single package when you tell us the publication, the story angle and your deadline.")}</p>
+              <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Press kit on request")}</h3>
+              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Company description, logo files and product imagery are sent as a single package when you tell us the publication, the story angle and your deadline.")}</p>
               <Link
                 href="/contact"
                 className="mt-4 inline-flex items-center gap-2 text-[14.5px] font-bold text-[#c91f28] transition-colors hover:text-[#a71920]"
@@ -204,8 +204,8 @@ export default async function MediaPage() {
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
                 <Mail size={15} />{t("Media contact")}</p>
-              <h2 className="mt-3 text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Have a story or a deadline?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Send the details through the contact form and mention media in the message — requests are routed to the people who can answer technically.")}</p>
+              <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Have a story or a deadline?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the details through the contact form and mention media in the message — requests are routed to the people who can answer technically.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

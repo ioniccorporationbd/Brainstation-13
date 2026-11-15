@@ -103,10 +103,10 @@ export default function PartnerForm({ models }: { models: string[] }) {
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={22} />
         </span>
-        <h3 className="mt-4 text-[19px] font-semibold text-black">{t("Application received")}</h3>
-        <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Thank you. Your interest in the")}{" "}
+        <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Application received")}</h3>
+        <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Thank you. Your interest in the")}{" "}
           <strong className="text-black">{t(values.model)}</strong>{t("track has been recorded on our server and the partnerships team will review it.")}</p>
-        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#52525B]">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
+        <p className="mt-3 rounded-lg bg-[#fafafa] px-4 py-3 text-[12.5px] font-medium text-[#52525B] text-pretty">{t("Reference:")}{reference || "—"}{t("· No email is sent automatically because a public mailbox is not configured for this site yet.")}</p>
         <button
           type="button"
           onClick={() => {
@@ -313,7 +313,7 @@ export default function PartnerForm({ models }: { models: string[] }) {
           </>
         )}
       </button>
-      <p className="mt-3 text-[12.5px] leading-[1.6] text-[#52525B]">{t("Applications are stored on our server and reviewed by the partnerships team.")}</p>
+      <p className="mt-3 text-[13px] leading-[1.6] text-[#52525B] text-pretty">{t("Applications are stored on our server and reviewed by the partnerships team.")}</p>
     </form>
   );
 }

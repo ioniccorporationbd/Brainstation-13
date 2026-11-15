@@ -85,9 +85,9 @@ export default async function PartnersPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Partners")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Partnerships built around the work, not the logo")}</h1>
+            <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Partnerships built around the work, not the logo")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Magnetic Solution Limited works with platform vendors, delivery allies and product teams to ship software that holds up in production. Where a formal partnership exists, it is confirmed in writing — not published as decoration.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited works with platform vendors, delivery allies and product teams to ship software that holds up in production. Where a formal partnership exists, it is confirmed in writing — not published as decoration.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -116,8 +116,8 @@ export default async function PartnersPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ways we work together")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Four partnership models")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Each model is a working arrangement, not a marketing tier. The terms, responsibilities and reporting follow what the programme actually needs.")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Four partnership models")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each model is a working arrangement, not a marketing tier. The terms, responsibilities and reporting follow what the programme actually needs.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {models.map((model) => (
@@ -128,10 +128,10 @@ export default async function PartnersPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <model.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(model.title)}
                 </h3>
-                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(model.body)}
                 </p>
               </article>
@@ -145,13 +145,13 @@ export default async function PartnersPage() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ecosystem")}</p>
-            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Where we plug in")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("We integrate with the systems your business already depends on instead of replacing them. The specific vendors, versions and support terms are agreed per project.")}</p>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Where we plug in")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We integrate with the systems your business already depends on instead of replacing them. The specific vendors, versions and support terms are agreed per project.")}</p>
 
             <div className="mt-8 rounded-xl border border-[#ececec] bg-[#fafafa] p-7">
-              <h3 className="flex items-center gap-2 text-[15.5px] font-semibold text-black">
+              <h3 className="flex items-center gap-2 text-[15.5px] md:text-[16px] font-semibold leading-[1.35] text-black text-balance">
                 <ShieldCheck size={18} className="text-[#c91f28]" />{t("Verified information only")}</h3>
-              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Partner logos, tier levels and certification badges previously published on this page could not be verified, so they are not shown. Ask for the current partner and certification list for a specific platform and you will receive it with documentation.")}</p>
+              <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Partner logos, tier levels and certification badges previously published on this page could not be verified, so they are not shown. Ask for the current partner and certification list for a specific platform and you will receive it with documentation.")}</p>
             </div>
           </div>
 
@@ -177,7 +177,7 @@ export default async function PartnersPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ground rules")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How we keep partnerships honest")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How we keep partnerships honest")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {principles.map((item) => (
@@ -185,10 +185,10 @@ export default async function PartnersPage() {
                 key={item.title}
                 className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
-                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.body)}
                 </p>
               </article>
@@ -202,8 +202,8 @@ export default async function PartnersPage() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Partnering with us on a programme?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Tell us the scope, the platform and who else is involved. We will confirm what we can own and how the interfaces are managed.")}</p>
+              <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Partnering with us on a programme?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Tell us the scope, the platform and who else is involved. We will confirm what we can own and how the interfaces are managed.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

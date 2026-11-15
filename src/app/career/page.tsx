@@ -116,8 +116,8 @@ export default async function CareerPage() {
         <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Careers")}</span>
-            <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Build software that matters")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("We’re always looking for curious, driven people who want to solve hard problems for real clients — with a team that ships enterprise-grade technology.")}</p>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Build software that matters")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("We’re always looking for curious, driven people who want to solve hard problems for real clients — with a team that ships enterprise-grade technology.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#open-roles"
@@ -143,7 +143,7 @@ export default async function CareerPage() {
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Magnetic Solution Limited")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("A place to do the best work of your career")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("A place to do the best work of your career")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {perks.map((perk) => {
               const Icon = perk.icon;
@@ -155,10 +155,10 @@ export default async function CareerPage() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <Icon size={21} strokeWidth={1.9} />
                   </span>
-                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black">
+                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">
                     {t(perk.title)}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">
+                  <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(perk.description)}
                   </p>
                 </div>
@@ -174,8 +174,8 @@ export default async function CareerPage() {
       >
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Open positions")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Current opportunities")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Don’t see your role? Send us your application anyway — we’re always growing.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Current opportunities")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Don’t see your role? Send us your application anyway — we’re always growing.")}</p>
 
           <div className="mt-10 overflow-hidden rounded-xl border border-[#ececec]">
             {roles.map((role, index) => (
@@ -186,7 +186,7 @@ export default async function CareerPage() {
                 }`}
               >
                 <div>
-                  <h3 className="text-[17.5px] font-semibold tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(role.title)}
                   </h3>
                   <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13.5px] text-[#52525B]">
@@ -213,7 +213,7 @@ export default async function CareerPage() {
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our process")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("What to expect")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What to expect")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((item) => (
               <div
@@ -223,10 +223,10 @@ export default async function CareerPage() {
                 <p className="text-[30px] font-bold leading-none tracking-[-0.04em] text-[#c91f28]">
                   {t(item.step)}
                 </p>
-                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold text-black">
+                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">
+                <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.text)}
                 </p>
               </div>
@@ -239,9 +239,9 @@ export default async function CareerPage() {
         <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Apply")}</p>
-            <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Ready to join the team?")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Send your details for the role that fits you best. We review every application and reply when there is a match.")}</p>
-            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[13.5px] leading-[1.6] text-[#52525B]">{t("Applying for a role not listed? Choose")}{" "}
+            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Ready to join the team?")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Send your details for the role that fits you best. We review every application and reply when there is a match.")}</p>
+            <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("Applying for a role not listed? Choose")}{" "}
               <strong className="text-black">{t("General application")}</strong>{t("and tell us what you do best.")}</p>
           </div>
           <CareerApplyForm roles={roles.map((role) => role.title)} />
@@ -253,8 +253,8 @@ export default async function CareerPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Questions before you apply?")}</h2>
-                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Our team is happy to answer anything about roles, process or life at Magnetic Solution Limited.")}</p>
+                <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Questions before you apply?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Our team is happy to answer anything about roles, process or life at Magnetic Solution Limited.")}</p>
               </div>
               <Link
                 href="/contact"

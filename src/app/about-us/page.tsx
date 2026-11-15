@@ -130,9 +130,9 @@ export default async function AboutUsPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · About us")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("An engineering partner for teams building serious software")}</h1>
+            <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("An engineering partner for teams building serious software")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Magnetic Solution Limited builds, modernises and supports software for enterprise and startup teams. We pursue new technology relentlessly — and turn it into practical products that create real business value.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited builds, modernises and supports software for enterprise and startup teams. We pursue new technology relentlessly — and turn it into practical products that create real business value.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -178,7 +178,7 @@ export default async function AboutUsPage() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What guides us")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Mission, vision and the values behind every delivery")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Mission, vision and the values behind every delivery")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -189,10 +189,10 @@ export default async function AboutUsPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <pillar.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(pillar.title)}
                 </h3>
-                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(pillar.body)}
                 </p>
               </article>
@@ -205,8 +205,8 @@ export default async function AboutUsPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What we do")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("One partner across the whole product lifecycle")}</h2>
-          <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Strategy, engineering, modernisation and talent — delivered by the same team, so context never gets lost between vendors.")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One partner across the whole product lifecycle")}</h2>
+          <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Strategy, engineering, modernisation and talent — delivered by the same team, so context never gets lost between vendors.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((item) => (
@@ -217,10 +217,10 @@ export default async function AboutUsPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.body)}
                 </p>
               </article>
@@ -235,8 +235,8 @@ export default async function AboutUsPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
               <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How we work")}</p>
-              <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Predictable delivery, without ceremony")}</h2>
-              <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Every engagement follows the same four phases. The framework stays fixed so the work stays visible — from first conversation to post-launch support.")}</p>
+              <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Predictable delivery, without ceremony")}</h2>
+              <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every engagement follows the same four phases. The framework stays fixed so the work stays visible — from first conversation to post-launch support.")}</p>
 
               <ol className="mt-8 space-y-5">
                 {steps.map((step, index) => (
@@ -248,7 +248,7 @@ export default async function AboutUsPage() {
                       <p className="text-[15px] md:text-[16px] font-bold text-black">
                         {t(step.title)}
                       </p>
-                      <p className="mt-1 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
+                      <p className="mt-1 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                         {t(step.body)}
                       </p>
                     </div>
@@ -266,10 +266,10 @@ export default async function AboutUsPage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <item.icon size={19} strokeWidth={1.9} />
                   </span>
-                  <h3 className="mt-4 text-[15.5px] font-semibold tracking-[-0.01em] text-black">
+                  <h3 className="mt-4 text-[15.5px] md:text-[16px] font-semibold leading-[1.35] tracking-[-0.01em] text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-[1.65] text-[#52525B]">
+                  <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.body)}
                   </p>
                 </article>
@@ -286,8 +286,8 @@ export default async function AboutUsPage() {
             <ShieldCheck size={21} strokeWidth={1.9} />
           </span>
           <div>
-            <h3 className="text-[18px] md:text-[20px] font-semibold text-black">{t("Verified information only")}</h3>
-            <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Founding dates, headcount, client counts and certification badges are not published on this page because they cannot be verified. Company registration details, client references and delivery records are shared directly with teams evaluating us — request them through the contact page.")}</p>
+            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Verified information only")}</h3>
+            <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Founding dates, headcount, client counts and certification badges are not published on this page because they cannot be verified. Company registration details, client references and delivery records are shared directly with teams evaluating us — request them through the contact page.")}</p>
             <Link
               href="/contact"
               className="mt-4 inline-flex items-center gap-2 text-[14.5px] font-bold text-[#c91f28] transition-colors hover:text-[#a71920]"
@@ -302,8 +302,8 @@ export default async function AboutUsPage() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Want to see how we would approach your product?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Share the problem, the constraints and the timeline. We will come back with a technical view and a phased plan.")}</p>
+              <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Want to see how we would approach your product?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the problem, the constraints and the timeline. We will come back with a technical view and a phased plan.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

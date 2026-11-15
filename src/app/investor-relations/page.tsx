@@ -91,9 +91,9 @@ export default async function InvestorRelationsPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Investor relations")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Clear information for shareholders and counterparties")}</h1>
+            <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Clear information for shareholders and counterparties")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Magnetic Solution Limited is a privately held software engineering company. Financial statements, shareholding details and governance documents are provided to shareholders and counterparties directly — never summarised as marketing figures on a public page.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited is a privately held software engineering company. Financial statements, shareholding details and governance documents are provided to shareholders and counterparties directly — never summarised as marketing figures on a public page.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -139,8 +139,8 @@ export default async function InvestorRelationsPage() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Governance")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How the company is governed")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("The principles below describe how decisions are taken and reviewed. The underlying policies are available to shareholders and counterparties on request.")}</p>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How the company is governed")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The principles below describe how decisions are taken and reviewed. The underlying policies are available to shareholders and counterparties on request.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {governance.map((item) => (
@@ -152,10 +152,10 @@ export default async function InvestorRelationsPage() {
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
                 <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.body)}
                   </p>
                 </div>
@@ -170,19 +170,19 @@ export default async function InvestorRelationsPage() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Reports & disclosures")}</p>
-            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Documents are shared, not published")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("As a privately held company we do not publish statutory accounts or quarterly results on the website. If you are a shareholder, lender, auditor or counterparty, these are provided under a confidentiality agreement with the latest period available.")}</p>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Documents are shared, not published")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("As a privately held company we do not publish statutory accounts or quarterly results on the website. If you are a shareholder, lender, auditor or counterparty, these are provided under a confidentiality agreement with the latest period available.")}</p>
 
             <div className="mt-8 flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ShieldCheck size={19} strokeWidth={1.9} />
               </span>
-              <p className="text-[14px] leading-[1.6] text-[#52525B]">{t("No financial figure, valuation or funding claim is published on this site. Information previously presented here belonged to the site's previous brand and has been removed rather than restated.")}</p>
+              <p className="text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("No financial figure, valuation or funding claim is published on this site. Information previously presented here belonged to the site's previous brand and has been removed rather than restated.")}</p>
             </div>
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Frequently requested documents")}</h3>
+            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">{t("Frequently requested documents")}</h3>
             <ul className="mt-5 space-y-3.5">
               {requests.map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -209,8 +209,8 @@ export default async function InvestorRelationsPage() {
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
                 <Mail size={15} />{t("Investor contact")}</p>
-              <h2 className="mt-3 text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Need a specific disclosure?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Send the requirement and your organisation details through the contact form. Requests are answered with documents and a named point of contact.")}</p>
+              <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Need a specific disclosure?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the requirement and your organisation details through the contact form. Requests are answered with documents and a named point of contact.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link
