@@ -11,7 +11,7 @@ export const shared: Dict = {
   "Enterprise-Grade Security": "এন্টারপ্রাইজ-গ্রেড সিকিউরিটি",
   "Ready to Scale Your Team?": "আপনার টিম বড় করতে প্রস্তুত?",
   "Let’s discuss how our resource augmentation and AI-powered development can accelerate your project delivery.": "আমাদের রিসোর্স অগমেন্টেশন এবং এআই-চালিত ডেভেলপমেন্ট কীভাবে আপনার প্রজেক্ট ডেলিভারি দ্রুততর করতে পারে, তা নিয়ে কথা বলুন।",
-  "AI-ready software service company specializing in resource augmentation. We deliver 10X faster solutions for startups, SMEs, and Enterprises across Fintech, Pharma, Retail & Distribution.": "এআই-রেডি সফটওয়্যার সার্ভিস কোম্পানি—রিসোর্স অগমেন্টেশন-এ বিশেষজ্ঞ। ফিনটেক, ফার্মা, রিটেইল ও ডিস্ট্রিবিউশন-সহ বিভিন্ন খাতের স্টার্টআপ, এসএমই এবং এন্টারপ্রাইজ-দের জন্য আমরা ১০এক্স দ্রুততর সলিউশন ডেলিভার করি।",
+  "AI-ready software service company specializing in resource augmentation. We deliver 10X faster solutions for startups, SMEs, and Enterprises across Fintech, Pharma, Retail & Distribution.": "এআই-রেডি সফটওয়্যার সার্ভিস কোম্পানি—রিসোর্স অগমেন্টেশনে বিশেষজ্ঞ। ফিনটেক, ফার্মা, রিটেইল ও ডিস্ট্রিবিউশন-সহ বিভিন্ন খাতের স্টার্টআপ, এসএমই এবং এন্টারপ্রাইজদের জন্য আমরা ১০এক্স দ্রুততর সলিউশন ডেলিভার করি।",
   "Compliance:": "কমপ্লায়েন্স:",
   "Partnerships:": "পার্টনারশিপ:",
   "Recognized by:": "স্বীকৃতি:",

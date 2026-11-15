@@ -328,4 +328,5 @@ export const gen_11: Dict = {
   "Enterprise & system integrators": "এন্টারপ্রাইজ ও সিস্টেম ইন্টিগ্রেটর",
   "Network error — your application was not sent. Please try again.": "নেটওয়ার্ক সমস্যা — আপনার আবেদন পাঠানো হয়নি। আবার চেষ্টা করুন।",
   "Your application could not be recorded. Please try again.": "আপনার আবেদন সংরক্ষণ করা যায়নি। আবার চেষ্টা করুন।",
+  "8X": "৮এক্স",
 };
