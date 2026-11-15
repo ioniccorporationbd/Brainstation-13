@@ -13,26 +13,26 @@ const sectors = [
 export default async function CaseStudiesSectorsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] pt-[8px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[720px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Where we work")}</p>
-            <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Sectors we build for")}</h2>
+            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Sectors we build for")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {sectors.map((item) => (
               <div
                 key={item.title}
-                className="group flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="group flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <item.icon size={19} />
                 </span>
                 <div>
                   <h3 className="text-[15.5px] font-semibold text-black">{t(item.title)}</h3>
-                  <p className="mt-1 text-[13.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
+                  <p className="mt-1 text-[13.5px] leading-[1.6] text-[#52525B]">{t(item.description)}</p>
                 </div>
               </div>
             ))}

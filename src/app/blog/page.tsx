@@ -110,11 +110,11 @@ export default async function BlogPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="relative overflow-hidden bg-white px-6 pb-14 pt-14 md:pb-16 md:pt-20">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="relative overflow-hidden bg-white pb-14 pt-14 md:pb-16 md:pt-20">
+        <div className="mx-auto brand-container">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Blog")}</span>
-          <h1 className="mt-6 max-w-[820px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Insights & ideas from the teams that ship")}</h1>
-          <p className="mt-5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
+          <h1 className="mt-6 max-w-[820px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Insights & ideas from the teams that ship")}</h1>
+          <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/case-studies"
@@ -131,13 +131,13 @@ export default async function BlogPage() {
 
       <BlogExplorer featured={featured} posts={posts} categories={categories} />
 
-      <section className="bg-white px-6 py-20 md:py-24">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white py-20 md:py-24">
+        <div className="mx-auto brand-container">
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[36px]">{t("Want insight like this for your roadmap?")}</h2>
-                <p className="mt-3 max-w-[620px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Get practical engineering and technology perspective from our team — applied to your product, your stack and your constraints.")}</p>
+                <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Want insight like this for your roadmap?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Get practical engineering and technology perspective from our team — applied to your product, your stack and your constraints.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Link

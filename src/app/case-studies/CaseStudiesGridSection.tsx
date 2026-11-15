@@ -107,12 +107,12 @@ export default function CaseStudiesGridSection() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Selected work")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Case studies across industries")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Case studies across industries")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Filter case studies by category")}>
@@ -154,10 +154,10 @@ export default function CaseStudiesGridSection() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-[18px] font-semibold leading-[1.32] tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.32] tracking-[-0.01em] text-black">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2.5 flex-1 text-[14px] leading-[1.65] text-[#55585e]">
+                  <p className="mt-2.5 flex-1 text-[14px] leading-[1.65] text-[#52525B]">
                     {t(item.excerpt)}
                   </p>
                   <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#ececec] pt-4">

@@ -29,8 +29,8 @@ function Meta({ post }: { post: BlogPost }) {
       <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
         {t(post.category)}
       </span>
-      <span className="font-medium text-[#6b6f76]">{t(post.date)}</span>
-      <span className="inline-flex items-center gap-1 font-medium text-[#6b6f76]">
+      <span className="font-medium text-[#52525B]">{t(post.date)}</span>
+      <span className="inline-flex items-center gap-1 font-medium text-[#52525B]">
         <Clock size={13} strokeWidth={2} />
         {t(post.readTime)}
       </span>
@@ -52,7 +52,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
 
         <div className="mt-8">
           <Meta post={post} />
-          <h1 className="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.025em] text-black md:text-[40px]">
+          <h1 className="mt-5 text-[28px] font-semibold leading-[1.15] tracking-[-0.025em] text-black md:text-[32px]">
             {t(post.title)}
           </h1>
         </div>
@@ -66,7 +66,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
         <p className="mt-8 text-[17px] font-medium leading-[1.65] text-[#22252a] md:text-[19px]">
           {t(post.excerpt)}
         </p>
-        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
+        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
@@ -130,8 +130,8 @@ export default function BlogExplorer({
   }
 
   return (
-    <section className="bg-[#fafafa] px-6 py-16 md:py-20">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-[#fafafa] py-16 md:py-20">
+      <div className="mx-auto brand-container">
         {showFeatured ? (
           <article className="grid overflow-hidden rounded-2xl border border-[#ececec] bg-white lg:grid-cols-2">
             <div className="h-[240px] overflow-hidden lg:h-full">
@@ -144,14 +144,14 @@ export default function BlogExplorer({
             <div className="p-7 md:p-10">
               <div className="flex items-center gap-3">
                 <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured")}</span>
-                <span className="text-[12.5px] font-medium text-[#6b6f76]">
+                <span className="text-[12.5px] font-medium text-[#52525B]">
                   {t(featured.category)} &middot; {t(featured.date)}
                 </span>
               </div>
-              <h2 className="mt-5 text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[32px]">
+              <h2 className="mt-5 text-[27px] font-semibold leading-[1.2] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">
                 {t(featured.title)}
               </h2>
-              <p className="mt-4 text-[15px] leading-[1.7] text-[#55585e] md:text-[16px]">
+              <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
                 {t(featured.excerpt)}
               </p>
               <button
@@ -217,7 +217,7 @@ export default function BlogExplorer({
         </div>
 
         {visible.length === 0 ? (
-          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] text-[#55585e]">{t("No articles match that search. Try another keyword or category.")}</p>
+          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] md:text-[16px] text-[#52525B]">{t("No articles match that search. Try another keyword or category.")}</p>
         ) : (
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {visible.map((post) => (
@@ -234,10 +234,10 @@ export default function BlogExplorer({
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <Meta post={post} />
-                  <h3 className="mt-4 text-[17.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
+                  <h3 className="mt-4 text-[17.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
                     {t(post.title)}
                   </h3>
-                  <p className="mt-3 flex-1 text-[14.5px] leading-[1.65] text-[#55585e]">
+                  <p className="mt-3 flex-1 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
                     {t(post.excerpt)}
                   </p>
                   <button
@@ -259,7 +259,7 @@ export default function BlogExplorer({
         {totalPages > 1 ? (
           <nav
             aria-label={t("Pagination")}
-            className="mt-10 flex items-center justify-between gap-4"
+            className="mt-10 flex flex-wrap items-center justify-between gap-4"
           >
             <button
               type="button"
@@ -268,7 +268,7 @@ export default function BlogExplorer({
               className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ArrowLeft size={15} />{t("Previous")}</button>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               {Array.from({ length: totalPages }, (_, index) => index + 1).map(
                 (item) => (
                   <button
