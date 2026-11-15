@@ -10,8 +10,8 @@ export default async function TestimonialsCtaSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
             <div>
-              <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Want results like these?")}</h2>
-              <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Tell us your goal and we will show you how we would approach it — scope, team shape and delivery plan.")}</p>
+              <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Want results like these?")}</h2>
+              <p className="mt-3 max-w-[620px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Tell us your goal and we will show you how we would approach it — scope, team shape and delivery plan.")}</p>
             </div>
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">
               <Link

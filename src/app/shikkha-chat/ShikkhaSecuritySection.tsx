@@ -16,8 +16,8 @@ export default async function ShikkhaSecuritySection() {
       <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Secure, role-scoped access")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("One login, the right view for every person")}</h2>
-          <p className="mt-4 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Everyone signs in through a single, branded portal. Once inside, permissions decide what each role can see and do — a student never reaches an admin screen, and a district officer sees only aggregated oversight data.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One login, the right view for every person")}</h2>
+          <p className="mt-4 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Everyone signs in through a single, branded portal. Once inside, permissions decide what each role can see and do — a student never reaches an admin screen, and a district officer sees only aggregated oversight data.")}</p>
           <ul className="mt-7 space-y-3">
             {bullets.map((bullet) => (
               <li key={bullet} className="flex items-start gap-3">

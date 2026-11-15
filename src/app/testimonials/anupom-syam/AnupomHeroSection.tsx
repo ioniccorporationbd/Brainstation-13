@@ -24,14 +24,14 @@ export default async function AnupomHeroSection() {
         <div className="mt-9 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Testimonial · Fintech")}</span>
-            <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("“8X faster than we expected”")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Anupom Syam, Founder & CEO at Tackle, on how resource augmentation changed the delivery velocity of their fintech platform.")}</p>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("“8X faster than we expected”")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Anupom Syam, Founder & CEO at Tackle, on how resource augmentation changed the delivery velocity of their fintech platform.")}</p>
 
             <div className="mt-7 flex items-center gap-4 rounded-xl border border-[#ececec] bg-white px-5 py-4">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[15px] font-bold text-[#c91f28]">{"AS"}</span>
               <div>
                 <p className="text-[15px] md:text-[16px] font-semibold leading-[1.3] text-black">{t("Anupom Syam")}</p>
-                <p className="mt-0.5 text-[13.5px] leading-[1.4] text-[#52525B]">{t("Founder & CEO, Tackle")}</p>
+                <p className="mt-0.5 text-[14.5px] leading-[1.4] text-[#52525B] text-pretty">{t("Founder & CEO, Tackle")}</p>
               </div>
             </div>
 

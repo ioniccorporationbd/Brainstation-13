@@ -90,7 +90,7 @@ async function Card({ item }: { item: Testimonial }) {
             <p className="text-[15px] md:text-[16px] font-semibold leading-[1.3] text-black">
               {t(item.name)}
             </p>
-            <p className="mt-0.5 text-[13px] leading-[1.4] text-[#52525B]">
+            <p className="mt-0.5 text-[13px] leading-[1.4] text-[#52525B] text-pretty">
               {t(item.role)}
             </p>
           </div>
@@ -132,8 +132,8 @@ export default async function TestimonialsGridSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("In their own words")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Six accounts from across our engagements")}</h2>
-          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Six accounts from across our engagements")}</h2>
+          <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -146,7 +146,7 @@ export default async function TestimonialsGridSection() {
           <TestimonialProvenanceNote />
           <div className="rounded-xl border border-[#ececec] bg-white px-6 py-5">
             <p className="text-[14px] font-semibold text-black">{t("Prefer to watch?")}</p>
-            <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#52525B]">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
+            <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
             <Link
               href="/staff-augmentation"
               className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"

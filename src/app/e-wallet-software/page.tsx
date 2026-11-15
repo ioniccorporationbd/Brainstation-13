@@ -161,9 +161,9 @@ export default async function Page() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Fintech · E-wallet")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("A wallet platform built for scale and trust")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("A wallet platform built for scale and trust")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Customer wallets, agent or merchant payments and a ledger that reconciles per period — with the limits, tiering and monitoring a mobile money operation is examined on.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Customer wallets, agent or merchant payments and a ledger that reconciles per period — with the limits, tiering and monitoring a mobile money operation is examined on.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -208,8 +208,8 @@ export default async function Page() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
-          <h2 className="mt-3 max-w-[760px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("What the platform covers")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Each capability is a working part of the product, not a slide. They share one data model, so trust, compliance and reporting do not have to be bolted on afterwards.")}</p>
+          <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What the platform covers")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each capability is a working part of the product, not a slide. They share one data model, so trust, compliance and reporting do not have to be bolted on afterwards.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item) => (
@@ -220,10 +220,10 @@ export default async function Page() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.body)}
                 </p>
               </article>
@@ -237,8 +237,8 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Architecture")}</p>
-            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Ledger first, everything else around it")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("The wallet ledger is the source of truth. Channels, agents and partner integrations all move money by posting entries through one service, which is what keeps balances and statements consistent.")}</p>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Ledger first, everything else around it")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The wallet ledger is the source of truth. Channels, agents and partner integrations all move money by posting entries through one service, which is what keeps balances and statements consistent.")}</p>
 
             <ul className="mt-7 space-y-3.5">
               {architectureBullets.map((bullet) => (
@@ -257,12 +257,12 @@ export default async function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Operations you can defend")}</h3>
-            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Support can resolve a disputed transaction from one screen: entries, device, channel, partner response and the operator who acted. Float and settlement positions are visible per agent, so reconciling the network is routine rather than month-end panic.")}</p>
+            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">{t("Operations you can defend")}</h3>
+            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Support can resolve a disputed transaction from one screen: entries, device, channel, partner response and the operator who acted. Float and settlement positions are visible per agent, so reconciling the network is routine rather than month-end panic.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
                 <CircleDot size={14} />{t("Delivery note")}</p>
-              <p className="mt-2 text-[13.5px] leading-[1.6] text-[#52525B]">{t("Architecture decisions are documented with the trade-offs they carry, so your team can maintain the platform after hand-over.")}</p>
+              <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("Architecture decisions are documented with the trade-offs they carry, so your team can maintain the platform after hand-over.")}</p>
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default async function Page() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Delivery process")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How an engagement runs")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How an engagement runs")}</h2>
 
           <ol className="mt-10 space-y-4">
             {processSteps.map((step, index) => (
@@ -284,10 +284,10 @@ export default async function Page() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black md:w-[260px] md:shrink-0 text-balance">
                     {t(step.title)}
                   </h3>
-                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0 text-pretty">
                     {t(step.body)}
                   </p>
                 </div>
@@ -302,8 +302,8 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Integrations")}</p>
-            <h2 className="mt-3 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Connects to what you already run")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Connects to what you already run")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {integrations.map((item) => (
@@ -331,10 +331,10 @@ export default async function Page() {
                   <ShieldCheck size={20} strokeWidth={1.9} />
                 </span>
                 <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
+                  <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.body)}
                   </p>
                 </div>
@@ -358,8 +358,8 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[34px]">{t("Launching or replatforming a wallet?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Tell us the licence scope, corridors and agent model. We will propose the ledger, integrations and rollout sequence.")}</p>
+              <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Launching or replatforming a wallet?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Tell us the licence scope, corridors and agent model. We will propose the ledger, integrations and rollout sequence.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link
