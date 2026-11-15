@@ -37,12 +37,12 @@ const pages = [
 export default async function ShikkhaWebsiteSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+      <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Public school website")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Every institution also gets a complete public website")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Shikkha Chat ships a complete, mobile-friendly 40+ page school website for every institution — home, governing body, chairman and principal messages, academic calendar, class routine, syllabus, fees, scholarships, notice board, gallery, exam results and more — that parents and the public can browse before they ever sign in.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Every institution also gets a complete public website")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Shikkha Chat ships a complete, mobile-friendly 40+ page school website for every institution — home, governing body, chairman and principal messages, academic calendar, class routine, syllabus, fees, scholarships, notice board, gallery, exam results and more — that parents and the public can browse before they ever sign in.")}</p>
         </div>
 
         <div className="mt-12 space-y-6">

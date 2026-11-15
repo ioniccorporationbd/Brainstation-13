@@ -78,7 +78,7 @@ async function Card({ item }: { item: Testimonial }) {
         </span>
         <Quote size={24} strokeWidth={1.6} className="text-[#f0c9cb]" />
       </div>
-      <p className="mt-5 flex-1 text-[15.5px] leading-[1.7] text-[#3f434a]">
+      <p className="mt-5 flex-1 text-[15px] md:text-[16px] leading-[1.6] text-[#3f434a]">
         &ldquo;{t(item.quote)}&rdquo;
       </p>
       <div className="mt-6 border-t border-[#f2f2f2] pt-5">
@@ -87,10 +87,10 @@ async function Card({ item }: { item: Testimonial }) {
             {initials(item.name)}
           </span>
           <div>
-            <p className="text-[14.5px] font-semibold leading-[1.3] text-black">
+            <p className="text-[15px] md:text-[16px] font-semibold leading-[1.3] text-black">
               {t(item.name)}
             </p>
-            <p className="mt-0.5 text-[13px] leading-[1.4] text-[#6b6f76]">
+            <p className="mt-0.5 text-[13px] leading-[1.4] text-[#52525B]">
               {t(item.role)}
             </p>
           </div>
@@ -128,12 +128,12 @@ async function Card({ item }: { item: Testimonial }) {
 export default async function TestimonialsGridSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+      <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("In their own words")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Six accounts from across our engagements")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Six accounts from across our engagements")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -146,7 +146,7 @@ export default async function TestimonialsGridSection() {
           <TestimonialProvenanceNote />
           <div className="rounded-xl border border-[#ececec] bg-white px-6 py-5">
             <p className="text-[14px] font-semibold text-black">{t("Prefer to watch?")}</p>
-            <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#55585e]">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
+            <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#52525B]">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
             <Link
               href="/staff-augmentation"
               className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"

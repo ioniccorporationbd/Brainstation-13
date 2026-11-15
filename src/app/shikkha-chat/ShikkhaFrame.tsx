@@ -26,7 +26,7 @@ export default function ShikkhaFrame({
         <span className="h-2 w-2 rounded-full bg-[#e3e3e3]" />
         <span className="h-2 w-2 rounded-full bg-[#e3e3e3]" />
         <span className="h-2 w-2 rounded-full bg-[#e3e3e3]" />
-        <span className="ml-2.5 truncate rounded bg-white px-2.5 py-[3px] text-[11px] font-medium text-[#6b6f76] ring-1 ring-[#ececec]">
+        <span className="ml-2.5 truncate rounded bg-white px-2.5 py-[3px] text-[11px] font-medium text-[#52525B] ring-1 ring-[#ececec]">
           {url}
         </span>
       </div>

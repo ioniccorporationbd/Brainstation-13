@@ -21,8 +21,8 @@ const chips = [
 export default async function ShikkhaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
             <Sparkles size={14} strokeWidth={2.2} />{t("Product · Education ERP")}</span>
@@ -38,9 +38,9 @@ export default async function ShikkhaHeroSection() {
             />
           </div>
 
-          <h1 className="mt-6 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[50px]">{t("The complete education management ERP for modern schools")}</h1>
+          <h1 className="mt-6 text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("The complete education management ERP for modern schools")}</h1>
 
-          <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.7] text-[#55585e] md:text-[16.5px]">{t("Shikkha Chat brings school administration, AI-powered learning, teachers, students, parents and government oversight together in one secure platform — across every class, section and subject.")}</p>
+          <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Shikkha Chat brings school administration, AI-powered learning, teachers, students, parents and government oversight together in one secure platform — across every class, section and subject.")}</p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -58,7 +58,7 @@ export default async function ShikkhaHeroSection() {
             {chips.map((chip) => (
               <li
                 key={chip}
-                className="inline-flex items-center gap-2 text-[13.5px] font-medium text-[#55585e]"
+                className="inline-flex items-center gap-2 text-[13.5px] font-medium text-[#52525B]"
               >
                 <CheckCircle2
                   size={15}
@@ -82,7 +82,7 @@ export default async function ShikkhaHeroSection() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-[1240px] border-t border-[#ececec] pt-8 md:mt-16">
+      <div className="mx-auto mt-14 brand-container border-t border-[#ececec] pt-8 md:mt-16">
         <dl className="grid grid-cols-2 gap-y-7 md:grid-cols-4">
           {facts.map((fact) => (
             <div key={fact.label} className="text-center md:text-left">
@@ -91,7 +91,7 @@ export default async function ShikkhaHeroSection() {
                 <span className="block text-[30px] font-bold leading-none tracking-[-0.03em] text-[#c91f28] md:text-[34px]">
                   {t(fact.value)}
                 </span>
-                <span className="mt-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-[#6b6f76]">
+                <span className="mt-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-[#52525B]">
                   {t(fact.label)}
                 </span>
               </dd>

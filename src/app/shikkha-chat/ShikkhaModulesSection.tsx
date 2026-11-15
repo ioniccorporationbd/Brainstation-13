@@ -118,12 +118,12 @@ const modules: Module[] = [
 export default async function ShikkhaModulesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white py-20 md:py-24">
+      <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Platform modules")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Six integrated modules, forty-seven features")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Every part of a school works together — from daily administration to AI-assisted learning and government oversight. Each module ships with the exact capabilities its users rely on every day.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Six integrated modules, forty-seven features")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Every part of a school works together — from daily administration to AI-assisted learning and government oversight. Each module ships with the exact capabilities its users rely on every day.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -132,15 +132,15 @@ export default async function ShikkhaModulesSection() {
             return (
               <article
                 key={module.title}
-                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40"
+                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Icon size={23} strokeWidth={1.8} />
                 </div>
-                <h3 className="mt-5 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
+                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
                   {t(module.title)}
                 </h3>
-                <p className="mt-2.5 text-[14.5px] leading-[1.65] text-[#55585e]">
+                <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
                   {t(module.summary)}
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-1.5 border-t border-[#f2f2f2] pt-4">

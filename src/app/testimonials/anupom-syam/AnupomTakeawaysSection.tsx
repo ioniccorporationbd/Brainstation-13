@@ -49,12 +49,12 @@ const facts = [
 export default async function AnupomTakeawaysSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+      <div className="mx-auto brand-container">
         <div className="max-w-[820px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The engagement")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("What made the difference")}</h2>
-          <div className="mt-5 space-y-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("What made the difference")}</h2>
+          <div className="mt-5 space-y-4 text-[15.5px] leading-[1.6] text-[#52525B] md:text-[16.5px]">
             <p>{t("The engagement blended senior fintech engineers with AI-assisted delivery, letting a lean founding team ship a production platform without building a large in-house department.")}</p>
             <p>{t("The points below group the qualities highlighted in the testimonial — the things that, in the client’s words, made the difference.")}</p>
           </div>
@@ -66,15 +66,15 @@ export default async function AnupomTakeawaysSection() {
             return (
               <article
                 key={feature.title}
-                className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40"
+                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Icon size={20} strokeWidth={1.9} />
                 </div>
-                <h3 className="mt-4 text-[16.5px] font-bold leading-[1.3] tracking-[-0.01em] text-black">
+                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
                   {t(feature.title)}
                 </h3>
-                <p className="mt-2 text-[14.5px] leading-[1.65] text-[#55585e]">
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
                   {t(feature.description)}
                 </p>
               </article>
@@ -88,7 +88,7 @@ export default async function AnupomTakeawaysSection() {
               <dd className="text-[24px] font-bold leading-[1.1] tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
                 {t(fact.value)}
               </dd>
-              <dt className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#6b6f76]">
+              <dt className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#52525B]">
                 {t(fact.label)}
               </dt>
             </div>

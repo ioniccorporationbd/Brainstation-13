@@ -46,12 +46,12 @@ const workflows: Workflow[] = [
 export default async function ShikkhaWorkflowsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+      <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How it works")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How Shikkha Chat runs the school day")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Real, integrated workflows across roles — one action flows straight to the next person who needs it.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How Shikkha Chat runs the school day")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Real, integrated workflows across roles — one action flows straight to the next person who needs it.")}</p>
         </div>
 
         <ol className="mt-12 space-y-4 md:border-l md:border-[#e8e8e8] md:pl-10 md:space-y-5">
@@ -67,10 +67,10 @@ export default async function ShikkhaWorkflowsSection() {
                     <div>
                       <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Step 0")}{index + 1}
                       </p>
-                      <h3 className="mt-1.5 text-[17px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[18px]">
+                      <h3 className="mt-1.5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-black md:text-[20px]">
                         {t(flow.title)}
                       </h3>
-                      <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e]">
+                      <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">
                         {t(flow.steps)}
                       </p>
                     </div>

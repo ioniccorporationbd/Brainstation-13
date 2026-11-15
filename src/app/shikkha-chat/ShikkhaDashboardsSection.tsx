@@ -116,13 +116,13 @@ export default async function ShikkhaDashboardsSection() {
   return (
     <section
       id="dashboards"
-      className="relative overflow-hidden bg-white px-6 py-20 md:py-24"
+      className="relative overflow-hidden bg-white py-20 md:py-24"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Built for every role")}</p>
-          <h2 className="mt-4 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Eight purpose-built dashboards")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">{t("Access and permissions are scoped by role, so each person sees a focused, secure view of the platform. Every screen below is captured from the live Shikkha Chat application.")}</p>
+          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Eight purpose-built dashboards")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Access and permissions are scoped by role, so each person sees a focused, secure view of the platform. Every screen below is captured from the live Shikkha Chat application.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -148,11 +148,11 @@ export default async function ShikkhaDashboardsSection() {
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={19} strokeWidth={1.9} />
                     </span>
-                    <h3 className="text-[17px] font-bold leading-[1.25] tracking-[-0.01em] text-black">
+                    <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-black">
                       {t(role.label)}
                     </h3>
                   </div>
-                  <p className="mt-3 text-[14px] leading-[1.65] text-[#55585e]">
+                  <p className="mt-3 text-[14px] leading-[1.65] text-[#52525B]">
                     {t(role.who)}
                   </p>
                   <ul className="mt-4 space-y-2">
