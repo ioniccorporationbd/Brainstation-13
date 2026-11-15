@@ -92,8 +92,8 @@ export default async function ResourcesPage() {
         <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Resources")}</span>
-            <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Our resources")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Everything you need to understand how we work and what we deliver — insights, proof of results, media, partnerships and guides, in one place.")}</p>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Our resources")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Everything you need to understand how we work and what we deliver — insights, proof of results, media, partnerships and guides, in one place.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/blog"
@@ -119,8 +119,8 @@ export default async function ResourcesPage() {
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Explore")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Browse by topic")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Jump straight to the resources most relevant to you.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Browse by topic")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Jump straight to the resources most relevant to you.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {hubs.map((hub) => {
@@ -134,10 +134,10 @@ export default async function ResourcesPage() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <Icon size={21} strokeWidth={1.9} />
                   </span>
-                  <h3 className="mt-4 text-[17.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
+                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(hub.title)}
                   </h3>
-                  <p className="mt-2 flex-1 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
+                  <p className="mt-2 flex-1 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(hub.description)}
                   </p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28]">{t("Explore")}<ArrowRight
@@ -156,8 +156,8 @@ export default async function ResourcesPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Downloads")}</p>
-          <h2 className="mt-4 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Guides & whitepapers")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Practical resources distilled from real engagements — free to request.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Guides & whitepapers")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical resources distilled from real engagements — free to request.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {downloads.map((item) => (
@@ -168,13 +168,13 @@ export default async function ResourcesPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <FileText size={21} strokeWidth={1.9} />
                 </span>
-                <p className="mt-4 text-[11.5px] font-bold uppercase tracking-[0.12em] text-[#52525B]">
+                <p className="mt-4 text-[11.5px] font-bold uppercase tracking-[0.12em] text-[#52525B] text-pretty">
                   {t(item.type)}
                 </p>
-                <h3 className="mt-1.5 text-[17.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
+                <h3 className="mt-1.5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                   {t(item.title)}
                 </h3>
-                <p className="mt-2 flex-1 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
+                <p className="mt-2 flex-1 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.text)}
                 </p>
                 <Link
@@ -193,8 +193,8 @@ export default async function ResourcesPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Can’t find what you need?")}</h2>
-                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Our team is happy to share the references and answers you need.")}</p>
+                <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Can’t find what you need?")}</h2>
+                <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Our team is happy to share the references and answers you need.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">
                 <Link

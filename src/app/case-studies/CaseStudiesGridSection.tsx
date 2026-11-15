@@ -111,8 +111,8 @@ export default function CaseStudiesGridSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Selected work")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Case studies across industries")}</h2>
-          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Case studies across industries")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label={t("Filter case studies by category")}>
@@ -154,10 +154,10 @@ export default function CaseStudiesGridSection() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.32] tracking-[-0.01em] text-black">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2.5 flex-1 text-[14px] leading-[1.65] text-[#52525B]">
+                  <p className="mt-2.5 flex-1 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.excerpt)}
                   </p>
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 border-t border-[#ececec] pt-4">

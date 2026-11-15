@@ -52,7 +52,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
 
         <div className="mt-8">
           <Meta post={post} />
-          <h1 className="mt-5 text-[28px] font-semibold leading-[1.15] tracking-[-0.025em] text-black md:text-[32px]">
+          <h1 className="mt-5 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.025em] text-black md:text-[52px] lg:text-[56px]">
             {t(post.title)}
           </h1>
         </div>
@@ -63,10 +63,10 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
           className="mt-8 h-[240px] w-full rounded-xl border border-[#ececec] object-cover md:h-[380px]"
         />
 
-        <p className="mt-8 text-[17px] font-medium leading-[1.65] text-[#22252a] md:text-[19px]">
+        <p className="mt-8 text-[17px] font-medium leading-[1.6] text-[#22252a] md:text-[19px]">
           {t(post.excerpt)}
         </p>
-        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
+        <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
@@ -148,10 +148,10 @@ export default function BlogExplorer({
                   {t(featured.category)} &middot; {t(featured.date)}
                 </span>
               </div>
-              <h2 className="mt-5 text-[27px] font-semibold leading-[1.2] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">
+              <h2 className="mt-5 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">
                 {t(featured.title)}
               </h2>
-              <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
+              <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                 {t(featured.excerpt)}
               </p>
               <button
@@ -217,7 +217,7 @@ export default function BlogExplorer({
         </div>
 
         {visible.length === 0 ? (
-          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] md:text-[16px] text-[#52525B]">{t("No articles match that search. Try another keyword or category.")}</p>
+          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] md:text-[16px] text-[#52525B] text-pretty">{t("No articles match that search. Try another keyword or category.")}</p>
         ) : (
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {visible.map((post) => (
@@ -234,10 +234,10 @@ export default function BlogExplorer({
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <Meta post={post} />
-                  <h3 className="mt-4 text-[17.5px] font-semibold leading-[1.3] tracking-[-0.01em] text-black">
+                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
                     {t(post.title)}
                   </h3>
-                  <p className="mt-3 flex-1 text-[15px] md:text-[16px] leading-[1.65] text-[#52525B]">
+                  <p className="mt-3 flex-1 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(post.excerpt)}
                   </p>
                   <button
