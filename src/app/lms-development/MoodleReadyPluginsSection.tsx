@@ -109,7 +109,7 @@ export default function MoodleReadyPluginsSection() {
               type="button"
               onClick={() => setActive(index)}
               aria-pressed={active === index}
-              className={`rounded-full border px-4 py-2.5 text-[13.5px] font-bold transition-colors duration-300 ${
+              className={`rounded-full border px-4 py-2.5 max-sm:inline-flex max-sm:min-h-[44px] max-sm:items-center max-sm:justify-center text-[13.5px] font-bold transition-colors duration-300 ${
                 active === index
                   ? "border-[#c91f28] bg-[#c91f28] text-white"
                   : "border-[#ececec] bg-white text-[#52525B] hover:border-[#c91f28] hover:text-[#c91f28]"

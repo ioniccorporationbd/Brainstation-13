@@ -142,7 +142,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
 
                     <Link
                       href={item.href}
-                      className="mt-6 inline-flex w-fit items-center gap-2.5 border border-[#ececec] px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
+                      className="mt-6 inline-flex w-fit items-center gap-2 border border-[#ececec] px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
                     >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
                     </Link>
 

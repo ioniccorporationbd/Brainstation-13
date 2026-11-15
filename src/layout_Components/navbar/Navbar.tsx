@@ -170,7 +170,7 @@ export default function Navbar() {
                   aria-expanded={activeMenu === item.key}
                   aria-haspopup="true"
                   aria-current={isRouteActive(item) ? "page" : undefined}
-                  className={`group flex items-center gap-[7px] ${t(linkBase)} ${
+                  className={`group flex items-center gap-2 ${t(linkBase)} ${
                     active
                       ? "text-white after:scale-x-100"
                       : "text-white hover:after:scale-x-100"

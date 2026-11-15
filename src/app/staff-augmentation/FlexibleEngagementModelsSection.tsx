@@ -152,7 +152,7 @@ function ExpandableCell({
         onClick={() => setOpen((current) => !current)}
         className="flex w-full items-start justify-between gap-4 text-left"
       >
-        <span className="max-w-[185px] text-[16px] font-medium leading-[1.35] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28]">
+        <span className="max-w-[185px] text-[16px] font-medium leading-[1.45] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28]">
           {t(short)}
         </span>
 

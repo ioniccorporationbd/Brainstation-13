@@ -24,7 +24,7 @@ export default async function FinalPickSection() {
 
             <a
               href="tel:+8801404055226"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#c91f28] px-8 py-4 text-[15px] font-bold text-[#c91f28] transition duration-300 hover:bg-[#c91f28] hover:text-white"
             >
               <Phone size={16} strokeWidth={2.2} />
               +88 01404055226

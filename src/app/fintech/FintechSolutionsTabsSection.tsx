@@ -90,7 +90,7 @@ export default function FintechSolutionsTabsSection() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveTab(item)}
-                className={`rounded-lg border px-4 py-2 text-[13.5px] font-semibold transition-colors duration-200 ${
+                className={`sm:shrink-0 rounded-lg border px-4 py-2 max-sm:min-h-[44px] max-sm:inline-flex max-sm:items-center max-sm:justify-center text-[13.5px] font-semibold transition-colors duration-200 ${
                   isActive
                     ? "border-[#c91f28] bg-[#c91f28] text-white"
                     : "border-[#ececec] bg-white text-black hover:border-[#c91f28] hover:text-[#c91f28]"

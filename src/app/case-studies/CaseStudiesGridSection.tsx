@@ -125,7 +125,7 @@ export default function CaseStudiesGridSection() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActive(category)}
-                className={`rounded-lg border px-4 py-2 text-[13.5px] font-semibold transition-colors duration-200 ${
+                className={`sm:shrink-0 rounded-lg border px-4 py-2 max-sm:min-h-[44px] max-sm:inline-flex max-sm:items-center max-sm:justify-center text-[13.5px] font-semibold transition-colors duration-200 ${
                   isActive
                     ? "border-[#c91f28] bg-[#c91f28] text-white"
                     : "border-[#ececec] bg-white text-black hover:border-[#c91f28] hover:text-[#c91f28]"
@@ -160,7 +160,7 @@ export default function CaseStudiesGridSection() {
                   <p className="mt-2.5 flex-1 text-[14px] leading-[1.65] text-[#52525B]">
                     {t(item.excerpt)}
                   </p>
-                  <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#ececec] pt-4">
+                  <div className="mt-5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 border-t border-[#ececec] pt-4">
                     <span className="text-[12px] font-semibold uppercase leading-tight tracking-[0.06em] text-[#7a7d84]">
                       {t(item.capability)}
                     </span>

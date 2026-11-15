@@ -137,7 +137,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                   key={item.title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`flex min-h-[52px] items-center gap-2 border px-2.5 py-2.5 text-left text-[12px] font-semibold leading-tight transition-colors duration-200 md:min-h-[56px] md:gap-3 md:px-4 md:py-3 md:text-[14px] ${
+                  className={`flex min-h-[52px] items-center gap-2 border px-2.5 py-2.5 max-sm:px-2 text-left text-[12px] font-semibold leading-tight transition-colors duration-200 md:min-h-[56px] md:gap-3 md:px-4 md:py-3 md:text-[14px] ${
                     isActive
                       ? "border-[#c91f28] bg-[#c91f28] text-white"
                       : "border-[#ececec] bg-white text-[#2b2b2b] hover:border-[#c91f28]"
@@ -153,7 +153,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                     <Icon size={16} strokeWidth={2} />
                   </span>
 
-                  <span className="leading-tight">{t(item.title)}</span>
+                  <span className="min-w-0 leading-tight">{t(item.title)}</span>
                 </button>
               );
             })}

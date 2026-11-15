@@ -89,7 +89,7 @@ export default function BlockchainEnterpriseSection() {
               key={item.tab}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full px-4 py-2.5 text-[13px] font-bold leading-none transition-colors duration-300 ${
+              className={`rounded-full px-4 py-2.5 max-sm:inline-flex max-sm:min-h-[44px] max-sm:items-center max-sm:justify-center text-[13px] font-bold leading-none transition-colors duration-300 ${
                 activeIndex === index
                   ? "bg-[#c91f28] text-white"
                   : "bg-transparent text-[#52525B] hover:bg-[#f7f7f7] hover:text-[#0a0a0a]"
