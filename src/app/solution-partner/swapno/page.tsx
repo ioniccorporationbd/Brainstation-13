@@ -24,12 +24,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Solution partner · Swapno")}</span>
-            <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Better together with Swapno")}</h1>
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("A collaboration that pairs the Swapno platform with engineering delivery from Magnetic Solution Limited, so joint clients get domain depth and build capacity in one arrangement.")}</p>
+            <h1 className="mt-6 max-w-[640px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Better together with Swapno")}</h1>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("A collaboration that pairs the Swapno platform with engineering delivery from Magnetic Solution Limited, so joint clients get domain depth and build capacity in one arrangement.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/schedule-a-call"
@@ -46,14 +46,14 @@ export default async function Page() {
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
               alt={t("Two teams planning together around a whiteboard")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-10">
-        <dl className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
+        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Platform")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Swapno product foundation")}</dd>
@@ -73,16 +73,16 @@ export default async function Page() {
         </dl>
       </section>
 
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The collaboration")}</p>
-            <h2 className="mt-3 max-w-[620px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Platform expertise plus engineering depth")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Swapno brings its platform and domain knowledge. Magnetic Solution Limited brings senior engineering, delivery discipline and the capacity to take a solution from pilot to production.")}</p>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Clients work with one combined team: one roadmap, one point of contact and one set of quality standards across both organisations.")}</p>
+            <h2 className="mt-3 max-w-[620px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Platform expertise plus engineering depth")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Swapno brings its platform and domain knowledge. Magnetic Solution Limited brings senior engineering, delivery discipline and the capacity to take a solution from pilot to production.")}</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Clients work with one combined team: one roadmap, one point of contact and one set of quality standards across both organisations.")}</p>
           </div>
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("How the work is divided")}</h3>
+            <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("How the work is divided")}</h3>
             <ul className="mt-5 space-y-3">
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -90,7 +90,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Solution scope and architecture: shaped jointly")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Solution scope and architecture: shaped jointly")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -98,7 +98,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Platform configuration and product fit: Swapno")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Platform configuration and product fit: Swapno")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -106,7 +106,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Custom engineering and integration: Magnetic Solution Limited")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Custom engineering and integration: Magnetic Solution Limited")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -114,78 +114,78 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Quality, security and release standards: shared")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Quality, security and release standards: shared")}</span>
               </li>
             </ul>
-            <p className="mt-6 rounded-lg bg-[#fafafa] px-4 py-3.5 text-[13px] leading-[1.6] text-[#55585e]">{t("Partnership terms, references and joint credentials are shared with prospective clients on request under NDA.")}</p>
+            <p className="mt-6 rounded-lg bg-[#fafafa] px-4 py-3.5 text-[13px] leading-[1.6] text-[#52525B]">{t("Partnership terms, references and joint credentials are shared with prospective clients on request under NDA.")}</p>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What the collaboration gives you")}</p>
-          <h2 className="mt-3 max-w-[760px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Practical benefits for a joint engagement")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Each item describes how the two teams work together on a live project.")}</p>
+          <h2 className="mt-3 max-w-[760px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Practical benefits for a joint engagement")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Each item describes how the two teams work together on a live project.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Handshake size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Joint solution design")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Architecture and scope shaped by both teams together.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Joint solution design")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Architecture and scope shaped by both teams together.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Rocket size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Faster delivery")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Reusable components and accelerators shorten the path to a working pilot.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Faster delivery")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Reusable components and accelerators shorten the path to a working pilot.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Layers size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Engineering depth")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Senior specialists across AI, cloud and enterprise stacks.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Engineering depth")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Senior specialists across AI, cloud and enterprise stacks.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ShieldCheck size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Quality assurance")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Shared QA and security standards on every joint engagement.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Quality assurance")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Shared QA and security standards on every joint engagement.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Headphones size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Ongoing support")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("A combined support path after launch, agreed in the contract.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Ongoing support")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("A combined support path after launch, agreed in the contract.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Target size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Shared accountability")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("One roadmap and one point of contact for the client.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Shared accountability")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("One roadmap and one point of contact for the client.")}</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Joint delivery")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How a combined engagement is set up")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How a combined engagement is set up")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 01
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Joint discovery")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Both teams meet the client together so scope is understood the same way.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Joint discovery")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Both teams meet the client together so scope is understood the same way.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -193,8 +193,8 @@ export default async function Page() {
                 02
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Division of work")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Responsibilities are written down before the build starts.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Division of work")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Responsibilities are written down before the build starts.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -202,8 +202,8 @@ export default async function Page() {
                 03
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Shared plan")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("One plan and one reporting rhythm cover both organisations.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Shared plan")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("One plan and one reporting rhythm cover both organisations.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -211,8 +211,8 @@ export default async function Page() {
                 04
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Combined QA")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Quality and security gates apply to every change, whichever team makes it.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Combined QA")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Quality and security gates apply to every change, whichever team makes it.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -220,20 +220,20 @@ export default async function Page() {
                 05
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Single support path")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("After launch the client has one route to support, not two.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Single support path")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("After launch the client has one route to support, not two.")}</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-[72px] pt-[8px] md:pb-[96px]">
-        <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+      <section className="bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Explore a joint engagement")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("Tell us the goal and we will bring the right combined team to the first call.")}</p>
+              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[34px]">{t("Explore a joint engagement")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Tell us the goal and we will bring the right combined team to the first call.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
