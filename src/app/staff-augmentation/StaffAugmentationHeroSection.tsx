@@ -59,7 +59,7 @@ export default function StaffAugmentationHeroSection() {
               href="/schedule-a-call"
               className="group inline-flex items-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
-              {t("Book a Free Consultation")}
+              {t("Book a Call")}
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>

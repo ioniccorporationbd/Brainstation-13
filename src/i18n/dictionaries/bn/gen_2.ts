@@ -82,7 +82,7 @@ export const gen_2: Dict = {
   "Book a Consultation": "কনসালটেশন বুক করুন",
   "Book a call": "কল বুক করুন",
   "Book a call in your timezone": "আপনার টাইমজোনে কল বুক করুন",
-  "Book a Free Consultation": "ফ্রি কনসালটেশনের জন্য যোগাযোগ করুন",
+  "Book a Call": "কল বুক করুন",
   "Book a cloud review": "ক্লাউড রিভিউ বুক করুন",
   "Book a commerce audit": "কমার্স অডিট বুক করুন",
   "Book a demo": "ডেমো বুক করুন",
