@@ -16,7 +16,7 @@ export default async function SoftwareItesHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Industry · IT & Software")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Software and IT services built to solve complex work")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Software and IT services built to solve complex work")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("We develop innovative digital solutions for ICT and software companies to adopt the latest technologies to solve complex business problems. We collaborate to build a mutually beneficial environment for both us and our clients.")}</p>
 

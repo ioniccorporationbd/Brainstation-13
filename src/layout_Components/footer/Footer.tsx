@@ -158,7 +158,7 @@ export default async function Footer() {
       {/* CTA Card */}
       <div className="brand-container pt-[60px]">
         <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[14px] border border-white/10 bg-[#0A0A0A] px-6 py-10 text-center">
-          <h2 className="text-[32px] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">{t("Ready to Scale Your Team?")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px]">{t("Ready to Scale Your Team?")}</h2>
 
           <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-white/70 sm:text-[16px] md:text-[17px]">{t("Let’s discuss how our resource augmentation and AI-powered development can accelerate your project delivery.")}</p>
 

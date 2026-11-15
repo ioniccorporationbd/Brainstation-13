@@ -16,7 +16,7 @@ export default async function DigitalWalletHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Case Study · Fintech")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Fueling financial inclusion with digital wallets")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Fueling financial inclusion with digital wallets")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("A digital wallet platform that brought secure, everyday financial services to underbanked communities at national scale.")}</p>
 

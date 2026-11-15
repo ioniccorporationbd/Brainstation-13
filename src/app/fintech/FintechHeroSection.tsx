@@ -16,7 +16,7 @@ export default async function FintechHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Fintech")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Fintech platforms built to scale")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Fintech platforms built to scale")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("We design and engineer digital banking, payment, wallet and lending products — from onboarding and KYC to transaction infrastructure that holds up under real-world load.")}</p>
 

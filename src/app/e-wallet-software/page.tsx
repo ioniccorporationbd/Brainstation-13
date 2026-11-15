@@ -161,7 +161,7 @@ export default async function Page() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Fintech · E-wallet")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("A wallet platform built for scale and trust")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("A wallet platform built for scale and trust")}</h1>
 
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("Customer wallets, agent or merchant payments and a ledger that reconciles per period — with the limits, tiering and monitoring a mobile money operation is examined on.")}</p>
 

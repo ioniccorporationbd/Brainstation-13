@@ -92,7 +92,7 @@ export default async function ResourcesPage() {
         <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Resources")}</span>
-            <h1 className="mt-6 text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Our resources")}</h1>
+            <h1 className="mt-6 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Our resources")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px]">{t("Everything you need to understand how we work and what we deliver — insights, proof of results, media, partnerships and guides, in one place.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link

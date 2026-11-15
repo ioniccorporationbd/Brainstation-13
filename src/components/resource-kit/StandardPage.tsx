@@ -244,7 +244,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
         <section className="bg-[#ffffff] px-6 py-[92px]">
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-[760px] text-center">
-              <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+              <h2 className="text-[clamp(27px,8vw,32px)] font-medium leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
                 {featuresTitle ?? "What you get"}
               </h2>
             </div>

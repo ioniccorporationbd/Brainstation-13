@@ -67,7 +67,7 @@ export default async function ScheduleACallPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Contact · Schedule a call")}</span>
 
-            <h1 className="mt-6 max-w-[560px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Request a call with the delivery team")}</h1>
+            <h1 className="mt-6 max-w-[560px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px]">{t("Request a call with the delivery team")}</h1>
 
             <p className="mt-6 max-w-[520px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17px]">{t("Tell us what the call needs to cover and when suits you. This page submits a booking request — a person confirms the exact time by email, so nothing is booked automatically.")}</p>
 

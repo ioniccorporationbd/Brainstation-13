@@ -59,7 +59,7 @@ export default async function ContactPage() {
       <section className="bg-white pb-12 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Contact")}</span>
-          <h1 className="mt-6 max-w-[820px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Let’s talk")}</h1>
+          <h1 className="mt-6 max-w-[820px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Let’s talk")}</h1>
           <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.")}</p>
         </div>
       </section>

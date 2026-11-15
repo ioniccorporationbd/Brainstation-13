@@ -35,7 +35,7 @@ export default async function ClientVideoTestimonialsSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[84px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[32px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
 
           <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.45] tracking-[-0.015em] text-[#52525B] md:text-[15px]"></p>
         </div>
