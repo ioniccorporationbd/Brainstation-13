@@ -16,8 +16,8 @@ export default async function DataScienceIndustriesSection() {
       <div className="brand-container">
         <div className="max-w-[700px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our experience in")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Industries")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("The data problems differ by sector; the discipline does not.")}</p>
+          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Industries")}</h2>
+          <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("The data problems differ by sector; the discipline does not.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -29,10 +29,10 @@ export default async function DataScienceIndustriesSection() {
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={19} />
               </span>
-              <h3 className="mt-4 text-[14.5px] font-semibold leading-[1.35] text-black">
+              <h3 className="text-[14.5px] md:text-[16px] leading-[1.35] mt-4 font-semibold text-black text-balance">
                 {t(item.title)}
               </h3>
-              <p className="mt-1.5 text-[13px] leading-[1.6] text-[#52525B]">
+              <p className="mt-1.5 text-[13px] leading-[1.6] text-[#52525B] text-pretty">
                 {t(item.description)}
               </p>
             </article>

@@ -50,8 +50,8 @@ export default async function CloudSolutionsCapabilitiesSection() {
       <div className="brand-container">
         <div className="max-w-[680px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What we can do")}</p>
-          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Cloud capabilities")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.6] text-[#52525B]">{t("Six disciplines that take a cloud estate from working to dependable.")}</p>
+          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Cloud capabilities")}</h2>
+          <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six disciplines that take a cloud estate from working to dependable.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -64,10 +64,10 @@ export default async function CloudSolutionsCapabilitiesSection() {
                 <capability.icon size={21} />
               </span>
 
-              <h3 className="mt-5 text-[16.5px] font-semibold leading-[1.3] text-black">
+              <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] mt-5 font-semibold text-black text-balance">
                 {t(capability.title)}
               </h3>
-              <p className="mt-2 text-[14.5px] leading-[1.65] text-[#52525B]">
+              <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                 {t(capability.description)}
               </p>
             </article>
@@ -77,7 +77,7 @@ export default async function CloudSolutionsCapabilitiesSection() {
         <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-xl border border-[#ececec] bg-[#fafafa] px-7 py-6 sm:flex-row sm:items-center md:px-9 md:py-7">
           <div>
             <p className="text-[15px] font-bold text-black md:text-[19px]">{t("Want a free architecture and cost review?")}</p>
-            <p className="mt-1.5 text-[14.5px] text-[#52525B]">{t("We’ll assess your current estate and outline a practical path forward.")}</p>
+            <p className="mt-1.5 text-[14.5px] text-[#52525B] text-pretty">{t("We’ll assess your current estate and outline a practical path forward.")}</p>
           </div>
 
           <Link

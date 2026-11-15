@@ -78,9 +78,9 @@ export default function BlockchainEnterpriseSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Industry Solutions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Blockchain for Enterprise")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Blockchain for Enterprise")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Our blockchain and Web3 solutions help financial institutions reduce risk, increase transparency, and operate with confidence — from secure transactions and real-time visibility to automated compliance and smarter decision-making.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Our blockchain and Web3 solutions help financial institutions reduce risk, increase transparency, and operate with confidence — from secure transactions and real-time visibility to automated compliance and smarter decision-making.")}</p>
         </div>
 
         <div className="mx-auto mt-10 flex max-w-[1000px] flex-wrap items-center justify-center gap-2 rounded-2xl border border-[#ececec] bg-white p-2">
@@ -103,11 +103,11 @@ export default function BlockchainEnterpriseSection() {
         <div className="mx-auto mt-8 max-w-[1100px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-8 md:px-12 md:py-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_0.95fr]">
             <div>
-              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
+              <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                 {t(activeItem.title)}
               </h3>
 
-              <p className="mt-4 max-w-[500px] text-[15.5px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">
+              <p className="mt-4 max-w-[500px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                 {t(activeItem.description)}
               </p>
 

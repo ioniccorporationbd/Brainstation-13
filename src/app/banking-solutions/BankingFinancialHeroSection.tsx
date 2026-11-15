@@ -16,9 +16,9 @@ export default async function BankingFinancialHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Banking & Financial Solutions")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.04] tracking-[-0.03em] text-black md:text-[52px] lg:text-[58px]">{t("Modern banking software, engineered for trust")}</h1>
+          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Modern banking software, engineered for trust")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[15px]">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Customized software solutions tailored for your unique banking and financial business needs — from retail and corporate internet banking to card services, automation and cloud infrastructure.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link

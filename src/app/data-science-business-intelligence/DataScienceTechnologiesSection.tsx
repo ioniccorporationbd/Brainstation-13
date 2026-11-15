@@ -23,9 +23,9 @@ export default async function DataScienceTechnologiesSection() {
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Stack")}</p>
-            <h2 className="mt-4 text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("Technologies & tools")}</h2>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Technologies & tools")}</h2>
           </div>
-          <p className="max-w-[430px] text-[14.5px] leading-[1.7] text-[#52525B]">{t("A sample of the platforms our data work runs on. Logo use does not imply partnership or certification.")}</p>
+          <p className="max-w-[430px] text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("A sample of the platforms our data work runs on. Logo use does not imply partnership or certification.")}</p>
         </div>
 
         <div

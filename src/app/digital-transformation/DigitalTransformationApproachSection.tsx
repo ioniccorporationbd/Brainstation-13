@@ -68,9 +68,9 @@ export default async function DigitalTransformationApproachSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Digital Transformation Process")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our Transformation Approach")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Transformation Approach")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, governance, or business continuity.")}</p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, governance, or business continuity.")}</p>
 
           <Link
             href="/schedule-a-call"
@@ -102,11 +102,11 @@ export default async function DigitalTransformationApproachSection() {
                   {t(item.eyebrow)}
                 </p>
 
-                <h3 className="mt-3 text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-3 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                   {t(item.title)}
                 </h3>
 
-                <p className="mt-2 text-[13.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-2 text-[13.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(item.description)}
                 </p>
               </article>

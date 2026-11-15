@@ -34,9 +34,9 @@ export default async function SharePointOfferedServicesSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Offered Services")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Offered Services")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Ten services across the SharePoint and Microsoft 365 estate.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Ten services across the SharePoint and Microsoft 365 estate.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -52,7 +52,7 @@ export default async function SharePointOfferedServicesSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="mt-5 text-[15.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[15.5px] md:text-[16px] leading-[1.35] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                   {t(service.title)}
                 </h3>
               </article>

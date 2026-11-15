@@ -72,7 +72,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Proven Results")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Case Studies")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Case Studies")}</h2>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1140px]">
@@ -132,11 +132,11 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                   </div>
 
                   <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 lg:px-12">
-                    <h3 className="max-w-[520px] text-[22px] font-semibold leading-[1.15] tracking-[-0.02em] text-[#000000] md:text-[30px]">
+                    <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[520px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">
                       {t(item.title)}
                     </h3>
 
-                    <p className="mt-5 max-w-[560px] text-[14px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
+                    <p className="mt-5 max-w-[560px] text-[14.5px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                       {t(item.description)}
                     </p>
 

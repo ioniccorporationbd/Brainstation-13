@@ -40,11 +40,11 @@ export default async function RelatedBlogsSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Insights")}</p>
 
-            <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("You might also like")}</h2>
+            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("You might also like")}</h2>
           </div>
 
           <div className="lg:pb-2">
-            <p className="max-w-[520px] text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Look through to find the perfect Blockchain/Web3 solution for your needs.")}</p>
+            <p className="max-w-[520px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Look through to find the perfect Blockchain/Web3 solution for your needs.")}</p>
 
             <Link
               href="/blog"
@@ -74,11 +74,11 @@ export default async function RelatedBlogsSection() {
                     {t(post.category)}
                   </span>
 
-                  <h3 className="mt-4 text-[19px] font-semibold leading-[1.35] tracking-[-0.02em] text-[#0a0a0a]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-4 font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                     {t(post.title)}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
+                  <p className="mt-3 flex-1 text-[14.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                     {t(post.description)}
                   </p>
 

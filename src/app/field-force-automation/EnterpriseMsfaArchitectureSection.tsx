@@ -69,9 +69,9 @@ export default async function EnterpriseMsfaArchitectureSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Architecture")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Secure. Scalable. Connected.")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Secure. Scalable. Connected.")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("A robust multi-tier architecture bridging offline field execution with your core enterprise systems.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("A robust multi-tier architecture bridging offline field execution with your core enterprise systems.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -106,11 +106,11 @@ export default async function EnterpriseMsfaArchitectureSection() {
                   <Icon size={20} strokeWidth={1.9} />
                 </div>
 
-                <h3 className="mt-5 text-[22px] font-semibold leading-tight tracking-[-0.02em] text-[#000000]">
+                <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-5 font-semibold tracking-[-0.02em] text-[#000000] text-balance">
                   {t(card.title)}
                 </h3>
 
-                <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#5f5f5f] text-pretty">
                   {t(card.description)}
                 </p>
               </article>

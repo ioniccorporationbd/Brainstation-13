@@ -30,9 +30,9 @@ export default async function BuildGameSection() {
         <div>
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Approach")}</p>
 
-          <h2 className="max-w-[560px] text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Build a Game With Us")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] max-w-[560px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Build a Game With Us")}</h2>
 
-          <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Get your game created from the ground up, or cover any production need with specialized knowledge and a team that ships.")}</p>
+          <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Get your game created from the ground up, or cover any production need with specialized knowledge and a team that ships.")}</p>
 
           <div className="mt-9 space-y-5">
             {steps.map((step) => (
@@ -45,11 +45,11 @@ export default async function BuildGameSection() {
                 </span>
 
                 <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                     {t(step.title)}
                   </h3>
 
-                  <p className="mt-1.5 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
+                  <p className="mt-1.5 text-[14.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                     {t(step.desc)}
                   </p>
                 </div>

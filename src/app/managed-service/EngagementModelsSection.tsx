@@ -36,9 +36,9 @@ export default async function EngagementModelsSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Engagement Models Tailored to You")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Engagement Models Tailored to You")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Choose the engagement model that fits your scope, timeline, and budget.")}</p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Choose the engagement model that fits your scope, timeline, and budget.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -54,11 +54,11 @@ export default async function EngagementModelsSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
                   {t(model.title)}
                 </h3>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(model.description)}
                 </p>
               </article>

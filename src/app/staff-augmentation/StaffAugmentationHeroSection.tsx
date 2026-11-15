@@ -46,13 +46,13 @@ export default function StaffAugmentationHeroSection() {
         <div>
           <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
-          <h1 className="max-w-[640px] text-[clamp(32px,8.9vw,40px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[56px] lg:text-[58px]">
+          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">
             {t("IT Staff Augmentation,")}
             <br className="hidden sm:block" />{" "}
             {t("Built for Speed.")}
           </h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
@@ -100,7 +100,7 @@ export default function StaffAugmentationHeroSection() {
                 <SwiperSlide key={`${t(review.company)}-${index}`}>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-[22px] font-bold leading-none tracking-[-0.02em] text-[#0a0a0a]">
+                      <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-bold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                         {t(review.company)}
                       </h3>
 
@@ -115,7 +115,7 @@ export default function StaffAugmentationHeroSection() {
                           ))}
                         </div>
 
-                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#52525B]">
+                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#52525B] text-pretty">
                           {t(review.rating)}
                         </p>
                       </div>
@@ -126,7 +126,7 @@ export default function StaffAugmentationHeroSection() {
                     </p>
 
                     <div className="mt-5 border-t border-[#ececec] pt-4">
-                      <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#52525B]">
+                      <p className="max-w-[280px] text-[13.5px] font-medium leading-[1.45] tracking-[-0.01em] text-[#52525B] text-pretty">
                         {t(review.author)}
                       </p>
                     </div>

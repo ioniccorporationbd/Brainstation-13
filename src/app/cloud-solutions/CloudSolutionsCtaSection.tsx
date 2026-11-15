@@ -10,8 +10,8 @@ export default async function CloudSolutionsCtaSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-[620px]">
-              <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[36px]">{t("Get more from your cloud")}</h2>
-              <p className="mt-3 text-[15.5px] leading-[1.7] text-[#52525B] md:text-[15px]">{t("Request a free architecture and cost review.")}</p>
+              <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Get more from your cloud")}</h2>
+              <p className="mt-3 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Request a free architecture and cost review.")}</p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

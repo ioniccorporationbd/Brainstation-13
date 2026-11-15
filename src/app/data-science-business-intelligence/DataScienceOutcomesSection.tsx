@@ -16,8 +16,8 @@ export default async function DataScienceOutcomesSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[700px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Benefits")}</p>
-            <h2 className="mt-3 text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px]">{t("What a working data stack changes")}</h2>
-            <p className="mt-3 text-[15px] leading-[1.7] text-[#52525B] md:text-[15.5px]">{t("Outcomes we review with every client — described, not scored.")}</p>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("What a working data stack changes")}</h2>
+            <p className="mt-3 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Outcomes we review with every client — described, not scored.")}</p>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -29,8 +29,8 @@ export default async function DataScienceOutcomesSection() {
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <item.icon size={19} />
                 </span>
-                <h3 className="mt-4 text-[15.5px] font-semibold text-black">{t(item.title)}</h3>
-                <p className="mt-1.5 text-[13.5px] leading-[1.65] text-[#52525B]">
+                <h3 className="text-[15.5px] md:text-[16px] leading-[1.35] mt-4 font-semibold text-black text-balance">{t(item.title)}</h3>
+                <p className="mt-1.5 text-[13.5px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.description)}
                 </p>
               </article>

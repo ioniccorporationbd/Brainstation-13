@@ -17,8 +17,8 @@ export default async function DataScienceProcessSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Implementation process")}</h2>
-            <p className="mt-4 max-w-[460px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("Four stages from the first data audit to a dashboard people keep open.")}</p>
+            <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Implementation process")}</h2>
+            <p className="mt-4 max-w-[460px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Four stages from the first data audit to a dashboard people keep open.")}</p>
 
             <Link
               href="/schedule-a-call"
@@ -37,10 +37,10 @@ export default async function DataScienceProcessSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-[16.5px] font-semibold leading-[1.3] text-black md:text-[17.5px]">
+                  <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] font-semibold text-black text-balance">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#52525B]">
+                  <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
                     {t(item.description)}
                   </p>
                 </div>

@@ -48,9 +48,9 @@ export default function ManagedServicesFaqSection() {
         <div className="text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("FAQ")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Frequently Asked Questions")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Frequently Asked Questions")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Everything you need to know about working with our managed delivery teams.")}</p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Everything you need to know about working with our managed delivery teams.")}</p>
         </div>
 
         <div className="mt-12 space-y-3">
@@ -97,7 +97,7 @@ export default function ManagedServicesFaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                       {t(faq.answer)}
                     </p>
                   </div>

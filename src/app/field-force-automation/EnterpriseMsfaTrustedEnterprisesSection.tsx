@@ -95,9 +95,9 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
         <div className="max-w-[760px]">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Proven in Production")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px]">{t("Trusted By Leading Enterprises")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Trusted By Leading Enterprises")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Enterprise-grade field execution trusted by large sales teams, pharmaceutical brands, retail networks, and multi-layer distribution organizations.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Enterprise-grade field execution trusted by large sales teams, pharmaceutical brands, retail networks, and multi-layer distribution organizations.")}</p>
         </div>
 
         <div className="mt-11 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -112,11 +112,11 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                 </span>
               </div>
 
-              <h3 className="mt-5 text-[19px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#000000]">
+              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#000000] text-balance">
                 {t(item.company)}
               </h3>
 
-              <p className="mt-3 text-[14px] font-medium leading-[1.65] text-[#5f5f5f]">
+              <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#5f5f5f] text-pretty">
                 {t(item.description)}
               </p>
             </article>
@@ -140,7 +140,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                   {t(item.value)}
                 </p>
 
-                <h3 className="mt-3 text-[15px] font-semibold leading-tight text-[#000000]">
+                <h3 className="text-[15px] md:text-[16px] leading-[1.35] mt-3 font-semibold text-[#000000] text-balance">
                   {t(item.title)}
                 </h3>
 
@@ -157,7 +157,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Ready")}</p>
 
-              <h3 className="mt-2.5 max-w-[560px] text-[22px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#000000] md:text-[26px]">{t("Built for high-volume, multi-territory field operations.")}</h3>
+              <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-2.5 max-w-[560px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">{t("Built for high-volume, multi-territory field operations.")}</h3>
 
               <div className="mt-3 inline-flex items-center gap-2">
                 <BarChart3 size={16} strokeWidth={2} className="text-[#c91f28]" />

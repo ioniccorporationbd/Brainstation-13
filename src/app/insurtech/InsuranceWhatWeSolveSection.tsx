@@ -43,7 +43,7 @@ export default async function InsuranceWhatWeSolveSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Challenges & Approach")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("What We Solve")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What We Solve")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -74,7 +74,7 @@ async function SolveCard({ block }: { block: SolveBlock }) {
         </div>
 
         <div>
-          <h3 className="text-[19px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0a0a0a]">
+          <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
             {t(block.title)}
           </h3>
 

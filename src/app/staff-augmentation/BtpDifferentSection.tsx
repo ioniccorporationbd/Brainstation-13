@@ -76,10 +76,10 @@ export default async function BtpDifferentSection() {
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
-            <h2 className="max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("What Makes Borderless Tech Professionals Different?")}</h2>
+            <h2 className="text-[clamp(27px,8vw,32px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Makes Borderless Tech Professionals Different?")}</h2>
           </div>
 
-          <p className="max-w-[640px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[15px] lg:pb-2">{t("The fastest, smartest, risk-free way to scale your engineering capacity without the hiring overhead. Build with pre-vetted talents, flexible models, local oversight, and continuity from day one.")}</p>
+          <p className="max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] lg:pb-2 text-pretty">{t("The fastest, smartest, risk-free way to scale your engineering capacity without the hiring overhead. Build with pre-vetted talents, flexible models, local oversight, and continuity from day one.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -95,11 +95,11 @@ export default async function BtpDifferentSection() {
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.32] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                   {t(card.title)}
                 </h3>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(card.description)}
                 </p>
               </article>

@@ -55,9 +55,9 @@ export default async function TechnologyConsultingPartnerSection() {
         <div className="mx-auto max-w-[820px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Consulting Partnership")}</p>
 
-          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] sm:text-[34px] lg:text-[40px]">{t("Why Partner with Magnetic Solution Limited?")}</h2>
+          <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Why Partner with Magnetic Solution Limited?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("We help organizations make better technology decisions with practical guidance, proven delivery models, and enterprise-ready support from strategy to execution.")}</p>
+          <p className="mx-auto mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We help organizations make better technology decisions with practical guidance, proven delivery models, and enterprise-ready support from strategy to execution.")}</p>
         </div>
 
         {/* Cards - 3 per row for 5 items */}
@@ -74,11 +74,11 @@ export default async function TechnologyConsultingPartnerSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
                   {t(item.title)}
                 </h3>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(item.description)}
                 </p>
               </article>

@@ -20,7 +20,7 @@ export default async function CloudSolutionsIntroSection() {
     <section className="relative overflow-hidden bg-white pb-[52px] pt-[8px] text-black md:pb-[104px]">
       <div className="brand-container">
         <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Overview")}</p>
-        <h2 className="mt-4 max-w-[760px] text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Cloud that your team can actually operate")}</h2>
+        <h2 className="text-[clamp(27px,8vw,32px)] mt-4 max-w-[760px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Cloud that your team can actually operate")}</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
           {blocks.map((block) => (
@@ -32,11 +32,11 @@ export default async function CloudSolutionsIntroSection() {
                 <block.icon size={22} />
               </span>
 
-              <h3 className="mt-5 text-[19px] font-semibold tracking-[-0.01em] text-black md:text-[21px]">
+              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-black text-balance">
                 {t(block.title)}
               </h3>
 
-              <p className="mt-3 text-[15px] leading-[1.6] text-[#52525B] md:text-[15.5px]">
+              <p className="mt-3 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                 {t(block.text)}
               </p>
             </article>

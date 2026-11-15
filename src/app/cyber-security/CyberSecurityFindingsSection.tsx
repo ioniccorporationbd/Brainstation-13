@@ -35,8 +35,8 @@ export default async function CyberSecurityFindingsSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The threat landscape")}</p>
-            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Our findings")}</h2>
-            <p className="mt-4 max-w-[440px] text-[15.5px] leading-[1.6] text-[#52525B]">{t("Published research and public breach cases show where attackers concentrate and where response time pays back.")}</p>
+            <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Our findings")}</h2>
+            <p className="mt-4 max-w-[440px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Published research and public breach cases show where attackers concentrate and where response time pays back.")}</p>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-[#ececec]">
               <img
@@ -61,7 +61,7 @@ export default async function CyberSecurityFindingsSection() {
                     <p className="text-[12.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
                       {t(item.source)}
                     </p>
-                    <p className="mt-1.5 text-[14.5px] leading-[1.7] text-[#52525B] sm:text-[15px]">
+                    <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] sm:text-[15px] text-pretty">
                       {t(item.text)}
                     </p>
                   </div>

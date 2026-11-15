@@ -97,9 +97,9 @@ export default async function ShopifyAppsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Shopify Apps")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("We design, build, and operate high-performance Shopify apps that bring real value to merchants.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We design, build, and operate high-performance Shopify apps that bring real value to merchants.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -117,11 +117,11 @@ export default async function ShopifyAppsSection() {
                 />
               </div>
 
-              <h3 className="mt-4 text-[15px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+              <h3 className="text-[15px] md:text-[16px] leading-[1.35] mt-4 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                 {t(app.title)}
               </h3>
 
-              <p className="mt-2.5 flex-1 text-[13.5px] font-medium leading-[1.6] text-[#52525B]">
+              <p className="mt-2.5 flex-1 text-[13.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                 {t(app.description)}
               </p>
 
@@ -138,7 +138,7 @@ export default async function ShopifyAppsSection() {
 
         <div className="mx-auto mt-10 max-w-[1000px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <h3 className="max-w-[640px] text-[20px] font-semibold leading-[1.4] tracking-[-0.02em] text-[#0a0a0a] md:text-[24px]">{t("Let's discuss how our proven Shopify expertise can drive similar results for your eCommerce business.")}</h3>
+            <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[640px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("Let's discuss how our proven Shopify expertise can drive similar results for your eCommerce business.")}</h3>
 
             <Link
               href="/schedule-a-call"

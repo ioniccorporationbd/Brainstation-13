@@ -56,9 +56,9 @@ export default async function BlockchainCapabilitySection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Capabilities")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Turning Blockchain Complexity into Business Capability")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Turning Blockchain Complexity into Business Capability")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Six capability areas across settlement, compliance and tokenized assets.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six capability areas across settlement, compliance and tokenized assets.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -74,11 +74,11 @@ export default async function BlockchainCapabilitySection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="mt-5 text-[16.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                   {t(service.title)}
                 </h3>
 
-                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                   {t(service.description)}
                 </p>
               </article>
@@ -87,7 +87,7 @@ export default async function BlockchainCapabilitySection() {
         </div>
 
         <div className="mx-auto mt-6 flex max-w-[420px] flex-col items-center rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-10 text-center">
-          <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">{t("Have something more specific in mind?")}</h3>
+          <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Have something more specific in mind?")}</h3>
 
           <Link
             href="/contact"

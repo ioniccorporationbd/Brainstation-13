@@ -42,9 +42,9 @@ export default async function OurServiceSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Do")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our Services")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Services")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("End-to-end game development services — engineering, art and design handled by one team.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("End-to-end game development services — engineering, art and design handled by one team.")}</p>
         </div>
 
         <div className="mt-14 space-y-12 md:space-y-16">
@@ -73,13 +73,13 @@ export default async function OurServiceSection() {
                 </div>
 
                 <div className={isReverse ? "lg:order-1" : ""}>
-                  <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[30px]">
+                  <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                     {t(item.title)}
                   </h3>
 
                   <div className="mt-4 h-[3px] w-14 rounded-full bg-[#c91f28]" />
 
-                  <p className="mt-5 max-w-[520px] text-[15.5px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
+                  <p className="mt-5 max-w-[520px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                     {t(item.desc)}
                   </p>
                 </div>

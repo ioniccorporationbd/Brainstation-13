@@ -33,7 +33,7 @@ export default async function EcommerceStackSection() {
           <div className="max-w-[640px]">
             <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Architecture")}</p>
 
-            <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[36px]">{t("Built for the modern commerce stack")}</h2>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Built for the modern commerce stack")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -49,11 +49,11 @@ export default async function EcommerceStackSection() {
                     <Icon size={18} strokeWidth={2.1} />
                   </span>
 
-                  <h3 className="mt-4 text-[15px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                  <h3 className="text-[15px] md:text-[16px] leading-[1.35] mt-4 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                     {t(point.title)}
                   </h3>
 
-                  <p className="mt-1.5 text-[13.5px] font-medium leading-[1.6] text-[#52525B]">
+                  <p className="mt-1.5 text-[13.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                     {t(point.description)}
                   </p>
                 </div>

@@ -13,9 +13,9 @@ export default async function MvpIntroSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("MVP Foundation")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("What Is an MVP?")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Is an MVP?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[680px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("A Minimum Viable Product is the simplest version of your product that delivers core value to real users — so you can test product-market fit, gather feedback, and iterate quickly without overbuilding.")}</p>
+          <p className="mx-auto mt-5 max-w-[680px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A Minimum Viable Product is the simplest version of your product that delivers core value to real users — so you can test product-market fit, gather feedback, and iterate quickly without overbuilding.")}</p>
         </div>
 
         {/* Image + Points */}
@@ -31,9 +31,9 @@ export default async function MvpIntroSection() {
           </div>
 
           <div>
-            <h3 className="text-[22px] font-semibold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a] md:text-[26px]">{t("Focus on what matters, prove what works")}</h3>
+            <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">{t("Focus on what matters, prove what works")}</h3>
 
-            <p className="mt-4 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("We strip the product down to the essential features that validate your idea, saving time, budget, and risk compared to full-scale development.")}</p>
+            <p className="mt-4 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We strip the product down to the essential features that validate your idea, saving time, budget, and risk compared to full-scale development.")}</p>
 
             <ul className="mt-7 space-y-4">
               {highlights.map((item) => (

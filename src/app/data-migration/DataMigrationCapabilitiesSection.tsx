@@ -89,9 +89,9 @@ export default async function DataMigrationCapabilitiesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Why Magnetic")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Why Magnetic Solution Limited")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Why Magnetic Solution Limited")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("A migration partner that pairs deep technical depth with a process built for accuracy, security, and minimal downtime.")}</p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A migration partner that pairs deep technical depth with a process built for accuracy, security, and minimal downtime.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -108,11 +108,11 @@ export default async function DataMigrationCapabilitiesSection() {
                 </div>
 
                 <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                     {t(reason.title)}
                   </h3>
 
-                  <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                  <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                     {t(reason.description)}
                   </p>
                 </div>

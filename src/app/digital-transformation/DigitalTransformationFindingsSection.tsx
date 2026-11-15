@@ -31,9 +31,9 @@ export default async function DigitalTransformationFindingsSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What The Data Shows")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our Findings")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Findings")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Patterns we consistently observe across legacy modernization engagements.")}</p>
+          <p className="mx-auto mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Patterns we consistently observe across legacy modernization engagements.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -46,11 +46,11 @@ export default async function DigitalTransformationFindingsSection() {
                 {String(index + 1).padStart(2, "0")}
               </span>
 
-              <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0a0a0a]">
+              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-4 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                 {t(item.title)}
               </h3>
 
-              <p className="mt-2 text-[14px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+              <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                 {t(item.text)}
               </p>
             </article>

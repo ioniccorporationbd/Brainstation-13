@@ -53,7 +53,7 @@ export default function StaffAugmentationFaqSection() {
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[104px]">
       <div className="mx-auto max-w-[1000px]">
-        <h2 className="text-center text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Frequently Asked Questions")}</h2>
+        <h2 className="text-[clamp(27px,8vw,32px)] text-center font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Frequently Asked Questions")}</h2>
 
         <div className="mt-12">
           {visibleFaqs.map((faq, index) => {
@@ -89,7 +89,7 @@ export default function StaffAugmentationFaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-[820px] text-[15px] font-medium leading-[1.7] tracking-[-0.01em] text-[#52525B] md:text-[15px]">
+                    <p className="max-w-[820px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">
                       {t(faq.answer)}
                     </p>
                   </div>

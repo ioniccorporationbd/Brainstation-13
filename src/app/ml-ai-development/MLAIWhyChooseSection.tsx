@@ -50,9 +50,9 @@ export default async function MLAIWhyChooseSection() {
         <div className="mx-auto max-w-[820px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Why Magnetic")}</p>
 
-          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Why Choose Magnetic Solution Limited for Machine Learning Development?")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Why Choose Magnetic Solution Limited for Machine Learning Development?")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("A team that pairs deep data-science expertise with a delivery process built for reliability, security, and measurable business impact.")}</p>
+          <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A team that pairs deep data-science expertise with a delivery process built for reliability, security, and measurable business impact.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -68,7 +68,7 @@ export default async function MLAIWhyChooseSection() {
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <p className="text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(reason.title)}
                 </p>
               </article>

@@ -35,9 +35,9 @@ export default async function ClientVideoTestimonialsSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[84px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[48px]">{t("Let's Hear Our Clients")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Let's Hear Our Clients")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.45] tracking-[-0.015em] text-[#52525B] md:text-[15px]"></p>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.45] tracking-[-0.015em] text-[#52525B] md:text-[16px] text-pretty"></p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -55,11 +55,11 @@ export default async function ClientVideoTestimonialsSection() {
               </div>
 
               <div className="mt-5">
-                <h3 className="text-[20px] font-semibold leading-[1.25] tracking-[-0.015em] text-[#0a0a0a]">
+                <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
                   {t(video.title)}
                 </h3>
 
-                <p className="mt-2 text-[15px] font-medium tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-2 text-[15px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(video.subtitle)}
                 </p>
               </div>

@@ -20,9 +20,9 @@ export default async function CaseStudiesSection() {
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Case Studies")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Complex Stories, Rendered Simply")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Complex Stories, Rendered Simply")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
+          <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap justify-center gap-3">
@@ -55,9 +55,9 @@ export default async function CaseStudiesSection() {
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Automotive AR Experience")}</p>
 
-            <h3 className="mt-3 text-[26px] font-semibold leading-[1.15] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">{t("Driver’s Guide for Nissan")}</h3>
+            <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-3 font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("Driver’s Guide for Nissan")}</h3>
 
-            <p className="mt-4 max-w-[520px] text-[15.5px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
+            <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
 
             <Link
               href="/case-studies"
@@ -67,19 +67,19 @@ export default async function CaseStudiesSection() {
 
             <div className="mt-8 grid grid-cols-2 gap-8 border-t border-[#ececec] pt-7">
               <div>
-                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
+                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold tracking-[-0.02em] text-[#c91f28] text-balance leading-[1.4]">
                   80%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#52525B]">{t("Faster knowledge access")}</p>
+                <p className="mt-2 text-[14.5px] font-medium leading-[1.45] text-[#52525B] text-pretty">{t("Faster knowledge access")}</p>
               </div>
 
               <div>
-                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28]">
+                <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold tracking-[-0.02em] text-[#c91f28] text-balance leading-[1.4]">
                   99.5%
                 </h4>
 
-                <p className="mt-2 text-[14px] font-medium leading-[1.45] text-[#52525B]">{t("Better customer retention")}</p>
+                <p className="mt-2 text-[14.5px] font-medium leading-[1.45] text-[#52525B] text-pretty">{t("Better customer retention")}</p>
               </div>
             </div>
           </div>

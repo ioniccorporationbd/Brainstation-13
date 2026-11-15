@@ -97,9 +97,9 @@ export default function MoodleReadyPluginsSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Extensions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Moodle Ready Plugins")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Moodle Ready Plugins")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Plugins we build, integrate and maintain for Moodle sites.")}</p>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-2.5">
@@ -123,11 +123,11 @@ export default function MoodleReadyPluginsSection() {
         <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
             <div>
-              <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0a0a0a] md:text-[32px]">
+              <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                 {t(plugin.title)}
               </h3>
 
-              <p className="mt-4 max-w-[560px] text-[15.5px] font-medium leading-[1.7] text-[#52525B] md:text-[15px]">
+              <p className="mt-4 max-w-[560px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                 {t(plugin.description)}
               </p>
             </div>

@@ -50,9 +50,9 @@ export default async function MLAICapabilitiesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Deliver")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our AI Capabilities")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our AI Capabilities")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("End-to-end machine learning and AI engineering — from data preparation and model building to deployment, monitoring, and optimization.")}</p>
+          <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("End-to-end machine learning and AI engineering — from data preparation and model building to deployment, monitoring, and optimization.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -74,7 +74,7 @@ export default async function MLAICapabilitiesSection() {
                   </span>
                 </div>
 
-                <p className="mt-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B]">
+                <p className="mt-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                   {t(capability.title)}
                 </p>
               </article>

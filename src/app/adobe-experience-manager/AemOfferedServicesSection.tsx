@@ -25,9 +25,9 @@ export default async function AemOfferedServicesSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Offered Services")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Offered Services")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("Six services that cover the full AEM platform lifecycle.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six services that cover the full AEM platform lifecycle.")}</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -43,7 +43,7 @@ export default async function AemOfferedServicesSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="text-[16.5px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
                   {t(service.title)}
                 </h3>
               </article>

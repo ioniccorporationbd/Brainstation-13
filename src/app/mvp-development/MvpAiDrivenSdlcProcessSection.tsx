@@ -174,9 +174,9 @@ export default async function MvpAiDrivenSdlcProcessSection() {
         <div className="mx-auto max-w-[820px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("AI-Powered MVP Delivery")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Our AI-Driven SDLC Process For MVP")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our AI-Driven SDLC Process For MVP")}</h2>
 
-          <p className="mx-auto mt-5 max-w-[700px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[15px]">{t("From requirement analysis to release automation, our AI-assisted workflow helps teams build, test, and launch MVPs faster with better clarity, quality, and delivery control.")}</p>
+          <p className="mx-auto mt-5 max-w-[700px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("From requirement analysis to release automation, our AI-assisted workflow helps teams build, test, and launch MVPs faster with better clarity, quality, and delivery control.")}</p>
         </div>
 
         {/* 6 cards - 3 per row desktop, 2 tablet, 1 mobile */}
@@ -195,7 +195,7 @@ export default async function MvpAiDrivenSdlcProcessSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-[#0a0a0a]">
+                    <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
                       {t(step.title)}
                     </h3>
                     <p className="mt-0.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
@@ -207,10 +207,10 @@ export default async function MvpAiDrivenSdlcProcessSection() {
                 <div className="mt-5 flex-1 space-y-4 border-t border-[#f0f0f0] pt-5">
                   {step.items.map((item, itemIndex) => (
                     <div key={item.title}>
-                      <h4 className="text-[14px] font-bold leading-[1.35] tracking-[-0.01em] text-[#0a0a0a]">
+                      <h4 className="text-[14px] font-bold tracking-[-0.01em] text-[#0a0a0a] text-balance leading-[1.4]">
                         {itemIndex + 1}. {t(item.title)}
                       </h4>
-                      <p className="mt-1.5 text-[13px] font-medium leading-[1.5] tracking-[-0.01em] text-[#52525B]">
+                      <p className="mt-1.5 text-[13px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                         {t(item.description)}
                       </p>
                     </div>

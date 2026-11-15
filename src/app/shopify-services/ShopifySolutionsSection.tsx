@@ -74,9 +74,9 @@ export default async function ShopifySolutionsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Solutions")}</p>
 
-          <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">{t("Shopify Solutions We Deliver")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Solutions We Deliver")}</h2>
 
-          <p className="mt-4 text-[15px] font-medium leading-[1.65] text-[#52525B] md:text-[15px]">{t("From fast-growing startups to established enterprise brands, we serve merchants, product companies, and B2B clients that demand more than out-of-the-box Shopify.")}</p>
+          <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("From fast-growing startups to established enterprise brands, we serve merchants, product companies, and B2B clients that demand more than out-of-the-box Shopify.")}</p>
         </div>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-2.5">
@@ -108,11 +108,11 @@ export default async function ShopifySolutionsSection() {
               </div>
 
               <div className="flex flex-1 flex-col p-6 md:p-7">
-                <h3 className="text-[20px] font-semibold leading-[1.28] tracking-[-0.02em] text-[#0a0a0a]">
+                <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
                   {t(solution.title)}
                 </h3>
 
-                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#52525B]">
+                <p className="mt-3 text-[14.5px] font-medium leading-[1.6] text-[#52525B] text-pretty">
                   {t(solution.description)}
                 </p>
 
