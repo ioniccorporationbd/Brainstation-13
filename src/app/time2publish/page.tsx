@@ -24,12 +24,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Product · Publishing")}</span>
-            <h1 className="mt-6 max-w-[640px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("From manuscript to live in one flow")}</h1>
-            <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("An end-to-end publishing platform for authoring, review, approval and digital distribution — with versioning and approvals instead of spreadsheet chaos.")}</p>
+            <h1 className="mt-6 max-w-[640px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("From manuscript to live in one flow")}</h1>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[19px]">{t("An end-to-end publishing platform for authoring, review, approval and digital distribution — with versioning and approvals instead of spreadsheet chaos.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/schedule-a-call"
@@ -46,14 +46,14 @@ export default async function Page() {
             <img
               src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1400&auto=format&fit=crop"
               alt={t("Library shelves of books representing a publishing workflow")}
-              className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-10">
-        <dl className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
+        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Authoring")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Structured and collaborative")}</dd>
@@ -73,16 +73,16 @@ export default async function Page() {
         </dl>
       </section>
 
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why Time2Publish")}</p>
-            <h2 className="mt-3 max-w-[620px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Publishing workflows break in the hand-offs")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Drafts arrive by email, review comments live in three places, and the approved version is whatever someone last attached. Content that has to be reused across print and digital loses structure along the way.")}</p>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Time2Publish keeps the whole pipeline in one place: authors, editors and production teams work on the same structured content, with approvals that cannot be lost.")}</p>
+            <h2 className="mt-3 max-w-[620px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Publishing workflows break in the hand-offs")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Drafts arrive by email, review comments live in three places, and the approved version is whatever someone last attached. Content that has to be reused across print and digital loses structure along the way.")}</p>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Time2Publish keeps the whole pipeline in one place: authors, editors and production teams work on the same structured content, with approvals that cannot be lost.")}</p>
           </div>
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("The pipeline it replaces")}</h3>
+            <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("The pipeline it replaces")}</h3>
             <ul className="mt-5 space-y-3">
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -90,7 +90,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Drafting in shared documents with manual version naming")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Drafting in shared documents with manual version naming")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -98,7 +98,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Review cycles tracked in email threads and spreadsheets")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Review cycles tracked in email threads and spreadsheets")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -106,7 +106,7 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Approval by whoever has the latest file")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Approval by whoever has the latest file")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CircleDot
@@ -114,78 +114,78 @@ export default async function Page() {
                   strokeWidth={2.2}
                   className="mt-[3px] shrink-0 text-[#c91f28]"
                 />
-                <span className="text-[14px] leading-[1.6] text-[#55585e]">{t("Re-formatting the same content separately for each channel")}</span>
+                <span className="text-[14px] leading-[1.6] text-[#52525B]">{t("Re-formatting the same content separately for each channel")}</span>
               </li>
             </ul>
-            <p className="mt-6 rounded-lg bg-[#fafafa] px-4 py-3.5 text-[13px] leading-[1.6] text-[#55585e]">{t("Existing editorial processes are mapped during onboarding, so the platform matches how your titles are actually produced.")}</p>
+            <p className="mt-6 rounded-lg bg-[#fafafa] px-4 py-3.5 text-[13px] leading-[1.6] text-[#52525B]">{t("Existing editorial processes are mapped during onboarding, so the platform matches how your titles are actually produced.")}</p>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
-          <h2 className="mt-3 max-w-[760px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("Publishing, streamlined")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15.5px] leading-[1.7] text-[#55585e]">{t("Covers authoring through distribution, with an audit trail across the whole pipeline.")}</p>
+          <h2 className="mt-3 max-w-[760px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Publishing, streamlined")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Covers authoring through distribution, with an audit trail across the whole pipeline.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <PenLine size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Collaborative authoring")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Structured content creation with real-time editing.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Collaborative authoring")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Structured content creation with real-time editing.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <CircleCheck size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Review & approval")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Versioned, auditable editorial workflows.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Review & approval")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Versioned, auditable editorial workflows.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Send size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Digital distribution")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Publish to web, app and print-ready formats from one source.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Digital distribution")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Publish to web, app and print-ready formats from one source.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <BookOpen size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Content reuse")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Structured content that repurposes across channels.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Content reuse")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Structured content that repurposes across channels.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <BarChart3 size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Analytics")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Engagement and usage insight for every title.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Analytics")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Engagement and usage insight for every title.")}</p>
             </article>
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Lock size={21} strokeWidth={1.9} />
               </span>
-              <h3 className="mt-5 text-[16.5px] font-bold tracking-[-0.01em] text-black">{t("Access control")}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#55585e]">{t("Role-based permissions across teams and titles.")}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black">{t("Access control")}</h3>
+              <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Role-based permissions across teams and titles.")}</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-[72px] md:py-[96px]">
-        <div className="mx-auto max-w-[1240px]">
+      <section className="bg-white py-[56px] md:py-[104px]">
+        <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Workflow")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("How a title moves through the platform")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How a title moves through the platform")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 01
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Create the title")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Structure, metadata and contributors are set up once.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Create the title")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Structure, metadata and contributors are set up once.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -193,8 +193,8 @@ export default async function Page() {
                 02
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Author and review")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Editors work on the same structured content, with comments attached to versions.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Author and review")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Editors work on the same structured content, with comments attached to versions.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -202,8 +202,8 @@ export default async function Page() {
                 03
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Approve")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Approval is recorded against a specific version, not a file name.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Approve")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Approval is recorded against a specific version, not a file name.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -211,8 +211,8 @@ export default async function Page() {
                 04
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Publish")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Outputs are generated for each channel from the approved source.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Publish")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Outputs are generated for each channel from the approved source.")}</p>
               </div>
             </li>
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
@@ -220,20 +220,20 @@ export default async function Page() {
                 05
               </span>
               <div className="md:flex md:flex-1 md:items-start md:gap-8">
-                <h3 className="text-[16.5px] font-bold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Measure")}</h3>
-                <p className="mt-2 text-[14.5px] leading-[1.7] text-[#55585e] md:mt-0">{t("Usage insight feeds the next edition or revision.")}</p>
+                <h3 className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-black md:w-[260px] md:shrink-0">{t("Measure")}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:mt-0">{t("Usage insight feeds the next edition or revision.")}</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-[72px] pt-[8px] md:pb-[96px]">
-        <div className="mx-auto max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+      <section className="bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[24px] font-bold leading-[1.18] tracking-[-0.02em] text-black md:text-[30px]">{t("Modernise your publishing workflow")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] leading-[1.7] text-[#55585e]">{t("See how Time2Publish fits your editorial process, using one of your own titles.")}</p>
+              <h2 className="text-[27px] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[34px]">{t("Modernise your publishing workflow")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("See how Time2Publish fits your editorial process, using one of your own titles.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Link
