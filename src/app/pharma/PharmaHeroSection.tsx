@@ -11,14 +11,14 @@ const facts = [
 export default async function PharmaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Industry · Pharma")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-black md:text-[46px] lg:text-[52px]">{t("Pharma technology for regulated markets")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[32px] font-semibold leading-[1.1] tracking-[-0.03em] text-black md:text-[48px] lg:text-[56px]">{t("Pharma technology for regulated markets")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.75] text-[#55585e] md:text-[17.5px]">{t("We build healthcare and pharmaceutical software that meets the demands of patients, healthcare professionals and the teams that serve them.")}</p>
+          <p className="mt-6 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[17.5px]">{t("We build healthcare and pharmaceutical software that meets the demands of patients, healthcare professionals and the teams that serve them.")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -34,7 +34,7 @@ export default async function PharmaHeroSection() {
 
           <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3">
             {facts.map((fact) => (
-              <li key={fact.label} className="flex items-center gap-2 text-[13.5px] font-medium text-[#55585e]">
+              <li key={fact.label} className="flex items-center gap-2 text-[13.5px] font-medium text-[#52525B]">
                 <fact.icon size={17} className="text-[#c91f28]" />
                 {t(fact.label)}
               </li>
@@ -46,20 +46,20 @@ export default async function PharmaHeroSection() {
           <img
             src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1400&auto=format&fit=crop"
             alt={t("Laboratory pipette dispensing samples during pharmaceutical research")}
-            className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+            className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
           />
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-[1240px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
+      <div className="mx-auto mt-14 brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Overview")}</p>
-            <h2 className="mt-3 text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-black md:text-[30px]">{t("Pharma solutions, integration and products on your comfort level")}</h2>
+            <h2 className="mt-3 text-[27px] font-semibold leading-[1.2] tracking-[-0.02em] text-black md:text-[30px]">{t("Pharma solutions, integration and products on your comfort level")}</h2>
             <h3 className="mt-5 text-[14px] font-bold uppercase leading-[1.5] tracking-[0.06em] text-black">{t("Big data power for your infield force activities, paired with the comfort of simplicity")}</h3>
           </div>
 
-          <p className="text-[15px] leading-[1.8] text-[#55585e]">{t("In addition to individual solutions for specialized requirements, we try to transfer our know-how into products that we offer as Software as a Service. In this way, many customers benefit from proven processes. Based on the best practices for customer data platforms we have developed products that address the critical challenges pharma companies face today.")}</p>
+          <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("In addition to individual solutions for specialized requirements, we try to transfer our know-how into products that we offer as Software as a Service. In this way, many customers benefit from proven processes. Based on the best practices for customer data platforms we have developed products that address the critical challenges pharma companies face today.")}</p>
         </div>
       </div>
     </section>

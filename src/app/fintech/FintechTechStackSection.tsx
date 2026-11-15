@@ -19,13 +19,13 @@ const tiles = [...stack, ...stack];
 export default async function FintechTechStackSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[720px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Technology")}</p>
-            <h2 className="mt-3 max-w-[560px] text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">{t("The stack we build on")}</h2>
-            <p className="mt-3 text-[15px] leading-[1.7] text-[#55585e]">{t("Proven, well-supported technologies chosen for security, performance and long-term maintainability.")}</p>
+            <h2 className="mt-3 max-w-[560px] text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("The stack we build on")}</h2>
+            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Proven, well-supported technologies chosen for security, performance and long-term maintainability.")}</p>
           </div>
         </div>
 

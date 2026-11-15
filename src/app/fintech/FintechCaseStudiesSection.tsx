@@ -73,13 +73,13 @@ export default function FintechCaseStudiesSection() {
   const [active, setActive] = useState<CaseStudy>(caseStudies[0]);
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Financial products in production")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("A few engagements that show how fintech delivery looks in practice.")}</p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Financial products in production")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("A few engagements that show how fintech delivery looks in practice.")}</p>
           </div>
 
           <Link
@@ -111,7 +111,7 @@ export default function FintechCaseStudiesSection() {
           })}
         </div>
 
-        <div className="mt-7 grid grid-cols-1 items-center gap-8 rounded-2xl border border-[#ececec] bg-[#fafafa] p-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:p-9">
+        <div className="mt-7 grid grid-cols-1 items-center gap-8 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:p-9">
           <div className="overflow-hidden rounded-xl border border-[#ececec] bg-white">
             <img
               key={active.image}
@@ -140,13 +140,13 @@ export default function FintechCaseStudiesSection() {
               ))}
             </ul>
 
-            <p className="mt-5 text-[15px] leading-[1.8] text-[#55585e]">{t(active.description)}</p>
+            <p className="mt-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t(active.description)}</p>
 
             <div className="mt-6">
               <h4 className="text-[14px] font-bold uppercase tracking-[0.1em] text-black">{t("Key results")}</h4>
               <ul className="mt-3 space-y-2">
                 {active.results.map((result) => (
-                  <li key={result} className="flex gap-3 text-[14.5px] leading-[1.6] text-[#55585e]">
+                  <li key={result} className="flex gap-3 text-[14.5px] leading-[1.6] text-[#52525B]">
                     <span className="mt-[9px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#c91f28]" />
                     <span>{t(result)}</span>
                   </li>

@@ -32,12 +32,12 @@ const strategies = [
 export default async function FintechStrategiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Proven strategies")}</p>
-          <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("How we solve complex banking challenges")}</h2>
-          <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Approach notes from the products we build, and the problems they solve for financial institutions.")}</p>
+          <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("How we solve complex banking challenges")}</h2>
+          <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Approach notes from the products we build, and the problems they solve for financial institutions.")}</p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -45,13 +45,13 @@ export default async function FintechStrategiesSection() {
             <Link
               key={item.title}
               href={item.href}
-              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={21} />
               </span>
-              <h3 className="mt-5 text-[17px] font-semibold leading-[1.35] text-black">{t(item.title)}</h3>
-              <p className="mt-2 flex-1 text-[14px] leading-[1.65] text-[#55585e]">{t(item.description)}</p>
+              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.35] text-black">{t(item.title)}</h3>
+              <p className="mt-2 flex-1 text-[14px] leading-[1.65] text-[#52525B]">{t(item.description)}</p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#c91f28] transition-all duration-200 group-hover:gap-2.5">{t("Read more")}<ArrowRight size={15} strokeWidth={2.2} />
               </span>
             </Link>
