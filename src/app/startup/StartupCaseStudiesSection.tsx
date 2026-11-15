@@ -44,13 +44,13 @@ const cases: CaseStudy[] = [
 export default async function StartupCaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white px-6 pb-[88px] md:pb-[104px]">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+      <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[42px]">{t("Startup products in market")}</h2>
-            <p className="mt-4 text-[15.5px] leading-[1.75] text-[#55585e]">{t("Engagements where early-stage products had to ship and hold up in real use.")}</p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">{t("Startup products in market")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B]">{t("Engagements where early-stage products had to ship and hold up in real use.")}</p>
           </div>
 
           <Link
@@ -86,11 +86,11 @@ export default async function StartupCaseStudiesSection() {
                   </p>
                 </div>
 
-                <h3 className="mt-4 text-[20px] font-semibold leading-[1.25] text-black md:text-[23px]">
+                <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] text-black md:text-[23px]">
                   {t(item.title)}
                 </h3>
 
-                <p className="mt-3 text-[14px] leading-[1.7] text-[#55585e]">
+                <p className="mt-3 text-[14px] leading-[1.6] text-[#52525B]">
                   {t(item.description)}
                 </p>
 
