@@ -31,7 +31,7 @@ export default async function AboutSection() {
   return (
     <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[760px] text-center text-[25px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] sm:text-[38px] lg:text-[44px]">{t("A global software company powering digital transformation.")}</h2>
+        <h2 className="mx-auto max-w-[760px] text-center text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] md:text-[46px] lg:text-[44px] text-balance">{t("A global software company powering digital transformation.")}</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {introCards.map((card) => (
@@ -51,11 +51,11 @@ export default async function AboutSection() {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[21px]">
+                <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[18px] md:text-[20px] text-balance">
                   {t(card.title)}
                 </h3>
 
-                <p className="mt-2 text-[15px] font-normal leading-[1.55] text-[#52525B]">
+                <p className="mt-2 text-[15px] font-normal leading-[1.55] text-[#52525B] text-pretty">
                   {t(card.description)}
                 </p>
               </div>

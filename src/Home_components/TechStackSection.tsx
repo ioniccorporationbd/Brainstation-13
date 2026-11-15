@@ -32,10 +32,10 @@ export default async function TechStackSection() {
     <section className="w-full overflow-hidden bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
-          <h2 className="text-[26px] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] md:text-[36px]">
+          <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[30px] md:text-[34px] text-balance">
             <span className="text-[#C91F28]">{t("Yes!")}</span>{" "}{t("We cover your tech stack.")}</h2>
 
-          <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px]">{t("From global technology partners to the brands we build for — a collective we work with across Cloud, ERP, Learning, Commerce, and Creative Technology.")}</p>
+          <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("From global technology partners to the brands we build for — a collective we work with across Cloud, ERP, Learning, Commerce, and Creative Technology.")}</p>
         </div>
 
         <div className="brand-marquee relative mt-14 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">

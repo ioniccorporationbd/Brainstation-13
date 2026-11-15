@@ -56,11 +56,11 @@ export default async function ProcessSection() {
       <div className="brand-container grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
         <div>
-          <h2 className="text-[28px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Our Process")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance">{t("Our Process")}</h2>
 
-          <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[20px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
+          <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[18px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
 
-          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
+          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
 
           <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
 
@@ -106,7 +106,7 @@ export default async function ProcessSection() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] md:text-[20px]">
+                  <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] md:text-[20px] text-balance">
                     {t(item.title)}
                   </h3>
 

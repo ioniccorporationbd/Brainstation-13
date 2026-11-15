@@ -95,7 +95,7 @@ export default async function CoreCapabilitiesSection() {
     <section className="w-full bg-white py-[52px] sm:py-[70px] md:py-[90px] lg:py-[112px]">
       <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="max-w-[600px] text-[27px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px]">{t("Drive Growth with Our Core Capabilities")}</h2>
+          <h2 className="max-w-[600px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px] text-balance">{t("Drive Growth with Our Core Capabilities")}</h2>
 
           <Link
             href="/services"
@@ -135,11 +135,11 @@ async function CapabilityCard({ item }: { item: Capability }) {
         className="h-10 w-10 object-contain"
       />
 
-      <h3 className="mt-6 text-[19px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] transition-colors group-hover:text-[#C91F28] sm:text-[23px] xl:text-[26px]">
+      <h3 className="mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] transition-colors group-hover:text-[#C91F28] md:text-[26px] xl:text-[26px] text-balance">
         {t(item.title)}
       </h3>
 
-      <p className="mt-2.5 max-w-[360px] text-[15px] font-normal leading-[1.55] text-[#52525B]">
+      <p className="mt-2.5 max-w-[360px] text-[15px] font-normal leading-[1.55] text-[#52525B] text-pretty">
         {t(item.description)}
       </p>
     </Link>
