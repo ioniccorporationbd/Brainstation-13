@@ -159,7 +159,7 @@ async function FeatureCard({ feature }: { feature: StdFeature }) {
       <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#ffffff] text-[#c91f28] transition duration-300 group-hover:bg-[#fdecec] group-hover:text-[#c91f28]">
         <Icon size={26} strokeWidth={1.7} />
       </div>
-      <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a]">
+      <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a] text-balance">
         {t(feature.title)}
       </h3>
       <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#565656]">
@@ -199,7 +199,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
           <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#f87171]">
             {t(eyebrow)}
           </span>
-          <h1 className="mx-auto mt-7 max-w-[920px] text-[clamp(30px,8.9vw,38px)] font-medium leading-[1.08] tracking-[-0.055em] md:text-[60px]">
+          <h1 className="mx-auto mt-7 max-w-[920px] text-[clamp(30px,8.9vw,38px)] font-medium leading-[1.08] tracking-[-0.055em] md:text-[52px] text-balance">
             {t(title)}
           </h1>
           <p className="mx-auto mt-6 max-w-[760px] text-[17px] font-normal leading-[1.55] text-white/70 md:text-[21px]">
@@ -230,7 +230,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
             {intro.map((paragraph) => (
               <p
                 key={paragraph}
-                className="mt-4 text-[17px] font-medium leading-[1.6] tracking-[-0.02em] text-[#565656] md:text-[19px] first:mt-0"
+                className="mt-4 text-[17px] font-medium leading-[1.6] tracking-[-0.02em] text-[#565656] md:text-[16px] first:mt-0"
               >
                 {t(paragraph)}
               </p>
@@ -244,7 +244,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
         <section className="bg-[#ffffff] px-6 py-[92px]">
           <div className="mx-auto max-w-[1180px]">
             <div className="mx-auto max-w-[760px] text-center">
-              <h2 className="text-[clamp(27px,8vw,32px)] font-medium leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+              <h2 className="text-[clamp(27px,8vw,32px)] font-medium leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">
                 {featuresTitle ?? "What you get"}
               </h2>
             </div>
@@ -279,7 +279,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
       {bullets && bullets.items.length > 0 ? (
         <section className="px-6 py-[92px]">
           <div className="mx-auto max-w-[980px]">
-            <h2 className="text-center text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px]">
+            <h2 className="text-center text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-[#0a0a0a] md:text-[40px] text-balance">
               {t(bullets.title)}
             </h2>
             <ul className="mt-12 grid grid-cols-1 gap-x-12 gap-y-5 sm:grid-cols-2">
@@ -302,10 +302,10 @@ export default async function StandardPage({ data }: { data: PageData }) {
       {cta ? (
         <section className="bg-white px-6 pb-[110px] pt-[10px]">
           <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
-            <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px]">
+            <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px] text-balance">
               {t(cta.title)}
             </h2>
-            <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[19px]">
+            <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[16px]">
               {t(cta.description)}
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">

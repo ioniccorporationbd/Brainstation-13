@@ -23,7 +23,7 @@ export default function ContactForm() {
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#eaf7ef] text-[#2e9e5b]">
           <CheckCircle2 size={34} strokeWidth={1.8} />
         </span>
-        <h3 className="mt-6 text-[24px] font-semibold tracking-[-0.03em] text-[#0a0a0a]">{t("Thank you for reaching out")}</h3>
+        <h3 className="mt-6 text-[22px] md:text-[26px] font-semibold leading-[1.3] tracking-[-0.03em] text-[#0a0a0a] text-balance">{t("Thank you for reaching out")}</h3>
         <p className="mt-3 max-w-[420px] text-[16px] leading-[1.6] text-[#565656]">{t("Your message has been recorded. A member of our team will get back to you within one business day.")}</p>
         <button
           type="button"

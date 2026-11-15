@@ -183,11 +183,11 @@ export default function ErrorPage({
             ))}
           </div>
 
-          <h1 className="nf-rise mt-6 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">
+          <h1 className="nf-rise mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.02em] text-black md:text-[52px] lg:text-[56px] text-balance">
             {t(def.heading)}
           </h1>
 
-          <p className="nf-rise mt-4 max-w-[540px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
+          <p className="nf-rise mt-4 max-w-[540px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
             {t(def.description)}
           </p>
 
@@ -253,7 +253,7 @@ export default function ErrorPage({
               </div>
             </div>
           ) : (
-            <p className="nf-fade mt-9 flex flex-wrap items-center justify-center gap-2 text-[13.5px] leading-[1.7] text-[#8a8f98]">
+            <p className="nf-fade mt-9 flex flex-wrap items-center justify-center gap-2 text-[14.5px] leading-[1.7] text-[#8a8f98]">
               <LifeBuoy size={15} className="shrink-0 text-[#c91f28]" />{t("Need help with this error?")}<Link
                 href="/contact"
                 className="font-semibold text-black underline decoration-[#c91f28] decoration-2 underline-offset-4 transition-colors hover:text-[#c91f28]"

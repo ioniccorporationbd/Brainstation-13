@@ -28,7 +28,7 @@ export async function ResourceHero({
           <span className="inline-flex rounded-[8px] bg-[#f7f7f8] px-5 py-2 text-[16px] font-bold tracking-[-0.03em] text-[#c91f28]">
             {t(eyebrow)}
           </span>
-          <h1 className="mt-7 text-[42px] font-medium leading-[1.08] tracking-[-0.07em] text-[#0a0a0a] md:text-[58px]">
+          <h1 className="mt-7 text-[clamp(30px,8.9vw,38px)] font-medium leading-[1.08] tracking-[-0.07em] text-[#0a0a0a] md:text-[52px] text-balance">
             {t(title)}
           </h1>
           <p className="mx-auto mt-7 max-w-[860px] text-[18px] font-medium leading-[1.45] tracking-[-0.035em] text-[#565656] md:text-[22px]">
@@ -85,7 +85,7 @@ export async function SectionHeader({
         {t(title)}
       </h2>
       {description ? (
-        <p className="mt-5 text-[17px] font-medium leading-[1.5] tracking-[-0.035em] text-[#565656] md:text-[19px]">
+        <p className="mt-5 text-[17px] font-medium leading-[1.5] tracking-[-0.035em] text-[#565656] md:text-[16px]">
           {t(description)}
         </p>
       ) : null}
@@ -127,7 +127,7 @@ export async function FeatureGrid({
             <div className="mb-6 flex h-[52px] w-[52px] items-center justify-center rounded-[12px] bg-[#ffffff] text-[#c91f28] transition duration-300 group-hover:bg-[#fdecec] group-hover:text-[#c91f28]">
               <Icon size={26} strokeWidth={1.7} />
             </div>
-            <h3 className="text-[21px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a]">
+            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#0a0a0a] text-balance">
               {t(item.title)}
             </h3>
             <p className="mt-3 text-[16px] font-normal leading-[1.55] text-[#565656]">
@@ -301,10 +301,10 @@ export async function CtaBanner({
   return (
     <section className="bg-white px-6 pb-[110px] pt-[10px]">
       <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[18px] bg-[#0a0a0a] px-8 py-[70px] text-center md:px-16">
-        <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px]">
+        <h2 className="mx-auto max-w-[780px] text-[30px] font-medium leading-[1.14] tracking-[-0.02em] text-white md:text-[44px] text-balance">
           {t(title)}
         </h2>
-        <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[19px]">
+        <p className="mx-auto mt-5 max-w-[660px] text-[17px] font-medium leading-[1.5] text-white/70 md:text-[16px]">
           {t(description)}
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">

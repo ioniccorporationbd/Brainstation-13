@@ -86,7 +86,7 @@ export default function ProductsMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[466px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,51px)] pr-[clamp(20px,2.4vw,60px)] pt-[40px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("Products")}</h2>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] text-balance">{t("Products")}</h2>
             <p className="mt-[13px] max-w-[500px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("Purpose-built products for fintech, healthcare, learning and education — engineered to scale.")}</p>
           </div>
 

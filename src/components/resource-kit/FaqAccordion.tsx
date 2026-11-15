@@ -40,7 +40,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 isOpen ? "max-h-[420px] pb-6 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <p className="max-w-[780px] text-[16px] leading-[1.65] text-[#565656] md:text-[17px]">
+              <p className="max-w-[780px] text-[16px] leading-[1.6] text-[#565656] md:text-[17px]">
                 {t(item.answer)}
               </p>
             </div>

@@ -50,8 +50,8 @@ export default function GlobalOfficesSection() {
     <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
         <div className="max-w-[620px]">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>
-          <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px]">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance">{t("Global Offices")}</h2>
+          <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
         </div>
 
         <div className="mt-8 grid gap-6 md:mt-12 md:grid-cols-2">
@@ -69,11 +69,11 @@ export default function GlobalOfficesSection() {
                 </span>
               </div>
 
-              <h3 className="mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px]">
+              <h3 className="mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance">
                 {t(office.name)}
               </h3>
 
-              <p className="mt-3 flex-1 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
+              <p className="mt-3 flex-1 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                 {t(office.description)}
               </p>
 

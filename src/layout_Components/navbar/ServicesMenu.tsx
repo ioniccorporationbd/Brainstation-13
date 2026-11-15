@@ -100,7 +100,7 @@ export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
       <div className="grid min-h-[489px] w-full grid-cols-[minmax(0,420px)_minmax(0,1fr)]">
         <aside className="min-w-0 bg-[#f7f8fa] pb-[40px] pl-[clamp(24px,2.6vw,60px)] pr-[clamp(20px,2.4vw,56px)] pt-[31px]">
           <div className="block">
-            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18]">{t("Collaboration Models")}</h2>
+            <h2 className="text-[22px] font-semibold leading-[28px] text-[#050b18] text-balance">{t("Collaboration Models")}</h2>
             <p className="mt-[12px] text-[14px] font-normal leading-[22px] text-[#5f6674]">{t("AI-accelerated delivery — up to 10X faster.")}</p>
           </div>
 
