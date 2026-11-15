@@ -47,7 +47,7 @@ const magneticOffices: MagneticOffice[] = [
 export default function GlobalOfficesSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full bg-white py-14 sm:py-[72px] md:py-[100px]">
+    <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
         <div className="max-w-[620px]">
           <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px]">{t("Global Offices")}</h2>

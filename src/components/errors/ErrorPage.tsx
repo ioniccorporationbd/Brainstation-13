@@ -183,11 +183,11 @@ export default function ErrorPage({
             ))}
           </div>
 
-          <h1 className="nf-rise mt-6 text-[26px] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px]">
+          <h1 className="nf-rise mt-6 text-[27px] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px]">
             {t(def.heading)}
           </h1>
 
-          <p className="nf-rise mt-4 max-w-[540px] text-[15.5px] leading-[1.75] text-[#55585e] md:text-[16.5px]">
+          <p className="nf-rise mt-4 max-w-[540px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px]">
             {t(def.description)}
           </p>
 

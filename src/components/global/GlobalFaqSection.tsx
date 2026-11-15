@@ -52,8 +52,9 @@ export default function GlobalFaqSection({
 
   return (
     <section
-      className={`bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[96px] ${t(className)}`}
+      className={`bg-white py-[56px] text-[#0a0a0a] md:py-[104px] ${t(className)}`}
     >
+      <div className="brand-container">
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">
           {eyebrow ? (
@@ -62,12 +63,12 @@ export default function GlobalFaqSection({
             </p>
           ) : null}
 
-          <h2 className="text-[30px] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[42px]">
+          <h2 className="text-[27px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px]">
             {t(title)}
           </h2>
 
           {subtitle ? (
-            <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">
+            <p className="mx-auto mt-5 max-w-[600px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px]">
               {t(subtitle)}
             </p>
           ) : null}
@@ -137,6 +138,7 @@ export default function GlobalFaqSection({
             </Link>
           </div>
         ) : null}
+      </div>
       </div>
     </section>
   );

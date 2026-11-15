@@ -59,16 +59,16 @@ export default function GlobalError({
           }
           .ge-code .accent { color: #c91f28; }
           .ge-title {
-            font-size: clamp(24px, 4vw, 34px);
-            font-weight: 700;
+            font-size: clamp(27px, 4.5vw, 50px);
+            font-weight: 600;
             letter-spacing: -0.02em;
             line-height: 1.15;
             margin: 24px 0 0;
           }
           .ge-desc {
-            font-size: 16px;
-            line-height: 1.75;
-            color: #55585e;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #52525B;
             max-width: 540px;
             margin: 16px 0 0;
           }
