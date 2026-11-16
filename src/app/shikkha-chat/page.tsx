@@ -10,7 +10,7 @@ import ShikkhaHeroSection from "./ShikkhaHeroSection";
 import ShikkhaModulesSection from "./ShikkhaModulesSection";
 import ShikkhaOverviewSection from "./ShikkhaOverviewSection";
 import ShikkhaSecuritySection from "./ShikkhaSecuritySection";
-import ShikkhaUseCasesSection from "./ShikkhaUseCasesSection";
+import ShikkhaFeatureSections from "./ShikkhaFeatureSections";
 import ShikkhaWebsiteSection from "./ShikkhaWebsiteSection";
 import ShikkhaWorkflowsSection from "./ShikkhaWorkflowsSection";
 
@@ -66,7 +66,7 @@ export default async function ShikkhaChatPage() {
       <ShikkhaAiPathshalaSection />
       <ShikkhaDashboardsSection />
       <ShikkhaWorkflowsSection />
-      <ShikkhaUseCasesSection />
+      <ShikkhaFeatureSections />
       <ShikkhaSecuritySection />
       <GlobalFaqSection
         eyebrow="FAQ"
