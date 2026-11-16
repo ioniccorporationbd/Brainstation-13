@@ -41,8 +41,8 @@ export default async function ShikkhaOverviewSection() {
 
         <ShikkhaFrame
           src="/images/shikkha/sc-modules.webp"
-          alt={t("Shikkha Chat modules overview on shikkhachat.com")}
-          url="shikkhachat.com"
+          alt={t("Shikkha Chat modules overview on website.shikkhachat.com")}
+          url="website.shikkhachat.com"
         />
       </div>
     </section>

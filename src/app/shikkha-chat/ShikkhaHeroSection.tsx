@@ -74,8 +74,8 @@ export default async function ShikkhaHeroSection() {
         <div className="min-w-0">
           <ShikkhaFrame
             src="/images/shikkha/sc-hero.webp"
-            alt={t("Shikkha Chat platform overview on shikkhachat.com")}
-            url="shikkhachat.com"
+            alt={t("Shikkha Chat platform overview on website.shikkhachat.com")}
+            url="website.shikkhachat.com"
             priority
           />
           <p className="mt-3 text-center text-[12px] font-medium text-[#8a8f97]">{t("The Shikkha Chat teacher workspace, captured from the live application.")}</p>

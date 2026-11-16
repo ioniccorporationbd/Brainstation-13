@@ -21,8 +21,8 @@ export default async function ShikkhaAiPathshalaSection() {
       <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <ShikkhaFrame
           src="/images/shikkha/sc-learning.webp"
-          alt={t("Shikkha Chat learning modules on shikkhachat.com")}
-          url="shikkhachat.com"
+          alt={t("Shikkha Chat learning modules on website.shikkhachat.com")}
+          url="website.shikkhachat.com"
           className="lg:order-1"
         />
         <div className="lg:order-2">

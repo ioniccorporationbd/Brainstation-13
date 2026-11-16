@@ -5,32 +5,32 @@ const pages = [
   {
     src: "/images/shikkha/pub-online-admission.webp",
     alt: "Online admission page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/online-admission",
+    url: "website.shikkhachat.com",
   },
   {
     src: "/images/shikkha/pub-notice-board.webp",
     alt: "Notice board page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/notice-board",
+    url: "website.shikkhachat.com",
   },
   {
     src: "/images/shikkha/pub-teachers-info.webp",
     alt: "Teacher directory page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/teachers-info",
+    url: "website.shikkhachat.com",
   },
   {
     src: "/images/shikkha/pub-news-events.webp",
     alt: "News and events page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/news-and-events",
+    url: "website.shikkhachat.com",
   },
   {
     src: "/images/shikkha/pub-gallery.webp",
     alt: "Photo gallery page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/gallery",
+    url: "website.shikkhachat.com",
   },
   {
     src: "/images/shikkha/pub-exam-results.webp",
     alt: "Exam results page on a Shikkha Chat institution website",
-    url: "shikkhachat.com/exam-results",
+    url: "website.shikkhachat.com",
   },
 ];
 
@@ -50,7 +50,7 @@ export default async function ShikkhaWebsiteSection() {
             <ShikkhaFrame
               src="/images/shikkha/pub-home.webp"
               alt={t("Public home page of an institution website built with Shikkha Chat")}
-              url="shikkhachat.com"
+              url="website.shikkhachat.com"
               sizes="(max-width: 1024px) 100vw, 1000px"
             />
           </div>
