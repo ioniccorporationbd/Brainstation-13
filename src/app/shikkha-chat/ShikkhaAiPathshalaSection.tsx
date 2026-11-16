@@ -20,9 +20,9 @@ export default async function ShikkhaAiPathshalaSection() {
     <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
       <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <ShikkhaFrame
-          src="/images/shikkha/shikkha-student.webp"
-          alt={t("Shikkha Chat student dashboard with AI Pathshala modules")}
-          url="dash.shikkhachat.com/dashboard/student"
+          src="/images/shikkha/sc-learning.webp"
+          alt={t("Shikkha Chat learning modules on shikkhachat.com")}
+          url="shikkhachat.com"
           className="lg:order-1"
         />
         <div className="lg:order-2">

@@ -40,9 +40,9 @@ export default async function ShikkhaOverviewSection() {
         </div>
 
         <ShikkhaFrame
-          src="/images/shikkha/shikkha-parent.webp"
-          alt={t("Shikkha Chat parent portal dashboard")}
-          url="dash.shikkhachat.com/dashboard/parent"
+          src="/images/shikkha/sc-modules.webp"
+          alt={t("Shikkha Chat modules overview on shikkhachat.com")}
+          url="shikkhachat.com"
         />
       </div>
     </section>

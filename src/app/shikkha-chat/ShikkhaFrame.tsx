@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { getTranslator } from "@/i18n/server";
 
 type FrameProps = {
   src: string;

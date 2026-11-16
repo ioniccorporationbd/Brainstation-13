@@ -34,8 +34,8 @@ export default async function ShikkhaSecuritySection() {
 
         <ShikkhaFrame
           src="/images/shikkha/shikkha-login.webp"
-          alt={t("Shikkha Chat secure login screen")}
-          url="dash.shikkhachat.com/login"
+          alt={t("Shikkha Chat modules on shikkhachat.com")}
+          url="shikkhachat.com"
         />
       </div>
     </section>
