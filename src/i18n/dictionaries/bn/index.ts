@@ -15,6 +15,7 @@ import { gen_8 } from "./gen_8";
 import { gen_9 } from "./gen_9";
 import { gen_10 } from "./gen_10";
 import { gen_11 } from "./gen_11";
+import { gen_12 } from "./gen_12";
 import { misc } from "./misc";
 
 /** merged Bangla dictionary — add new area files here */
@@ -35,5 +36,6 @@ export const bn: Dict = {
   ...gen_9,
   ...gen_10,
   ...gen_11,
+  ...gen_12,
   ...misc,
 };
