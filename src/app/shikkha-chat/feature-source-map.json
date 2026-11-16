@@ -1,0 +1,330 @@
+{
+  "generatedFrom": "https://website.shikkhachat.com/",
+  "note": "Card title/summary text is copied verbatim from the source site's Bengali and English catalog sections (per-feature summary line). No feature, statistic or capability was added.",
+  "sections": [
+    {
+      "section": "Role-based Dashboards",
+      "section_bn": "ভূমিকা অনুযায়ী ড্যাশবোর্ড",
+      "sourceSectionId": "catalog-section-role-access-content",
+      "cards": [
+        {
+          "title": "Administrator / School admin",
+          "title_bn": "প্রশাসক / স্কুল অ্যাডমিন",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Student",
+          "title_bn": "শিক্ষার্থী",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teacher",
+          "title_bn": "শিক্ষক",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Parent / Guardian",
+          "title_bn": "অভিভাবক",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Content reviewer",
+          "title_bn": "কনটেন্ট রিভিউয়ার",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "AI safety reviewer",
+          "title_bn": "AI নিরাপত্তা রিভিউয়ার",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "NGO admin",
+          "title_bn": "এনজিও অ্যাডমিন",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Government officer",
+          "title_bn": "সরকারি কর্মকর্তা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "School & Institution Management",
+      "section_bn": "স্কুল ও প্রতিষ্ঠান ব্যবস্থাপনা",
+      "sourceSectionId": "catalog-section-school-management-content",
+      "cards": [
+        {
+          "title": "Admin Dashboard",
+          "title_bn": "অ্যাডমিন ড্যাশবোর্ড",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Student Management",
+          "title_bn": "শিক্ষার্থী ব্যবস্থাপনা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teacher Management",
+          "title_bn": "শিক্ষক ব্যবস্থাপনা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teacher Class Assignments",
+          "title_bn": "শিক্ষক ক্লাস অ্যাসাইনমেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Classes & Sections",
+          "title_bn": "শ্রেণি ও শাখা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Attendance Management",
+          "title_bn": "উপস্থিতি ব্যবস্থাপনা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Academic Calendar",
+          "title_bn": "একাডেমিক ক্যালেন্ডার",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Curriculum & Subjects",
+          "title_bn": "কারিকুলাম ও বিষয়",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "School Analytics",
+          "title_bn": "স্কুল অ্যানালিটিক্স",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "AI-Powered Learning — AI Pathshala",
+      "section_bn": "এআই শিক্ষা — এআই পাঠশালা",
+      "sourceSectionId": "catalog-section-ai-pathshala-content",
+      "cards": [
+        {
+          "title": "AI Tutor",
+          "title_bn": "এআই টিউটর",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Smart Lessons",
+          "title_bn": "স্মার্ট লেসন",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Lesson Planner",
+          "title_bn": "লেসন প্ল্যানার",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Online Quizzes",
+          "title_bn": "অনলাইন কুইজ",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Assessments",
+          "title_bn": "মূল্যায়ন",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Learning Progress",
+          "title_bn": "শেখার অগ্রগতি",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Personalised Study Plan",
+          "title_bn": "ব্যক্তিগত পড়ার পরিকল্পনা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "Teacher Tools",
+      "section_bn": "শিক্ষক টুলস",
+      "sourceSectionId": "catalog-section-teacher-tools-content",
+      "cards": [
+        {
+          "title": "Teacher Dashboard",
+          "title_bn": "শিক্ষক ড্যাশবোর্ড",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Assigned Students",
+          "title_bn": "নির্ধারিত শিক্ষার্থী",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Class Attendance",
+          "title_bn": "ক্লাস উপস্থিতি",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teaching Analytics",
+          "title_bn": "শিক্ষণ অ্যানালিটিক্স",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teaching Assignments",
+          "title_bn": "ক্লাস অ্যাসাইনমেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Lesson Content Management",
+          "title_bn": "লেসন কনটেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "AI Tutor Dataset Management",
+          "title_bn": "এআই টিউটর ডেটাসেট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Student Learning Interventions",
+          "title_bn": "শিক্ষার্থীর শিখন-সহায়তা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "Parent & Guardian Portal",
+      "section_bn": "অভিভাবক ও গার্ডিয়ান পোর্টাল",
+      "sourceSectionId": "catalog-section-parent-portal-content",
+      "cards": [
+        {
+          "title": "Parent Dashboard",
+          "title_bn": "অভিভাবক ড্যাশবোর্ড",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Children",
+          "title_bn": "সন্তানের তালিকা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Child Linking",
+          "title_bn": "সন্তান সংযুক্ত করুন",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Student Attendance Tracking",
+          "title_bn": "উপস্থিতি ট্র্যাকিং",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Assessment Results",
+          "title_bn": "মূল্যায়নের ফলাফল",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Weekly Learning Insights",
+          "title_bn": "সাপ্তাহিক শেখার অন্তর্দৃষ্টি",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Teacher Messages",
+          "title_bn": "শিক্ষকের বার্তা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Study Activity Monitoring",
+          "title_bn": "পড়ার কার্যক্রম মনিটরিং",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "Content Quality & AI Safety",
+      "section_bn": "কনটেন্ট গুণমান ও এআই নিরাপত্তা",
+      "sourceSectionId": "catalog-section-content-safety-content",
+      "cards": [
+        {
+          "title": "Content Review Queue",
+          "title_bn": "কনটেন্ট রিভিউ কিউ",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Approved Learning Content",
+          "title_bn": "অনুমোদিত শেখার কনটেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Review History",
+          "title_bn": "রিভিউ ইতিহাস",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "AI Safety Dashboard",
+          "title_bn": "এআই নিরাপত্তা ড্যাশবোর্ড",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Flagged AI Content",
+          "title_bn": "ফ্ল্যাগড এআই কনটেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "AI Safety Events",
+          "title_bn": "এআই নিরাপত্তা ইভেন্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "AI Safety Policies",
+          "title_bn": "এআই নিরাপত্তা নীতিমালা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    },
+    {
+      "section": "NGO & Government Oversight",
+      "section_bn": "এনজিও ও সরকারি নজরদারি",
+      "sourceSectionId": "catalog-section-monitoring-content",
+      "cards": [
+        {
+          "title": "NGO Program Management",
+          "title_bn": "এনজিও প্রোগ্রাম ব্যবস্থাপনা",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Institution Monitoring",
+          "title_bn": "প্রতিষ্ঠান পর্যবেক্ষণ",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Learning Outcomes",
+          "title_bn": "শেখার ফলাফল",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Impact Analytics",
+          "title_bn": "ইমপ্যাক্ট অ্যানালিটিক্স",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "District-Level Oversight",
+          "title_bn": "জেলা পর্যায়ের নজরদারি",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Enrolment Analytics",
+          "title_bn": "ভর্তি অ্যানালিটিক্স",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Equity Indicators",
+          "title_bn": "সমতা সূচক",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        },
+        {
+          "title": "Aggregated Reports",
+          "title_bn": "সমষ্টিগত রিপোর্ট",
+          "source": "feature summary line for this feature on website.shikkhachat.com"
+        }
+      ]
+    }
+  ]
+}
