@@ -48,7 +48,7 @@ export default async function StartupCaseStudiesSection() {
       <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case studies")}</p>
             <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Startup products in market")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Engagements where early-stage products had to ship and hold up in real use.")}</p>
           </div>
@@ -81,7 +81,7 @@ export default async function StartupCaseStudiesSection() {
                   >
                     {t(item.logoText)}
                   </span>
-                  <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                  <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                     {t(item.category)}
                   </p>
                 </div>

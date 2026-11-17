@@ -59,7 +59,7 @@ export default async function EcommerceServicesSection() {
     <section id="services" className="relative overflow-hidden bg-white pb-[56px] pt-[64px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Services")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Services")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What we build in commerce")}</h2>
           <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Storefront, payments, fulfilment and the data layer — delivered as one joined-up platform.")}</p>
         </div>

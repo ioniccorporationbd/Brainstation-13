@@ -19,7 +19,7 @@ export default async function PharmaCustomerSuccessSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Customer success")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Customer success")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Our customer success stories")}</h2>
         </div>
 
@@ -33,7 +33,7 @@ export default async function PharmaCustomerSuccessSection() {
           </div>
 
           <div>
-            <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Healthcare professional")}</p>
+            <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Healthcare professional")}</p>
 
             <h3 className="mt-3 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-black md:text-[26px] text-balance">{t("Diabetic retinopathy")}</h3>
 

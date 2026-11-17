@@ -75,7 +75,7 @@ export default function FintechSolutionsTabsSection() {
     <section id="solutions" className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our solutions")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our solutions")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Complete financial technology solutions")}</h2>
           <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our fintech expertise spans digital banking, payments, lending, insurance and cross-border transfers — enterprise-grade platforms that move financial services forward.")}</p>
         </div>
@@ -126,7 +126,7 @@ export default function FintechSolutionsTabsSection() {
                 alt={activeTab.title}
                 className="h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] md:h-[330px]"
               />
-              <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+              <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                 {t(activeTab.label)}
               </span>
             </div>

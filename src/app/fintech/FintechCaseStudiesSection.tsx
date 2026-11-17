@@ -77,7 +77,7 @@ export default function FintechCaseStudiesSection() {
       <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case studies")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case studies")}</p>
             <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Financial products in production")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("A few engagements that show how fintech delivery looks in practice.")}</p>
           </div>
@@ -122,7 +122,7 @@ export default function FintechCaseStudiesSection() {
           </div>
 
           <div>
-            <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+            <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
               {t(active.category)}
             </p>
             <h3 className="mt-3 text-[22px] font-semibold leading-[1.22] tracking-[-0.015em] text-black md:text-[26px] text-balance">
@@ -143,7 +143,7 @@ export default function FintechCaseStudiesSection() {
             <p className="mt-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t(active.description)}</p>
 
             <div className="mt-6">
-              <h4 className="text-[14px] font-bold uppercase tracking-[0.1em] text-black leading-[1.4]">{t("Key results")}</h4>
+              <h4 className="text-[14px] font-bold uppercase tracking-normal text-black leading-[1.4]">{t("Key results")}</h4>
               <ul className="mt-3 space-y-2">
                 {active.results.map((result) => (
                   <li key={result} className="flex gap-3 text-[14.5px] leading-[1.6] text-[#52525B]">

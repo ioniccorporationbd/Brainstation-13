@@ -23,7 +23,7 @@ export default async function FintechTechStackSection() {
       <div className="mx-auto brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[720px]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Technology")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Technology")}</p>
             <h2 className="mt-3 max-w-[560px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("The stack we build on")}</h2>
             <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Proven, well-supported technologies chosen for security, performance and long-term maintainability.")}</p>
           </div>

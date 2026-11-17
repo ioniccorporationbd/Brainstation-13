@@ -58,7 +58,7 @@ export default function GlobalFaqSection({
       <div className="mx-auto max-w-[880px]">
         <div className="text-center">
           {eyebrow ? (
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">
               {t(eyebrow)}
             </p>
           ) : null}
