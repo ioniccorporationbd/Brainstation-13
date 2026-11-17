@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,10 +17,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/sustainability",
     title: t("Sustainability | Magnetic Solution Limited"),
     description: t("How Magnetic Solution Limited approaches environmental impact, social responsibility and responsible governance across its delivery centres."),
-  };
+  });
 }
 
 export default async function Page() {

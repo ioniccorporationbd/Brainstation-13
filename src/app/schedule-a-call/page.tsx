@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -15,10 +16,11 @@ import CallForm from "./CallForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/schedule-a-call",
     title: t("Schedule a Call | Magnetic Solution Limited"),
     description: t("Request a call with Magnetic Solution Limited — share your agenda and preferred date, and the team confirms the exact time by email."),
-  };
+  });
 }
 
 const expectations = [

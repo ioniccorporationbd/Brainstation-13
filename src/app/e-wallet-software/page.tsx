@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowLeftRight,
@@ -17,10 +18,11 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/e-wallet-software",
     title: t("E-Wallet Software | Magnetic Solution Limited"),
     description: t("E-wallet and mobile wallet platform engineering — onboarding, wallet ledger, P2P and merchant payments, agent networks, limits and back-office operations."),
-  };
+  });
 }
 
 const strip = [

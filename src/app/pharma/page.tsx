@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -10,10 +11,11 @@ import PharmaCtaSection from "./PharmaCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/pharma",
     title: t("Pharma Solutions | Magnetic Solution Limited"),
     description: t("HCP activation, compliance automation, pharma e-commerce and LMS platforms built by Magnetic Solution Limited for healthcare and pharmaceutical enterprises."),
-  };
+  });
 }
 
 const faqs = [

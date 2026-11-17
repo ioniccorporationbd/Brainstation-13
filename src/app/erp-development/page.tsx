@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import ErpDevelopmentHeroSection from "./ErpDevelopmentHeroSection";
 import ErpDevelopmentIntroSection from "./ErpDevelopmentIntroSection";
@@ -13,10 +14,11 @@ import ErpDevelopmentCtaSection from "./ErpDevelopmentCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/erp-development",
     title: t("ERP Development | Magnetic Solution Limited"),
     description: t("Custom ERPNext, Frappe and enterprise systems that unify operations, automate workflows and scale with your business."),
-  };
+  });
 }
 
 export default async function ErpDevelopmentPage() {

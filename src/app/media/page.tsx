@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -15,10 +16,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/media",
     title: t("Media | Magnetic Solution Limited"),
     description: t("Media and press resources for Magnetic Solution Limited — how to request interviews, commentary, company information and brand assets."),
-  };
+  });
 }
 
 /**

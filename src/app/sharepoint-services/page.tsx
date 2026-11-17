@@ -5,12 +5,14 @@ import SharePointOfferedServicesSection from "./SharePointOfferedServicesSection
 import SharePointBottomSections from "./SharePointBottomSections";
 
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/sharepoint-services",
     title: t("SharePoint Services | Magnetic Solution Limited"),
     description: t("SharePoint intranets, application development, workflow, migration and managed support across Microsoft 365 estates."),
-  };
+  });
 }
 
 export default function Page() {

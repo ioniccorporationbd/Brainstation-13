@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowLeftRight,
@@ -17,10 +18,11 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/digital-lending-credit",
     title: t("Digital Lending & Credit | Magnetic Solution Limited"),
     description: t("Digital lending platform engineering — origination, credit decisioning, disbursement, repayment schedules and collections with an auditable trail."),
-  };
+  });
 }
 
 const strip = [

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,10 +14,11 @@ import CareerApplyForm from "./CareerApplyForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/career",
     title: t("Careers | Magnetic Solution Limited"),
     description: t("Join Magnetic Solution Limited and build software that matters. Explore open roles in engineering, design, data and delivery."),
-  };
+  });
 }
 
 const perks = [

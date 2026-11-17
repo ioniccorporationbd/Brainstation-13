@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -7,10 +8,11 @@ import BlogExplorer, { type BlogPost } from "./BlogExplorer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/blog",
     title: t("Blog & Insights | Magnetic Solution Limited"),
     description: t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people who do the work at Magnetic Solution Limited."),
-  };
+  });
 }
 
 const featured: BlogPost = {

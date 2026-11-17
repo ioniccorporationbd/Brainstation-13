@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/enterprise-grade-security",
     title: t("Enterprise-Grade Security | Magnetic Solution Limited"),
     description: t("How Magnetic Solution Limited protects client data with encrypted design, least-privilege access, secure engineering and monitored operations."),
-  };
+  });
 }
 
 const faqs = [

@@ -6,12 +6,14 @@ import CaseStudiesGridSection from "./CaseStudiesGridSection";
 import CaseStudiesCtaSection from "./CaseStudiesCtaSection";
 
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/case-studies",
     title: t("Case Studies | Magnetic Solution Limited"),
     description: t("Real projects, real outcomes. Explore how Magnetic Solution Limited helped clients across fintech, retail, health and more build and scale technology."),
-  };
+  });
 }
 
 export default function CaseStudiesPage() {

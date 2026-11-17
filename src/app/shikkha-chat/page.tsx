@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -16,10 +17,11 @@ import ShikkhaWorkflowsSection from "./ShikkhaWorkflowsSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/shikkha-chat",
     title: t("Shikkha Chat | Magnetic Solution Limited"),
     description: t("Shikkha Chat is a complete education management ERP for modern schools — administration, AI Pathshala learning, teachers, students, parents and government oversight in one secure platform."),
-  };
+  });
 }
 
 const faqs = [

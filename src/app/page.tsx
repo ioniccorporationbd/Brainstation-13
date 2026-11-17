@@ -10,6 +10,20 @@ import TechStackSection from "@/Home_components/TechStackSection";
 import ProcessSection from "@/Home_components/ProcessSection";
 import CaseStudiesSection from "@/Home_components/CaseStudiesSection";
 
+import type { Metadata } from "next";
+import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return pageMetadata({
+    route: "/",
+    title: t("Enterprise Software, AI & Digital Transformation Services | Magnetic Solution Limited"),
+    description: t("Magnetic Solution Limited delivers enterprise-grade software, AI, data engineering, staff augmentation, Shopify, blockchain and LMS solutions for banks, fintechs and enterprises."),
+  });
+}
+
+
 
 export default function Home() {
   return (

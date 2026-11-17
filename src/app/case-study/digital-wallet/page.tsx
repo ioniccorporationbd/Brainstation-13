@@ -7,12 +7,14 @@ import DigitalWalletImpactSection from "./DigitalWalletImpactSection";
 import DigitalWalletCtaSection from "./DigitalWalletCtaSection";
 
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/case-study/digital-wallet",
     title: t("Digital Wallet Case Study | Magnetic Solution Limited"),
     description: t("A compliant digital wallet platform that brought secure everyday financial services to underbanked communities at scale."),
-  };
+  });
 }
 
 export default function DigitalWalletCaseStudyPage() {

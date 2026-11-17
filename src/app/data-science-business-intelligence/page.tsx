@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import DataScienceBusinessIntelligenceHeroSection from "./DataScienceBusinessIntelligenceHeroSection";
 import DataScienceBusinessIntelligenceIntroSection from "./DataScienceBusinessIntelligenceIntroSection";
@@ -16,10 +17,11 @@ import DataScienceCtaSection from "./DataScienceCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/data-science-business-intelligence",
     title: t("Data Science & Business Intelligence | Magnetic Solution Limited"),
     description: t("Data analytics, business intelligence, predictive analytics and machine learning services — pipelines, dashboards and models built on a single trusted model."),
-  };
+  });
 }
 
 export default async function DataScienceBusinessIntelligencePage() {

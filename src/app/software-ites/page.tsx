@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -10,10 +11,11 @@ import SoftwareItesCtaSection from "./SoftwareItesCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/software-ites",
     title: t("Software & IT Services | Magnetic Solution Limited"),
     description: t("Custom applications, enterprise ERP, BI analytics, cloud and AR/VR solutions built by Magnetic Solution Limited for ICT and software businesses."),
-  };
+  });
 }
 
 const faqs = [

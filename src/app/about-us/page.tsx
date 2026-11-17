@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -18,10 +19,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/about-us",
     title: t("About Us | Magnetic Solution Limited"),
     description: t("Magnetic Solution Limited builds and modernises software for enterprise and startup teams — product engineering, digital transformation and dedicated delivery teams."),
-  };
+  });
 }
 
 /**

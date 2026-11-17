@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,10 +17,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/partners",
     title: t("Partners | Magnetic Solution Limited"),
     description: t("How Magnetic Solution Limited works with platform vendors, technology partners and delivery allies — and how partnership and certification status is confirmed."),
-  };
+  });
 }
 
 /**

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/time2publish",
     title: t("Time2Publish | Magnetic Solution Limited"),
     description: t("Time2Publish is an end-to-end publishing platform for authoring, review, approval and digital distribution."),
-  };
+  });
 }
 
 export default async function Page() {

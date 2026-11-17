@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import CyberSecurityHeroSection from "./CyberSecurityHeroSection";
 import CyberSecurityFindingsSection from "./CyberSecurityFindingsSection";
@@ -14,10 +15,11 @@ import CyberSecurityCtaSection from "./CyberSecurityCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/cyber-security",
     title: t("Cyber Security Services | Magnetic Solution Limited"),
     description: t("Security assessments, penetration testing, API and cloud security assessment, plus breach response — delivered by Magnetic Solution Limited."),
-  };
+  });
 }
 
 export default async function CyberSecurityPage() {

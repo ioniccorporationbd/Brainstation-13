@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/solution-partner/swapno",
     title: t("Swapno Solution Partnership | Magnetic Solution Limited"),
     description: t("How the Swapno platform and Magnetic Solution Limited engineering combine on joint solution work for shared clients."),
-  };
+  });
 }
 
 export default async function Page() {

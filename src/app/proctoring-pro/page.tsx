@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/proctoring-pro",
     title: t("Proctoring Pro | Magnetic Solution Limited"),
     description: t("Proctoring Pro combines live supervision, identity verification and AI integrity signals for fair, auditable online exams."),
-  };
+  });
 }
 
 export default async function Page() {

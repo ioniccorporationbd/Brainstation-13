@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/services",
     title: t("Services | Magnetic Solution Limited"),
     description: t("Full-lifecycle engineering across AI, cloud, data and enterprise software \u2014 strategy, build and run under one accountable team."),
-  };
+  });
 }
 
 export default async function Page() {

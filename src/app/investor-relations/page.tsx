@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -15,10 +16,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/investor-relations",
     title: t("Investor Relations | Magnetic Solution Limited"),
     description: t("Investor relations information for Magnetic Solution Limited — company details, governance approach and how shareholders request reports and disclosures."),
-  };
+  });
 }
 
 /**

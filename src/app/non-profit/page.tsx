@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -10,10 +11,11 @@ import NonProfitCtaSection from "./NonProfitCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/non-profit",
     title: t("Non-Profit Solutions | Magnetic Solution Limited"),
     description: t("Digital solutions for non-profit organisations — community platforms, programme reporting and tools built for humanitarian work."),
-  };
+  });
 }
 
 const faqs = [

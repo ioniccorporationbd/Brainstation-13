@@ -8,6 +8,19 @@ import DigitalTransformationApproachSection from './DigitalTransformationApproac
 import DigitalTransformationPartnerSection from './DigitalTransformationPartnerSection';
 import DigitalTransformationFaqSection from './DigitalTransformationFaqSection';
 
+import type { Metadata } from "next";
+import { pageMetadata } from "@/i18n/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return pageMetadata({
+    route: "/digital-transformation",
+    title: t("Digital Transformation & Legacy Modernization | Magnetic Solution Limited"),
+    description: t("Modernize legacy applications with AI, RPA and cloud automation — turn manual processes into smart, automated workflows."),
+  });
+}
+
+
 const page = () => {
     return (
         <div>

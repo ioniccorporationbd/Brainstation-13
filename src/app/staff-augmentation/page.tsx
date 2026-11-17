@@ -11,6 +11,19 @@ import ClientVideoTestimonialsSection from './ClientVideoTestimonialsSection';
 import StaffAugmentationFaqSection from './StaffAugmentationFaqSection';
 import DeliveryCentersGallerySection from './DeliveryCentersGallerySection';
 
+import type { Metadata } from "next";
+import { pageMetadata } from "@/i18n/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslator();
+  return pageMetadata({
+    route: "/staff-augmentation",
+    title: t("IT Staff Augmentation Services | Magnetic Solution Limited"),
+    description: t("Onboard pre-vetted offshore engineers within weeks, with offshore account management support built for speed."),
+  });
+}
+
+
 
 const page = () => {
     return (

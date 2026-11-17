@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -10,10 +11,11 @@ import StartupCtaSection from "./StartupCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/startup",
     title: t("Startup Solutions | Magnetic Solution Limited"),
     description: t("Technology solutions for startups — MVP development, product engineering and the digital platforms that make growth possible."),
-  };
+  });
 }
 
 const faqs = [

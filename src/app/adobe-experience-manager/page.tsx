@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import AemHeroSection from "./AemHeroSection";
 import AemDescriptionSection from "./AemDescriptionSection";
 import AemOfferedServicesSection from "./AemOfferedServicesSection";
@@ -9,10 +10,11 @@ import AemProjectHelpSection from "./AemProjectHelpSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/adobe-experience-manager",
     title: t("Adobe Experience Manager (AEM) | Magnetic Solution Limited"),
     description: t("AEM implementation, integration, managed service, migration and upgrade — full Adobe Experience Manager lifecycle services."),
-  };
+  });
 }
 
 export default async function Page() {

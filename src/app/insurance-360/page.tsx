@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowLeftRight,
@@ -17,10 +18,11 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/insurance-360",
     title: t("Insurance 360 | Magnetic Solution Limited"),
     description: t("Insurance platform engineering — policy administration, underwriting workflow, claims processing, distribution portals and renewals on one connected system."),
-  };
+  });
 }
 
 const strip = [

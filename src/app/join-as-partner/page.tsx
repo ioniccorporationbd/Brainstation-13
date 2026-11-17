@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import PartnerForm from "./PartnerForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/join-as-partner",
     title: t("Join as Partner | Magnetic Solution Limited"),
     description: t("Partner with Magnetic Solution Limited. Grow revenue, extend your capabilities and deliver enterprise-grade technology with a trusted engineering team."),
-  };
+  });
 }
 
 const benefits = [

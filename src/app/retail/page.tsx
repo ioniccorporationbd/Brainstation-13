@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -10,10 +11,11 @@ import RetailCtaSection from "./RetailCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/retail",
     title: t("Retail Solutions | Magnetic Solution Limited"),
     description: t("POS, inventory, e-commerce, ERP and analytics solutions built by Magnetic Solution Limited for retail enterprises and distribution networks."),
-  };
+  });
 }
 
 const faqs = [

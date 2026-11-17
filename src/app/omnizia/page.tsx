@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,10 +15,11 @@ import {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/omnizia",
     title: t("Omnizia | Magnetic Solution Limited"),
     description: t("Omnizia connects clinical, laboratory, imaging and billing systems into one patient record for care teams."),
-  };
+  });
 }
 
 export default async function Page() {

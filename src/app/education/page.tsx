@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslator } from "@/i18n/server";
+import { pageMetadata } from "@/i18n/seo";
 
 import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 
@@ -11,10 +12,11 @@ import EducationCtaSection from "./EducationCtaSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
-  return {
+  return pageMetadata({
+    route: "/education",
     title: t("Education Solutions | Magnetic Solution Limited"),
     description: t("Learning management, assessment and proctoring, content publishing and learning analytics built by Magnetic Solution Limited for education providers."),
-  };
+  });
 }
 
 const faqs = [
