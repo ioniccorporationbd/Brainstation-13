@@ -429,5 +429,6 @@ export const gen_6: Dict = {
   "Our locations": "আমাদের লোকেশনস",
   "Our offering includes:": "আমাদের অফারিং-এ রয়েছে:",
   "Manufacturing & Industrial": "ম্যানুফ্যাকচারিং ও ইন্ডাস্ট্রি",
-  "Banking software, built on trust": "ব্যাংকিং সফটওয়্যার, আস্থার সাথে তৈরি"
+  "Banking software, built on trust": "ব্যাংকিং সফটওয়্যার, আস্থার সাথে তৈরি",
+  "Framework-aligned security": "স্বীকৃত ফ্রেমওয়ার্কে ম্যাপড"
 };

@@ -429,5 +429,8 @@ export const gen_8: Dict = {
   "Startup team collaborating in a modern office": "একটি মডার্ন অফিস-এ সহযোগিতা করছে স্টার্টআপ টিম",
   "Startups": "স্টার্টআপ",
   "Statements, transaction history exports and regulatory extracts generated from the same ledger the customers see.": "স্টেটমেন্ট, ট্রানজেকশন হিস্ট্রি এক্সপোর্ট ও রেগুলেটরি এক্সট্রাক্ট সমান লেজার থেকে তৈরি হয় যা কাস্টমার দেখেন।",
-  "Secure, customized banking software": "নিরাপদ, কাস্টমাইজড ব্যাংকিং সফটওয়্যার"
+  "Secure, customized banking software": "নিরাপদ, কাস্টমাইজড ব্যাংকিং সফটওয়্যার",
+  "Security built into everything": "আমরা যা তৈরি করি, তাতেই নিরাপত্তা",
+  "Security that runs every day": "প্রতিদিনের নিরাপত্তা, শুধু অডিটে নয়",
+  "Security & compliance FAQs": "নিরাপত্তা ও কমপ্লায়েন্স প্রশ্ন"
 };

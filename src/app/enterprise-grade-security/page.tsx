@@ -53,7 +53,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise-grade security")}</span>
-            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Security engineered into everything we build")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Security built into everything")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Encryption, least-privilege access, reviewed build pipelines and monitored operations — controls designed into delivery rather than added at audit time.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -140,7 +140,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Standards")}</p>
-            <h2 className="mt-3 max-w-[460px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Mapped to recognised frameworks, verifiable on request")}</h2>
+            <h2 className="mt-3 max-w-[460px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Framework-aligned security")}</h2>
             <p className="mt-4 max-w-[460px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our controls follow established frameworks rather than custom claims. Certification status, scope statements and audit artefacts are provided during due diligence under NDA — we do not display badges we cannot substantiate.")}</p>
           </div>
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -184,7 +184,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Operations")}</p>
-            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Security that runs every day, not only at audit time")}</h2>
+            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Security that runs every day")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Security is part of the engineering culture: hardened pipelines, reviewed code and automated vulnerability scanning are the default, not an add-on.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our operations team monitors for threats continuously and responds through documented incident procedures.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -228,7 +228,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Engineering")}</p>
-            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Threat modelling before the first commit")}</h2>
+            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Threat modelling before code")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every engagement starts by mapping the data involved, who may reach it and what happens if a control fails.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Network isolation and hardened environments limit the blast radius when something goes wrong.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -270,7 +270,7 @@ export default async function Page() {
 
       <GlobalFaqSection
         eyebrow="FAQ"
-        title={t("Security and compliance questions")}
+        title={t("Security & compliance FAQs")}
         subtitle={t("Short answers to what procurement and security reviewers usually ask first.")}
         items={faqs}
         ctaLabel="Talk to our security team"
