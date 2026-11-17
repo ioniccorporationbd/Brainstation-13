@@ -44,7 +44,7 @@ export default async function MLAIServicesSection() {
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Can Do")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What We Can Do")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Offered Services")}</h2>
 
@@ -66,7 +66,7 @@ export default async function MLAIServicesSection() {
                 </div>
 
                 <div>
-                  <span className="mb-1.5 block text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+                  <span className="mb-1.5 block text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 

@@ -14,7 +14,7 @@ export default async function MobileAppHeroSection() {
     <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
       <div className="grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Web & Mobile App Development")}</p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Web & Mobile App Development")}</p>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Web & Mobile Apps, Built to Ship")}</h1>
 
@@ -39,7 +39,7 @@ export default async function MobileAppHeroSection() {
                 {index > 0 ? (
                   <span className="h-1 w-1 rounded-full bg-[#d4d4d4]" />
                 ) : null}
-                <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-[#52525B]">
+                <span className="text-[13px] font-bold uppercase tracking-normal text-[#52525B]">
                   {t(word)}
                 </span>
               </span>

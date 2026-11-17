@@ -22,7 +22,7 @@ export default async function BankingFinancialIndustriesSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="grid brand-container grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Clients we have served in")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Clients we have served in")}</p>
           <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Industries")}</h2>
 
           <ul className="mt-8 space-y-4">

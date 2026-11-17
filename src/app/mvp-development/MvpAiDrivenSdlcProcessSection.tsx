@@ -172,7 +172,7 @@ export default async function MvpAiDrivenSdlcProcessSection() {
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("AI-Powered MVP Delivery")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI-Powered MVP Delivery")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our AI-Driven SDLC Process For MVP")}</h2>
 
@@ -198,7 +198,7 @@ export default async function MvpAiDrivenSdlcProcessSection() {
                     <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
                       {t(step.title)}
                     </h3>
-                    <p className="mt-0.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+                    <p className="mt-0.5 text-[11px] font-bold uppercase tracking-normal text-[#c91f28]">
                       {t(step.subtitle)}
                     </p>
                   </div>

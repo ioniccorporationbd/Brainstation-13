@@ -23,7 +23,7 @@ export default async function EnterpriseMsfaHeroSection() {
     <section className="w-full overflow-hidden bg-white pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
-          <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-[0.14em] text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
+          <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#000000] md:text-[52px] lg:text-[56px] text-balance">{t("Govern field sales at")}{" "}
             <span className="text-[#c91f28]">{t("true scale")}</span>
@@ -44,7 +44,7 @@ export default async function EnterpriseMsfaHeroSection() {
                     <Icon size={14} strokeWidth={2.1} />
                   </span>
 
-                  <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#2b2b2b]">
+                  <span className="text-[12px] font-bold uppercase tracking-normal text-[#2b2b2b]">
                     {t(item.label)}
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export default async function EnterpriseMsfaHeroSection() {
 
           <div className="absolute -bottom-6 left-4 hidden w-[190px] border border-[#ececec] bg-white p-4 md:block lg:left-6">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Mobile Order")}</span>
+              <span className="text-[11px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Mobile Order")}</span>
               <span className="flex h-5 w-5 items-center justify-center rounded-[3px] bg-[#fdecec] text-[10px] font-bold text-[#c91f28]">
                 ✓
               </span>

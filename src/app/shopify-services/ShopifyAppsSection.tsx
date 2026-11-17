@@ -95,7 +95,7 @@ export default async function ShopifyAppsSection() {
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Shopify Apps")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Shopify Apps")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
 
@@ -129,7 +129,7 @@ export default async function ShopifyAppsSection() {
                 href={app.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-[0.06em] text-[#c91f28] transition hover:text-[#a71920]"
+                className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] transition hover:text-[#a71920]"
               >{t("Learn More")}<ArrowRight size={13} strokeWidth={2.4} />
               </a>
             </article>

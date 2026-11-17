@@ -39,7 +39,7 @@ export async function MobileAppProcessSection() {
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Delivery Process")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Delivery Process")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Mobile App Development Process")}</h2>
 

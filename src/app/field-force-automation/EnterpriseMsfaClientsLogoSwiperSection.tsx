@@ -20,7 +20,7 @@ export default function EnterpriseMsfaClientsLogoSwiperSection() {
   return (
     <section className="w-full overflow-hidden bg-white pb-[48px] md:pb-[72px] text-[#000000]">
       <div className="brand-container">
-        <p className="text-center text-[13px] font-bold uppercase tracking-[0.12em] text-[#8a8a8a]">{t("Trusted by field teams at leading enterprises")}</p>
+        <p className="text-center text-[13px] font-bold uppercase tracking-normal text-[#8a8a8a]">{t("Trusted by field teams at leading enterprises")}</p>
 
         <div className="group relative mt-7 overflow-hidden border-y border-[#ececec] py-5">
           <div className="animate-msfa-clients flex w-max items-center motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center">

@@ -74,7 +74,7 @@ export default async function BtpDifferentSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Makes Borderless Tech Professionals Different?")}</h2>
           </div>

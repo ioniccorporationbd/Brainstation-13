@@ -29,7 +29,7 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
         <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Services")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Services")}</span>
             <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Full-lifecycle engineering, under one accountable team")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -57,19 +57,19 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
         <dl className="grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Scope")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Scope")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Strategy through production support")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Teams")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Teams")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Senior specialists, one owner")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Cloud")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Cloud")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Any provider, infrastructure as code")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Quality")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Quality")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Testing and security inside the pipeline")}</dd>
           </div>
         </dl>
@@ -78,7 +78,7 @@ export default async function Page() {
       <section className="bg-white py-[48px] md:py-[104px]">
         <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("How we engage")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we engage")}</p>
             <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("One senior team from first decision to steady state")}</h2>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Work usually starts with a real constraint: a platform that cannot scale, a release process that stalls, or a product that has to reach the market sooner than the current setup allows.")}</p>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Rather than hand over between a strategy group, a build group and a support group, one team carries the decisions through — so the trade-offs made early still make sense later.")}</p>
@@ -126,7 +126,7 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Service lines")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Service lines")}</p>
           <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 max-w-[760px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("What we do")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six service lines that can run alone or together. Each card opens the detailed service page.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -208,7 +208,7 @@ export default async function Page() {
 
       <section className="bg-white py-[48px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Delivery model")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Delivery model")}</p>
           <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 max-w-[720px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("How a typical engagement runs")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">

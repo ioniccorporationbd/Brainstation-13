@@ -9,7 +9,7 @@ export default async function MLAIHeroSection() {
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left - Text */}
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("ML & AI Development")}</p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("ML & AI Development")}</p>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Machine Learning & AI Solutions")}</h1>
 

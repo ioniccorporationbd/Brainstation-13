@@ -76,7 +76,7 @@ export default async function BorderlessTechProfessionalsSection() {
   return (
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
-        <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
+        <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
         <h2 className="text-[clamp(27px,8vw,32px)] max-w-[820px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Borderless Tech Professionals (BTP)")}</h2>
 

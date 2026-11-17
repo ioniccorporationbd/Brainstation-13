@@ -15,7 +15,7 @@ export default async function DataSciencePipelineSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[680px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("End to end")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("End to end")}</p>
           <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Data Science Pipeline")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
         </div>
@@ -32,7 +32,7 @@ export default async function DataSciencePipelineSection() {
                 </span>
                 <div>
                   <h3 className="text-[15.5px] md:text-[16px] leading-[1.35] flex items-baseline gap-2 font-semibold text-black text-balance">
-                    <span className="text-[11px] font-bold tracking-[0.12em] text-[#c91f28]">
+                    <span className="text-[11px] font-bold tracking-normal text-[#c91f28]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     {t(stage.title)}

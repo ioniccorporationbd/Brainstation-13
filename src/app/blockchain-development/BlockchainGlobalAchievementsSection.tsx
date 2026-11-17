@@ -39,7 +39,7 @@ export default async function BlockchainGlobalAchievementsSection() {
     <section className="w-full bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Process")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our Process")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("How We Deliver Blockchain Projects")}</h2>
 
@@ -63,7 +63,7 @@ export default async function BlockchainGlobalAchievementsSection() {
                       <Icon size={19} strokeWidth={2.1} />
                     </span>
 
-                    <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Step")}{String(index + 1).padStart(2, "0")}
+                    <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Step")}{String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 

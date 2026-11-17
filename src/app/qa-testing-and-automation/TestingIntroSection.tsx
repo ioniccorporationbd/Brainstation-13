@@ -22,7 +22,7 @@ export default async function TestingIntroSection() {
         </div>
 
         <div>
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Software Testing as a Service")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Software Testing as a Service")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] max-w-[600px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Testing That Keeps Quality Predictable")}</h2>
 

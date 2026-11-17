@@ -8,7 +8,7 @@ export default async function DigitalTransformationHeroSection() {
       <div className="grid brand-container grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
-          <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-[0.12em] text-[#c91f28]">{t("Digital Transformation")}</span>
+          <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Digital Transformation")}</span>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] mt-7 max-w-[680px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Modernize Legacy Systems With AI Automation.")}</h1>
 

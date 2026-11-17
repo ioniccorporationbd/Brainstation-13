@@ -41,7 +41,7 @@ export default async function MvpBenefitsSection() {
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("MVP Advantage")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("MVP Advantage")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Why Build an MVP with Magnetic Solution Limited?")}</h2>
 

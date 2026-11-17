@@ -86,7 +86,7 @@ async function ImagePanel({ title, image }: { title: string; image: string }) {
         className="h-[240px] w-full object-cover transition-transform duration-700 hover:scale-[1.03] md:h-[330px]"
       />
 
-      <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">{t("MSFA Platform")}</span>
+      <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-normal text-white">{t("MSFA Platform")}</span>
     </div>
   );
 }
@@ -128,7 +128,7 @@ export default async function EnterpriseMsfaPlatformHighlightsSection() {
     <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1140px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Platform Highlights")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Platform Highlights")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Built for Real Field Conditions")}</h2>
 

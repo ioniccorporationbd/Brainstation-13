@@ -67,7 +67,7 @@ export default async function EnterpriseMsfaArchitectureSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Architecture")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise Architecture")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Secure. Scalable. Connected.")}</h2>
 
@@ -87,7 +87,7 @@ export default async function EnterpriseMsfaArchitectureSection() {
                     : "border-[#ececec]"
                 }`}
               >
-                <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+                <span className="text-[11px] font-bold uppercase tracking-normal text-[#c91f28]">
                   {t(card.eyebrow)}
                 </span>
 
@@ -95,7 +95,7 @@ export default async function EnterpriseMsfaArchitectureSection() {
                   {card.logos.map((logo) => (
                     <span
                       key={logo}
-                      className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.06em] text-[#3a3a3a]"
+                      className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-normal text-[#3a3a3a]"
                     >
                       {t(logo)}
                     </span>

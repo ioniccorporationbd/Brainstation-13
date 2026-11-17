@@ -53,7 +53,7 @@ export default async function TechnologyConsultingPartnerSection() {
       <div className="brand-container">
         {/* Heading */}
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Consulting Partnership")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Consulting Partnership")}</p>
 
           <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Why Partner with Magnetic Solution Limited?")}</h2>
 

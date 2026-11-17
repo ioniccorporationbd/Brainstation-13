@@ -44,7 +44,7 @@ export default function StaffAugmentationHeroSection() {
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         {/* Left Content */}
         <div>
-          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#c91f28]">{t("Borderless Tech Talent")}</p>
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">
             {t("IT Staff Augmentation,")}
@@ -115,7 +115,7 @@ export default function StaffAugmentationHeroSection() {
                           ))}
                         </div>
 
-                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-[#52525B] text-pretty">
+                        <p className="mt-[3px] text-[10px] font-semibold uppercase leading-none tracking-normal text-[#52525B] text-pretty">
                           {t(review.rating)}
                         </p>
                       </div>

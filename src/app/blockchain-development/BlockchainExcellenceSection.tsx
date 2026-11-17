@@ -32,7 +32,7 @@ export default async function BlockchainExcellenceSection() {
       <div className="brand-container">
         <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("AI × Blockchain")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI × Blockchain")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Blockchain Excellence with AI")}</h2>
 
@@ -62,7 +62,7 @@ export default async function BlockchainExcellenceSection() {
                 key={item.title}
                 className="group rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28] md:p-7"
               >
-                <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+                <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 

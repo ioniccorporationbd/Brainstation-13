@@ -57,7 +57,7 @@ export default async function DataCaseStudiesSection() {
       <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[720px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Work")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our Work")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Case Studies")}</h2>
 
@@ -87,7 +87,7 @@ export default async function DataCaseStudiesSection() {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+                <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                   {t(item.tag)}
                 </p>
 

@@ -46,7 +46,7 @@ export default function ShopifyTestimonialsSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Testimonials")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonials")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Trusted for eCommerce Excellence")}</h2>
 
@@ -104,7 +104,7 @@ export default function ShopifyTestimonialsSection() {
                   </p>
 
                   <div className="mt-7 flex flex-wrap items-center gap-4">
-                    <span className="text-[15px] font-bold tracking-[0.08em] text-[#0a0a0a]">
+                    <span className="text-[15px] font-bold tracking-normal text-[#0a0a0a]">
                       {t(item.logoText)}
                     </span>
 

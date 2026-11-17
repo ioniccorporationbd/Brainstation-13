@@ -119,7 +119,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Comprehensive Capabilities")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("The Core Ecosystem")}</h2>
 
@@ -169,7 +169,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                 className="h-full w-full object-cover"
               />
 
-              <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+              <span className="absolute left-3 top-3 rounded-[4px] bg-[#c91f28] px-2.5 py-1 text-[11px] font-bold uppercase tracking-normal text-white">
                 {String(activeIndex + 1).padStart(2, "0")} /{" "}
                 {ecosystemItems.length}
               </span>
@@ -177,7 +177,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
               <div className="absolute inset-x-3 bottom-3 border border-[#ececec] bg-white p-4 md:inset-x-4 md:bottom-4 md:p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Active Module")}</p>
+                    <p className="text-[11px] font-bold uppercase tracking-normal text-[#8a8a8a]">{t("Active Module")}</p>
 
                     <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-1.5 font-semibold tracking-[-0.02em] text-[#000000] text-balance">
                       {t(activeItem.title)}
@@ -202,7 +202,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
                       key={meta.label}
                       className="border border-[#ececec] px-1 py-2 sm:px-2.5"
                     >
-                      <p className="text-[9px] font-bold uppercase tracking-[0.06em] text-[#8a8a8a] sm:text-[10px] sm:tracking-[0.1em]">
+                      <p className="text-[9px] font-bold uppercase tracking-normal text-[#8a8a8a] sm:text-[10px] sm:tracking-normal">
                         {t(meta.label)}
                       </p>
                       <p className="mt-1 text-[11px] font-bold text-[#000000] sm:text-[13px]">

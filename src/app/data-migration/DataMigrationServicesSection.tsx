@@ -37,7 +37,7 @@ export default async function DataMigrationServicesSection() {
     <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("What We Do")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What We Do")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Core Data Services")}</h2>
 
@@ -58,7 +58,7 @@ export default async function DataMigrationServicesSection() {
                     <Icon size={22} strokeWidth={1.8} />
                   </div>
 
-                  <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                  <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>

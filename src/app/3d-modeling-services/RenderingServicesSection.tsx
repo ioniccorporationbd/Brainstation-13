@@ -66,7 +66,7 @@ export default async function RenderingServicesSection() {
     <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">
             {t("Rendering & Animation")}
           </p>
 

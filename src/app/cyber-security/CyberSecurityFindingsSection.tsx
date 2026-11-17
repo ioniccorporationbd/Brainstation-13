@@ -34,7 +34,7 @@ export default async function CyberSecurityFindingsSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
-            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The threat landscape")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The threat landscape")}</p>
             <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Our findings")}</h2>
             <p className="mt-4 max-w-[440px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Published research and public breach cases show where attackers concentrate and where response time pays back.")}</p>
 
@@ -58,7 +58,7 @@ export default async function CyberSecurityFindingsSection() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="text-[12.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                    <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                       {t(item.source)}
                     </p>
                     <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] sm:text-[15px] text-pretty">

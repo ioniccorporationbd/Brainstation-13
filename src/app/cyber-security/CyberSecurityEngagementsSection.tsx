@@ -32,7 +32,7 @@ export default async function CyberSecurityEngagementsSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[700px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("In practice")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("In practice")}</p>
           <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Engagements")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Representative cloud, API and incident response work — the methods we apply and the outcomes they produce.")}</p>
         </div>
@@ -47,7 +47,7 @@ export default async function CyberSecurityEngagementsSection() {
                 <item.icon size={21} />
               </span>
 
-              <p className="mt-5 text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+              <p className="mt-5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                 {t(item.tag)}
               </p>
               <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-2 font-semibold tracking-[-0.01em] text-black text-balance">

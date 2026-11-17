@@ -40,7 +40,7 @@ export default async function DigitalTransformationPartnerSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[1160px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("The Magnetic Advantage")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The Magnetic Advantage")}</p>
 
           <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Why Partner With Magnetic Solution Limited")}</h2>
 

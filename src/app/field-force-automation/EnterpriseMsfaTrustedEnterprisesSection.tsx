@@ -93,7 +93,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[760px]">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Proven in Production")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Proven in Production")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Trusted By Leading Enterprises")}</h2>
 
@@ -107,7 +107,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
               className="group flex h-full flex-col border border-[#ececec] bg-white px-6 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#c91f28]"
             >
               <div className="flex items-start justify-between gap-3">
-                <span className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                <span className="border border-[#ececec] px-2.5 py-1 text-[11px] font-bold uppercase tracking-normal text-[#c91f28]">
                   {t(item.metric)}
                 </span>
               </div>
@@ -155,7 +155,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
         <div className="mt-10 border border-[#ececec] bg-[#fafafa] px-7 py-7 md:px-9">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Enterprise Ready")}</p>
+              <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise Ready")}</p>
 
               <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-2.5 max-w-[560px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">{t("Built for high-volume, multi-territory field operations.")}</h3>
 

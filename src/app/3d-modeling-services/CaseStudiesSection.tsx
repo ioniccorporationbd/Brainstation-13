@@ -18,7 +18,7 @@ export default async function CaseStudiesSection() {
     <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Case Studies")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Studies")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Complex Stories, Rendered Simply")}</h2>
 
@@ -53,7 +53,7 @@ export default async function CaseStudiesSection() {
           </div>
 
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Automotive AR Experience")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Automotive AR Experience")}</p>
 
             <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-3 font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("Driver’s Guide for Nissan")}</h3>
 

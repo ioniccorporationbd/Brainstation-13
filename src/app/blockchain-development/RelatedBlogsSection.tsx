@@ -38,7 +38,7 @@ export default async function RelatedBlogsSection() {
       <div className="brand-container">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Insights")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Insights")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("You might also like")}</h2>
           </div>
@@ -70,7 +70,7 @@ export default async function RelatedBlogsSection() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <span className="inline-flex w-fit rounded-full bg-[#fdecec] px-3 py-1.5 text-[11px] font-bold uppercase leading-none tracking-[0.1em] text-[#c91f28]">
+                  <span className="inline-flex w-fit rounded-full bg-[#fdecec] px-3 py-1.5 text-[11px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">
                     {t(post.category)}
                   </span>
 
@@ -82,7 +82,7 @@ export default async function RelatedBlogsSection() {
                     {t(post.description)}
                   </p>
 
-                  <span className="mt-6 inline-flex items-center gap-2 text-[13.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">{t("View Blog")}<span aria-hidden="true">→</span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-[13.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("View Blog")}<span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>

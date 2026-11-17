@@ -30,7 +30,7 @@ export default async function CloudSolutionsProcessSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("How we deliver")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we deliver")}</p>
             <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("A staged path, not a big-bang migration")}</h2>
             <p className="mt-4 max-w-[480px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Every engagement follows the same discipline: understand the estate, build the foundation, automate the change, then measure and tune.")}</p>
 

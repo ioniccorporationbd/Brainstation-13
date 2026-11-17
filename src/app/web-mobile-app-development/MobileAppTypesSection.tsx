@@ -16,7 +16,7 @@ export default async function MobileAppTypesSection() {
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
       <div className="grid brand-container items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-14">
         <div>
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("App Types")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("App Types")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Types of Mobile Apps We Develop")}</h2>
 

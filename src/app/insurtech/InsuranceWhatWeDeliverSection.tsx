@@ -75,7 +75,7 @@ export default function InsuranceWhatWeDeliverSection() {
       <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
         {/* Left title */}
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Deliverables")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Deliverables")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What We Deliver")}</h2>
 

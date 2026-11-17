@@ -9,7 +9,7 @@ export default async function StockPriceCaseStudyHero() {
       <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left - Text */}
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Case Study")}</p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study")}</p>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Stock Price Prediction With AI")}</h1>
 
@@ -17,12 +17,12 @@ export default async function StockPriceCaseStudyHero() {
 
           <dl className="mt-7 grid max-w-[540px] grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-[#ececec] bg-white p-4">
-              <dt className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Solution")}</dt>
+              <dt className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Solution")}</dt>
               <dd className="mt-1.5 text-[15px] font-semibold leading-[1.4] text-[#0a0a0a]">{t("AI & ML Enabled Stock Price Prediction Model")}</dd>
             </div>
 
             <div className="rounded-2xl border border-[#ececec] bg-white p-4">
-              <dt className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Industry")}</dt>
+              <dt className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industry")}</dt>
               <dd className="mt-1.5 text-[15px] font-semibold leading-[1.4] text-[#0a0a0a]">{t("Fin-tech Industry")}</dd>
             </div>
           </dl>

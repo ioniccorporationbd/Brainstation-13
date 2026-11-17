@@ -28,7 +28,7 @@ export default async function BuildGameSection() {
     <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="grid brand-container items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
         <div>
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Our Approach")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our Approach")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] max-w-[560px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Build a Game With Us")}</h2>
 

@@ -72,7 +72,7 @@ export default async function ShopifySolutionsSection() {
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">{t("Solutions")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Solutions")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Solutions We Deliver")}</h2>
 
@@ -80,12 +80,12 @@ export default async function ShopifySolutionsSection() {
         </div>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-2.5">
-          <span className="mr-1 text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8a8a]">{t("Trusted by")}</span>
+          <span className="mr-1 text-[12px] font-bold uppercase tracking-normal text-[#8a8a8a]">{t("Trusted by")}</span>
 
           {clientNames.map((name) => (
             <span
               key={name}
-              className="rounded-full border border-[#ececec] bg-white px-4 py-2 text-[12.5px] font-bold tracking-[0.04em] text-[#3f3f3f]"
+              className="rounded-full border border-[#ececec] bg-white px-4 py-2 text-[12.5px] font-bold tracking-normal text-[#3f3f3f]"
             >
               {t(name)}
             </span>
