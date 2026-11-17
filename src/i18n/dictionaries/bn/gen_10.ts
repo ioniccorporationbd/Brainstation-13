@@ -423,5 +423,6 @@ export const gen_10: Dict = {
   "“8X faster than we expected”": "“আমরা যতটা আশা করেছিলাম তার চেয়ে ৮ গুণ দ্রুত”",
   "“Brain Station 23’s resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.”": "“ব্রেইন স্টেশন 23-এর রিসোর্স অগমেন্টেশন আমাদের ডেভেলপমেন্ট ভেলোসিটি রূপান্তরিত করেছে। তাদের এআই-চালিত অ্যাপ্রোচ আমাদের ফিনটেক প্ল্যাটফর্ম প্রত্যাশার চেয়ে ৮ গুণ দ্রুত সরবরাহ করেছে।”",
   "“Their resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.”": "“তাদের রিসোর্স অগমেন্টেশন আমাদের ডেভেলপমেন্ট ভেলোসিটি রূপান্তরিত করেছে। তাদের এআই-চালিত অ্যাপ্রোচ আমাদের ফিনটেক প্ল্যাটফর্ম প্রত্যাশার চেয়ে ৮ গুণ দ্রুত সরবরাহ করেছে।”",
-  "What Makes Our BTP Different?": "আমাদের BTP কী আলাদা করে?"
+  "What Makes Our BTP Different?": "আমাদের BTP কী আলাদা করে?",
+  "Why Magnetic for ML Development?": "ML ডেভেলপমেন্টে কেন ম্যাগনেটিক?"
 };

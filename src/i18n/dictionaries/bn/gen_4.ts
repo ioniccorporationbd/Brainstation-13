@@ -428,5 +428,6 @@ export const gen_4: Dict = {
   "GraphQL": "গ্রাফ্ক্ল",
   "Great for dynamic, evolving workstreams": "গতিশীল, পরিবর্তনশীল ওয়োর্ক্স্ট্রিম-এর জন্য দুর্দান্ত",
   "Green Data Centres": "গ্রিন ডেটা সেন্টার",
-  "Engineers Ready for Day One": "ডে ওয়ান থেকেই প্রস্তুত ইঞ্জিনিয়ার"
+  "Engineers Ready for Day One": "ডে ওয়ান থেকেই প্রস্তুত ইঞ্জিনিয়ার",
+  "Fraud Detection (Bank)": "ফ্রড ডিটেকশন (ব্যাংক)"
 };

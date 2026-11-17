@@ -20,17 +20,17 @@ type Service = {
 };
 
 const services: Service[] = [
-  { title: "Customer/Human Behavior Analysis", icon: Users },
+  { title: "Human Behavior Analysis", icon: Users },
   { title: "Face Identification", icon: ScanFace },
   { title: "Process Automation", icon: Workflow },
   { title: "Pattern Analysis", icon: LineChart },
   { title: "Intelligent Chatbot", icon: MessageSquare },
-  { title: "Fraudulent Identification (Bank)", icon: ShieldAlert },
+  { title: "Fraud Detection (Bank)", icon: ShieldAlert },
   {
-    title: "Data Analysis for Biological Macromolecular Structures",
+    title: "Macromolecule Analysis",
     icon: Microscope,
   },
-  { title: "Predictive Analytics & Modeling", icon: TrendingUp },
+  { title: "Predictive Analytics", icon: TrendingUp },
   { title: "Targeted Marketing", icon: Target },
   { title: "Churn Analysis", icon: UserMinus },
   { title: "Trend Analysis", icon: Activity },

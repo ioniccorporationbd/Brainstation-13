@@ -428,4 +428,6 @@ export const gen_3: Dict = {
   "Edge Client Layer": "এজ ক্লায়েন্ট লেয়ার",
   "Edge-cached delivery": "এজ-ক্যাশড ডেলিভারি",
   "Editors work on the same structured content, with comments attached to versions.": "এডিটররা একই কাঠামোবদ্ধ কনটেন্টে কাজ করেন, ভার্সনের সাথে সংযুক্ত কমেন্টসহ।",
+  "Human Behavior Analysis": "হিউম্যান বিহেভিয়ার অ্যানালাইসিস",
+  "Macromolecule Analysis": "ম্যাক্রোমলিকিউল অ্যানালাইসিস"
 };

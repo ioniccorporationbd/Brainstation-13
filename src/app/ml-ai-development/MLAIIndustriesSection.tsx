@@ -17,15 +17,15 @@ type Industry = {
 };
 
 const industries: Industry[] = [
-  { title: "Banking & Financial Services", icon: Landmark },
-  { title: "Real Estate & Property Management", icon: Building2 },
-  { title: "Biomolecular & Scientific Research", icon: Microscope },
+  { title: "Banking & Finance", icon: Landmark },
+  { title: "Real Estate & Property", icon: Building2 },
+  { title: "Biomolecular Research", icon: Microscope },
   { title: "Pharmaceuticals & Life Sciences", icon: Pill },
   { title: "E-commerce & Retail", icon: ShoppingCart },
   { title: "Healthcare & Diagnostics", icon: HeartPulse },
   { title: "Telecommunications", icon: RadioTower },
   { title: "Education & eLearning", icon: GraduationCap },
-  { title: "Manufacturing & Industrial Operations", icon: Factory },
+  { title: "Manufacturing & Industrial", icon: Factory },
 ];
 
 export default async function MLAIIndustriesSection() {
