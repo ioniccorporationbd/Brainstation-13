@@ -80,7 +80,7 @@ const enterpriseLinks: MenuLinkItem[] = [
   { label: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
   { label: "Cyber Security", href: "/cyber-security", icon: Lock },
   { label: "ERP Development", href: "/erp-development", icon: Factory },
-  { label: "Data Science & BI", href: "/data-science-business-intelligence", icon: LineChart },
+  { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence", icon: LineChart },
 ];
 
 export default function ServicesMenu({ closeMenu, mobile = false }: Props) {
