@@ -29,7 +29,7 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Product · Assessment")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Product · Assessment")}</span>
             <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Online exams that stay trustworthy and fair")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Proctoring Pro combines live supervision, identity verification and AI integrity signals, so institutions can assess at a distance without losing confidence in the result.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -57,19 +57,19 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
         <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Supervision")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Supervision")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Live and AI-assisted together")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Identity")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Identity")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Verified before the exam")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Environment")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Environment")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Locked-down exam session")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Evidence")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Evidence")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Session report per candidate")}</dd>
           </div>
         </dl>
@@ -78,7 +78,7 @@ export default async function Page() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Why proctoring")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Why proctoring")}</p>
             <h2 className="mt-3 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Integrity signals must be useful, not just abundant")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Flagging everything is the same as flagging nothing. Proctoring Pro combines live supervision with behavioural and object detection so reviewers get a short list worth reviewing.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Candidates get a clear, calm experience: checks are explained up front, and the session stays focused on the exam rather than on tooling.")}</p>
@@ -126,7 +126,7 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Capabilities")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Capabilities")}</p>
           <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Exam integrity, end to end")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Covers the period from candidate check-in to the final session report.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -178,7 +178,7 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Exam workflow")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Exam workflow")}</p>
           <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("From scheduling to signed-off results")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">

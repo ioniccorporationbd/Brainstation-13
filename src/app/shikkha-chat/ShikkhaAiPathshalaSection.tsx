@@ -26,7 +26,7 @@ export default async function ShikkhaAiPathshalaSection() {
           className="lg:order-1"
         />
         <div className="lg:order-2">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("AI Pathshala")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI Pathshala")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Learning that adapts to every student")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("AI Pathshala turns published lessons into a personal learning loop. Students read smart lessons, ask the AI Tutor in their own words, and take quizzes and assessments — while the platform tracks progress and shapes a personalised study plan. Teachers publish, planners plan, and reviewers keep it safe.")}</p>
           <ul className="mt-7 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-2">

@@ -24,7 +24,7 @@ export default async function ShikkhaHeroSection() {
     <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
       <div className="mx-auto grid min-w-0 brand-container items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-16">
         <div className="min-w-0">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
             <Sparkles size={14} strokeWidth={2.2} />{t("Product · Education ERP")}</span>
 
           <div className="mt-6 flex items-center gap-3">
@@ -91,7 +91,7 @@ export default async function ShikkhaHeroSection() {
                 <span className="block text-[30px] font-bold leading-none tracking-[-0.03em] text-[#c91f28] md:text-[34px]">
                   {t(fact.value)}
                 </span>
-                <span className="mt-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-[#52525B]">
+                <span className="mt-2 block text-[13px] font-medium uppercase tracking-normal text-[#52525B]">
                   {t(fact.label)}
                 </span>
               </dd>

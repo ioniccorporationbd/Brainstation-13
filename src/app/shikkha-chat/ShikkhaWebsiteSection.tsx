@@ -40,7 +40,7 @@ export default async function ShikkhaWebsiteSection() {
     <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Public school website")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Public school website")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Every institution also gets a complete public website")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Shikkha Chat ships a complete, mobile-friendly 40+ page school website for every institution — home, governing body, chairman and principal messages, academic calendar, class routine, syllabus, fees, scholarships, notice board, gallery, exam results and more — that parents and the public can browse before they ever sign in.")}</p>
         </div>

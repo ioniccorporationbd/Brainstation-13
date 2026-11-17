@@ -8,7 +8,7 @@ export default async function TestimonialsHeroSection() {
     <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[80px] md:pt-[76px]">
       <div className="mx-auto grid brand-container items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Testimonials")}</span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonials")}</span>
           <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("What teams say after building with us")}</h1>
           <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("First-hand accounts from fintech, education, cloud, commerce and enterprise engagements — kept exactly as they were given, with the original names, roles and companies.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -29,7 +29,7 @@ export default async function TestimonialsHeroSection() {
           className="group block rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-8"
         >
           <div className="flex items-start justify-between">
-            <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured · Fintech")}</span>
+            <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Featured · Fintech")}</span>
             <Quote size={24} strokeWidth={1.6} className="text-[#f0c9cb]" />
           </div>
           <p className="mt-6 text-[20px] font-bold leading-[1.35] tracking-[-0.01em] text-black md:text-[24px]">{t("“8X faster than we expected”")}</p>

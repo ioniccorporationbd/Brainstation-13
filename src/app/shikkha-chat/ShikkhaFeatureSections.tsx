@@ -200,7 +200,7 @@ export default async function ShikkhaFeatureSections() {
           <div className="mx-auto brand-container">
             <FeatureReveal>
               <div className="max-w-[760px]">
-                <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t(section.eyebrow)}</p>
+                <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t(section.eyebrow)}</p>
                 <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">
                   {t(section.title)}
                 </h2>

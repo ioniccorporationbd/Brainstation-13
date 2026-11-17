@@ -73,7 +73,7 @@ async function Card({ item }: { item: Testimonial }) {
   const body = (
     <>
       <div className="flex items-start justify-between">
-        <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+        <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">
           {t(item.tag)}
         </span>
         <Quote size={24} strokeWidth={1.6} className="text-[#f0c9cb]" />
@@ -131,7 +131,7 @@ export default async function TestimonialsGridSection() {
     <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("In their own words")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("In their own words")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Six accounts from across our engagements")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
         </div>

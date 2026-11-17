@@ -52,7 +52,7 @@ export default async function AnupomTakeawaysSection() {
     <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[820px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The engagement")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The engagement")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What made the difference")}</h2>
           <div className="mt-5 space-y-4 text-[15.5px] leading-[1.6] text-[#52525B] md:text-[16.5px]">
             <p>{t("The engagement blended senior fintech engineers with AI-assisted delivery, letting a lean founding team ship a production platform without building a large in-house department.")}</p>
@@ -88,7 +88,7 @@ export default async function AnupomTakeawaysSection() {
               <dd className="text-[24px] font-bold leading-[1.1] tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
                 {t(fact.value)}
               </dd>
-              <dt className="mt-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#52525B]">
+              <dt className="mt-2 text-[12px] font-semibold uppercase tracking-normal text-[#52525B]">
                 {t(fact.label)}
               </dt>
             </div>
