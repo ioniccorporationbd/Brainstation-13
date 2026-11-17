@@ -6,13 +6,14 @@ import GlobalOfficesGate from "@/layout_Components/GlobalOfficesGate";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { getLocale } from "@/i18n/server";
 import { HTML_LANG } from "@/i18n/config";
+import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/i18n/seo";
 
 const META: Record<"bn" | "en", { title: string; description: string }> = {
   bn: {
     title:
-      "Magnetic Solution Limited | ডিজিটাল ট্রান্সফরমেশন ও এন্টারপ্রাইজ আইটি সার্ভিস",
+      "ম্যাগনেটিক সলিউশন লিমিটেড | ডিজিটাল ট্রান্সফরমেশন ও এন্টারপ্রাইজ আইটি সার্ভিস",
     description:
-      "Enterprise-grade software, staff augmentation, Shopify, blockchain, LMS, AI ও data—এন্টারপ্রাইজ ডিজিটাল ট্রান্সফরমেশন সার্ভিস Magnetic Solution Limited-এর পক্ষ থেকে।",
+      "Enterprise-grade software, staff augmentation, Shopify, blockchain, LMS, AI ও data—এন্টারপ্রাইজ ডিজিটাল ট্রান্সফরমেশন সার্ভিস ম্যাগনেটিক সলিউশন লিমিটেড-এর পক্ষ থেকে।",
   },
   en: {
     title: "Magnetic Solution Limited | Digital Transformation & IT Services",
@@ -24,8 +25,35 @@ const META: Record<"bn" | "en", { title: string; description: string }> = {
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return {
-    title: META[locale].title,
+    metadataBase: new URL(SITE_URL),
+    applicationName: SITE_NAME[locale],
+    title: {
+      default: META[locale].title,
+      template: `%s`,
+    },
     description: META[locale].description,
+    // Favicon / app icons come from the file conventions in src/app
+    // (favicon.ico, icon.png, apple-icon.png) — all generated from the
+    // Magnetic Solution Limited logo mark.
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME[locale],
+      locale: locale === "bn" ? "bn_BD" : "en_US",
+      title: META[locale].title,
+      description: META[locale].description,
+      url: "/",
+      images: [{ ...OG_IMAGE, alt: SITE_NAME[locale] }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: META[locale].title,
+      description: META[locale].description,
+      images: [OG_IMAGE.url],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
