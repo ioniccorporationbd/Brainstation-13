@@ -36,7 +36,7 @@ const cards: BtpCard[] = [
     icon: CircleDot,
   },
   {
-    title: "Engineers Who Already Know Tomorrow",
+    title: "Engineers Ready for Day One",
     description:
       "Our teams come GenAI-trained and upskilled — no waiting, no extra training budget.",
     icon: Gem,
@@ -76,7 +76,7 @@ export default async function BtpDifferentSection() {
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
-            <h2 className="text-[clamp(27px,8vw,32px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Makes Borderless Tech Professionals Different?")}</h2>
+            <h2 className="text-[clamp(27px,8vw,32px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Makes Our BTP Different?")}</h2>
           </div>
 
           <p className="max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] lg:pb-2 text-pretty">{t("The fastest, smartest, risk-free way to scale your engineering capacity without the hiring overhead. Build with pre-vetted talents, flexible models, local oversight, and continuity from day one.")}</p>

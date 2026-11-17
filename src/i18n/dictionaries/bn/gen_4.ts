@@ -75,7 +75,7 @@ export const gen_4: Dict = {
   "Engineering team working together on laptops": "ল্যাপটপে একসঙ্গে কাজ করা ইঞ্জিনিয়ারিং টিম",
   "Engineering-accurate 3D visualizations tailored for the world's most demanding manufacturing and engineering sectors.": "বিশ্বের সবচেয়ে চাহিদাসম্পন্ন ম্যানুফ্যাকচারিং ও ইঞ্জিনিয়ারিং সেক্টরের জন্য তৈরি ইঞ্জিনিয়ারিং-অ্যাকুরেট ৩ডি ভিজুয়ালাইজেশন।",
   "Engineers Who Already Know Tomorrow": "যে ইঞ্জিনিয়ার ইতিমধ্যেই আগামীকাল জানেন",
-  "Engineers Who Stay, Grow, and Deliver": "যে ইঞ্জিনিয়ার থেকে যান, বেড়ে ওঠেন ও ডেলিভারি দেন",
+  "Engineers Who Stay, Grow, and Deliver": "যে ইঞ্জিনিয়ার থাকেন, বাড়েন, ডেলিভারি দেন",
   "Engineers who understood regulated finance from day one.": "যে ইঞ্জিনিয়ার প্রথম দিন থেকেই রেগুলেটেড ফাইন্যান্স বুঝেছিলেন।",
   "Enhanced Agility": "উন্নত অ্যাজিলিটি",
   "Enhancing visual appeal & rich user interface": "ভিজুয়াল আকর্ষণ ও সমৃদ্ধ ইউজার ইন্টারফেস উন্নত করা",
@@ -428,4 +428,5 @@ export const gen_4: Dict = {
   "GraphQL": "গ্রাফ্ক্ল",
   "Great for dynamic, evolving workstreams": "গতিশীল, পরিবর্তনশীল ওয়োর্ক্স্ট্রিম-এর জন্য দুর্দান্ত",
   "Green Data Centres": "গ্রিন ডেটা সেন্টার",
+  "Engineers Ready for Day One": "ডে ওয়ান থেকেই প্রস্তুত ইঞ্জিনিয়ার"
 };

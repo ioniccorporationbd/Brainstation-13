@@ -8,12 +8,12 @@ type VideoItem = {
 
 const videos: VideoItem[] = [
   {
-    title: "LUUP Founder on Building a Mobility Platform",
+    title: "LUUP Founder on Mobility Platform",
     subtitle: "Client testimonial with Magnetic Solution Limited",
     videoId: "LkApsAGYKUY",
   },
   {
-    title: "Strategic Partnership Between BSEZ & Magnetic Solution Limited",
+    title: "Strategic Partnership with BSEZ",
     subtitle: "Digital transformation talk with BSEZ",
     videoId: "5INLCSVF1wY",
   },
@@ -23,7 +23,7 @@ const videos: VideoItem[] = [
     videoId: "OzcN-9N97mE",
   },
   {
-    title: "Pro Carrier on Choosing an IT Outsourcing Partner",
+    title: "Pro Carrier on IT Outsourcing",
     subtitle: "Client testimonial and success story",
     videoId: "BxHe3-XNVk8",
   },

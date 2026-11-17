@@ -428,4 +428,5 @@ export const gen_9: Dict = {
   "Visualization": "ভিজ্যুয়ালাইজেশন",
   "Visualize complex concepts like never before": "জটিল কনসেপ্ট আগের চেয়ে ভিন্নভাবে ভিজুয়ালাইজ করুন",
   "Visualize end-to-end processes, identify bottlenecks, and implement continuous improvements.": "এন্ড-টু-এন্ড প্রসেস ভিজুয়ালাইজ করুন, বটলনেক চিহ্নিত করুন এবং অব্যাহত উন্নতি বাস্তবায়ন করুন।",
+  "Strategic Partnership with BSEZ": "বিএসইজেড-এর সাথে স্ট্র্যাটেজিক পার্টনারশিপ"
 };

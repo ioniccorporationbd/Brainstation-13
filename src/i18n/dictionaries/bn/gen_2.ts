@@ -429,4 +429,5 @@ export const gen_2: Dict = {
   "Contact | Magnetic Solution Limited": "যোগাযোগ | ম্যাগনেটিক সলিউশন লিমিটেড",
   "Contact · Schedule a call": "যোগাযোগ · একটি কল নির্ধারণ করুন",
   "Container ship berthed at a working port": "একটি সক্রিয় বন্দরে নোঙর করা কনটেইনার জাহাজ",
+  "Built for Collaboration": "কোলাবরেটিভ ডেলিভারির জন্য তৈরি"
 };

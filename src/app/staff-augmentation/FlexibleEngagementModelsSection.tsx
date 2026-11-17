@@ -180,7 +180,7 @@ export default function FlexibleEngagementModelsSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Flexible Engagement Models")}</h2>
+          <h2 className="text-[clamp(26px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Flexible Engagement Models")}</h2>
 
           <p className="mx-auto mt-5 max-w-[820px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Compare our flexible IT staff augmentation models to find the perfect fit for your project needs and business objectives.")}</p>
         </div>

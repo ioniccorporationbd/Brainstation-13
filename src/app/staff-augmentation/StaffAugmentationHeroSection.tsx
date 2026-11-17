@@ -47,9 +47,8 @@ export default function StaffAugmentationHeroSection() {
           <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
           <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">
-            {t("IT Staff Augmentation,")}
-            <br className="hidden sm:block" />{" "}
-            {t("Built for Speed.")}
+            {t("IT Staff Augmentation")}
+            <span className="hidden sm:inline">,<br className="hidden sm:block" />{" "}{t("Built for Speed.")}</span>
           </h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>

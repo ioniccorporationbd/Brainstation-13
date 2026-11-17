@@ -428,4 +428,5 @@ export const gen_7: Dict = {
   "Reporting & compliance extracts": "রিপোর্টিং ও কমপ্লায়েন্স এক্সট্রাক্ট",
   "Reporting & statements": "রিপোর্টিং ও স্টেটমেন্ট",
   "Reporting & support": "রিপোর্টিং ও সাপোর্ট",
+  "Pro Carrier on IT Outsourcing": "প্রো ক্যারিয়ারের আইটি আউটসোর্সিং"
 };

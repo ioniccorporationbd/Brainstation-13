@@ -428,4 +428,6 @@ export const gen_5: Dict = {
   "Live Classes & Scheduling": "লাইভ ক্লাস ও শিডিউলিং",
   "Live Performance Visibility": "লাইভ পারফরম্যান্স ভিজিবিলিটি",
   "Live Reporting Combination": "লাইভ রিপোর্টিং কম্বিনেশন",
+  "IT Staff Augmentation": "আইটি স্টাফ অগমেন্টেশন",
+  "LUUP Founder on Mobility Platform": "LUUP ফাউন্ডারের মোবিলিটি যাত্রা"
 };
