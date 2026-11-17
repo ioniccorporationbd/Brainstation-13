@@ -155,20 +155,6 @@ export default async function Footer() {
   const { t } = await getTranslator();
   return (
     <footer className="relative overflow-hidden border-t-[4px] border-[#C91F28] bg-black text-white">
-      {/* CTA Card */}
-      <div className="brand-container pt-[60px]">
-        <section className="mx-auto flex min-h-[290px] w-full max-w-[995px] flex-col items-center justify-center rounded-[14px] border border-white/10 bg-[#0A0A0A] px-6 py-10 text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-medium leading-tight tracking-[-0.035em] text-white sm:text-[40px] md:text-[45px] text-balance">{t("Ready to Scale Your Team?")}</h2>
-
-          <p className="mt-[17px] max-w-[560px] text-[15px] font-normal leading-[22px] text-white/70 sm:text-[16px] md:text-[17px]">{t("Let’s discuss how our resource augmentation and AI-powered development can accelerate your project delivery.")}</p>
-
-          <Link
-            href="/schedule-a-call"
-            className="mt-[32px] inline-flex h-[40px] items-center justify-center rounded-full bg-[#C91F28] px-[26px] text-[13px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
-          >{t("Schedule a Call")}</Link>
-        </section>
-      </div>
-
       {/* Main Footer */}
       <div className="brand-container pb-10 pt-[64px]">
         <section className="footer-grid">
