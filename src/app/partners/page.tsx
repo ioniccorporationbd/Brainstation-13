@@ -85,7 +85,7 @@ export default async function PartnersPage() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Partners")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Company · Partners")}</span>
 
             <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Partnerships built around the work, not the logo")}</h1>
 
@@ -117,7 +117,7 @@ export default async function PartnersPage() {
       {/* Partnership models */}
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ways we work together")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Ways we work together")}</p>
           <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Four partnership models")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each model is a working arrangement, not a marketing tier. The terms, responsibilities and reporting follow what the programme actually needs.")}</p>
 
@@ -146,7 +146,7 @@ export default async function PartnersPage() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ecosystem")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Ecosystem")}</p>
             <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Where we plug in")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We integrate with the systems your business already depends on instead of replacing them. The specific vendors, versions and support terms are agreed per project.")}</p>
 
@@ -178,7 +178,7 @@ export default async function PartnersPage() {
       {/* Principles */}
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Ground rules")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Ground rules")}</p>
           <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How we keep partnerships honest")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

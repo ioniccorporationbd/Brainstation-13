@@ -26,7 +26,7 @@ function Meta({ post }: { post: BlogPost }) {
   const { t } = useTranslation();
   return (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] font-semibold">
-      <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+      <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">
         {t(post.category)}
       </span>
       <span className="font-medium text-[#52525B]">{t(post.date)}</span>
@@ -143,7 +143,7 @@ export default function BlogExplorer({
             </div>
             <div className="p-7 md:p-10">
               <div className="flex items-center gap-3">
-                <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">{t("Featured")}</span>
+                <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Featured")}</span>
                 <span className="text-[12.5px] font-medium text-[#52525B]">
                   {t(featured.category)} &middot; {t(featured.date)}
                 </span>

@@ -91,7 +91,7 @@ export default async function InvestorRelationsPage() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Company · Investor relations")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Company · Investor relations")}</span>
 
             <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Clear information for shareholders and counterparties")}</h1>
 
@@ -125,7 +125,7 @@ export default async function InvestorRelationsPage() {
         <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {atAGlance.map((item) => (
             <div key={item.label}>
-              <dt className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">
+              <dt className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">
                 <item.icon size={15} className="text-[#c91f28]" />
                 {t(item.label)}
               </dt>
@@ -140,7 +140,7 @@ export default async function InvestorRelationsPage() {
       {/* Governance */}
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Governance")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Governance")}</p>
           <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How the company is governed")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The principles below describe how decisions are taken and reviewed. The underlying policies are available to shareholders and counterparties on request.")}</p>
 
@@ -171,7 +171,7 @@ export default async function InvestorRelationsPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Reports & disclosures")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Reports & disclosures")}</p>
             <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Documents are shared, not published")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("As a privately held company we do not publish statutory accounts or quarterly results on the website. If you are a shareholder, lender, auditor or counterparty, these are provided under a confidentiality agreement with the latest period available.")}</p>
 
@@ -209,7 +209,7 @@ export default async function InvestorRelationsPage() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">
+              <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">
                 <Mail size={15} />{t("Investor contact")}</p>
               <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Need a specific disclosure?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the requirement and your organisation details through the contact form. Requests are answered with documents and a named point of contact.")}</p>

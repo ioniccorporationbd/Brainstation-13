@@ -60,7 +60,7 @@ export default async function ContactPage() {
     <main>
       <section className="bg-white pb-12 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Contact")}</span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Contact")}</span>
           <h1 className="mt-6 max-w-[820px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Let’s talk")}</h1>
           <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.")}</p>
         </div>
@@ -107,7 +107,7 @@ export default async function ContactPage() {
             })}
 
             <div className="rounded-xl border border-[#ececec] bg-[#fafafa] p-7 md:p-7">
-              <h3 className="text-[13px] font-semibold leading-[1.3] uppercase tracking-[0.12em] text-[#52525B] text-balance">{t("About direct channels")}</h3>
+              <h3 className="text-[13px] font-semibold leading-[1.3] uppercase tracking-normal text-[#52525B] text-balance">{t("About direct channels")}</h3>
               <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("A public email address, phone line and street address have not been verified for this site, so they are intentionally not published here rather than invented. Every message sent through the form is recorded and routed to the right team.")}</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default async function ContactPage() {
 
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Where we are")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Where we are")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Based in Bangladesh, delivering worldwide")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">

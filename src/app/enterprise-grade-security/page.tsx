@@ -52,7 +52,7 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Enterprise-grade security")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise-grade security")}</span>
             <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Security engineered into everything we build")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Encryption, least-privilege access, reviewed build pipelines and monitored operations — controls designed into delivery rather than added at audit time.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -80,19 +80,19 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
         <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Data")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Data")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Encrypted in transit and at rest")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Access")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Access")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Least privilege, MFA, SSO")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Delivery")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Delivery")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Threat modelling and scanning")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Operations")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Operations")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("24/7 logging and alerting")}</dd>
           </div>
         </dl>
@@ -100,7 +100,7 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Protection layers")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Protection layers")}</p>
           <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Four layers of defence")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each layer is independently reviewed, so a single mistake never becomes a breach.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -139,7 +139,7 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Standards")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Standards")}</p>
             <h2 className="mt-3 max-w-[460px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Mapped to recognised frameworks, verifiable on request")}</h2>
             <p className="mt-4 max-w-[460px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our controls follow established frameworks rather than custom claims. Certification status, scope statements and audit artefacts are provided during due diligence under NDA — we do not display badges we cannot substantiate.")}</p>
           </div>
@@ -183,7 +183,7 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Operations")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Operations")}</p>
             <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Security that runs every day, not only at audit time")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Security is part of the engineering culture: hardened pipelines, reviewed code and automated vulnerability scanning are the default, not an add-on.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our operations team monitors for threats continuously and responds through documented incident procedures.")}</p>
@@ -227,7 +227,7 @@ export default async function Page() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Engineering")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Engineering")}</p>
             <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Threat modelling before the first commit")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every engagement starts by mapping the data involved, who may reach it and what happens if a control fails.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Network isolation and hardened environments limit the blast radius when something goes wrong.")}</p>

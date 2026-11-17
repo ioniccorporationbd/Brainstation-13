@@ -110,7 +110,7 @@ export default function CaseStudiesGridSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Selected work")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Selected work")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Case studies across industries")}</h2>
           <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("From high-volume fintech to global learning platforms — here’s a snapshot of the outcomes we deliver.")}</p>
         </div>
@@ -149,7 +149,7 @@ export default function CaseStudiesGridSection() {
                     alt={t(item.alt)}
                     className="h-[200px] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                     {t(item.category)}
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export default function CaseStudiesGridSection() {
                     {t(item.excerpt)}
                   </p>
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 border-t border-[#ececec] pt-4">
-                    <span className="text-[12px] font-semibold uppercase leading-tight tracking-[0.06em] text-[#7a7d84]">
+                    <span className="text-[12px] font-semibold uppercase leading-tight tracking-normal text-[#7a7d84]">
                       {t(item.capability)}
                     </span>
                     <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[13.5px] font-bold text-[#c91f28] transition-all duration-200 group-hover:gap-2.5">
