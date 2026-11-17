@@ -26,7 +26,7 @@ export default async function SafetyAtSeaChallengeSection() {
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The problem")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The problem")}</p>
             <h2 className="mt-4 max-w-[560px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Small fleets, thin coverage, high stakes")}</h2>
 
             <p className="mt-5 text-[15.5px] leading-[1.8] text-[#55585e]">{t("Small fishing fleets and coastal vessels operate with limited connectivity and visibility, putting crews at risk when weather or engine trouble hits.")}</p>

@@ -196,7 +196,7 @@ export default async function StandardPage({ data }: { data: PageData }) {
         <div className="pointer-events-none absolute -left-32 -top-24 h-[420px] w-[420px] rounded-full bg-[#c91f28]/25 blur-[120px]" />
         <div className="pointer-events-none absolute -right-24 bottom-0 h-[360px] w-[360px] rounded-full bg-[#c91f28]/20 blur-[110px]" />
         <div className="relative mx-auto max-w-[1080px] text-center">
-          <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-2 text-[13px] font-bold uppercase tracking-[0.14em] text-[#f87171]">
+          <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-5 py-2 text-[13px] font-bold uppercase tracking-normal text-[#f87171]">
             {t(eyebrow)}
           </span>
           <h1 className="mx-auto mt-7 max-w-[920px] text-[clamp(30px,8.9vw,38px)] font-medium leading-[1.08] tracking-[-0.055em] md:text-[52px] text-balance">

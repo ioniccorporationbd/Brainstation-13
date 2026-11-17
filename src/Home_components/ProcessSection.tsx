@@ -101,7 +101,7 @@ export default async function ProcessSection() {
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#C91F28]/10 text-[20px] leading-none">
                       {item.icon}
                     </span>
-                    <span className="text-[12px] font-semibold uppercase tracking-[0.04em] text-[#C91F28] md:text-[13px]">
+                    <span className="text-[12px] font-semibold uppercase tracking-normal text-[#C91F28] md:text-[13px]">
                       {t(item.label)}
                     </span>
                   </div>

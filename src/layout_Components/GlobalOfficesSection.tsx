@@ -64,7 +64,7 @@ export default function GlobalOfficesSection() {
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#C91F28] text-white">
                   {office.icon === "pin" ? <MapPin size={22} /> : <Globe size={22} />}
                 </span>
-                <span className="rounded-full bg-[#C91F28]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C91F28]">
+                <span className="rounded-full bg-[#C91F28]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-normal text-[#C91F28]">
                   {t(office.badge)}
                 </span>
               </div>

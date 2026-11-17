@@ -189,7 +189,7 @@ function TextLink({ item, closeMenu, disabled = false }: { item: MenuLinkItem; c
         </span>
         <span className="flex items-center gap-[8px]">
           {t(item.label)}
-          {item.note ? <span className="rounded-full bg-[#eef1f5] px-[8px] py-[1px] text-[11px] font-semibold uppercase tracking-[0.04em] text-[#8a94a3]">{t(item.note)}</span> : null}
+          {item.note ? <span className="rounded-full bg-[#eef1f5] px-[8px] py-[1px] text-[11px] font-semibold uppercase tracking-normal text-[#8a94a3]">{t(item.note)}</span> : null}
         </span>
       </div>
     );
@@ -219,7 +219,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
   const { t } = useTranslation();
   return (
     <div>
-      <p className={`mb-1.5 px-2 text-[12.5px] font-semibold uppercase tracking-[0.06em] ${disabled ? "text-[#a7b0bc]" : "text-[#C91F28]"}`}>{t(title)}</p>
+      <p className={`mb-1.5 px-2 text-[12.5px] font-semibold uppercase tracking-normal ${disabled ? "text-[#a7b0bc]" : "text-[#C91F28]"}`}>{t(title)}</p>
       <div className="flex flex-col">
         {links.map((item) => {
           const Icon = item.icon;
@@ -234,7 +234,7 @@ function MobileGroup({ title, links, closeMenu, disabled = false }: { title: str
               <span className="flex min-w-0 flex-wrap items-center gap-[6px] break-words">
                 {t(item.label)}
                 {external ? <ExternalLink size={12} strokeWidth={2.2} className="text-[#9aa3af]" aria-hidden="true" /> : null}
-                {item.note ? <span className="rounded-full bg-[#eef1f5] px-[7px] py-[1px] text-[10px] font-semibold uppercase tracking-[0.04em] text-[#8a94a3]">{t(item.note)}</span> : null}
+                {item.note ? <span className="rounded-full bg-[#eef1f5] px-[7px] py-[1px] text-[10px] font-semibold uppercase tracking-normal text-[#8a94a3]">{t(item.note)}</span> : null}
               </span>
             </>
           );

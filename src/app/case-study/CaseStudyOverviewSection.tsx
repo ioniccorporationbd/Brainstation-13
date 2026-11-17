@@ -52,7 +52,7 @@ export default async function CaseStudyOverviewSection() {
       <div className="mx-auto max-w-[1240px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Problem Statement")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Problem Statement")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Business Challenges")}</h2>
 
@@ -74,7 +74,7 @@ export default async function CaseStudyOverviewSection() {
                     <Icon size={22} strokeWidth={1.8} />
                   </div>
 
-                  <span className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#c91f28]">
+                  <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>

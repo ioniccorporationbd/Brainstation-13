@@ -62,7 +62,7 @@ export default async function AIDevelopmentExcellenceSection() {
                   {t(item.number)}
                 </span>
 
-                <span className="mt-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-primary/70">
+                <span className="mt-2 text-[12px] font-semibold uppercase tracking-normal text-primary/70">
                   {t(item.label)}
                 </span>
 

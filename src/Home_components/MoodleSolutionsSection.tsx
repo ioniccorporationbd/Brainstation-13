@@ -26,7 +26,7 @@ export default async function MoodleSolutionsSection() {
       <div className="brand-container">
         {/* Header */}
         <div className="text-center">
-          <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-[0.16em] text-primary">{t("Moodle Capabilities")}</p>
+          <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-normal text-primary">{t("Moodle Capabilities")}</p>
 
           <h2 className="mx-auto mt-4 max-w-[820px] text-balance text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] sm:text-[46px] lg:text-[50px]">{t("Moodle Solutions for Real Impact")}</h2>
 

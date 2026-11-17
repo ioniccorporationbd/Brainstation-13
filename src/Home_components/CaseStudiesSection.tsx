@@ -48,7 +48,7 @@ export default async function CaseStudiesSection() {
               <span className="text-[13px] font-semibold tracking-[-0.01em] text-[#0A0A0A] md:text-[14px]">
                 {t(client.name)}
               </span>
-              <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#71717A]">
+              <span className="text-[11px] font-medium uppercase tracking-normal text-[#71717A]">
                 {t(client.tag)}
               </span>
             </div>
@@ -70,7 +70,7 @@ export default async function CaseStudiesSection() {
             </div>
 
             <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-[#C91F28] md:text-[14px]">{t("AI & ML · LMS")}</p>
+              <p className="text-[13px] font-semibold uppercase tracking-normal text-[#C91F28] md:text-[14px]">{t("AI & ML · LMS")}</p>
 
               <h3 className="mt-4 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance">{t("Streamlining Attendance at IIITK with Facial Recognition")}</h3>
 

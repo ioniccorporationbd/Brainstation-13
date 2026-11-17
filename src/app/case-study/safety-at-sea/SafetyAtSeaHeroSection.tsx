@@ -14,7 +14,7 @@ export default async function SafetyAtSeaHeroSection() {
     <section className="relative overflow-hidden bg-white px-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Case Study · IoT")}</span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study · IoT")}</span>
 
           <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Safety at Sea — IoT for stronger maritime security")}</h1>
 

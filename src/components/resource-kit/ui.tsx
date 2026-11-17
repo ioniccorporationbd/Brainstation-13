@@ -73,7 +73,7 @@ export async function SectionHeader({
       }
     >
       {eyebrow ? (
-        <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+        <p className="text-[14px] font-bold uppercase tracking-normal text-[#c91f28]">
           {t(eyebrow)}
         </p>
       ) : null}
@@ -215,7 +215,7 @@ export async function SplitBlock({
 
       <div className={reverse ? "lg:order-1" : ""}>
         {eyebrow ? (
-          <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#c91f28]">
+          <p className="text-[14px] font-bold uppercase tracking-normal text-[#c91f28]">
             {t(eyebrow)}
           </p>
         ) : null}

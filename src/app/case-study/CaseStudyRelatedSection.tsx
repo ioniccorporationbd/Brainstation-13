@@ -39,7 +39,7 @@ export default async function CaseStudyRelatedSection() {
       <div className="mx-auto max-w-[1180px]">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[720px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Related Case Studies")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Related Case Studies")}</p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("You Might Also Like")}</h2>
 
@@ -70,7 +70,7 @@ export default async function CaseStudyRelatedSection() {
                 </div>
 
                 <div className="p-6">
-                  <span className="inline-flex rounded-full bg-[#fdecec] px-3 py-1.5 text-[12px] font-bold uppercase leading-none tracking-[0.08em] text-[#c91f28] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                  <span className="inline-flex rounded-full bg-[#fdecec] px-3 py-1.5 text-[12px] font-bold uppercase leading-none tracking-normal text-[#c91f28] transition duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                     {t(item.category)}
                   </span>
 

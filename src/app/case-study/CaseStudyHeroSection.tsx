@@ -8,7 +8,7 @@ export default async function CaseStudyHeroSection() {
     <section className="relative overflow-hidden bg-white px-6 py-[72px] text-[#0a0a0a] md:py-[96px]">
       <div className="mx-auto max-w-[1180px]">
         <div className="mx-auto max-w-[880px] text-center">
-          <p className="mb-5 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Case Study · Retail & E-Commerce")}</p>
+          <p className="mb-5 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study · Retail & E-Commerce")}</p>
 
           <h1 className="mx-auto max-w-[900px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.025em] text-[#0a0a0a] md:text-[52px] text-balance">{t("Rebuilding Retail for a Digital-First Customer")}</h1>
 

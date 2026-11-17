@@ -112,7 +112,7 @@ async function InfoCard({
       </div>
 
       <div>
-        <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.1em] text-[#c91f28]">
+        <p className="mb-2 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
           {String(index + 1).padStart(2, "0")}
         </p>
 
@@ -132,7 +132,7 @@ export default async function CaseStudySolutionImpactSection() {
         {/* Solution Provided */}
         <div>
           <div className="mx-auto max-w-[760px] text-center">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Delivery Scope")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Delivery Scope")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Solution Provided")}</h2>
 
@@ -154,7 +154,7 @@ export default async function CaseStudySolutionImpactSection() {
         {/* Impact */}
         <div className="mt-[88px]">
           <div className="mx-auto max-w-[720px] text-center">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Business Results")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Business Results")}</p>
 
             <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Impact")}</h2>
 

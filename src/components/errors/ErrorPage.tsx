@@ -160,7 +160,7 @@ export default function ErrorPage({
             />
           </Link>
 
-          <span className="nf-fade mt-8 inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Error")}{code}
+          <span className="nf-fade mt-8 inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Error")}{code}
           </span>
 
           <span
@@ -235,7 +235,7 @@ export default function ErrorPage({
 
           {withPopular ? (
             <div className="nf-fade mt-11 w-full rounded-2xl border border-[#ececec] bg-[#fafafa] px-6 py-7 text-left md:px-8">
-              <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Popular pages")}</p>
+              <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Popular pages")}</p>
               <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-4">
                 {popular.map((item) => (
                   <Link

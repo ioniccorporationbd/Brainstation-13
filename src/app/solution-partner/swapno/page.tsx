@@ -29,7 +29,7 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Solution partner · Swapno")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Solution partner · Swapno")}</span>
             <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Better together with Swapno")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("A collaboration that pairs the Swapno platform with engineering delivery from Magnetic Solution Limited, so joint clients get domain depth and build capacity in one arrangement.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -57,19 +57,19 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
         <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Platform")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Platform")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Swapno product foundation")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Engineering")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Engineering")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Delivery by Magnetic Solution Limited")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Design")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Design")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Solution architecture shaped jointly")}</dd>
           </div>
           <div>
-            <dt className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#8a8f98]">{t("Support")}</dt>
+            <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Support")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("A single support path after launch")}</dd>
           </div>
         </dl>
@@ -78,7 +78,7 @@ export default async function Page() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("The collaboration")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The collaboration")}</p>
             <h2 className="mt-3 max-w-[620px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Platform expertise plus engineering depth")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Swapno brings its platform and domain knowledge. Magnetic Solution Limited brings senior engineering, delivery discipline and the capacity to take a solution from pilot to production.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Clients work with one combined team: one roadmap, one point of contact and one set of quality standards across both organisations.")}</p>
@@ -126,7 +126,7 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("What the collaboration gives you")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What the collaboration gives you")}</p>
           <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Practical benefits for a joint engagement")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each item describes how the two teams work together on a live project.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -178,7 +178,7 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Joint delivery")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Joint delivery")}</p>
           <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How a combined engagement is set up")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">

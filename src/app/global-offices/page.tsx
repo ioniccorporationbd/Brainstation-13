@@ -77,7 +77,7 @@ export default async function GlobalOfficesPage() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.14em] text-[#c91f28]">{t("Global offices")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Global offices")}</span>
             <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("One team, everywhere you work")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -105,7 +105,7 @@ export default async function GlobalOfficesPage() {
 
       <section className="bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("Our locations")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our locations")}</p>
           <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Where we deliver from")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Two verified operating bases: a headquarters and engineering centre in Bangladesh, and a remote-first delivery model that puts senior engineers close to your working day.")}</p>
 
@@ -125,7 +125,7 @@ export default async function GlobalOfficesPage() {
                       <h3 className="text-[18px] font-semibold leading-[1.25] text-black md:text-[20px] text-balance">
                         {t(item.title)}
                       </h3>
-                      <p className="text-[11.5px] font-bold uppercase tracking-[0.1em] text-[#52525B] text-pretty">
+                      <p className="text-[11.5px] font-bold uppercase tracking-normal text-[#52525B] text-pretty">
                         {t(item.badge)}
                       </p>
                     </div>
@@ -173,7 +173,7 @@ export default async function GlobalOfficesPage() {
                 <dd className="text-[20px] font-bold leading-[1.2] tracking-[-0.02em] text-[#c91f28] md:text-[22px]">
                   {t(fact.value)}
                 </dd>
-                <dt className="mt-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#52525B]">
+                <dt className="mt-1 text-[12px] font-semibold uppercase tracking-normal text-[#52525B]">
                   {t(fact.label)}
                 </dt>
               </div>
@@ -181,7 +181,7 @@ export default async function GlobalOfficesPage() {
           </dl>
 
           <div className="mt-14">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#c91f28]">{t("How we work")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
             <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Working across borders, without the friction")}</h2>
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {workingModel.map((card) => {
