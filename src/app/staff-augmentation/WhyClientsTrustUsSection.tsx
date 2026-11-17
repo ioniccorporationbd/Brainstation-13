@@ -34,13 +34,13 @@ const trustCards: TrustCard[] = [
     icon: Layers3,
   },
   {
-    title: "Agile Delivery, Transparent Process",
+    title: "Agile & Transparent",
     description:
       "Scrum and Kanban keep work clear and flexible. You join sprint planning and reviews.",
     icon: RefreshCcw,
   },
   {
-    title: "Pre-Vetted Engineering Talent",
+    title: "Pre-Vetted Talent",
     description:
       "Every engineer is screened for technical strength, communication, reliability, and ownership.",
     icon: CheckCircle2,
@@ -88,7 +88,7 @@ const trustCards: TrustCard[] = [
     icon: Handshake,
   },
   {
-    title: "Compliance Friendly Workflow",
+    title: "Compliant Workflows",
     description:
       "We support enterprise-grade workflows with security, reporting, and audit-ready delivery habits.",
     icon: LockKeyhole,

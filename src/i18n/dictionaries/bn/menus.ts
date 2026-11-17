@@ -25,7 +25,7 @@ export const menus: Dict = {
   "Cloud Solutions": "ক্লাউড সলিউশন",
   "Cyber Security": "সাইবার সিকিউরিটি",
   "ERP Development": "ইআরপি ডেভেলপমেন্ট",
-  "Data Science & Business Intelligence": "ডেটা সায়েন্স ও বিজনেস ইন্টেলিজেন্স",
+  "Data Science & BI": "ডেটা সায়েন্স ও BI",
   "Collaboration Model": "কোলাবোরেশন মডেল",
   "Top Services": "টপ সার্ভিস",
   "Enterprise Focused": "এন্টারপ্রাইজ-ফোকাসড",

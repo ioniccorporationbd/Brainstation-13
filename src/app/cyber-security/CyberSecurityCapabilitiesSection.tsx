@@ -4,7 +4,7 @@ import { ArrowRight, Bug, Cloud, Code2, ShieldAlert } from "lucide-react";
 
 const capabilities = [
   {
-    title: "Data Breach Assessment & Mitigation",
+    title: "Breach Assessment",
     description:
       "Immediate digital forensics, threat intelligence, and root cause analysis to contain incidents via log analysis, endpoint isolation, and remediation plans with minimal disruption.",
     icon: ShieldAlert,
@@ -22,7 +22,7 @@ const capabilities = [
     icon: Code2,
   },
   {
-    title: "Cloud Security Assessment & Mitigation",
+    title: "Cloud Security Review",
     description:
       "Audit AWS, Azure, GCP for IAM misconfigurations, S3 encryption gaps, WAF rules and network segmentation using cloud-native frameworks like CSA CCM.",
     icon: Cloud,

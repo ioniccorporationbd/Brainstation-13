@@ -55,7 +55,7 @@ export default async function SoftwareItesPage() {
       <SoftwareItesCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title={t("Software engagement questions")}
+        title={t("Software engagement FAQs")}
         subtitle={t("What ICT and software businesses usually ask before we start.")}
         items={faqs}
         ctaLabel="Schedule a call"

@@ -25,7 +25,7 @@ export default async function EnterpriseMsfaHeroSection() {
         <div>
           <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#000000] md:text-[52px] lg:text-[56px] text-balance">{t("Govern field sales at")}{" "}
+          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#000000] md:text-[52px] lg:text-[54px] xl:text-[56px] text-balance">{t("Govern field sales at")}{" "}
             <span className="text-[#c91f28]">{t("true scale")}</span>
           </h1>
 

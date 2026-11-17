@@ -78,7 +78,7 @@ export default async function GlobalOfficesPage() {
         <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Global offices")}</span>
-            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("One team, everywhere you work")}</h1>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("One Global Team")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
@@ -182,7 +182,7 @@ export default async function GlobalOfficesPage() {
 
           <div className="mt-14">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Working across borders, without the friction")}</h2>
+            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Across borders, without friction")}</h2>
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {workingModel.map((card) => {
                 const Icon = card.icon;
@@ -207,7 +207,7 @@ export default async function GlobalOfficesPage() {
           </div>
 
           <div className="mt-14 rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 text-center md:px-12 md:py-12">
-            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Not near an office? That's fine.")}</h2>
+            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("No office nearby? Fine.")}</h2>
             <p className="mx-auto mt-3 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Most of our work is delivered remotely with overlapping hours in your timezone. Distance has never been a barrier to shipping great software.")}</p>
             <Link
               href="/schedule-a-call"

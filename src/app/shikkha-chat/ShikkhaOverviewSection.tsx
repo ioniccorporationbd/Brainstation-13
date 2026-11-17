@@ -18,7 +18,7 @@ export default async function ShikkhaOverviewSection() {
       <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What is Shikkha Chat")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One platform for every part of a school")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One platform for every school")}</h2>
           <div className="mt-5 space-y-4 text-[15.5px] leading-[1.6] text-[#52525B] md:text-[16.5px]">
             <p>{t("Shikkha Chat is a complete education management platform that links the whole school community — administration, teachers, students, parents and oversight bodies — inside a single, secure product.")}</p>
             <p>{t("Instead of juggling separate tools for attendance, lessons, assessment and reporting, institutions get one consistent experience where every role sees exactly what it needs, and no one is left out of the loop.")}</p>

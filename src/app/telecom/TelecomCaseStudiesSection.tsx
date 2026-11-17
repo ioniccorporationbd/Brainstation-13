@@ -17,7 +17,7 @@ const caseStudies: TelecomCaseStudy[] = [
     id: "bt",
     label: "British Telecom",
     category: "Order management journey",
-    title: "Customer portal and order journey for British Telecom",
+    title: "Portal & order journey for British Telecom",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
     description:

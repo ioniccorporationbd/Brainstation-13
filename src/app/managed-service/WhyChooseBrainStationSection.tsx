@@ -2,32 +2,32 @@ import { getTranslator } from "@/i18n/server";
 
 const reasons = [
   {
-    title: "Full Ownership with Built-In Accountability",
+    title: "Full Ownership, Built In",
     description:
       "A dedicated Delivery Lead or Program Manager drives the engagement end to end, with clear SLAs, transparent reporting, and well-defined KPIs.",
   },
   {
-    title: "Agile, Efficient, Outcome-Oriented",
+    title: "Agile & Outcome-Led",
     description:
       "A five-phase Agile process across planning, development, QA, release, and support delivers measurable value every 2\u20133 weeks.",
   },
   {
-    title: "Quality-First Engineering Culture",
+    title: "Quality-First Culture",
     description:
       "ISTQB-certified QA, CMMI ML3 practices, and ISO 9001 and 27001 standards keep every release at a consistently high bar.",
   },
   {
-    title: "Cost Predictability & Flexible Scaling",
+    title: "Predictable, Flexible Cost",
     description:
       "Fixed-cost or CP models help you forecast, track, and optimize spend, and scale roles up or down as your needs change.",
   },
   {
-    title: "Complexity Point-Based Model",
+    title: "Point-Based Model",
     description:
       "Work is broken into measurable complexity units for better cost, effort, and delivery predictability with controlled midstream changes.",
   },
   {
-    title: "Strategic Advisory from CoE & ARB",
+    title: "CoE & ARB Advisory",
     description:
       "Access an Architecture Review Board and Centers of Excellence for solution audits, code quality reviews, and strategic guidance.",
   },
@@ -37,12 +37,12 @@ const reasons = [
       "Delivery centers and legal entities across multiple regions simplify regulatory compliance and global delivery operations.",
   },
   {
-    title: "Business Continuity Built-In",
+    title: "Business Continuity",
     description:
       "Bench and shadow resources keep large engagements uninterrupted during attrition, transition, or scaling moments.",
   },
   {
-    title: "Continuous Learning & Innovation",
+    title: "Learning & Innovation",
     description:
       "Structured L&D, mentorship, and exposure to AI, IoT, Blockchain, and AR/VR keep your engineering future-ready.",
   },
@@ -56,7 +56,7 @@ export default async function WhyChooseBrainStationSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Managed Service Advantage")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Why Choose Magnetic Solution Limited?")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Why Magnetic Solution Limited?")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We combine complete ownership, engineering quality, delivery governance, and flexible scaling to help businesses build, maintain, and improve software products with confidence.")}</p>
         </div>

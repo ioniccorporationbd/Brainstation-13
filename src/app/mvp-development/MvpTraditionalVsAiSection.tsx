@@ -64,7 +64,7 @@ export default async function MvpTraditionalVsAiSection() {
         <div className="mx-auto max-w-[820px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI-Assisted MVP Delivery")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Traditional Approach vs AI-Assisted Approach")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Traditional vs AI-Assisted Approach")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("See how an AI-assisted workflow improves the way modern MVPs are delivered — across people, time, quality, cost, and satisfaction.")}</p>
         </div>

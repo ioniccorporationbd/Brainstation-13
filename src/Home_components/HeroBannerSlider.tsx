@@ -28,7 +28,7 @@ const HERO_BOTTOM_IMAGE =
 
 const slides: SlideItem[] = [
   {
-    title: "Launch Wallet or Cross-Border Payments in 90 Days, Compliant",
+    title: "Launch Payments in 90 Days",
     description:
       "Empowering Banks, NBFIs & Fintechs to accelerate digital transformation with faster launches, lower costs & seamless UX.",
     buttonText: "Book A Demo",
@@ -39,7 +39,7 @@ const slides: SlideItem[] = [
     statTwoText: "Certified Teams",
   },
   {
-    title: "Scale Your Dev Team With Top 1% Bangladeshi Talents in 4 Weeks",
+    title: "Top 1% in Bangladesh",
     description:
       "From startups to enterprises—build scalable, secure software with our 18+ years of expertise and ISO 27001-certified teams.",
     buttonText: "Hire Your Team Now",
@@ -50,7 +50,7 @@ const slides: SlideItem[] = [
     statTwoText: "Employee Retention",
   },
   {
-    title: "Build AI-Powered, Scalable Software for Startups to Enterprises.",
+    title: "Scalable AI for Every Business",
     description:
       "From fintech to eCommerce, we deliver end-to-end solutions tailored to your business—fast, flexible, and reliable.",
     buttonText: "Schedule a Call",

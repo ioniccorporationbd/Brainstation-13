@@ -163,7 +163,7 @@ export default async function Page() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Digital banking")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("A digital banking platform customers can rely on")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Digital Banking You Can Trust")}</h1>
 
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Channels, operations console and core integration built as one product — customer onboarding, payments, cards and limits, with the audit trail a regulated bank is expected to keep.")}</p>
 
@@ -239,7 +239,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
-            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Channel, service and core — kept apart on purpose")}</h2>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Channel, Service & Core — Apart")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The products customers use are separated from the services that enforce rules and the core that holds the balances. That separation is what makes phased rollout and core replacement feasible.")}</p>
 
             <ul className="mt-7 space-y-3.5">
@@ -304,7 +304,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Integrations")}</p>
-            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Connects to what you already run")}</h2>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Connects to what you already run")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">

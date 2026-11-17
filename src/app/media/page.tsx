@@ -113,7 +113,7 @@ export default async function MediaPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Media resources")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What we can provide, and how to ask for it")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What we provide, and how to ask")}</h2>
           <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Requests are handled editorially rather than through a marketing funnel — you get a direct answer, not a brochure.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">

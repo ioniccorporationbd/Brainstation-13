@@ -33,7 +33,7 @@ export default async function EcommerceStackSection() {
           <div className="max-w-[640px]">
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
 
-            <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Built for the modern commerce stack")}</h2>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Built for modern commerce")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

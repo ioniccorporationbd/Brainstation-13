@@ -22,7 +22,7 @@ const caseStudies: CaseStudy[] = [
     label: "CityRemit",
     category: "Fintech · Remittance",
     title:
-      "Instant and secure cross-border remittance with CityRemit: enhancing financial connectivity for expatriates",
+      "Cross-border via CityRemit",
     image:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1400&auto=format&fit=crop",
     tags: ["Instant transfers", "Round-the-clock", "Multi-country"],

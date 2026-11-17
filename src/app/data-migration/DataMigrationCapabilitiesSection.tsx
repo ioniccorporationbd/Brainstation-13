@@ -20,7 +20,7 @@ type Reason = {
 
 const reasons: Reason[] = [
   {
-    title: "Seamless Legacy Modernization",
+    title: "Legacy Modernization",
     description:
       "Migration from legacy systems to modern, scalable platforms without disrupting day-to-day operations.",
     icon: Layers,
@@ -32,19 +32,19 @@ const reasons: Reason[] = [
     icon: BadgeCheck,
   },
   {
-    title: "Unique Customer Identity",
+    title: "Unique Customer ID",
     description:
       "Accurate customer identification and de-duplication for clearer, more dependable business insights.",
     icon: Fingerprint,
   },
   {
-    title: "High-Performance Transfer",
+    title: "High-Speed Transfer",
     description:
       "Optimized pipelines for high-performance, high-volume data transfer with minimal downtime.",
     icon: Settings2,
   },
   {
-    title: "Secure, Centralized Data",
+    title: "Centralized Data",
     description:
       "Centralized, secured data foundations that power analytics and confident decision-making.",
     icon: ShieldCheck,
@@ -68,13 +68,13 @@ const reasons: Reason[] = [
     icon: Wand2,
   },
   {
-    title: "Secure & Compliant Delivery",
+    title: "Compliant Delivery",
     description:
       "Security-first, compliance-ready migrations designed around your business requirements.",
     icon: Clock,
   },
   {
-    title: "Tailored, Business-Ready Fit",
+    title: "Tailored Business Fit",
     description:
       "Every migration is shaped to your systems so data lands exactly where your business needs it.",
     icon: Plug,

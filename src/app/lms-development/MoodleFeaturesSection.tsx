@@ -19,7 +19,7 @@ type Feature = {
 
 const featureData: Feature[] = [
   {
-    title: "Dynamic Dashboard & User Experience",
+    title: "Dynamic Dashboard",
     icon: LayoutDashboard,
     items: [
       "Customizable dashboard",
@@ -59,7 +59,7 @@ const featureData: Feature[] = [
     ],
   },
   {
-    title: "Secure Identity & Access Governance",
+    title: "Identity Governance",
     icon: ShieldCheck,
     items: [
       "Single sign-on with institutional identity providers",
@@ -69,7 +69,7 @@ const featureData: Feature[] = [
     ],
   },
   {
-    title: "Learning Delivery & Content Management",
+    title: "Learning Delivery",
     icon: BookOpen,
     items: [
       "SCORM and xAPI content support",
@@ -89,7 +89,7 @@ const featureData: Feature[] = [
     ],
   },
   {
-    title: "Assessment, Evaluation & Certification",
+    title: "Assessment & Certification",
     icon: Award,
     items: [
       "Quizzes with question banks and timers",

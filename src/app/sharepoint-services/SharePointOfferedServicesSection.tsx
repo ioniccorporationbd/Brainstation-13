@@ -15,15 +15,15 @@ import {
 
 const services = [
   { title: "Enterprise Portal Development", icon: Globe2 },
-  { title: "SharePoint Application Development", icon: Code2 },
+  { title: "SharePoint Development", icon: Code2 },
   { title: "Business Application", icon: Briefcase },
   { title: "Workflow & Collaboration", icon: Workflow },
-  { title: "Customization & Enhancement in Branding", icon: Palette },
+  { title: "Customization & Branding", icon: Palette },
   { title: "Consultation & Training", icon: GraduationCap },
   { title: "24/7 Advisory Support", icon: Headset },
   { title: "Performance Tuning", icon: Gauge },
   { title: "Migration and Upgrades", icon: RefreshCw },
-  { title: "SharePoint BI Integration & Reporting", icon: BarChart3 },
+  { title: "SharePoint BI & Reporting", icon: BarChart3 },
 ];
 
 export default async function SharePointOfferedServicesSection() {

@@ -23,7 +23,7 @@ const services: ServiceItem[] = [
     icon: MonitorUp,
   },
   {
-    title: "Training platform / solution",
+    title: "Training Solutions",
     description:
       "We provide LMS platforms for enterprise employee training, helping the whole training process streamlined for the organization.",
     icon: RefreshCcw,

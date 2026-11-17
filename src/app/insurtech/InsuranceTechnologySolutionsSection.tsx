@@ -16,7 +16,7 @@ export default async function InsuranceTechnologySolutionsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Insurance Technology Solutions")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Insurance Tech Solutions")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 overflow-hidden rounded-2xl border border-[#ececec] bg-white lg:grid-cols-[0.92fr_1fr]">
@@ -33,7 +33,7 @@ export default async function InsuranceTechnologySolutionsSection() {
 
           {/* Content */}
           <div className="flex flex-col justify-center px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
-            <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[480px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("End-to-End Digital Insurance Ecosystem")}</h3>
+            <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[480px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("End-to-End Digital Insurance")}</h3>
 
             <p className="mt-5 max-w-[520px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A modular insurtech platform for leading insurers, modernizing claims processing, policy administration and agent operations. The end-to-end solution automates the claim lifecycle, provides a self-service customer app and digitizes agent onboarding.")}</p>
 

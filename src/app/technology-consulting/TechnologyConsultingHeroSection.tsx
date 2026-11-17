@@ -10,7 +10,7 @@ export default async function TechnologyConsultingHeroSection() {
         <div>
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Technology Consulting")}</span>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-7 max-w-[680px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Navigate Complexity With Expert Guidance.")}</h1>
+          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-7 max-w-[680px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Expert Help for Complexity")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("We help teams modernize systems, adopt emerging technology, and build digital products with strategy that scales.")}</p>
 

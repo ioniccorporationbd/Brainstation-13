@@ -26,7 +26,7 @@ const consultations: ConsultationCard[] = [
     icon: ShieldCheck,
   },
   {
-    title: "Software Product Consulting",
+    title: "Product Consulting",
     points: [
       "MVP design and scoping",
       "Scalability and performance optimization",

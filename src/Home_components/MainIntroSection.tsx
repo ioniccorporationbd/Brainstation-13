@@ -31,7 +31,7 @@ export default async function AboutSection() {
   return (
     <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[760px] text-center text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] md:text-[46px] lg:text-[44px] text-balance">{t("A global software company powering digital transformation.")}</h2>
+        <h2 className="mx-auto max-w-[760px] text-center text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] md:text-[46px] lg:text-[44px] text-balance">{t("Powering Digital Transformation")}</h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {introCards.map((card) => (

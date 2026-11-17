@@ -9,13 +9,13 @@ type ProductItem = {
 
 const products: ProductItem[] = [
   {
-    title: "Proctoring Pro — Online Exam Monitoring & Integrity",
+    title: "Proctoring Pro — Exam Integrity",
     description:
       "Conduct secure, scalable online exams with real-time monitoring, identity verification, and easy integration with Moodle.",
     href: "/proctoring-pro",
   },
   {
-    title: "Wallet23 — Digital Wallet & Payment Systems",
+    title: "Wallet23 — Digital Wallet & Payments",
     description:
       "Go live in 15 days with P2P transfers, merchant payments, QR transactions, and enterprise-grade security.",
     href: "/e-wallet-software",
@@ -27,13 +27,13 @@ const products: ProductItem[] = [
     href: "/cross-border-payments-solution",
   },
   {
-    title: "PocketEdge — Digital Lending & Credit",
+    title: "PocketEdge — Lending & Credit",
     description:
       "Offer branded loan services instantly with automated credit scoring, digital origination, and AI-driven fraud protection.",
     href: "/digital-lending-credit",
   },
   {
-    title: "Omnizia — Pharma HCP Activation Suite",
+    title: "Omnizia — Pharma HCP Solutions",
     description:
       "Enable smart, data-driven pharma campaigns with predictive analytics and repeatable cross-channel insights.",
     href: "/omnizia",
@@ -45,7 +45,7 @@ const products: ProductItem[] = [
     href: "/insurance-360",
   },
   {
-    title: "Time2Publish — Omni-Channel Content Delivery",
+    title: "Time2Publish — Omni-Channel",
     description:
       "Streamline approvals, reduce manual steps, and automate content delivery for faster, error-free marketing.",
     href: "/time2publish",

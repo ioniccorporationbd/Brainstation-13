@@ -9,13 +9,13 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Data Engineering & Cloud Platforms",
+    title: "Data & Cloud Platforms",
     description:
       "Scalable data pipelines and unified cloud architectures that bring data from multiple business systems into one reliable environment — built for enterprise performance and cost control.",
     icon: Cloud,
   },
   {
-    title: "AI/ML Foundations & Governance",
+    title: "AI/ML Governance",
     description:
       "A governed data foundation that prepares organizations for AI adoption, with full visibility, data lineage, and security controls so insights stay reliable and compliant.",
     icon: DatabaseZap,
@@ -27,7 +27,7 @@ const services: Service[] = [
     icon: BarChart3,
   },
   {
-    title: "Database Design & Managed Services",
+    title: "Database Design & Ops",
     description:
       "Optimized relational and NoSQL databases built for high performance and reliability, with continuous monitoring, tuning, and proactive management as workloads scale.",
     icon: Database,

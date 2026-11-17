@@ -25,7 +25,7 @@ type CaseStudy = {
 
 const caseStudies: CaseStudy[] = [
   {
-    title: "Field Force Management for Aristopharma",
+    title: "Aristopharma Field Force Management",
     description:
       "Android mobile app for Aristopharma replacing manual order placement and reporting. Built with Oracle, Medical Promotion Officers can log doctor visits, request samples, and check real-time stock. Integrated with GPS tracking for transparent field monitoring.",
     image:

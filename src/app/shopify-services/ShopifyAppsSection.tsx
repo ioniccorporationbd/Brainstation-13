@@ -97,7 +97,7 @@ export default async function ShopifyAppsSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Shopify Apps")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Apps Built by Magnetic Solution Limited")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify Apps by Magnetic Solution")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We design, build, and operate high-performance Shopify apps that bring real value to merchants.")}</p>
         </div>
@@ -138,7 +138,7 @@ export default async function ShopifyAppsSection() {
 
         <div className="mx-auto mt-10 max-w-[1000px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[640px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("Let's discuss how our proven Shopify expertise can drive similar results for your eCommerce business.")}</h3>
+            <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[640px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">{t("Let's discuss your Shopify goals")}</h3>
 
             <Link
               href="/schedule-a-call"

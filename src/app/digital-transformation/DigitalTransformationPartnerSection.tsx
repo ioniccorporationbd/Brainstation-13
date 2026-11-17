@@ -42,7 +42,7 @@ export default async function DigitalTransformationPartnerSection() {
         <div className="mx-auto max-w-[1160px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The Magnetic Advantage")}</p>
 
-          <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Why Partner With Magnetic Solution Limited")}</h2>
+          <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Why Magnetic Solution Limited?")}</h2>
 
           <p className="mx-auto mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A partner that combines deep engineering expertise with enterprise-grade security and end-to-end accountability.")}</p>
         </div>

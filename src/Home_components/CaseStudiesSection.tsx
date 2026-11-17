@@ -72,7 +72,7 @@ export default async function CaseStudiesSection() {
             <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
               <p className="text-[13px] font-semibold uppercase tracking-normal text-[#C91F28] md:text-[14px]">{t("AI & ML · LMS")}</p>
 
-              <h3 className="mt-4 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance">{t("Streamlining Attendance at IIITK with Facial Recognition")}</h3>
+              <h3 className="mt-4 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance">{t("Facial Recognition at IIITK")}</h3>
 
               <p className="mt-5 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("The Indian Institute of Information Technology, Kottayam (IIITK) is an autonomous engineering institute located in Valavoor, Palai, Kottayam District, Kerala, India.")}</p>
 

@@ -95,7 +95,7 @@ export default async function CoreCapabilitiesSection() {
     <section className="w-full bg-white py-[52px] sm:py-[70px] md:py-[90px] lg:py-[112px]">
       <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="max-w-[600px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px] text-balance">{t("Drive Growth with Our Core Capabilities")}</h2>
+          <h2 className="max-w-[600px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[50px] text-balance">{t("Drive Growth with Core Capabilities")}</h2>
 
           <Link
             href="/services"

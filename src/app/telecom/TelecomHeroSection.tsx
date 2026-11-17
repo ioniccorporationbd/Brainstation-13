@@ -16,7 +16,7 @@ export default async function TelecomHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industry · Telecom")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Telecom software for connected networks")}</h1>
+          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Connected Networks")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("In an era of inter-connectivity, we help telecom enterprises stay up to date with the latest technological solutions — catering to millions of users while adopting modern enterprise platforms.")}</p>
 

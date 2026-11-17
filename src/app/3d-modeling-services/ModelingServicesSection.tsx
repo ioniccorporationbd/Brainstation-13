@@ -51,7 +51,7 @@ export default async function ModelingServicesSection() {
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What We Build")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("3D Modeling Services for Complex Industries")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("3D Modeling for Complex Industries")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Engineering-accurate 3D visualizations tailored for the world's most demanding manufacturing and engineering sectors.")}</p>
         </div>

@@ -16,7 +16,7 @@ export default async function MoodleHeroSection() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("LMS Development")}</p>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Enterprise Moodle LMS & Proctoring")}</h1>
+          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Moodle LMS & Proctoring")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Secure, scalable, audit-ready learning and assessment platforms for institutions that cannot afford downtime.")}</p>
 

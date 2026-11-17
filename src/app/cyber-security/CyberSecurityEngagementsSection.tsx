@@ -19,7 +19,7 @@ const engagements = [
   },
   {
     tag: "Incident Response",
-    title: "Breach Assessment & Mitigation",
+    title: "Breach: Assess & Respond",
     description:
       "Supported forensic investigation, root-cause analysis, and remediation planning to reduce dwell time and restore secure business operations.",
     icon: Siren,

@@ -10,7 +10,7 @@ const highlights = [
 
 const caseStudy = {
   category: "Real-estate market place",
-  title: "Canadian real-estate market place",
+  title: "Canadian Realty Marketplace",
   logoText: "condonow",
   image:
     "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1400&auto=format&fit=crop",

@@ -29,7 +29,7 @@ const processSteps: ProcessStep[] = [
   {
     step: "Step 2",
     eyebrow: "Plan the Roadmap",
-    title: "Strategic Roadmap & Blueprint",
+    title: "Roadmap & Blueprint",
     points: [
       "Define target architecture, integration patterns, and change plans.",
       "Prioritize initiatives by business value, complexity, and risk.",

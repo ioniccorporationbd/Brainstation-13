@@ -50,7 +50,7 @@ export default async function RealEstatePage() {
       <RealEstateCaseStudiesSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title={t("Real estate engagement questions")}
+        title={t("Real estate engagement FAQs")}
         subtitle={t("What property companies usually ask before we start building.")}
         items={faqs}
         ctaLabel="Schedule a call"

@@ -13,7 +13,7 @@ const solutionItems = [
       "Identity checks, exam integrity, audit trails, and high-stakes assessment workflows.",
   },
   {
-    title: "Powerful Moodle Plugins & Integrations",
+    title: "Moodle Plugins & Integrations",
     description:
       "Interactive content, attendance, scheduling, payments/SSO/CRM integrations, and custom plugins.",
   },

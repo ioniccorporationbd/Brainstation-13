@@ -117,7 +117,7 @@ export default async function ContactPage() {
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Where we are")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Based in Bangladesh, delivering worldwide")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("From Bangladesh to the World")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
               <div className="flex items-center gap-3">

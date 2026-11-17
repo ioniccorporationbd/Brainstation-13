@@ -76,7 +76,7 @@ export default function FintechSolutionsTabsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our solutions")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Complete financial technology solutions")}</h2>
+          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Complete fintech solutions")}</h2>
           <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our fintech expertise spans digital banking, payments, lending, insurance and cross-border transfers — enterprise-grade platforms that move financial services forward.")}</p>
         </div>
 

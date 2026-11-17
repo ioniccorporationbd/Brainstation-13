@@ -38,7 +38,7 @@ export default async function ShikkhaHeroSection() {
             />
           </div>
 
-          <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("The complete education management ERP for modern schools")}</h1>
+          <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Complete education ERP")}</h1>
 
           <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Shikkha Chat brings school administration, AI-powered learning, teachers, students, parents and government oversight together in one secure platform — across every class, section and subject.")}</p>
 

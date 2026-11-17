@@ -11,7 +11,7 @@ export default async function FinalPickSection() {
           <div>
             <p className="mb-3 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Let's Build")}</p>
 
-            <h2 className="text-[clamp(22px,5.6vw,27px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Have a complex story that needs visualizing?")}</h2>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Have a Complex Story to Show?")}</h2>
 
             <p className="mt-4 max-w-[580px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("From semiconductor fabs to automotive systems, we turn engineering data into cinematic 3D. Book a consultation to explore what's possible.")}</p>
           </div>

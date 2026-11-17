@@ -28,7 +28,7 @@ const steps: StepItem[] = [
   {
     step: "Step 2",
     eyebrow: "Team Onboarding",
-    title: "Service Proposal & Onboarding",
+    title: "Proposal & Setup",
     description:
       "We present the right service tracks (Build, Test, DevOps, Analytics, Operations), finalize the SLA, and onboard with zero disruption.",
     icon: Network,

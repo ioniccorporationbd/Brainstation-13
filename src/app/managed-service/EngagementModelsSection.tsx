@@ -19,7 +19,7 @@ const engagementModels: EngagementModel[] = [
     icon: Clock3,
   },
   {
-    title: "Managed Services (CP Model)",
+    title: "Managed Services (CP)",
     description: "Measurable outcomes, agility, and budget control",
     icon: Layers3,
   },
@@ -36,7 +36,7 @@ export default async function EngagementModelsSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Engagement Models Tailored to You")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Engagement Models")}</h2>
 
           <p className="mx-auto mt-5 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Choose the engagement model that fits your scope, timeline, and budget.")}</p>
         </div>

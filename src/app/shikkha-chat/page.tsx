@@ -72,7 +72,7 @@ export default async function ShikkhaChatPage() {
       <ShikkhaSecuritySection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title={t("Questions schools ask about Shikkha Chat")}
+        title={t("School questions about Shikkha Chat")}
         subtitle={t("Straight answers about modules, the public website, AI Pathshala and role-based access.")}
         items={faqs}
         ctaLabel="Request a Demo"

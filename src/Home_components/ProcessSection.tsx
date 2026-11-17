@@ -10,7 +10,7 @@ const PROCESS_STEPS = [
   {
     icon: '🧠',
     label: 'AI-Powered Discovery Audit',
-    title: 'Zero-risk assessment, tailored roadmap',
+    title: "Zero-risk roadmap",
     points: [
       'In-depth strategy session to analyze your current tech stack',
       'Clear scoping of time and cost before any work begins',
@@ -20,7 +20,7 @@ const PROCESS_STEPS = [
   {
     icon: '🧩',
     label: 'Hybrid Team Onboarding',
-    title: 'Right talent + AI tools from day one',
+    title: 'Right talent + AI tools, day one',
     points: [
       'Match with vetted engineers from our team',
       'Structured sprint planning to start quickly',

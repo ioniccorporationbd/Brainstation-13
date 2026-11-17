@@ -4,27 +4,27 @@ import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
-    title: "Engagement Planning & Environment Mapping",
+    title: "Planning & Mapping",
     description:
       "Align on scope, business objectives, and rules of engagement; preliminary review of assets for exposure using Nmap reconnaissance.",
   },
   {
-    title: "Target Discovery & Risk Identification",
+    title: "Discovery & risk assessment",
     description:
       "Automated scans with OWASP ZAP and manual enumeration to uncover vulnerabilities, misconfigurations, and weak controls across infrastructure.",
   },
   {
-    title: "Threat Simulation & Exploitation Testing",
+    title: "Simulation & Testing",
     description:
       "Manual exploitation chaining with Metasploit to mimic attacker behavior, demonstrating impacts like lateral movement without false positives.",
   },
   {
-    title: "Findings Review & Strategic Guidance",
+    title: "Findings review & guidance",
     description:
       "Prioritized vulnerability reports via secure platform, with executive summaries and remediation roadmaps ranked by CVSS severity.",
   },
   {
-    title: "Remediation Validation & Continuous Support",
+    title: "Remediation & Support",
     description:
       "Re-testing fixes, ongoing threat monitoring, and quarterly reviews to ensure long-term resilience and compliance.",
   },

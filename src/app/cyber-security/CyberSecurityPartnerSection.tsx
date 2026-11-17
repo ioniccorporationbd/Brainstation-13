@@ -35,7 +35,7 @@ export default async function CyberSecurityPartnerSection() {
       <div className="brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Why us")}</p>
-          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Why partner with Magnetic Solution Limited?")}</h2>
+          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Why Magnetic Solution Limited?")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -71,7 +71,7 @@ export default async function RenderingServicesSection() {
           </p>
 
           <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">
-            {t("3D Rendering Services & Industrial Animation")}
+            {t("3D Rendering & Animation")}
           </h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">

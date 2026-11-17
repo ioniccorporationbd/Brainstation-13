@@ -19,7 +19,7 @@ const workflows: Workflow[] = [
   },
   {
     icon: CalendarCheck,
-    title: "Attendance that reaches parents",
+    title: "Attendance parents receive",
     steps:
       "The teacher marks each learner present, absent or on leave for a date and class. The record saves instantly, and the parent portal reflects attendance day by day.",
   },

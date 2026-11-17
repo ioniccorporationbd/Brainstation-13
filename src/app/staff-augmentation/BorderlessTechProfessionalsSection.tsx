@@ -35,7 +35,7 @@ const cards: FeatureCard[] = [
     icon: Boxes,
   },
   {
-    title: "2-Week Moneyback Guarantee",
+    title: "Moneyback Guarantee",
     description: "Only pay if you\u2019re satisfied.",
     icon: ShieldCheck,
   },

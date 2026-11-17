@@ -9,12 +9,12 @@ const capabilities = [
       "AI-assisted delivery, contract scaffolding, requirement analysis, and architecture validation accelerate blockchain development while preserving security and best practices.",
   },
   {
-    title: "Smart Contract Auditing & Risk Detection",
+    title: "Smart Contract Audit & Risk Detection",
     description:
       "AI-driven testing combined with static and dynamic analysis to identify logic flaws, vulnerabilities, attack vectors, and edge cases in smart contracts before deployment.",
   },
   {
-    title: "AI-Optimized Blockchain Performance",
+    title: "AI-Optimized Blockchain Speed",
     description:
       "Machine learning models analyze network load, transaction patterns, and infrastructure usage to optimize throughput, cost, and scalability.",
   },
@@ -34,7 +34,7 @@ export default async function BlockchainExcellenceSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI × Blockchain")}</p>
 
-            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Blockchain Excellence with AI")}</h2>
+            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Blockchain Excellence with AI")}</h2>
 
             <p className="mt-5 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We combine artificial intelligence with blockchain engineering to build systems that are faster to develop, safer to deploy, and smarter in operation.")}</p>
 

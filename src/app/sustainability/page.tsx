@@ -32,7 +32,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Sustainability")}</span>
-            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Technology that leaves the place better than it found it")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Technology leaves it better")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Environmental impact, social equity and responsible governance run through how we build, operate and grow — reviewed and improved rather than announced once.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -111,7 +111,7 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Programmes")}</p>
-          <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Practical commitments, not posters")}</h2>
+          <h2 className="mt-3 max-w-[760px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Real commitments, not posters")}</h2>
           <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Six programmes turn the pillars into everyday practice across delivery centres and support teams.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
@@ -164,7 +164,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Environment")}</p>
-            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Greener infrastructure, measured continuously")}</h2>
+            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Greener Infrastructure")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We keep consolidating workloads, choosing efficient cloud regions and retiring hardware that no longer earns its power draw.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each facility tracks energy and waste against annual targets, so progress is a number reviewed by owners — not a slogan.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -208,7 +208,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("People")}</p>
-            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Growth that lifts the community with it")}</h2>
+            <h2 className="mt-3 max-w-[520px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Growth that lifts the community")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our social work focuses on widening access to technology education, supporting employee wellbeing and standing with communities when they need it.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("From mentorship to volunteering, the programmes are practical and open to the people around us.")}</p>
             <ul className="mt-7 space-y-3.5">

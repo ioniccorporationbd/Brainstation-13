@@ -10,7 +10,7 @@ export default async function CaseStudyHeroSection() {
         <div className="mx-auto max-w-[880px] text-center">
           <p className="mb-5 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study · Retail & E-Commerce")}</p>
 
-          <h1 className="mx-auto max-w-[900px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.025em] text-[#0a0a0a] md:text-[52px] text-balance">{t("Rebuilding Retail for a Digital-First Customer")}</h1>
+          <h1 className="mx-auto max-w-[900px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.025em] text-[#0a0a0a] md:text-[52px] text-balance">{t("Rebuilding Retail for Digital-First")}</h1>
 
           <p className="mx-auto mt-6 max-w-[680px] text-[17px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[16px]">{t("How Magnetic Solution Limited rebuilt Shwapno’s e-commerce platform into a scalable, hyperlocal digital experience.")}</p>
 

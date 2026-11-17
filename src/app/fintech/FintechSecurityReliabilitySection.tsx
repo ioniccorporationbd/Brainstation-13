@@ -25,7 +25,7 @@ const cards = [
     icon: Globe2,
   },
   {
-    title: "Regulatory-aware engineering",
+    title: "Regulatory engineering",
     description: "Architected around PCI DSS, OWASP and other compliance requirements.",
     icon: Building2,
   },
@@ -49,7 +49,7 @@ export default async function FintechSecurityReliabilitySection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[760px]">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise trust layer")}</p>
-            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Security, compliance and reliability from day one")}</h2>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Secure & compliant")}</h2>
             <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Fintech products demand security standards, regulatory awareness, enterprise infrastructure and disciplined delivery.")}</p>
           </div>
 

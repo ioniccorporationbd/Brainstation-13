@@ -18,16 +18,16 @@ type Service = {
 
 const services: Service[] = [
   { title: "End-to-End Data Migration", icon: ArrowRightLeft },
-  { title: "Data Mapping and Transformation", icon: Blocks },
-  { title: "Unique Customer Identification", icon: BadgeCheck },
+  { title: "Data Mapping", icon: Blocks },
+  { title: "Unique Customer ID", icon: BadgeCheck },
   { title: "Data Quality Management", icon: FileCheck2 },
   { title: "Performance Optimization", icon: Gauge },
   {
-    title: "Documentation and Stakeholder Communication",
+    title: "Stakeholder Updates",
     icon: MessagesSquare,
   },
-  { title: "Security and Disaster Recovery", icon: ShieldCheck },
-  { title: "Integration and Analytical Enablement", icon: Database },
+  { title: "Security & Recovery", icon: ShieldCheck },
+  { title: "Integration & Analytics", icon: Database },
   { title: "Cost and Time Efficiency", icon: Timer },
 ];
 

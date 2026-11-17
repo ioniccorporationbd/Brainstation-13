@@ -12,7 +12,7 @@ const services = [
   { title: "AEM Development", icon: Code2 },
   { title: "AEM Solution Design", icon: LayoutTemplate },
   { title: "AEM DevOps", icon: GitBranch },
-  { title: "AEM Information Architecture", icon: Network },
+  { title: "AEM Info Architecture", icon: Network },
   { title: "AEM Managed Services", icon: LifeBuoy },
   { title: "AEM Migration & Update", icon: RefreshCw },
 ];

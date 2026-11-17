@@ -17,14 +17,14 @@ type SuccessStory = {
 
 const successStories: SuccessStory[] = [
   {
-    title: "NFC-enabled Smart Personalized accessories",
+    title: "NFC-enabled Smart Accessories",
     description:
       "Ventro is Bangladesh’s pioneer in smart accessories, offering an essentials platform tailored for Shopify store owners. Our solution provided an efficient way for their customers to manage and exchange personalized information through smart accessories.",
     image:
       "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "High-converting Shopify Storefront Experience",
+    title: "High-converting Shopify Storefront",
     description:
       "We helped modern commerce brands create fast, mobile-first Shopify storefronts with smooth product discovery, clean checkout journeys, and conversion-focused customer experiences.",
     image:

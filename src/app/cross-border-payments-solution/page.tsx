@@ -163,7 +163,7 @@ export default async function Page() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Cross-border payments")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Move money across borders without losing visibility")}</h1>
+            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Move money across borders")}</h1>
 
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Engineering for remittance and payout businesses: multi-currency collections, disbursements, FX handling, partner routing and a reconciliation trail that survives audit.")}</p>
 
@@ -259,7 +259,7 @@ export default async function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">{t("Built for operations teams, not just developers")}</h3>
+            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">{t("For operations teams, not just developers")}</h3>
             <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Support can see the exact state of a transaction, the partner response and the ledger impact from one screen. Failed payouts are triaged with reason codes instead of guesswork, and manual overrides are logged with the operator identity.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
@@ -304,7 +304,7 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Integrations")}</p>
-            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Connects to what you already run")}</h2>
+            <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Connects to what you already run")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Existing systems stay in place. Connectors are versioned and certified before traffic is switched on, so an upgrade on either side is a planned event rather than an outage.")}</p>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">

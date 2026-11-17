@@ -10,7 +10,7 @@ export default async function ShikkhaCtaSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
             <div>
-              <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Bring Shikkha Chat to your institution")}</h2>
+              <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Shikkha Chat for Schools")}</h2>
               <p className="mt-3 max-w-[620px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Talk to our team about an education management platform tailored to your school, network or government programme.")}</p>
             </div>
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

@@ -18,7 +18,7 @@ type CaseStudy = {
 const caseStudies: CaseStudy[] = [
   {
     category: "Maritime & IoT",
-    title: "IoT boat safety platform for coastal fleets",
+    title: "IoT boat safety for coastal fleets",
     excerpt:
       "An IoT-based safety system that gives crews and authorities real-time visibility to prevent and respond to incidents at sea.",
     image:
@@ -51,7 +51,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     category: "Healthcare",
-    title: "Telehealth platform connecting patients and doctors",
+    title: "Telehealth connecting patients & doctors",
     excerpt:
       "Video consultations, scheduling and secure records delivered on a HIPAA-aligned architecture.",
     image:
@@ -84,7 +84,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     category: "Education",
-    title: "Scalable learning platform for global learners",
+    title: "Scalable learning for global learners",
     excerpt:
       "A Moodle-based learning ecosystem serving students across multiple countries and languages.",
     image:

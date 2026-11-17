@@ -13,7 +13,7 @@ type RelatedCaseStudy = {
 
 const relatedCaseStudies: RelatedCaseStudy[] = [
   {
-    title: "Fueling financial inclusion with digital wallets",
+    title: "Digital wallets for financial inclusion",
     category: "Fintech",
     description:
       "A compliant digital wallet platform that brought secure, everyday financial services to underbanked communities at national scale.",
@@ -22,7 +22,7 @@ const relatedCaseStudies: RelatedCaseStudy[] = [
     href: "/case-study/digital-wallet",
   },
   {
-    title: "Safety at Sea — IoT for stronger maritime security",
+    title: "Safety at Sea — Maritime IoT",
     category: "IoT",
     description:
       "An IoT-based boat safety system giving crews and authorities real-time visibility to prevent and respond to incidents at sea.",

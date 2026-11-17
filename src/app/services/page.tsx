@@ -30,7 +30,7 @@ export default async function Page() {
         <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Services")}</span>
-            <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Full-lifecycle engineering, under one accountable team")}</h1>
+            <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Full Lifecycle, One Team")}</h1>
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -79,7 +79,7 @@ export default async function Page() {
         <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we engage")}</p>
-            <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("One senior team from first decision to steady state")}</h2>
+            <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("One Senior Team, Start to Steady State")}</h2>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Work usually starts with a real constraint: a platform that cannot scale, a release process that stalls, or a product that has to reach the market sooner than the current setup allows.")}</p>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Rather than hand over between a strategy group, a build group and a support group, one team carries the decisions through — so the trade-offs made early still make sense later.")}</p>
           </div>

@@ -20,7 +20,7 @@ const solutions = [
     ],
   },
   {
-    title: "Shopify Storefront Design & Development",
+    title: "Shopify Storefront Design",
     description:
       "Conversion-focused storefronts engineered for speed, scale, and seamless commerce—across D2C, B2B, traditional retail, and high-SKU catalogs.",
     image:
@@ -34,7 +34,7 @@ const solutions = [
     ],
   },
   {
-    title: "Shopify Integrations & Automation",
+    title: "Shopify Integrations",
     description:
       "We connect Shopify seamlessly with your business’s tool stack, eliminating manual effort and ensuring data accuracy at scale.",
     image:
@@ -48,7 +48,7 @@ const solutions = [
     ],
   },
   {
-    title: "Performance & Conversion Optimization",
+    title: "Performance & Conversion",
     description:
       "Optimization that directly impacts revenue, retention, and customer lifetime value.",
     image:

@@ -57,7 +57,7 @@ export default async function EcommercePage() {
       <EcommerceBenefitsSection />
       <GlobalFaqSection
         eyebrow="FAQ"
-        title={t("Commerce engagement questions")}
+        title={t("Commerce Engagement FAQs")}
         subtitle={t("What commerce teams usually ask before we start building.")}
         items={faqs}
         ctaLabel="Schedule a call"

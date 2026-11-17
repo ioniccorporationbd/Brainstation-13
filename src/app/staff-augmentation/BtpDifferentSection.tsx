@@ -18,7 +18,7 @@ type BtpCard = {
 
 const cards: BtpCard[] = [
   {
-    title: "Onboard Engineers in Days, Not Months",
+    title: "Days, Not Months",
     description:
       "Onboard top 1% pre-vetted tech talents in under 2 weeks so your project doesn\u2019t lose momentum.",
     icon: Layers3,
@@ -30,7 +30,7 @@ const cards: BtpCard[] = [
     icon: Boxes,
   },
   {
-    title: "You Focus on Work, We Handle the Team",
+    title: "You Focus, We Handle It",
     description:
       "Get local account management support in your time zone — no more chasing offshore vendors.",
     icon: CircleDot,
@@ -42,7 +42,7 @@ const cards: BtpCard[] = [
     icon: Gem,
   },
   {
-    title: "Teams That Grow as Fast as You Do",
+    title: "Teams Built to Scale",
     description:
       "From Trainees to Leads — Engineers evolve fast with our in-house L&D team.",
     icon: Network,
@@ -54,13 +54,13 @@ const cards: BtpCard[] = [
     icon: Orbit,
   },
   {
-    title: "Engineers Who Stay, Grow, and Deliver",
+    title: "Engineers Who Deliver",
     description:
       "Top employer brand, structured career growth, continuous learning and challenging projects — team retention ensured.",
     icon: Users,
   },
   {
-    title: "Seamless Knowledge, Zero Downtime",
+    title: "Zero Downtime Handover",
     description:
       "Agile teams, Scrum and Kanban fit — no relearning, full continuity, documented from day one.",
     icon: ShieldCheck,

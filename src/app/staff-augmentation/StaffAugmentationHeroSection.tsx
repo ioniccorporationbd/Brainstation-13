@@ -46,7 +46,7 @@ export default function StaffAugmentationHeroSection() {
         <div>
           <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">
+          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[43px] xl:text-[56px] text-balance">
             {t("IT Staff Augmentation")}
             <span className="hidden sm:inline">,<br className="hidden sm:block" />{" "}{t("Built for Speed.")}</span>
           </h1>

@@ -43,7 +43,7 @@ export const gen_12: Dict = {
   "School Analytics": "স্কুল অ্যানালিটিক্স",
   "Understand institutional activity through dashboard metrics.": "প্রতিষ্ঠানের পারফরম্যান্স সূচক দেখে সিদ্ধান্ত নিন।",
   "AI Pathshala": "এআই পাঠশালা",
-  "AI-Powered Learning — AI Pathshala": "এআই শিক্ষা — এআই পাঠশালা",
+  "AI Learning — AI Pathshala": "এআই শিক্ষা — এআই পাঠশালা",
   "AI-supported learning — an AI tutor, smart lessons, lesson planning, quizzes, assessment and a personalised study path.": "এআই-সহায়ক শেখা — এআই টিউটর, স্মার্ট লেসন, পাঠ পরিকল্পনা, কুইজ, মূল্যায়ন ও ব্যক্তিগত পড়ার পথ।",
   "AI Tutor": "এআই টিউটর",
   "Guided explanations and interactive learning assistance.": "বিষয়ভিত্তিক ধাপে ধাপে ব্যাখ্যা ও ইন্টারঅ্যাকটিভ শেখার সহায়তা।",

@@ -4,7 +4,7 @@ import { getTranslator } from "@/i18n/server";
 const relatedPosts = [
   {
     category: "ECOMMERCE",
-    title: "E-Invoicing in Malaysia: 4 Key Challenges & Solutions for E-Invoicing",
+    title: "Malaysia E-Invoicing: 4 Challenges & Fixes",
     description:
       "Malaysia is entering a new era of tax compliance with the mandatory adoption of e-invoicing, set to roll out in phases from August 2024. But...",
     image:
@@ -13,7 +13,7 @@ const relatedPosts = [
   },
   {
     category: "Machine Learning & AI",
-    title: "Implement AI-First Software Engineering For Your Business",
+    title: "Implement AI-First Software Engineering",
     description:
       "The software industry faces a critical question: How can enterprises accelerate delivery without sacrificing quality or compliance? AI-first...",
     image:
@@ -22,7 +22,7 @@ const relatedPosts = [
   },
   {
     category: "LMS",
-    title: "How to Improve LMS Utilization for a Remote Workforce",
+    title: "How to Improve LMS Use for Remote Teams",
     description:
       "Due to the COVID-19 pandemic, businesses have adapted to the changing industry landscape, resulting in a shift towards...",
     image:

@@ -29,7 +29,7 @@ const solutions: PharmaSolution[] = [
     ),
   },
   {
-    title: "Strategic Intelligence for Smarter Pharma Marketing",
+    title: "Strategic insights for pharma marketing",
     icon: BrainCircuit,
     content: (
       <p>{t("Unlock deep industry knowledge with our pharma marketing consultancy. We help you build scalable infrastructure that amplifies commercial performance and reduces operational costs.")}</p>

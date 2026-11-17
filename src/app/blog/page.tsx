@@ -19,7 +19,7 @@ const featured: BlogPost = {
   slug: "legacy-modernisation",
   category: "Digital Transformation",
   title:
-    "The hidden cost of legacy systems — and how to modernise without disruption",
+    "Legacy System Hidden Cost",
   excerpt:
     "Legacy platforms quietly drain budgets and slow every release. Here's a pragmatic, low-risk approach to modernisation that keeps the business running while you rebuild for the future.",
   image:
@@ -32,7 +32,7 @@ const posts: BlogPost[] = [
   {
     slug: "ai-pilots-to-production",
     category: "AI & Data",
-    title: "From pilots to production: making AI deliver real business value",
+    title: "Pilots to production: AI delivers value",
     excerpt:
       "Most AI initiatives stall after the pilot. We break down what separates the programmes that scale from those that fade away.",
     image:
@@ -43,7 +43,7 @@ const posts: BlogPost[] = [
   {
     slug: "cloud-cost-optimisation",
     category: "Cloud",
-    title: "A practical guide to cloud cost optimisation",
+    title: "A guide to cloud cost optimisation",
     excerpt:
       "Right-sizing, reserved capacity and architectural discipline can cut cloud spend dramatically without hurting performance.",
     image:
@@ -54,7 +54,7 @@ const posts: BlogPost[] = [
   {
     slug: "api-design",
     category: "Engineering",
-    title: "Designing APIs that developers actually love",
+    title: "APIs developers actually love",
     excerpt:
       "Consistency, clear errors and thoughtful versioning turn an API from a chore into a product people adopt.",
     image:
@@ -65,7 +65,7 @@ const posts: BlogPost[] = [
   {
     slug: "distributed-teams",
     category: "Talent",
-    title: "Building high-performing distributed engineering teams",
+    title: "Building High-Performing Teams",
     excerpt:
       "Remote delivery works when you invest in communication, ownership and the right rituals. Here's how we do it.",
     image:
@@ -115,7 +115,7 @@ export default async function BlogPage() {
       <section className="relative overflow-hidden bg-white pb-14 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Blog")}</span>
-          <h1 className="mt-6 max-w-[820px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Insights & ideas from the teams that ship")}</h1>
+          <h1 className="mt-6 max-w-[820px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Insights from the teams that ship")}</h1>
           <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
@@ -138,7 +138,7 @@ export default async function BlogPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Want insight like this for your roadmap?")}</h2>
+                <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Want it on your roadmap?")}</h2>
                 <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Get practical engineering and technology perspective from our team — applied to your product, your stack and your constraints.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

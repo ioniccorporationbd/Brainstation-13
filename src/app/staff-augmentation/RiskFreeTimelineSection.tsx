@@ -15,7 +15,7 @@ const riskSteps: RiskStep[] = [
   },
   {
     number: "02",
-    title: "Full Assessment Period",
+    title: "Assessment Period",
     description:
       "Collaborate, evaluate skills, and check workflow alignment during the first 2 weeks.",
   },

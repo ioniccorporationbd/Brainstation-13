@@ -157,7 +157,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise Ready")}</p>
 
-              <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-2.5 max-w-[560px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">{t("Built for high-volume, multi-territory field operations.")}</h3>
+              <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-2.5 max-w-[560px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">{t("Multi-Territory Ops")}</h3>
 
               <div className="mt-3 inline-flex items-center gap-2">
                 <BarChart3 size={16} strokeWidth={2} className="text-[#c91f28]" />

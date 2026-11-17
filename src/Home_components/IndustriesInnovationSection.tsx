@@ -73,7 +73,7 @@ export default async function IndustriesInnovationSection() {
   return (
     <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[96px] lg:py-[112px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[680px] text-center text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] sm:text-[46px] lg:text-[50px] text-balance">{t("Industries We Power with Innovation")}</h2>
+        <h2 className="mx-auto max-w-[680px] text-center text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] sm:text-[46px] lg:text-[50px] text-balance">{t("Innovation Across Industries")}</h2>
 
         <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {industries.map((industry) => (

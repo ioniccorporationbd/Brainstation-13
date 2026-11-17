@@ -69,7 +69,7 @@ export default async function ScheduleACallPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Contact · Schedule a call")}</span>
 
-            <h1 className="mt-6 max-w-[560px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] text-balance">{t("Request a call with the delivery team")}</h1>
+            <h1 className="mt-6 max-w-[560px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] text-balance">{t("Talk to the delivery team")}</h1>
 
             <p className="mt-6 max-w-[520px] text-[16px] leading-[1.6] text-[#55585e] md:text-[17px]">{t("Tell us what the call needs to cover and when suits you. This page submits a booking request — a person confirms the exact time by email, so nothing is booked automatically.")}</p>
 
@@ -145,7 +145,7 @@ export default async function ScheduleACallPage() {
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">
                 <CalendarDays size={15} />{t("Prefer to write?")}</p>
-              <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Send the details instead of booking time")}</h2>
+              <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-bold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Send details instead of booking time")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] leading-[1.6] text-[#55585e] md:text-[16px]">{t("A written brief is often faster than a call. Use the contact page and the team replies with questions or a proposed plan.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">

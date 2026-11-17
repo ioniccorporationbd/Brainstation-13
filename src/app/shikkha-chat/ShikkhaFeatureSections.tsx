@@ -103,7 +103,7 @@ const sections: FeatureSection[] = [
   {
     id: "features-ai-pathshala",
     eyebrow: "AI Pathshala",
-    title: "AI-Powered Learning — AI Pathshala",
+    title: "AI Learning — AI Pathshala",
     intro: "AI-supported learning — an AI tutor, smart lessons, lesson planning, quizzes, assessment and a personalised study path.",
     cards: [
       { icon: Bot, title: "AI Tutor", summary: "Guided explanations and interactive learning assistance." },

@@ -35,7 +35,7 @@ const capabilities: Capability[] = [
     icon: FileCheck2,
   },
   {
-    title: "Agent Onboarding System",
+    title: "Agent Onboarding",
     description:
       "Digital registration, document verification, training, exams and progress tracking at scale.",
     icon: UserCheck,
@@ -65,7 +65,7 @@ const capabilities: Capability[] = [
     icon: FileText,
   },
   {
-    title: "Premium & Billing Management",
+    title: "Premium & Billing",
     description:
       "Premium tracking, payment records and billing visibility across branches and agents.",
     icon: CreditCard,

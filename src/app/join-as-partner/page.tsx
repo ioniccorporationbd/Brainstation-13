@@ -103,7 +103,7 @@ export default async function JoinAsPartnerPage() {
         <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Join as partner")}</span>
-            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Grow with Magnetic Solution Limited")}</h1>
+            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Grow with us")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
