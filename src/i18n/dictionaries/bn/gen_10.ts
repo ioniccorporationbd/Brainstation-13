@@ -17,7 +17,7 @@ export const gen_10: Dict = {
   "Want it on your roadmap?": "রোডম্যাপে এটি চান?",
   "Want results like these?": "এমন রেজাল্ট চান?",
   "Want to meet the team?": "টিমের সাথে দেখা করতে চান?",
-  "Want to see how we'd approach your product?": "আপনার প্রোডাক্টে আমরা কীভাবে এগোবো দেখতে চান?",
+  "See how we'd approach it": "আমরা কীভাবে এগোবো, দেখে নিন",
   "Warehouse and lake storage with clear ownership and retention.": "স্পষ্ট ওনারশিপ এবং রিটেনশন সহ ওয়্যারহাউস ও লেক স্টোরেজ।",
   "Warehouse layers, definitions and metric logic agreed before any chart is built.": "কোনো চার্ট তৈরির আগেই ওয়্যারহাউস লেয়ার, ডেফিনিশন এবং মেট্রিক লজিক নিয়ে সম্মতি।",
   "Watch client videos": "ক্লায়েন্ট ভিডিও দেখুন",

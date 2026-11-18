@@ -9,6 +9,21 @@ import GlobalOfficesSection from "./GlobalOfficesSection";
  */
 const HIDDEN_ROUTES = ["/qa-testing-and-automation"];
 
+const RESOURCES_ROUTES = new Set([
+  "/about-us",
+  "/blog",
+  "/career",
+  "/case-studies",
+  "/contact",
+  "/enterprise-grade-security",
+  "/investor-relations",
+  "/join-as-partner",
+  "/media",
+  "/partners",
+  "/resources",
+  "/sustainability",
+]);
+
 const PRODUCT_ROUTES = new Set([
   "/cross-border-payments-solution",
   "/digital-banking-software",
@@ -85,7 +100,8 @@ export default function GlobalOfficesGate() {
         pathname === "/" ||
         SERVICES_ROUTES.has(pathname ?? "") ||
         INDUSTRY_ROUTES.has(pathname ?? "") ||
-        PRODUCT_ROUTES.has(pathname ?? "")
+        PRODUCT_ROUTES.has(pathname ?? "") ||
+        RESOURCES_ROUTES.has(pathname ?? "")
       } />
     </div>
   );

@@ -52,7 +52,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
 
         <div className="mt-8">
           <Meta post={post} />
-          <h1 className="mt-5 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.025em] text-black md:text-[52px] lg:text-[56px]">
+          <h1 className="mt-5 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
             {t(post.title)}
           </h1>
         </div>
@@ -63,7 +63,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
           className="mt-8 h-[240px] w-full rounded-xl border border-[#ececec] object-cover md:h-[380px]"
         />
 
-        <p className="mt-8 text-[17px] font-medium leading-[1.6] text-[#22252a] md:text-[19px]">
+        <p className="mt-8 font-medium text-[#22252a] leading-[1.6] text-[16px] sm:text-[18px]">
           {t(post.excerpt)}
         </p>
         <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-6 py-5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("This page carries the published summary of the article. For the complete write-up, including the technical detail behind it, talk to our team and we will share it with you.")}</p>
@@ -148,7 +148,7 @@ export default function BlogExplorer({
                   {t(featured.category)} &middot; {t(featured.date)}
                 </span>
               </div>
-              <h2 className="mt-5 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">
+              <h2 className="mt-5 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">
                 {t(featured.title)}
               </h2>
               <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
@@ -234,7 +234,7 @@ export default function BlogExplorer({
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <Meta post={post} />
-                  <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                  <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                     {t(post.title)}
                   </h3>
                   <p className="mt-3 flex-1 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">

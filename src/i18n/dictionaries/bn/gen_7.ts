@@ -49,7 +49,7 @@ export const gen_7: Dict = {
   "Partner and staff access is scoped per product line and per role, with access changes recorded.": "পার্টনার ও স্টাফ অ্যাক্সেস প্রতিটি প্রোডাক্ট লাইন ও রোল অনুযায়ী স্কোপ করা হয়, অ্যাক্সেস পরিবর্তন রেকর্ডসহ।",
   "Partner logos, tier levels and certification badges previously published on this page could not be verified, so they are not shown. Ask for the current partner and certification list for a specific platform and you will receive it with documentation.": "এই পৃষ্ঠায় আগে প্রকাশিত পার্টনার লোগো, টায়ার লেভেল ও সার্টিফিকেশন ব্যাজ যাচাই করা যায়নি, তাই এগুলো দেখানো হচ্ছে না। নির্দিষ্ট কোনো প্ল্যাটফর্ম-এর বর্তমান পার্টনার ও সার্টিফিকেশন তালিকা চাইলে ডকুমেন্টেশনসহ পাবেন।",
   "Partner with Magnetic Solution Limited. Grow revenue, extend your capabilities and deliver enterprise-grade technology with a trusted engineering team.": "ম্যাগনেটিক সলিউশন লিমিটেডের সাথে পার্টনার হোন। একটি বিশ্বস্ত ইঞ্জিনিয়ারিং টিমের সাথে রেভিনিউ বাড়ান, আপনার সামর্থ্য বিস্তার করুন এবং এন্টারপ্রাইজ-গ্রেড টেকনোলজি প্রদান করুন।",
-  "Partner with a company that takes this seriously": "গুরুত্ব দেয় এমন কোম্পানির পার্টনার হোন",
+  "Partner with a company that means it": "যে কোম্পানি সত্যিই গুরুত্ব দেয়, তাদের পার্টনার হোন",
   "Partnering with us on a programme?": "একটি প্রোগ্রাম-এ আমাদের সাথে পার্টনারশিপ করছেন?",
   "Partners collaborating around a table": "একটি টেবিলের চারপাশে সহযোগিতা করছেন পার্টনাররা",
   "Partners | Magnetic Solution Limited": "পার্টনার | ম্যাগনেটিক সলিউশন লিমিটেড",

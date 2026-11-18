@@ -61,7 +61,7 @@ export default async function ContactPage() {
       <section className="bg-white pb-12 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Contact")}</span>
-          <h1 className="mt-6 max-w-[820px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("Let’s talk")}</h1>
+          <h1 className="mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Let’s talk")}</h1>
           <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.")}</p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default async function ContactPage() {
       <section className="bg-white pb-16 md:pb-20">
         <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
           <div>
-            <h2 className="text-[22px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[26px] text-balance">{t("Tell us about your project")}</h2>
+            <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tell us about your project")}</h2>
             <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Fill out the form and a member of our team will reach out to discuss how we can help.")}</p>
             <div className="mt-6">
               <ContactForm />
@@ -88,7 +88,7 @@ export default async function ContactPage() {
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={19} strokeWidth={1.9} />
                     </span>
-                    <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">
+                    <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(channel.title)}
                     </h3>
                   </div>
@@ -107,7 +107,7 @@ export default async function ContactPage() {
             })}
 
             <div className="rounded-xl border border-[#ececec] bg-[#fafafa] p-7 md:p-7">
-              <h3 className="text-[13px] font-semibold leading-[1.3] uppercase tracking-normal text-[#52525B] text-balance">{t("About direct channels")}</h3>
+              <h3 className="uppercase text-[#52525B] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("About direct channels")}</h3>
               <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("A public email address, phone line and street address have not been verified for this site, so they are intentionally not published here rather than invented. Every message sent through the form is recorded and routed to the right team.")}</p>
             </div>
           </div>
@@ -117,14 +117,14 @@ export default async function ContactPage() {
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Where we are")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("From Bangladesh to the World")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("From Bangladesh to the World")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <MapPin size={19} strokeWidth={1.9} />
                 </span>
-                <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Bangladesh — home base")}</h3>
+                <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Bangladesh — home base")}</h3>
               </div>
               <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our engineering and delivery team is based in Bangladesh, working with clients across multiple time zones.")}</p>
             </div>
@@ -133,7 +133,7 @@ export default async function ContactPage() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Globe2 size={19} strokeWidth={1.9} />
                 </span>
-                <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Remote-first delivery")}</h3>
+                <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Remote-first delivery")}</h3>
               </div>
               <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We collaborate remotely with clients wherever they are, with overlapping working hours agreed per engagement.")}</p>
             </div>

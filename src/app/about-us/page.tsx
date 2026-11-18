@@ -132,7 +132,7 @@ export default async function AboutUsPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Company · About us")}</span>
 
-            <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[44px] xl:text-[56px]">{t("Your Serious Software Partner")}</h1>
+            <h1 className="mt-6 max-w-[620px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Your Serious Software Partner")}</h1>
 
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited builds, modernises and supports software for enterprise and startup teams. We pursue new technology relentlessly — and turn it into practical products that create real business value.")}</p>
 
@@ -180,7 +180,7 @@ export default async function AboutUsPage() {
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What guides us")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Mission, vision and our core values")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Mission, vision and our core values")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {pillars.map((pillar) => (
@@ -191,7 +191,7 @@ export default async function AboutUsPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <pillar.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(pillar.title)}
                 </h3>
                 <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
@@ -207,7 +207,7 @@ export default async function AboutUsPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What we do")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One partner, entire product lifecycle")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One partner, entire product lifecycle")}</h2>
           <p className="mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Strategy, engineering, modernisation and talent — delivered by the same team, so context never gets lost between vendors.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -219,7 +219,7 @@ export default async function AboutUsPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
                 </h3>
                 <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
@@ -237,7 +237,7 @@ export default async function AboutUsPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
               <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
-              <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Predictable delivery, no fuss")}</h2>
+              <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Predictable delivery, no fuss")}</h2>
               <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every engagement follows the same four phases. The framework stays fixed so the work stays visible — from first conversation to post-launch support.")}</p>
 
               <ol className="mt-8 space-y-5">
@@ -268,7 +268,7 @@ export default async function AboutUsPage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <item.icon size={19} strokeWidth={1.9} />
                   </span>
-                  <h3 className="mt-4 text-[15.5px] md:text-[16px] font-semibold leading-[1.35] tracking-[-0.01em] text-black text-balance">
+                  <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                     {t(item.title)}
                   </h3>
                   <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">
@@ -288,7 +288,7 @@ export default async function AboutUsPage() {
             <ShieldCheck size={21} strokeWidth={1.9} />
           </span>
           <div>
-            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Verified information only")}</h3>
+            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Verified information only")}</h3>
             <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Founding dates, headcount, client counts and certification badges are not published on this page because they cannot be verified. Company registration details, client references and delivery records are shared directly with teams evaluating us — request them through the contact page.")}</p>
             <Link
               href="/contact"
@@ -304,7 +304,7 @@ export default async function AboutUsPage() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Want to see how we'd approach your product?")}</h2>
+              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("See how we'd approach it")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the problem, the constraints and the timeline. We will come back with a technical view and a phased plan.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
