@@ -63,9 +63,9 @@ export default function TrustedTeamsSection() {
     <section className="w-full overflow-hidden bg-white pb-[64px] pt-[18px] sm:pb-[100px] sm:pt-[22px] md:pb-[130px]">
       <div className="brand-container">
         <div className="trusted-heading text-center">
-          <h2 className="text-[clamp(20px,5.09vw,25px)] font-semibold leading-[1.25] tracking-[-0.02em] text-[#0A0A0A] sm:text-[28px] lg:text-[32px] text-balance">{t("Trusted By Fast-Moving Tech Teams")}</h2>
+          <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Trusted By Fast-Moving Tech Teams")}</h2>
 
-          <p className="mt-[6px] text-[clamp(20px,5.09vw,25px)] font-semibold leading-[1.25] tracking-[-0.02em] text-[#0A0A0A] sm:text-[28px] lg:text-[32px]">{t("From Startups to Enterprises")}</p>
+          <p className="mt-[6px] text-[18px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0A0A0A] text-balance">{t("From Startups to Enterprises")}</p>
         </div>
 
         <div className="trusted-slider relative mt-[48px] w-full overflow-hidden sm:mt-[72px] md:mt-[92px]">

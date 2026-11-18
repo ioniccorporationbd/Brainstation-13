@@ -73,7 +73,7 @@ export default async function IndustriesInnovationSection() {
   return (
     <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[96px] lg:py-[112px]">
       <div className="brand-container">
-        <h2 className="mx-auto max-w-[680px] text-center text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] sm:text-[44px] lg:text-[48px] text-balance">{t("Innovation Across Industries")}</h2>
+        <h2 className="mx-auto max-w-[680px] text-center text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Innovation Across Industries")}</h2>
 
         <div className="mt-[60px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {industries.map((industry) => (
@@ -102,7 +102,7 @@ async function IndustryItem({ industry }: { industry: IndustryCard }) {
         className="h-[44px] w-[44px] object-contain"
       />
 
-      <h3 className="mt-6 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[20px] text-balance">
+      <h3 className="mt-6 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
         {t(industry.title)}
       </h3>
 
@@ -122,7 +122,7 @@ async function ContactCard() {
   const { t } = await getTranslator();
   return (
     <div className="flex min-h-[292px] flex-col items-center justify-center rounded-[18px] border border-black/[0.08] bg-white p-7 text-center shadow-[0_1px_3px_rgba(0,0,0,0.05)] md:col-span-2 lg:col-span-1">
-      <h3 className="text-[22px] md:text-[26px] font-semibold leading-[1.22] tracking-[-0.02em] text-[#0A0A0A] text-balance">{t("Is your industry here?")}</h3>
+      <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("Is your industry here?")}</h3>
 
       <Link
         href="/contact"

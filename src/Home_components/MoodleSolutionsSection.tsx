@@ -28,7 +28,7 @@ export default async function MoodleSolutionsSection() {
         <div className="text-center">
           <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-normal text-primary">{t("Moodle Capabilities")}</p>
 
-          <h2 className="mx-auto mt-4 max-w-[820px] text-balance text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0A0A0A] sm:text-[44px] lg:text-[48px]">{t("Moodle Solutions for Real Impact")}</h2>
+          <h2 className="mx-auto mt-4 max-w-[820px] text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Moodle Solutions for Real Impact")}</h2>
 
           <p className="mx-auto mt-6 max-w-[760px] text-[16px] font-normal leading-[1.7] text-[#52525B] sm:text-[18px] text-pretty">{t("Magnetic Solution Limited is Moodle’s Certified Integration Partner in Bangladesh and the first-ever organizer of MoodleMoot Bangladesh. Explore how we build secure, scalable, audit-ready Moodle LMS and proctoring for institutions that can’t afford failure.")}</p>
 
@@ -52,7 +52,7 @@ export default async function MoodleSolutionsSection() {
                 aria-hidden="true"
                 className="mb-5 block h-[3px] w-10 rounded-full bg-primary"
               />
-              <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[22px] text-balance">
+              <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
                 {t(item.title)}
               </h3>
               <p className="mt-3 text-[15px] font-normal leading-[1.6] text-[#52525B] text-pretty">

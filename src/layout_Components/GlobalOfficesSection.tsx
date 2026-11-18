@@ -50,7 +50,7 @@ export default function GlobalOfficesSection({ compact = false }: { compact?: bo
     <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
         <div className="max-w-[620px]">
-          <h2 className={compact ? "text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[42px] text-balance" : "text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance"}>{t("Global Offices")}</h2>
+          <h2 className={compact ? "text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance" : "text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance"}>{t("Global Offices")}</h2>
           <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
         </div>
 
@@ -69,7 +69,7 @@ export default function GlobalOfficesSection({ compact = false }: { compact?: bo
                 </span>
               </div>
 
-              <h3 className="mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance">
+              <h3 className={compact ? "mt-6 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance" : "mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] md:text-[26px] text-balance"}>
                 {t(office.name)}
               </h3>
 

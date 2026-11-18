@@ -32,7 +32,7 @@ export default async function TechStackSection() {
     <section className="w-full overflow-hidden bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
-          <h2 className="text-[clamp(20px,5.09vw,25px)] font-semibold leading-[1.18] tracking-[-0.02em] text-[#0A0A0A] sm:text-[28px] md:text-[32px] text-balance">
+          <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">
             <span className="text-[#C91F28]">{t("Yes!")}</span>{" "}{t("We cover your tech stack.")}</h2>
 
           <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("From global technology partners to the brands we build for — a collective we work with across Cloud, ERP, Learning, Commerce, and Creative Technology.")}</p>

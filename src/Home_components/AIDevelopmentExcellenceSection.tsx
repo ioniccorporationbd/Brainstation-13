@@ -27,7 +27,7 @@ const aiStats = [
   {
     number: "90%",
     label: "Faster Deployments",
-    title: "Zero-Downtime DevOps",
+    title: "Zero-Downtime Ops",
     description:
       "AI-driven CI/CD pipelines automate rollbacks and canary releases for seamless updates.",
   },
@@ -41,7 +41,7 @@ export default async function AIDevelopmentExcellenceSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
           <div>
-            <h2 className="max-w-[420px] text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[48px] text-balance">{t("Excellence in AI Development")}</h2>
+            <h2 className="max-w-[420px] text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Excellence in AI Development")}</h2>
 
             <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B] text-pretty">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
 
@@ -66,7 +66,7 @@ export default async function AIDevelopmentExcellenceSection() {
                   {t(item.label)}
                 </span>
 
-                <h3 className="mt-4 text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] sm:text-[18px] md:text-[20px] text-balance">
+                <h3 className="mt-4 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
                   {t(item.title)}
                 </h3>
 
@@ -82,7 +82,7 @@ export default async function AIDevelopmentExcellenceSection() {
         <div className="mt-14 border-t border-black/[0.08] pt-10">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12">
             <div className="border-l-2 border-primary pl-5">
-              <h3 className="text-[22px] md:text-[26px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#0A0A0A] text-balance">{t("10X Faster Delivery")}</h3>
+              <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("10X Faster Delivery")}</h3>
 
               <p className="mt-2 max-w-[560px] text-[15px] font-normal leading-[1.55] text-[#52525B] text-pretty">{t("Our world-class engineers leverage cutting-edge AI to deliver solutions 10X faster without compromising quality.")}</p>
             </div>

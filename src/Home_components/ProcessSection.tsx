@@ -30,7 +30,7 @@ const PROCESS_STEPS = [
   {
     icon: '🛡️',
     label: 'Build with AI Guardrails',
-    title: 'Code, test, deploy — smarter',
+    title: 'Code, test, deploy',
     points: [
       'AI-assisted development tooling across the build',
       'Automated test suites for dependable releases',
@@ -56,7 +56,7 @@ export default async function ProcessSection() {
       <div className="brand-container grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
         <div>
-          <h2 className="text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[42px] text-balance">{t("Our Process")}</h2>
+          <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Process")}</h2>
 
           <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[18px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
 
@@ -106,7 +106,7 @@ export default async function ProcessSection() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[#0A0A0A] md:text-[20px] text-balance">
+                  <h3 className="mt-4 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
                     {t(item.title)}
                   </h3>
 
