@@ -18,7 +18,7 @@ export default function GlobalOfficesGate() {
 
   return (
     <div data-global-offices>
-      <GlobalOfficesSection />
+      <GlobalOfficesSection compact={pathname === "/"} />
     </div>
   );
 }

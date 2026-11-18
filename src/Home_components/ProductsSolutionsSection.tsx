@@ -64,7 +64,7 @@ export default async function ProductsSolutionsSection() {
     <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.14] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[50px] text-balance">{t("Our Products & Solutions")}</h2>
+          <h2 className="text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.14] tracking-[-0.03em] text-[#0A0A0A] sm:text-[42px] lg:text-[48px] text-balance">{t("Our Products & Solutions")}</h2>
 
           <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("Accelerating Digital Transformation Across Banking, FinTech, EdTech, Pharma, and Enterprise Operations")}</p>
         </div>

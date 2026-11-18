@@ -41,7 +41,7 @@ export default async function AIDevelopmentExcellenceSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
           <div>
-            <h2 className="max-w-[420px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[46px] lg:text-[50px] text-balance">{t("Excellence in AI Development")}</h2>
+            <h2 className="max-w-[420px] text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[44px] lg:text-[48px] text-balance">{t("Excellence in AI Development")}</h2>
 
             <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B] text-pretty">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
 

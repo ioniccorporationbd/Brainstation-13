@@ -56,7 +56,7 @@ export default async function ProcessSection() {
       <div className="brand-container grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
         <div>
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance">{t("Our Process")}</h2>
+          <h2 className="text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[42px] text-balance">{t("Our Process")}</h2>
 
           <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[18px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
 

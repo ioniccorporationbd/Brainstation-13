@@ -102,7 +102,7 @@ export default function HeroBannerSlider() {
               <div className="brand-container hero-grid pt-[76px] md:min-h-[650px]">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px]">
-                  <h1 className="max-w-[660px] text-balance text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[42px] md:text-[52px] lg:text-[56px]">
+                  <h1 className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
                     {t(slide.title)}
                   </h1>
 

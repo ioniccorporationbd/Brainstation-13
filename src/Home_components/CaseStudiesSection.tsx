@@ -26,7 +26,7 @@ export default async function CaseStudiesSection() {
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance">{t("Case Studies")}</h2>
+            <h2 className="text-[clamp(25px,7.487vw,30px)] font-semibold leading-[1.1] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[42px] text-balance">{t("Case Studies")}</h2>
             <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Check out our case studies to see how innovative solutions transformed real businesses.")}</p>
           </div>
 
