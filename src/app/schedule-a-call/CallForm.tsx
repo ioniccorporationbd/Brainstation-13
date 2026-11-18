@@ -110,7 +110,7 @@ export default function CallForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CalendarCheck size={28} strokeWidth={1.9} />
         </span>
-        <h3 className="mt-5 text-[22px] font-bold tracking-[-0.02em] text-black leading-[1.3] text-balance">{t("Booking request received")}</h3>
+        <h3 className="mt-5 font-semibold tracking-[-0.01em] text-black text-[20px] leading-[1.3] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("Booking request received")}</h3>
         <p className="mt-3 max-w-[430px] text-[15px] leading-[1.7] text-[#55585e]">{t("Thank you,")}{values.name.split(" ")[0] || "there"}{t(". Your request has been recorded with reference")}{" "}
           <strong className="break-all text-black">{reference || "—"}</strong>{" "}{t("and is queued for the team.")}</p>
         <p className="mt-3 max-w-[430px] rounded-lg bg-[#fafafa] px-4 py-3 text-[13px] leading-[1.6] text-[#55585e]">

@@ -98,9 +98,9 @@ export default function StaffAugmentationHeroSection() {
                 <SwiperSlide key={`${t(review.company)}-${index}`}>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+                      <span className="block text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                         {t(review.company)}
-                      </h3>
+                      </span>
 
                       <div>
                         <div className="flex items-center gap-[2px]">

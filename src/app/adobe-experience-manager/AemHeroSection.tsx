@@ -12,11 +12,11 @@ export default async function AemHeroSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
-      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Adobe Experience Manager")}</p>
 
-          <h1 className="max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Adobe Experience Manager")}</h1>
+          <h1 className="max-w-[640px] font-semibold font-sans text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Adobe Experience Manager")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Implementation, integration, managed service, migration and upgrade — the full AEM lifecycle handled by engineers who work in it daily.")}</p>
 

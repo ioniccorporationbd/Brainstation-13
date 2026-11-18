@@ -100,6 +100,8 @@ export default function GlobalOfficesGate() {
         pathname === "/" ||
         pathname === "/global-offices" ||
         pathname === "/recognitions" ||
+        pathname.startsWith("/case-study") ||
+        pathname === "/schedule-a-call" ||
         pathname === "/solution-partner/swapno" ||
         SERVICES_ROUTES.has(pathname ?? "") ||
         INDUSTRY_ROUTES.has(pathname ?? "") ||

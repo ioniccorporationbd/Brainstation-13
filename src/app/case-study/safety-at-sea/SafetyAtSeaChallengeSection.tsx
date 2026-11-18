@@ -27,7 +27,7 @@ export default async function SafetyAtSeaChallengeSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The problem")}</p>
-            <h2 className="mt-4 max-w-[560px] text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Small fleets, thin coverage, high stakes")}</h2>
+            <h2 className="mt-4 max-w-[560px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Small fleets, thin coverage, high stakes")}</h2>
 
             <p className="mt-5 text-[15.5px] leading-[1.8] text-[#55585e]">{t("Small fishing fleets and coastal vessels operate with limited connectivity and visibility, putting crews at risk when weather or engine trouble hits.")}</p>
 
@@ -41,7 +41,7 @@ export default async function SafetyAtSeaChallengeSection() {
                     <item.icon size={19} />
                   </span>
                   <div>
-                    <h3 className="text-[15.5px] md:text-[16px] font-semibold leading-[1.35] text-black text-balance">{t(item.title)}</h3>
+                    <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t(item.title)}</h3>
                     <p className="mt-1 text-[14.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
                   </div>
                 </li>

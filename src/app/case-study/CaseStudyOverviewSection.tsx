@@ -54,7 +54,7 @@ export default async function CaseStudyOverviewSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Problem Statement")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Business Challenges")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Business Challenges")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("The legacy platform could not support the scale, brand standards, and hyperlocal experience the business required — creating seven core challenges to solve.")}</p>
         </div>

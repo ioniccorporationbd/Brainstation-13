@@ -16,7 +16,7 @@ export default async function SafetyAtSeaHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study · IoT")}</span>
 
-          <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Safety at Sea — Maritime IoT")}</h1>
+          <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Safety at Sea — Maritime IoT")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[16px] leading-[1.6] text-[#55585e] md:text-[16px]">{t("An IoT-based boat safety system that gives crews and authorities real-time visibility to prevent and respond to incidents at sea.")}</p>
 

@@ -41,7 +41,7 @@ export default async function CaseStudyRelatedSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Related Case Studies")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("You Might Also Like")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("You Might Also Like")}</h2>
 
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] font-medium leading-[1.55] tracking-[-0.01em] text-[#565656] md:text-[17px]">{t("Explore more of the products and platforms we have designed and delivered.")}</p>
 
@@ -74,7 +74,7 @@ export default async function CaseStudyRelatedSection() {
                     {t(item.category)}
                   </span>
 
-                  <h3 className="mt-4 text-[18px] md:text-[20px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0a0a0a] text-balance">
+                  <h3 className="mt-4 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                     {t(item.title)}
                   </h3>
 

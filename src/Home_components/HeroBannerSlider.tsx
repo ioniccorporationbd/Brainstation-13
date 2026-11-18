@@ -96,15 +96,24 @@ export default function HeroBannerSlider() {
         }}
         className="hero-banner-swiper"
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={slide.title}>
             <div className="relative w-full overflow-hidden md:min-h-[650px]">
               <div className="brand-container hero-grid pt-[76px] md:min-h-[650px]">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px]">
-                  <h1 className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
-                    {t(slide.title)}
-                  </h1>
+                  {/* Only the first slide owns the page <h1>; the other slides stay
+                      visually identical but are not headings, so the document
+                      keeps a single H1 for SEO / screen readers. */}
+                  {index === 0 ? (
+                    <h1 className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+                      {t(slide.title)}
+                    </h1>
+                  ) : (
+                    <div className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+                      {t(slide.title)}
+                    </div>
+                  )}
 
                   <p className="mt-6 max-w-[620px] text-pretty text-[16px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[18px]">
                     {t(slide.description)}

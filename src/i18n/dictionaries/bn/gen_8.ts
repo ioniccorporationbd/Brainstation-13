@@ -244,7 +244,7 @@ export const gen_8: Dict = {
   "Sencha": "Sencha",
   "Send a brief": "একটি ব্রিফ পাঠান",
   "Send message": "বার্তা পাঠান",
-  "Send details instead of booking time": "সময় বুক না করে বিবরণ পাঠান",
+  "Send details, skip the booking": "সময় বুক না করে বিবরণ পাঠান",
   "Send the details through the contact form and mention media in the message — requests are routed to the people who can answer technically.": "কন্টাক্ট ফর্ম-এর মাধ্যমে বিবরণ পাঠান এবং বার্তায় মিডিয়া উল্লেখ করুন — অনুরোধগুলো প্রযুক্তিগতভাবে উত্তর দিতে পারে এমন লোকদের কাছে রাউট করা হয়।",
   "Send the questionnaire or the due-diligence list. We answer directly with documents rather than pointing at a marketing page.": "কোয়েশনেয়ার বা ডিউ-ডিলিজেন্স লিস্ট পাঠান। মার্কেটিং পেজে নির্দেশ করার বদলে আমরা সরাসরি ডকুমেন্ট দিয়ে উত্তর দিই।",
   "Send the questionnaire — we will answer in writing and attach the control documentation your process needs.": "কোয়েশনেয়ার পাঠান — আমরা লিখিতভাবে উত্তর দেবো এবং আপনার প্রসেস-এর প্রয়োজনীয় কন্ট্রোল ডকুমেন্টেশন সংযুক্ত করবো।",

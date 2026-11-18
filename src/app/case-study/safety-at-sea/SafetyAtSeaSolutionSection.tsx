@@ -24,7 +24,7 @@ export default async function SafetyAtSeaSolutionSection() {
       <div className="mx-auto max-w-[1240px]">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The solution")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-bold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("What we built")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What we built")}</h2>
           <p className="mt-4 text-[15.5px] leading-[1.6] text-[#55585e]">{t("We designed and built an IoT safety platform that streams vessel location, conditions and alarms to owners and rescue services — even on constrained networks.")}</p>
         </div>
 
@@ -37,7 +37,7 @@ export default async function SafetyAtSeaSolutionSection() {
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={21} />
               </span>
-              <h3 className="mt-5 text-[16px] font-semibold leading-[1.3] text-black text-balance">{t(item.title)}</h3>
+              <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t(item.title)}</h3>
               <p className="mt-2 text-[14.5px] leading-[1.6] text-[#55585e]">{t(item.description)}</p>
             </article>
           ))}
