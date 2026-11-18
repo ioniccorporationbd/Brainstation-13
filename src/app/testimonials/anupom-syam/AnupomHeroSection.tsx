@@ -24,7 +24,7 @@ export default async function AnupomHeroSection() {
         <div className="mt-9 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonial · Fintech")}</span>
-            <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("“8X faster than we expected”")}</h1>
+            <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("“8X faster than we expected”")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Anupom Syam, Founder & CEO at Tackle, on how resource augmentation changed the delivery velocity of their fintech platform.")}</p>
 
             <div className="mt-7 flex items-center gap-4 rounded-xl border border-[#ececec] bg-white px-5 py-4">

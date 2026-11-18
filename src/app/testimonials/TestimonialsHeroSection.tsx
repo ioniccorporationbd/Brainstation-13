@@ -9,7 +9,7 @@ export default async function TestimonialsHeroSection() {
       <div className="mx-auto grid brand-container items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonials")}</span>
-          <h1 className="mt-6 text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px]">{t("What teams say after building")}</h1>
+          <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("What teams say after building")}</h1>
           <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("First-hand accounts from fintech, education, cloud, commerce and enterprise engagements — kept exactly as they were given, with the original names, roles and companies.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
@@ -32,7 +32,7 @@ export default async function TestimonialsHeroSection() {
             <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Featured · Fintech")}</span>
             <Quote size={24} strokeWidth={1.6} className="text-[#f0c9cb]" />
           </div>
-          <p className="mt-6 text-[20px] font-bold leading-[1.35] tracking-[-0.01em] text-black md:text-[24px]">{t("“8X faster than we expected”")}</p>
+          <p className="mt-6 font-bold tracking-[-0.01em] text-black leading-[1.35] text-[16px] sm:text-[18px]">{t("“8X faster than we expected”")}</p>
           <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("“Their resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.”")}</p>
           <div className="mt-6 flex items-center justify-between border-t border-[#f2f2f2] pt-5">
             <div className="flex items-center gap-3">

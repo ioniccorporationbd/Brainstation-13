@@ -9,6 +9,21 @@ import GlobalOfficesSection from "./GlobalOfficesSection";
  */
 const HIDDEN_ROUTES = ["/qa-testing-and-automation"];
 
+const PRODUCT_ROUTES = new Set([
+  "/cross-border-payments-solution",
+  "/digital-banking-software",
+  "/digital-lending-credit",
+  "/e-wallet-software",
+  "/insurance-360",
+  "/neuraflow-conversational-ai-agent",
+  "/omnizia",
+  "/proctoring-pro",
+  "/shikkha-chat",
+  "/time2publish",
+  "/testimonials",
+  "/testimonials/anupom-syam",
+]);
+
 // Industries Mega Menu pages follow the homepage typography scale.
 const INDUSTRY_ROUTES = new Set([
   "/automotive",
@@ -66,7 +81,12 @@ export default function GlobalOfficesGate() {
 
   return (
     <div data-global-offices>
-      <GlobalOfficesSection compact={pathname === "/" || SERVICES_ROUTES.has(pathname ?? "") || INDUSTRY_ROUTES.has(pathname ?? "")} />
+      <GlobalOfficesSection compact={
+        pathname === "/" ||
+        SERVICES_ROUTES.has(pathname ?? "") ||
+        INDUSTRY_ROUTES.has(pathname ?? "") ||
+        PRODUCT_ROUTES.has(pathname ?? "")
+      } />
     </div>
   );
 }

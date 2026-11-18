@@ -122,7 +122,7 @@ export default async function ShikkhaModulesSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Platform modules")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Six modules, 47 features")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Six modules, 47 features")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Every part of a school works together — from daily administration to AI-assisted learning and government oversight. Each module ships with the exact capabilities its users rely on every day.")}</p>
         </div>
 
@@ -137,7 +137,7 @@ export default async function ShikkhaModulesSection() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Icon size={23} strokeWidth={1.8} />
                 </div>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(module.title)}
                 </h3>
                 <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">

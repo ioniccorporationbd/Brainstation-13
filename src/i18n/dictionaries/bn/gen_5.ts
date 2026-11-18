@@ -372,7 +372,7 @@ export const gen_5: Dict = {
   "Launch one corridor end to end with tight monitoring before widening the network.": "নেটওয়ার্ক প্রশস্ত করার আগে কঠোর মনিটরিং-সহ একটি করিডোর এন্ড টু এন্ড লঞ্চ করুন।",
   "Launch scalable mobile financial services with wallet accounts, cash-in, cash-out, merchant payment, agent banking, QR payment, transaction monitoring, and secure customer verification workflows.": "ওয়ালেট অ্যাকাউন্ট, ক্যাশ-ইন, ক্যাশ-আউট, মার্চেন্ট পেমেন্ট, এজেন্ট ব্যাংকিং, কিউআর পেমেন্ট, ট্রানজেকশন মনিটরিং এবং সিকিউর কাস্টমার ভেরিফিকেশন ওয়ার্কফ্লো সহ স্কেলেবল মোবাইল ফাইন্যান্সিয়াল সার্ভিস লঞ্চ করুন।",
   "Launch under your own brand with full creative and operational control.": "সম্পূর্ণ ক্রিয়েটিভ ও অপারেশনাল কন্ট্রোল-সহ আপনার নিজের ব্র্যান্ড-এ লঞ্চ করুন।",
-  "Launching or replatforming a wallet?": "ওয়ালেট লঞ্চ বা রিপ্ল্যাটফর্ম করছেন?",
+  "Wallet launch or replatform?": "ওয়ালেট লঞ্চ বা রিপ্ল্যাটফর্ম?",
   "Leads, opportunities and customer history.": "লিড, অপরচুনিটি ও কাস্টমার হিস্ট্রি।",
   "Learn about sustainability": "সাসটেইনেবিলিটি সম্পর্কে জানুন",
   "Learner progress and completion reports": "লার্নার প্রোগ্রেস ও কমপ্লিশন রিপোর্ট",

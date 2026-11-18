@@ -50,7 +50,7 @@ export default async function ShikkhaWorkflowsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How it works")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("How Shikkha Chat runs the school day")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How Shikkha Chat runs the school day")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Real, integrated workflows across roles — one action flows straight to the next person who needs it.")}</p>
         </div>
 
@@ -67,7 +67,7 @@ export default async function ShikkhaWorkflowsSection() {
                     <div>
                       <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Step 0")}{index + 1}
                       </p>
-                      <h3 className="mt-1.5 text-[18px] font-semibold leading-[1.3] tracking-[-0.01em] text-black md:text-[20px] text-balance">
+                      <h3 className="mt-1.5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                         {t(flow.title)}
                       </h3>
                       <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">

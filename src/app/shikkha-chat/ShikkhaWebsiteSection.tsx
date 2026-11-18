@@ -41,7 +41,7 @@ export default async function ShikkhaWebsiteSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Public school website")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Every Institution Gets a Website")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Every Institution Gets a Website")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Shikkha Chat ships a complete, mobile-friendly 40+ page school website for every institution — home, governing body, chairman and principal messages, academic calendar, class routine, syllabus, fees, scholarships, notice board, gallery, exam results and more — that parents and the public can browse before they ever sign in.")}</p>
         </div>
 

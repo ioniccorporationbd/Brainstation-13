@@ -121,7 +121,7 @@ export default async function ShikkhaDashboardsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Built for every role")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Eight purpose-built dashboards")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Eight purpose-built dashboards")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Access and permissions are scoped by role, so each person sees a focused, secure view of the platform. Every screen below is captured from the live Shikkha Chat application.")}</p>
         </div>
 
@@ -148,7 +148,7 @@ export default async function ShikkhaDashboardsSection() {
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={19} strokeWidth={1.9} />
                     </span>
-                    <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                    <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(role.label)}
                     </h3>
                   </div>

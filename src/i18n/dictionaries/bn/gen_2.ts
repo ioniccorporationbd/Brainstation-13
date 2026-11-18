@@ -416,7 +416,7 @@ export const gen_2: Dict = {
   "Connectors to ticketing, booking and record systems for real actions": "বাস্তব অ্যাকশন-এর জন্য টিকেটিং, বুকিং ও রেকর্ড সিস্টেম-এর কানেক্টর",
   "Connects to what you already run": "আপনি যা চালান তার সাথে সংযুক্ত",
   "Consistent, objective measurement of disease stage": "রোগের স্টেজ-এর ধারাবাহিক, বস্তুনিষ্ঠ পরিমাপ",
-  "Consolidate your clinical systems step by step": "ধাপে ধাপে ক্লিনিক্যাল সিস্টেম একত্রিত করুন",
+  "Consolidate clinical systems, step by step": "ধাপে ধাপে ক্লিনিক্যাল সিস্টেম একত্রিত করুন",
   "Consolidated multiple disconnected business units and 3,000+ users into a single, unified MSFA ecosystem.": "একাধিক বিচ্ছিন্ন বিজনেস ইউনিট ও ৩,০০০+ ইউজার-কে একক, সমন্বিত MSFA ইকোসিস্টেমে একত্রিত করেছে।",
   "Consultation & Training": "কনসালটেশন ও প্রশিক্ষণ",
   "Consultations We Provide": "আমরা যে কনসালটেশন প্রদান করি",
