@@ -98,6 +98,7 @@ export default function GlobalOfficesGate() {
     <div data-global-offices>
       <GlobalOfficesSection compact={
         pathname === "/" ||
+        pathname === "/global-offices" ||
         SERVICES_ROUTES.has(pathname ?? "") ||
         INDUSTRY_ROUTES.has(pathname ?? "") ||
         PRODUCT_ROUTES.has(pathname ?? "") ||
