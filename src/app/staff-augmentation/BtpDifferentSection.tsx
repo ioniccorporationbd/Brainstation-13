@@ -76,7 +76,7 @@ export default async function BtpDifferentSection() {
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
 
-            <h2 className="text-[clamp(27px,8vw,32px)] max-w-[620px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What Makes Our BTP Different?")}</h2>
+            <h2 className="max-w-[620px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What Makes Our BTP Different?")}</h2>
           </div>
 
           <p className="max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] lg:pb-2 text-pretty">{t("The fastest, smartest, risk-free way to scale your engineering capacity without the hiring overhead. Build with pre-vetted talents, flexible models, local oversight, and continuity from day one.")}</p>
@@ -95,7 +95,7 @@ export default async function BtpDifferentSection() {
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(card.title)}
                 </h3>
 

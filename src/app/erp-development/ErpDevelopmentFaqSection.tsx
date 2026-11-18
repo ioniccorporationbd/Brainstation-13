@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function ErpDevelopmentFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="Help Center"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about ERP Development from Magnetic Solution Limited.")}

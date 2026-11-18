@@ -16,7 +16,7 @@ export default async function ErpDevelopmentHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Service · ERP Development")}</span>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-6 max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[44px] xl:text-[56px] text-balance">{t("ERP built around how you work")}</h1>
+          <h1 className="mt-6 max-w-[640px] font-bold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("ERP built around how you work")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Custom ERPNext, Frappe and enterprise systems that unify operations, automate workflows and scale with the business.")}</p>
 

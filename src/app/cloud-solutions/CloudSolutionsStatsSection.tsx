@@ -18,9 +18,9 @@ export default async function CloudSolutionsStatsSection() {
               key={stat.label}
               className="rounded-xl border border-[#ececec] bg-white px-4 py-7 text-center sm:px-5 md:px-6 md:py-8"
             >
-              <p className="text-[clamp(22px,6.8vw,28px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[clamp(30px,4vw,40px)]">
+              <div className="text-[clamp(22px,6.8vw,28px)] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[clamp(30px,4vw,40px)]">
                 {t(stat.value)}
-              </p>
+              </div>
               <p className="mt-3 text-[13px] font-medium leading-[1.4] text-[#52525B] md:text-[14.5px] text-pretty">
                 {t(stat.label)}
               </p>

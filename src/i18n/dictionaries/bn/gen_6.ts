@@ -80,7 +80,7 @@ export const gen_6: Dict = {
   "Manual exploitation chaining with Metasploit to mimic attacker behavior, demonstrating impacts like lateral movement without false positives.": "Metasploit দিয়ে ম্যানুয়াল এক্সপ্লয়টেশন চেইনিং করে অ্যাটাকার বিহেভিয়ার নকল করা হয়, যাতে মিথ্যা পজিটিভ ছাড়াই ল্যাটারাল মুভমেন্ট-এর মতো ইমপ্যাক্ট প্রদর্শিত হয়।",
   "Manual or delayed order capture": "ম্যানুয়াল বা বিলম্বিত অর্ডার ক্যাপচার",
   "Manual, paper-based claims processing and settlement": "ম্যানুয়াল, কাগজভিত্তিক ক্লেইম প্রসেসিং ও সেটেলমেন্ট",
-  "Manufacturing": "ম্যানুফ্যাকচারিং",
+  "Manufactur\u00ADing": "ম্যানুফ্যাকচারিং",
   "Manufacturing & Industrial Operations": "ম্যানুফ্যাকচারিং ও ইন্ডাস্ট্রিয়াল অপারেশন",
   "Map corridors, partners, currencies, cut-off times and regulatory constraints before any code is written.": "কোনো কোড লেখার আগেই করিডোর, পার্টনার, মুদ্রা, কাট-অফ টাইম ও রেগুলেটরি কনস্ট্রেইন্ট ম্যাপ করুন।",
   "Mapped to recognised frameworks, verifiable on request": "স্বীকৃত ফ্রেমওয়ার্ক-এর সাথে ম্যাপড, অনুরোধে যাচাইযোগ্য",

@@ -56,7 +56,7 @@ export default async function BlockchainCapabilitySection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Capabilities")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("From Blockchain to Capability")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("From Blockchain to Capability")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six capability areas across settlement, compliance and tokenized assets.")}</p>
         </div>
@@ -74,7 +74,7 @@ export default async function BlockchainCapabilitySection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(service.title)}
                 </h3>
 
@@ -87,7 +87,7 @@ export default async function BlockchainCapabilitySection() {
         </div>
 
         <div className="mx-auto mt-6 flex max-w-[420px] flex-col items-center rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-10 text-center">
-          <h3 className="text-[18px] md:text-[20px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Have something specific in mind?")}</h3>
+          <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Have something specific in mind?")}</h3>
 
           <Link
             href="/contact"

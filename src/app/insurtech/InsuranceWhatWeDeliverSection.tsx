@@ -77,7 +77,7 @@ export default function InsuranceWhatWeDeliverSection() {
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Deliverables")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("What We Deliver")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What We Deliver")}</h2>
 
           <p className="mt-5 max-w-[340px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
         </div>

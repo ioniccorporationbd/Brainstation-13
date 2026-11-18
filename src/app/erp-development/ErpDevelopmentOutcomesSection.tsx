@@ -36,7 +36,7 @@ export default async function ErpDevelopmentOutcomesSection() {
         <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
           <div className="max-w-[700px]">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What we measure")}</p>
-            <h2 className="text-[clamp(22px,5.6vw,27px)] mt-3 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Outcomes, not vanity metrics")}</h2>
+            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Outcomes, not vanity metrics")}</h2>
             <p className="mt-3 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Every engagement is reviewed against the same four questions.")}</p>
           </div>
 
@@ -49,7 +49,7 @@ export default async function ErpDevelopmentOutcomesSection() {
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <item.icon size={19} />
                 </span>
-                <h3 className="text-[15.5px] md:text-[16px] leading-[1.35] mt-4 font-semibold text-black text-balance">{t(item.title)}</h3>
+                <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t(item.title)}</h3>
                 <p className="mt-1.5 text-[13.5px] leading-[1.6] text-[#52525B] text-pretty">
                   {t(item.description)}
                 </p>

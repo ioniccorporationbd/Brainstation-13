@@ -35,7 +35,7 @@ const faqs: FaqItem[] = [
 export default async function WebMobileFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="FAQ"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about mobile app development and our delivery process.")}

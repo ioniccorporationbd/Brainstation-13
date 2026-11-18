@@ -16,7 +16,7 @@ export default async function ErpDevelopmentIntroSection() {
 
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Why custom")}</p>
-            <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("The System Bends to You")}</h2>
+            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("The System Bends to You")}</h2>
 
             <p className="mt-5 text-[15px] leading-[1.8] text-[#52525B] md:text-[16px] text-pretty">{t("Off-the-shelf ERP forces you to bend your processes to the software. We build on ERPNext, Frappe and modern frameworks so the system bends to you — modules, integrations and workflows that match reality.")}</p>
             <p className="mt-4 text-[15px] leading-[1.8] text-[#52525B] md:text-[16px] text-pretty">{t("From finance and inventory to HR and field operations, we deliver ERP that people actually adopt.")}</p>

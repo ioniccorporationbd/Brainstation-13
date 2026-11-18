@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function CyberSecurityFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="Help Center"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about Cyber Security Services from Magnetic Solution Limited.")}

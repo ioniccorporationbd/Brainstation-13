@@ -53,7 +53,7 @@ export default function StaffAugmentationFaqSection() {
   return (
     <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[104px]">
       <div className="mx-auto max-w-[1000px]">
-        <h2 className="text-[clamp(27px,8vw,32px)] text-center font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Frequently Asked Questions")}</h2>
+        <h2 className="text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Frequently Asked Questions")}</h2>
 
         <div className="mt-12">
           {visibleFaqs.map((faq, index) => {

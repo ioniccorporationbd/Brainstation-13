@@ -38,7 +38,7 @@ export default async function RiskFreeTimelineSection() {
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
-          <h2 className="text-[clamp(27px,8vw,32px)] mx-auto font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Risk-Free Talent Alignment")}</h2>
+          <h2 className="mx-auto text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Risk-Free Talent Alignment")}</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -51,7 +51,7 @@ export default async function RiskFreeTimelineSection() {
                 {t(step.number)}
               </span>
 
-              <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-6 font-semibold tracking-[-0.015em] text-[#0a0a0a] text-balance">
+              <h3 className="mt-6 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(step.title)}
               </h3>
 

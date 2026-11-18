@@ -23,7 +23,7 @@ export default async function BankingFinancialIndustriesSection() {
       <div className="grid brand-container grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Clients we have served in")}</p>
-          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Industries")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Industries")}</h2>
 
           <ul className="mt-8 space-y-4">
             {industries.map((industry) => (
@@ -36,7 +36,7 @@ export default async function BankingFinancialIndustriesSection() {
                 </span>
 
                 <div>
-                  <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] font-semibold text-black text-balance">
+                  <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                     {t(industry.title)}
                   </h3>
                   <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">

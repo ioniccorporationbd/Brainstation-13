@@ -33,7 +33,7 @@ export default async function EcommerceStackSection() {
           <div className="max-w-[640px]">
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
 
-            <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Built for modern commerce")}</h2>
+            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Built for modern commerce")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -49,7 +49,7 @@ export default async function EcommerceStackSection() {
                     <Icon size={18} strokeWidth={2.1} />
                   </span>
 
-                  <h3 className="text-[15px] md:text-[16px] leading-[1.35] mt-4 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                  <h3 className="mt-4 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                     {t(point.title)}
                   </h3>
 

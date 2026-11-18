@@ -9,7 +9,7 @@ export default async function StockPriceAboutSection() {
         <div className="mx-auto max-w-[860px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Overview")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("About Stock Price Prediction")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("About Stock Price Prediction")}</h2>
 
           <p className="mx-auto mt-5 max-w-[780px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Our stock price prediction model can predict the most profitable time for buying or selling a stock. For this prediction, it needs a data-set of that stock so that the model can learn the price behavior of stocks through a timeline and can predict the next probable market price for a convenient action.")}</p>
         </div>
@@ -20,7 +20,7 @@ export default async function StockPriceAboutSection() {
               <Wrench size={22} strokeWidth={1.8} />
             </div>
 
-            <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Problem")}</h3>
+            <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Problem")}</h3>
 
             <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">{t("It's quite challenging for humans to predict the most accurate and profitable time to buy and sell a stock without analyzing its previous history of the price timeline.")}</p>
           </article>
@@ -30,7 +30,7 @@ export default async function StockPriceAboutSection() {
               <Lightbulb size={22} strokeWidth={1.8} />
             </div>
 
-            <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Solution")}</h3>
+            <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Solution")}</h3>
 
             <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">{t("Simple linear regression was used to predict the stock price ahead of time and the random seed was used to start the buying point, so individuals can buy and sell any stock with the most profitable action.")}</p>
           </article>
@@ -40,7 +40,7 @@ export default async function StockPriceAboutSection() {
               <TrendingUp size={22} strokeWidth={1.8} />
             </div>
 
-            <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Business Impact")}</h3>
+            <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Business Impact")}</h3>
 
             <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">{t("By predicting the appropriate time for stock exchange through an AI-enabled solution, one can eliminate the high risk of losing money in the stock market and stay safe.")}</p>
           </article>

@@ -10,9 +10,9 @@ export default async function ManagedServiceHeroSection() {
         <div>
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Managed Service")}</span>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] mt-7 max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("Managed software delivery")}</h1>
+          <h1 className="mt-7 max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Managed software delivery")}</h1>
 
-          <p className="mt-6 max-w-[540px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("From planning to release and post-launch support, we own the full software lifecycle for you.")}</p>
+          <p className="mt-6 max-w-[540px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("From planning to release and post-launch support, we own the full software lifecycle for you.")}</p>
 
           <Link
             href="/schedule-a-call"

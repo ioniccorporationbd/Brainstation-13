@@ -46,12 +46,11 @@ export default function StaffAugmentationHeroSection() {
         <div>
           <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Tech Talent")}</p>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[43px] xl:text-[56px] text-balance">
+          <h1 className="max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
             {t("IT Staff Augmentation")}
-            <span className="hidden sm:inline">,<br className="hidden sm:block" />{" "}{t("Built for Speed.")}</span>
           </h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
+          <p className="mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
@@ -99,7 +98,7 @@ export default function StaffAugmentationHeroSection() {
                 <SwiperSlide key={`${t(review.company)}-${index}`}>
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-[22px] md:text-[26px] leading-[1.22] font-bold tracking-[-0.02em] text-[#0a0a0a] text-balance">
+                      <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                         {t(review.company)}
                       </h3>
 

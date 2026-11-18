@@ -31,7 +31,7 @@ export async function SharePointIndustriesSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industries We Build For")}</p>
 
-            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Industries")}</h2>
+            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Industries")}</h2>
 
             <p className="mt-4 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("SharePoint and Microsoft 365 engagements across document-heavy, regulated and customer-facing sectors.")}</p>
 
@@ -75,7 +75,7 @@ export async function SharePointWorkedWithSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Microsoft Technologies")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Technologies We Build With")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Technologies We Build With")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("The Microsoft products our SharePoint work connects to.")}</p>
         </div>
@@ -147,7 +147,7 @@ export async function SharePointPurchaseCTASection() {
       <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
         <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Start a Project")}</p>
 
-        <h2 className="text-[clamp(27px,8vw,32px)] mx-auto max-w-[720px] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Want to start a project with us?")}</h2>
+        <h2 className="mx-auto max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Want to start a project with us?")}</h2>
 
         <p className="mx-auto mt-4 max-w-[620px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Share your idea and we'll come back with a scoped SharePoint plan.")}</p>
 

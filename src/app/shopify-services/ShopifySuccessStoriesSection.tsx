@@ -42,7 +42,7 @@ export default function ShopifySuccessStoriesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Success Stories")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Shopify eCommerce Success Stories")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Shopify eCommerce Success Stories")}</h2>
         </div>
 
         <div className="mx-auto mt-11 max-w-[1080px]">
@@ -78,7 +78,7 @@ export default function ShopifySuccessStoriesSection() {
                   </div>
 
                   <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
-                    <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[520px] font-semibold tracking-[-0.02em] text-[#0a0a0a] text-balance">
+                    <h3 className="max-w-[520px] text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(story.title)}
                     </h3>
 

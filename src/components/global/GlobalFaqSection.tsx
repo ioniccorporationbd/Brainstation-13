@@ -24,6 +24,8 @@ export type GlobalFaqSectionProps = {
   /** Optional CTA rendered under the accordion. */
   ctaLabel?: string;
   ctaHref?: string;
+  /** Homepage-standardized heading scale (services pages). */
+  compact?: boolean;
   /** Extra classes for the outer section (e.g. alternate padding). */
   className?: string;
 };
@@ -44,6 +46,7 @@ export default function GlobalFaqSection({
   ctaLabel,
   ctaHref,
   className = "",
+  compact = false,
 }: GlobalFaqSectionProps) {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(
@@ -63,7 +66,7 @@ export default function GlobalFaqSection({
             </p>
           ) : null}
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">
+          <h2 className={compact ? "font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] text-[#0a0a0a] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance" : "text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance"}>
             {t(title)}
           </h2>
 

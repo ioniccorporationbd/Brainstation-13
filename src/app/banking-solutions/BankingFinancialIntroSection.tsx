@@ -20,7 +20,7 @@ export default async function BankingFinancialIntroSection() {
     <section className="relative overflow-hidden bg-white pb-[52px] pt-[8px] text-black md:pb-[104px]">
       <div className="brand-container">
         <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Overview")}</p>
-        <h2 className="text-[clamp(27px,8vw,32px)] mt-4 max-w-[720px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Secure, customized banking software")}</h2>
+        <h2 className="mt-4 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Secure, customized banking software")}</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
           {blocks.map((block) => (
@@ -32,7 +32,7 @@ export default async function BankingFinancialIntroSection() {
                 <block.icon size={22} />
               </span>
 
-              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-black text-balance">
+              <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(block.title)}
               </h3>
 

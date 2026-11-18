@@ -16,7 +16,7 @@ export default async function AemHeroSection() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Adobe Experience Manager")}</p>
 
-          <h1 className="text-[clamp(27px,8vw,36px)] max-w-[640px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[44px] xl:text-[56px] text-balance">{t("Adobe Experience Manager")}</h1>
+          <h1 className="max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Adobe Experience Manager")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Implementation, integration, managed service, migration and upgrade — the full AEM lifecycle handled by engineers who work in it daily.")}</p>
 

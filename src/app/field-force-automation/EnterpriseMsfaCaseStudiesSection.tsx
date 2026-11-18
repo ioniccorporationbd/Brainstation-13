@@ -72,7 +72,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Proven Results")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Case Studies")}</h2>
+          <h2 className="text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Case Studies")}</h2>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1140px]">
@@ -132,7 +132,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                   </div>
 
                   <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 lg:px-12">
-                    <h3 className="text-[22px] md:text-[26px] leading-[1.22] max-w-[520px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">
+                    <h3 className="max-w-[520px] text-[#000000] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(item.title)}
                     </h3>
 
@@ -150,9 +150,9 @@ export default function EnterpriseMsfaCaseStudiesSection() {
 
                     <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                       <div>
-                        <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
+                        <div className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
                           {t(item.metricOne)}
-                        </p>
+                        </div>
 
                         <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
                           {t(item.metricOneLabel)}
@@ -160,9 +160,9 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                       </div>
 
                       <div>
-                        <p className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
+                        <div className="text-[26px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[32px]">
                           {t(item.metricTwo)}
-                        </p>
+                        </div>
 
                         <p className="mt-2 text-[13px] font-bold leading-[1.3] text-[#4a4a4a]">
                           {t(item.metricTwoLabel)}

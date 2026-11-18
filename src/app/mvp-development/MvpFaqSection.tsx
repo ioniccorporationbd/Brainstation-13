@@ -29,7 +29,7 @@ const faqs: FaqItem[] = [
 export default async function MvpFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="FAQ"
       title={t("Still Have Questions?")}
       subtitle={t("Everything you need to know about building your MVP with Magnetic Solution Limited.")}

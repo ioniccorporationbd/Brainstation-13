@@ -22,7 +22,7 @@ export default async function SharePointHeroSection() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("SharePoint Services")}</p>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] max-w-[620px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[56px] text-balance">{t("SharePoint, Built Around Your Work")}</h1>
+          <h1 className="max-w-[620px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("SharePoint, Built Around Your Work")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Intranets, workflows, migration and managed support — a complete SharePoint practice for Microsoft 365 estates.")}</p>
 

@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function MLAIFAQSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="FAQ"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about the Machine Learning (ML) & Artificial Intelligence (AI) process.")}

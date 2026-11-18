@@ -63,9 +63,9 @@ export default function TrustedTechTeamsSection() {
     <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="w-full brand-container">
         <div className="staff-trusted-heading text-center">
-          <h2 className="text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[34px] text-balance">{t("Trusted By Fast-Moving Tech Teams")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Trusted By Fast-Moving Tech Teams")}</h2>
 
-          <p className="mt-[6px] text-[24px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#52525B] sm:text-[28px] lg:text-[30px] text-pretty">{t("From Startups to Enterprises")}</p>
+          <p className="mt-[6px] text-[18px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#52525B] text-pretty">{t("From Startups to Enterprises")}</p>
         </div>
 
         <div className="staff-trusted-slider relative mt-14 w-full overflow-hidden">

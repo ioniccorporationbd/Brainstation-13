@@ -70,7 +70,7 @@ export default async function BlockchainInfrastructureSection() {
         <div className="max-w-[760px]">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Infrastructure")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Building Blockchain Infrastructure?")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Building Blockchain Infrastructure?")}</h2>
 
           <p className="mt-4 max-w-[620px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Audit, identity, private networks and managed operations — the building blocks teams ask for most.")}</p>
         </div>
@@ -88,7 +88,7 @@ export default async function BlockchainInfrastructureSection() {
                   <Icon size={20} strokeWidth={2.1} />
                 </span>
 
-                <h3 className="text-[15.5px] md:text-[16px] leading-[1.35] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(service.title)}
                 </h3>
 
@@ -100,7 +100,7 @@ export default async function BlockchainInfrastructureSection() {
           })}
 
           <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 text-center">
-            <h3 className="text-[16.5px] md:text-[18px] leading-[1.3] font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">{t("Need Blockchain Developers?")}</h3>
+            <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Need Blockchain Developers?")}</h3>
 
             <Link
               href="/contact"

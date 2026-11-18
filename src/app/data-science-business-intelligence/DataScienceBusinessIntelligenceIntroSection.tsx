@@ -10,7 +10,7 @@ export default async function DataScienceBusinessIntelligenceIntroSection() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The pipeline, end to end")}</p>
-            <h2 className="text-[clamp(27px,8vw,32px)] mt-4 max-w-[560px] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("One partner for every data stage")}</h2>
+            <h2 className="mt-4 max-w-[560px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One partner for every data stage")}</h2>
 
             <p className="mt-5 text-[15px] leading-[1.8] text-[#52525B] md:text-[16px] text-pretty">{t("We understand the importance of managing and analyzing data for businesses. That’s why we offer a one-stop-shop solution that covers every aspect of the data service pipeline. From data creation to storage, use, and archiving, we’ve got you covered! Our team of certified experts takes great pride in providing modern and cost-effective solutions to help our customers extract maximum value from their data.")}</p>
 

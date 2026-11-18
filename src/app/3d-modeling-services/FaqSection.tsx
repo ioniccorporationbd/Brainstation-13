@@ -41,7 +41,7 @@ const faqs: FaqItem[] = [
 export default async function FaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="FAQ"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about 3D Modeling and Rendering Services from Magnetic Solution Limited.")}

@@ -325,7 +325,7 @@ export const gen_2: Dict = {
   "Cloud migration": "ক্লাউড মাইগ্রেশন",
   "Cloud migration, infrastructure-as-code, observability and cost optimisation that make systems faster, safer and cheaper to run.": "ক্লাউড মাইগ্রেশন, ইনফ্রাস্ট্রাকচার-অ্যাজ-কোড, অবজারভেবিলিটি ও কস্ট অপ্টিমাইজেশন—যা সিস্টেম-কে দ্রুততর, নিরাপদ ও সাশ্রয়ীভাবে চালায়।",
   "Cloud migrations": "ক্লাউড মাইগ্রেশন",
-  "Cloud built for reliability & speed": "নির্ভরযোগ্যতা ও গতির জন্য তৈরি ক্লাউড",
+  "Cloud built for reliability & speed": "নির্ভরযোগ্য ও দ্রুত ক্লাউড",
   "Cloud your team can operate": "যে ক্লাউড আপনার টিম চালাতে পারে",
   "Cloud, hosting and managed-service providers are selected per project based on your compliance, cost and region requirements.": "আপনার কমপ্লায়েন্স, কস্ট ও রিজিওন চাহিদার ভিত্তিতে প্রতিটি প্রজেক্ট অনুযায়ী ক্লাউড, হোস্টিং ও ম্যানেজড-সার্ভিস প্রোভাইডার নির্বাচন করা হয়।",
   "Cloud-Native Modernization": "ক্লাউড-নেটিভ মডার্নাইজেশন",

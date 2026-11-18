@@ -36,7 +36,7 @@ const steps: StepItem[] = [
   {
     step: "Step 3",
     eyebrow: "Delivery & Governance",
-    title: "Delivery & Governance",
+    title: "Delivery & Govern\u00ADance",
     description:
       "Your dedicated team works in sprints with Agile or ITIL processes, backed by weekly reports and SLA dashboards.",
     icon: ClipboardCheck,
@@ -52,7 +52,7 @@ const steps: StepItem[] = [
   {
     step: "Step 5",
     eyebrow: "Continuous Evolution",
-    title: "Continuous Evolution",
+    title: "Continu\u00ADous Evolution",
     description:
       "Post-launch, we support performance monitoring, incident resolution, enhancements, and roadmap updates.",
     icon: TimerReset,
@@ -68,7 +68,7 @@ export default async function ManagedHowItWorksSection() {
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Managed Service Process")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("How It Works")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How It Works")}</h2>
 
           <p className="mx-auto mt-5 max-w-[600px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, ownership, or delivery quality.")}</p>
 
@@ -98,7 +98,7 @@ export default async function ManagedHowItWorksSection() {
                   </span>
                 </div>
 
-                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px] [overflow-wrap:anywhere]">
                   {t(item.title)}
                 </h3>
 

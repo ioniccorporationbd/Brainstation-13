@@ -28,7 +28,7 @@ export default async function ErpDevelopmentModulesSection() {
       <div className="brand-container">
         <div className="max-w-[700px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Coverage")}</p>
-          <h2 className="text-[clamp(27px,8vw,32px)] mt-4 font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("ERP modules")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("ERP modules")}</h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Start with the modules you need today and extend to the rest without re-platforming.")}</p>
         </div>
 
@@ -41,7 +41,7 @@ export default async function ErpDevelopmentModulesSection() {
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={19} />
               </span>
-              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-4 font-semibold text-black text-balance">
+              <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(item.title)}
               </h3>
               <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">

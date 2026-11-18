@@ -34,7 +34,7 @@ export default async function BlockchainExcellenceSection() {
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI × Blockchain")}</p>
 
-            <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[40px] xl:text-[50px] text-balance">{t("Blockchain Excellence with AI")}</h2>
+            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Blockchain Excellence with AI")}</h2>
 
             <p className="mt-5 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We combine artificial intelligence with blockchain engineering to build systems that are faster to develop, safer to deploy, and smarter in operation.")}</p>
 
@@ -66,7 +66,7 @@ export default async function BlockchainExcellenceSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-2.5 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-2.5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
                 </h3>
 

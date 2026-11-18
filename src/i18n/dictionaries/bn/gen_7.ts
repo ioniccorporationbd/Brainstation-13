@@ -23,7 +23,7 @@ export const gen_7: Dict = {
   "Outcomes described in terms of what changed, not projected percentages.": "আউটকাম-গুলো কী পরিবর্তন হয়েছে তার ভিত্তিতে বর্ণিত, অনুমিত পারসেন্টেজ নয়।",
   "Outcomes we review with every client — described, not scored.": "আমরা প্রতিটি ক্লায়েন্ট-এর সাথে যে আউটকাম পর্যালোচনা করি — বর্ণিত, স্কোর করা নয়।",
   "Outcomes, not vanity metrics": "আউটকাম, ভ্যানিটি মেট্রিক নয়",
-  "Outgrowing your current ERP?": "আপনার বর্তমান ইআরপি কি যথেষ্ট নয়?",
+  "Outgrowing your current ERP?": "ইআরপি কি যথেষ্ট নয়?",
   "Output": "আউটপুট",
   "Outputs are generated for each channel from the approved source.": "অনুমোদিত সোর্স থেকে প্রতিটি চ্যানেল-এর জন্য আউটপুট তৈরি হয়।",
   "Overlapping hours": "ওভারল্যাপিং সময়",

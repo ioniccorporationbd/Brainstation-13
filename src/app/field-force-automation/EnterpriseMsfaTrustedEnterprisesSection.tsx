@@ -95,7 +95,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
         <div className="max-w-[760px]">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Proven in Production")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#000000] md:text-[46px] lg:text-[50px] text-balance">{t("Trusted By Leading Enterprises")}</h2>
+          <h2 className="text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Trusted By Leading Enterprises")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Enterprise-grade field execution trusted by large sales teams, pharmaceutical brands, retail networks, and multi-layer distribution organizations.")}</p>
         </div>
@@ -112,7 +112,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                 </span>
               </div>
 
-              <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-5 font-semibold tracking-[-0.01em] text-[#000000] text-balance">
+              <h3 className="mt-5 text-[#000000] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(item.company)}
               </h3>
 
@@ -136,11 +136,11 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
                   <Icon size={19} strokeWidth={1.9} />
                 </div>
 
-                <p className="mt-4 text-[24px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
+                <div className="mt-4 text-[24px] font-bold leading-none tracking-[-0.02em] text-[#c91f28] md:text-[28px]">
                   {t(item.value)}
-                </p>
+                </div>
 
-                <h3 className="text-[15px] md:text-[16px] leading-[1.35] mt-3 font-semibold text-[#000000] text-balance">
+                <h3 className="mt-3 text-[#000000] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
                 </h3>
 
@@ -157,7 +157,7 @@ export default async function EnterpriseMsfaTrustedEnterprisesSection() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise Ready")}</p>
 
-              <h3 className="text-[22px] md:text-[26px] leading-[1.22] mt-2.5 max-w-[560px] font-semibold tracking-[-0.02em] text-[#000000] text-balance">{t("Multi-Territory Ops")}</h3>
+              <h3 className="mt-2.5 max-w-[560px] text-[#000000] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Multi-Territory Ops")}</h3>
 
               <div className="mt-3 inline-flex items-center gap-2">
                 <BarChart3 size={16} strokeWidth={2} className="text-[#c91f28]" />

@@ -44,7 +44,7 @@ const steps: ApproachStep[] = [
   {
     step: "Step 4",
     eyebrow: "Modern Delivery",
-    title: "Implementation & Scaling",
+    title: "Implementa\u00ADtion & Scaling",
     description:
       "Execute agile sprints to refactor, containerize, and deploy modernized components with CI/CD pipelines and automated testing.",
     icon: Rocket,
@@ -68,7 +68,7 @@ export default async function DigitalTransformationApproachSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Digital Transformation Process")}</p>
 
-          <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-[#0a0a0a] md:text-[46px] lg:text-[50px] text-balance">{t("Our Transformation Approach")}</h2>
+          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our Transformation Approach")}</h2>
 
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision to deliver faster outcomes without compromising security, governance, or business continuity.")}</p>
 
@@ -102,7 +102,7 @@ export default async function DigitalTransformationApproachSection() {
                   {t(item.eyebrow)}
                 </p>
 
-                <h3 className="text-[18px] md:text-[20px] leading-[1.3] mt-3 font-semibold tracking-[-0.01em] text-[#0a0a0a] text-balance">
+                <h3 className="mt-3 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px] [overflow-wrap:anywhere]">
                   {t(item.title)}
                 </h3>
 

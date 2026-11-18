@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function DataScienceFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection
+    <GlobalFaqSection compact
       eyebrow="Help Center"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about Data Science & Business Intelligence from Magnetic Solution Limited.")}

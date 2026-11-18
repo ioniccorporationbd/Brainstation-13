@@ -11,9 +11,9 @@ export default async function StockPriceCaseStudyHero() {
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Study")}</p>
 
-          <h1 className="text-[clamp(30px,8.9vw,38px)] font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] md:text-[52px] lg:text-[44px] xl:text-[56px] text-balance">{t("Stock Price Prediction With AI")}</h1>
+          <h1 className="font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Stock Price Prediction With AI")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[19px] text-pretty">{t("An AI and machine-learning proof of concept that predicts the most profitable time to buy or sell a stock.")}</p>
+          <p className="mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("An AI and machine-learning proof of concept that predicts the most profitable time to buy or sell a stock.")}</p>
 
           <dl className="mt-7 grid max-w-[540px] grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-[#ececec] bg-white p-4">
