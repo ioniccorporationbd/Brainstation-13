@@ -25,7 +25,7 @@ export default async function NonProfitCaseStudiesSection() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Delivered for mission-led teams")}</h2>
+            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Delivered for mission-led teams")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("A closer look at how digital systems changed the way a distribution-led organisation runs its people operations.")}</p>
           </div>
 
@@ -55,7 +55,7 @@ export default async function NonProfitCaseStudiesSection() {
               </p>
             </div>
 
-            <h3 className="mt-4 text-[22px] font-semibold leading-[1.22] text-black md:text-[26px] text-balance">
+            <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
               {t(caseStudy.title)}
             </h3>
 

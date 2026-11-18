@@ -20,7 +20,7 @@ export default async function PharmaCustomerSuccessSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Customer success")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Our customer success stories")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our customer success stories")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -35,7 +35,7 @@ export default async function PharmaCustomerSuccessSection() {
           <div>
             <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Healthcare professional")}</p>
 
-            <h3 className="mt-3 text-[22px] font-semibold leading-[1.22] tracking-[-0.02em] text-black md:text-[26px] text-balance">{t("Diabetic retinopathy")}</h3>
+            <h3 className="mt-3 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Diabetic retinopathy")}</h3>
 
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our app aims to identify this disease by scanning human retinopathy levels using just a smartphone. This can be a convenient solution for patients and doctors. With quick and accurate retinopathy level measurements, doctors can understand their patients’ conditions and consult them according to their stage of the disease.")}</p>
 

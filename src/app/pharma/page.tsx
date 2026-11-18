@@ -74,6 +74,7 @@ export default async function PharmaPage() {
       <PharmaSolutionsGridSection />
       <PharmaCustomerSuccessSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Frequently asked questions")}
         subtitle={t("Common questions about our pharma and healthcare engagements.")}

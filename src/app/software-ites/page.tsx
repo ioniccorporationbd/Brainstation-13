@@ -54,6 +54,7 @@ export default async function SoftwareItesPage() {
       <SoftwareItesServicesSection />
       <SoftwareItesCaseStudiesSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Software engagement FAQs")}
         subtitle={t("What ICT and software businesses usually ask before we start.")}

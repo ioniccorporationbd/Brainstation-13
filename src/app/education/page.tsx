@@ -56,6 +56,7 @@ export default async function EducationPage() {
       <EducationServicesSection />
       <EducationBenefitsSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Education engagement FAQs")}
         subtitle={t("What institutions and EdTech teams usually ask before we start.")}

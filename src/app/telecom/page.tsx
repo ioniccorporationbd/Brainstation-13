@@ -54,6 +54,7 @@ export default async function TelecomPage() {
       <TelecomServicesSection />
       <TelecomCaseStudiesSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Telecom engagement FAQs")}
         subtitle={t("What operators usually ask before we start building.")}

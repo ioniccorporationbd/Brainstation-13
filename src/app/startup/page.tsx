@@ -54,6 +54,7 @@ export default async function StartupPage() {
       <StartupServicesSection />
       <StartupCaseStudiesSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Questions we hear before we start")}
         subtitle={t("What teams usually ask about scope, delivery and working together.")}

@@ -62,6 +62,7 @@ export default async function FintechPage() {
       <FintechSecurityReliabilitySection />
       <FintechStrategiesSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Fintech delivery questions")}
         subtitle={t("The things clients ask before we start building.")}

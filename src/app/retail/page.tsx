@@ -54,6 +54,7 @@ export default async function RetailPage() {
       <RetailServicesSection />
       <RetailCaseStudiesSection />
       <GlobalFaqSection
+        compact
         eyebrow="FAQ"
         title={t("Retail engagement questions")}
         subtitle={t("What retail teams usually ask before we start building.")}

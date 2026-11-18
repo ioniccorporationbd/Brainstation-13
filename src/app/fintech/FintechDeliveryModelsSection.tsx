@@ -41,7 +41,7 @@ export default async function FintechDeliveryModelsSection() {
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Flexible delivery models")}</p>
-          <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("From go-to-market to fully customized")}</h2>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("From go-to-market to fully customized")}</h2>
           <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Choose a ready-to-launch fintech platform or build a fully tailored solution with enterprise-grade architecture, ownership and scalability.")}</p>
         </div>
 
@@ -59,7 +59,7 @@ export default async function FintechDeliveryModelsSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t(card.title)}</h3>
+              <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t(card.title)}</h3>
               <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(card.description)}</p>
             </article>
           ))}

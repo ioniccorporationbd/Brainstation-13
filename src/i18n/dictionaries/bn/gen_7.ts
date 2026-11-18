@@ -429,5 +429,8 @@ export const gen_7: Dict = {
   "Reporting & statements": "রিপোর্টিং ও স্টেটমেন্ট",
   "Reporting & support": "রিপোর্টিং ও সাপোর্ট",
   "Pro Carrier on IT Outsourcing": "প্রো ক্যারিয়ারের আইটি আউটসোর্সিং",
-  "Real Estate & Property": "রিয়েল এস্টেট ও প্রপার্টি"
+  "Real Estate & Property": "রিয়েল এস্টেট ও প্রপার্টি",
+  "Adobe Experience Manager (AEM) | Magnetic Solution Limited": "অ্যাডোবি এক্সপেরিয়েন্স ম্যানেজার (এইএম) | ম্যাগনেটিক সলিউশন লিমিটেড",
+  "Trusted by Startups to Enterprises": "স্টার্টআপ থেকে এন্টারপ্রাইজ পর্যন্ত বিশ্বস্ত",
+  "Engagement Models": "এনগেজমেন্ট মডেল"
 };

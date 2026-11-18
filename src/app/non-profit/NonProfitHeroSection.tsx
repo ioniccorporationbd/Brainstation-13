@@ -16,7 +16,7 @@ export default async function NonProfitHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industry · Non-Profit")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Digital tools for social impact")}</h1>
+          <h1 className="mt-6 max-w-[620px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Digital tools for social impact")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We help non-profit organizations to build and develop digital solutions to aid them in their humanitarian causes. We aim to help non-profit organizations be flexible and autonomous in their operations and humanitarian work.")}</p>
 

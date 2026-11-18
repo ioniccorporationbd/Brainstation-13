@@ -67,7 +67,7 @@ export default async function AutomotiveCaseStudiesSection() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Automotive work in production")}</h2>
+            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Automotive work in production")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Selected automotive engagements across mobility apps, service platforms and fleet operations.")}</p>
           </div>
 
@@ -104,7 +104,7 @@ export default async function AutomotiveCaseStudiesSection() {
                   </p>
                 </div>
 
-                <h3 className="mt-4 text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">
+                <h3 className="mt-4 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
                 </h3>
 

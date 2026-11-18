@@ -16,7 +16,7 @@ export default async function PharmaHeroSection() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industry · Pharma")}</span>
 
-          <h1 className="mt-6 max-w-[620px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Regulated Pharma Tech")}</h1>
+          <h1 className="mt-6 max-w-[620px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Regulated Pharma Tech")}</h1>
 
           <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We build healthcare and pharmaceutical software that meets the demands of patients, healthcare professionals and the teams that serve them.")}</p>
 
@@ -55,8 +55,8 @@ export default async function PharmaHeroSection() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Overview")}</p>
-            <h2 className="mt-3 text-[clamp(22px,5.6vw,27px)] font-semibold leading-[1.15] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Pharma solutions at your comfort level")}</h2>
-            <h3 className="mt-5 text-[15px] font-bold uppercase leading-[1.4] tracking-normal md:text-[16px] text-black text-balance">{t("Big data power for your field force")}</h3>
+            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Pharma solutions at your comfort level")}</h2>
+            <h3 className="mt-5 uppercase text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Big data power for your field force")}</h3>
           </div>
 
           <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("In addition to individual solutions for specialized requirements, we try to transfer our know-how into products that we offer as Software as a Service. In this way, many customers benefit from proven processes. Based on the best practices for customer data platforms we have developed products that address the critical challenges pharma companies face today.")}</p>
