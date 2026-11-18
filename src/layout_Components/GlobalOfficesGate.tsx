@@ -99,6 +99,8 @@ export default function GlobalOfficesGate() {
       <GlobalOfficesSection compact={
         pathname === "/" ||
         pathname === "/global-offices" ||
+        pathname === "/recognitions" ||
+        pathname === "/solution-partner/swapno" ||
         SERVICES_ROUTES.has(pathname ?? "") ||
         INDUSTRY_ROUTES.has(pathname ?? "") ||
         PRODUCT_ROUTES.has(pathname ?? "") ||

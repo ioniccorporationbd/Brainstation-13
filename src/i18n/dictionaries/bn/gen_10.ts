@@ -233,6 +233,8 @@ export const gen_10: Dict = {
   "Where we are strongest": "আমরা যেখানে সবচেয়ে শক্তিশালী",
   "Where we deliver from": "আমরা কোথা থেকে ডেলিভার করি",
   "Where we plug in": "আমরা কোথায় যুক্ত হই",
+  "Solution partnership · Swapno": "সল্যুশন পার্টনারশিপ · স্বপ্ন",
+  "See how our engineering combines with the Swapno platform on joint solution work.": "যৌথ সল্যুশন কাজে আমাদের ইঞ্জিনিয়ারিং কীভাবে স্বপ্ন প্ল্যাটফর্মের সাথে একসাথে কাজ করে, দেখে নিন।",
   "Where we work": "আমরা কোথায় কাজ করি",
   "Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.": "আপনার মনে কোনো প্রজেক্ট থাকুক, অন্বেষণ করার মতো পার্টনারশিপ থাকুক বা জিজ্ঞাসার প্রশ্ন থাকুক — আপনার কী প্রয়োজন আমাদের বলুন, আমরা দ্রুত আপনার সাথে যোগাযোগ করব।",
   "Whether you're launching a new brand or replatforming an established catalogue, we own the full stack — storefront, checkout, fulfilment and the analytics layer on top.": "আপনি নতুন ব্র্যান্ড লঞ্চ করুক বা প্রতিষ্ঠিত ক্যাটালগ রিপ্ল্যাটফর্ম করুক, আমরা সম্পূর্ণ স্ট্যাক সামলাই — স্টোরফ্রন্ট, চেকআউট, ফুলফিলমেন্ট এবং তার উপর অ্যানালিটিক্স লেয়ার।",

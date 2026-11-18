@@ -16,17 +16,24 @@ import ResourcesMenu from "./ResourcesMenu";
 
 type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
-type NavItem = {
+type NavItemBase = {
   label: string;
   key: Exclude<ActiveMenu, null> | "global-offices";
-  href: string;
-  hasMegaMenu: boolean;
 };
+
+/**
+ * Mega-menu items open a dropdown instead of navigating; a missing `href`
+ * means there is no landing page for that section (e.g. Products has no
+ * /products route yet), so the label must never be rendered as a link.
+ */
+type NavItem =
+  | (NavItemBase & { hasMegaMenu: true; href?: string })
+  | (NavItemBase & { hasMegaMenu: false; href: string });
 
 const navItems: NavItem[] = [
   { label: "Services", key: "services", href: "/services", hasMegaMenu: true },
   { label: "Industries", key: "industries", href: "/industries", hasMegaMenu: true },
-  { label: "Products", key: "products", href: "/products", hasMegaMenu: true },
+  { label: "Products", key: "products", hasMegaMenu: true },
   { label: "Resources", key: "resources", href: "/resources", hasMegaMenu: true },
   { label: "Global Offices", key: "global-offices", href: "/global-offices", hasMegaMenu: false },
 ];
@@ -158,8 +165,9 @@ export default function Navbar() {
   };
 
   const isRouteActive = (item: NavItem) =>
-    pathname === item.href ||
-    (item.href !== "/" && !!pathname && pathname.startsWith(`${item.href}/`));
+    !!item.href &&
+    (pathname === item.href ||
+      (item.href !== "/" && !!pathname && pathname.startsWith(`${item.href}/`)));
 
   /* The navbar logo must always take the visitor to the home page. From any
      other route the Link below navigates to "/"; on the home page itself the

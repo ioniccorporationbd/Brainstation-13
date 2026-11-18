@@ -81,7 +81,7 @@ export default async function RecognitionsPage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Company · Recognitions")}</span>
 
-            <h1 className="mt-6 max-w-[640px] text-[clamp(30px,8.9vw,38px)] font-semibold leading-[1.08] tracking-[-0.03em] text-black md:text-[52px] lg:text-[56px] text-balance">{t("Provable, Not Printed Badges")}</h1>
+            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Provable, Not Printed Badges")}</h1>
 
             <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We measure recognition by delivery discipline, security practice and clients who come back — and we only show what can be evidenced. Award logos and certification badges from the previous brand are not carried over.")}</p>
 
@@ -112,7 +112,7 @@ export default async function RecognitionsPage() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What can be checked")}</p>
-          <h2 className="mt-3 max-w-[720px] text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Four things we can prove on request")}</h2>
+          <h2 className="mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four things we can prove on request")}</h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {proofPoints.map((item) => (
@@ -123,7 +123,7 @@ export default async function RecognitionsPage() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
                 </span>
-                <h3 className="mt-5 text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
                 </h3>
                 <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
@@ -141,7 +141,7 @@ export default async function RecognitionsPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
               <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Due diligence")}</p>
-              <h2 className="mt-3 text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.02em] text-black md:text-[46px] lg:text-[50px] text-balance">{t("Ask for evidence")}</h2>
+              <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Ask for evidence")}</h2>
               <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Any certification or award becomes meaningless if nobody can trace it to a source. These are the three requests we answer most often during procurement.")}</p>
             </div>
 
@@ -155,7 +155,7 @@ export default async function RecognitionsPage() {
                     <item.icon size={20} strokeWidth={1.9} />
                   </span>
                   <div>
-                    <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-black text-balance">
+                    <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(item.title)}
                     </h3>
                     <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">
@@ -176,7 +176,7 @@ export default async function RecognitionsPage() {
             <BadgeCheck size={21} strokeWidth={1.9} />
           </span>
           <div>
-            <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.3] text-black text-balance">{t("Verified information only")}</h3>
+            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Verified information only")}</h3>
             <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The award wall, industry rankings and certification logos previously displayed on this page belonged to the site's previous brand and could not be verified, so they have been removed rather than re-published. If a certification or award is relevant to your evaluation, ask for it and you will receive the original evidence.")}</p>
             <div className="mt-4 flex items-start gap-3 rounded-lg bg-[#fafafa] p-4">
               <Quote size={16} className="mt-0.5 shrink-0 text-[#c91f28]" />
@@ -191,7 +191,7 @@ export default async function RecognitionsPage() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-[clamp(27px,8vw,32px)] font-semibold leading-[1.18] tracking-[-0.02em] text-black md:text-[34px] text-balance">{t("Running a vendor assessment?")}</h2>
+              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Running a vendor assessment?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the questionnaire or the due-diligence list. We answer directly with documents rather than pointing at a marketing page.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">

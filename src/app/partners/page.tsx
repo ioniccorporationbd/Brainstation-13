@@ -171,6 +171,29 @@ export default async function PartnersPage() {
                 </span>
               </div>
             ))}
+
+            {/* Solution partnership — Swapno (inbound link to the partnership page) */}
+            <Link
+              href="/solution-partner/swapno"
+              className="group flex items-center gap-4 rounded-xl border border-[#ececec] bg-white px-5 py-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:col-span-2"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
+                <Handshake size={19} strokeWidth={1.9} />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-[14.5px] font-semibold text-black">
+                  {t("Solution partnership · Swapno")}
+                </span>
+                <span className="mt-0.5 block text-[13px] leading-[1.5] text-[#52525B]">
+                  {t("See how our engineering combines with the Swapno platform on joint solution work.")}
+                </span>
+              </span>
+              <ArrowRight
+                size={18}
+                aria-hidden="true"
+                className="ml-auto shrink-0 text-[#c91f28] transition-transform duration-200 group-hover:translate-x-0.5"
+              />
+            </Link>
           </div>
         </div>
       </section>
