@@ -194,8 +194,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`sticky top-0 z-50 w-full font-sans transition-all duration-300 ${
           isScrolled
-            ? "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] backdrop-blur-xl"
-            : "border-b border-white/10 bg-[linear-gradient(to_top_right,#C91F28,#8B1119)]"
+            ? "bg-[linear-gradient(to_top_right,#C91F28,#8B1119)] backdrop-blur-xl"
+            : "bg-[linear-gradient(to_top_right,#C91F28,#8B1119)]"
         }`}
       >
         <nav
