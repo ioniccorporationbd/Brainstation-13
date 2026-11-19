@@ -24,7 +24,7 @@ export const misc: Dict = {
   "Address": "ঠিকানা",
   "Accounts": "হিসাব বিভাগ",
   "Customer Care / WhatsApp": "কাস্টমার কেয়ার / হোয়াটসঅ্যাপ",
-  "Email": "ই-মেইল",
+  "Email": "ইমেইল",
   "Website": "ওয়েবসাইট",
   "Office Hours": "অফিসের সময়",
   "Saturday–Friday, 9 AM – 7 PM": "শনিবার–শুক্রবার, সকাল ৯টা – সন্ধ্যা ৭টা",
