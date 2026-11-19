@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function DataMigrationFAQSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection compact
+    <GlobalFaqSection compact softCards
       eyebrow="FAQ"
       title={t("Frequently Asked Questions")}
       subtitle={t("Get answers to common questions about Data Migration Services from Magnetic Solution Limited.")}

@@ -26,6 +26,8 @@ export type GlobalFaqSectionProps = {
   ctaHref?: string;
   /** Homepage-standardized heading scale (services pages). */
   compact?: boolean;
+  /** Softer card typography: FAQ question/answer at 16-17px, weight 500. */
+  softCards?: boolean;
   /** Extra classes for the outer section (e.g. alternate padding). */
   className?: string;
 };
@@ -47,6 +49,7 @@ export default function GlobalFaqSection({
   ctaHref,
   className = "",
   compact = false,
+  softCards = false,
 }: GlobalFaqSectionProps) {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(
@@ -100,7 +103,7 @@ export default function GlobalFaqSection({
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
-                  <span className="text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]">
+                  <span className={softCards ? "text-[16px] font-medium leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]" : "text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]"}>
                     {t(faq.question)}
                   </span>
 
@@ -121,7 +124,7 @@ export default function GlobalFaqSection({
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]">
+                    <p className={softCards ? "px-6 pb-5 text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]" : "px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#565656]"}>
                       {t(faq.answer)}
                     </p>
                   </div>

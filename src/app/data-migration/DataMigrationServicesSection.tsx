@@ -58,14 +58,14 @@ export default async function DataMigrationServicesSection() {
                     <Icon size={22} strokeWidth={1.8} />
                   </div>
 
-                  <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
+                  <span className="text-[13px] font-medium uppercase tracking-normal text-[#c91f28]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+                <p className="mt-5 text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
                   {t(service.title)}
-                </h3>
+                </p>
               </article>
             );
           })}

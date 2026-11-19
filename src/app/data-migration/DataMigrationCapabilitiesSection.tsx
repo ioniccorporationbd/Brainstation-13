@@ -108,11 +108,11 @@ export default async function DataMigrationCapabilitiesSection() {
                 </div>
 
                 <div>
-                  <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+                  <p className="text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
                     {t(reason.title)}
-                  </h3>
+                  </p>
 
-                  <p className="mt-2 text-[14.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
+                  <p className="mt-2 text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty md:text-[17px]">
                     {t(reason.description)}
                   </p>
                 </div>
