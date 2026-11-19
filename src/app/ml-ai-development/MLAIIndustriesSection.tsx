@@ -54,9 +54,9 @@ export default async function MLAIIndustriesSection() {
                   <Icon size={24} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+                <p className="text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
                   {t(industry.title)}
-                </h3>
+                </p>
               </article>
             );
           })}
