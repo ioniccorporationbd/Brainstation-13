@@ -50,9 +50,9 @@ export default async function BankingFinancialServicesSection() {
                 <service.icon size={21} />
               </span>
 
-              <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+              <p className="mt-5 text-black text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
                 {t(service.title)}
-              </h3>
+              </p>
             </article>
           ))}
         </div>
