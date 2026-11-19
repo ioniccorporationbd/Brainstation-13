@@ -10,7 +10,7 @@ export const home: Dict = {
   "From fintech to eCommerce, we deliver end-to-end solutions tailored to your business—fast, flexible, and reliable.": "ফিনটেক থেকে ই-কমার্স—আপনার বিজনেস অনুযায়ী এন্ড-টু-এন্ড সলিউশন, দ্রুত, নমনীয় ও নির্ভরযোগ্য।",
   "Book A Demo": "ডেমো বুক করুন",
   "Hire Your Team Now": "এখনই টিম হায়ার করুন",
-  "Global Offices": "গ্লোবাল অফিস",
+  "Our Offices": "আমাদের অফিস",
   "Certified Teams": "সার্টিফাইড টিম",
   "Years of Experience": "বছরের অভিজ্ঞতা",
   "Employee Retention": "এমপ্লয়ি রিটেনশন",

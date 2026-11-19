@@ -18,7 +18,7 @@ type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
 type NavItemBase = {
   label: string;
-  key: Exclude<ActiveMenu, null> | "global-offices";
+  key: Exclude<ActiveMenu, null> | "our-offices";
 };
 
 /**
@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
   { label: "Industries", key: "industries", href: "/industries", hasMegaMenu: true },
   { label: "Products", key: "products", hasMegaMenu: true },
   { label: "Resources", key: "resources", href: "/resources", hasMegaMenu: true },
-  { label: "Global Offices", key: "global-offices", href: "/global-offices", hasMegaMenu: false },
+  { label: "Our Offices", key: "our-offices", href: "/our-offices", hasMegaMenu: false },
 ];
 
 export default function Navbar() {
@@ -160,7 +160,7 @@ export default function Navbar() {
   };
 
   const toggleMenu = (key: NavItem["key"]) => {
-    if (key === "global-offices") return;
+    if (key === "our-offices") return;
     setActiveMenu((current) => (current === key ? null : key));
   };
 

@@ -2,7 +2,7 @@ import type { Dict } from "./types";
 
 /** Navbar labels, drawer controls and the language switcher. */
 export const nav: Dict = {
-  "Global Offices": "গ্লোবাল অফিস",
+  "Our Offices": "আমাদের অফিস",
   "Schedule a Call": "কল শিডিউল করুন",
   "Magnetic Solution Limited — Home": "ম্যাগনেটিক সলিউশন লিমিটেড — হোম",
   "Toggle menu": "মেনু খুলুন বা বন্ধ করুন",

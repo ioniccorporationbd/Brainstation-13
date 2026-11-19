@@ -34,7 +34,7 @@ const slides: SlideItem[] = [
     buttonText: "Book A Demo",
     buttonHref: "/schedule-a-call",
     statOneNumber: "6",
-    statOneText: "Global Offices",
+    statOneText: "Our Offices",
     statTwoNumber: "ISO 27001",
     statTwoText: "Certified Teams",
   },

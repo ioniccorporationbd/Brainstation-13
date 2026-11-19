@@ -114,7 +114,7 @@ export default function ErrorPage({
   const digits = String(code).split("");
   const withPopular = showPopular ?? code === 404;
 
-  // Set the flag during HTML parsing so the footer / Global Offices never paint.
+  // Set the flag during HTML parsing so the footer / Our Offices never paint.
   const bootstrap = `document.documentElement.dataset.errorPage="1";`;
 
   return (

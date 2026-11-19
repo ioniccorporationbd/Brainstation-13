@@ -44,13 +44,13 @@ const magneticOffices: MagneticOffice[] = [
   },
 ];
 
-export default function GlobalOfficesSection({ compact = false }: { compact?: boolean }) {
+export default function OurOfficesSection({ compact = false }: { compact?: boolean }) {
   const { t } = useTranslation();
   return (
     <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
         <div className="max-w-[620px]">
-          <h2 className={compact ? "text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance" : "text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance"}>{t("Global Offices")}</h2>
+          <h2 className={compact ? "text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance" : "text-[clamp(27px,8vw,32px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[38px] md:text-[44px] text-balance"}>{t("Our Offices")}</h2>
           <p className="mt-4 text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Headquartered in Bangladesh while working with clients worldwide.")}</p>
         </div>
 

@@ -79,7 +79,7 @@ const ROUTES: string[] = [
   "/resources",
   "/sustainability",
   // Non-navbar / other
-  "/global-offices",
+  "/our-offices",
   "/recognitions",
   "/schedule-a-call",
   "/solution-partner/swapno",

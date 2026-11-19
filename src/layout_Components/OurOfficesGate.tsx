@@ -1,10 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import GlobalOfficesSection from "./GlobalOfficesSection";
+import OurOfficesSection from "./OurOfficesSection";
 
 /**
- * Renders the shared Global Offices section on every route except the ones
+ * Renders the shared Our Offices section on every route except the ones
  * listed in HIDDEN_ROUTES. The shared component itself is untouched.
  */
 const HIDDEN_ROUTES = ["/qa-testing-and-automation"];
@@ -87,7 +87,7 @@ const SERVICES_ROUTES = new Set([
   "/web-mobile-app-development",
 ]);
 
-export default function GlobalOfficesGate() {
+export default function OurOfficesGate() {
   const pathname = usePathname();
 
   if (HIDDEN_ROUTES.includes(pathname ?? "")) {
@@ -95,10 +95,10 @@ export default function GlobalOfficesGate() {
   }
 
   return (
-    <div data-global-offices>
-      <GlobalOfficesSection compact={
+    <div data-our-offices>
+      <OurOfficesSection compact={
         pathname === "/" ||
-        pathname === "/global-offices" ||
+        pathname === "/our-offices" ||
         pathname === "/recognitions" ||
         pathname.startsWith("/case-study") ||
         pathname === "/schedule-a-call" ||

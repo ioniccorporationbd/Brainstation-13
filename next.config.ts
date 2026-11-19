@@ -17,6 +17,17 @@ const nextConfig: NextConfig = {
     // app/unauthorized.tsx (401) and app/forbidden.tsx (403).
     authInterrupts: true,
   },
+  async redirects() {
+    return [
+      {
+        // Preserve existing links and SEO after the Global Offices -> Our
+        // Offices rename (308 permanent redirect, query strings kept).
+        source: "/global-offices",
+        destination: "/our-offices",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

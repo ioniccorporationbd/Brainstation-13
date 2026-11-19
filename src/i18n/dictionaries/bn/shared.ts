@@ -1,6 +1,6 @@
 import type { Dict } from "./types";
 
-/** Footer, Global Offices and the unified error pages. */
+/** Footer, Our Offices and the unified error pages. */
 export const shared: Dict = {
   "Real Estate": "রিয়েল এস্টেট",
   "Software/ITES": "সফটওয়্যার/আইটিইএস",

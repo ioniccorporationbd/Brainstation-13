@@ -6,7 +6,7 @@ export const misc: Dict = {
   "From CAD data to cinematic visualization — comprehensive 3D rendering capabilities for engineering excellence.": "ক্যাড ডেটা থেকে সিনেমাটিক ভিজ্যুয়ালাইজেশন — ইঞ্জিনিয়ারিং এক্সেলেন্সের জন্য সম্পূর্ণ ৩ডি রেন্ডারিং ক্যাপাবিলিটি।",
   "Biotech": "বায়োটেক",
   "Contact": "যোগাযোগ",
-  "Global Offices": "গ্লোবাল অফিস",
+  "Our Offices": "আমাদের অফিস",
   "Testimonials": "টেস্টিমোনিয়াল",
   "Worldwide": "বিশ্বব্যাপী",
   "Years of Experience": "বছরের অভিজ্ঞতা",

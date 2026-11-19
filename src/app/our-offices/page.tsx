@@ -15,14 +15,14 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/global-offices",
-    title: t("Global Offices | Magnetic Solution Limited"),
+    route: "/our-offices",
+    title: t("Our Offices | Magnetic Solution Limited"),
     description: t("Magnetic Solution Limited is headquartered in Bangladesh and delivers software and technology solutions to clients worldwide through remote-first, distributed teams working across time zones."),
   });
 }
 
 /* ------------------------------------------------------------------ *
- * Verification note — same rule as the shared Global Offices section:
+ * Verification note — same rule as the shared Our Offices section:
  * Magnetic Solution Limited is Bangladesh-based. No public street
  * address, branch office, phone number or office email could be
  * verified, so unverified locations and contact details are omitted
@@ -70,14 +70,14 @@ const facts = [
   { value: "Single", label: "Accountable team" },
 ];
 
-export default async function GlobalOfficesPage() {
+export default async function OurOfficesPage() {
   const { t } = await getTranslator();
   return (
     <main>
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Global offices")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our offices")}</span>
             <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("One Global Team")}</h1>
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/layout_Components/navbar/Navbar";
 import Footer from "@/layout_Components/footer";
-import GlobalOfficesGate from "@/layout_Components/GlobalOfficesGate";
+import OurOfficesGate from "@/layout_Components/OurOfficesGate";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { getLocale } from "@/i18n/server";
 import { HTML_LANG } from "@/i18n/config";
@@ -84,7 +84,7 @@ export default async function RootLayout({
         <LanguageProvider initialLocale={locale}>
           <Navbar />
           {children}
-          <GlobalOfficesGate />
+          <OurOfficesGate />
           <Footer />
         </LanguageProvider>
       </body>
