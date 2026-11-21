@@ -54,4 +54,17 @@ export const misc: Dict = {
   "Products": "প্রোডাক্টসমূহ",
   "With a large portfolio of industry-leading web and mobile application services, we know how to translate product requirements into measurable business growth. We build cross-platform and responsive applications where interface quality and backend security matter equally — for large-scale organisations and early stage startups alike.": "ইন্ডাস্ট্রি-লিডিং ওয়েব ও মোবাইল অ্যাপ্লিকেশন সার্ভিস-এর বিশাল পোর্টফোলিও নিয়ে আমরা জানি কীভাবে প্রোডাক্ট রিকোয়ারমেন্টকে মাপযোগ্য বিজনেস গ্রোথ-এ রূপান্তর করতে হয়। আমরা ক্রস-প্ল্যাটফর্ম ও রেসপন্সিভ অ্যাপ্লিকেশন তৈরি করি, যেখানে ইন্টারফেস কোয়ালিটি ও ব্যাকএন্ড সিকিউরিটি সমান গুরুত্বপূর্ণ — বড় স্কেলের প্রতিষ্ঠান থেকে শুরু করে আর্লি স্টেজ স্টার্টআপ সবার জন্য।",
   "Unauthorized": "অননুমোদিত",
+  // Contact form validation + phone selector
+  "Please enter your name.": "অনুগ্রহ করে আপনার নাম লিখুন।",
+  "Enter a valid email address.": "সঠিক ইমেইল ঠিকানা দিন।",
+  "Please add a little more detail (at least 10 characters).": "অনুগ্রহ করে একটু বেশি বিবরণ দিন (কমপক্ষে ১০ অক্ষর)।",
+  "Enter a valid Bangladeshi mobile number (e.g. 01712345678).": "সঠিক বাংলাদেশি মোবাইল নম্বর দিন (যেমন 01712345678)।",
+  "Enter a valid phone number.": "সঠিক ফোন নম্বর দিন।",
+  "Country code": "দেশের কোড",
+  "Phone number": "ফোন নম্বর",
+  "This field is required.": "এই ঘরটি আবশ্যক।",
+  "Too long.": "অতিরিক্ত দীর্ঘ।",
+  "Please check the highlighted fields.": "চিহ্নিত ঘরগুলো যাচাই করুন।",
+  "Your message could not be recorded. Please try again.": "আপনার বার্তা সংরক্ষণ করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
+  "Network error — your message was not sent. Please try again.": "নেটওয়ার্ক সমস্যা — আপনার বার্তা পাঠানো হয়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
 };

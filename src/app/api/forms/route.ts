@@ -21,6 +21,7 @@ const LIMITS: Record<string, number> = {
   email: 160,
   company: 160,
   phone: 40,
+  phoneCode: 8,
   role: 160,
   topic: 120,
   slot: 120,
@@ -30,6 +31,26 @@ const LIMITS: Record<string, number> = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+// Server-side mirror of the client phone rules: Bangladesh mobile numbers
+// must match 01[3-9] + 8 digits (leading 0 and +880 prefix optional);
+// other countries accept 6–14 digits.
+function validPhone(code: string, raw: string): boolean {
+  const trimmed = raw.trim();
+  if (!trimmed) return true; // phone is optional on every form
+  // Reject letters/symbols outright — only digits, spaces, hyphens and an
+  // optional leading + are allowed (mirrors the client-side input mask).
+  if (!/^\+?[\d\s-]+$/.test(trimmed)) return false;
+  const digits = trimmed.replace(/[^\d]/g, "");
+  if (!digits) return true;
+  if (code === "+880") {
+    let n = digits;
+    if (n.startsWith("880")) n = n.slice(3);
+    if (n.startsWith("0")) n = n.slice(1);
+    return /^1[3-9]\d{8}$/.test(n);
+  }
+  return /^\d{6,14}$/.test(digits);
+}
 
 function inboxDir() {
   // Submissions are appended as NDJSON in a git-ignored folder next to the app.
@@ -90,6 +111,15 @@ export async function POST(request: Request) {
   }
   if (values.email && !EMAIL_RE.test(values.email)) {
     fieldErrors.email = "Enter a valid email address.";
+  }
+  if (values.phone) {
+    const code = values.phoneCode || "+880";
+    if (!validPhone(code, values.phone)) {
+      fieldErrors.phone =
+        code === "+880"
+          ? "Enter a valid Bangladeshi mobile number (e.g. 01712345678)."
+          : "Enter a valid phone number.";
+    }
   }
 
   if (Object.keys(fieldErrors).length > 0) {

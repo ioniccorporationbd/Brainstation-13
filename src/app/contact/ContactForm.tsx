@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "@/i18n/LanguageProvider";
-import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
+import { AlertCircle, CheckCircle2, ChevronDown, Loader2, Send } from "lucide-react";
 
 type Values = {
   name: string;
@@ -14,6 +14,45 @@ type Values = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+/* Country dial codes for the custom phone selector — Bangladesh first (default). */
+const COUNTRIES = [
+  { code: "+880", iso: "BD", flag: "🇧🇩" },
+  { code: "+1", iso: "US", flag: "🇺🇸" },
+  { code: "+44", iso: "GB", flag: "🇬🇧" },
+  { code: "+91", iso: "IN", flag: "🇮🇳" },
+  { code: "+971", iso: "AE", flag: "🇦🇪" },
+  { code: "+966", iso: "SA", flag: "🇸🇦" },
+  { code: "+65", iso: "SG", flag: "🇸🇬" },
+  { code: "+60", iso: "MY", flag: "🇲🇾" },
+  { code: "+61", iso: "AU", flag: "🇦🇺" },
+] as const;
+
+const digitsOnly = (value: string) => value.replace(/[^\d]/g, "");
+
+/* Bangladesh mobile: 01[3-9] + 8 digits (also accept the +880 / no-zero forms). */
+function validPhone(code: string, raw: string): boolean {
+  const digits = digitsOnly(raw);
+  if (!digits) return true; // optional field — empty is fine
+  if (code === "+880") {
+    let n = digits;
+    if (n.startsWith("880")) n = n.slice(3);
+    if (n.startsWith("0")) n = n.slice(1);
+    return /^1[3-9]\d{8}$/.test(n);
+  }
+  return /^\d{6,14}$/.test(digits);
+}
+
+function phoneError(code: string, raw: string): string {
+  const digits = digitsOnly(raw);
+  if (!digits) return "";
+  if (code === "+880") {
+    return validPhone(code, raw)
+      ? ""
+      : "Enter a valid Bangladeshi mobile number (e.g. 01712345678).";
+  }
+  return validPhone(code, raw) ? "" : "Enter a valid phone number.";
+}
 
 const field =
   "h-[46px] w-full rounded-lg border border-[#ececec] bg-white px-4 text-[14.5px] text-black outline-none transition focus:border-[#c91f28] focus:ring-2 focus:ring-[#fdecec]";
@@ -36,6 +75,8 @@ export default function ContactForm() {
   );
   const [serverError, setServerError] = useState("");
   const [reference, setReference] = useState("");
+  const [phoneCode, setPhoneCode] = useState<string>("+880");
+  const [codeOpen, setCodeOpen] = useState(false);
 
   function update(key: keyof Values, value: string) {
     setValues((current) => ({ ...current, [key]: value }));
@@ -47,6 +88,8 @@ export default function ContactForm() {
     if (values.name.trim().length < 2) next.name = "Please enter your name.";
     if (!EMAIL_RE.test(values.email.trim()))
       next.email = "Enter a valid email address.";
+    const phoneIssue = phoneError(phoneCode, values.phone);
+    if (phoneIssue) next.phone = phoneIssue;
     if (values.message.trim().length < 10)
       next.message =
         "Please add a little more detail (at least 10 characters).";
@@ -65,7 +108,7 @@ export default function ContactForm() {
       const response = await fetch("/api/forms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form: "contact", ...values }),
+        body: JSON.stringify({ form: "contact", ...values, phoneCode }),
       });
       const data = (await response.json().catch(() => ({}))) as {
         ok?: boolean;
@@ -135,6 +178,7 @@ export default function ContactForm() {
           >{t("Full name *")}</label>
           <input
             id="ct-name"
+            type="text"
             className={`mt-2 ${t(field)}`}
             value={values.name}
             onChange={(event) => update("name", event.target.value)}
@@ -184,6 +228,7 @@ export default function ContactForm() {
           </label>
           <input
             id="ct-company"
+            type="text"
             className={`mt-2 ${t(field)}`}
             value={values.company}
             onChange={(event) => update("company", event.target.value)}
@@ -191,20 +236,6 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label
-            htmlFor="ct-phone"
-            className="text-[13px] font-semibold text-[#22252a]"
-          >{t("Phone")}<span className="font-normal text-[#52525B]">{t("(optional)")}</span>
-          </label>
-          <input
-            id="ct-phone"
-            className={`mt-2 ${t(field)}`}
-            value={values.phone}
-            onChange={(event) => update("phone", event.target.value)}
-            autoComplete="tel"
-          />
-        </div>
-        <div className="sm:col-span-2">
           <label
             htmlFor="ct-interest"
             className="text-[13px] font-semibold text-[#22252a]"
@@ -221,6 +252,116 @@ export default function ContactForm() {
               </option>
             ))}
           </select>
+        </div>
+        <div className="sm:col-span-2">
+          <label
+            htmlFor="ct-phone"
+            className="text-[13px] font-semibold text-[#22252a]"
+          >{t("Phone")}{" "}
+            <span className="font-normal text-[#52525B]">{t("(optional)")}</span>
+          </label>
+          <div
+            className={`mt-2 flex h-[46px] w-full items-stretch rounded-lg border bg-white transition ${
+              errors.phone
+                ? "border-[#c91f28]"
+                : "border-[#ececec] focus-within:border-[#c91f28] focus-within:ring-2 focus-within:ring-[#fdecec]"
+            }`}
+          >
+            {/* Custom country-code selector */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setCodeOpen((open) => !open)}
+                aria-haspopup="listbox"
+                aria-expanded={codeOpen}
+                aria-label={t("Country code")}
+                className="flex h-full items-center gap-1.5 rounded-l-lg border-r border-[#ececec] bg-[#fafafa] pl-3 pr-2.5 text-[14px] font-medium text-black transition-colors hover:bg-[#f3f3f3]"
+              >
+                <span aria-hidden className="text-[15px] leading-none">
+                  {COUNTRIES.find((c) => c.code === phoneCode)?.flag ?? "🇧🇩"}
+                </span>
+                <span>{phoneCode}</span>
+                <ChevronDown
+                  size={14}
+                  strokeWidth={2.2}
+                  className={`text-[#52525B] transition-transform duration-200 ${codeOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {codeOpen ? (
+                <>
+                  <button
+                    type="button"
+                    aria-hidden
+                    tabIndex={-1}
+                    onClick={() => setCodeOpen(false)}
+                    className="fixed inset-0 z-10 cursor-default"
+                  />
+                  <ul
+                    role="listbox"
+                    aria-label={t("Country code")}
+                    className="absolute left-0 top-[calc(100%+6px)] z-20 max-h-[236px] w-[132px] overflow-y-auto rounded-lg border border-[#ececec] bg-white py-1 shadow-[0_12px_30px_rgba(10,10,10,0.12)]"
+                  >
+                    {COUNTRIES.map((country) => (
+                      <li key={country.iso}>
+                        <button
+                          type="button"
+                          role="option"
+                          aria-selected={country.code === phoneCode}
+                          onClick={() => {
+                            setPhoneCode(country.code);
+                            setCodeOpen(false);
+                            setErrors((current) => ({
+                              ...current,
+                              phone: phoneError(country.code, values.phone),
+                            }));
+                          }}
+                          className={`flex w-full items-center gap-2 px-3 py-2 text-left text-[13.5px] transition-colors hover:bg-[#fdecec] ${
+                            country.code === phoneCode
+                              ? "font-semibold text-[#c91f28]"
+                              : "text-black"
+                          }`}
+                        >
+                          <span aria-hidden className="text-[14px] leading-none">
+                            {country.flag}
+                          </span>
+                          {country.code}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+            </div>
+            <input
+              id="ct-phone"
+              type="tel"
+              inputMode="numeric"
+              autoComplete="tel-national"
+              maxLength={17}
+              className="min-w-0 flex-1 rounded-r-lg bg-transparent px-4 text-[14.5px] text-black outline-none placeholder:text-[#9a9aa2]"
+              placeholder={phoneCode === "+880" ? "01712345678" : t("Phone number")}
+              value={values.phone}
+              onChange={(event) =>
+                update("phone", event.target.value.replace(/[^\d\s-]/g, ""))
+              }
+              onBlur={() =>
+                setErrors((current) => ({
+                  ...current,
+                  phone: phoneError(phoneCode, values.phone),
+                }))
+              }
+              aria-invalid={Boolean(errors.phone)}
+              aria-describedby={errors.phone ? "ct-phone-error" : undefined}
+            />
+          </div>
+          {errors.phone ? (
+            <p
+              id="ct-phone-error"
+              className="mt-1.5 text-[12.5px] font-medium text-[#c91f28]"
+            >
+              {t(errors.phone)}
+            </p>
+          ) : null}
         </div>
         <div className="sm:col-span-2">
           <label
