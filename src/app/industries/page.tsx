@@ -28,12 +28,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Industries")}</span>
-            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Sector Knowledge Before Code")}</h1>
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We start from how your market actually works — regulation, workflow and customer expectations — and build software that fits on day one.")}</p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Industries")}</span>
+            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Sector Knowledge Before Code")}</h1>
+            <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We start from how your market actually works — regulation, workflow and customer expectations — and build software that fits on day one.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/schedule-a-call"
@@ -78,10 +78,10 @@ export default async function Page() {
       </section>
 
       <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
+        <div className="mx-auto grid brand-container grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Overview")}</p>
-            <h2 className="mt-3 max-w-[620px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Domain Context: Ship or Rewrite")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Overview")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[620px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Domain Context: Ship or Rewrite")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every sector carries rules that are invisible from outside: how a claim is assessed, when a payment may be reversed, which record an auditor will ask for. We map those rules before work is scoped.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Front-loading that context means sector work starts faster and needs fewer rewrites later, because the requirements come from the business rather than a generic template.")}</p>
           </div>
@@ -128,9 +128,9 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Sector coverage")}</p>
-          <h2 className="mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Where we are strongest")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Eight sectors we have built for repeatedly. Each card leads to the service page with the relevant capabilities and delivery detail.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Sector coverage")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Where we are strongest")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Eight sectors we have built for repeatedly. Each card leads to the service page with the relevant capabilities and delivery detail.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Link
               href="/fintech"
@@ -234,8 +234,8 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
-          <h2 className="mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four Steps to Working Software")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we work")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four Steps to Working Software")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
@@ -281,7 +281,7 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tell Us Your Market & Biggest Constraint")}</h2>
+              <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tell Us Your Market & Biggest Constraint")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We will reply with a plan grounded in your sector, not a generic brochure.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">

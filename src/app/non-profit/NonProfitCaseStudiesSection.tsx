@@ -24,8 +24,8 @@ export default async function NonProfitCaseStudiesSection() {
       <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case studies")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Delivered for mission-led teams")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Case studies")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Delivered for mission-led teams")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("A closer look at how digital systems changed the way a distribution-led organisation runs its people operations.")}</p>
           </div>
 
@@ -50,7 +50,7 @@ export default async function NonProfitCaseStudiesSection() {
               <span className="inline-flex items-center rounded-md bg-[#fafafa] px-3 py-1.5 text-[15px] font-black lowercase tracking-[-0.02em] text-black ring-1 ring-[#ececec]">
                 {t(caseStudy.logoText)}
               </span>
-              <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
+              <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">
                 {t(caseStudy.category)}
               </p>
             </div>

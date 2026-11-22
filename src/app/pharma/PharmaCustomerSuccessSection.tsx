@@ -19,8 +19,8 @@ export default async function PharmaCustomerSuccessSection() {
     <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Customer success")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our customer success stories")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Customer success")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our customer success stories")}</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -33,7 +33,7 @@ export default async function PharmaCustomerSuccessSection() {
           </div>
 
           <div>
-            <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Healthcare professional")}</p>
+            <p className="text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Healthcare professional")}</p>
 
             <h3 className="mt-3 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Diabetic retinopathy")}</h3>
 
