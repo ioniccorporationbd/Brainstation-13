@@ -32,7 +32,7 @@ const faqs: FaqItem[] = [
 export default async function DigitalTransformationFaqSection() {
   const { t } = await getTranslator();
   return (
-    <GlobalFaqSection compact
+    <GlobalFaqSection compact softCards
       eyebrow="FAQ"
       title={t("Frequently Asked Questions")}
       subtitle={t("Everything you need to know about our digital transformation engagements.")}
