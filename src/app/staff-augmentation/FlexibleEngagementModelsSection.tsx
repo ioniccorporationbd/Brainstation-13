@@ -138,9 +138,11 @@ const modelTitles: Record<ModelKey, string> = {
 function ExpandableCell({
   short,
   detail,
+  label,
 }: {
   short: string;
   detail: string;
+  label?: string;
 }) {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -150,9 +152,14 @@ function ExpandableCell({
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        className="flex w-full items-start justify-between gap-4 text-left"
+        className="flex w-full items-start justify-between gap-4 text-left max-sm:min-h-11 max-sm:items-center"
       >
-        <span className="max-w-[185px] text-[16px] font-medium leading-[1.45] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28]">
+        <span className="max-w-[185px] text-[16px] font-medium leading-[1.45] tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:text-[#c91f28] max-sm:max-w-none">
+          {label && (
+            <span className="mb-1 hidden text-[11px] font-bold uppercase leading-none tracking-[0.06em] text-[#c91f28] max-sm:block">
+              {t(label)}
+            </span>
+          )}
           {t(short)}
         </span>
 
@@ -166,7 +173,7 @@ function ExpandableCell({
       </button>
 
       {open && (
-        <p className="mt-4 max-w-[220px] text-[13.5px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
+        <p className="mt-3 max-w-[220px] text-[14px] font-medium leading-[1.55] tracking-[-0.01em] text-[#52525B] text-pretty max-sm:max-w-none">
           {t(detail)}
         </p>
       )}
@@ -187,9 +194,9 @@ export default function FlexibleEngagementModelsSection() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 xl:grid-cols-[1fr_300px]">
           {/* Comparison table card */}
-          <div className="overflow-x-auto rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 md:px-8 md:py-9">
-            <div className="min-w-[760px]">
-              <div className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px]">
+          <div className="overflow-x-auto rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 max-sm:px-4 max-sm:py-6 md:px-8 md:py-9">
+            <div className="min-w-[760px] max-sm:min-w-0">
+              <div className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px] max-sm:hidden">
                 <div>
                   <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Comparison")}<br />{t("Aspects")}</h3>
                 </div>
@@ -216,7 +223,7 @@ export default function FlexibleEngagementModelsSection() {
                   return (
                     <div
                       key={row.aspect}
-                      className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px] border-b border-[#ececec] py-7 last:border-b-0"
+                      className="grid grid-cols-[220px_1fr_1fr_1fr] gap-x-[36px] border-b border-[#ececec] py-7 last:border-b-0 max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-4 max-sm:py-6"
                     >
                       <div className="flex items-center gap-3">
                         <Icon
@@ -225,7 +232,7 @@ export default function FlexibleEngagementModelsSection() {
                           className="shrink-0 text-[#c91f28]"
                         />
 
-                        <span className="text-[17px] font-bold leading-tight tracking-[-0.015em] text-[#0a0a0a]">
+                        <span className="text-[15px] font-semibold leading-tight tracking-[-0.015em] text-[#0a0a0a] md:text-[16px]">
                           {t(row.aspect)}
                         </span>
                       </div>
@@ -233,16 +240,19 @@ export default function FlexibleEngagementModelsSection() {
                       <ExpandableCell
                         short={row.values.remote.short}
                         detail={row.values.remote.detail}
+                        label={modelTitles.remote}
                       />
 
                       <ExpandableCell
                         short={row.values.hybrid.short}
                         detail={row.values.hybrid.detail}
+                        label={modelTitles.hybrid}
                       />
 
                       <ExpandableCell
                         short={row.values.flexiRemote.short}
                         detail={row.values.flexiRemote.detail}
+                        label={modelTitles.flexiRemote}
                       />
                     </div>
                   );
@@ -264,6 +274,7 @@ export default function FlexibleEngagementModelsSection() {
                   <ExpandableCell
                     short={row.values.sharedTalents.short}
                     detail={row.values.sharedTalents.detail}
+                    label={modelTitles.sharedTalents}
                   />
                 </div>
               ))}

@@ -68,7 +68,7 @@ export default function StaffAugmentationFaqSection() {
                   }
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="max-w-[840px] text-[17px] font-semibold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[19px]">
+                  <span className="max-w-[840px] text-[16px] font-medium leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]">
                     {t(faq.question)}
                   </span>
 
@@ -89,7 +89,7 @@ export default function StaffAugmentationFaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-[820px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">
+                    <p className="max-w-[820px] text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                       {t(faq.answer)}
                     </p>
                   </div>
@@ -104,7 +104,7 @@ export default function StaffAugmentationFaqSection() {
             <button
               type="button"
               onClick={() => setVisibleCount(faqs.length)}
-              className="inline-flex items-center gap-2 rounded-full border border-[#ececec] px-6 py-3 text-[14px] font-semibold tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#ececec] max-sm:min-h-11 px-6 py-3 text-[14px] font-semibold tracking-[-0.01em] text-[#0a0a0a] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28]"
             >{t("Show more questions")}<ChevronDown size={16} strokeWidth={2} />
             </button>
           </div>

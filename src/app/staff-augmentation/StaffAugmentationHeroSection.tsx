@@ -52,10 +52,10 @@ export default function StaffAugmentationHeroSection() {
 
           <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-4 max-sm:justify-center max-sm:gap-3">
             <Link
               href="/schedule-a-call"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#c91f28] max-sm:min-h-11 max-sm:px-5 max-sm:py-2.5 max-sm:text-[14px] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
             >
               {t("Book a Call")}
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
