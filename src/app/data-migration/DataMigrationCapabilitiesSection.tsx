@@ -101,13 +101,13 @@ export default async function DataMigrationCapabilitiesSection() {
             return (
               <article
                 key={reason.title}
-                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28] max-sm:flex-col max-sm:items-center"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={22} strokeWidth={1.8} />
                 </div>
 
-                <div>
+                <div className="max-sm:text-center">
                   <p className="text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
                     {t(reason.title)}
                   </p>
