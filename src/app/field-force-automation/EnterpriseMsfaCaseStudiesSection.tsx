@@ -70,9 +70,9 @@ export default function EnterpriseMsfaCaseStudiesSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Proven Results")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Proven Results")}</p>
 
-          <h2 className="text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Case Studies")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Case Studies")}</h2>
         </div>
 
         <div className="relative mx-auto mt-11 max-w-[1140px]">
@@ -136,7 +136,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                       {t(item.title)}
                     </h3>
 
-                    <p className="mt-5 max-w-[560px] text-[14.5px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
+                    <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[560px] text-[14.5px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                       {t(item.description)}
                     </p>
 

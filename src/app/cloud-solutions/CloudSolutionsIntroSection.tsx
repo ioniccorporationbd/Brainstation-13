@@ -19,8 +19,8 @@ export default async function CloudSolutionsIntroSection() {
   return (
     <section className="relative overflow-hidden bg-white pb-[52px] pt-[8px] text-black md:pb-[104px]">
       <div className="brand-container">
-        <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Overview")}</p>
-        <h2 className="mt-4 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Cloud your team can operate")}</h2>
+        <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Overview")}</p>
+        <h2 className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Cloud your team can operate")}</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
           {blocks.map((block) => (

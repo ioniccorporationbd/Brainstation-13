@@ -18,13 +18,13 @@ export default async function BlockchainHeroSection() {
   const { t } = await getTranslator();
   return (
     <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
-      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="grid brand-container items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Blockchain / Web3 Solutions")}</p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Blockchain / Web3 Solutions")}</p>
 
-          <h1 className="max-w-[620px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Enterprise Blockchain")}</h1>
+          <h1 className="max-sm:mx-auto max-sm:text-center max-w-[620px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Enterprise Blockchain")}</h1>
 
-          <p className="mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Decentralized, privacy-preserving systems for reconciliation, settlement and digital assets — from smart contracts to managed infrastructure.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] font-medium leading-[1.65] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Decentralized, privacy-preserving systems for reconciliation, settlement and digital assets — from smart contracts to managed infrastructure.")}</p>
 
           <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
@@ -39,7 +39,7 @@ export default async function BlockchainHeroSection() {
             >{t("Talk to Our Team")}</Link>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-2">
+          <div className="mt-9 flex flex-wrap items-center gap-2 max-sm:justify-center">
             {keywords.map((word) => (
               <span
                 key={word}

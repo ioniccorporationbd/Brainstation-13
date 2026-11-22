@@ -172,9 +172,9 @@ export default async function MvpAiDrivenSdlcProcessSection() {
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI-Powered MVP Delivery")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("AI-Powered MVP Delivery")}</p>
 
-          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our AI-Driven SDLC Process For MVP")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our AI-Driven SDLC Process For MVP")}</h2>
 
           <p className="mx-auto mt-5 max-w-[700px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("From requirement analysis to release automation, our AI-assisted workflow helps teams build, test, and launch MVPs faster with better clarity, quality, and delivery control.")}</p>
         </div>

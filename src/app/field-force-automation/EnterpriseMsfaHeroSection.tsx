@@ -20,18 +20,18 @@ const heroFeatures = [
 export default async function EnterpriseMsfaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
-      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <section className="w-full overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
+      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
 
-          <h1 className="mt-6 max-w-[620px] font-bold text-[#000000] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Govern field sales at")}{" "}
+          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[620px] font-bold text-[#000000] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Govern field sales at")}{" "}
             <span className="text-[#c91f28]">{t("true scale")}</span>
           </h1>
 
-          <p className="mt-5 max-w-[560px] text-[15px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[560px] text-[15px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
 
-          <div className="mt-7 flex flex-wrap gap-2.5">
+          <div className="mt-7 flex flex-wrap gap-2.5 max-sm:justify-center">
             {heroFeatures.map((item) => {
               const Icon = item.icon;
 

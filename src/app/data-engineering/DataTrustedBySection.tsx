@@ -63,9 +63,9 @@ function LogoTrack({ prefix }: { prefix: string }) {
 export default function DataTrustedBySection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[8px] text-[#0a0a0a] md:pb-[80px]">
+    <section className="w-full overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[8px] text-[#0a0a0a] md:pb-[80px]">
       <div className="brand-container text-center">
-        <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Trusted by Startups to Enterprises")}</h2>
+        <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Trusted by Startups to Enterprises")}</h2>
       </div>
 
       {/* Continuous right-to-left marquee */}

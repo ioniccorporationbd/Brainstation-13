@@ -16,9 +16,9 @@ export default async function DataScienceProcessSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Implementation process")}</h2>
-            <p className="mt-4 max-w-[460px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Four stages from the first data audit to a dashboard people keep open.")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we work")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Implementation process")}</h2>
+            <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[460px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Four stages from the first data audit to a dashboard people keep open.")}</p>
 
             <Link
               href="/schedule-a-call"

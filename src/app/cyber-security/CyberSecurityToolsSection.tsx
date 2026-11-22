@@ -16,8 +16,8 @@ export default async function CyberSecurityToolsSection() {
       <div className="brand-container">
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Tooling")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tools we work in")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Tooling")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tools we work in")}</h2>
           </div>
           <p className="max-w-[420px] text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("The open standards and platforms named in our approach.")}</p>
         </div>

@@ -11,11 +11,11 @@ export default async function ManagedServicesIntroSection() {
   ];
 
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white px-6 max-sm:py-[44px] py-[80px] text-[#0a0a0a] md:py-[104px]">
       <div className="mx-auto max-w-[1000px]">
-        <h2 className="max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What Are Managed Services?")}</h2>
+        <h2 className="max-sm:mx-auto max-sm:text-center max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What Are Managed Services?")}</h2>
 
-        <p className="mt-6 max-w-[760px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Managed Services offer a fully managed, outcome-driven software delivery model. We provide a dedicated team of project managers, developers, QA engineers, DevOps, and business analysts, ready to own the full software lifecycle from day one.")}</p>
+        <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[760px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[18px]">{t("Managed Services offer a fully managed, outcome-driven software delivery model. We provide a dedicated team of project managers, developers, QA engineers, DevOps, and business analysts, ready to own the full software lifecycle from day one.")}</p>
 
         <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-5 sm:grid-cols-2">
           {points.map((point) => (

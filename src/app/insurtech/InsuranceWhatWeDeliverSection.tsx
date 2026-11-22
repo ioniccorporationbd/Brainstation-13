@@ -75,11 +75,11 @@ export default function InsuranceWhatWeDeliverSection() {
       <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
         {/* Left title */}
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Deliverables")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Deliverables")}</p>
 
-          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What We Deliver")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What We Deliver")}</h2>
 
-          <p className="mt-5 max-w-[340px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[340px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Six production modules that cover the insurance lifecycle, from claim intake to customer self-service.")}</p>
         </div>
 
         {/* Right accordion */}

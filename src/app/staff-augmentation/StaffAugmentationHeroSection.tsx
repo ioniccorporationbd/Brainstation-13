@@ -41,16 +41,16 @@ export default function StaffAugmentationHeroSection() {
   const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
-      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         {/* Left Content */}
         <div>
-          <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Tech Talent")}</p>
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Borderless Tech Talent")}</p>
 
-          <h1 className="max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+          <h1 className="max-sm:mx-auto max-sm:text-center max-w-[640px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
             {t("IT Staff Augmentation")}
           </h1>
 
-          <p className="mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Onboard pre-vetted offshore engineers in weeks, with onshore account management support.")}</p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
@@ -119,7 +119,7 @@ export default function StaffAugmentationHeroSection() {
                       </div>
                     </div>
 
-                    <p className="mt-5 max-w-[300px] text-[15px] md:text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
+                    <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[300px] text-[15px] md:text-[16px] font-semibold leading-[1.5] tracking-[-0.01em] text-[#0a0a0a]">
                       &ldquo;{t(review.quote)}&rdquo;
                     </p>
 

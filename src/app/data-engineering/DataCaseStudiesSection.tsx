@@ -57,9 +57,9 @@ export default async function DataCaseStudiesSection() {
       <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[720px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our Work")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our Work")}</p>
 
-            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Case Studies")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Case Studies")}</h2>
 
             <p className="mt-4 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A closer look at how our data engineering work has transformed businesses.")}</p>
           </div>
@@ -87,7 +87,7 @@ export default async function DataCaseStudiesSection() {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
+                <p className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">
                   {t(item.tag)}
                 </p>
 

@@ -40,9 +40,9 @@ export default function ShopifySuccessStoriesSection() {
     <section className="w-full overflow-hidden bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[112px] md:pt-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Success Stories")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Success Stories")}</p>
 
-          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Shopify eCommerce Success Stories")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Shopify eCommerce Success Stories")}</h2>
         </div>
 
         <div className="mx-auto mt-11 max-w-[1080px]">
@@ -82,7 +82,7 @@ export default function ShopifySuccessStoriesSection() {
                       {t(story.title)}
                     </h3>
 
-                    <p className="mt-5 max-w-[540px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
+                    <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[540px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
                       {t(story.description)}
                     </p>
                   </div>

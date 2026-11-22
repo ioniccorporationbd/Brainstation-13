@@ -5,14 +5,14 @@ export default async function DigitalTransformationHeroSection() {
   const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
-      <div className="grid brand-container grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
+      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Digital Transformation")}</span>
 
-          <h1 className="mt-7 max-w-[680px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Modernize legacy systems with AI")}</h1>
+          <h1 className="max-sm:mx-auto max-sm:text-center mt-7 max-w-[680px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Modernize legacy systems with AI")}</h1>
 
-          <p className="mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Turn outdated applications and manual processes into intelligent, automated workflows with AI, RPA, and cloud.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Turn outdated applications and manual processes into intelligent, automated workflows with AI, RPA, and cloud.")}</p>
 
           <Link
             href="/schedule-a-call"

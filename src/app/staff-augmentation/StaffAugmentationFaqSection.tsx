@@ -51,7 +51,7 @@ export default function StaffAugmentationFaqSection() {
   const hasMore = visibleCount < faqs.length;
 
   return (
-    <section className="bg-white px-6 py-[80px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white px-6 max-sm:py-[44px] py-[80px] text-[#0a0a0a] md:py-[104px]">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Frequently Asked Questions")}</h2>
 

@@ -31,9 +31,9 @@ export default async function EcommerceStackSection() {
       <div className="brand-container">
         <div className="rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
           <div className="max-w-[640px]">
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Architecture")}</p>
 
-            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Built for modern commerce")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Built for modern commerce")}</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

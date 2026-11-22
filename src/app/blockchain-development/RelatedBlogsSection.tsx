@@ -38,9 +38,9 @@ export default async function RelatedBlogsSection() {
       <div className="brand-container">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Insights")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Insights")}</p>
 
-            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("You might also like")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("You might also like")}</h2>
           </div>
 
           <div className="lg:pb-2">

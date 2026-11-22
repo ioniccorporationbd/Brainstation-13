@@ -65,7 +65,7 @@ function Detail({
 function OfficeCard({ compact }: { compact: boolean }) {
   const { t } = useTranslation();
   return (
-    <article className="group flex flex-col rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C91F28]/60 hover:shadow-[0_18px_40px_rgba(201,31,40,0.12)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6 md:p-7">
+    <article className="group flex min-w-0 flex-col rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C91F28]/60 hover:shadow-[0_18px_40px_rgba(201,31,40,0.12)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6 md:p-7">
       {/* Header — official logo + badge */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#F0F0F2] pb-4">
         <Image

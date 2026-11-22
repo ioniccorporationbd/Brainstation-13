@@ -76,11 +76,11 @@ export default async function BorderlessTechProfessionalsSection() {
   return (
     <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
-        <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
+        <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Borderless Talent Advantage")}</p>
 
-        <h2 className="max-w-[820px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Borderless Tech Professionals (BTP)")}</h2>
+        <h2 className="max-sm:mx-auto max-sm:text-center max-w-[820px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Borderless Tech Professionals (BTP)")}</h2>
 
-        <p className="mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Scale faster with pre-vetted engineers, flexible engagement models, local oversight, and risk-free onboarding support.")}</p>
+        <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Scale faster with pre-vetted engineers, flexible engagement models, local oversight, and risk-free onboarding support.")}</p>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => {

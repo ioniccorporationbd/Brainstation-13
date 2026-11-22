@@ -32,13 +32,13 @@ export default async function BlockchainExcellenceSection() {
       <div className="brand-container">
         <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("AI × Blockchain")}</p>
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("AI × Blockchain")}</p>
 
-            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Blockchain Excellence with AI")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Blockchain Excellence with AI")}</h2>
 
-            <p className="mt-5 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We combine artificial intelligence with blockchain engineering to build systems that are faster to develop, safer to deploy, and smarter in operation.")}</p>
+            <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We combine artificial intelligence with blockchain engineering to build systems that are faster to develop, safer to deploy, and smarter in operation.")}</p>
 
-            <p className="mt-4 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("At Magnetic Solution Limited, AI doesn't replace engineering judgment — it augments it. We use AI across the SDLC to reduce risk, improve quality, and accelerate blockchain delivery.")}</p>
+            <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[460px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("At Magnetic Solution Limited, AI doesn't replace engineering judgment — it augments it. We use AI across the SDLC to reduce risk, improve quality, and accelerate blockchain delivery.")}</p>
 
             <Link
               href="/schedule-a-call"

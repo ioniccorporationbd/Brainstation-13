@@ -7,9 +7,9 @@ export default async function EcommerceCtaSection() {
   return (
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
       <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
-        <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Next Step")}</p>
+        <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Next Step")}</p>
 
-        <h2 className="mx-auto max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Replatforming or launching?")}</h2>
+        <h2 className="max-sm:mx-auto max-sm:text-center mx-auto max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Replatforming or launching?")}</h2>
 
         <p className="mx-auto mt-4 max-w-[620px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We'll scope the fastest safe path to a high-performing storefront.")}</p>
 

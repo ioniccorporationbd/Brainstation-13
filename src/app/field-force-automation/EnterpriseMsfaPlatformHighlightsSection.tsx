@@ -99,7 +99,7 @@ async function HighlightContent({ item }: { item: HighlightItem }) {
         {t(item.title)}
       </h3>
 
-      <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
+      <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[520px] text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
         {t(item.description)}
       </p>
 
@@ -125,12 +125,12 @@ async function HighlightContent({ item }: { item: HighlightItem }) {
 export default async function EnterpriseMsfaPlatformHighlightsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white px-6 pb-[88px] text-[#000000] md:pb-[104px]">
+    <section className="w-full overflow-hidden bg-white px-6 max-sm:pb-[48px] pb-[88px] text-[#000000] md:pb-[104px]">
       <div className="mx-auto max-w-[1140px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Platform Highlights")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Platform Highlights")}</p>
 
-          <h2 className="text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Built for Real Field Conditions")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Built for Real Field Conditions")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Enterprise-grade field execution, reporting, and governance built for scalable last-mile operations.")}</p>
         </div>

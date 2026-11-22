@@ -74,9 +74,9 @@ export default async function BtpDifferentSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28]">{t("Borderless Talent Advantage")}</p>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Borderless Talent Advantage")}</p>
 
-            <h2 className="max-w-[620px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What Makes Our BTP Different?")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center max-w-[620px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What Makes Our BTP Different?")}</h2>
           </div>
 
           <p className="max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] lg:pb-2 text-pretty">{t("The fastest, smartest, risk-free way to scale your engineering capacity without the hiring overhead. Build with pre-vetted talents, flexible models, local oversight, and continuity from day one.")}</p>

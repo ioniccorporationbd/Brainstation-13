@@ -26,12 +26,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-        <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
+        <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Services")}</span>
-            <h1 className="mt-6 max-w-[640px] font-bold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Full Lifecycle, One Team")}</h1>
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
+            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[640px] font-bold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Full Lifecycle, One Team")}</h1>
+            <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Strategy, design, build and run across AI, cloud, data and enterprise software — delivered by specialists who stay with the outcome after launch.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/schedule-a-call"
@@ -76,10 +76,10 @@ export default async function Page() {
       </section>
 
       <section className="bg-white py-[48px] md:py-[104px]">
-        <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
+        <div className="grid brand-container grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we engage")}</p>
-            <h2 className="mt-3 max-w-[620px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One Senior Team, Start to Steady State")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we engage")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[620px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One Senior Team, Start to Steady State")}</h2>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Work usually starts with a real constraint: a platform that cannot scale, a release process that stalls, or a product that has to reach the market sooner than the current setup allows.")}</p>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Rather than hand over between a strategy group, a build group and a support group, one team carries the decisions through — so the trade-offs made early still make sense later.")}</p>
           </div>
@@ -126,9 +126,9 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Service lines")}</p>
-          <h2 className="mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What we do")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six service lines that can run alone or together. Each card opens the detailed service page.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Service lines")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What we do")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six service lines that can run alone or together. Each card opens the detailed service page.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/ml-ai-development"
@@ -208,8 +208,8 @@ export default async function Page() {
 
       <section className="bg-white py-[48px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Delivery model")}</p>
-          <h2 className="mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How a typical engagement runs")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Delivery model")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How a typical engagement runs")}</h2>
           <ol className="mt-10 space-y-4">
             <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
@@ -264,7 +264,7 @@ export default async function Page() {
         <div className="brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Not sure where to start?")}</h2>
+              <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Not sure where to start?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] leading-[1.6] text-[#52525B] text-pretty">{t("Tell us the goal — we will map the shortest safe path to value.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">

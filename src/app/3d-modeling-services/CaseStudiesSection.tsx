@@ -18,9 +18,9 @@ export default async function CaseStudiesSection() {
     <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Case Studies")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Case Studies")}</p>
 
-          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Complex Stories, Rendered Simply")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Complex Stories, Rendered Simply")}</h2>
 
           <p className="mx-auto mt-5 max-w-[660px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Expert 3D modeling and animation for industrial applications. From semiconductor fabs to global logistics, we visualize complex systems with cinematic clarity.")}</p>
         </div>
@@ -53,11 +53,11 @@ export default async function CaseStudiesSection() {
           </div>
 
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Automotive AR Experience")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Automotive AR Experience")}</p>
 
             <h3 className="mt-3 text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Driver’s Guide for Nissan")}</h3>
 
-            <p className="mt-4 max-w-[520px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
+            <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[520px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("AR mobile app for Nissan Middle East replacing traditional manuals. Built with Unity 3D, drivers scan interior controls for instant alerts and emergency procedures. Multilingual with cloud updates.")}</p>
 
             <Link
               href="/case-studies"

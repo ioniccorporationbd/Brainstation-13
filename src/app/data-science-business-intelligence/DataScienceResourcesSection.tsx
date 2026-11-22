@@ -16,9 +16,9 @@ export default async function DataScienceResourcesSection() {
       <div className="brand-container">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Team & tooling")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Resources")}</h2>
-            <p className="mt-4 max-w-[420px] text-[15px] leading-[1.6] text-[#52525B] text-pretty">{t("Where our team applies each platform. Named for clarity — not a certification or partnership claim.")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Team & tooling")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Resources")}</h2>
+            <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[420px] text-[15px] leading-[1.6] text-[#52525B] text-pretty">{t("Where our team applies each platform. Named for clarity — not a certification or partnership claim.")}</p>
           </div>
 
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">

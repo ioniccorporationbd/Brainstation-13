@@ -36,13 +36,13 @@ export default async function HoloGuideSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
           {/* Left content */}
           <div>
-            <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Featured Product")}</p>
+            <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Featured Product")}</p>
 
-            <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("3D + AI: HoloGuide AI")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("3D + AI: HoloGuide AI")}</h2>
 
             <h3 className="mt-3 text-[#c91f28] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Virtual Holographic Front Desk Assistant")}</h3>
 
-            <p className="mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("An interactive holographic AI front desk assistant designed for hotels, hospitals and corporate spaces. With life-scale 3D holographic characters, natural voice interaction and real-time rendering, it welcomes guests, answers questions, guides visitors and reduces operational load.")}</p>
+            <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[620px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("An interactive holographic AI front desk assistant designed for hotels, hospitals and corporate spaces. With life-scale 3D holographic characters, natural voice interaction and real-time rendering, it welcomes guests, answers questions, guides visitors and reduces operational load.")}</p>
 
             <div className="mt-9 grid max-w-[640px] grid-cols-1 gap-4 sm:grid-cols-2">
               {features.map((item) => {

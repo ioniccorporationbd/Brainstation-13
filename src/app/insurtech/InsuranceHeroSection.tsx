@@ -9,14 +9,14 @@ export default async function InsuranceHeroSection() {
   const { t } = await getTranslator();
   return (
     <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
-      <div className="grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
+      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left content */}
         <div>
-          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Insurtech")}</p>
+          <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Insurtech")}</p>
 
-          <h1 className="font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("AI-Driven Insurance Tech")}</h1>
+          <h1 className="max-sm:mx-auto max-sm:text-center font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("AI-Driven Insurance Tech")}</h1>
 
-          <p className="mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Modular insurtech that modernizes claims, policies and agent operations — adopt one module or the full stack, integrate with your core systems.")}</p>
+          <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] font-medium tracking-[-0.01em] text-[#52525B] text-pretty leading-[1.6] text-[16px] sm:text-[18px]">{t("Modular insurtech that modernizes claims, policies and agent operations — adopt one module or the full stack, integrate with your core systems.")}</p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link

@@ -16,9 +16,9 @@ export default async function MobileAppTypesSection() {
     <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
       <div className="grid brand-container items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-14">
         <div>
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("App Types")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("App Types")}</p>
 
-          <h2 className="text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Types of Mobile Apps We Develop")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Types of Mobile Apps We Develop")}</h2>
 
           <ul className="mt-8 space-y-3.5">
             {appTypes.map((item) => (

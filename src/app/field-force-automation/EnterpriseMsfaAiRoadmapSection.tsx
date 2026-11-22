@@ -60,9 +60,9 @@ export default async function EnterpriseMsfaAiRoadmapSection() {
     <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
-          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The AI Roadmap")}</p>
+          <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("The AI Roadmap")}</p>
 
-          <h2 className="text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Next-Generation Intelligence")}</h2>
+          <h2 className="max-sm:mx-auto max-sm:text-center text-[#000000] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Next-Generation Intelligence")}</h2>
 
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Continuous evolution. Our upcoming release pipeline is heavily focused on integrating advanced AI models, computer vision, and predictive analytics.")}</p>
         </div>
