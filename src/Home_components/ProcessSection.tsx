@@ -52,32 +52,32 @@ const PROCESS_STEPS = [
 export default async function ProcessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-x-clip bg-white py-[54px] sm:py-[72px] md:py-[100px]">
-      <div className="brand-container grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
+    <section className="w-full overflow-x-clip bg-white py-11 sm:py-[72px] md:py-[100px]">
+      <div className="brand-container grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
         {/* Intro */}
-        <div>
-          <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Process")}</h2>
+        <div className="max-sm:text-center">
+          <h2 className="max-sm:mx-auto text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Process")}</h2>
 
           <p className="mt-3 text-[18px] font-medium leading-[1.35] tracking-[-0.01em] text-[#C91F28] md:text-[18px]">{t("AI-Optimized, Transparent & Scalable.")}</p>
 
-          <p className="mt-5 max-w-[500px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
+          <p className="mt-5 max-w-[500px] max-sm:mx-auto text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
 
-          <button className="mt-8 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
+          <button className="mt-7 rounded-full bg-[#C91F28] px-5 py-2.5 text-[14px] max-sm:mx-auto max-sm:min-h-[44px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
 
-          <div className="mt-14 overflow-hidden rounded-2xl border border-[#E7E7EA] md:mt-16">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-[#E7E7EA] md:mt-16">
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
               alt={t("Team presentation")}
               width={620}
               height={640}
-              className="h-[380px] w-full object-cover md:h-[520px]"
+              className="h-[280px] w-full object-cover sm:h-[380px] md:h-[520px]"
               unoptimized
             />
           </div>
         </div>
 
         {/* Steps timeline */}
-        <div className="space-y-6 md:space-y-7">
+        <div className="space-y-5 md:space-y-7">
           {PROCESS_STEPS.map((item, index) => {
             const isLast = index === PROCESS_STEPS.length - 1;
             return (

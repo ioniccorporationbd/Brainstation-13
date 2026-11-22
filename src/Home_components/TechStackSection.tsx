@@ -29,7 +29,7 @@ export default async function TechStackSection() {
   const marquee = [...LOGOS, ...LOGOS];
 
   return (
-    <section className="w-full overflow-hidden bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[104px]">
+    <section className="w-full overflow-hidden bg-white py-11 sm:py-[72px] md:py-[92px] lg:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
           <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">
@@ -38,7 +38,7 @@ export default async function TechStackSection() {
           <p className="mx-auto mt-4 max-w-[760px] text-[15px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("From global technology partners to the brands we build for — a collective we work with across Cloud, ERP, Learning, Commerce, and Creative Technology.")}</p>
         </div>
 
-        <div className="brand-marquee relative mt-14 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+        <div className="brand-marquee relative mt-9 w-full sm:mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
           <div className="brand-marquee-track flex w-max items-center">
             {marquee.map((logo, index) => (
               <div

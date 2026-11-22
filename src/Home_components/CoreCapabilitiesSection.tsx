@@ -92,21 +92,21 @@ const CARD_BASE =
 export default async function CoreCapabilitiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[52px] sm:py-[70px] md:py-[90px] lg:py-[112px]">
+    <section className="w-full bg-white py-11 sm:py-[70px] md:py-[90px] lg:py-[112px]">
       <div className="brand-container">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="max-w-[600px] text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Drive Growth with Core Capabilities")}</h2>
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between max-sm:items-center max-sm:text-center">
+          <h2 className="max-w-[600px] max-sm:mx-auto text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Drive Growth with Core Capabilities")}</h2>
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 text-[15px] font-semibold text-primary transition-colors hover:text-primary-hover md:pb-2"
+            className="inline-flex items-center gap-3 text-[15px] font-semibold text-primary transition-colors hover:text-primary-hover md:pb-2 max-sm:min-h-[44px]"
           >{t("Explore All Services")}<span aria-hidden="true" className="text-[18px] leading-none">
               →
             </span>
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 md:gap-6 xl:auto-rows-[270px] xl:grid-cols-3 xl:gap-7">
+        <div className="mt-8 grid gap-5 sm:mt-12 md:grid-cols-2 md:gap-6 xl:auto-rows-[270px] xl:grid-cols-3 xl:gap-7">
           {capabilities.map((item) => (
             <CapabilityCard key={item.title} item={item} />
           ))}
@@ -125,7 +125,7 @@ async function CapabilityCard({ item }: { item: Capability }) {
   return (
     <Link
       href={item.href}
-      className={`${CARD_BASE} flex h-full flex-col p-6 md:p-7 ${item.className ?? ""}`}
+      className={`${CARD_BASE} flex h-full flex-col p-5 md:p-7 ${item.className ?? ""}`}
     >
       <Image
         src={item.icon}

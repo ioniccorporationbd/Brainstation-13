@@ -36,18 +36,18 @@ const aiStats = [
 export default async function AIDevelopmentExcellenceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[54px] sm:py-[76px] md:py-[96px] lg:py-[118px]">
+    <section className="w-full bg-white py-11 sm:py-[76px] md:py-[96px] lg:py-[118px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[420px_1fr] lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
           {/* Left: heading + intro + CTA */}
-          <div>
-            <h2 className="max-w-[420px] text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Excellence in AI Development")}</h2>
+          <div className="max-sm:text-center">
+            <h2 className="max-w-[420px] max-sm:mx-auto text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Excellence in AI Development")}</h2>
 
-            <p className="mt-6 max-w-[440px] text-[17px] font-normal leading-[1.6] text-[#52525B] text-pretty">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
+            <p className="mt-4 max-w-[440px] max-sm:mx-auto sm:mt-6 text-[17px] font-normal leading-[1.6] text-[#52525B] text-pretty">{t("We integrate cutting-edge AI across the development lifecycle— delivering solutions 10X faster with unmatched reliability. Our engineers augment human expertise with AI to automate, optimize, and future-proof your software.")}</p>
 
             <Link
               href="/schedule-a-call"
-              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="mt-6 inline-flex h-11 min-h-[44px] items-center justify-center rounded-full bg-primary px-6 text-[14px] font-semibold max-sm:mx-auto sm:mt-8 sm:h-12 sm:px-7 sm:text-[15px] text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >{t("Schedule a Call")}</Link>
           </div>
 
@@ -56,7 +56,7 @@ export default async function AIDevelopmentExcellenceSection() {
             {aiStats.map((item) => (
               <div
                 key={item.title}
-                className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
+                className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
               >
                 <span className="text-[clamp(27px,8.0vw,34px)] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
                   {t(item.number)}
@@ -79,7 +79,7 @@ export default async function AIDevelopmentExcellenceSection() {
         </div>
 
         {/* Bottom feature bar */}
-        <div className="mt-14 border-t border-black/[0.08] pt-10">
+        <div className="mt-10 border-t border-black/[0.08] pt-8 sm:mt-14 sm:pt-10">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12">
             <div className="border-l-2 border-primary pl-5">
               <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("10X Faster Delivery")}</h3>

@@ -21,24 +21,24 @@ const STATS = [
 export default async function CaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-x-clip bg-white py-[54px] sm:py-[72px] md:py-[100px]">
+    <section className="w-full overflow-x-clip bg-white py-11 sm:py-[72px] md:py-[100px]">
       <div className="brand-container">
         {/* Header */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between max-sm:items-center max-sm:text-center">
           <div>
             <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Case Studies")}</h2>
-            <p className="mt-4 max-w-[560px] text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Check out our case studies to see how innovative solutions transformed real businesses.")}</p>
+            <p className="mt-4 max-w-[560px] max-sm:mx-auto text-[16px] leading-[1.5] text-[#52525B] md:text-[18px] text-pretty">{t("Check out our case studies to see how innovative solutions transformed real businesses.")}</p>
           </div>
 
           <Link
             href="/case-studies"
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3.5 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920] md:text-[15px]"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-5 py-2.5 text-[14px] font-semibold text-white transition-colors duration-200 max-sm:mx-auto max-sm:min-h-[44px] hover:bg-[#A71920] sm:px-6 sm:py-3.5 md:text-[15px]"
           >{t("See all Case Studies")}<span aria-hidden>→</span>
           </Link>
         </div>
 
         {/* Client tags (real names only) */}
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-2.5 sm:mt-10 sm:gap-3">
           {caseStudyClients.map((client) => (
             <div
               key={client.name}
@@ -69,7 +69,7 @@ export default async function CaseStudiesSection() {
               />
             </div>
 
-            <div className="flex flex-col justify-center p-7 md:p-10 lg:p-12">
+            <div className="flex flex-col justify-center p-5 sm:p-7 md:p-10 lg:p-12">
               <p className="text-[13px] font-semibold uppercase tracking-normal text-[#C91F28] md:text-[14px]">{t("AI & ML · LMS")}</p>
 
               <h3 className="mt-4 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("Facial Recognition at IIITK")}</h3>
@@ -78,11 +78,11 @@ export default async function CaseStudiesSection() {
 
               <Link
                 href="/case-study"
-                className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-6 py-3 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#C91F28] px-5 py-2.5 text-[14px] max-sm:min-h-[44px] sm:mt-7 sm:px-6 sm:py-3 font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]"
               >{t("View Case Study")}<span aria-hidden>→</span>
               </Link>
 
-              <div className="mt-9 grid grid-cols-2 gap-6 border-t border-[#F0F0F2] pt-7">
+              <div className="mt-8 grid grid-cols-2 gap-5 border-t border-[#F0F0F2] pt-6 sm:mt-9 sm:gap-6 sm:pt-7">
                 {STATS.map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[clamp(29px,8.4vw,36px)] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">

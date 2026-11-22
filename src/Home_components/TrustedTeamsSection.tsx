@@ -60,7 +60,7 @@ const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 export default function TrustedTeamsSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[18px] sm:pb-[100px] sm:pt-[22px] md:pb-[130px]">
+    <section className="w-full overflow-hidden bg-white pb-10 pt-[18px] sm:pb-[100px] sm:pt-[22px] md:pb-[130px]">
       <div className="brand-container">
         <div className="trusted-heading text-center">
           <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Trusted By Fast-Moving Tech Teams")}</h2>
@@ -68,7 +68,7 @@ export default function TrustedTeamsSection() {
           <p className="mt-[6px] text-[18px] font-semibold leading-[1.35] tracking-[-0.01em] text-[#0A0A0A] text-balance">{t("From Startups to Enterprises")}</p>
         </div>
 
-        <div className="trusted-slider relative mt-[48px] w-full overflow-hidden sm:mt-[72px] md:mt-[92px]">
+        <div className="trusted-slider relative mt-9 w-full overflow-hidden sm:mt-[72px] md:mt-[92px]">
           <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[120px] bg-gradient-to-r from-white to-transparent max-sm:w-[45px]" />
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[120px] bg-gradient-to-l from-white to-transparent max-sm:w-[45px]" />
 

@@ -61,7 +61,7 @@ const products: ProductItem[] = [
 export default async function ProductsSolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[54px] sm:py-[72px] md:py-[92px] lg:py-[110px]">
+    <section className="w-full bg-white py-11 sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Products & Solutions")}</h2>
@@ -69,7 +69,7 @@ export default async function ProductsSolutionsSection() {
           <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("Accelerating Digital Transformation Across Banking, FinTech, EdTech, Pharma, and Enterprise Operations")}</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 sm:mt-14">
           {products.map((product) => (
             <ProductCard key={t(product.title)} product={product} />
           ))}
@@ -82,7 +82,7 @@ export default async function ProductsSolutionsSection() {
 async function ProductCard({ product }: { product: ProductItem }) {
   const { t } = await getTranslator();
   return (
-    <article className="group flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-primary hover:shadow-[0_12px_30px_-12px_rgba(201,31,40,0.20)]">
+    <article className="group flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7 transition-[border-color,box-shadow] duration-300 hover:border-primary hover:shadow-[0_12px_30px_-12px_rgba(201,31,40,0.20)]">
       <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
         {t(product.title)}
       </h3>
@@ -93,7 +93,7 @@ async function ProductCard({ product }: { product: ProductItem }) {
 
       <Link
         href={product.href}
-        className="mt-auto inline-flex items-center gap-[9px] pt-5 text-[14px] font-semibold text-primary transition-colors hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        className="mt-auto inline-flex items-center gap-[9px] pt-4 text-[14px] font-semibold text-primary transition-colors hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >{t("Learn More")}<span className="transition-transform duration-300 group-hover:translate-x-1">
           →
         </span>

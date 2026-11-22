@@ -22,7 +22,7 @@ const solutionItems = [
 export default async function MoodleSolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[56px] sm:py-[80px] md:py-[104px] lg:py-[128px]">
+    <section className="w-full bg-white py-11 sm:py-[80px] md:py-[104px] lg:py-[128px]">
       <div className="brand-container">
         {/* Header */}
         <div className="text-center">
@@ -34,7 +34,7 @@ export default async function MoodleSolutionsSection() {
 
           <Link
             href="/lms-development"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[14px] font-semibold text-white transition-colors duration-200 max-sm:min-h-[44px] hover:bg-primary-hover sm:mt-8 sm:px-7 sm:py-3.5 sm:text-[15px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >{t("Join Moodle Moot Bangladesh 2026")}<span aria-hidden="true" className="text-[18px] leading-none">
               →
             </span>
@@ -42,10 +42,10 @@ export default async function MoodleSolutionsSection() {
         </div>
 
         {/* Divider */}
-        <div className="mx-auto mt-14 h-px w-full max-w-[1080px] bg-black/[0.08] lg:mt-16" />
+        <div className="mx-auto mt-10 h-px w-full max-w-[1080px] bg-black/[0.08] lg:mt-16" />
 
         {/* Solution items */}
-        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div className="mt-9 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8 lg:gap-12">
           {solutionItems.map((item) => (
             <div key={item.title}>
               <span

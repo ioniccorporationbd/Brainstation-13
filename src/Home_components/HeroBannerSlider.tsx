@@ -106,22 +106,22 @@ export default function HeroBannerSlider() {
                       visually identical but are not headings, so the document
                       keeps a single H1 for SEO / screen readers. */}
                   {index === 0 ? (
-                    <h1 className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+                    <h1 className="max-w-[660px] text-balance text-center text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] max-sm:mx-auto sm:text-left sm:text-[40px] md:text-[50px] lg:text-[54px]">
                       {t(slide.title)}
                     </h1>
                   ) : (
-                    <div className="max-w-[660px] text-balance text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+                    <div className="max-w-[660px] text-balance text-center text-[clamp(28px,8.387vw,36px)] font-semibold leading-[1.08] tracking-[-0.035em] text-[#0A0A0A] max-sm:mx-auto sm:text-left sm:text-[40px] md:text-[50px] lg:text-[54px]">
                       {t(slide.title)}
                     </div>
                   )}
 
-                  <p className="mt-6 max-w-[620px] text-pretty text-[16px] font-normal leading-[1.5] text-[#52525B] sm:text-[18px] md:text-[18px]">
+                  <p className="mt-5 max-w-[620px] text-pretty text-center text-[15.5px] font-normal leading-[1.55] text-[#52525B] max-sm:mx-auto sm:mt-6 sm:text-left sm:text-[18px] md:text-[18px]">
                     {t(slide.description)}
                   </p>
 
                   <Link
                     href={slide.buttonHref}
-                    className="mt-8 inline-flex h-[52px] sm:mt-12 w-fit items-center justify-center rounded-full bg-primary px-[32px] max-sm:h-auto max-sm:min-h-[48px] max-sm:px-5 max-sm:py-3 max-sm:text-[14px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover"
+                    className="mt-7 inline-flex h-[52px] w-fit items-center justify-center rounded-full bg-primary px-[32px] text-[16px] font-semibold text-white shadow-[0_10px_24px_rgba(201,31,40,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_14px_30px_rgba(201,31,40,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F8] active:translate-y-0 active:bg-primary-hover max-sm:mx-auto max-sm:h-11 max-sm:min-h-[44px] max-sm:px-5 max-sm:text-[14px] sm:mt-12"
                   >
                     {t(slide.buttonText)}
                   </Link>
