@@ -51,19 +51,19 @@ export default async function DataMigrationServicesSection() {
             return (
               <article
                 key={service.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28] max-sm:relative"
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
+                <div className="flex items-center justify-between max-sm:justify-center">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                     <Icon size={22} strokeWidth={1.8} />
                   </div>
 
-                  <span className="text-[13px] font-medium uppercase tracking-normal text-[#c91f28]">
+                  <span className="text-[13px] font-medium uppercase tracking-normal text-[#c91f28] max-sm:absolute max-sm:right-5 max-sm:top-5">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
 
-                <p className="mt-5 text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px]">
+                <p className="mt-5 text-[#0a0a0a] text-[17px] font-medium leading-[1.3] tracking-[-0.01em] md:text-[18px] max-sm:mt-4 max-sm:text-center">
                   {t(service.title)}
                 </p>
               </article>
