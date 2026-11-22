@@ -76,7 +76,7 @@ export default function ManagedServicesFaqSection() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
-                  <span className="text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]">
+                  <span className="text-[16px] font-medium leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]">
                     {t(faq.question)}
                   </span>
 
@@ -97,7 +97,7 @@ export default function ManagedServicesFaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
+                    <p className="px-6 pb-5 text-[16px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">
                       {t(faq.answer)}
                     </p>
                   </div>
