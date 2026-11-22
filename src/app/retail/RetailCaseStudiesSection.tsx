@@ -77,12 +77,12 @@ export default async function RetailCaseStudiesSection() {
             <div className="mt-7 flex flex-wrap items-center gap-5">
               <Link
                 href="/case-studies"
-                className="inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
+                className="inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5 max-sm:min-h-[44px]"
               >{t("View case studies")}<ArrowRight size={16} />
               </Link>
               <Link
                 href="/schedule-a-call"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-5 py-2.5 text-[13.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#c91f28] px-5 py-2.5 text-[13.5px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] max-sm:min-h-[44px]"
               >{t("Talk to our retail team")}</Link>
             </div>
           </div>

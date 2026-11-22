@@ -137,7 +137,7 @@ function OfficeCard({ compact }: { compact: boolean }) {
       {/* Footer CTA — identical in both cards */}
       <Link
         href="/contact"
-        className="mt-5 inline-flex w-fit items-center gap-1.5 rounded-full border border-[#C91F28]/25 px-4 py-1.5 text-[13px] font-semibold text-[#C91F28] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white"
+        className="mt-5 inline-flex w-fit items-center gap-1.5 rounded-full border border-[#C91F28]/25 px-4 py-1.5 text-[13px] font-semibold text-[#C91F28] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white max-sm:min-h-[44px] max-sm:px-5"
       >
         {t("Contact Us")}
         <span aria-hidden>→</span>

@@ -52,7 +52,7 @@ export default async function FintechStrategiesSection() {
               </span>
               <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t(item.title)}</h3>
               <p className="mt-2 flex-1 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(item.description)}</p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#c91f28] transition-all duration-200 group-hover:gap-2.5">{t("Read more")}<ArrowRight size={15} strokeWidth={2.2} />
+              <span className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-[#c91f28] transition-all duration-200 group-hover:gap-2.5 max-sm:min-h-[44px]">{t("Read more")}<ArrowRight size={15} strokeWidth={2.2} />
               </span>
             </Link>
           ))}

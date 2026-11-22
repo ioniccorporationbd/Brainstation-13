@@ -77,7 +77,7 @@ export default async function RealEstateCaseStudiesSection() {
 
             <Link
               href="/case-studies"
-              className="mt-7 inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5"
+              className="mt-7 inline-flex items-center gap-2 text-[14px] font-bold text-[#c91f28] transition-all duration-200 hover:gap-3.5 max-sm:min-h-[44px]"
             >{t("View case studies")}<ArrowRight size={16} />
             </Link>
           </div>
