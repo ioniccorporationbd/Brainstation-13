@@ -76,10 +76,10 @@ export default async function OurOfficesPage() {
     <main>
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div>
+          <div className="max-sm:text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our offices")}</span>
-            <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("One Global Team")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
+            <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px] max-sm:mx-auto">{t("One Global Team")}</h1>
+            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty max-sm:mx-auto">{t("Headquartered in Bangladesh, Magnetic Solution Limited works with clients worldwide through remote-first delivery — one connected team, no hand-offs between branches.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/schedule-a-call"
@@ -105,9 +105,9 @@ export default async function OurOfficesPage() {
 
       <section className="bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our locations")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Where we deliver from")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Two verified operating bases: a headquarters and engineering centre in Bangladesh, and a remote-first delivery model that puts senior engineers close to your working day.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our locations")}</p>
+          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px] max-sm:mx-auto max-sm:text-center">{t("Where we deliver from")}</h2>
+          <p className="mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty max-sm:mx-auto max-sm:text-center">{t("Two verified operating bases: a headquarters and engineering centre in Bangladesh, and a remote-first delivery model that puts senior engineers close to your working day.")}</p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             {presence.map((item) => {
@@ -180,9 +180,9 @@ export default async function OurOfficesPage() {
             ))}
           </dl>
 
-          <div className="mt-14">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How we work")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Across borders, without friction")}</h2>
+          <div className="mt-14 max-sm:mt-10">
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we work")}</p>
+            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px] max-sm:mx-auto max-sm:text-center">{t("Across borders, without friction")}</h2>
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {workingModel.map((card) => {
                 const Icon = card.icon;

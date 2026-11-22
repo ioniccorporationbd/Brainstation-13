@@ -281,7 +281,7 @@ export default function Navbar() {
               setMobileOpen((current) => !current);
               setActiveMenu(null);
             }}
-            className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-[#C91F28] min-[768px]:h-[46px] min-[768px]:w-[46px] min-[1200px]:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white shadow-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-[#C91F28] min-[768px]:h-[46px] min-[768px]:w-[46px] min-[1200px]:hidden"
           >
             {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
@@ -319,7 +319,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={handleLogoClick}
-            className="flex min-w-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
+            className="flex min-h-[44px] min-w-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
             aria-label={t("Magnetic Solution Limited — Home")}
           >
             <Image
@@ -337,7 +337,7 @@ export default function Navbar() {
             type="button"
             onClick={closeAll}
             aria-label={t("Close menu")}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#e6e6e6] text-[#141418] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#e6e6e6] text-[#141418] transition-colors duration-200 hover:border-[#C91F28] hover:bg-[#C91F28] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C91F28]/40"
           >
             <X size={20} aria-hidden="true" />
           </button>

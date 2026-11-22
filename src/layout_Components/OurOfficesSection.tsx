@@ -151,7 +151,7 @@ export default function OurOfficesSection({ compact = false }: { compact?: boole
   return (
     <section className="w-full bg-white py-[56px] sm:py-[72px] md:py-[104px]">
       <div className="brand-container">
-        <div className="max-w-[620px]">
+        <div className="max-w-[620px] max-sm:mx-auto max-sm:text-center">
           <h2
             className={
               compact
