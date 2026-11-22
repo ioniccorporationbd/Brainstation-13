@@ -311,8 +311,8 @@ export default function Navbar() {
         aria-label={t("Main menu")}
         aria-hidden={!mobileOpen}
         inert={!mobileOpen}
-        className={`bn-drawer fixed right-0 top-0 z-[70] flex h-[100dvh] w-[360px] max-w-[92vw] flex-col bg-white shadow-[-24px_0_60px_rgba(15,23,42,0.22)] transition-transform duration-[320ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none min-[1200px]:hidden ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`bn-drawer fixed right-0 top-0 z-[70] flex h-[100dvh] w-[360px] max-w-[92vw] flex-col bg-white transition-transform duration-[320ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none min-[1200px]:hidden ${
+          mobileOpen ? "translate-x-0 shadow-[-24px_0_60px_rgba(15,23,42,0.22)]" : "translate-x-full shadow-none"
         }`}
       >
         <div className="flex h-[68px] shrink-0 items-center justify-between gap-3 border-b border-[#efefef] px-5 min-[768px]:h-[76px] min-[768px]:px-6">

@@ -81,23 +81,23 @@ export default async function ProcessSection() {
           {PROCESS_STEPS.map((item, index) => {
             const isLast = index === PROCESS_STEPS.length - 1;
             return (
-              <div key={item.label} className="relative pl-12 md:pl-14">
+              <div key={item.label} className="relative md:pl-14">
                 {/* connector */}
                 {!isLast && (
                   <span
                     aria-hidden
-                    className="absolute left-[17px] top-10 -bottom-8 w-px bg-[#E7E7EA] md:left-[19px]"
+                    className="absolute left-[17px] top-10 -bottom-8 w-px bg-[#E7E7EA] md:left-[19px] max-sm:hidden"
                   />
                 )}
 
                 {/* number node */}
-                <span className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#C91F28] text-[14px] font-bold text-white shadow-[0_6px_16px_rgba(201,31,40,0.28)] md:h-10 md:w-10 md:text-[15px]">
+                <span className="absolute left-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-[#C91F28] text-[14px] font-bold text-white shadow-[0_6px_16px_rgba(201,31,40,0.28)] md:h-10 md:w-10 md:text-[15px] max-sm:hidden">
                   {index + 1}
                 </span>
 
                 {/* card */}
-                <div className="group rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_18px_40px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-6">
-                  <div className="flex items-center gap-3">
+                <div className="group mx-auto w-full rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_18px_40px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-6">
+                  <div className="flex items-center gap-3 max-sm:justify-center">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#C91F28]/10 text-[20px] leading-none">
                       {item.icon}
                     </span>
@@ -106,7 +106,7 @@ export default async function ProcessSection() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
+                  <h3 className="mt-4 text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance max-sm:text-center">
                     {t(item.title)}
                   </h3>
 
