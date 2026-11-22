@@ -7,7 +7,7 @@ export default async function TechnologyConsultingHeroSection() {
     <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
-        <div>
+        <div className="max-sm:text-center">
           <span className="inline-flex rounded-[7px] bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Technology Consulting")}</span>
 
           <h1 className="max-sm:mx-auto max-sm:text-center mt-7 max-w-[680px] font-bold text-[#0a0a0a] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Expert Help for Complexity")}</h1>
@@ -16,7 +16,7 @@ export default async function TechnologyConsultingHeroSection() {
 
           <Link
             href="/schedule-a-call"
-            className="mt-9 inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
+            className="mt-9 inline-flex rounded-full bg-[#c91f28] max-sm:mt-6 max-sm:min-h-11 max-sm:px-5 max-sm:py-2.5 max-sm:text-[14px] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
           >{t("Schedule a Call")}</Link>
         </div>
 

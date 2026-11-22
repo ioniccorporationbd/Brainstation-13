@@ -197,7 +197,7 @@ export const gen_2: Dict = {
   "Can you customise an existing ERPNext instance?": "বিদ্যমান ERPNext ইনস্ট্যান্স কাস্টমাইজ করতে পারেন?",
   "Can you help after launch?": "লঞ্চ-এর পরেও কি সহায়তা করবেন?",
   "Can you help us validate the product idea before development?": "ডেভেলপমেন্ট-এর আগে প্রোডাক্ট আইডিয়া ভ্যালিডেট করতে আমাদের সাহায্য করবেন?",
-  "Can you help with regulatory compliance projects?": "রেগুলেটরি কমপ্লায়েন্স প্রজেক্ট-এ সাহায্য করবেন?",
+  "Can you help with regulatory compliance projects?": "রেগুলেটরি কমপ্লায়েন্স প্রজেক্টে সাহায্য করেন?",
   "Can you integrate with existing ERP and CRM systems?": "বিদ্যমান ইআরপি ও সিআরএম সিস্টেম-এর সাথে ইন্টিগ্রেট করতে পারেন?",
   "Can you integrate with our existing property management systems?": "আমাদের বিদ্যমান প্রপার্টি ম্যানেজমেন্ট সিস্টেম-এর সাথে ইন্টিগ্রেট করতে পারেন?",
   "Can you migrate data from legacy systems?": "লিগ্যাসি সিস্টেম থেকে ডেটা মাইগ্রেট করতে পারেন?",
