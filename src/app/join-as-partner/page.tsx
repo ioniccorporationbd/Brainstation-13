@@ -100,11 +100,11 @@ export default async function JoinAsPartnerPage() {
   return (
     <main>
       <section className="bg-white pb-16 pt-14 md:pb-20 md:pt-20">
-        <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="mx-auto grid brand-container items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Join as partner")}</span>
-            <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Grow with us")}</h1>
-            <p className="mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.")}</p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Join as partner")}</span>
+            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Grow with us")}</h1>
+            <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[560px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Turn your client relationships and expertise into new opportunities. Our partner programme gives you the engineering muscle, credibility and support to deliver enterprise-grade technology — together.")}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#apply"
@@ -129,8 +129,8 @@ export default async function JoinAsPartnerPage() {
 
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Why partner")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("A partnership built around your growth")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Why partner")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("A partnership built around your growth")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
@@ -160,9 +160,9 @@ export default async function JoinAsPartnerPage() {
         className="scroll-mt-24 bg-white py-16 md:py-20"
       >
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Programme")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Partnership models")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Choose the model that matches how you work with clients today — and grow into deeper collaboration over time.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Programme")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Partnership models")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Choose the model that matches how you work with clients today — and grow into deeper collaboration over time.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {models.map((model) => (
               <article
@@ -177,7 +177,7 @@ export default async function JoinAsPartnerPage() {
                     <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(model.name)}
                     </h3>
-                    <p className="text-[11.5px] font-bold uppercase tracking-normal text-[#52525B] text-pretty">
+                    <p className="text-[11.5px] font-bold uppercase tracking-normal text-[#52525B] text-pretty max-sm:text-center">
                       {t(model.audience)}
                     </p>
                   </div>
@@ -198,8 +198,8 @@ export default async function JoinAsPartnerPage() {
 
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How it works")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Get started in four steps")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How it works")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Get started in four steps")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((item) => (
               <div
@@ -224,8 +224,8 @@ export default async function JoinAsPartnerPage() {
       <section id="apply" className="scroll-mt-24 bg-white py-16 md:py-20">
         <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Apply")}</p>
-            <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Start the conversation")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Apply")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Start the conversation")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Tell us about your business and the kind of partnership you have in mind. Our partnerships team reviews every application.")}</p>
             <p className="mt-6 rounded-xl border border-[#ececec] bg-[#fafafa] px-5 py-4 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("We don’t publish partner logos or client names we cannot verify — every partnership on this site is one we can stand behind.")}</p>
           </div>
@@ -238,7 +238,7 @@ export default async function JoinAsPartnerPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Prefer to talk it through first?")}</h2>
+                <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Prefer to talk it through first?")}</h2>
                 <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Book a short call and we will walk through fit, expectations and the commercial model.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

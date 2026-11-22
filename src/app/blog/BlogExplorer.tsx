@@ -52,7 +52,7 @@ function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
 
         <div className="mt-8">
           <Meta post={post} />
-          <h1 className="mt-5 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
+          <h1 className="max-sm:mx-auto max-sm:text-center mt-5 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">
             {t(post.title)}
           </h1>
         </div>
@@ -148,7 +148,7 @@ export default function BlogExplorer({
                   {t(featured.category)} &middot; {t(featured.date)}
                 </span>
               </div>
-              <h2 className="mt-5 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">
+              <h2 className="max-sm:mx-auto max-sm:text-center mt-5 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">
                 {t(featured.title)}
               </h2>
               <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">
@@ -190,7 +190,7 @@ export default function BlogExplorer({
               strokeWidth={2}
               className="mt-2.5 shrink-0 text-[#9aa0a8]"
             />
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 max-sm:justify-center">
               {categories.map((item) => {
                 const active = item === category;
                 return (
@@ -268,7 +268,7 @@ export default function BlogExplorer({
               className="inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-5 py-2.5 max-sm:min-h-[44px] text-[13.5px] font-semibold text-black transition-colors enabled:hover:border-[#c91f28] enabled:hover:text-[#c91f28] disabled:cursor-not-allowed disabled:opacity-40"
             >
               <ArrowLeft size={15} />{t("Previous")}</button>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2 max-sm:justify-center">
               {Array.from({ length: totalPages }, (_, index) => index + 1).map(
                 (item) => (
                   <button

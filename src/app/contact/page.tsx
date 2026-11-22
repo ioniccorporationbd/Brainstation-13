@@ -60,16 +60,16 @@ export default async function ContactPage() {
     <main>
       <section className="bg-white pb-12 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Contact")}</span>
-          <h1 className="mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Let’s talk")}</h1>
-          <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.")}</p>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Contact")}</span>
+          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Let’s talk")}</h1>
+          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Whether you have a project in mind, a partnership to explore or a question to ask — tell us what you need and we’ll get back to you quickly.")}</p>
         </div>
       </section>
 
       <section className="bg-white pb-16 md:pb-20">
         <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
           <div>
-            <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tell us about your project")}</h2>
+            <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Tell us about your project")}</h2>
             <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Fill out the form and a member of our team will reach out to discuss how we can help.")}</p>
             <div className="mt-6">
               <ContactForm />
@@ -116,8 +116,8 @@ export default async function ContactPage() {
 
       <section className="bg-[#fafafa] py-16 md:py-20">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Where we are")}</p>
-          <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("From Bangladesh to the World")}</h2>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Where we are")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("From Bangladesh to the World")}</h2>
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
               <div className="flex items-center gap-3">

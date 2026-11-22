@@ -114,9 +114,9 @@ export default async function BlogPage() {
     <main>
       <section className="relative overflow-hidden bg-white pb-14 pt-14 md:pb-16 md:pt-20">
         <div className="mx-auto brand-container">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Blog")}</span>
-          <h1 className="mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Insights from the teams that ship")}</h1>
-          <p className="mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Blog")}</span>
+          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Insights from the teams that ship")}</h1>
+          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/case-studies"
@@ -138,7 +138,7 @@ export default async function BlogPage() {
           <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
-                <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Want it on your roadmap?")}</h2>
+                <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Want it on your roadmap?")}</h2>
                 <p className="mt-3 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Get practical engineering and technology perspective from our team — applied to your product, your stack and your constraints.")}</p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">

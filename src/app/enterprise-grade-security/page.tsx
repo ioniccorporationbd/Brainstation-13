@@ -49,12 +49,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Enterprise-grade security")}</span>
-            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Security built into everything")}</h1>
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Encryption, least-privilege access, reviewed build pipelines and monitored operations — controls designed into delivery rather than added at audit time.")}</p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Enterprise-grade security")}</span>
+            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Security built into everything")}</h1>
+            <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Encryption, least-privilege access, reviewed build pipelines and monitored operations — controls designed into delivery rather than added at audit time.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact"
@@ -100,9 +100,9 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Protection layers")}</p>
-          <h2 className="mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four layers of defence")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each layer is independently reviewed, so a single mistake never becomes a breach.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Protection layers")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four layers of defence")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each layer is independently reviewed, so a single mistake never becomes a breach.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -139,9 +139,9 @@ export default async function Page() {
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Standards")}</p>
-            <h2 className="mt-3 max-w-[460px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Framework-aligned security")}</h2>
-            <p className="mt-4 max-w-[460px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our controls follow established frameworks rather than custom claims. Certification status, scope statements and audit artefacts are provided during due diligence under NDA — we do not display badges we cannot substantiate.")}</p>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Standards")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[460px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Framework-aligned security")}</h2>
+            <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[460px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our controls follow established frameworks rather than custom claims. Certification status, scope statements and audit artefacts are provided during due diligence under NDA — we do not display badges we cannot substantiate.")}</p>
           </div>
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <li className="flex items-start gap-3 rounded-lg border border-[#ececec] bg-white px-4 py-3.5">
@@ -181,10 +181,10 @@ export default async function Page() {
       </section>
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Operations")}</p>
-            <h2 className="mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Security that runs every day")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Operations")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Security that runs every day")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Security is part of the engineering culture: hardened pipelines, reviewed code and automated vulnerability scanning are the default, not an add-on.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our operations team monitors for threats continuously and responds through documented incident procedures.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -225,10 +225,10 @@ export default async function Page() {
       </section>
 
       <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Engineering")}</p>
-            <h2 className="mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Threat modelling before code")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Engineering")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Threat modelling before code")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every engagement starts by mapping the data involved, who may reach it and what happens if a control fails.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Network isolation and hardened environments limit the blast radius when something goes wrong.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -282,7 +282,7 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Have a security review to complete?")}</h2>
+              <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Have a security review to complete?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the questionnaire — we will answer in writing and attach the control documentation your process needs.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">

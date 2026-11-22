@@ -28,12 +28,12 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Sustainability")}</span>
-            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Technology leaves it better")}</h1>
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Environmental impact, social equity and responsible governance run through how we build, operate and grow — reviewed and improved rather than announced once.")}</p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Sustainability")}</span>
+            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Technology leaves it better")}</h1>
+            <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Environmental impact, social equity and responsible governance run through how we build, operate and grow — reviewed and improved rather than announced once.")}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact"
@@ -79,9 +79,9 @@ export default async function Page() {
 
       <section className="bg-white py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Three pillars")}</p>
-          <h2 className="mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One accountable promise")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our framework balances environmental impact, social equity and responsible governance — each pillar has named owners and is reviewed on a set cycle.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Three pillars")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One accountable promise")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our framework balances environmental impact, social equity and responsible governance — each pillar has named owners and is reviewed on a set cycle.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -110,9 +110,9 @@ export default async function Page() {
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
         <div className="mx-auto brand-container">
-          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Programmes")}</p>
-          <h2 className="mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Real commitments, not posters")}</h2>
-          <p className="mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Six programmes turn the pillars into everyday practice across delivery centres and support teams.")}</p>
+          <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Programmes")}</p>
+          <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Real commitments, not posters")}</h2>
+          <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Six programmes turn the pillars into everyday practice across delivery centres and support teams.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -161,10 +161,10 @@ export default async function Page() {
       </section>
 
       <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Environment")}</p>
-            <h2 className="mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Greener Infrastructure")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Environment")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Greener Infrastructure")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We keep consolidating workloads, choosing efficient cloud regions and retiring hardware that no longer earns its power draw.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each facility tracks energy and waste against annual targets, so progress is a number reviewed by owners — not a slogan.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -205,10 +205,10 @@ export default async function Page() {
       </section>
 
       <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
-            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("People")}</p>
-            <h2 className="mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Growth that lifts the community")}</h2>
+            <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("People")}</p>
+            <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[520px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Growth that lifts the community")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Our social work focuses on widening access to technology education, supporting employee wellbeing and standing with communities when they need it.")}</p>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("From mentorship to volunteering, the programmes are practical and open to the people around us.")}</p>
             <ul className="mt-7 space-y-3.5">
@@ -252,7 +252,7 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Partner with a company that means it")}</h2>
+              <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Partner with a company that means it")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Looking for a technology partner that shares your environmental and social values? Let us show you how the commitments are governed.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
