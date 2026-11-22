@@ -92,7 +92,7 @@ export const home: Dict = {
   "Moodle Capabilities": "মুডল ক্যাপাবিলিটিস",
   "Moodle Solutions for Real Impact": "বাস্তব প্রভাবের জন্য মুডল সলিউশন",
   "Magnetic Solution Limited is Moodle’s Certified Integration Partner in Bangladesh and the first-ever organizer of MoodleMoot Bangladesh. Explore how we build secure, scalable, audit-ready Moodle LMS and proctoring for institutions that can’t afford failure.": "ম্যাগনেটিক সলিউশন লিমিটেড বাংলাদেশে মুডলের সার্টিফায়েড ইন্টিগ্রেশন পার্টনার এবং মুডলমুট বাংলাদেশের প্রথম আয়োজক। জেনে নিন কীভাবে আমরা নিরাপদ, স্কেলযোগ্য ও অডিট-রেডি মুডল এলএমএস ও প্রক্টরিং তৈরি করি সেই প্রতিষ্ঠানগুলোর জন্য, যাদের ব্যর্থতার কোনো সুযোগ নেই।",
-  "Join Moodle Moot Bangladesh 2026": "মুডলমুট বাংলাদেশ ২০২৬-এ যোগ দিন",
+  "Join MoodleMoot 2026": "মুডলমুট ২০২৬-এ যোগ দিন",
   "AI-Powered Discovery Audit": "AI-চালিত ডিসকভারি অডিট",
   "Zero-risk roadmap": "ঝুঁকিমুক্ত রোডম্যাপ",
   "Hybrid Team Onboarding": "হাইব্রিড টিম অনবোর্ডিং",
