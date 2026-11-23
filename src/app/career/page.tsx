@@ -114,7 +114,7 @@ export default async function CareerPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white pb-16 pt-14 md:pb-20 md:pt-20">
+      <section className="bg-white pb-16 max-sm:pb-7 pt-14 max-sm:pt-6 md:pb-20 md:pt-20">
         <div className="mx-auto grid brand-container items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Careers")}</span>
@@ -142,7 +142,7 @@ export default async function CareerPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] py-16 md:py-20">
+      <section className="bg-[#fafafa] py-16 max-sm:py-8 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Why Magnetic Solution Limited")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Do the Best Work of Your Career")}</h2>
@@ -152,7 +152,7 @@ export default async function CareerPage() {
               return (
                 <div
                   key={perk.title}
-                  className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
+                  className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/40"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <Icon size={21} strokeWidth={1.9} />
@@ -172,7 +172,7 @@ export default async function CareerPage() {
 
       <section
         id="open-roles"
-        className="scroll-mt-24 bg-white py-16 md:py-20"
+        className="scroll-mt-24 bg-white py-16 max-sm:py-8 md:py-20"
       >
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Open positions")}</p>
@@ -212,7 +212,7 @@ export default async function CareerPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] py-16 md:py-20">
+      <section className="bg-[#fafafa] py-16 max-sm:py-8 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our process")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What to expect")}</h2>
@@ -220,7 +220,7 @@ export default async function CareerPage() {
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="rounded-xl border border-[#ececec] bg-white p-7"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4"
               >
                 <div className="text-[30px] font-bold leading-none tracking-[-0.04em] text-[#c91f28]">
                   {t(item.step)}
@@ -237,8 +237,8 @@ export default async function CareerPage() {
         </div>
       </section>
 
-      <section id="apply" className="scroll-mt-24 bg-white py-16 md:py-20">
-        <div className="mx-auto grid brand-container items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <section id="apply" className="scroll-mt-24 bg-white py-16 max-sm:py-8 md:py-20">
+        <div className="mx-auto grid brand-container items-start gap-10 max-sm:gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Apply")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Ready to join the team?")}</h2>
@@ -250,9 +250,9 @@ export default async function CareerPage() {
         </div>
       </section>
 
-      <section className="bg-white pb-20 md:pb-24">
+      <section className="bg-white pb-20 max-sm:pb-7 md:pb-24">
         <div className="mx-auto brand-container">
-          <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+          <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
                 <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Before You Apply?")}</h2>

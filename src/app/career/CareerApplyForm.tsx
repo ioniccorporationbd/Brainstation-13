@@ -96,7 +96,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
 
   if (status === "sent") {
     return (
-      <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
+      <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8 max-sm:p-4">
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
           <CheckCircle2 size={22} />
         </span>
@@ -127,7 +127,7 @@ export default function CareerApplyForm({ roles }: { roles: string[] }) {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-xl border border-[#ececec] bg-white p-6 md:p-8"
+      className="rounded-xl border border-[#ececec] bg-white p-6 md:p-8 max-sm:p-4"
     >
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
