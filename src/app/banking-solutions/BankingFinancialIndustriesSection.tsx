@@ -19,8 +19,8 @@ const industries = [
 export default async function BankingFinancialIndustriesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
-      <div className="grid brand-container grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
+      <div className="grid brand-container grid-cols-1 items-center gap-10 max-sm:gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Clients we have served in")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Industries")}</h2>
@@ -29,7 +29,7 @@ export default async function BankingFinancialIndustriesSection() {
             {industries.map((industry) => (
               <li
                 key={industry.title}
-                className="group flex gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7"
+                className="group flex gap-4 rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7 max-sm:p-4"
               >
                 <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Check size={18} strokeWidth={2.6} />

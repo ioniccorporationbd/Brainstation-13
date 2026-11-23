@@ -73,7 +73,7 @@ export default function BankingFinancialTechnologiesSection() {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
         <div className="text-center">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our stack")}</p>

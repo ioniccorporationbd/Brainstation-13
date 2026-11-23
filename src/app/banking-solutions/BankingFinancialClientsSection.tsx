@@ -18,7 +18,7 @@ const clients = [
 export default function BankingFinancialClientsSection() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[112px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[112px]">
       <div className="brand-container">
         <div className="text-center">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Trusted by banks")}</p>
