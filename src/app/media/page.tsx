@@ -172,7 +172,7 @@ export default async function MediaPage() {
       {/* Verified note + press kit */}
       <section className="border-y border-[#ececec] bg-[#fafafa] py-12">
         <div className="mx-auto grid brand-container grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7">
+          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
               <ShieldCheck size={21} strokeWidth={1.9} />
             </span>
@@ -182,7 +182,7 @@ export default async function MediaPage() {
             </div>
           </div>
 
-          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7">
+          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
               <FileText size={21} strokeWidth={1.9} />
             </span>
