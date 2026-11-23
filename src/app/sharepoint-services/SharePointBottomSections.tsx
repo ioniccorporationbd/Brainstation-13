@@ -25,9 +25,9 @@ const microsoftStack = [
 export async function SharePointIndustriesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+        <div className="grid items-center gap-12 max-sm:gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Industries We Build For")}</p>
 
@@ -70,7 +70,7 @@ export async function SharePointIndustriesSection() {
 export async function SharePointWorkedWithSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Microsoft Technologies")}</p>
@@ -143,8 +143,8 @@ export async function SharePointWorkedWithSection() {
 export async function SharePointPurchaseCTASection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
-      <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[112px]">
+      <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 max-sm:py-8 text-center md:px-16 md:py-16">
         <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Start a Project")}</p>
 
         <h2 className="max-sm:mx-auto max-sm:text-center mx-auto max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Want to start a project with us?")}</h2>
