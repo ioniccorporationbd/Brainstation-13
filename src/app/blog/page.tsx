@@ -112,21 +112,27 @@ export default async function BlogPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="relative overflow-hidden bg-white pb-14 pt-14 md:pb-16 md:pt-20">
-        <div className="mx-auto brand-container">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Blog")}</span>
-          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[820px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Insights from the teams that ship")}</h1>
-          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920]"
-            >{t("See how it applies in practice")}<ArrowRight size={17} />
-            </Link>
-            <Link
-              href="/resources"
-              className="inline-flex items-center justify-center sm:shrink-0 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28]"
-            >{t("Browse resources")}</Link>
+      <section className="relative overflow-hidden bg-white pb-14 pt-14 max-sm:pb-10 max-sm:pt-9 md:pb-16 md:pt-20">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-[380px] bg-[radial-gradient(58%_100%_at_50%_0%,rgba(201,31,40,0.06)_0%,rgba(255,255,255,0)_72%)]"
+        />
+        <div className="relative mx-auto min-w-0 brand-container">
+          <div className="mx-auto flex min-w-0 max-w-[820px] flex-col items-center text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Blog")}</span>
+            <h1 className="mx-auto mt-6 max-w-[760px] text-center font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Insights from the teams that ship")}</h1>
+            <p className="mx-auto mt-5 max-w-[640px] text-center text-[15px] leading-[1.6] text-[#52525B] md:text-[16.5px] text-pretty">{t("Practical thinking on software engineering, cloud, AI, security and building teams that ship — written by the people doing the work.")}</p>
+            <div className="mt-8 flex w-full max-w-[420px] flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
+              <Link
+                href="/case-studies"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#a71920] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
+              >{t("See how it applies in practice")}<ArrowRight size={17} />
+              </Link>
+              <Link
+                href="/resources"
+                className="inline-flex min-h-[48px] w-full items-center justify-center rounded-lg text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors hover:border-[#c91f28] hover:text-[#c91f28] sm:w-auto sm:shrink-0"
+              >{t("Browse resources")}</Link>
+            </div>
           </div>
         </div>
       </section>
