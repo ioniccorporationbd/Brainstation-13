@@ -7,8 +7,8 @@ const INTRO_IMG =
 export default async function TestingIntroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="grid brand-container items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="grid brand-container items-center gap-12 max-sm:gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="relative w-full">
           <div className="relative aspect-[4/4.2] w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7]">
             <Image
