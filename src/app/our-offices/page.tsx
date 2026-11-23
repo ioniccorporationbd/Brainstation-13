@@ -74,8 +74,8 @@ export default async function OurOfficesPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="brand-container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="brand-container grid items-center gap-12 max-sm:gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="max-sm:text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Our offices")}</span>
             <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px] max-sm:mx-auto">{t("One Global Team")}</h1>
@@ -103,7 +103,7 @@ export default async function OurOfficesPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our locations")}</p>
           <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px] max-sm:mx-auto max-sm:text-center">{t("Where we deliver from")}</h2>
@@ -115,7 +115,7 @@ export default async function OurOfficesPage() {
               return (
                 <article
                   key={item.title}
-                  className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:text-center md:p-7"
+                  className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:text-center md:p-7 max-sm:p-4"
                 >
                   <div className="flex items-center gap-3 max-sm:flex-col max-sm:items-center max-sm:gap-2.5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -165,7 +165,7 @@ export default async function OurOfficesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="brand-container">
           <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[#ececec] bg-[#ececec] sm:grid-cols-2 lg:grid-cols-4">
             {facts.map((fact) => (
@@ -189,7 +189,7 @@ export default async function OurOfficesPage() {
                 return (
                   <article
                     key={card.title}
-                    className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
+                    className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/40"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={21} strokeWidth={1.9} />
@@ -206,7 +206,7 @@ export default async function OurOfficesPage() {
             </div>
           </div>
 
-          <div className="mt-14 rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 text-center md:px-12 md:py-12">
+          <div className="mt-14 rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 text-center md:px-12 md:py-12">
             <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("No office nearby? Fine.")}</h2>
             <p className="mx-auto mt-3 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Most of our work is delivered remotely with overlapping hours in your timezone. Distance has never been a barrier to shipping great software.")}</p>
             <Link
