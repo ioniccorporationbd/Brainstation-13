@@ -14,6 +14,38 @@ import IndustriesMenu from "./IndustriesMenu";
 import ProductsMenu from "./ProductsMenu";
 import ResourcesMenu from "./ResourcesMenu";
 
+const SERVICE_ROUTES = [
+  "/services",
+  "/staff-augmentation",
+  "/managed-service",
+  "/digital-transformation",
+  "/technology-consulting",
+  "/mvp-development",
+  "/ml-ai-development",
+  "/data-engineering",
+  "/data-migration",
+  "/business-intelligence",
+  "/insurtech",
+  "/3d-modeling-services",
+  "/game-studio",
+  "/qa-testing-and-automation",
+  "/lms-development",
+  "/web-mobile-app-development",
+  "/ecommerce-development",
+  "/adobe-experience-manager",
+  "/sharepoint-services",
+  "/blockchain-development",
+  "/shopify-services",
+  "/field-force-automation",
+  "/banking-solutions",
+  "/cloud-solutions",
+  "/cyber-security",
+  "/erp-development",
+  "/data-science-business-intelligence",
+];
+
+const isServiceRoute = (p: string) => SERVICE_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+
 type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
 type NavItemBase = {
@@ -47,6 +79,11 @@ export default function Navbar() {
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
+  const isCompactGutter = pathname === "/" || (!!pathname && isServiceRoute(pathname));
+
+  useEffect(() => {
+    document.body.classList.toggle("svc-mobile", !!pathname && isServiceRoute(pathname));
+  }, [pathname]);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -199,7 +236,7 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className={`mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-3 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-11 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-12 xl:h-[88px] 2xl:h-[100px] ${pathname === "/" ? "px-[5px] min-[640px]:px-9" : "px-9"}`}
+          className={`mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-3 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-11 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-12 xl:h-[88px] 2xl:h-[100px] ${isCompactGutter ? "px-[5px] min-[640px]:px-9" : "px-9"}`}
         >
           <Link
             href="/"

@@ -142,6 +142,19 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Services routes (body.svc-mobile is toggled by the Navbar for /services and
+   every service page) — mobile ultra-compact gutters, matching the approved
+   homepage design. Scoped to those routes below 640px only; the footer keeps
+   the standard gutter and every other route is untouched. */
+@media (max-width: 639px) {
+  body.svc-mobile .brand-container {
+    padding-inline: 5px;
+  }
+  body.svc-mobile footer .brand-container {
+    padding-inline: 36px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */
