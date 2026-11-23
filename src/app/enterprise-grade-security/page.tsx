@@ -49,7 +49,7 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Enterprise-grade security")}</span>
@@ -77,8 +77,8 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
-        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10 max-sm:py-8">
+        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Data")}</dt>
             <dd className="mt-2 text-[15px] font-semibold leading-[1.45] text-black">{t("Encrypted in transit and at rest")}</dd>
@@ -98,34 +98,34 @@ export default async function Page() {
         </dl>
       </section>
 
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Protection layers")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four layers of defence")}</h2>
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each layer is independently reviewed, so a single mistake never becomes a breach.")}</p>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Lock size={21} strokeWidth={1.9} />
               </span>
               <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Data protection")}</h3>
               <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Encryption in transit and at rest, strict retention policies and least-privilege access for sensitive information.")}</p>
             </article>
-            <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
+            <article className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <KeyRound size={21} strokeWidth={1.9} />
               </span>
               <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Identity & access")}</h3>
               <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Single sign-on, multi-factor authentication and role-based controls keep the right people on the right systems.")}</p>
             </article>
-            <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
+            <article className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ClipboardCheck size={21} strokeWidth={1.9} />
               </span>
               <h3 className="mt-5 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Compliance alignment")}</h3>
               <p className="mt-2.5 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Controls mapped to ISO 27001 control areas and GDPR-aligned data handling; artefacts shared on request under NDA.")}</p>
             </article>
-            <article className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50">
+            <article className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ServerCog size={21} strokeWidth={1.9} />
               </span>
@@ -136,8 +136,8 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
-        <div className="mx-auto grid brand-container grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-10 max-sm:gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Standards")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[460px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Framework-aligned security")}</h2>
@@ -180,7 +180,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Operations")}</p>
@@ -224,7 +224,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:order-2">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Engineering")}</p>
@@ -278,9 +278,9 @@ export default async function Page() {
         compact
       />
 
-      <section className="bg-white pb-[56px] pt-[8px] md:pb-[104px]">
-        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="bg-white pb-[56px] max-sm:pb-7 pt-[8px] md:pb-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Have a security review to complete?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Send the questionnaire — we will answer in writing and attach the control documentation your process needs.")}</p>
