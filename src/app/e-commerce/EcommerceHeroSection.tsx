@@ -11,7 +11,7 @@ const facts = [
 export default async function EcommerceHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
       <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto max-sm:min-h-[44px] max-sm:px-5">{t("Industry · E-commerce")}</span>
