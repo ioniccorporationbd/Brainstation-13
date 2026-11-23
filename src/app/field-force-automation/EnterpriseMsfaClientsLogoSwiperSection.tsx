@@ -18,7 +18,7 @@ const clients = [
 export default function EnterpriseMsfaClientsLogoSwiperSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white pb-[48px] md:pb-[72px] text-[#000000]">
+    <section className="w-full overflow-hidden bg-white pb-[48px] max-sm:pb-7 md:pb-[72px] text-[#000000]">
       <div className="brand-container">
         <p className="text-center text-[13px] font-bold uppercase tracking-normal text-[#8a8a8a]">{t("Trusted by field teams at leading enterprises")}</p>
 

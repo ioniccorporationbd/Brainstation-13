@@ -67,7 +67,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] max-sm:pb-7 text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Proven Results")}</p>
@@ -131,7 +131,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
                     />
                   </div>
 
-                  <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 lg:px-12">
+                  <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 max-sm:py-8 lg:px-12">
                     <h3 className="max-w-[520px] text-[#000000] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                       {t(item.title)}
                     </h3>
@@ -142,7 +142,7 @@ export default function EnterpriseMsfaCaseStudiesSection() {
 
                     <Link
                       href={item.href}
-                      className="mt-6 inline-flex w-fit items-center gap-2 border border-[#ececec] px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
+                      className="mt-6 inline-flex w-fit items-center gap-2 border border-[#ececec] max-sm:min-h-11 px-4 py-2.5 text-[14px] font-bold text-[#c91f28] transition-colors duration-300 hover:border-[#c91f28] hover:bg-[#c91f28] hover:text-white"
                     >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
                     </Link>
 

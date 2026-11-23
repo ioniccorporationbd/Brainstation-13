@@ -116,7 +116,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
   const activeItem = ecosystemItems[activeIndex];
 
   return (
-    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#000000] md:pb-[104px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] max-sm:pb-7 text-[#000000] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Comprehensive Capabilities")}</p>
@@ -126,7 +126,7 @@ export default function EnterpriseMsfaCoreEcosystemSection() {
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Click any module to preview how the platform supports field sales, governance, reporting, approvals, route planning, and ERP-ready execution.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
+        <div className="mt-12 grid grid-cols-1 items-start gap-8 max-sm:gap-4 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
           <div className="grid grid-cols-2 gap-2 md:gap-2.5">
             {ecosystemItems.map((item, index) => {
               const Icon = item.icon;

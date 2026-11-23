@@ -139,7 +139,7 @@ export default async function EnterpriseMsfaPlatformHighlightsSection() {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="grid grid-cols-1 items-center gap-7 lg:grid-cols-2 lg:gap-12"
+              className="grid grid-cols-1 items-center gap-7 max-sm:gap-4 lg:grid-cols-2 lg:gap-12"
             >
               {item.reverse ? (
                 <>
