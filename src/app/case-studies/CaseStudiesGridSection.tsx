@@ -107,7 +107,7 @@ export default function CaseStudiesGridSection() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Selected work")}</p>
@@ -139,7 +139,7 @@ export default function CaseStudiesGridSection() {
 
         <p className="mt-4 text-[13px] font-medium text-[#7a7d84]" aria-live="polite">{t("Showing")} {visible.length}/{caseStudies.length} {t("case studies")}</p>
 
-        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((item) => {
             const inner = (
               <>
