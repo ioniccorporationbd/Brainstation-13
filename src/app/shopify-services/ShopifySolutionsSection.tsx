@@ -69,7 +69,7 @@ const solutions = [
 export default async function ShopifySolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Solutions")}</p>
@@ -92,7 +92,7 @@ export default async function ShopifySolutionsSection() {
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 lg:grid-cols-2">
           {solutions.map((solution) => (
             <article
               key={solution.title}

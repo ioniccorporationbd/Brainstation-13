@@ -43,7 +43,7 @@ export default function ShopifyTestimonialsSection() {
   const reduceMotion = usePrefersReducedMotion();
 
   return (
-    <section className="w-full overflow-hidden bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full overflow-hidden bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Testimonials")}</p>
