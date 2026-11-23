@@ -47,7 +47,7 @@ export default async function CloudSolutionsProcessSection() {
             {steps.map((item) => (
               <li
                 key={item.step}
-                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:text-center"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[14.5px] font-bold text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   {t(item.step)}
