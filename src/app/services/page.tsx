@@ -26,7 +26,7 @@ export default async function Page() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
+      <section className="bg-white max-sm:pb-8 max-sm:pt-6 pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
         <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Services")}</span>
@@ -54,7 +54,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10 max-sm:py-7">
         <dl className="grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <dt className="text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">{t("Scope")}</dt>
@@ -75,7 +75,7 @@ export default async function Page() {
         </dl>
       </section>
 
-      <section className="bg-white py-[48px] md:py-[104px]">
+      <section className="bg-white py-[48px] max-sm:py-8 md:py-[104px]">
         <div className="grid brand-container grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[1.06fr_0.94fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we engage")}</p>
@@ -83,7 +83,7 @@ export default async function Page() {
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Work usually starts with a real constraint: a platform that cannot scale, a release process that stalls, or a product that has to reach the market sooner than the current setup allows.")}</p>
             <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Rather than hand over between a strategy group, a build group and a support group, one team carries the decisions through — so the trade-offs made early still make sense later.")}</p>
           </div>
-          <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
+          <div className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 md:p-8">
             <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("What stays constant")}</h3>
             <ul className="mt-5 space-y-3">
               <li className="flex items-start gap-3">
@@ -124,7 +124,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[48px] max-sm:py-8 md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Service lines")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[760px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What we do")}</h2>
@@ -132,7 +132,7 @@ export default async function Page() {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/ml-ai-development"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Sparkles size={21} strokeWidth={1.9} />
@@ -144,7 +144,7 @@ export default async function Page() {
             </Link>
             <Link
               href="/cloud-solutions"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Cloud size={21} strokeWidth={1.9} />
@@ -156,7 +156,7 @@ export default async function Page() {
             </Link>
             <Link
               href="/data-engineering"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Database size={21} strokeWidth={1.9} />
@@ -168,7 +168,7 @@ export default async function Page() {
             </Link>
             <Link
               href="/erp-development"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Boxes size={21} strokeWidth={1.9} />
@@ -180,7 +180,7 @@ export default async function Page() {
             </Link>
             <Link
               href="/qa-testing-and-automation"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <CircleCheck size={21} strokeWidth={1.9} />
@@ -192,7 +192,7 @@ export default async function Page() {
             </Link>
             <Link
               href="/cyber-security"
-              className="group rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <Lock size={21} strokeWidth={1.9} />
@@ -206,12 +206,12 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-white py-[48px] md:py-[104px]">
+      <section className="bg-white py-[48px] max-sm:py-8 md:py-[104px]">
         <div className="brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Delivery model")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How a typical engagement runs")}</h2>
           <ol className="mt-10 space-y-4">
-            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
+            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 01
               </span>
@@ -220,7 +220,7 @@ export default async function Page() {
                 <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] md:mt-0 text-pretty">{t("Current estate, constraints and the outcome that matters are agreed in writing.")}</p>
               </div>
             </li>
-            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
+            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 02
               </span>
@@ -229,7 +229,7 @@ export default async function Page() {
                 <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] md:mt-0 text-pretty">{t("Target design, risks and a sequenced plan with explicit trade-offs.")}</p>
               </div>
             </li>
-            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
+            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 03
               </span>
@@ -238,7 +238,7 @@ export default async function Page() {
                 <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] md:mt-0 text-pretty">{t("Working software every week, reviewed against the agreed outcome.")}</p>
               </div>
             </li>
-            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
+            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 04
               </span>
@@ -247,7 +247,7 @@ export default async function Page() {
                 <p className="mt-2 text-[14.5px] leading-[1.6] text-[#52525B] md:mt-0 text-pretty">{t("Testing, security review and performance work before anything is called done.")}</p>
               </div>
             </li>
-            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 md:flex-row md:items-start md:gap-6 md:p-7">
+            <li className="flex flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 md:flex-row md:items-start md:gap-6 md:p-7">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[#ececec] bg-white text-[14px] font-bold text-[#c91f28]">
                 05
               </span>
@@ -260,7 +260,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="bg-white pb-[48px] pt-[8px] md:pb-[96px]">
+      <section className="bg-white max-sm:pb-8 pb-[48px] pt-[8px] md:pb-[96px]">
         <div className="brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
