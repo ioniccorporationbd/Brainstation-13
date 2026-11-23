@@ -68,7 +68,7 @@ async function ServiceBody({ item }: { item: ServiceItem }) {
 export default async function EducationServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section id="services" className="relative overflow-hidden bg-white pb-[56px] max-sm:pt-[44px] pt-[64px] md:pb-[104px]">
+    <section id="services" className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 max-sm:pt-[44px] pt-[64px] md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Services")}</p>

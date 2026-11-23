@@ -27,7 +27,7 @@ const benefits = [
 export default async function EducationBenefitsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[900px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Why it works")}</p>
@@ -38,7 +38,7 @@ export default async function EducationBenefitsSection() {
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="group flex h-full flex-col justify-between rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group flex h-full flex-col justify-between rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <div>
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
