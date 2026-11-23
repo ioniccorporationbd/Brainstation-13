@@ -41,7 +41,7 @@ function Meta({ post }: { post: BlogPost }) {
 function ArticleView({ post, onBack }: { post: BlogPost; onBack: () => void }) {
   const { t } = useTranslation();
   return (
-    <section className="bg-white px-6 py-14 md:py-20">
+    <section className="bg-white px-6 py-14 max-sm:py-8 md:py-20">
       <div className="mx-auto max-w-[820px]">
         <button
           type="button"
@@ -130,7 +130,7 @@ export default function BlogExplorer({
   }
 
   return (
-    <section className="bg-[#fafafa] py-16 md:py-20">
+    <section className="bg-[#fafafa] py-16 max-sm:py-8 md:py-20">
       <div className="mx-auto brand-container">
         {showFeatured ? (
           <article className="grid overflow-hidden rounded-2xl border border-[#ececec] bg-white lg:grid-cols-2">
@@ -217,7 +217,7 @@ export default function BlogExplorer({
         </div>
 
         {visible.length === 0 ? (
-          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 text-center text-[15px] md:text-[16px] text-[#52525B] text-pretty">{t("No articles match that search. Try another keyword or category.")}</p>
+          <p className="mt-12 rounded-xl border border-[#ececec] bg-white px-6 py-10 max-sm:py-8 text-center text-[15px] md:text-[16px] text-[#52525B] text-pretty">{t("No articles match that search. Try another keyword or category.")}</p>
         ) : (
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {visible.map((post) => (
