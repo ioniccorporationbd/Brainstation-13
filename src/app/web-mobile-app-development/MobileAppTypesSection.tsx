@@ -13,8 +13,8 @@ const appTypes = [
 export default async function MobileAppTypesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="grid brand-container items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-14">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
+      <div className="grid brand-container items-center gap-10 max-sm:gap-4 lg:grid-cols-[1fr_0.9fr] lg:gap-14">
         <div>
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("App Types")}</p>
 
