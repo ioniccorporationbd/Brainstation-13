@@ -11,29 +11,29 @@ const chips = [
 export default async function CyberSecurityHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
-      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
-        <div>
+    <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black max-sm:pb-[40px] max-sm:pt-[44px] md:pb-[88px] md:pt-[80px]">
+      <div className="brand-container">
+        <div className="mx-auto flex max-w-[820px] flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Service · Cyber Security")}</span>
 
-          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[620px] font-bold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Cyber security services")}</h1>
+          <h1 className="mt-6 max-w-[640px] text-center font-bold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Cyber security services")}</h1>
 
-          <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Proactively defend against evolving threats with expert assessments, penetration testing and mitigation strategies built on digital forensics, threat intelligence and OWASP frameworks.")}</p>
+          <p className="mt-6 max-w-[600px] text-center text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Proactively defend against evolving threats with expert assessments, penetration testing and mitigation strategies built on digital forensics, threat intelligence and OWASP frameworks.")}</p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-8 flex w-full max-w-[420px] flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
             <Link
               href="/schedule-a-call"
-              className="inline-flex flex-1 items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:flex-none"
+              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 sm:w-auto sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:flex-none"
             >{t("Schedule a Call")}<ArrowRight size={18} />
             </Link>
 
             <Link
               href="/contact"
-              className="inline-flex flex-1 items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] sm:flex-none"
+              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 sm:w-auto sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] sm:flex-none"
             >{t("Talk to a specialist")}</Link>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3">
+          <ul className="mt-8 flex flex-wrap justify-center gap-x-7 gap-y-3">
             {chips.map((chip) => (
               <li key={chip.label} className="flex items-center gap-2 text-[13.5px] font-medium text-[#52525B]">
                 <chip.icon size={17} className="text-[#c91f28]" />
@@ -41,20 +41,9 @@ export default async function CyberSecurityHeroSection() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl border border-[#ececec]">
-            <img
-              src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1400&auto=format&fit=crop"
-              alt={t("Padlock on a laptop keyboard representing enterprise endpoint security")}
-              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
-            />
-          </div>
-
-          <div className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-lg border border-[#ececec] bg-white px-4 py-2.5">
+          <div className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-[#52525B]">
             <ShieldCheck size={16} className="text-[#c91f28]" />
-            <span className="text-[13px] font-semibold text-black">{t("Assessment, testing and continuous monitoring")}</span>
+            <span>{t("Assessment, testing and continuous monitoring")}</span>
           </div>
         </div>
       </div>
