@@ -46,7 +46,7 @@ const workflows: Workflow[] = [
 export default async function ShikkhaWorkflowsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("How it works")}</p>
@@ -59,7 +59,7 @@ export default async function ShikkhaWorkflowsSection() {
             const Icon = flow.icon;
             return (
               <li key={flow.title} className="relative">
-                <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
+                <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7 max-sm:p-4">
                   <div className="flex items-start gap-4 max-sm:flex-col max-sm:items-center max-sm:text-center">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={21} strokeWidth={1.9} />

@@ -17,8 +17,8 @@ const items = [
 export default async function ShikkhaAiPathshalaSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
-      <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 max-sm:py-8 md:py-24">
+      <div className="mx-auto grid brand-container items-center gap-12 max-sm:gap-4 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <ShikkhaFrame
           src="/images/shikkha/sc-learning.webp"
           alt={t("Shikkha Chat learning modules on website.shikkhachat.com")}

@@ -37,7 +37,7 @@ const pages = [
 export default async function ShikkhaWebsiteSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Public school website")}</p>
@@ -54,7 +54,7 @@ export default async function ShikkhaWebsiteSection() {
               sizes="(max-width: 1024px) 100vw, 1000px"
             />
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-2 xl:grid-cols-3">
             {pages.map((page) => (
               <ShikkhaFrame
                 key={page.src}

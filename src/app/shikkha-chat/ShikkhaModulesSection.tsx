@@ -118,7 +118,7 @@ const modules: Module[] = [
 export default async function ShikkhaModulesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-20 md:py-24">
+    <section className="relative overflow-hidden bg-white py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Platform modules")}</p>
@@ -132,7 +132,7 @@ export default async function ShikkhaModulesSection() {
             return (
               <article
                 key={module.title}
-                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
+                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/40"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Icon size={23} strokeWidth={1.8} />

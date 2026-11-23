@@ -116,7 +116,7 @@ export default async function ShikkhaDashboardsSection() {
   return (
     <section
       id="dashboards"
-      className="relative overflow-hidden bg-white py-20 md:py-24"
+      className="relative overflow-hidden bg-white py-20 max-sm:py-8 md:py-24"
     >
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
@@ -125,7 +125,7 @@ export default async function ShikkhaDashboardsSection() {
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Access and permissions are scoped by role, so each person sees a focused, secure view of the platform. Every screen below is captured from the live Shikkha Chat application.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 lg:grid-cols-2">
           {roles.map((role) => {
             const Icon = role.icon;
             return (

@@ -213,7 +213,7 @@ export default async function ShikkhaFeatureSections() {
                 const Icon = card.icon;
                 return (
                   <FeatureReveal key={card.title} delay={(ci % 4) * 60} className="h-full">
-                    <article className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#c91f28]/40 hover:shadow-[0_12px_32px_-20px_rgba(17,17,17,0.4)]">
+                    <article className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#c91f28]/40 hover:shadow-[0_12px_32px_-20px_rgba(17,17,17,0.4)]">
                       <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.8} />
                       </div>

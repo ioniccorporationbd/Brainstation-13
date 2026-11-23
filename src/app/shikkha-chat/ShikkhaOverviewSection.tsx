@@ -14,8 +14,8 @@ const bullets = [
 export default async function ShikkhaOverviewSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[104px]">
-      <div className="mx-auto grid brand-container items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 pt-[8px] md:pb-[104px]">
+      <div className="mx-auto grid brand-container items-center gap-12 max-sm:gap-4 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div>
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("What is Shikkha Chat")}</p>
           <h2 className="mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One platform for every school")}</h2>
