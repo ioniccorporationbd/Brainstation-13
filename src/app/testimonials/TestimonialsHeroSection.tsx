@@ -5,8 +5,8 @@ import { ArrowRight, Quote } from "lucide-react";
 export default async function TestimonialsHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black md:pb-[80px] md:pt-[76px]">
-      <div className="mx-auto grid brand-container items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+    <section className="relative overflow-hidden bg-white pb-[64px] max-sm:pb-7 pt-[56px] max-sm:pt-6 text-black md:pb-[80px] md:pt-[76px]">
+      <div className="mx-auto grid brand-container items-start gap-12 max-sm:gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonials")}</span>
           <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("What teams say after building")}</h1>
@@ -26,7 +26,7 @@ export default async function TestimonialsHeroSection() {
 
         <Link
           href="/testimonials/anupom-syam"
-          className="group block rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-8"
+          className="group block rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-8 max-sm:p-4"
         >
           <div className="flex items-start justify-between">
             <span className="rounded-md bg-[#fdecec] px-2.5 py-1 text-[11.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Featured · Fintech")}</span>

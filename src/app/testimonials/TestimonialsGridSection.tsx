@@ -128,7 +128,7 @@ async function Card({ item }: { item: Testimonial }) {
 export default async function TestimonialsGridSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[760px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("In their own words")}</p>
