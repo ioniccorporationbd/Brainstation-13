@@ -88,34 +88,30 @@ export default async function InvestorRelationsPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
-        <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Company · Investor relations")}</span>
+      <section className="relative overflow-hidden bg-white pb-[64px] pt-[56px] text-black max-sm:pb-[44px] max-sm:pt-[40px] md:pb-[104px] md:pt-[80px]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(58%_100%_at_50%_0%,rgba(201,31,40,0.06)_0%,rgba(255,255,255,0)_72%)]"
+        />
+        <div className="relative mx-auto min-w-0 brand-container">
+          <div className="mx-auto flex min-w-0 max-w-[820px] flex-col items-center text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Company · Investor relations")}</span>
 
-            <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[620px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Shareholders & Partners Info")}</h1>
+            <h1 className="mx-auto mt-6 max-w-[720px] text-center font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Shareholders & Partners Info")}</h1>
 
-            <p className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited is a privately held software engineering company. Financial statements, shareholding details and governance documents are provided to shareholders and counterparties directly — never summarised as marketing figures on a public page.")}</p>
+            <p className="mx-auto mt-6 max-w-[620px] text-center text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Magnetic Solution Limited is a privately held software engineering company. Financial statements, shareholding details and governance documents are provided to shareholders and counterparties directly — never summarised as marketing figures on a public page.")}</p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <div className="mt-8 flex w-full max-w-[420px] flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920]"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
               >{t("Investor inquiries")}<ArrowRight size={18} />
               </Link>
               <Link
                 href="/about-us"
-                className="inline-flex items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
               >{t("Company overview")}</Link>
             </div>
-          </div>
-
-          <div className="overflow-hidden rounded-2xl border border-[#ececec]">
-            <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1400&auto=format&fit=crop"
-              alt={t("Business documents and financial reports on a desk")}
-              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
-            />
           </div>
         </div>
       </section>
