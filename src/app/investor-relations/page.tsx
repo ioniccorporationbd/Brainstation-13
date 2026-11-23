@@ -144,7 +144,7 @@ export default async function InvestorRelationsPage() {
             {governance.map((item) => (
               <article
                 key={item.title}
-                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
@@ -171,7 +171,7 @@ export default async function InvestorRelationsPage() {
             <h2 className="max-sm:mx-auto max-sm:text-center mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Documents Shared, Not Published")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("As a privately held company we do not publish statutory accounts or quarterly results on the website. If you are a shareholder, lender, auditor or counterparty, these are provided under a confidentiality agreement with the latest period available.")}</p>
 
-            <div className="mt-8 flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7">
+            <div className="mt-8 flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-3 max-sm:text-center">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ShieldCheck size={19} strokeWidth={1.9} />
               </span>
