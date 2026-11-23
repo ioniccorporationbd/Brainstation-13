@@ -20,18 +20,18 @@ const heroFeatures = [
 export default async function EnterpriseMsfaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-[#000000] md:pb-[88px] md:pt-[80px]">
-      <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
-        <div>
+    <section className="w-full overflow-hidden bg-white pb-[64px] pt-[56px] text-[#000000] max-sm:pb-[40px] max-sm:pt-[44px] md:pb-[88px] md:pt-[80px]">
+      <div className="brand-container">
+        <div className="mx-auto flex max-w-[820px] flex-col items-center text-center">
           <span className="inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[12px] font-bold uppercase leading-none tracking-normal text-[#c91f28]">{t("Enterprise MSFA Platform")}</span>
 
-          <h1 className="max-sm:mx-auto max-sm:text-center mt-6 max-w-[620px] font-bold text-[#000000] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Govern field sales at")}{" "}
-            <span className="text-[#c91f28]">{t("true scale")}</span>
+          <h1 className="mt-6 max-w-[640px] text-center font-bold text-[#000000] text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Govern field sales at")}{" "}
+            <span className="whitespace-nowrap text-[#c91f28]">{t("true scale")}</span>
           </h1>
 
-          <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[560px] text-[15px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
+          <p className="mx-auto mt-5 max-w-[600px] text-center text-[15px] font-medium leading-[1.7] text-[#4a4a4a] md:text-[18px]">{t("Digitize, govern, and optimize last-mile execution with an offline-first, ERP-integrated platform trusted by leading enterprises.")}</p>
 
-          <div className="mt-7 flex flex-wrap gap-2.5 max-sm:justify-center">
+          <div className="mt-7 flex flex-wrap justify-center gap-2.5">
             {heroFeatures.map((item) => {
               const Icon = item.icon;
 
@@ -52,47 +52,16 @@ export default async function EnterpriseMsfaHeroSection() {
             })}
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3.5">
+          <div className="mt-8 flex w-full max-w-[420px] flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:items-center sm:justify-center">
             <Link
               href="/schedule-a-call"
-              className="inline-flex flex-1 items-center justify-center rounded-[6px] bg-[#c91f28] px-6 py-3.5 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#a71920] sm:flex-none"
+              className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[6px] bg-[#c91f28] px-6 py-3.5 text-[15px] font-bold text-white transition-colors duration-300 hover:bg-[#a71920] sm:w-auto"
             >{t("Explore Platform")}</Link>
 
             <Link
               href="/case-studies"
-              className="inline-flex flex-1 items-center justify-center rounded-[6px] border border-[#d9d9d9] bg-white px-6 py-3.5 text-[15px] font-bold text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28] sm:flex-none"
+              className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[6px] border border-[#d9d9d9] bg-white px-6 py-3.5 text-[15px] font-bold text-[#000000] transition-colors duration-300 hover:border-[#c91f28] hover:text-[#c91f28] sm:w-auto"
             >{t("View Case Studies")}</Link>
-          </div>
-        </div>
-
-        <div className="relative">
-          <div className="overflow-hidden border border-[#ececec] bg-white">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1400&auto=format&fit=crop"
-              alt={t("Field sales representative capturing an order on a mobile device")}
-              className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
-            />
-          </div>
-
-          <div className="absolute -bottom-6 left-4 hidden w-[190px] border border-[#ececec] bg-white p-4 md:block lg:left-6">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Mobile Order")}</span>
-              <span className="flex h-5 w-5 items-center justify-center rounded-[3px] bg-[#fdecec] text-[10px] font-bold text-[#c91f28]">
-                ✓
-              </span>
-            </div>
-
-            <div className="mt-3 space-y-1.5">
-              <div className="h-2 w-full rounded-[2px] bg-[#f2f2f2]" />
-              <div className="h-2 w-[78%] rounded-[2px] bg-[#f2f2f2]" />
-              <div className="h-2 w-[62%] rounded-[2px] bg-[#f2f2f2]" />
-            </div>
-
-            <div className="mt-3 flex items-center gap-2 border-t border-[#ececec] pt-3">
-              <span className="h-2 w-2 rounded-full bg-[#c91f28]" />
-              <span className="text-[11px] font-semibold text-[#4a4a4a]">{t("Synced to ERP offline")}</span>
-            </div>
           </div>
         </div>
       </div>
