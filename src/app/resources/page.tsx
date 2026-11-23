@@ -90,7 +90,7 @@ export default async function ResourcesPage() {
   const { t } = await getTranslator();
   return (
     <main>
-      <section className="relative overflow-hidden bg-white pb-16 pt-14 md:pb-20 md:pt-20">
+      <section className="relative overflow-hidden bg-white pb-16 max-sm:pb-7 pt-14 max-sm:pt-6 md:pb-20 md:pt-20">
         <div className="mx-auto grid brand-container items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Resources")}</span>
@@ -118,7 +118,7 @@ export default async function ResourcesPage() {
         </div>
       </section>
 
-      <section className="bg-[#fafafa] py-16 md:py-20">
+      <section className="bg-[#fafafa] py-16 max-sm:py-8 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Explore")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Browse by topic")}</h2>
@@ -131,7 +131,7 @@ export default async function ResourcesPage() {
                 <Link
                   key={hub.title}
                   href={hub.href}
-                  className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7"
+                  className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7 max-sm:p-4"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <Icon size={21} strokeWidth={1.9} />
@@ -155,7 +155,7 @@ export default async function ResourcesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white py-16 max-sm:py-8 md:py-20">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Downloads")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Guides & whitepapers")}</h2>
@@ -165,7 +165,7 @@ export default async function ResourcesPage() {
             {downloads.map((item) => (
               <article
                 key={item.title}
-                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40 md:p-7"
+                className="flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/40 md:p-7 max-sm:p-4"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <FileText size={21} strokeWidth={1.9} />
@@ -190,9 +190,9 @@ export default async function ResourcesPage() {
         </div>
       </section>
 
-      <section className="bg-white pb-20 md:pb-24">
+      <section className="bg-white pb-20 max-sm:pb-7 md:pb-24">
         <div className="mx-auto brand-container">
-          <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+          <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
             <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
               <div>
                 <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Can’t find what you need?")}</h2>
