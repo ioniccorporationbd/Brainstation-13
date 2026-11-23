@@ -73,7 +73,7 @@ export default function FintechCaseStudiesSection() {
   const [active, setActive] = useState<CaseStudy>(caseStudies[0]);
 
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[640px]">
@@ -111,7 +111,7 @@ export default function FintechCaseStudiesSection() {
           })}
         </div>
 
-        <div className="mt-7 grid grid-cols-1 items-center gap-8 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:p-9">
+        <div className="mt-7 grid grid-cols-1 items-center gap-8 max-sm:gap-4 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:p-9">
           <div className="overflow-hidden rounded-xl border border-[#ececec] bg-white">
             <img
               key={active.image}

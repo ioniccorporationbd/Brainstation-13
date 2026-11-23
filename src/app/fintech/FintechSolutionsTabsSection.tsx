@@ -72,7 +72,7 @@ export default function FintechSolutionsTabsSection() {
   const [activeTab, setActiveTab] = useState<SolutionTab>(solutions[0]);
 
   return (
-    <section id="solutions" className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section id="solutions" className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our solutions")}</p>
@@ -102,8 +102,8 @@ export default function FintechSolutionsTabsSection() {
           })}
         </div>
 
-        <div className="mt-7 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 md:p-9">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+        <div className="mt-7 rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4 md:p-9">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
             <div>
               <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(activeTab.title)}
