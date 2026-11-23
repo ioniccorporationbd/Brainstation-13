@@ -70,6 +70,24 @@ const PRODUCT_ROUTES = [
 
 const isProductRoute = (p: string) => PRODUCT_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
 
+const RESOURCE_ROUTES = [
+  "/about-us",
+  "/partners",
+  "/investor-relations",
+  "/media",
+  "/sustainability",
+  "/enterprise-grade-security",
+  "/blog",
+  "/case-studies",
+  "/resources",
+  "/career",
+  "/contact",
+  "/join-as-partner",
+  "/our-offices",
+];
+
+const isResourceRoute = (p: string) => RESOURCE_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+
 type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
 type NavItemBase = {
@@ -105,12 +123,17 @@ export default function Navbar() {
   const pathname = usePathname();
   const isCompactGutter =
     pathname === "/" ||
-    (!!pathname && (isServiceRoute(pathname) || isIndustryRoute(pathname) || isProductRoute(pathname)));
+    (!!pathname &&
+      (isServiceRoute(pathname) ||
+        isIndustryRoute(pathname) ||
+        isProductRoute(pathname) ||
+        isResourceRoute(pathname)));
 
   useEffect(() => {
     document.body.classList.toggle("svc-mobile", !!pathname && isServiceRoute(pathname));
     document.body.classList.toggle("ind-mobile", !!pathname && isIndustryRoute(pathname));
     document.body.classList.toggle("prod-mobile", !!pathname && isProductRoute(pathname));
+    document.body.classList.toggle("res-mobile", !!pathname && isResourceRoute(pathname));
   }, [pathname]);
   const { t } = useTranslation();
 

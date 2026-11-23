@@ -201,6 +201,18 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Resources routes (body.res-mobile toggled by the Navbar for every page in
+   the Navbar -> Resources mega-menu plus /our-offices). Same approved 5px
+   mobile gutter, scoped below 640px; footer keeps 36px. */
+@media (max-width: 639px) {
+  body.res-mobile .brand-container {
+    padding-inline: 5px;
+  }
+  body.res-mobile footer .brand-container {
+    padding-inline: 36px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */
