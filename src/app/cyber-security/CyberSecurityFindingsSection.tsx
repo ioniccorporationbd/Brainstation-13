@@ -30,9 +30,9 @@ const findings = [
 export default async function CyberSecurityFindingsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] text-black md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-black md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-10 max-sm:gap-4 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="lg:sticky lg:top-24">
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("The threat landscape")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our findings")}</h2>
@@ -51,7 +51,7 @@ export default async function CyberSecurityFindingsSection() {
             {findings.map((item, index) => (
               <li
                 key={item.source}
-                className="rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-7"
+                className="rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-7 max-sm:p-4"
               >
                 <div className="flex items-start gap-4">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[12.5px] font-bold text-[#c91f28]">
