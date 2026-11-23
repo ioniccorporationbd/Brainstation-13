@@ -168,6 +168,23 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Shared FAQ section — compact mobile spacing on Industries routes only
+   (markers live in components/global/GlobalFaqSection.tsx; no visual change
+   anywhere the body lacks .ind-mobile). */
+@media (max-width: 639px) {
+  body.ind-mobile .faq-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  body.ind-mobile .faq-list,
+  body.ind-mobile .faq-cta {
+    margin-top: 24px;
+  }
+  body.ind-mobile .faq-toggle {
+    padding: 14px 16px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */

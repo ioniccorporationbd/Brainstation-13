@@ -58,7 +58,7 @@ export default function GlobalFaqSection({
 
   return (
     <section
-      className={`bg-white py-[56px] text-[#0a0a0a] md:py-[104px] ${t(className)}`}
+      className={`faq-section bg-white py-[56px] text-[#0a0a0a] md:py-[104px] ${t(className)}`}
     >
       <div className="brand-container">
       <div className="mx-auto max-w-[880px]">
@@ -80,7 +80,7 @@ export default function GlobalFaqSection({
           ) : null}
         </div>
 
-        <div className="mt-12 space-y-3">
+        <div className="faq-list mt-12 space-y-3">
           {items.map((faq, index) => {
             const isOpen = openIndex === index;
 
@@ -101,7 +101,7 @@ export default function GlobalFaqSection({
                     )
                   }
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
+                  className="faq-toggle flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
                   <span className={softCards ? "text-[16px] font-medium leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[17px]" : "text-[16px] font-bold leading-[1.4] tracking-[-0.01em] text-[#0a0a0a] md:text-[18px]"}>
                     {t(faq.question)}
@@ -135,7 +135,7 @@ export default function GlobalFaqSection({
         </div>
 
         {ctaLabel && ctaHref ? (
-          <div className="mt-12 text-center">
+          <div className="faq-cta mt-12 text-center">
             <Link
               href={ctaHref}
               className="inline-flex rounded-full bg-[#c91f28] px-8 py-4 text-[16px] font-bold tracking-[-0.01em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#a71920]"
