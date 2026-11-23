@@ -16,14 +16,14 @@ const successPoints = [
 export default async function PharmaCustomerSuccessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Customer success")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Our customer success stories")}</h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="mt-10 grid grid-cols-1 items-center gap-10 max-sm:gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="group overflow-hidden rounded-2xl border border-[#ececec] bg-white">
             <img
               src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1400&auto=format&fit=crop"
@@ -47,7 +47,7 @@ export default async function PharmaCustomerSuccessSection() {
 
             <div className="mt-8 grid grid-cols-1 gap-4 border-t border-[#ececec] pt-7 sm:grid-cols-2">
               {successPoints.map((point) => (
-                <div key={point.label} className="rounded-xl border border-[#ececec] bg-[#fafafa] p-7">
+                <div key={point.label} className="rounded-xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4">
                   <p className="text-[15px] md:text-[16px] font-bold text-black">{t(point.label)}</p>
                   <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t(point.text)}</p>
                 </div>

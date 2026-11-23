@@ -11,7 +11,7 @@ const facts = [
 export default async function PharmaHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
       <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto max-sm:min-h-[44px] max-sm:px-5">{t("Industry · Pharma")}</span>
@@ -51,8 +51,8 @@ export default async function PharmaHeroSection() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+      <div className="mx-auto mt-14 brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-9 md:px-10 md:py-11 max-sm:pt-6 max-sm:pb-8">
+        <div className="grid grid-cols-1 gap-8 max-sm:gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Overview")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Pharma solutions at your comfort level")}</h2>
