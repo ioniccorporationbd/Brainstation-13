@@ -127,7 +127,7 @@ export default async function AboutUsPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Company · About us")}</span>
@@ -160,8 +160,8 @@ export default async function AboutUsPage() {
       </section>
 
       {/* Snapshot */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
-        <dl className="mx-auto grid brand-container grid-cols-2 gap-8 md:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10 max-sm:py-8">
+        <dl className="mx-auto grid brand-container grid-cols-2 gap-8 max-sm:gap-4 md:grid-cols-4">
           {snapshot.map((item) => (
             <div key={item.label}>
               <dt className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">
@@ -177,16 +177,16 @@ export default async function AboutUsPage() {
       </section>
 
       {/* Mission / Vision / Values */}
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("What guides us")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Mission, vision and our core values")}</h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-3">
             {pillars.map((pillar) => (
               <article
                 key={pillar.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <pillar.icon size={21} strokeWidth={1.9} />
@@ -204,17 +204,17 @@ export default async function AboutUsPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("What we do")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One partner, entire product lifecycle")}</h2>
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Strategy, engineering, modernisation and talent — delivered by the same team, so context never gets lost between vendors.")}</p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((item) => (
               <article
                 key={item.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
@@ -232,7 +232,7 @@ export default async function AboutUsPage() {
       </section>
 
       {/* How we work */}
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <div className="grid grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
@@ -263,7 +263,7 @@ export default async function AboutUsPage() {
               {principles.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                  className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
                 >
                   <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                     <item.icon size={19} strokeWidth={1.9} />
@@ -282,8 +282,8 @@ export default async function AboutUsPage() {
       </section>
 
       {/* Verified information note */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-12">
-        <div className="mx-auto flex brand-container flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-7 md:flex-row md:items-start md:gap-6">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-12 max-sm:py-8">
+        <div className="mx-auto flex brand-container flex-col gap-4 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 md:flex-row md:items-start md:gap-6">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
             <ShieldCheck size={21} strokeWidth={1.9} />
           </span>
@@ -300,9 +300,9 @@ export default async function AboutUsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("See how we'd approach it")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the problem, the constraints and the timeline. We will come back with a technical view and a phased plan.")}</p>
