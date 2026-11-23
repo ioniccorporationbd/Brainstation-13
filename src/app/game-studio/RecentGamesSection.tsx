@@ -72,7 +72,7 @@ export default async function RecentGamesSection() {
   return (
     <section
       id="recent-games"
-      className="w-full scroll-mt-24 bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]"
+      className="w-full scroll-mt-24 bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]"
     >
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
@@ -83,7 +83,7 @@ export default async function RecentGamesSection() {
           <p className="mt-4 text-[15px] font-medium leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("A selection of games and interactive experiences delivered by our team.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {games.map((game) => (
             <article
               key={game.title}

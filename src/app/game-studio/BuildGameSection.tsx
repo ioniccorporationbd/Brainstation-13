@@ -25,8 +25,8 @@ const steps = [
 export default async function BuildGameSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
-      <div className="grid brand-container items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+      <div className="grid brand-container items-center gap-12 max-sm:gap-4 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
         <div>
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our Approach")}</p>
 
@@ -38,7 +38,7 @@ export default async function BuildGameSection() {
             {steps.map((step) => (
               <article
                 key={step.title}
-                className="group flex items-start gap-5 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] sm:p-7"
+                className="group flex items-start gap-5 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] sm:p-7 max-sm:p-4"
               >
                 <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[14px] font-bold text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   {step.index}

@@ -37,7 +37,7 @@ const services = [
 export default async function OurServiceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("What We Do")}</p>
@@ -54,7 +54,7 @@ export default async function OurServiceSection() {
             return (
               <div
                 key={item.title}
-                className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14"
+                className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-2 lg:gap-14"
               >
                 <div
                   className={`relative w-full overflow-hidden rounded-2xl border border-[#ececec] bg-[#f7f7f7] ${

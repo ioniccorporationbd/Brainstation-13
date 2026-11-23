@@ -23,7 +23,7 @@ export default async function WhyChooseJourneySection() {
           {whyItems.map((item) => (
             <div
               key={item}
-              className="flex items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] md:p-7"
+              className="flex items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-5 transition-colors duration-300 hover:border-[#c91f28] md:p-7 max-sm:p-4"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">
                 <Gamepad2 size={18} strokeWidth={2.2} />

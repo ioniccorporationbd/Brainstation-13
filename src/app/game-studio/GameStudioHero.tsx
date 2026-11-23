@@ -11,7 +11,7 @@ const keywords = ["PC", "Console", "Mobile", "VR", "Multiplayer"];
 export default async function GameStudioHero() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+    <section className="w-full bg-white pb-[48px] max-sm:pb-7 pt-[56px] max-sm:pt-6 text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
       <div className="grid brand-container items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Game Studio")}</p>
