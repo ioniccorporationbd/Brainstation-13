@@ -25,7 +25,7 @@ export default async function CaseStudiesSectorsSection() {
             {sectors.map((item) => (
               <div
                 key={item.title}
-                className="group flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="group flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:text-center"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   <item.icon size={19} />
