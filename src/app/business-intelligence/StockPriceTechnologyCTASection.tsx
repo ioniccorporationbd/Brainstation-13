@@ -76,7 +76,7 @@ function ToolTrack({ prefix }: { prefix: string }) {
 export default function StockPriceTechnologyCTASection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white pt-[8px] pb-[52px] text-[#0a0a0a] md:pb-[96px]">
+    <section className="w-full overflow-hidden bg-white pt-[8px] pb-[52px] max-sm:pb-7 text-[#0a0a0a] md:pb-[96px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our Stack")}</p>

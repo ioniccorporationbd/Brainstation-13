@@ -4,7 +4,7 @@ import { getTranslator } from "@/i18n/server";
 export default async function StockPriceAboutSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Overview")}</p>
@@ -15,7 +15,7 @@ export default async function StockPriceAboutSection() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]">
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
               <Wrench size={22} strokeWidth={1.8} />
             </div>
@@ -25,7 +25,7 @@ export default async function StockPriceAboutSection() {
             <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">{t("It's quite challenging for humans to predict the most accurate and profitable time to buy and sell a stock without analyzing its previous history of the price timeline.")}</p>
           </article>
 
-          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]">
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
               <Lightbulb size={22} strokeWidth={1.8} />
             </div>
@@ -35,7 +35,7 @@ export default async function StockPriceAboutSection() {
             <p className="mt-3 text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] text-pretty">{t("Simple linear regression was used to predict the stock price ahead of time and the random seed was used to start the buying point, so individuals can buy and sell any stock with the most profitable action.")}</p>
           </article>
 
-          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]">
+          <article className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
               <TrendingUp size={22} strokeWidth={1.8} />
             </div>
