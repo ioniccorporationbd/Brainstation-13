@@ -134,6 +134,14 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Homepage mobile pilot — tighter side gutters below 640px only.
+   Scoped to .home-mobile (the homepage <main>) so no other route changes. */
+@media (max-width: 639px) {
+  .home-mobile .brand-container {
+    padding-inline: 20px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */

@@ -99,9 +99,9 @@ export default function HeroBannerSlider() {
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.title}>
             <div className="relative w-full overflow-hidden md:min-h-[650px]">
-              <div className="brand-container hero-grid pt-[76px] md:min-h-[650px]">
+              <div className="brand-container hero-grid pt-[76px] md:min-h-[650px] max-sm:pt-7">
                 {/* LEFT SIDE */}
-                <div className="relative z-20 flex flex-col justify-start pt-[34px]">
+                <div className="relative z-20 flex flex-col justify-start pt-[34px] max-sm:pt-1">
                   {/* Only the first slide owns the page <h1>; the other slides stay
                       visually identical but are not headings, so the document
                       keeps a single H1 for SEO / screen readers. */}
@@ -174,14 +174,14 @@ export default function HeroBannerSlider() {
                 </div>
 
                 {/* MOBILE / TABLET SMALL */}
-                <div className="relative z-20 mt-8 grid gap-4 pb-14 md:hidden">
+                <div className="relative z-20 mt-8 grid gap-4 pb-14 md:hidden max-sm:mt-5 max-sm:pb-9">
                   <div className="pointer-events-none absolute left-1/2 top-[420px] -z-10 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_11px)]" />
 
                   <div className="relative z-10 overflow-hidden rounded-[10px] shadow-[6px_6px_0_rgba(0,0,0,0.08)]">
                     <img
                       src={HERO_TOP_IMAGE}
                       alt={slide.title}
-                      className="h-[220px] w-full object-cover"
+                      className="h-[220px] w-full object-cover max-sm:h-[178px]"
                     />
                   </div>
 
@@ -189,7 +189,7 @@ export default function HeroBannerSlider() {
                     <img
                       src={HERO_BOTTOM_IMAGE}
                       alt={slide.title}
-                      className="h-[220px] w-full object-cover"
+                      className="h-[220px] w-full object-cover max-sm:h-[178px]"
                     />
                   </div>
 

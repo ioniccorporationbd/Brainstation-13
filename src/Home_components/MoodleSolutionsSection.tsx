@@ -22,7 +22,7 @@ const solutionItems = [
 export default async function MoodleSolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-11 sm:py-[80px] md:py-[104px] lg:py-[128px]">
+    <section className="w-full bg-white py-11 max-sm:py-8 sm:py-[80px] md:py-[104px] lg:py-[128px]">
       <div className="brand-container">
         {/* Header */}
         <div className="text-center">
@@ -45,7 +45,7 @@ export default async function MoodleSolutionsSection() {
         <div className="mx-auto mt-10 h-px w-full max-w-[1080px] bg-black/[0.08] lg:mt-16" />
 
         {/* Solution items */}
-        <div className="mt-9 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div className="mt-9 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8 lg:gap-12 max-sm:mt-6 max-sm:gap-5">
           {solutionItems.map((item) => (
             <div key={item.title}>
               <span

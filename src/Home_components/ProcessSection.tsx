@@ -52,8 +52,8 @@ const PROCESS_STEPS = [
 export default async function ProcessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-x-clip bg-white py-11 sm:py-[72px] md:py-[100px]">
-      <div className="brand-container grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20">
+    <section className="w-full overflow-x-clip bg-white py-11 max-sm:py-8 sm:py-[72px] md:py-[100px]">
+      <div className="brand-container grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.05fr] md:gap-16 lg:gap-20 max-sm:gap-7">
         {/* Intro */}
         <div className="max-sm:text-center">
           <h2 className="max-sm:mx-auto text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Process")}</h2>

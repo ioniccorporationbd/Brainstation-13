@@ -21,7 +21,7 @@ const STATS = [
 export default async function CaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full overflow-x-clip bg-white py-11 sm:py-[72px] md:py-[100px]">
+    <section className="w-full overflow-x-clip bg-white py-11 max-sm:py-8 sm:py-[72px] md:py-[100px]">
       <div className="brand-container">
         {/* Header */}
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between max-sm:items-center max-sm:text-center">

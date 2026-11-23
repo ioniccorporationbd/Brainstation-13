@@ -36,9 +36,9 @@ const aiStats = [
 export default async function AIDevelopmentExcellenceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-11 sm:py-[76px] md:py-[96px] lg:py-[118px]">
+    <section className="w-full bg-white py-11 max-sm:py-8 sm:py-[76px] md:py-[96px] lg:py-[118px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16 max-sm:gap-7">
           {/* Left: heading + intro + CTA */}
           <div className="max-sm:text-center">
             <h2 className="max-w-[420px] max-sm:mx-auto text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Excellence in AI Development")}</h2>
@@ -80,7 +80,7 @@ export default async function AIDevelopmentExcellenceSection() {
 
         {/* Bottom feature bar */}
         <div className="mt-10 border-t border-black/[0.08] pt-8 sm:mt-14 sm:pt-10">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:gap-12 max-sm:gap-6">
             <div className="border-l-2 border-primary pl-5">
               <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">{t("10X Faster Delivery")}</h3>
 

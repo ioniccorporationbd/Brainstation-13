@@ -61,7 +61,7 @@ const products: ProductItem[] = [
 export default async function ProductsSolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-11 sm:py-[72px] md:py-[92px] lg:py-[110px]">
+    <section className="w-full bg-white py-11 max-sm:py-8 sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Our Products & Solutions")}</h2>
@@ -69,7 +69,7 @@ export default async function ProductsSolutionsSection() {
           <p className="mx-auto mt-5 max-w-[720px] text-[16px] font-normal leading-[1.6] text-[#52525B] sm:text-[17px] text-pretty">{t("Accelerating Digital Transformation Across Banking, FinTech, EdTech, Pharma, and Enterprise Operations")}</p>
         </div>
 
-        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 sm:mt-14">
+        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 sm:mt-14 max-sm:mt-6">
           {products.map((product) => (
             <ProductCard key={t(product.title)} product={product} />
           ))}

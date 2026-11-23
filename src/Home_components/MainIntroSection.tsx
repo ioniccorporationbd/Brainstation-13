@@ -29,11 +29,11 @@ const introCards = [
 export default async function AboutSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-11 sm:py-[72px] md:py-[92px] lg:py-[110px]">
+    <section className="w-full bg-white py-11 max-sm:py-8 sm:py-[72px] md:py-[92px] lg:py-[110px]">
       <div className="brand-container">
         <h2 className="mx-auto max-w-[760px] text-center text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Powering Digital Transformation")}</h2>
 
-        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-3 sm:mt-12">
+        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-3 sm:mt-12 max-sm:mt-6">
           {introCards.map((card) => (
             <article
               key={card.title}
@@ -63,7 +63,7 @@ export default async function AboutSection() {
           ))}
         </div>
 
-        <div className="mt-9 flex justify-center sm:mt-12">
+        <div className="mt-9 flex justify-center sm:mt-12 max-sm:mt-7">
           <Link
             href="/about-us"
             className="inline-flex h-11 min-h-[44px] items-center justify-center rounded-full bg-primary px-6 text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:h-12 sm:px-8 sm:text-[15px]"

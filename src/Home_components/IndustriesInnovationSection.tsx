@@ -71,11 +71,11 @@ const industries: IndustryCard[] = [
 export default async function IndustriesInnovationSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-11 sm:py-[72px] md:py-[96px] lg:py-[112px]">
+    <section className="w-full bg-white py-11 max-sm:py-8 sm:py-[72px] md:py-[96px] lg:py-[112px]">
       <div className="brand-container">
         <h2 className="mx-auto max-w-[680px] text-center text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Innovation Across Industries")}</h2>
 
-        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7 sm:mt-[60px]">
+        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7 sm:mt-[60px] max-sm:mt-6">
           {industries.map((industry) => (
             <IndustryItem key={industry.title} industry={industry} />
           ))}

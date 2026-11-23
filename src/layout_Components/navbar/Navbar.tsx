@@ -199,7 +199,7 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className="mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-3 px-9 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-11 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-12 xl:h-[88px] 2xl:h-[100px]"
+          className={`mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-3 transition-all duration-300 min-[768px]:h-[72px] min-[768px]:px-11 min-[1200px]:h-[76px] min-[1200px]:gap-5 min-[1200px]:px-12 xl:h-[88px] 2xl:h-[100px] ${pathname === "/" ? "px-5 min-[640px]:px-9" : "px-9"}`}
         >
           <Link
             href="/"
