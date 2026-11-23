@@ -26,7 +26,7 @@ const benefits = [
 export default async function WhyDigitalTransformationMattersSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("The Business Case")}</p>
@@ -40,7 +40,7 @@ export default async function WhyDigitalTransformationMattersSection() {
           {benefits.map((item, index) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fdecec] text-[15px] font-bold text-[#c91f28]">
                 {String(index + 1).padStart(2, "0")}
