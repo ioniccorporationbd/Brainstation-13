@@ -73,7 +73,7 @@ export default async function MvpTraditionalVsAiSection() {
         <div className="mt-12 overflow-hidden rounded-2xl border border-[#ececec] bg-white">
           {/* Desktop Table */}
           <div className="hidden lg:block">
-            <div className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 border-b border-[#ececec] bg-[#fafafa] px-8 py-5">
+            <div className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 max-sm:gap-4 border-b border-[#ececec] bg-[#fafafa] px-8 py-5">
               <h3 className="uppercase tracking-normal text-[#52525B] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Aspect")}</h3>
               <h3 className="uppercase tracking-normal text-[#52525B] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Traditional Approach")}</h3>
               <h3 className="flex items-center gap-2 uppercase tracking-normal text-[#c91f28] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
@@ -86,7 +86,7 @@ export default async function MvpTraditionalVsAiSection() {
               return (
                 <div
                   key={row.aspect}
-                  className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 border-b border-[#f0f0f0] px-8 py-6 transition-colors duration-300 last:border-b-0 hover:bg-[#fafafa]"
+                  className="grid grid-cols-[0.9fr_1fr_1fr] gap-6 max-sm:gap-4 border-b border-[#f0f0f0] px-8 py-6 transition-colors duration-300 last:border-b-0 hover:bg-[#fafafa]"
                 >
                   <div className="flex items-center gap-3">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28]">

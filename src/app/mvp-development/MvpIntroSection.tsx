@@ -7,7 +7,7 @@ const highlights = ["Validate faster", "Reduce build risk", "Launch lean"];
 export default async function MvpIntroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
@@ -19,7 +19,7 @@ export default async function MvpIntroSection() {
         </div>
 
         {/* Image + Points */}
-        <div className="mt-14 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 items-center gap-10 max-sm:gap-4 lg:grid-cols-2">
           <div className="group relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#ececec] md:h-[420px]">
             <Image
               src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1400&auto=format&fit=crop"

@@ -4,7 +4,7 @@ import { getTranslator } from "@/i18n/server";
 export default async function MvpDevelopmentHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] max-sm:pt-6 max-sm:pb-8 lg:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-14 lg:grid-cols-[1fr_0.9fr]">
         {/* Left Content */}
         <div>

@@ -168,7 +168,7 @@ const workflowSteps: WorkflowStep[] = [
 export default async function MvpAiDrivenSdlcProcessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[820px] text-center">
@@ -187,7 +187,7 @@ export default async function MvpAiDrivenSdlcProcessSection() {
             return (
               <article
                 key={step.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
