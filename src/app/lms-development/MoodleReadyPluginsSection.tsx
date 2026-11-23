@@ -92,7 +92,7 @@ export default function MoodleReadyPluginsSection() {
   const plugin = plugins[active];
 
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Extensions")}</p>
@@ -120,8 +120,8 @@ export default function MoodleReadyPluginsSection() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
+        <div className="mt-8 rounded-2xl border border-[#ececec] bg-white p-7 md:p-10 max-sm:p-5">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
             <div>
               <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(plugin.title)}
