@@ -63,6 +63,13 @@ const INDUSTRY_ROUTES = [
 
 const isIndustryRoute = (p: string) => INDUSTRY_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
 
+const PRODUCT_ROUTES = [
+  "/shikkha-chat",
+  "/testimonials",
+];
+
+const isProductRoute = (p: string) => PRODUCT_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+
 type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
 type NavItemBase = {
@@ -97,11 +104,13 @@ export default function Navbar() {
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
   const isCompactGutter =
-    pathname === "/" || (!!pathname && (isServiceRoute(pathname) || isIndustryRoute(pathname)));
+    pathname === "/" ||
+    (!!pathname && (isServiceRoute(pathname) || isIndustryRoute(pathname) || isProductRoute(pathname)));
 
   useEffect(() => {
     document.body.classList.toggle("svc-mobile", !!pathname && isServiceRoute(pathname));
     document.body.classList.toggle("ind-mobile", !!pathname && isIndustryRoute(pathname));
+    document.body.classList.toggle("prod-mobile", !!pathname && isProductRoute(pathname));
   }, [pathname]);
   const { t } = useTranslation();
 

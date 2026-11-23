@@ -185,6 +185,18 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Products routes (body.prod-mobile toggled by the Navbar for the active
+   Products menu pages: /shikkha-chat and the testimonial pages). Same
+   approved homepage mobile gutter; scoped below 640px, footer excluded. */
+@media (max-width: 639px) {
+  body.prod-mobile .brand-container {
+    padding-inline: 5px;
+  }
+  body.prod-mobile footer .brand-container {
+    padding-inline: 36px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */
