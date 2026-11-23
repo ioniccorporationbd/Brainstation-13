@@ -24,7 +24,7 @@ const modules = [
 export default async function ErpDevelopmentModulesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[700px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Coverage")}</p>
@@ -36,7 +36,7 @@ export default async function ErpDevelopmentModulesSection() {
           {modules.map((item) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-7"
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-5 transition-colors duration-200 hover:border-[#c91f28]/50 sm:p-7 max-sm:p-4"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={19} />

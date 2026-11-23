@@ -3,9 +3,9 @@ import { getTranslator } from "@/i18n/server";
 export default async function ErpDevelopmentIntroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 pt-[8px] md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 max-sm:gap-4 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
               src="https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1200&auto=format&fit=crop"
