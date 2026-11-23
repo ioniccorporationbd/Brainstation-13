@@ -26,9 +26,9 @@ const steps = [
 export default async function CloudSolutionsProcessSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-10 max-sm:gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("How we deliver")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-4 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("A staged path, not a big-bang migration")}</h2>
@@ -47,7 +47,7 @@ export default async function CloudSolutionsProcessSection() {
             {steps.map((item) => (
               <li
                 key={item.step}
-                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:text-center"
+                className="group flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:text-center"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[14.5px] font-bold text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                   {t(item.step)}

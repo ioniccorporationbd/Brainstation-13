@@ -10,7 +10,7 @@ const stats = [
 export default async function CloudSolutionsStatsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {stats.map((stat) => (

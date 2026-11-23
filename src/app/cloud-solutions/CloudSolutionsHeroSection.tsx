@@ -11,7 +11,7 @@ const chips = [
 export default async function CloudSolutionsHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[88px] md:pt-[80px]">
+    <section className="relative overflow-hidden bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[88px] md:pt-[80px]">
       <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Service · Cloud Solutions")}</span>
