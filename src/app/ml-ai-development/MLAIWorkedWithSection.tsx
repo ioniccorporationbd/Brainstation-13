@@ -66,7 +66,7 @@ function ClientTrack({ prefix }: { prefix: string }) {
 export default function MLAIWorkedWithSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full overflow-hidden bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our Clients")}</p>

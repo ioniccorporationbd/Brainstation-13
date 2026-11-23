@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function MLAIHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] max-sm:pt-6 max-sm:pb-8">
       <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-16">
         {/* Left - Text */}
         <div>

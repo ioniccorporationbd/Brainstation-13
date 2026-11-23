@@ -40,7 +40,7 @@ const services: Service[] = [
 export default async function MLAIServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         {/* Centered Heading */}
         <div className="mx-auto max-w-[760px] text-center">
@@ -59,7 +59,7 @@ export default async function MLAIServicesSection() {
             return (
               <article
                 key={service.title}
-                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full items-start gap-4 rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={22} strokeWidth={1.8} />
