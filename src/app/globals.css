@@ -168,19 +168,23 @@ html[lang="bn-BD"] h4 {
   }
 }
 
-/* Shared FAQ section — compact mobile spacing on Industries routes only
-   (markers live in components/global/GlobalFaqSection.tsx; no visual change
-   anywhere the body lacks .ind-mobile). */
+/* Shared FAQ section — compact mobile spacing on Industries and Products
+   routes only (markers live in components/global/GlobalFaqSection.tsx; no
+   visual change anywhere the body carries neither scope class). */
 @media (max-width: 639px) {
-  body.ind-mobile .faq-section {
+  body.ind-mobile .faq-section,
+  body.prod-mobile .faq-section {
     padding-top: 32px;
     padding-bottom: 32px;
   }
   body.ind-mobile .faq-list,
-  body.ind-mobile .faq-cta {
+  body.ind-mobile .faq-cta,
+  body.prod-mobile .faq-list,
+  body.prod-mobile .faq-cta {
     margin-top: 24px;
   }
-  body.ind-mobile .faq-toggle {
+  body.ind-mobile .faq-toggle,
+  body.prod-mobile .faq-toggle {
     padding: 14px 16px;
   }
 }
