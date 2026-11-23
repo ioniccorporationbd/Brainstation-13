@@ -31,9 +31,9 @@ const features = [
 export default async function HoloGuideSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+    <section className="w-full bg-white pb-[52px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[96px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-12 max-sm:gap-4 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
           {/* Left content */}
           <div>
             <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Featured Product")}</p>

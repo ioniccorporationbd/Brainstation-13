@@ -5,9 +5,9 @@ import { Phone } from "lucide-react";
 export default async function FinalPickSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-center gap-8 rounded-2xl border border-[#ececec] bg-white p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 rounded-2xl border border-[#ececec] bg-white p-8 sm:p-10 max-sm:p-5 lg:grid-cols-[1fr_auto] lg:gap-14">
           <div>
             <p className="mb-3 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Let's Build")}</p>
 

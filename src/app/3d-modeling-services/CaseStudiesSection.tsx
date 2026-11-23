@@ -15,7 +15,7 @@ const studies = [
 export default async function CaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Case Studies")}</p>
@@ -40,7 +40,7 @@ export default async function CaseStudiesSection() {
           ))}
         </div>
 
-        <div className="mt-12 grid items-center gap-10 overflow-hidden rounded-2xl border border-[#ececec] bg-white p-6 sm:p-8 lg:grid-cols-[0.95fr_1fr] lg:gap-14 lg:p-10">
+        <div className="mt-12 grid items-center gap-10 max-sm:gap-4 overflow-hidden rounded-2xl border border-[#ececec] bg-white p-6 sm:p-8 lg:grid-cols-[0.95fr_1fr] lg:gap-14 lg:p-10 max-sm:p-5">
           <div className="relative aspect-[4/3.6] w-full overflow-hidden rounded-xl bg-[#f7f7f7]">
             <Image
               src={CASE_IMG}
@@ -65,7 +65,7 @@ export default async function CaseStudiesSection() {
             >{t("View Case Study")}<ArrowRight size={16} strokeWidth={2.2} />
             </Link>
 
-            <div className="mt-8 grid grid-cols-2 gap-8 border-t border-[#ececec] pt-7">
+            <div className="mt-8 grid grid-cols-2 gap-8 max-sm:gap-4 border-t border-[#ececec] pt-7">
               <div>
                 <h4 className="text-[clamp(27px,8.0vw,34px)] font-bold tracking-[-0.02em] text-[#c91f28] text-balance leading-[1.4]">
                   80%

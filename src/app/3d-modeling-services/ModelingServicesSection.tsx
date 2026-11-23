@@ -46,7 +46,7 @@ const services: Service[] = [
 export default async function ModelingServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[780px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("What We Build")}</p>
@@ -56,7 +56,7 @@ export default async function ModelingServicesSection() {
           <p className="mx-auto mt-5 max-w-[640px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Engineering-accurate 3D visualizations tailored for the world's most demanding manufacturing and engineering sectors.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-2">
           {services.map((item) => {
             const Icon = item.icon;
 
