@@ -53,7 +53,7 @@ const caseStudies: CaseStudy[] = [
 export default async function DataCaseStudiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[720px]">
@@ -70,7 +70,7 @@ export default async function DataCaseStudiesSection() {
           >{t("See all Case Studies")}</Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((item) => (
             <article
               key={item.title}
