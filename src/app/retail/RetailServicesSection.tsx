@@ -62,7 +62,7 @@ const services: ServiceItem[] = [
 export default async function RetailServicesSection() {
   const { t } = await getTranslator();
   return (
-    <section id="services" className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section id="services" className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="mx-auto brand-container">
         <div className="max-w-[720px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Services")}</p>
@@ -74,7 +74,7 @@ export default async function RetailServicesSection() {
           {services.map((item) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+              className="group flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28] transition-colors duration-200 group-hover:bg-[#c91f28] group-hover:text-white">
                 <item.icon size={21} />
