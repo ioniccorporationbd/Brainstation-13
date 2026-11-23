@@ -28,7 +28,7 @@ const capabilities = [
 export default async function BlockchainExcellenceSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
+    <section className="w-full bg-[#fafafa] pb-[56px] max-sm:pb-7 pt-[56px] max-sm:pt-6 text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
       <div className="brand-container">
         <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
@@ -60,7 +60,7 @@ export default async function BlockchainExcellenceSection() {
             {capabilities.map((item, index) => (
               <article
                 key={item.title}
-                className="group rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28] md:p-7"
+                className="group rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28] md:p-7 max-sm:p-4"
               >
                 <span className="text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
                   {String(index + 1).padStart(2, "0")}

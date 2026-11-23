@@ -36,7 +36,7 @@ const steps = [
 export default async function BlockchainGlobalAchievementsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-[#fafafa] pb-[56px] pt-[56px] text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
+    <section className="w-full bg-[#fafafa] pb-[56px] max-sm:pb-7 pt-[56px] max-sm:pt-6 text-[#0a0a0a] md:pb-[104px] md:pt-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Our Process")}</p>
@@ -49,14 +49,14 @@ export default async function BlockchainGlobalAchievementsSection() {
         <div className="relative mt-12">
           <div className="pointer-events-none absolute left-0 right-0 top-[34px] hidden h-px bg-[#ececec] lg:block" />
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
 
               return (
                 <article
                   key={step.title}
-                  className="group relative flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                  className="group relative flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
                 >
                   <div className="flex items-center gap-3">
                     <span className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#ececec] bg-white text-[#c91f28] transition-colors duration-300 group-hover:border-[#c91f28]">

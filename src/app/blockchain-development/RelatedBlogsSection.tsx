@@ -34,9 +34,9 @@ const relatedPosts = [
 export default async function RelatedBlogsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[112px]">
       <div className="brand-container">
-        <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+        <div className="grid gap-8 max-sm:gap-4 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div>
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Insights")}</p>
 
@@ -53,7 +53,7 @@ export default async function RelatedBlogsSection() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {relatedPosts.map((post) => (
             <article key={post.title} className="group h-full">
               <Link

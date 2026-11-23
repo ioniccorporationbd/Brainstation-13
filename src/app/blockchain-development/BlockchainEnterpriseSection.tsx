@@ -73,7 +73,7 @@ export default function BlockchainEnterpriseSection() {
   const activeItem = enterpriseItems[activeIndex];
 
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Industry Solutions")}</p>
@@ -100,8 +100,8 @@ export default function BlockchainEnterpriseSection() {
           ))}
         </div>
 
-        <div className="mx-auto mt-8 max-w-[1100px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-8 md:px-12 md:py-12">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_0.95fr]">
+        <div className="mx-auto mt-8 max-w-[1100px] rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-8 md:px-12 md:py-12 max-sm:py-8">
+          <div className="grid grid-cols-1 items-center gap-10 max-sm:gap-4 lg:grid-cols-[1fr_0.95fr]">
             <div>
               <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 {t(activeItem.title)}

@@ -65,7 +65,7 @@ const blockchainInfrastructureServices = [
 export default async function BlockchainInfrastructureSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[760px]">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Infrastructure")}</p>
@@ -82,7 +82,7 @@ export default async function BlockchainInfrastructureSection() {
             return (
               <article
                 key={service.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={20} strokeWidth={2.1} />
@@ -99,7 +99,7 @@ export default async function BlockchainInfrastructureSection() {
             );
           })}
 
-          <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 text-center">
+          <article className="flex h-full flex-col justify-center rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4 text-center">
             <h3 className="text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Need Blockchain Developers?")}</h3>
 
             <Link

@@ -13,7 +13,7 @@ const keywords = [
 export default async function BlockchainHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[48px] pt-[56px] text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
+    <section className="w-full bg-white pb-[48px] max-sm:pb-7 pt-[56px] max-sm:pt-6 text-[#0a0a0a] md:pb-[88px] md:pt-[72px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-5 inline-flex rounded-full bg-[#fdecec] px-4 py-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] mx-auto">{t("Blockchain / Web3 Solutions")}</p>
