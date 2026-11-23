@@ -82,7 +82,7 @@ export default async function PartnersPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Company · Partners")}</span>
@@ -115,17 +115,17 @@ export default async function PartnersPage() {
       </section>
 
       {/* Partnership models */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Ways we work together")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Four partnership models")}</h2>
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each model is a working arrangement, not a marketing tier. The terms, responsibilities and reporting follow what the programme actually needs.")}</p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {models.map((model) => (
               <article
                 key={model.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <model.icon size={21} strokeWidth={1.9} />
@@ -143,14 +143,14 @@ export default async function PartnersPage() {
       </section>
 
       {/* Ecosystem */}
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Ecosystem")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Where we plug in")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("We integrate with the systems your business already depends on instead of replacing them. The specific vendors, versions and support terms are agreed per project.")}</p>
 
-            <div className="mt-8 rounded-xl border border-[#ececec] bg-[#fafafa] p-7">
+            <div className="mt-8 rounded-xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4">
               <h3 className="flex items-center gap-2 text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                 <ShieldCheck size={18} className="text-[#c91f28]" />{t("Verified information only")}</h3>
               <p className="mt-2 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Partner logos, tier levels and certification badges previously published on this page could not be verified, so they are not shown. Ask for the current partner and certification list for a specific platform and you will receive it with documentation.")}</p>
@@ -199,16 +199,16 @@ export default async function PartnersPage() {
       </section>
 
       {/* Principles */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Ground rules")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How we keep partnerships honest")}</h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 md:grid-cols-3">
             {principles.map((item) => (
               <article
                 key={item.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
               >
                 <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(item.title)}
@@ -223,9 +223,9 @@ export default async function PartnersPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <h2 className="max-sm:mx-auto max-sm:text-center text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Partnering with us on a programme?")}</h2>
               <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Tell us the scope, the platform and who else is involved. We will confirm what we can own and how the interfaces are managed.")}</p>
