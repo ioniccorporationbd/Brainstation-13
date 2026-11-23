@@ -117,8 +117,8 @@ export default async function InvestorRelationsPage() {
       </section>
 
       {/* At a glance */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-10">
-        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-10 max-sm:py-8">
+        <dl className="mx-auto grid brand-container grid-cols-1 gap-8 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {atAGlance.map((item) => (
             <div key={item.label}>
               <dt className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-normal text-[#8a8f98]">
@@ -134,17 +134,17 @@ export default async function InvestorRelationsPage() {
       </section>
 
       {/* Governance */}
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Governance")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How the company is governed")}</h2>
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The principles below describe how decisions are taken and reviewed. The underlying policies are available to shareholders and counterparties on request.")}</p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2">
             {governance.map((item) => (
               <article
                 key={item.title}
-                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center"
+                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
@@ -164,14 +164,14 @@ export default async function InvestorRelationsPage() {
       </section>
 
       {/* Reports */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto grid brand-container grid-cols-1 max-sm:gap-8 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Reports & disclosures")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Documents Shared, Not Published")}</h2>
             <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("As a privately held company we do not publish statutory accounts or quarterly results on the website. If you are a shareholder, lender, auditor or counterparty, these are provided under a confidentiality agreement with the latest period available.")}</p>
 
-            <div className="mt-8 flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-3 max-sm:text-center">
+            <div className="mt-8 flex items-start gap-4 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 max-sm:flex-col max-sm:items-center max-sm:gap-3 max-sm:text-center">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                 <ShieldCheck size={19} strokeWidth={1.9} />
               </span>
@@ -179,7 +179,7 @@ export default async function InvestorRelationsPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
+          <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8 max-sm:p-4">
             <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Frequently requested documents")}</h3>
             <ul className="mt-5 space-y-3.5">
               {requests.map((item) => (
@@ -201,9 +201,9 @@ export default async function InvestorRelationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">
                 <Mail size={15} />{t("Investor contact")}</p>
