@@ -11,7 +11,7 @@ const stack = [".NET Core", "Angular", "Flutter"];
 export default async function InsuranceTechnologySolutionsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] pt-[8px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Case Study")}</p>
@@ -32,7 +32,7 @@ export default async function InsuranceTechnologySolutionsSection() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col justify-center px-6 py-10 sm:px-10 lg:px-12 lg:py-12">
+          <div className="flex flex-col justify-center px-6 py-10 max-sm:py-8 sm:px-10 lg:px-12 lg:py-12">
             <h3 className="max-w-[480px] text-[#0a0a0a] font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("End-to-End Digital Insurance")}</h3>
 
             <p className="max-sm:mx-auto max-sm:text-center mt-5 max-w-[520px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("A modular insurtech platform for leading insurers, modernizing claims processing, policy administration and agent operations. The end-to-end solution automates the claim lifecycle, provides a self-service customer app and digitizes agent onboarding.")}</p>

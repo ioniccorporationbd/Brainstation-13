@@ -38,7 +38,7 @@ const solveBlocks: SolveBlock[] = [
 export default async function InsuranceWhatWeSolveSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+    <section className="w-full bg-white pb-[52px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[96px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Challenges & Approach")}</p>

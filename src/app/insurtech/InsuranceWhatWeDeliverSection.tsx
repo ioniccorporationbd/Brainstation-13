@@ -71,8 +71,8 @@ export default function InsuranceWhatWeDeliverSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-white pb-[52px] pt-[8px] text-[#0a0a0a] md:pb-[96px]">
-      <div className="grid brand-container grid-cols-1 gap-12 lg:grid-cols-[380px_1fr] lg:gap-16">
+    <section className="w-full bg-white pb-[52px] max-sm:pb-7 pt-[8px] text-[#0a0a0a] md:pb-[96px]">
+      <div className="grid brand-container grid-cols-1 gap-12 max-sm:gap-4 lg:grid-cols-[380px_1fr] lg:gap-16">
         {/* Left title */}
         <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
           <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Deliverables")}</p>
