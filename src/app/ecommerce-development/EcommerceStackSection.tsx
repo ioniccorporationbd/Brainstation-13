@@ -27,9 +27,9 @@ const stackPoints = [
 export default async function EcommerceStackSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[104px]">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[104px]">
       <div className="brand-container">
-        <div className="rounded-2xl border border-[#ececec] bg-white p-7 md:p-10">
+        <div className="rounded-2xl border border-[#ececec] bg-white p-7 md:p-10 max-sm:p-5">
           <div className="max-w-[640px]">
             <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Architecture")}</p>
 

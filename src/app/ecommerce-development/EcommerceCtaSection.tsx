@@ -5,8 +5,8 @@ import { ArrowRight } from "lucide-react";
 export default async function EcommerceCtaSection() {
   const { t } = await getTranslator();
   return (
-    <section className="w-full bg-white pb-[56px] text-[#0a0a0a] md:pb-[112px]">
-      <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 text-center md:px-16 md:py-16">
+    <section className="w-full bg-white pb-[56px] max-sm:pb-7 text-[#0a0a0a] md:pb-[112px]">
+      <div className="brand-container overflow-hidden rounded-2xl border border-[#ececec] bg-[#fafafa] px-8 py-12 max-sm:py-8 text-center md:px-16 md:py-16">
         <p className="mb-4 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Next Step")}</p>
 
         <h2 className="max-sm:mx-auto max-sm:text-center mx-auto max-w-[720px] text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Replatforming or launching?")}</h2>
