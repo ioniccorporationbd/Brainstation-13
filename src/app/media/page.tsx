@@ -77,7 +77,7 @@ export default async function MediaPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
+      <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">{t("Company · Media")}</span>
@@ -110,17 +110,17 @@ export default async function MediaPage() {
       </section>
 
       {/* Resources */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] md:py-[104px]">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Media resources")}</p>
           <h2 className="max-sm:mx-auto max-sm:text-center mt-3 max-w-[720px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("What we provide, and how to ask")}</h2>
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[620px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Requests are handled editorially rather than through a marketing funnel — you get a direct answer, not a brochure.")}</p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2">
             {resources.map((item) => (
               <article
                 key={item.title}
-                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center"
+                className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <item.icon size={21} strokeWidth={1.9} />
@@ -140,7 +140,7 @@ export default async function MediaPage() {
       </section>
 
       {/* Topics */}
-      <section className="bg-white py-[56px] md:py-[104px]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
         <div className="mx-auto brand-container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -151,11 +151,11 @@ export default async function MediaPage() {
               <Sparkles size={16} className="text-[#c91f28]" />{t("Briefings arranged on request")}</span>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {topics.map((topic) => (
               <article
                 key={topic.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:text-center"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:text-center"
               >
                 <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
                   {t(topic.title)}
@@ -170,9 +170,9 @@ export default async function MediaPage() {
       </section>
 
       {/* Verified note + press kit */}
-      <section className="border-y border-[#ececec] bg-[#fafafa] py-12">
-        <div className="mx-auto grid brand-container grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
+      <section className="border-y border-[#ececec] bg-[#fafafa] py-12 max-sm:py-8">
+        <div className="mx-auto grid brand-container grid-cols-1 gap-6 max-sm:gap-4 lg:grid-cols-2">
+          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
               <ShieldCheck size={21} strokeWidth={1.9} />
             </span>
@@ -182,7 +182,7 @@ export default async function MediaPage() {
             </div>
           </div>
 
-          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
+          <div className="flex gap-5 rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:text-center">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
               <FileText size={21} strokeWidth={1.9} />
             </span>
@@ -200,9 +200,9 @@ export default async function MediaPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-[56px] md:py-[104px]">
-        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="bg-white py-[56px] max-sm:py-8 md:py-[104px]">
+        <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
+          <div className="grid grid-cols-1 items-center gap-8 max-sm:gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:flex max-sm:w-fit max-sm:mx-auto">
                 <Mail size={15} />{t("Media contact")}</p>
