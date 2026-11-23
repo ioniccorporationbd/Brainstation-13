@@ -5,9 +5,9 @@ const pillars = ["Accuracy", "Completeness", "Consistency", "Accessibility"];
 export default async function DataScienceBusinessIntelligenceIntroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] pt-[8px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 pt-[8px] md:pb-[104px]">
       <div className="brand-container">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-10 max-sm:gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("The pipeline, end to end")}</p>
             <h2 className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[560px] text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One partner for every data stage")}</h2>

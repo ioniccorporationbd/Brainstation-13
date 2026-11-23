@@ -12,7 +12,7 @@ const stages = [
 export default async function DataSciencePipelineSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
         <div className="max-w-[680px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("End to end")}</p>
@@ -20,7 +20,7 @@ export default async function DataSciencePipelineSection() {
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Every stage is designed, instrumented and handed over — no step left to a spreadsheet.")}</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+        <div className="mt-10 grid grid-cols-1 items-start gap-8 max-sm:gap-4 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
           <ol className="space-y-3">
             {stages.map((stage, index) => (
               <li

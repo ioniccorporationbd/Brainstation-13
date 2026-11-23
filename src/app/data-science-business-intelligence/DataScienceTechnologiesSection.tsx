@@ -18,7 +18,7 @@ const tech = [
 export default async function DataScienceTechnologiesSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] md:pb-[104px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 md:pb-[104px]">
       <div className="brand-container">
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
           <div>
