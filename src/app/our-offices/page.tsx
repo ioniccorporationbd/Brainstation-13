@@ -115,14 +115,14 @@ export default async function OurOfficesPage() {
               return (
                 <article
                   key={item.title}
-                  className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 md:p-7"
+                  className="rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 hover:border-[#c91f28]/50 max-sm:text-center md:p-7"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 max-sm:flex-col max-sm:items-center max-sm:gap-2.5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={21} strokeWidth={1.9} />
                     </span>
                     <div>
-                      <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">
+                      <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] max-sm:text-center sm:text-[20px] md:text-[22px] lg:text-[22px]">
                         {t(item.title)}
                       </h3>
                       <p className="text-[11.5px] font-bold uppercase tracking-normal text-[#52525B] text-pretty">
