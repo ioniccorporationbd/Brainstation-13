@@ -60,7 +60,7 @@ export default async function ShikkhaWorkflowsSection() {
             return (
               <li key={flow.title} className="relative">
                 <div className="rounded-xl border border-[#ececec] bg-white p-6 md:p-7">
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-4 max-sm:flex-col max-sm:items-center max-sm:text-center">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                       <Icon size={21} strokeWidth={1.9} />
                     </span>
