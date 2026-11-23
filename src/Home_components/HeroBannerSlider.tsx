@@ -99,7 +99,7 @@ export default function HeroBannerSlider() {
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.title}>
             <div className="relative w-full overflow-hidden md:min-h-[650px]">
-              <div className="brand-container hero-grid pt-[76px] md:min-h-[650px] max-sm:pt-7">
+              <div className="brand-container hero-grid pt-[76px] md:min-h-[650px] max-sm:pt-[23px]">
                 {/* LEFT SIDE */}
                 <div className="relative z-20 flex flex-col justify-start pt-[34px] max-sm:pt-1">
                   {/* Only the first slide owns the page <h1>; the other slides stay

@@ -52,11 +52,11 @@ export default async function AIDevelopmentExcellenceSection() {
           </div>
 
           {/* Right: statistics as a 2x2 card grid */}
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
+          <div className="grid grid-cols-1 gap-5 max-sm:gap-3.5 sm:grid-cols-2 lg:gap-6">
             {aiStats.map((item) => (
               <div
                 key={item.title}
-                className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
+                className="flex h-full flex-col rounded-[16px] border border-black/[0.08] bg-white p-5 max-sm:p-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:p-7"
               >
                 <span className="text-[clamp(27px,8.0vw,34px)] font-semibold leading-none tracking-[-0.02em] text-primary sm:text-[44px]">
                   {t(item.number)}

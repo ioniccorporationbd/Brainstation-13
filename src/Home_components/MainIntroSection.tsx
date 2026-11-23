@@ -33,7 +33,7 @@ export default async function AboutSection() {
       <div className="brand-container">
         <h2 className="mx-auto max-w-[760px] text-center text-[clamp(24px,6.9vw,29px)] font-semibold leading-[1.12] tracking-[-0.03em] text-[#0A0A0A] sm:text-[36px] md:text-[40px] lg:text-[44px] text-balance">{t("Powering Digital Transformation")}</h2>
 
-        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-3 sm:mt-12 max-sm:mt-6">
+        <div className="mt-9 grid grid-cols-1 gap-5 max-sm:gap-3.5 md:grid-cols-3 sm:mt-12 max-sm:mt-6">
           {introCards.map((card) => (
             <article
               key={card.title}
@@ -50,7 +50,7 @@ export default async function AboutSection() {
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
+              <div className="flex flex-1 flex-col p-5 max-sm:p-4 sm:p-6">
                 <h3 className="text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#0A0A0A] sm:text-[20px] md:text-[22px] lg:text-[22px] text-balance">
                   {t(card.title)}
                 </h3>

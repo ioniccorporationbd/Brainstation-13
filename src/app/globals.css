@@ -134,11 +134,11 @@ html[lang="bn-BD"] h4 {
   }
 }
 
-/* Homepage mobile pilot — tighter side gutters below 640px only.
+/* Homepage mobile pilot — ultra-compact side gutters (5px) below 640px only.
    Scoped to .home-mobile (the homepage <main>) so no other route changes. */
 @media (max-width: 639px) {
   .home-mobile .brand-container {
-    padding-inline: 20px;
+    padding-inline: 5px;
   }
 }
 

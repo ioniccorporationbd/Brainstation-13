@@ -62,7 +62,7 @@ export default async function ProcessSection() {
 
           <p className="mt-5 max-w-[500px] max-sm:mx-auto text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("We blend human expertise with AI precision — delivering faster outcomes without compromising security.")}</p>
 
-          <button className="mt-7 rounded-full bg-[#C91F28] px-5 py-2.5 text-[14px] max-sm:mx-auto max-sm:min-h-[44px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
+          <button className="mt-7 rounded-full bg-[#C91F28] max-sm:min-h-11 px-5 py-2.5 text-[14px] max-sm:mx-auto max-sm:min-h-[44px] font-semibold text-white transition-colors duration-200 hover:bg-[#A71920]">{t("Schedule a Call")}</button>
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-[#E7E7EA] md:mt-16">
             <Image
@@ -96,7 +96,7 @@ export default async function ProcessSection() {
                 </span>
 
                 {/* card */}
-                <div className="group mx-auto w-full rounded-2xl border border-[#E7E7EA] bg-white p-5 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_18px_40px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-6">
+                <div className="group mx-auto w-full rounded-2xl border border-[#E7E7EA] bg-white p-5 max-sm:p-4 shadow-[0_1px_2px_rgba(10,10,10,0.04)] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-[#C91F28] hover:shadow-[0_18px_40px_rgba(201,31,40,0.16)] motion-reduce:transition-none motion-reduce:hover:scale-100 md:p-6">
                   <div className="flex items-center gap-3 max-sm:justify-center">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#C91F28]/10 text-[20px] leading-none">
                       {item.icon}

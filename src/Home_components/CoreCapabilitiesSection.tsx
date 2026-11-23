@@ -99,14 +99,14 @@ export default async function CoreCapabilitiesSection() {
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 text-[15px] font-semibold text-primary transition-colors hover:text-primary-hover md:pb-2 max-sm:min-h-[44px]"
+            className="inline-flex items-center gap-3 max-sm:min-h-11 text-[15px] font-semibold text-primary transition-colors hover:text-primary-hover md:pb-2 max-sm:min-h-[44px]"
           >{t("Explore All Services")}<span aria-hidden="true" className="text-[18px] leading-none">
               →
             </span>
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-5 sm:mt-12 md:grid-cols-2 md:gap-6 xl:auto-rows-[270px] xl:grid-cols-3 xl:gap-7 max-sm:mt-6">
+        <div className="mt-8 grid gap-5 max-sm:gap-3.5 sm:mt-12 md:grid-cols-2 md:gap-6 xl:auto-rows-[270px] xl:grid-cols-3 xl:gap-7 max-sm:mt-6">
           {capabilities.map((item) => (
             <CapabilityCard key={item.title} item={item} />
           ))}

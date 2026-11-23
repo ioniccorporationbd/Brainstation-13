@@ -82,7 +82,7 @@ export default async function CaseStudiesSection() {
               >{t("View Case Study")}<span aria-hidden>→</span>
               </Link>
 
-              <div className="mt-8 grid grid-cols-2 gap-5 border-t border-[#F0F0F2] pt-6 sm:mt-9 sm:gap-6 sm:pt-7">
+              <div className="mt-8 grid grid-cols-2 gap-5 max-sm:gap-3.5 border-t border-[#F0F0F2] pt-6 sm:mt-9 sm:gap-6 sm:pt-7">
                 {STATS.map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[clamp(29px,8.4vw,36px)] font-semibold leading-none tracking-[-0.03em] text-[#C91F28] md:text-[44px]">
