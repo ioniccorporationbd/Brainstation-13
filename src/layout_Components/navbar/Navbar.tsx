@@ -46,6 +46,23 @@ const SERVICE_ROUTES = [
 
 const isServiceRoute = (p: string) => SERVICE_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
 
+const INDUSTRY_ROUTES = [
+  "/industries",
+  "/fintech",
+  "/pharma",
+  "/telecom",
+  "/real-estate",
+  "/software-ites",
+  "/e-commerce",
+  "/education",
+  "/retail",
+  "/automotive",
+  "/startup",
+  "/non-profit",
+];
+
+const isIndustryRoute = (p: string) => INDUSTRY_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+
 type ActiveMenu = "services" | "industries" | "products" | "resources" | null;
 
 type NavItemBase = {
@@ -79,10 +96,12 @@ export default function Navbar() {
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const pathname = usePathname();
-  const isCompactGutter = pathname === "/" || (!!pathname && isServiceRoute(pathname));
+  const isCompactGutter =
+    pathname === "/" || (!!pathname && (isServiceRoute(pathname) || isIndustryRoute(pathname)));
 
   useEffect(() => {
     document.body.classList.toggle("svc-mobile", !!pathname && isServiceRoute(pathname));
+    document.body.classList.toggle("ind-mobile", !!pathname && isIndustryRoute(pathname));
   }, [pathname]);
   const { t } = useTranslation();
 

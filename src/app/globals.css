@@ -155,6 +155,19 @@ html[lang="bn-BD"] h4 {
   }
 }
 
+/* Industries routes (body.ind-mobile is toggled by the Navbar for /industries and
+   every industry page) — same approved mobile ultra-compact gutter as the
+   homepage and services routes. Scoped below 640px only; footer keeps 36px and
+   every other route is untouched. */
+@media (max-width: 639px) {
+  body.ind-mobile .brand-container {
+    padding-inline: 5px;
+  }
+  body.ind-mobile footer .brand-container {
+    padding-inline: 36px;
+  }
+}
+
 /* Shared content container — the single left/right boundary used by the
    navbar, every homepage section and the footer (navbar grid + 20px extra
    gutter on each side). Backgrounds stay full-width; only content is boxed. */
