@@ -49,7 +49,7 @@ const facts = [
 export default async function AnupomTakeawaysSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-20 md:py-24">
+    <section className="relative overflow-hidden bg-[#fafafa] py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
         <div className="max-w-[820px]">
           <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("The engagement")}</p>
@@ -66,7 +66,7 @@ export default async function AnupomTakeawaysSection() {
             return (
               <article
                 key={feature.title}
-                className="rounded-xl border border-[#ececec] bg-white p-7 transition-colors duration-200 hover:border-[#c91f28]/40"
+                className="rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/40"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
                   <Icon size={20} strokeWidth={1.9} />

@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Quote } from "lucide-react";
 export default async function AnupomHeroSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white pb-[56px] pt-[40px] text-black md:pb-[56px] md:pt-[52px]">
+    <section className="relative overflow-hidden bg-white pb-[56px] max-sm:pb-7 pt-[40px] text-black md:pb-[56px] md:pt-[52px] max-sm:pt-6">
       <div className="mx-auto brand-container">
         <nav
           aria-label={t("Breadcrumb")}
@@ -21,7 +21,7 @@ export default async function AnupomHeroSection() {
           <span className="font-medium text-black">{t("Anupom Syam")}</span>
         </nav>
 
-        <div className="mt-9 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="mt-9 grid items-start gap-12 max-sm:gap-4 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Testimonial · Fintech")}</span>
             <h1 className="mt-6 font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("“8X faster than we expected”")}</h1>
@@ -49,7 +49,7 @@ export default async function AnupomHeroSection() {
             </div>
           </div>
 
-          <figure className="rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 md:p-9">
+          <figure className="rounded-2xl border border-[#ececec] bg-[#fafafa] p-7 max-sm:p-4 md:p-9">
             <Quote size={26} strokeWidth={1.6} className="text-[#f0c9cb]" />
             <blockquote className="mt-5 text-[17px] font-medium leading-[1.65] text-[#22252a] md:text-[19px]">{t("“Brain Station 23’s resource augmentation transformed our development velocity. Their AI-powered approach delivered our fintech platform 8X faster than expected.”")}</blockquote>
             <figcaption className="mt-6 border-t border-[#ececec] pt-5 text-[13.5px] text-[#52525B]">

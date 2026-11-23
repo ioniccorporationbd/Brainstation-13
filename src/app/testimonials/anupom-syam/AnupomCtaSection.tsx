@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 export default async function AnupomCtaSection() {
   const { t } = await getTranslator();
   return (
-    <section className="relative overflow-hidden bg-white py-20 md:py-24">
+    <section className="relative overflow-hidden bg-white py-20 max-sm:py-8 md:py-24">
       <div className="mx-auto brand-container">
-        <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
+        <div className="rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 max-sm:py-8 md:px-12 md:py-14">
           <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
             <div>
               <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Get the same speed edge")}</h2>
