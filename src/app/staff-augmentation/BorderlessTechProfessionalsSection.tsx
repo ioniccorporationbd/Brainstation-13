@@ -74,7 +74,7 @@ const cards: FeatureCard[] = [
 export default async function BorderlessTechProfessionalsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <p className="mb-4 text-[13px] font-semibold uppercase tracking-normal text-[#c91f28] max-sm:text-center">{t("Borderless Talent Advantage")}</p>
 
@@ -89,7 +89,7 @@ export default async function BorderlessTechProfessionalsSection() {
             return (
               <article
                 key={card.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#fdecec] text-[#c91f28] transition-colors duration-300 group-hover:bg-[#c91f28] group-hover:text-white">
                   <Icon size={22} strokeWidth={1.8} />

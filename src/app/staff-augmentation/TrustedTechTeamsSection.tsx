@@ -60,7 +60,7 @@ const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 export default function TrustedTechTeamsSection() {
   const { t } = useTranslation();
   return (
-    <section className="w-full overflow-hidden bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="w-full overflow-hidden bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="w-full brand-container">
         <div className="staff-trusted-heading text-center">
           <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Trusted By Fast-Moving Tech Teams")}</h2>

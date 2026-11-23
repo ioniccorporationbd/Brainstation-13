@@ -40,7 +40,7 @@ const reviews = [
 export default function StaffAugmentationHeroSection() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] lg:py-[104px]">
+    <section className="relative overflow-hidden bg-white py-[48px] text-[#0a0a0a] md:py-[104px] max-sm:pt-6 max-sm:pb-8 lg:py-[104px]">
       <div className="grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         {/* Left Content */}
         <div>
@@ -76,7 +76,7 @@ export default function StaffAugmentationHeroSection() {
             />
           </div>
 
-          <div className="mt-6 w-full rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]/50 lg:absolute lg:-bottom-10 lg:-left-12 lg:mt-0 lg:max-w-[360px] lg:p-7 lg:shadow-[0_24px_70px_rgba(10,10,10,0.16)]">
+          <div className="mt-6 w-full rounded-2xl border border-[#ececec] bg-white p-6 transition-colors duration-300 hover:border-[#c91f28]/50 lg:absolute lg:-bottom-10 lg:-left-12 lg:mt-0 lg:max-w-[360px] lg:p-7 max-sm:p-4 lg:shadow-[0_24px_70px_rgba(10,10,10,0.16)]">
             <Swiper
               modules={[Autoplay, EffectFade, Pagination]}
               effect="fade"

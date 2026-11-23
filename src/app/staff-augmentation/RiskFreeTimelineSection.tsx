@@ -35,7 +35,7 @@ const riskSteps: RiskStep[] = [
 export default async function RiskFreeTimelineSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="text-center">
           <h2 className="max-sm:mx-auto max-sm:text-center mx-auto text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Risk-Free Talent Alignment")}</h2>
@@ -45,7 +45,7 @@ export default async function RiskFreeTimelineSection() {
           {riskSteps.map((step) => (
             <article
               key={step.number}
-              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+              className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
             >
               <span className="text-[26px] font-bold leading-none tracking-[-0.01em] text-[#c91f28]">
                 {t(step.number)}

@@ -184,7 +184,7 @@ function ExpandableCell({
 export default function FlexibleEngagementModelsSection() {
   const { t } = useTranslation();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Flexible Engagement Models")}</h2>
@@ -192,7 +192,7 @@ export default function FlexibleEngagementModelsSection() {
           <p className="mx-auto mt-5 max-w-[820px] text-[15px] font-medium leading-[1.6] tracking-[-0.01em] text-[#52525B] md:text-[16px] text-pretty">{t("Compare our flexible IT staff augmentation models to find the perfect fit for your project needs and business objectives.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 xl:grid-cols-[1fr_300px]">
+        <div className="mt-12 grid grid-cols-1 gap-6 max-sm:gap-4 xl:grid-cols-[1fr_300px]">
           {/* Comparison table card */}
           <div className="overflow-x-auto rounded-2xl border border-[#ececec] bg-white px-5 py-7 transition-colors duration-300 hover:border-[#c91f28]/60 max-sm:px-4 max-sm:py-6 md:px-8 md:py-9">
             <div className="min-w-[760px] max-sm:min-w-0">

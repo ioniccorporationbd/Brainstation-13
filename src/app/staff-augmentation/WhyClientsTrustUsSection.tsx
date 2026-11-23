@@ -98,7 +98,7 @@ const trustCards: TrustCard[] = [
 export default async function WhyClientsTrustUsSection() {
   const { t } = await getTranslator();
   return (
-    <section className="bg-white py-[52px] text-[#0a0a0a] md:py-[104px]">
+    <section className="bg-white py-[52px] max-sm:py-8 text-[#0a0a0a] md:py-[104px]">
       <div className="brand-container">
         <div className="mx-auto max-w-[720px] text-center">
           <h2 className="max-sm:mx-auto max-sm:text-center text-[#0a0a0a] font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Why Clients Trust Us")}</h2>
@@ -113,7 +113,7 @@ export default async function WhyClientsTrustUsSection() {
             return (
               <article
                 key={card.title}
-                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 transition-colors duration-300 hover:border-[#c91f28]"
+                className="group flex h-full flex-col rounded-2xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-300 hover:border-[#c91f28]"
               >
                 <div className="text-[#c91f28]">
                   <Icon size={26} strokeWidth={1.7} />
