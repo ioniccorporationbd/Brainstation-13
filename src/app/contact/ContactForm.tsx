@@ -168,7 +168,7 @@ export default function ContactForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-xl border border-[#ececec] bg-white p-6 md:p-8"
+      className="rounded-xl border border-[#ececec] bg-white p-6 md:p-8 max-sm:p-4"
     >
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
