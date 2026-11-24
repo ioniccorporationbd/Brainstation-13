@@ -27,7 +27,7 @@ export default async function ShikkhaHeroSection() {
 
       <div className="relative mx-auto min-w-0 brand-container">
         <div className="mx-auto flex min-w-0 max-w-[820px] flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12.5px] max-sm:text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">
             <Sparkles size={14} strokeWidth={2.2} />{t("Product · Education ERP")}</span>
 
           <div className="mt-7 flex items-center justify-center">
@@ -48,12 +48,12 @@ export default async function ShikkhaHeroSection() {
           <div className="mt-8 flex w-full max-w-[420px] flex-col items-stretch gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
             <Link
               href="/schedule-a-call"
-              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
+              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center bg-[#c91f28] px-7 py-3.5 text-[15px] max-sm:px-5 max-sm:py-3 max-sm:text-[14px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
             >{t("Request a Demo")}<ArrowRight size={17} />
             </Link>
             <Link
               href="#dashboards"
-              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
+              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg text-center border border-[#ececec] bg-white px-7 py-3.5 text-[15px] max-sm:px-5 max-sm:py-3 max-sm:text-[14px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28] sm:w-auto sm:shrink-0 lg:max-xl:px-4 lg:max-xl:text-[13px]"
             >{t("See the dashboards")}</Link>
           </div>
 
