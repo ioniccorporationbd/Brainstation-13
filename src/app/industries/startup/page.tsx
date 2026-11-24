@@ -12,7 +12,7 @@ import StartupCtaSection from "./StartupCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/startup",
+    route: "/industries/startup",
     title: t("Startup Solutions | Magnetic Solution Limited"),
     description: t("Technology solutions for startups — MVP development, product engineering and the digital platforms that make growth possible."),
   });

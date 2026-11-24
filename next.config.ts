@@ -157,6 +157,62 @@ const nextConfig: NextConfig = {
         destination: "/services/data-science-business-intelligence",
         permanent: true,
       },
+      // Industries migrated under /industries (single-hop 308, query kept).
+      {
+        source: "/fintech",
+        destination: "/industries/fintech",
+        permanent: true,
+      },
+      {
+        source: "/pharma",
+        destination: "/industries/pharma",
+        permanent: true,
+      },
+      {
+        source: "/telecom",
+        destination: "/industries/telecom",
+        permanent: true,
+      },
+      {
+        source: "/real-estate",
+        destination: "/industries/real-estate",
+        permanent: true,
+      },
+      {
+        source: "/software-ites",
+        destination: "/industries/software-ites",
+        permanent: true,
+      },
+      {
+        source: "/e-commerce",
+        destination: "/industries/e-commerce",
+        permanent: true,
+      },
+      {
+        source: "/education",
+        destination: "/industries/education",
+        permanent: true,
+      },
+      {
+        source: "/retail",
+        destination: "/industries/retail",
+        permanent: true,
+      },
+      {
+        source: "/automotive",
+        destination: "/industries/automotive",
+        permanent: true,
+      },
+      {
+        source: "/startup",
+        destination: "/industries/startup",
+        permanent: true,
+      },
+      {
+        source: "/non-profit",
+        destination: "/industries/non-profit",
+        permanent: true,
+      },
     ];
   },
   async headers() {

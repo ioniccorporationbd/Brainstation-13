@@ -12,7 +12,7 @@ import RetailCtaSection from "./RetailCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/retail",
+    route: "/industries/retail",
     title: t("Retail Solutions | Magnetic Solution Limited"),
     description: t("POS, inventory, e-commerce, ERP and analytics solutions built by Magnetic Solution Limited for retail enterprises and distribution networks."),
   });

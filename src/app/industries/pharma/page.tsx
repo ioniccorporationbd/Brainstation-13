@@ -12,7 +12,7 @@ import PharmaCtaSection from "./PharmaCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/pharma",
+    route: "/industries/pharma",
     title: t("Pharma Solutions | Magnetic Solution Limited"),
     description: t("HCP activation, compliance automation, pharma e-commerce and LMS platforms built by Magnetic Solution Limited for healthcare and pharmaceutical enterprises."),
   });

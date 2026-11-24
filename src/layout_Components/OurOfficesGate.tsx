@@ -39,54 +39,6 @@ const PRODUCT_ROUTES = new Set([
   "/testimonials/anupom-syam",
 ]);
 
-// Industries Mega Menu pages follow the homepage typography scale.
-const INDUSTRY_ROUTES = new Set([
-  "/automotive",
-  "/e-commerce",
-  "/education",
-  "/fintech",
-  "/non-profit",
-  "/pharma",
-  "/real-estate",
-  "/retail",
-  "/software-ites",
-  "/startup",
-  "/telecom",
-  "/industries",
-]);
-
-// Services Mega Menu pages follow the homepage typography scale.
-const SERVICES_ROUTES = new Set([
-  "/services/3d-modeling-services",
-  "/services",
-  "/enterprise-grade-security",
-  "/services/adobe-experience-manager",
-  "/services/banking-solutions",
-  "/services/blockchain-development",
-  "/services/business-intelligence",
-  "/services/cloud-solutions",
-  "/services/cyber-security",
-  "/services/data-engineering",
-  "/services/data-migration",
-  "/services/data-science-business-intelligence",
-  "/services/digital-transformation",
-  "/services/ecommerce-development",
-  "/services/erp-development",
-  "/services/field-force-automation",
-  "/services/game-studio",
-  "/services/insurtech",
-  "/services/lms-development",
-  "/services/managed-service",
-  "/services/ml-ai-development",
-  "/services/mvp-development",
-  "/services/qa-testing-and-automation",
-  "/services/sharepoint-services",
-  "/services/shopify-services",
-  "/services/staff-augmentation",
-  "/services/technology-consulting",
-  "/services/web-mobile-app-development",
-]);
-
 export default function OurOfficesGate() {
   const pathname = usePathname();
 
@@ -103,8 +55,8 @@ export default function OurOfficesGate() {
         pathname.startsWith("/case-study") ||
         pathname === "/schedule-a-call" ||
         pathname === "/solution-partner/swapno" ||
-        SERVICES_ROUTES.has(pathname ?? "") ||
-        INDUSTRY_ROUTES.has(pathname ?? "") ||
+        (pathname ?? "").startsWith("/services") ||
+        (pathname ?? "").startsWith("/industries") ||
         PRODUCT_ROUTES.has(pathname ?? "") ||
         RESOURCES_ROUTES.has(pathname ?? "")
       } />

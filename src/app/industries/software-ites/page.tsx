@@ -12,7 +12,7 @@ import SoftwareItesCtaSection from "./SoftwareItesCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/software-ites",
+    route: "/industries/software-ites",
     title: t("Software & IT Services | Magnetic Solution Limited"),
     description: t("Custom applications, enterprise ERP, BI analytics, cloud and AR/VR solutions built by Magnetic Solution Limited for ICT and software businesses."),
   });

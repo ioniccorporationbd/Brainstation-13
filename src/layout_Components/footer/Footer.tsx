@@ -3,19 +3,19 @@ import { getTranslator } from "@/i18n/server";
 import Link from "next/link";
 
 const industriesLeft = [
-  { label: "Fintech", href: "/fintech" },
-  { label: "Pharma", href: "/pharma" },
-  { label: "Telecom", href: "/telecom" },
-  { label: "Real Estate", href: "/real-estate" },
-  { label: "Software/ITES", href: "/software-ites" },
+  { label: "Fintech", href: "/industries/fintech" },
+  { label: "Pharma", href: "/industries/pharma" },
+  { label: "Telecom", href: "/industries/telecom" },
+  { label: "Real Estate", href: "/industries/real-estate" },
+  { label: "Software/ITES", href: "/industries/software-ites" },
 ];
 
 const industriesRight = [
-  { label: "e-Commerce", href: "/e-commerce" },
-  { label: "Education", href: "/education" },
-  { label: "Retail", href: "/retail" },
-  { label: "Automotive", href: "/automotive" },
-  { label: "Startup", href: "/startup" },
+  { label: "e-Commerce", href: "/industries/e-commerce" },
+  { label: "Education", href: "/industries/education" },
+  { label: "Retail", href: "/industries/retail" },
+  { label: "Automotive", href: "/industries/automotive" },
+  { label: "Startup", href: "/industries/startup" },
 ];
 
 const companyLinks = [

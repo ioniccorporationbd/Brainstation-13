@@ -133,7 +133,7 @@ export default async function Page() {
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Eight sectors we have built for repeatedly. Each card leads to the service page with the relevant capabilities and delivery detail.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 max-sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
-              href="/fintech"
+              href="/industries/fintech"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -145,7 +145,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/retail"
+              href="/industries/retail"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -157,7 +157,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/education"
+              href="/industries/education"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -169,7 +169,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/automotive"
+              href="/industries/automotive"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -181,7 +181,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/pharma"
+              href="/industries/pharma"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -193,7 +193,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/telecom"
+              href="/industries/telecom"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -205,7 +205,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/startup"
+              href="/industries/startup"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -217,7 +217,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/software-ites"
+              href="/industries/software-ites"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">

@@ -12,7 +12,7 @@ import RealEstateCtaSection from "./RealEstateCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/real-estate",
+    route: "/industries/real-estate",
     title: t("Real Estate Solutions | Magnetic Solution Limited"),
     description: t("Property marketplaces, smart-building integrations, ERP, cloud and AR/VR engagement built by Magnetic Solution Limited for real estate companies."),
   });

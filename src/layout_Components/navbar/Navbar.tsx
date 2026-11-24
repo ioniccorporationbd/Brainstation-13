@@ -18,22 +18,7 @@ import ResourcesMenu from "./ResourcesMenu";
 // per-page lists, so new pages inherit the right mobile scope automatically.
 const isServiceRoute = (p: string) => p === "/services" || p.startsWith("/services/");
 
-const INDUSTRY_ROUTES = [
-  "/industries",
-  "/fintech",
-  "/pharma",
-  "/telecom",
-  "/real-estate",
-  "/software-ites",
-  "/e-commerce",
-  "/education",
-  "/retail",
-  "/automotive",
-  "/startup",
-  "/non-profit",
-];
-
-const isIndustryRoute = (p: string) => INDUSTRY_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+const isIndustryRoute = (p: string) => p === "/industries" || p.startsWith("/industries/");
 
 const PRODUCT_ROUTES = [
   "/shikkha-chat",

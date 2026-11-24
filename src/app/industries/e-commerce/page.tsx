@@ -13,7 +13,7 @@ import EcommerceCtaSection from "./EcommerceCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/e-commerce",
+    route: "/industries/e-commerce",
     title: t("E-commerce Solutions | Magnetic Solution Limited"),
     description: t("Storefronts, checkout, payments, fulfilment and growth analytics built by Magnetic Solution Limited for online commerce."),
   });

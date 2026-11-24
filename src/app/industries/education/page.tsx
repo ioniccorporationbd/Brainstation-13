@@ -13,7 +13,7 @@ import EducationCtaSection from "./EducationCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/education",
+    route: "/industries/education",
     title: t("Education Solutions | Magnetic Solution Limited"),
     description: t("Learning management, assessment and proctoring, content publishing and learning analytics built by Magnetic Solution Limited for education providers."),
   });

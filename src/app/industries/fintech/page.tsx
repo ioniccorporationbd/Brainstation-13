@@ -16,7 +16,7 @@ import FintechCtaSection from "./FintechCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/fintech",
+    route: "/industries/fintech",
     title: t("Fintech Solutions | Magnetic Solution Limited"),
     description: t("Digital banking, payments, wallets, lending and cross-border platforms engineered by Magnetic Solution Limited for security, compliance and scale."),
   });

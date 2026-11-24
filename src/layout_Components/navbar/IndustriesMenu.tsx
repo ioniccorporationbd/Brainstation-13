@@ -34,20 +34,20 @@ type MenuLinkItem = {
 };
 
 const industriesOne: MenuLinkItem[] = [
-  { label: "Fintech", href: "/fintech", icon: CreditCard },
-  { label: "Pharma", href: "/pharma", icon: Pill },
-  { label: "Telecom", href: "/telecom", icon: Radio },
-  { label: "Real Estate", href: "/real-estate", icon: Building2 },
-  { label: "Software/ITES", href: "/software-ites", icon: Code },
-  { label: "e-Commerce", href: "/e-commerce", icon: ShoppingCart },
+  { label: "Fintech", href: "/industries/fintech", icon: CreditCard },
+  { label: "Pharma", href: "/industries/pharma", icon: Pill },
+  { label: "Telecom", href: "/industries/telecom", icon: Radio },
+  { label: "Real Estate", href: "/industries/real-estate", icon: Building2 },
+  { label: "Software/ITES", href: "/industries/software-ites", icon: Code },
+  { label: "e-Commerce", href: "/industries/e-commerce", icon: ShoppingCart },
 ];
 
 const industriesTwo: MenuLinkItem[] = [
-  { label: "Education", href: "/education", icon: GraduationCap },
-  { label: "Retail", href: "/retail", icon: Store },
-  { label: "Automotive", href: "/automotive", icon: Car },
-  { label: "Startup", href: "/startup", icon: Rocket },
-  { label: "Non-Profit", href: "/non-profit", icon: HeartHandshake },
+  { label: "Education", href: "/industries/education", icon: GraduationCap },
+  { label: "Retail", href: "/industries/retail", icon: Store },
+  { label: "Automotive", href: "/industries/automotive", icon: Car },
+  { label: "Startup", href: "/industries/startup", icon: Rocket },
+  { label: "Non-Profit", href: "/industries/non-profit", icon: HeartHandshake },
 ];
 
 const caseStudyLinks: MenuLinkItem[] = [

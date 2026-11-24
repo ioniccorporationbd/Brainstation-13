@@ -12,7 +12,7 @@ import NonProfitCtaSection from "./NonProfitCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/non-profit",
+    route: "/industries/non-profit",
     title: t("Non-Profit Solutions | Magnetic Solution Limited"),
     description: t("Digital solutions for non-profit organisations — community platforms, programme reporting and tools built for humanitarian work."),
   });

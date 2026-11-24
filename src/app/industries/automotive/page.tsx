@@ -12,7 +12,7 @@ import AutomotiveCtaSection from "./AutomotiveCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/automotive",
+    route: "/industries/automotive",
     title: t("Automotive Solutions | Magnetic Solution Limited"),
     description: t("Automotive technology, connected mobility, enterprise systems and customer experience solutions built by Magnetic Solution Limited."),
   });

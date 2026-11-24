@@ -12,7 +12,7 @@ import TelecomCtaSection from "./TelecomCtaSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/telecom",
+    route: "/industries/telecom",
     title: t("Telecom Solutions | Magnetic Solution Limited"),
     description: t("Network platforms, enterprise CMS, ERP, cloud and analytics solutions built by Magnetic Solution Limited for telecom operators and service providers."),
   });
