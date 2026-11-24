@@ -108,7 +108,7 @@ async function Card({ item }: { item: Testimonial }) {
   );
 
   const base =
-    "flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 transition-colors duration-200 md:p-7";
+    "flex h-full flex-col rounded-xl border border-[#ececec] bg-white p-6 max-sm:p-4 transition-colors duration-200 md:p-7";
 
   if (item.href) {
     return (
@@ -136,15 +136,15 @@ export default async function TestimonialsGridSection() {
           <p className="mt-4 text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Each card keeps the original name, designation, company and wording. Where a fuller story exists, the card links to it.")}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-5 max-sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item) => (
             <Card key={item.name} item={item} />
           ))}
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-[1.4fr_1fr] md:items-center">
+        <div className="mt-10 grid gap-5 max-sm:gap-4 md:grid-cols-[1.4fr_1fr] md:items-center">
           <TestimonialProvenanceNote />
-          <div className="rounded-xl border border-[#ececec] bg-white px-6 py-5">
+          <div className="rounded-xl border border-[#ececec] bg-white px-6 py-5 max-sm:p-4">
             <p className="text-[14px] font-semibold text-black">{t("Prefer to watch?")}</p>
             <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
             <Link
