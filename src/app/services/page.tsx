@@ -131,7 +131,7 @@ export default async function Page() {
           <p className="max-sm:mx-auto max-sm:text-center mt-4 max-w-[640px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Six service lines that can run alone or together. Each card opens the detailed service page.")}</p>
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/ml-ai-development"
+              href="/services/ml-ai-development"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -143,7 +143,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/cloud-solutions"
+              href="/services/cloud-solutions"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -155,7 +155,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/data-engineering"
+              href="/services/data-engineering"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -167,7 +167,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/erp-development"
+              href="/services/erp-development"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -179,7 +179,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/qa-testing-and-automation"
+              href="/services/qa-testing-and-automation"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">
@@ -191,7 +191,7 @@ export default async function Page() {
               </span>
             </Link>
             <Link
-              href="/cyber-security"
+              href="/services/cyber-security"
               className="group rounded-xl border border-[#ececec] bg-white p-7 max-sm:p-4 transition-colors duration-200 hover:border-[#c91f28]/50"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#fdecec] text-[#c91f28]">

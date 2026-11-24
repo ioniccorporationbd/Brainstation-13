@@ -14,37 +14,9 @@ import IndustriesMenu from "./IndustriesMenu";
 import ProductsMenu from "./ProductsMenu";
 import ResourcesMenu from "./ResourcesMenu";
 
-const SERVICE_ROUTES = [
-  "/services",
-  "/staff-augmentation",
-  "/managed-service",
-  "/digital-transformation",
-  "/technology-consulting",
-  "/mvp-development",
-  "/ml-ai-development",
-  "/data-engineering",
-  "/data-migration",
-  "/business-intelligence",
-  "/insurtech",
-  "/3d-modeling-services",
-  "/game-studio",
-  "/qa-testing-and-automation",
-  "/lms-development",
-  "/web-mobile-app-development",
-  "/ecommerce-development",
-  "/adobe-experience-manager",
-  "/sharepoint-services",
-  "/blockchain-development",
-  "/shopify-services",
-  "/field-force-automation",
-  "/banking-solutions",
-  "/cloud-solutions",
-  "/cyber-security",
-  "/erp-development",
-  "/data-science-business-intelligence",
-];
-
-const isServiceRoute = (p: string) => SERVICE_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+// Category prefix guards: one constant per hierarchy instead of exhaustive
+// per-page lists, so new pages inherit the right mobile scope automatically.
+const isServiceRoute = (p: string) => p === "/services" || p.startsWith("/services/");
 
 const INDUSTRY_ROUTES = [
   "/industries",

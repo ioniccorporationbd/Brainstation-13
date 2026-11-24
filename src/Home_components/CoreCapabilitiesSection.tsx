@@ -22,7 +22,7 @@ const capabilities: Capability[] = [
     description:
       "Instantly scale your team with vetted AI/cloud experts. Pay only for the talent you need, when you need it.",
     icon: "/images/core-capabilities/icon-staff.svg",
-    href: "/staff-augmentation",
+    href: "/services/staff-augmentation",
     className: "xl:col-start-1 xl:row-start-1",
   },
   {
@@ -30,7 +30,7 @@ const capabilities: Capability[] = [
     description:
       "End-to-end support for your applications, infrastructure, and digital platforms—so you can shift focus from maintenance to innovation.",
     icon: "/images/core-capabilities/icon-managed.svg",
-    href: "/managed-service",
+    href: "/services/managed-service",
     className: "xl:col-start-3 xl:row-start-1",
   },
   {
@@ -38,7 +38,7 @@ const capabilities: Capability[] = [
     description:
       "Launch market-ready MVPs in 8-12 weeks. AI-accelerated builds with 40% faster iteration cycles.",
     icon: "/images/core-capabilities/icon-mvp.svg",
-    href: "/mvp-development",
+    href: "/services/mvp-development",
     className: "xl:col-start-2 xl:row-start-2",
   },
   {
@@ -46,7 +46,7 @@ const capabilities: Capability[] = [
     description:
       "Cut tech waste by 30% with our strategic audits. Align tools with business goals for maximum ROI.",
     icon: "/images/core-capabilities/icon-consulting.svg",
-    href: "/technology-consulting",
+    href: "/services/technology-consulting",
     className: "xl:col-start-1 xl:row-start-3",
   },
   {
@@ -54,7 +54,7 @@ const capabilities: Capability[] = [
     description:
       "Modernize legacy systems with AI-driven automation. Achieve 50% operational efficiency gains.",
     icon: "/images/core-capabilities/icon-digital.svg",
-    href: "/digital-transformation",
+    href: "/services/digital-transformation",
     className: "xl:col-start-3 xl:row-start-3",
   },
 ];

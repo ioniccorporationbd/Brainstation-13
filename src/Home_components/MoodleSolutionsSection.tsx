@@ -33,7 +33,7 @@ export default async function MoodleSolutionsSection() {
           <p className="mx-auto mt-6 max-w-[760px] text-[16px] font-normal leading-[1.7] text-[#52525B] sm:text-[18px] text-pretty">{t("Magnetic Solution Limited is Moodle’s Certified Integration Partner in Bangladesh and the first-ever organizer of MoodleMoot Bangladesh. Explore how we build secure, scalable, audit-ready Moodle LMS and proctoring for institutions that can’t afford failure.")}</p>
 
           <Link
-            href="/lms-development"
+            href="/services/lms-development"
             className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[14px] font-semibold text-white transition-colors duration-200 max-sm:min-h-[44px] hover:bg-primary-hover sm:mt-8 sm:px-7 sm:py-3.5 sm:text-[15px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >{t("Join MoodleMoot 2026")}<span aria-hidden="true" className="text-[18px] leading-none">
               →

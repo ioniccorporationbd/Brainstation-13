@@ -148,7 +148,7 @@ export default async function TestimonialsGridSection() {
             <p className="text-[14px] font-semibold text-black">{t("Prefer to watch?")}</p>
             <p className="mt-1.5 text-[14.5px] leading-[1.6] text-[#52525B] text-pretty">{t("Client video stories from LUUP, BSEZ and Pro Carrier are available on our staff augmentation page.")}</p>
             <Link
-              href="/staff-augmentation"
+              href="/services/staff-augmentation"
               className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#c91f28] hover:text-[#a71920]"
             >{t("Watch client videos")}<ArrowRight size={15} strokeWidth={2.2} />
             </Link>

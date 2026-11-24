@@ -47,7 +47,7 @@ const slides: SlideItem[] = [
     description:
       "From startups to enterprises—build scalable, secure software with our 18+ years of expertise and ISO 27001-certified teams.",
     buttonText: "Hire Your Team Now",
-    buttonHref: "/staff-augmentation",
+    buttonHref: "/services/staff-augmentation",
     statOneNumber: "19+",
     statOneText: "Years of Experience",
     statTwoNumber: "88%+",

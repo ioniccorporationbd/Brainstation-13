@@ -46,41 +46,41 @@ type MenuLinkItem = {
 };
 
 const collaborationLinks: MenuLinkItem[] = [
-  { label: "Staff Augmentation", href: "/staff-augmentation", icon: Users },
-  { label: "Managed Service", href: "/managed-service", icon: Settings },
-  { label: "Digital Transformation", href: "/digital-transformation", icon: Rocket },
-  { label: "Technology Consulting", href: "/technology-consulting", icon: Lightbulb },
-  { label: "MVP Development", href: "/mvp-development", icon: Zap },
+  { label: "Staff Augmentation", href: "/services/staff-augmentation", icon: Users },
+  { label: "Managed Service", href: "/services/managed-service", icon: Settings },
+  { label: "Digital Transformation", href: "/services/digital-transformation", icon: Rocket },
+  { label: "Technology Consulting", href: "/services/technology-consulting", icon: Lightbulb },
+  { label: "MVP Development", href: "/services/mvp-development", icon: Zap },
 ];
 
 const topServices: MenuLinkItem[] = [
-  { label: "ML & AI Development", href: "/ml-ai-development", icon: Brain },
-  { label: "Data Engineering", href: "/data-engineering", icon: Database },
-  { label: "Data Migration", href: "/data-migration", icon: Repeat },
-  { label: "Business Intelligence", href: "/business-intelligence", icon: BarChart3 },
-  { label: "Insurtech", href: "/insurtech", icon: ShieldCheck },
-  { label: "3D Modeling Services", href: "/3d-modeling-services", icon: Boxes },
-  { label: "Game Studio", href: "/game-studio", icon: Gamepad2 },
-  { label: "QA Testing & Automation", href: "/qa-testing-and-automation", icon: CheckCircle2 },
+  { label: "ML & AI Development", href: "/services/ml-ai-development", icon: Brain },
+  { label: "Data Engineering", href: "/services/data-engineering", icon: Database },
+  { label: "Data Migration", href: "/services/data-migration", icon: Repeat },
+  { label: "Business Intelligence", href: "/services/business-intelligence", icon: BarChart3 },
+  { label: "Insurtech", href: "/services/insurtech", icon: ShieldCheck },
+  { label: "3D Modeling Services", href: "/services/3d-modeling-services", icon: Boxes },
+  { label: "Game Studio", href: "/services/game-studio", icon: Gamepad2 },
+  { label: "QA Testing & Automation", href: "/services/qa-testing-and-automation", icon: CheckCircle2 },
 ];
 
 const serviceColumnTwo: MenuLinkItem[] = [
-  { label: "LMS Development", href: "/lms-development", icon: GraduationCap },
-  { label: "Web & Mobile App Development", href: "/web-mobile-app-development", icon: Smartphone },
-  { label: "eCommerce Development", href: "/ecommerce-development", icon: ShoppingCart },
-  { label: "Adobe Experience Manager", href: "/adobe-experience-manager", icon: Palette },
-  { label: "SharePoint Services", href: "/sharepoint-services", icon: Share2 },
-  { label: "Blockchain Development", href: "/blockchain-development", icon: Link2 },
-  { label: "Shopify Services", href: "/shopify-services", icon: ShoppingBag },
+  { label: "LMS Development", href: "/services/lms-development", icon: GraduationCap },
+  { label: "Web & Mobile App Development", href: "/services/web-mobile-app-development", icon: Smartphone },
+  { label: "eCommerce Development", href: "/services/ecommerce-development", icon: ShoppingCart },
+  { label: "Adobe Experience Manager", href: "/services/adobe-experience-manager", icon: Palette },
+  { label: "SharePoint Services", href: "/services/sharepoint-services", icon: Share2 },
+  { label: "Blockchain Development", href: "/services/blockchain-development", icon: Link2 },
+  { label: "Shopify Services", href: "/services/shopify-services", icon: ShoppingBag },
 ];
 
 const enterpriseLinks: MenuLinkItem[] = [
-  { label: "Field Force Automation", href: "/field-force-automation", icon: Truck },
-  { label: "Banking Solutions", href: "/banking-solutions", icon: Landmark },
-  { label: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
-  { label: "Cyber Security", href: "/cyber-security", icon: Lock },
-  { label: "ERP Development", href: "/erp-development", icon: Factory },
-  { label: "Data Science & Business Intelligence", href: "/data-science-business-intelligence", icon: LineChart },
+  { label: "Field Force Automation", href: "/services/field-force-automation", icon: Truck },
+  { label: "Banking Solutions", href: "/services/banking-solutions", icon: Landmark },
+  { label: "Cloud Solutions", href: "/services/cloud-solutions", icon: Cloud },
+  { label: "Cyber Security", href: "/services/cyber-security", icon: Lock },
+  { label: "ERP Development", href: "/services/erp-development", icon: Factory },
+  { label: "Data Science & Business Intelligence", href: "/services/data-science-business-intelligence", icon: LineChart },
 ];
 
 export default function ServicesMenu({ closeMenu, mobile = false }: Props) {

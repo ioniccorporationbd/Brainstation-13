@@ -7,7 +7,7 @@ import OurOfficesSection from "./OurOfficesSection";
  * Renders the shared Our Offices section on every route except the ones
  * listed in HIDDEN_ROUTES. The shared component itself is untouched.
  */
-const HIDDEN_ROUTES = ["/qa-testing-and-automation"];
+const HIDDEN_ROUTES = ["/services/qa-testing-and-automation"];
 
 const RESOURCES_ROUTES = new Set([
   "/about-us",
@@ -57,34 +57,34 @@ const INDUSTRY_ROUTES = new Set([
 
 // Services Mega Menu pages follow the homepage typography scale.
 const SERVICES_ROUTES = new Set([
-  "/3d-modeling-services",
+  "/services/3d-modeling-services",
   "/services",
   "/enterprise-grade-security",
-  "/adobe-experience-manager",
-  "/banking-solutions",
-  "/blockchain-development",
-  "/business-intelligence",
-  "/cloud-solutions",
-  "/cyber-security",
-  "/data-engineering",
-  "/data-migration",
-  "/data-science-business-intelligence",
-  "/digital-transformation",
-  "/ecommerce-development",
-  "/erp-development",
-  "/field-force-automation",
-  "/game-studio",
-  "/insurtech",
-  "/lms-development",
-  "/managed-service",
-  "/ml-ai-development",
-  "/mvp-development",
-  "/qa-testing-and-automation",
-  "/sharepoint-services",
-  "/shopify-services",
-  "/staff-augmentation",
-  "/technology-consulting",
-  "/web-mobile-app-development",
+  "/services/adobe-experience-manager",
+  "/services/banking-solutions",
+  "/services/blockchain-development",
+  "/services/business-intelligence",
+  "/services/cloud-solutions",
+  "/services/cyber-security",
+  "/services/data-engineering",
+  "/services/data-migration",
+  "/services/data-science-business-intelligence",
+  "/services/digital-transformation",
+  "/services/ecommerce-development",
+  "/services/erp-development",
+  "/services/field-force-automation",
+  "/services/game-studio",
+  "/services/insurtech",
+  "/services/lms-development",
+  "/services/managed-service",
+  "/services/ml-ai-development",
+  "/services/mvp-development",
+  "/services/qa-testing-and-automation",
+  "/services/sharepoint-services",
+  "/services/shopify-services",
+  "/services/staff-augmentation",
+  "/services/technology-consulting",
+  "/services/web-mobile-app-development",
 ]);
 
 export default function OurOfficesGate() {

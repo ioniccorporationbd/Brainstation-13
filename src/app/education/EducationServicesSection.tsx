@@ -21,7 +21,7 @@ const services: ServiceItem[] = [
     title: "Learning management",
     description: "Custom LMS, course delivery and progress tracking.",
     icon: GraduationCap,
-    href: "/lms-development",
+    href: "/services/lms-development",
   },
   {
     title: "Assessment & proctoring",

@@ -54,7 +54,7 @@ const products: ProductItem[] = [
     title: "Field Force Management",
     description:
       "Mobilize dispersed sales teams with automation, real-time tracking, and secure, accurate reporting.",
-    href: "/field-force-automation",
+    href: "/services/field-force-automation",
   },
 ];
 
