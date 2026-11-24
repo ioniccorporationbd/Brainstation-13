@@ -21,7 +21,7 @@ export default async function AnupomCtaSection() {
               </Link>
               <Link
                 href="/testimonials"
-                className="inline-flex items-center justify-center sm:shrink-0 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
+                className="inline-flex items-center justify-center sm:shrink-0 rounded-lg border border-[#ececec] bg-white px-7 py-3.5 text-[15px] max-sm:px-5 max-sm:py-3 max-sm:text-[14px] font-semibold text-black transition-colors duration-200 hover:border-[#c91f28] hover:text-[#c91f28]"
               >{t("Read more stories")}</Link>
             </div>
           </div>
