@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/i18n/LanguageProvider";
-import { useEffect, useState } from "react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { useEffect, useRef, useState } from "react";
+import { A11y, Keyboard, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperClass } from "swiper/types";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -70,10 +71,60 @@ const slides: SlideItem[] = [
   },
 ];
 
+/* Timeline (ms): Image 1 → Image 2 → whole section. */
+const IMAGE_VISIBLE_MS = 2500;
+const SLIDE_MS = 700;
+
+type StageTrackProps = {
+  order: [string, string];
+  stage: 0 | 1;
+  sizes: string;
+  priority?: boolean;
+  altPrefix: string;
+};
+
+/**
+ * Two-image horizontal track. Stage 0 shows the first image; stage 1 slides it
+ * out to the left and reveals the second. Only the images move — every piece
+ * of text lives outside this element.
+ */
+function StageTrack({
+  order,
+  stage,
+  sizes,
+  priority = false,
+  altPrefix,
+}: StageTrackProps) {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <div
+        className="flex h-full w-[200%] transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)] motion-reduce:transition-none"
+        style={{ transform: `translate3d(${stage === 0 ? "0%" : "-50%"}, 0, 0)` }}
+      >
+        {order.map((src, i) => (
+          <div key={src} className="relative h-full w-1/2 shrink-0">
+            <Image
+              src={src}
+              alt={`${altPrefix} — visual ${i + 1}`}
+              fill
+              sizes={sizes}
+              priority={priority}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function HeroBannerSlider() {
   const { t } = useTranslation();
+  const swiperRef = useRef<SwiperClass | null>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [imgStage, setImgStage] = useState<0 | 1>(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -83,28 +134,56 @@ export default function HeroBannerSlider() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
+  /* Nested timeline: each section holds image 1 for 2.5s, slides to image 2
+     (700ms), holds it for 2.5s, then the whole section transitions (700ms) and
+     the incoming section restarts from image 1. */
+  useEffect(() => {
+    if (reducedMotion || paused) return;
+
+    const timer = window.setTimeout(() => {
+      if (imgStage === 0) {
+        setImgStage(1);
+      } else {
+        setImgStage(0);
+        swiperRef.current?.slideNext();
+      }
+    }, IMAGE_VISIBLE_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [imgStage, activeIndex, paused, reducedMotion]);
+
+  /* Don't let timers run (or pile up) while the tab is hidden. */
+  useEffect(() => {
+    const onVisibility = () => setPaused(document.hidden);
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, []);
+
   return (
     <section className="relative w-full overflow-hidden bg-[#F7F7F8]">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Pagination, Keyboard, A11y]}
         slidesPerView={1}
         loop
-        speed={reducedMotion ? 0 : 1000}
-        autoplay={
-          reducedMotion
-            ? false
-            : {
-                delay: 6000,
-                disableOnInteraction: false,
-              }
-        }
+        speed={reducedMotion ? 0 : SLIDE_MS}
+        keyboard={{ enabled: true }}
+        a11y={{ enabled: true }}
         pagination={{
           clickable: true,
           bulletClass: "hero-banner-bullet",
           bulletActiveClass: "hero-banner-bullet-active",
         }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={(swiper) => {
+          setActiveIndex(swiper.realIndex);
+          setImgStage(0);
+        }}
+        onTouchStart={() => setPaused(true)}
+        onTouchEnd={() => setPaused(false)}
         className="hero-banner-swiper"
+        tabIndex={0}
       >
         {slides.map((slide, index) => {
           const isActive = index === activeIndex;
@@ -114,14 +193,12 @@ export default function HeroBannerSlider() {
             isActive && !reducedMotion ? "hero-anim-media" : undefined;
           const textAnim =
             isActive && !reducedMotion ? "hero-anim-text" : undefined;
-          const panelBAnim =
-            isActive && !reducedMotion ? "hero-anim-media-b" : undefined;
 
           return (
             <SwiperSlide key={slide.title}>
               <div className="relative w-full overflow-hidden md:min-h-[650px]">
                 <div className="brand-container hero-grid pt-[76px] md:min-h-[650px] max-sm:pt-[18px]">
-                  {/* MOBILE-ONLY: paired hero images at the very top */}
+                  {/* MOBILE-ONLY: single-image stage at the very top */}
                   <div
                     className={`relative z-10 mb-5 md:hidden max-sm:mb-4 ${
                       mediaAnim ?? ""
@@ -129,38 +206,20 @@ export default function HeroBannerSlider() {
                   >
                     <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_11px)]" />
 
-                    <div className="grid grid-cols-2 gap-2 pb-3">
-                      <div className="relative aspect-[4/5] overflow-hidden rounded-[12px] bg-[#ECECEF] shadow-[5px_5px_0_rgba(0,0,0,0.08)]">
-                        <Image
-                          src={slide.media[0]}
-                          alt={`${t(slide.title)} — visual 1`}
-                          fill
-                          sizes="(max-width: 767px) 45vw, 330px"
-                          priority={index === 0}
-                          className="object-cover"
-                        />
-                      </div>
-
-                      <div
-                        className={`relative mt-3 aspect-[4/5] overflow-hidden rounded-[12px] bg-[#ECECEF] shadow-[5px_5px_0_rgba(0,0,0,0.08)] ${
-                          panelBAnim ?? ""
-                        }`}
-                      >
-                        <Image
-                          src={slide.media[1]}
-                          alt={`${t(slide.title)} — visual 2`}
-                          fill
-                          sizes="(max-width: 767px) 45vw, 330px"
-                          priority={index === 0}
-                          className="object-cover"
-                        />
-                      </div>
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[12px] bg-[#ECECEF] shadow-[5px_5px_0_rgba(0,0,0,0.08)]">
+                      <StageTrack
+                        order={slide.media}
+                        stage={imgStage}
+                        sizes="(max-width: 767px) 100vw, 330px"
+                        priority={index === 0}
+                        altPrefix={t(slide.title)}
+                      />
                     </div>
                   </div>
 
                   {/* LEFT SIDE — text (desktop) / below images (mobile) */}
                   <div className="relative z-20 flex flex-col justify-start md:pt-[34px]">
-                    <div className={textAnim}>
+                    <div className={`${textAnim ?? ""} max-sm:text-center`}>
                       {/* Only the first slide owns the page <h1>; the other slides stay
                           visually identical but are not headings, so the document
                           keeps a single H1 for SEO / screen readers. */}
@@ -193,15 +252,14 @@ export default function HeroBannerSlider() {
                     <div className="pointer-events-none absolute left-[48%] top-[47%] h-[910px] w-[910px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 [background:repeating-radial-gradient(circle,#E9E9EC_0px,#E9E9EC_1px,transparent_2px,transparent_12px)]" />
 
                     <div className={`absolute inset-0 ${mediaAnim ?? ""}`}>
-                      {/* Top Image */}
+                      {/* Top Image — stage 0: A, stage 1: B */}
                       <div className="absolute left-[95px] top-[25px] z-20 h-[200px] w-[330px] overflow-hidden rounded-[10px] shadow-[8px_8px_0_rgba(0,0,0,0.10)]">
-                        <Image
-                          src={slide.media[0]}
-                          alt={`${t(slide.title)} — visual 1`}
-                          fill
+                        <StageTrack
+                          order={slide.media}
+                          stage={imgStage}
                           sizes="330px"
                           priority={index === 0}
-                          className="object-cover"
+                          altPrefix={t(slide.title)}
                         />
                       </div>
 
@@ -227,15 +285,14 @@ export default function HeroBannerSlider() {
                         </p>
                       </div>
 
-                      {/* Bottom Image */}
+                      {/* Bottom Image — stage 0: B, stage 1: A (wrap-around pair) */}
                       <div className="absolute left-[390px] top-[249px] z-20 h-[200px] w-[330px] overflow-hidden rounded-[10px] shadow-[8px_8px_0_rgba(0,0,0,0.10)]">
-                        <Image
-                          src={slide.media[1]}
-                          alt={`${t(slide.title)} — visual 2`}
-                          fill
+                        <StageTrack
+                          order={[slide.media[1], slide.media[0]]}
+                          stage={imgStage}
                           sizes="330px"
                           priority={index === 0}
-                          className="object-cover"
+                          altPrefix={t(slide.title)}
                         />
                       </div>
                     </div>
@@ -280,6 +337,11 @@ export default function HeroBannerSlider() {
           position: relative;
         }
 
+        .hero-banner-swiper:focus-visible {
+          outline: 2px solid #c91f28;
+          outline-offset: -2px;
+        }
+
         /* —— Dual-direction premium entrance —— */
         @keyframes heroMediaIn {
           from {
@@ -289,17 +351,6 @@ export default function HeroBannerSlider() {
           to {
             opacity: 1;
             transform: translate3d(0, 0, 0);
-          }
-        }
-
-        @keyframes heroMediaInB {
-          from {
-            opacity: 0;
-            transform: translate3d(-28px, 16px, 0) scale(0.985);
-          }
-          to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0) scale(1);
           }
         }
 
@@ -320,13 +371,6 @@ export default function HeroBannerSlider() {
           backface-visibility: hidden;
         }
 
-        .hero-anim-media-b {
-          animation: heroMediaInB 0.72s cubic-bezier(0.22, 0.61, 0.36, 1) 0.09s
-            both;
-          will-change: transform, opacity;
-          backface-visibility: hidden;
-        }
-
         .hero-anim-text {
           animation: heroTextIn 0.72s cubic-bezier(0.22, 0.61, 0.36, 1) 0.06s
             both;
@@ -336,7 +380,6 @@ export default function HeroBannerSlider() {
 
         @media (prefers-reduced-motion: reduce) {
           .hero-anim-media,
-          .hero-anim-media-b,
           .hero-anim-text {
             animation: none !important;
             opacity: 1 !important;
