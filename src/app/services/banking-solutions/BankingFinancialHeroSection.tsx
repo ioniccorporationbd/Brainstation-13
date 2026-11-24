@@ -22,7 +22,7 @@ export default async function BankingFinancialHeroSection() {
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
-              href="/digital-banking-software"
+              href="/products/digital-banking-software"
               className="inline-flex flex-1 items-center justify-center gap-2 sm:shrink-0 rounded-lg max-sm:px-5 max-sm:py-3 max-sm:text-[14px] lg:max-xl:px-4 lg:max-xl:text-[13px] text-center bg-[#c91f28] px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#a71920] sm:flex-none"
             >{t("Explore digital banking")}<ArrowRight size={18} />
             </Link>

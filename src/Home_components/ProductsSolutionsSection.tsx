@@ -12,43 +12,43 @@ const products: ProductItem[] = [
     title: "Proctoring Pro — Exam Integrity",
     description:
       "Conduct secure, scalable online exams with real-time monitoring, identity verification, and easy integration with Moodle.",
-    href: "/proctoring-pro",
+    href: "/products/proctoring-pro",
   },
   {
     title: "Wallet23 — Digital Wallet & Payments",
     description:
       "Go live in 15 days with P2P transfers, merchant payments, QR transactions, and enterprise-grade security.",
-    href: "/e-wallet-software",
+    href: "/products/e-wallet-software",
   },
   {
     title: "Remity — Cross-Border Payments",
     description:
       "Launch international money transfer services in 30 days with multi-currency wallets, real-time FX, and secure compliance.",
-    href: "/cross-border-payments-solution",
+    href: "/products/cross-border-payments-solution",
   },
   {
     title: "PocketEdge — Lending & Credit",
     description:
       "Offer branded loan services instantly with automated credit scoring, digital origination, and AI-driven fraud protection.",
-    href: "/digital-lending-credit",
+    href: "/products/digital-lending-credit",
   },
   {
     title: "Omnizia — Pharma HCP Solutions",
     description:
       "Enable smart, data-driven pharma campaigns with predictive analytics and repeatable cross-channel insights.",
-    href: "/omnizia",
+    href: "/products/omnizia",
   },
   {
     title: "Insurance Tech Solutions",
     description:
       "Modernize underwriting, claims, and policy management with AI and data analytics for personalized, scalable insurance products.",
-    href: "/insurance-360",
+    href: "/products/insurance-360",
   },
   {
     title: "Time2Publish — Omni-Channel",
     description:
       "Streamline approvals, reduce manual steps, and automate content delivery for faster, error-free marketing.",
-    href: "/time2publish",
+    href: "/products/time2publish",
   },
   {
     title: "Field Force Management",

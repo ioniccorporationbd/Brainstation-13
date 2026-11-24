@@ -24,21 +24,6 @@ const RESOURCES_ROUTES = new Set([
   "/sustainability",
 ]);
 
-const PRODUCT_ROUTES = new Set([
-  "/cross-border-payments-solution",
-  "/digital-banking-software",
-  "/digital-lending-credit",
-  "/e-wallet-software",
-  "/insurance-360",
-  "/neuraflow-conversational-ai-agent",
-  "/omnizia",
-  "/proctoring-pro",
-  "/shikkha-chat",
-  "/time2publish",
-  "/testimonials",
-  "/testimonials/anupom-syam",
-]);
-
 export default function OurOfficesGate() {
   const pathname = usePathname();
 
@@ -57,7 +42,8 @@ export default function OurOfficesGate() {
         pathname === "/solution-partner/swapno" ||
         (pathname ?? "").startsWith("/services") ||
         (pathname ?? "").startsWith("/industries") ||
-        PRODUCT_ROUTES.has(pathname ?? "") ||
+        (pathname ?? "").startsWith("/products") ||
+        (pathname ?? "").startsWith("/testimonials") ||
         RESOURCES_ROUTES.has(pathname ?? "")
       } />
     </div>

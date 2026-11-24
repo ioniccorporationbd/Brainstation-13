@@ -16,7 +16,7 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/proctoring-pro",
+    route: "/products/proctoring-pro",
     title: t("Proctoring Pro | Magnetic Solution Limited"),
     description: t("Proctoring Pro combines live supervision, identity verification and AI integrity signals for fair, auditable online exams."),
   });

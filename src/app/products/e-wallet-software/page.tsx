@@ -19,7 +19,7 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/e-wallet-software",
+    route: "/products/e-wallet-software",
     title: t("E-Wallet Software | Magnetic Solution Limited"),
     description: t("E-wallet and mobile wallet platform engineering — onboarding, wallet ledger, P2P and merchant payments, agent networks, limits and back-office operations."),
   });

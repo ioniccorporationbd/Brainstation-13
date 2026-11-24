@@ -19,137 +19,137 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/insurance-360",
-    title: t("Insurance 360 | Magnetic Solution Limited"),
-    description: t("Insurance platform engineering — policy administration, underwriting workflow, claims processing, distribution portals and renewals on one connected system."),
+    route: "/products/digital-lending-credit",
+    title: t("Digital Lending & Credit | Magnetic Solution Limited"),
+    description: t("Digital lending platform engineering — origination, credit decisioning, disbursement, repayment schedules and collections with an auditable trail."),
   });
 }
 
 const strip = [
-  { label: "Policies", value: "One record per policy" },
-  { label: "Distribution", value: "Agents, brokers, direct" },
-  { label: "Claims", value: "Workflow with documents" },
-  { label: "Controls", value: "Approvals and audit trail" },
+  { label: "Origination", value: "One application, many products" },
+  { label: "Decisioning", value: "Rules plus scoring inputs" },
+  { label: "Servicing", value: "Schedules, accruals, collections" },
+  { label: "Controls", value: "Approvals and audit records" },
 ];
 
 const features = [
   {
     icon: Wallet,
-    title: "Policy administration",
-    body: "Quotation to issuance to endorsement on one record, with versions kept so history is never overwritten.",
+    title: "Loan origination",
+    body: "Applications across channels with document capture, deduplication and a single status trail from submission to disbursement.",
   },
   {
     icon: CreditCard,
-    title: "Underwriting workflow",
-    body: "Risk questions, referral queues and approval thresholds so underwriters see the cases that need judgement.",
+    title: "Credit decisioning",
+    body: "Policy rules and scoring inputs combined into an explainable decision, with the evidence retained for every application.",
   },
   {
     icon: ArrowLeftRight,
-    title: "Claims processing",
-    body: "Intimation, assessment, documents and settlement in a workflow with statuses customers and staff can both follow.",
+    title: "Disbursement control",
+    body: "Approval chains, limit checks and disbursement instructions posted to the ledger with a full reconciliation trail.",
   },
   {
     icon: Layers,
-    title: "Agent & broker portal",
-    body: "Distribution partners submit and track business from their own login, within the products they are appointed for.",
+    title: "Repayment & schedules",
+    body: "Amortisation, interest accrual and due-date generation that reconcile exactly, including partial and early payments.",
   },
   {
     icon: ShieldCheck,
-    title: "Renewals & collections",
-    body: "Renewal generation, grace periods and premium collection tracked against each policy's schedule.",
+    title: "Collections workflow",
+    body: "Delinquency buckets, reminder automation and case assignment so the collections team works from one queue.",
   },
   {
     icon: BarChart3,
-    title: "Reporting & compliance extracts",
-    body: "Regulatory and management reporting generated from the same records operations work from.",
+    title: "Portfolio reporting",
+    body: "Exposure, ageing and product performance reporting generated from the same data that drives servicing.",
   },
 ];
 
 const architectureBullets = [
-  "Policy core holding products, versions, endorsements and document links",
-  "Workflow engine for underwriting referrals, claims stages and approvals",
-  "Partner portal layer for agents and brokers with scoped visibility",
-  "Payment and accounting connectors for premium collection and settlement",
-  "Document store and audit pipeline retaining what was issued and by whom",
+  "Origination service capturing applications, documents and consent records",
+  "Decisioning engine evaluating policy rules with scoring and bureau adapters",
+  "Loan ledger posting disbursements, accruals and repayments as immutable entries",
+  "Scheduler generating due dates, reminders and delinquency transitions",
+  "Reporting layer building portfolio and regulatory extracts from the ledger",
 ];
 
 const processSteps = [
   {
-    title: "Product configuration",
-    body: "Model the products, wordings, rating inputs and approval thresholds in the platform.",
+    title: "Product modelling",
+    body: "Define the loan products, rates, fees, schedules and policy rules that will run on the platform.",
   },
   {
-    title: "Migration or greenfield",
-    body: "Import the existing book or start fresh — either way, policies, documents and history land in one place.",
+    title: "Integration",
+    body: "Connect bureau, identity, payments and accounting systems, and certify each adapter against real cases.",
   },
   {
-    title: "Distribution & servicing",
-    body: "Roll out the partner portal and the servicing console for the first product line.",
+    title: "Origination & decisioning",
+    body: "Build the application flow and the decision engine with the policy team, then test against historical decisions.",
   },
   {
-    title: "Claims workflow",
-    body: "Configure intimation, assessment and settlement stages with the authority limits agreed.",
+    title: "Servicing & collections",
+    body: "Configure schedules, accruals, reminders and the collections queue before the first disbursement.",
   },
   {
-    title: "Reporting & support",
-    body: "Wire the extracts and runbooks, then monitor the first renewal and claim cycles closely.",
+    title: "Pilot & scale",
+    body: "Run a limited product or segment first, monitor, then widen the portfolio on the same platform.",
   },
 ];
 
 const integrations = [
-  "Payment gateways and premium collection",
-  "Accounting and general ledger posting",
-  "Document management and e-signature",
-  "Identity verification",
-  "SMS and email notification",
-  "Regulatory reporting extracts",
+  "Credit bureaus",
+  "Identity and eKYC providers",
+  "Payment rails and disbursement channels",
+  "Core banking or loan ledger systems",
+  "Accounting and ERP posting",
+  "SMS, email and in-app notifications",
 ];
 
 const compliance = [
   {
-    title: "Documented authority",
-    body: "Approval limits for underwriting and claims are configuration with maker-checker, and every override is attributed.",
+    title: "Responsible lending",
+    body: "Policy rules, affordability checks and cooling-off periods are enforced by the platform, with the inputs stored per application.",
   },
   {
-    title: "Retention",
-    body: "Policy, endorsement and claim records are retained with versions for the periods the regulator requires.",
+    title: "Auditability",
+    body: "Approval chains, overrides and manual adjustments are attributed and retained, so any disbursement can be reconstructed.",
   },
   {
     title: "Data protection",
-    body: "Partner and staff access is scoped per product line and per role, with access changes recorded.",
+    body: "Applicant documents and personal data are scoped per role and per case, with retention rules that match regulatory expectations.",
   },
 ];
 
 const faqs = [
   {
-    question: "Can we keep our existing product wordings?",
+    question: "Can you work with our existing credit policy?",
     answer:
-      "Yes. Wordings, rating inputs and approval rules are modelled as configuration, so the products you already sell do not have to be redesigned.",
+      "Yes. The policy is expressed as rules in the decisioning engine. We start from your current policy, document each rule, and test it against historical applications before go-live.",
   },
   {
-    question: "Do agents and brokers get their own access?",
+    question: "How are interest and schedules calculated?",
     answer:
-      "Yes. The partner portal gives them scoped visibility of their own business, limited to the products they are appointed for.",
+      "In integer minor units with explicit rounding at agreed points. Schedules, statements and ledger postings all derive from the same calculation, so they reconcile exactly.",
   },
   {
-    question: "How are claims and policies connected?",
+    question: "Do you support partial and early repayment?",
     answer:
-      "Claims attach to the policy record, so the claim sees exactly the cover and endorsements in force on the incident date.",
+      "Yes. Partial payments, early settlement and re-amortisation post compensating ledger entries, and the remaining schedule is regenerated from the recorded state.",
   },
   {
-    question: "What about migrating an existing book?",
+    question: "What happens to applications we reject?",
     answer:
-      "Migration is its own phase: mapping, dry runs, reconciliation of in-force policies and documents, then cut-over with a rollback window.",
+      "The decision, its inputs and the policy version are retained. That record is what makes a rejection defensible if it is ever questioned.",
   },
   {
-    question: "How is premium collection tracked?",
+    question: "Can collections work from the same system?",
     answer:
-      "Against each policy's schedule, with grace periods and lapse rules applied by the platform and posted to accounting.",
+      "Yes. Delinquency transitions, reminders and case assignment are part of servicing, so collections sees the same data as the ledger.",
   },
   {
-    question: "How do we start without disrupting the current system?",
+    question: "How is a pilot usually scoped?",
     answer:
-      "One product line first, running in parallel where necessary, before retiring anything from the old system.",
+      "One product or one segment, a fixed policy version and a defined observation window. Widen only when the numbers and the process both hold.",
   },
 ];
 
@@ -161,11 +161,11 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Insurance")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Lending & credit")}</span>
 
-            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("One Platform for Insurance")}</h1>
+            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Lending journeys that pass audit")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Policy administration, underwriting, claims and distribution in a single system of record — so a policy, its documents and its claims history are never in three different places.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Origination, decisioning and servicing in one flow: applications captured once, decisions explainable, disbursements controlled and repayment schedules that reconcile to the last unit.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -182,8 +182,8 @@ export default async function Page() {
 
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1400&auto=format&fit=crop"
-              alt={t("Insurance documents and a pen on a desk")}
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop"
+              alt={t("Financial documents, calculator and pen on a desk")}
               className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
@@ -239,8 +239,8 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
-            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("One record, many workflows")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The policy is the anchor. Underwriting, claims, distribution and finance attach to it, which means reconciliation problems between systems largely stop existing.")}</p>
+            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("A pipeline you can inspect at any stage")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Each stage — capture, decision, disbursement, servicing — owns its data and hands over through an explicit contract. That makes the journey explainable per application and testable per stage.")}</p>
 
             <ul className="mt-7 space-y-3.5">
               {architectureBullets.map((bullet) => (
@@ -259,8 +259,8 @@ export default async function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("For teams examined on documentation")}</h3>
-            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every issued document, endorsement and claim decision is retained with its version and author. When a regulator or an internal auditor asks which wording applied on a given date, the answer comes from the record, not from memory.")}</p>
+            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Explainable decisions, exact numbers")}</h3>
+            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Every decision records which policy version ran, which inputs it saw and what it returned. Money is stored in integer minor units with explicit rounding, so schedules, statements and reports agree to the last unit instead of drifting by fractions.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                 <CircleDot size={14} />{t("Delivery note")}</p>
@@ -361,8 +361,8 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Modernising insurance operations?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the product lines, the existing systems and the reporting obligations. We will propose a migration and rollout sequence.")}</p>
+              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Building or replacing a lending platform?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the products, policy scope and integrations you need. We will propose a phased plan from origination through servicing.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

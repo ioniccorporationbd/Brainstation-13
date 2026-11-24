@@ -20,12 +20,8 @@ const isServiceRoute = (p: string) => p === "/services" || p.startsWith("/servic
 
 const isIndustryRoute = (p: string) => p === "/industries" || p.startsWith("/industries/");
 
-const PRODUCT_ROUTES = [
-  "/shikkha-chat",
-  "/testimonials",
-];
-
-const isProductRoute = (p: string) => PRODUCT_ROUTES.some((r) => p === r || p.startsWith(`${r}/`));
+const isProductRoute = (p: string) =>
+  p.startsWith("/products") || p === "/testimonials" || p.startsWith("/testimonials/");
 
 const RESOURCE_ROUTES = [
   "/about-us",

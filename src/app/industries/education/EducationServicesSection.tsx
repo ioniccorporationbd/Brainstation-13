@@ -27,13 +27,13 @@ const services: ServiceItem[] = [
     title: "Assessment & proctoring",
     description: "Online exams with AI-assisted integrity and live proctoring.",
     icon: MonitorPlay,
-    href: "/proctoring-pro",
+    href: "/products/proctoring-pro",
   },
   {
     title: "Content publishing",
     description: "Authoring, review and digital publishing workflows.",
     icon: BookOpen,
-    href: "/time2publish",
+    href: "/products/time2publish",
   },
   {
     title: "Student engagement",

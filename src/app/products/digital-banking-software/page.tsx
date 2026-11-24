@@ -19,137 +19,137 @@ import GlobalFaqSection from "@/components/global/GlobalFaqSection";
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/cross-border-payments-solution",
-    title: t("Cross-Border Payments | Magnetic Solution Limited"),
-    description: t("Cross-border payments platform engineering — multi-currency collections, payouts, FX, routing, reconciliation and compliance controls for money-movement businesses."),
+    route: "/products/digital-banking-software",
+    title: t("Digital Banking Software | Magnetic Solution Limited"),
+    description: t("Digital banking platform engineering — customer onboarding, payments, cards, back-office operations and core banking integration for banks and challengers."),
   });
 }
 
 const strip = [
-  { label: "Corridors", value: "Multi-country collections and payouts" },
-  { label: "Currencies", value: "Multi-currency balances and FX quotes" },
-  { label: "Ledger", value: "Double-entry trail per transaction" },
-  { label: "Compliance", value: "Screening, limits and audit records" },
+  { label: "Channels", value: "Mobile, web and back-office" },
+  { label: "Core", value: "Adapter-based integration" },
+  { label: "Controls", value: "Role-based access, full audit" },
+  { label: "Delivery", value: "Phased rollout per product" },
 ];
 
 const features = [
   {
     icon: Wallet,
-    title: "Collections",
-    body: "Receive funds through bank transfer, cards, mobile wallets and agent networks, with the same reconciliation record regardless of channel.",
+    title: "Onboarding & KYC",
+    body: "Self-service account opening with identity verification, document capture and tiered KYC limits that operations can review.",
   },
   {
     icon: CreditCard,
-    title: "Payouts & disbursements",
-    body: "Batch or single payouts to bank accounts, wallets and cash-out points, with status tracking per beneficiary and retry handling.",
+    title: "Payments & transfers",
+    body: "Internal transfers, scheduled payments and external rails behind one API, with statuses and receipts customers can trust.",
   },
   {
     icon: ArrowLeftRight,
-    title: "FX & rate management",
-    body: "Rate sources, markup rules and quote lifetimes are configured per corridor so pricing stays consistent with what operations agreed.",
+    title: "Cards & limits",
+    body: "Card issuance flow, spend limits, block/unblock and dispute handling exposed to both the app and the operations console.",
   },
   {
     icon: Layers,
-    title: "Routing & partner orchestration",
-    body: "Route each transaction through the partner or rail that fits the corridor, amount and timing — with automatic failover.",
+    title: "Core banking integration",
+    body: "Adapters isolate your core host — accounts, balances and postings — so the channel layer is not rewritten when the core changes.",
   },
   {
     icon: ShieldCheck,
-    title: "Ledger & reconciliation",
-    body: "Every movement posts to a double-entry ledger; settlement files, partner statements and internal balances reconcile per period.",
+    title: "Operations console",
+    body: "One back-office for customer service: search a customer, see their products, act within permissions, and leave an audit record.",
   },
   {
     icon: BarChart3,
-    title: "Screening & limits",
-    body: "Sanctions and PEP screening, velocity limits and tiered KYC sit in the flow rather than beside it.",
+    title: "Reporting & statements",
+    body: "Statements, transaction history exports and regulatory extracts generated from the same ledger the customers see.",
   },
 ];
 
 const architectureBullets = [
-  "Channel APIs for apps, agent portals and partner integrations, versioned and documented",
-  "Payment orchestration service that owns state, retries, idempotency and partner failover",
-  "Double-entry ledger with immutable postings and period-close reconciliation reports",
-  "Connector layer per partner — bank, gateway, FX provider or payout network — isolated behind one interface",
-  "Event stream for notifications, statements and downstream accounting or ERP posting",
+  "Channel applications (mobile, web, back office) consuming a versioned API",
+  "Service layer for limits, fees, product rules and authorisation decisions",
+  "Core adapters per host system, exposing accounts, balances and postings through one contract",
+  "Event backbone for notifications, statements and analytics without touching customer latency",
+  "Audit and log pipeline capturing who did what, from which channel, with what result",
 ];
 
 const processSteps = [
   {
-    title: "Corridor discovery",
-    body: "Map corridors, partners, currencies, cut-off times and regulatory constraints before any code is written.",
+    title: "Assessment",
+    body: "Review the product set, core host, channels and regulatory constraints to define the rollout order.",
   },
   {
-    title: "Integration & certification",
-    body: "Connect channels and partner APIs, then certify each corridor in a sandbox with real-world edge cases.",
+    title: "Core integration",
+    body: "Build and certify the adapters against the core host, covering balances, postings and reversal cases.",
   },
   {
-    title: "Ledger & reconciliation setup",
-    body: "Agree account structures, settlement timing and the reports operations will run every period.",
+    title: "Channel rollout",
+    body: "Release the customer app and the operations console behind feature flags, product by product.",
   },
   {
-    title: "Pilot corridor",
-    body: "Launch one corridor end to end with tight monitoring before widening the network.",
+    title: "Controls & audit",
+    body: "Wire limits, approvals and reporting so operations and audit have what they need from day one.",
   },
   {
-    title: "Rollout & support",
-    body: "Add corridors one at a time, with runbooks, alerting and a support path for operations.",
+    title: "Support & evolution",
+    body: "Runbooks, monitoring and a route for new products on the same platform.",
   },
 ];
 
 const integrations = [
-  "Core banking systems",
-  "Payment gateways and acquirers",
-  "Mobile money and wallet networks",
-  "Bank partners via API or host-to-host",
-  "Sanctions and AML screening providers",
-  "Accounting and ERP posting",
+  "Core banking hosts",
+  "Payment rails and switches",
+  "Card management and processing",
+  "KYC and identity verification",
+  "Credit bureau and scoring engines",
+  "SMS, email and push providers",
 ];
 
 const compliance = [
   {
-    title: "Screening in the flow",
-    body: "KYC tiers, sanctions and PEP checks run as part of the transaction path, with documented decision records for each release decision.",
+    title: "Access & segregation",
+    body: "Role-based permissions, maker-checker on sensitive actions and full attribution of every change.",
   },
   {
-    title: "Transaction records",
-    body: "Every state change is stored with timestamps, actor and partner response so an auditor can reconstruct the flow.",
+    title: "Data handling",
+    body: "Encryption in transit and at rest, scoped access per channel, and retention rules aligned with the regulator's expectations.",
   },
   {
-    title: "Data protection",
-    body: "Access is role-based and scoped per corridor; sensitive data is never exposed to the channel layer directly.",
+    title: "Auditability",
+    body: "Immutable audit records for privileged operations and configuration changes, queryable for internal audit.",
   },
 ];
 
 const faqs = [
   {
-    question: "Can you work with the partners we already have?",
+    question: "Do you replace the core banking system?",
     answer:
-      "Yes. The connector layer is designed so existing bank, gateway and payout partners are integrated behind one interface. We start from what you already run and add partners only where a corridor needs it.",
+      "Not necessarily. The platform is built to run on top of an existing core through adapters. Replacing the core is a separate decision that does not have to block the channel rollout.",
   },
   {
-    question: "Do you replace our core banking system?",
+    question: "Can we launch one product first?",
     answer:
-      "No. The platform sits alongside the core: it orchestrates payments, keeps its own ledger for reconciliation and posts back to the systems that need it.",
+      "Yes — and it is usually the right plan. Savings, cards or payments can go live first, then additional products attach to the same customer and the same console.",
   },
   {
-    question: "How is FX pricing controlled?",
+    question: "How do you handle approvals and limits?",
     answer:
-      "Rate sources, markup and quote validity are configuration. Operations can change them without a release, and each quote is stored with the rate used.",
+      "As configuration: thresholds, approvers and limits are defined per product and per role, with every override recorded and attributable.",
   },
   {
-    question: "How do you handle failed or reversed payouts?",
+    question: "What about regulatory reporting?",
     answer:
-      "Retries follow per-partner rules with idempotency keys. Reversals post compensating ledger entries so balances stay consistent, and every attempt is visible in the operations view.",
+      "Extracts are generated from the same ledger the channels use, so reported numbers and customer-visible numbers cannot drift apart.",
   },
   {
-    question: "What does a first phase usually include?",
+    question: "How do we migrate existing customers?",
     answer:
-      "One corridor, the channels needed for it, ledger and reconciliation, plus reporting for the period close. Additional corridors follow once the first is stable.",
+      "Migration is planned as its own phase: data mapping, dry runs, reconciliation against the core and a cut-over plan with rollback.",
   },
   {
-    question: "How long does integration take?",
+    question: "Who owns the code at the end?",
     answer:
-      "It depends on partner certification, which is usually the long pole. We plan in phases and certify each partner before traffic is switched on.",
+      "You do. Delivery includes documentation, environment setup and knowledge transfer so your team can operate and extend the platform.",
   },
 ];
 
@@ -161,11 +161,11 @@ export default async function Page() {
       <section className="bg-white pb-[64px] pt-[56px] text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Cross-border payments")}</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fdecec] px-4 py-1.5 text-[12px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Fintech · Digital banking")}</span>
 
-            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Move money across borders")}</h1>
+            <h1 className="mt-6 max-w-[640px] font-semibold text-black text-[clamp(28px,8.387vw,36px)] leading-[1.08] tracking-[-0.035em] sm:text-[40px] md:text-[50px] lg:text-[54px]">{t("Digital Banking You Can Trust")}</h1>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Engineering for remittance and payout businesses: multi-currency collections, disbursements, FX handling, partner routing and a reconciliation trail that survives audit.")}</p>
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.6] text-[#52525B] md:text-[16px] text-pretty">{t("Channels, operations console and core integration built as one product — customer onboarding, payments, cards and limits, with the audit trail a regulated bank is expected to keep.")}</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
@@ -182,8 +182,8 @@ export default async function Page() {
 
           <div className="overflow-hidden rounded-2xl border border-[#ececec]">
             <img
-              src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1400&auto=format&fit=crop"
-              alt={t("Currency notes and a globe on a desk representing cross-border money movement")}
+              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1400&auto=format&fit=crop"
+              alt={t("Person using a banking app on a smartphone")}
               className="h-[280px] w-full object-cover md:h-[420px] lg:h-[480px]"
             />
           </div>
@@ -239,8 +239,8 @@ export default async function Page() {
         <div className="mx-auto grid brand-container grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-normal text-[#c91f28]">{t("Architecture")}</p>
-            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("How the platform is put together")}</h2>
-            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The orchestration layer sits between your channels and the partners that actually move money. Everything below it is replaceable, so adding a corridor does not mean rewriting the product.")}</p>
+            <h2 className="mt-3 text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Channel, Service & Core — Apart")}</h2>
+            <p className="mt-4 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("The products customers use are separated from the services that enforce rules and the core that holds the balances. That separation is what makes phased rollout and core replacement feasible.")}</p>
 
             <ul className="mt-7 space-y-3.5">
               {architectureBullets.map((bullet) => (
@@ -259,8 +259,8 @@ export default async function Page() {
           </div>
 
           <div className="rounded-xl border border-[#ececec] bg-white p-7 md:p-8">
-            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("For operations teams, not just developers")}</h3>
-            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Support can see the exact state of a transaction, the partner response and the ledger impact from one screen. Failed payouts are triaged with reason codes instead of guesswork, and manual overrides are logged with the operator identity.")}</p>
+            <h3 className="text-black font-semibold text-[20px] leading-[1.3] tracking-[-0.01em] sm:text-[20px] md:text-[22px] lg:text-[22px]">{t("Regulated by design")}</h3>
+            <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Authorisation rules, approval thresholds and segregation of duties are configuration, not code paths. Every privileged action is attributed and retained, so internal audit and the regulator can be answered with evidence rather than screenshots.")}</p>
             <div className="mt-6 rounded-lg bg-[#fafafa] p-4">
               <p className="flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-normal text-[#c91f28]">
                 <CircleDot size={14} />{t("Delivery note")}</p>
@@ -361,8 +361,8 @@ export default async function Page() {
         <div className="mx-auto brand-container rounded-2xl border border-[#ececec] bg-[#fafafa] px-7 py-10 md:px-12 md:py-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Planning a cross-border product?")}</h2>
-              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Share the corridors, partners and volumes you are targeting. We will come back with an architecture view and a phased integration plan.")}</p>
+              <h2 className="text-black font-semibold text-[clamp(24px,6.9vw,29px)] leading-[1.12] tracking-[-0.03em] sm:text-[36px] md:text-[40px] lg:text-[44px]">{t("Modernising a bank’s channels?")}</h2>
+              <p className="mt-3 max-w-[520px] text-[15px] md:text-[16px] leading-[1.6] text-[#52525B] text-pretty">{t("Tell us the core host, the products and the regulatory timeline. We will map a phased rollout that does not put the existing book at risk.")}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
               <Link

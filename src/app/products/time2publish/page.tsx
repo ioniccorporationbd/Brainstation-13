@@ -16,7 +16,7 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/time2publish",
+    route: "/products/time2publish",
     title: t("Time2Publish | Magnetic Solution Limited"),
     description: t("Time2Publish is an end-to-end publishing platform for authoring, review, approval and digital distribution."),
   });

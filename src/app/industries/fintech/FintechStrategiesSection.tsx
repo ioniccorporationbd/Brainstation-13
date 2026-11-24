@@ -6,25 +6,25 @@ const strategies = [
   {
     title: "Smart digital wallet for financial control",
     description: "Wallet architecture, agent networks and cash-in/out flows designed for scale.",
-    href: "/e-wallet-software",
+    href: "/products/e-wallet-software",
     icon: CreditCard,
   },
   {
     title: "iBank23: secure digital banking app",
     description: "Account access, transfers, bill pay and onboarding in one mobile experience.",
-    href: "/digital-banking-software",
+    href: "/products/digital-banking-software",
     icon: Landmark,
   },
   {
     title: "Digital lending for modern finance",
     description: "Origination, scoring, approval workflows and repayment tracking automated.",
-    href: "/digital-lending-credit",
+    href: "/products/digital-lending-credit",
     icon: Banknote,
   },
   {
     title: "Cross-border Global Payments",
     description: "Multi-currency wallets, real-time FX and local rail integrations.",
-    href: "/cross-border-payments-solution",
+    href: "/products/cross-border-payments-solution",
     icon: Globe2,
   },
 ];

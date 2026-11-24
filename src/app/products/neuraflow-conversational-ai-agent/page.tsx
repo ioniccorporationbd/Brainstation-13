@@ -16,7 +16,7 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/neuraflow-conversational-ai-agent",
+    route: "/products/neuraflow-conversational-ai-agent",
     title: t("NeuraFlow | Magnetic Solution Limited"),
     description: t("NeuraFlow deploys conversational AI agents grounded in your own knowledge that resolve real requests and escalate gracefully."),
   });

@@ -23,7 +23,7 @@ const solutions: SolutionTab[] = [
       "Build modern digital banking platforms with secure account access, online onboarding, fund transfer, bill payment, statement management, and customer self-service features. Our solution helps banks deliver fast, reliable, and customer-friendly digital experiences.",
     image:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1400&auto=format&fit=crop",
-    href: "/digital-banking-software",
+    href: "/products/digital-banking-software",
   },
   {
     id: "ewallet-mfs",
@@ -33,7 +33,7 @@ const solutions: SolutionTab[] = [
       "Launch scalable mobile financial services with wallet accounts, cash-in, cash-out, merchant payment, agent banking, QR payment, transaction monitoring, and secure customer verification workflows.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400&auto=format&fit=crop",
-    href: "/e-wallet-software",
+    href: "/products/e-wallet-software",
   },
   {
     id: "digital-lending",
@@ -43,7 +43,7 @@ const solutions: SolutionTab[] = [
       "Automate loan origination, credit scoring, borrower onboarding, document verification, approval workflows, repayment tracking, and risk monitoring with an intelligent digital lending platform.",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop",
-    href: "/digital-lending-credit",
+    href: "/products/digital-lending-credit",
   },
   {
     id: "insurance",
@@ -53,7 +53,7 @@ const solutions: SolutionTab[] = [
       "Digitize insurance operations with policy management, premium collection, claim processing, customer portals, agent workflows, automated notifications, and analytics-driven decision support.",
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1400&auto=format&fit=crop",
-    href: "/insurance-360",
+    href: "/products/insurance-360",
   },
   {
     id: "cross-border",
@@ -63,7 +63,7 @@ const solutions: SolutionTab[] = [
       "Remity is a white-label cross-border payments platform for launching branded international money transfer services. It features multi-currency wallets, real-time FX, SWIFT and local rail integrations, and biometric authentication. Built-in KYC/AML and encryption support secure, regulation-ready operations for global remittance.",
     image:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1400&auto=format&fit=crop",
-    href: "/cross-border-payments-solution",
+    href: "/products/cross-border-payments-solution",
   },
 ];
 

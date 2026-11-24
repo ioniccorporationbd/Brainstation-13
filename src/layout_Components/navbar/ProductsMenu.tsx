@@ -37,28 +37,28 @@ type MenuLinkItem = {
 };
 
 const fintech: MenuLinkItem[] = [
-  { label: "Magnetic Digital Banking Software", href: "/digital-banking-software", icon: Landmark },
-  { label: "Magnetic E-wallet Software", href: "/e-wallet-software", icon: Wallet },
-  { label: "Magnetic Digital Lending & Credit", href: "/digital-lending-credit", icon: Banknote },
-  { label: "Magnetic Insurance 360", href: "/insurance-360", icon: ShieldCheck },
-  { label: "Magnetic Cross Border Payments Solution", href: "/cross-border-payments-solution", icon: Globe2 },
+  { label: "Magnetic Digital Banking Software", href: "/products/digital-banking-software", icon: Landmark },
+  { label: "Magnetic E-wallet Software", href: "/products/e-wallet-software", icon: Wallet },
+  { label: "Magnetic Digital Lending & Credit", href: "/products/digital-lending-credit", icon: Banknote },
+  { label: "Magnetic Insurance 360", href: "/products/insurance-360", icon: ShieldCheck },
+  { label: "Magnetic Cross Border Payments Solution", href: "/products/cross-border-payments-solution", icon: Globe2 },
 ];
 
 const healthcare: MenuLinkItem[] = [
-  { label: "Magnetic Omnizia", href: "/omnizia", icon: Activity },
-  { label: "Magnetic Time2Publish", href: "/time2publish", icon: BookOpen },
+  { label: "Magnetic Omnizia", href: "/products/omnizia", icon: Activity },
+  { label: "Magnetic Time2Publish", href: "/products/time2publish", icon: BookOpen },
 ];
 
 const lms: MenuLinkItem[] = [
-  { label: "Magnetic Proctoring Pro", href: "/proctoring-pro", icon: Monitor },
+  { label: "Magnetic Proctoring Pro", href: "/products/proctoring-pro", icon: Monitor },
 ];
 
 const aiSolution: MenuLinkItem[] = [
-  { label: "Magnetic NeuraFlow - Conversational AI Agent", href: "/neuraflow-conversational-ai-agent", icon: Bot },
+  { label: "Magnetic NeuraFlow - Conversational AI Agent", href: "/products/neuraflow-conversational-ai-agent", icon: Bot },
 ];
 
 const education: MenuLinkItem[] = [
-  { label: "Shikkha Chat", href: "/shikkha-chat", icon: MessagesSquare },
+  { label: "Shikkha Chat", href: "/products/shikkha-chat", icon: MessagesSquare },
   { label: "Cadet Website", icon: GraduationCap, placeholder: true, note: "Coming soon" },
 ];
 

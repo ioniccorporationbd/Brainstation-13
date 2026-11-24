@@ -213,6 +213,57 @@ const nextConfig: NextConfig = {
         destination: "/industries/non-profit",
         permanent: true,
       },
+      // Products migrated under /products (single-hop 308, query kept).
+      {
+        source: "/digital-banking-software",
+        destination: "/products/digital-banking-software",
+        permanent: true,
+      },
+      {
+        source: "/e-wallet-software",
+        destination: "/products/e-wallet-software",
+        permanent: true,
+      },
+      {
+        source: "/digital-lending-credit",
+        destination: "/products/digital-lending-credit",
+        permanent: true,
+      },
+      {
+        source: "/insurance-360",
+        destination: "/products/insurance-360",
+        permanent: true,
+      },
+      {
+        source: "/cross-border-payments-solution",
+        destination: "/products/cross-border-payments-solution",
+        permanent: true,
+      },
+      {
+        source: "/omnizia",
+        destination: "/products/omnizia",
+        permanent: true,
+      },
+      {
+        source: "/time2publish",
+        destination: "/products/time2publish",
+        permanent: true,
+      },
+      {
+        source: "/proctoring-pro",
+        destination: "/products/proctoring-pro",
+        permanent: true,
+      },
+      {
+        source: "/neuraflow-conversational-ai-agent",
+        destination: "/products/neuraflow-conversational-ai-agent",
+        permanent: true,
+      },
+      {
+        source: "/shikkha-chat",
+        destination: "/products/shikkha-chat",
+        permanent: true,
+      },
     ];
   },
   async headers() {

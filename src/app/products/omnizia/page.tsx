@@ -16,7 +16,7 @@ import {
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslator();
   return pageMetadata({
-    route: "/omnizia",
+    route: "/products/omnizia",
     title: t("Omnizia | Magnetic Solution Limited"),
     description: t("Omnizia connects clinical, laboratory, imaging and billing systems into one patient record for care teams."),
   });
