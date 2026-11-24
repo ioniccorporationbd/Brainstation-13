@@ -57,6 +57,43 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+/**
+ * Sitewide Organization + WebSite structured data. Values mirror the
+ * metadata above (same SITE_URL / SITE_NAME / logo) — no invented claims.
+ * Locale-specific names only, since the site serves one URL per locale
+ * via the magnetic-locale cookie rather than /bn, /en prefixes.
+ */
+function SiteStructuredData({ locale }: { locale: "bn" | "en" }) {
+  const logo = `${SITE_URL}${OG_IMAGE.url}`;
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: SITE_NAME[locale],
+        url: `${SITE_URL}/`,
+        logo: { "@type": "ImageObject", url: logo, width: 1200, height: 630 },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: SITE_NAME[locale],
+        url: `${SITE_URL}/`,
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        inLanguage: HTML_LANG[locale],
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      // Static, server-built JSON (no user input) — safe to inline.
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+    />
+  );
+}
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -70,6 +107,7 @@ export default async function RootLayout({
         {/* The site translates itself; browser auto-translation (Chrome/Google
             Translate) rewrites the DOM and would fight the app's locale state. */}
         <meta name="google" content="notranslate" />
+        <SiteStructuredData locale={locale} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { getTranslator } from "@/i18n/server";
+import { getTranslator, getLocale } from "@/i18n/server";
 import { pageMetadata } from "@/i18n/seo";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -26,8 +27,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const { t } = await getTranslator();
+  const locale = await getLocale();
+  const bc = locale === "bn" ? { home: "হোম", cat: "ইন্ডাস্ট্রিজ" } : { home: "Home", cat: "Industries" };
   return (
     <main>
+      <BreadcrumbJsonLd
+        items={[
+          { name: bc.home, path: "/" },
+          { name: bc.cat, path: "/industries" },
+        ]}
+      />
       <section className="bg-white max-sm:pb-[44px] pb-[64px] pt-[56px] max-sm:pt-6 text-black md:pb-[104px] md:pt-[80px]">
         <div className="mx-auto grid brand-container grid-cols-1 items-center max-sm:gap-8 gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div>
