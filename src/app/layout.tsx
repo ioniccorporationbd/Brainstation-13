@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/layout_Components/navbar/Navbar";
 import Footer from "@/layout_Components/footer";
@@ -20,6 +20,11 @@ const META: Record<"bn" | "en", { title: string; description: string }> = {
     description:
       "Enterprise-grade software, staff augmentation, Shopify, blockchain, LMS, AI, data, and digital transformation services.",
   },
+};
+
+/** Browser chrome colour (tab / installed-window title bar) — brand red. */
+export const viewport: Viewport = {
+  themeColor: "#C91F28",
 };
 
 export async function generateMetadata(): Promise<Metadata> {
